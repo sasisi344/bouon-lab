@@ -1,0 +1,53 @@
+{{ define "main" }}
+<article class="single-post">
+    <div class="container">
+        <header class="post-header">
+            <h1 class="post-title">{{ .Title }}</h1>
+            <div class="post-meta">
+                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" class="post-date">
+                    {{ .Date.Format .Site.Params.dateFormat }}
+                </time>
+                {{ if .Params.author }}
+                <span class="post-author">by {{ .Params.author }}</span>
+                {{ end }}
+                {{ if .Params.tags }}
+                <div class="post-tags">
+                    {{ range .Params.tags }}
+                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </header>
+
+        <div class="post-content">
+            {{ .Content }}
+        </div>
+
+        <footer class="post-footer">
+            {{ if .Params.categories }}
+            <div class="post-categories">
+                <strong>カテゴリ:</strong>
+                {{ range .Params.categories }}
+                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                {{ end }}
+            </div>
+            {{ end }}
+
+            <div class="post-navigation">
+                {{ with .PrevInSection }}
+                <div class="nav-previous">
+                    <a href="{{ .Permalink }}">← {{ .Title }}</a>
+                </div>
+                {{ end }}
+                {{ with .NextInSection }}
+                <div class="nav-next">
+                    <a href="{{ .Permalink }}">{{ .Title }} →</a>
+                </div>
+                {{ end }}
+            </div>
+        </footer>
+    </div>
+</article>
+{{ end }}
+

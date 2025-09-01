@@ -1,0 +1,57 @@
+{{ define "main" }}
+<div class="container">
+    <div class="page-header">
+        <h1 class="page-title">{{ .Title }}</h1>
+        {{ if .Description }}
+        <p class="page-description">{{ .Description }}</p>
+        {{ end }}
+    </div>
+
+    <div class="content-list">
+        {{ range .Pages }}
+        <article class="content-item">
+            <header class="item-header">
+                <h2 class="item-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+                <div class="item-meta">
+                    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                        {{ .Date.Format .Site.Params.dateFormat }}
+                    </time>
+                    {{ if .Params.tags }}
+                    <span class="item-tags">
+                        {{ range .Params.tags }}
+                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                </div>
+            </header>
+            {{ if .Summary }}
+            <div class="item-summary">
+                {{ .Summary }}
+            </div>
+            {{ end }}
+        </article>
+        {{ end }}
+    </div>
+
+    {{ if .IsHome }}
+    <div class="home-content">
+        <h2>ようこそ！</h2>
+        <p>Bouon Labのウェブサイトへようこそ。日本語コンテンツを提供しています。</p>
+        
+        <h3>最新の投稿</h3>
+        <div class="recent-posts">
+            {{ range first 5 .Site.RegularPages }}
+            <div class="recent-post">
+                <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                <time>{{ .Date.Format .Site.Params.dateFormat }}</time>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
+

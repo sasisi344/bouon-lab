@@ -1,3 +1,92 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'ja-jp'
+title = 'Bouon Lab - 日本語ウェブサイト'
+defaultContentLanguage = 'ja'
+defaultContentLanguageInSubdir = false
+
+[params]
+  # 基本情報
+  description = "Bouon Lab - 日本語コンテンツを提供するウェブサイト"
+  author = "Bouon Lab"
+  github = "https://github.com/yourusername"
+  
+  # SEO設定
+  keywords = ["Bouon Lab", "ウェブサイト", "日本語", "コンテンツ"]
+  robots = "index, follow"
+  
+  # SNS対応
+  twitter = "@yourusername"
+  facebook = "yourpage"
+  
+  # パフォーマンス設定
+  enableFingerprinting = true
+  enableGitInfo = true
+  
+  # 日本語サイト設定
+  dateFormat = "2006年1月2日"
+  timeFormat = "15:04"
+  
+  # コメント設定
+  enableComments = false
+  
+  # 検索設定
+  enableSearch = true
+  
+  # アナリティクス設定
+  googleAnalytics = "GA_MEASUREMENT_ID"
+  
+  # カスタムCSS/JS
+  customCSS = ["css/custom.css"]
+  customJS = ["js/custom.js"]
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "ホーム"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "投稿"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    lineNos = true
+    lineNumbersInTable = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "feed"
+  [outputFormats.JSON]
+    mediaType = "application/json"
+    baseName = "index"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[permalinks]
+  posts = "/posts/:year/:month/:day/:slug/"
+
+[security]
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+    [security.exec.env]
+      HUGO_ENVIRONMENT = 'production'
+      HUGO_ENV = 'production'
