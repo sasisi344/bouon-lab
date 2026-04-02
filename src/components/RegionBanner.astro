@@ -1,0 +1,55 @@
+---
+/**
+ * RegionBanner.astro
+ * ユーザーの地域（国・地域）に応じて、助成金情報などの「ローカルな解決策」を提示するコンポーネント。
+ */
+interface Props {
+    jaInfo?: string; // 日本国内ユーザー向けメッセージ
+    enInfo?: string; // 海外（英語圏）ユーザー向けメッセージ
+}
+
+const { 
+    jaInfo = "日本国内：窓リノベ補助金の対象です。最大20万円の還付が受けられる可能性があります。", 
+    enInfo = "Global Info: Local building codes may apply. Check your city's noise regulations."
+} = Astro.props;
+---
+
+<div id="region-banner" class="region-banner hidden" style="border-left: 5px solid #ff9800; background: #fffde7; padding: 1rem; margin: 1.5rem 0; display: none;">
+  <p id="region-message" style="margin: 0; font-weight: bold; color: #e65100;"></p>
+</div>
+
+<script is:inline define:vars={{ jaInfo, enInfo }}>
+  // シンプルなブラウザ言語/タイムゾーンによる推定（Astro SSGでも動作可能）
+  // 本格的には Edge Function (Vercel/Cloudflare) での IPベース判定が理想
+  function detectRegion() {
+    const banner = document.getElementById('region-banner');
+    const msg = document.getElementById('region-message');
+    if (!banner || !msg) return;
+
+    const lang = navigator.language || '';
+    const isJapan = lang.includes('ja') || Intl.DateTimeFormat().resolvedOptions().timeZone === 'Asia/Tokyo';
+
+    if (isJapan) {
+        msg.innerText = "📍 " + jaInfo;
+    } else {
+        msg.innerText = "🌐 " + enInfo;
+    }
+    
+    banner.style.display = 'block';
+  }
+
+  // DOMロード後に実行
+  document.addEventListener('DOMContentLoaded', detectRegion);
+</script>
+
+<style>
+    .region-banner {
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        border-radius: 4px;
+        animation: slideIn 0.5s ease-out;
+    }
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>

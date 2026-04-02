@@ -1,0 +1,409 @@
+---
+import { getCollection } from 'astro:content';
+import { Image, getImage } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import SmartLink from '../../components/SmartLink.astro';
+import heroImage from '../../assets/images/hero-mocha.png';
+
+export async function getStaticPaths() {
+    return [
+        { params: { lang: 'ja' } },
+        { params: { lang: 'en' } }
+    ];
+}
+
+const { lang } = Astro.params;
+
+const knowledge = await getCollection('knowledge');
+const solutions = await getCollection('solutions');
+const useCase = await getCollection('use-case');
+const column = await getCollection('column');
+const company = await getCollection('company');
+
+const allContent = [...knowledge, ...solutions, ...useCase, ...column, ...company];
+const filteredPosts = allContent.filter(p => p.data.lang === lang);
+const latestPosts = filteredPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 9);
+
+function getSlug(post: any) {
+    const parts = post.id.split('/');
+    const lang = post.data.lang || 'ja';
+    const slugParts = parts.filter(p => p !== lang && p !== 'index');
+    return slugParts.join('/');
+}
+
+function getUrl(post: any) {
+    const slug = getSlug(post);
+    const category = post.collection;
+    const lang = post.data.lang || 'ja';
+    return slug ? `/${lang}/${category}/${slug}/` : `/${lang}/${category}/`;
+}
+
+// ヒーロー画像の最適化
+const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
+---
+
+<Layout title="BouonLab | 科学的防音ナレッジベース">
+  <!-- ダーク・モカ・ヒーローセクション -->
+  <section class="hero-dark" style={`background-image: url('${optimizedHero.src}')`}>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="eyebrow-box">
+        <div class="line"></div>
+        <span class="eyebrow">{lang === 'ja' ? 'SCIENCE OF SILENCE' : 'INTELLECTUAL ACOUSTICS'}</span>
+      </div>
+      <h1>{lang === 'ja' ? '静寂を、科学する。' : 'The Science of Silence.'}</h1>
+      <p class="lead">
+        {lang === 'ja' 
+          ? '防音Labは、音の問題を理論とデータで解き明かす、専門家による知的ナレッジベースです。' 
+          : 'A dedicated platform for acoustical knowledge, solving sound issues through science and data.'}
+      </p>
+
+      <!-- 二分するナビゲーション -->
+      <div class="action-branch">
+        <a href="#knowledge" class="btn primary">
+          <span class="icon">📖</span>
+          <span class="text">
+            <strong>{lang === 'ja' ? 'ナレッジベースを探る' : 'Explore Knowledge'}</strong>
+            <small>{lang === 'ja' ? '蓄積された防音の知見にアクセス' : 'Access accumulated insights'}</small>
+          </span>
+        </a>
+        <a href={`/${lang}/solutions/`} class="btn secondary">
+          <span class="icon">🔍</span>
+          <span class="text">
+            <strong>{lang === 'ja' ? '音の悩みを顕在化する' : 'Identify Your Needs'}</strong>
+            <small>{lang === 'ja' ? '診断アプリで解決策を特定' : 'Find your solution via app'}</small>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container" id="knowledge">
+    <!-- 最新の知見セクション -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">{lang === 'ja' ? '最新の研究成果' : 'Latest Research'}</h2>
+        <p class="section-desc">{lang === 'ja' ? '日々更新される防音の最新ナレッジ' : 'Continually updated acoustical insights'}</p>
+      </div>
+
+      <div class="posts-grid">
+        {latestPosts.map((post) => (
+          <article class="post-card">
+            {post.data.image && (
+              <div class="card-image-box">
+                <Image src={post.data.image} alt={post.data.title} class="card-img" width={600} height={338} format="webp" />
+              </div>
+            )}
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="category">{post.data.category.toUpperCase()}</span>
+                <span class="date">{post.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
+              </div>
+              <h3 class="post-title">
+                <a href={getUrl(post)} class="link-text">
+                  {post.data.title}
+                </a>
+              </h3>
+              <p>{post.data.description}</p>
+              <div class="card-footer">
+                 <a href={getUrl(post)} class="read-more">
+                   READ MORE →
+                 </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- カテゴリ・ナビゲーション -->
+    <section class="section">
+      <h2 class="section-title centered">{lang === 'ja' ? 'ナレッジ・ディレクトリ' : 'Knowledge Directory'}</h2>
+      <div class="category-pills">
+        {['solutions', 'use-case', 'knowledge', 'column', 'company'].map(cat => (
+          <a href={`/${lang}/${cat}/`} class="pill">
+            <span class="pill-name">{cat.toUpperCase()}</span>
+            <span class="pill-count">{filteredPosts.filter(p => p.collection === cat).length}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* ヒーロー：暗室と光の演出 */
+  .hero-dark {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0D0B0A;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 2rem;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(26, 22, 20, 0.4) 0%, rgba(13, 11, 10, 0.95) 80%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  .eyebrow-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .line {
+    width: 40px;
+    height: 1px;
+    background: var(--primary-gold);
+  }
+
+  .eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.4rem;
+    color: var(--primary-gold);
+  }
+
+  h1 {
+    font-family: var(--font-ud-mincho);
+    font-size: 4.5rem;
+    color: #fff;
+    margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+  }
+
+  .lead {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    margin: 2rem auto 4rem;
+    max-width: 600px;
+  }
+
+  /* 分岐ナビゲーション */
+  .action-branch {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    min-width: 320px;
+  }
+
+  .btn:hover {
+    background: rgba(212, 175, 55, 0.05);
+    border-color: var(--primary-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  .icon { font-size: 2rem; }
+  
+  .text { display: flex; flex-direction: column; }
+  .text strong { color: #fff; font-size: 1.1rem; margin-bottom: 0.2rem; }
+  .text small { color: var(--text-dim); font-size: 0.85rem; }
+
+  /* コンテンツセクション */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section { padding: 6rem 0; }
+  
+  .section-header {
+    margin-bottom: 4rem;
+    border-left: 4px solid var(--primary-gold);
+    padding-left: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .section-title.centered { text-align: center; margin-bottom: 3rem; border: none; }
+
+  .section-desc { color: var(--text-dim); margin-top: 0.5rem; }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    .posts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .post-card {
+    background: var(--bg-mocha);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative; /* 全面クリックの基準 */
+  }
+
+  .post-card:hover {
+    border-color: var(--primary-gold);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  }
+
+  .card-image-box {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .post-card:hover .card-img {
+    transform: scale(1.05);
+  }
+
+  /* 記事詳細へのリンクをカード全体に広げる */
+  .read-more::after {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .card-content {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* ここに position: relative を入れると、全面クリックがこの範囲に限定されるため、入れない */
+  }
+
+  .post-card h3 { 
+    font-size: 1.5rem; 
+    margin-top: 0; 
+    line-height: 1.4; 
+    color: #fff; 
+    position: relative; 
+    z-index: 2; /* リンクの上に乗せて、ホバー効果やテキスト選択を可能に（任意） */
+  }
+
+  .post-card p { 
+    color: var(--text-dim); 
+    flex-grow: 1; 
+    letter-spacing: 0.05rem; 
+    line-height: 1.8;
+    position: relative;
+    z-index: 2;
+  }
+
+  .card-footer { 
+    margin-top: 2rem; 
+    position: relative;
+    z-index: 2;
+  }
+
+  .read-more {
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.3s;
+  }
+
+  .read-more:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  /* カテゴリピル */
+  .category-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .pill {
+    background: rgba(255,255,255,0.03);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s;
+  }
+
+  .pill:hover {
+    background: var(--primary-gold);
+    color: #000;
+  }
+
+  .pill:hover .pill-name, .pill:hover .pill-count { color: #000; }
+
+  .pill-name { color: #fff; font-weight: bold; font-size: 0.9rem; }
+  .pill-count { color: var(--primary-gold); font-size: 0.8rem; }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 2.8rem; }
+    .action-branch { flex-direction: column; align-items: center; }
+    .btn { min-width: 100%; }
+    .posts-grid { grid-template-columns: 1fr; }
+  }
+</style>

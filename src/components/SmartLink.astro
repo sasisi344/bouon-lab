@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  slug: string;
+  className?: string;
+}
+
+const { slug, className } = Astro.props;
+
+// 全記事から対象のslug（ディレクトリ名またはファイル名ベース）を探す
+const knowledge = await getCollection('knowledge');
+const solutions = await getCollection('solutions');
+const useCase = await getCollection('use-case');
+const company = await getCollection('company');
+const column = await getCollection('column');
+
+const allPosts = [...knowledge, ...solutions, ...useCase, ...company, ...column];
+
+// MDXから現在の言語を取得（propsとして渡す運用にするのが確実）
+// もしくは全記事から「指定したスラッグ かつ 現在のURLに含まれる言語」を優先して探す
+const currentPath = Astro.url.pathname;
+const currentLang = currentPath.startsWith('/en') ? 'en' : 'ja';
+
+const post = allPosts.find((p) => {
+  const parts = p.id.split('/');
+  const lang = p.data.lang || 'ja';
+  const slugSegment = parts.find(part => part === slug);
+  
+  // スラッグが一致し、かつ現在の表示言語と同じ記事を優先
+  return slugSegment !== undefined && lang === currentLang;
+});
+
+// 多言語対応パスの解決: /[lang]/[collection]/[slug]/
+let url = '#';
+if (post) {
+    const parts = post.id.split('/');
+    const lang = post.data.lang || 'ja';
+    const category = post.collection;
+    
+    // Construct slug: all parts except lang, index, and suffix
+    const slugParts = parts.filter(p => p !== lang && p !== 'index' && !p.endsWith('.mdx'));
+    const finalSlug = slugParts.join('/');
+    
+    url = `/${lang}/${category}/${finalSlug}/`;
+}
+
+if (!post && slug !== "index" && slug !== "") {
+  console.warn(`[SmartLink] Warning: Slug "${slug}" not found in language "${currentLang}".`);
+}
+---
+<a href={url} class={className}>
+  <slot>{post ? post.data.title : slug}</slot>
+</a>

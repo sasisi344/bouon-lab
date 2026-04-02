@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+const knowledge = await getCollection('knowledge');
+const solutions = await getCollection('solutions');
+const useCase = await getCollection('use-case');
+
+const allPosts = [...knowledge, ...solutions, ...useCase];
+
+// スラッシュの正規化とスラッグ検索
+const post = allPosts.find((p) => {
+    const parts = p.id.split('/');
+    const postSlug = parts[parts.length - 2] || parts[0];
+    return postSlug === slug;
+});
+
+// 本来は cta-data.ts 等から個別の訴求文言を引くが、まずは記事データから動的に生成
+const title = post ? post.data.title : "詳細を見る";
+const description = post ? post.data.description : "";
+
+let url = '#';
+if (post) {
+    const parts = post.id.split('/');
+    const lang = post.data.lang || 'ja';
+    const category = post.collection;
+    const finalSlug = parts[parts.length - 2] || parts[0];
+    url = `/${lang}/${category}/${finalSlug}`;
+}
+
+---
+
+<div class="cta-container" style="border: 2px solid #1a237e; border-radius: 12px; padding: 25px; margin: 30px 0; background: linear-gradient(to right, #ffffff, #f5f7fa); box-shadow: 0 4px 15px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
+  <div style="position: absolute; top: 0; right: 0; background: #1a237e; color: white; padding: 4px 12px; font-size: 0.75rem; border-bottom-left-radius: 12px; font-weight: bold;">
+    RECOMMENDED
+  </div>
+  <h3 style="margin-top: 0; color: #1a237e; font-size: 1.4rem;">{title}</h3>
+  <p style="font-size: 1rem; color: #444; line-height: 1.5; margin-bottom: 20px;">{description}</p>
+  <div style="text-align: right;">
+    <a href={url} style="display: inline-block; padding: 12px 28px; background-color: #1a237e; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.2s;">
+      詳しくチェックする →
+    </a>
+  </div>
+</div>

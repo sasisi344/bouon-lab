@@ -1,0 +1,28 @@
+# BouonLab - Scientific Soundproof Knowledge Base
+
+A comprehensive knowledge base for soundproofing, acoustics, and legal regulations regarding noise management. Optimized for both human researchers and AI crawlers.
+
+## Main Directories
+
+- **Solutions** [/ja/solutions/]: Technical and financial solutions including unit soundproof rooms, DIY methods, and professional rentals.
+- **Use-Case** [/ja/use-case/]: Practical examples and case studies for streamers, musicians, and residents.
+- **Knowledge** [/ja/knowledge/]: Foundational science of acoustics, asset value analysis, and legal precedents.
+- **About** [/ja/about/]: Mission, vision, and organizational background of BouonLab.
+- **Privacy Policy** [/ja/privacy/]: Data handling and transparency documentation.
+
+## Pillar Articles
+
+- **Soundproof Room Comparison 2026** [/ja/solutions/bouon-osusume-hikaku/]: The definitive guide to choosing between Yamaha, Kawai, and budget models like OTODASU. Includes resale value and sound characteristic analysis.
+- **Osaka Soundproof Rental Guide** [/ja/solutions/osaka-soundproof-rental-guide/]: Regional market data for soundproof apartments.
+- **Noise Complaint Manual** [/ja/use-case/noise-complaint-landlord-negotiation-guide/]: Step-by-step negotiation strategy for managing neighbor relations.
+- **Soundproof Room Buyback Guide** [/ja/knowledge/soundproof-room-buyback-guide/]: How to maximize the asset value of a soundproof room.
+
+## Technical Foundation & AI Optimization
+
+- **Architecture**: Built with Astro (v6+), utilizing MDX for high-authoritative content delivery.
+- **Internationalization**: Full support for Japanese (`/ja/`) and English (`/en/`) locales.
+- **Analytics & Serving**: Integrated GA4 tracking (`G-RWEHZPS976`) and verified `ads.txt` for AdSense eligibility.
+- **Navigation**: Structured for both horizontal (menu) and vertical (breadcrumbs) crawling.
+- **Metadata**: Every article includes structured frontmatter with `slug`, `category`, and `lang`.
+- **Taxonomy**: Organized into functional segments: `knowledge`, `solutions`, `use-case`.
+- **Depth**: Pillar articles focus on 10x content depth with evidence-based data.

@@ -1,0 +1,533 @@
+---
+title: "RT60 Reverberation Time | Measuring & Optimizing Soundproof Room Acoustics"
+description: "Complete guide to measuring RT60 and achieving optimal acoustic environment. Quantify soundproof room performance and implement professional-grade acoustics."
+slug: "rt60-reverberation-measurement-guide"
+date: "2025-11-01T11:00:00+09:00"
+lastmod: "2025-11-01T11:00:00+09:00"
+draft: false
+lang: "en"
+category: "knowledge"
+tags: ["RT60","reverberation","time","acoustic","measurement","Soundproof","Soundproof Room","audio","tuning"]
+---
+Built a soundproof room but notice "too much echo" or "muddy sound"?
+
+The cause is <strong>RT60 (reverberation time)</strong> not being optimized to ideal values.
+
+RT60 is the critical metric for <strong>quantifying acoustic environment</strong> in soundproof rooms. This guide details RT60 measurement methods, optimal values, and improvement techniques.
+
+## RT60 (Reverberation Time): Understanding the Basics
+
+First, let's establish fundamental concepts:
+
+### RT60 Definition
+
+<strong>RT60</strong> = Time required for sound to decay 60dB
+
+```
+Sound source generated
+  ↓
+Maximum volume (0dB)
+  ↓
+60dB attenuation
+  ↓
+Measurement complete (time = RT60)
+```
+
+<strong>Examples</strong>
+
+- RT60 = 0.3 seconds: Sound decays quickly (heavy absorption)
+- RT60 = 0.5 seconds: Good balance (professional grade)
+- RT60 = 1.0 seconds: Excessive echo (insufficient absorption)
+
+### Why RT60 Matters
+
+| Item | Short RT60 | Optimal RT60 | Long RT60 |
+|---|---|---|---|
+| <strong>Sound reflections</strong> | None | Natural | Excessive |
+| <strong>Vocal quality</strong> | Cold | Warm | Muddy |
+| <strong>Streaming/content</strong> | Favorable | Optimal | Unfavorable |
+| <strong>Movie watching</strong> | ○ | ◎ | △ |
+
+<strong>Optimal RT60 by Use</strong>
+
+- Podcast/streaming: 0.2–0.4 seconds
+- Vocal recording: 0.3–0.5 seconds
+- Music production: 0.4–0.6 seconds
+- Movie/gaming: 0.5–0.8 seconds
+
+## RT60 Measurement Methods
+
+Here are three measurement approaches:
+
+### Method ①: Smartphone App (Basic)
+
+<strong>Required Items</strong>
+
+- Smartphone
+- Free app like "Room Acoustics"
+- Audio source with white noise generation
+
+<strong>Measurement Procedure</strong>
+
+1. Install app
+2. Select measurement mode
+3. Play white noise
+4. Stop audio (app auto-measures)
+5. Read RT60
+
+<strong>Accuracy</strong>
+
+- ★★☆☆☆ (Reference value only)
+- Sufficient for trend analysis
+- Unsuitable for precise values
+
+<strong>Cost</strong>
+
+- Free–¥1,000
+
+---
+
+### Method ②: Frequency Analysis Tool (Intermediate)
+
+<strong>Required Items</strong>
+
+- PC + external audio interface
+- REW (Real Room EQ Wizard) free software
+- Microphone (¥3K–¥10K)
+- Speaker
+
+<strong>Measurement Procedure</strong>
+
+1. Install & launch REW
+2. Connect mic and speaker
+3. Generate measurement signal
+4. Receive via mic for measurement
+5. Graph RT60
+
+<strong>Accuracy</strong>
+
+- ★★★☆☆ (Quite accurate)
+- Frequency-specific RT60 available
+- Optimal for DIY
+
+<strong>Cost</strong>
+
+- Software: Free
+- Microphone: ¥3,000–10,000
+- Audio interface: ¥10,000–30,000
+- <strong>Total: ¥13,000–40,000</strong>
+
+---
+
+### Method ③: Professional Measurement (High Precision)
+
+<strong>Providers</strong>
+
+- Acoustic consultants
+- Architectural firms
+- Soundproofing companies
+
+<strong>Measurement Contents</strong>
+
+- Multi-frequency RT60 measurement
+- Detailed spatial analysis
+- Improvement recommendations report
+
+<strong>Accuracy</strong>
+
+- ★★★★★ (Highest precision)
+- Frequency-specific detailed data
+- Professional improvement advice
+
+<strong>Cost</strong>
+
+- ¥50,000–150,000
+
+## REW Measurement Method (Detailed Guide)
+
+Best cost-performance measurement using REW software:
+
+### Equipment Selection Guide
+
+<strong>Microphone Choice</strong>
+
+| Product | Price | Recommendation |
+|---|---|---|
+| BEHRINGER ECM8000 | ¥4,000 | ★★★★★ |
+| AT2020 | ¥10,000 | ★★★★☆ |
+| Shure SM7B | ¥25,000 | ★★★☆☆ |
+
+<strong>Recommended: BEHRINGER ECM8000</strong>
+- Best cost-performance
+- Flat frequency response
+- Standard measurement microphone
+
+<strong>Audio Interface Choice</strong>
+
+| Product | Price | Recommendation |
+|---|---|---|
+| Behringer U-PHORIA UMC202HD | ¥8,000 | ★★★★★ |
+| Focusrite Scarlett Solo | ¥15,000 | ★★★★☆ |
+| RME Babyface PRO | ¥45,000 | ★★★☆☆ |
+
+<strong>Recommended: Behringer UMC202HD</strong>
+- Sufficient performance
+- Reasonable price
+- Simple setup
+
+### REW Setup
+
+<strong>STEP 1: Software Installation</strong>
+
+1. Visit www.roomeqwizard.com
+2. Download REW
+3. Execute installation
+4. Launch
+
+<strong>STEP 2: Audio Device Configuration</strong>
+
+1. Preferences → Audio Device
+2. Output: Select audio interface
+3. Input: Select mic input
+4. Latency calibration
+
+<strong>STEP 3: Speaker & Microphone Placement</strong>
+
+```
+【Measurement Setup】
+
+Speaker (connected to audio interface)
+        ↓
+    ┌────────┐
+    │ Test   │
+    │ Room   │
+    │        │
+    └────────┘
+        ↑
+   Microphone (height: 1.2m)
+```
+
+<strong>Critical Points</strong>
+
+- Microphone height: 1.2m (ear level)
+- Speaker distance: 1–2m
+- Multiple room locations measured (5+ recommended)
+
+### Actual Measurement Procedure
+
+<strong>STEP 1: Calibration</strong>
+
+1. Preferences → Calibration
+2. Enter mic sensitivity (first time only)
+3. Set reference SPL
+
+<strong>STEP 2: Measurement Signal Generation</strong>
+
+1. Measurements → New Measurement
+2. Set SPL (85dB recommended)
+3. Click "Generate"
+4. Play measurement signal from speaker
+
+<strong>STEP 3: RT60 Measurement</strong>
+
+1. REW automatically measures RT60
+2. Plots on graph
+3. Frequency-specific RT60 displayed
+
+<strong>STEP 4: Record Results</strong>
+
+- Overall RT60
+- Frequency-specific RT60 (125Hz, 250Hz, 500Hz, 1k, 2kHz, etc.)
+- Save graph as image
+
+### Reading Measurement Results
+
+<strong>RT60 Graph Interpretation</strong>
+
+```
+RT60 (seconds)
+1.0 ┌────────────────┐
+    │  ×: Current    │
+0.8 │  −: Ideal range│
+    │    ×           │
+0.6 │  ────────────  │
+    │ ×              │
+0.4 │ ────────────  │
+    │   × ×         │
+0.2 │              │
+    └────────────────┘
+     125 250 500 1k 2k 4k 8k
+         Frequency (Hz)
+```
+
+<strong>Reading Key Points</strong>
+
+- Lower frequencies naturally having longer RT60 is normal
+- 1kHz region values most important
+- Significant frequency-specific variations warrant improvement
+
+## Optimal RT60 Values
+
+Target RT60 by application:
+
+### Application-Specific Optimal RT60
+
+<strong>Podcast/Streaming</strong>
+
+| Frequency | Target RT60 | Reason |
+|---|---|---|
+| 125Hz | 0.3 sec | Bass control |
+| 500Hz | 0.25 sec | Most important |
+| 1kHz | 0.2–0.3 sec | Voice range |
+| 4kHz | 0.2–0.3 sec | Clarity |
+
+<strong>Recommendation: Overall 0.2–0.35 seconds</strong>
+
+---
+
+<strong>Vocal/Singing Recording</strong>
+
+| Frequency | Target RT60 | Reason |
+|---|---|---|
+| 125Hz | 0.4 sec | Warmth preservation |
+| 500Hz | 0.3 sec | Balance |
+| 1kHz | 0.3–0.4 sec | Naturalness |
+| 4kHz | 0.3–0.4 sec | Clarity |
+
+<strong>Recommendation: Overall 0.3–0.5 seconds</strong>
+
+---
+
+<strong>Music Production/DAW</strong>
+
+| Frequency | Target RT60 |
+|---|---|
+| Low | 0.4–0.6 sec |
+| Mid | 0.35–0.5 sec |
+| High | 0.3–0.4 sec |
+
+<strong>Recommendation: Overall 0.4–0.6 seconds</strong>
+
+---
+
+<strong>Movie/Gaming</strong>
+
+| Frequency | Target RT60 |
+|---|---|
+| Overall | 0.5–0.8 sec |
+
+## RT60 Adjustment Methods
+
+Post-measurement optimization:
+
+### ① Too Long RT60 (Increase Absorption)
+
+<strong>Strategies</strong>
+
+| Strategy | Effect |
+|---|---|
+| <strong>Add absorption material</strong> | Reduce RT60 by 0.1–0.3 sec |
+| <strong>Add carpeting</strong> | Primarily absorbs bass |
+| <strong>Absorption curtains</strong> | Absorbs treble |
+| <strong>Furniture placement</strong> | Reduces reflections |
+
+<strong>Implementation Procedure</strong>
+
+1. Measure current RT60
+2. Calculate target gap
+3. Estimate required absorption material
+4. Add incrementally
+5. Re-measure at each stage
+
+<strong>Calculation Formula</strong>
+
+```
+Added material area = (RT60 difference / 0.1 sec) × Current material area
+
+Example: Reduce 0.6 sec RT60 to 0.3 sec
+(0.6 - 0.3) / 0.1 = 3× absorption needed
+```
+
+---
+
+### ② Too Short RT60 (Reduce Absorption)
+
+<strong>Strategies</strong>
+
+| Strategy | Effect |
+|---|---|
+| <strong>Partially remove materials</strong> | Extend RT60 |
+| <strong>Increase reflective surfaces</strong> | Especially extends bass |
+| <strong>Add reverb</strong> | Electronic supplement |
+
+<strong>Implementation Procedure</strong>
+
+1. Partially remove absorption panels
+2. Make rear walls reflective
+3. Re-measure for verification
+
+---
+
+### ③ Frequency-Specific Differences
+
+<strong>When Bass Too Long</strong>
+
+- Add bass traps (corner treatment)
+- Use large absorption materials
+
+<strong>When Treble Too Long</strong>
+
+- Add treble absorption (thin panels)
+
+## Practical Example: Podcast Box Optimization
+
+Concrete example:
+
+### Initial Measurement
+
+<strong>Results</strong>
+
+```
+Frequency | Current RT60 | Target
+----------|-------------|----------
+125Hz     | 0.8 sec     | 0.3 sec
+500Hz     | 0.5 sec     | 0.25 sec
+1kHz      | 0.4 sec     | 0.25 sec
+4kHz      | 0.3 sec     | 0.2 sec
+```
+
+<strong>Assessment</strong>
+
+- Bass too long (bass emphasis)
+- Treble acceptable
+- Overall absorption insufficient
+
+### Improvement Plan
+
+<strong>STEP 1: Add Absorption</strong>
+
+- Side panels (50mm × 4㎡)
+- Ceiling (50mm × 2㎡)
+
+<strong>STEP 2: Re-measure</strong>
+
+```
+Frequency | After Improvement | Target
+----------|-------------------|----------
+125Hz     | 0.6 sec          | 0.3 sec
+500Hz     | 0.35 sec         | 0.25 sec
+1kHz      | 0.3 sec          | 0.25 sec
+4kHz      | 0.25 sec         | 0.2 sec
+```
+
+<strong>Assessment</strong>
+
+- Improving (bass still long)
+- Mid-treble targets met
+
+<strong>STEP 3: Bass Treatment</strong>
+
+- Add bass traps at corners
+
+<strong>STEP 4: Final Measurement</strong>
+
+```
+Frequency | Final Value | Target
+----------|-------------|----------
+125Hz     | 0.3 sec     | 0.3 sec ✓
+500Hz     | 0.25 sec    | 0.25 sec ✓
+1kHz      | 0.25 sec    | 0.25 sec ✓
+4kHz      | 0.2 sec     | 0.2 sec ✓
+```
+
+<strong>Result</strong>
+
+- All frequencies meet targets
+- Ideal box achieved
+
+## Measurement Precautions
+
+Accuracy points:
+
+<strong>Prepare Measurement Environment</strong>
+
+- [ ] Minimize external noise (quiet time)
+- [ ] 1-hour pre-measurement ventilation/temperature stabilization
+- [ ] Multiple location measurements (use average)
+- [ ] Humidity ~50% ideal
+
+<strong>Verify Measurement Equipment</strong>
+
+- [ ] Microphone sensitivity accuracy (calibration)
+- [ ] Cable integrity check
+- [ ] Audio interface level setting (prevent clipping)
+
+<strong>Record Results</strong>
+
+- Save all measurement data
+- Graphically archive images
+- Record before/after comparisons
+
+## RT60 Measurement: Final Verification
+
+Beyond numbers, practical verification important:
+
+<strong>Listening Test</strong>
+
+- [ ] Does voice sound natural?
+- [ ] No echo present?
+- [ ] Bass not muddy?
+- [ ] Treble not harsh?
+
+<strong>A/B Test</strong>
+
+- Compare pre/post-improvement recordings
+- Experiential difference important
+
+## RT60 Measurement Equipment Recommended Kits
+
+Complete equipment sets:
+
+<strong>¥30,000 Course (Entry)</strong>
+
+| Product | Price |
+|---|---|
+| BEHRINGER ECM8000 | ¥4,000 |
+| Behringer UMC202HD | ¥8,000 |
+| XLR Cables (3) | ¥3,000 |
+| Mic Stand | ¥2,000 |
+| Pop Filter | ¥1,000 |
+| PC Speaker | ¥8,000 |
+| <strong>Total</strong> | <strong>¥26,000</strong> |
+
+<strong>¥50,000 Course (Recommended)</strong>
+
+| Product | Price |
+|---|---|
+| Above set | ¥26,000 |
+| Calibration Mic | ¥15,000 |
+| Mic Positioning Fixture | ¥3,000 |
+| Measurement Mat | ¥6,000 |
+| <strong>Total</strong> | <strong>¥50,000</strong> |
+
+## Summary: RT60 Measurement "Determines Soundproof Room Completeness"
+
+<strong>Key Takeaways</strong>
+
+- ✓ RT60 quantifies soundproof room acoustic environment
+- ✓ Application-specific optimal values exist
+- ✓ REW enables accurate measurement for ~¥30K
+- ✓ Gradual improvement effective
+- ✓ Frequency-specific tuning important
+
+<strong>Measure → Improve Cycle</strong>
+
+1. Initial measurement (baseline)
+2. Target value setting
+3. Gradual improvement
+4. Re-measurement
+5. Fine-tuning
+
+Proper RT60 management creates completely professional acoustic environments.
+
+Achieve professional-level performance through data-driven improvements!

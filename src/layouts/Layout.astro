@@ -1,0 +1,186 @@
+---
+interface Props {
+	title: string;
+}
+
+import Navigation from '../components/Navigation.astro';
+
+const { title } = Astro.props;
+const pathname = Astro.url.pathname;
+const lang = pathname.startsWith('/en') ? 'en' : 'ja';
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="専門知識に基づいた防音対策のナレッジベース" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | BouonLab</title>
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RWEHZPS976"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-RWEHZPS976');
+		</script>
+		<!-- Google AdSense -->
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9798094072282530"
+     crossorigin="anonymous"></script>
+		<!-- Google Fonts: BIZ UD Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=BIZ+UDPMincho:wght@400;700&display=swap" rel="stylesheet">
+		
+		<!-- Structured Data: Organization & WebSite -->
+		<script type="application/ld+json" is:inline set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "BouonLab / 防音ラボ",
+			"url": "https://bouon-lab.online/",
+			"logo": "https://bouon-lab.online/favicon.svg",
+			"description": "科学的根拠に基づいた防音対策のナレッジベース"
+		})} />
+		<script type="application/ld+json" is:inline set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "BouonLab",
+			"url": "https://bouon-lab.online/",
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://bouon-lab.online/ja/search/?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			}
+		})} />
+	</head>
+	<body class="dark-mocha-theme">
+		<Navigation />
+		<slot />
+		<footer class="site-footer">
+			<div class="container footer-content">
+				<div class="footer-brand">
+					<h3>BouonLab</h3>
+					<p>{lang === 'ja' ? '静寂を、科学する。' : 'The Science of Silence.'}</p>
+				</div>
+				<nav class="footer-nav">
+					<a href={`/${lang}/`}>{lang === 'ja' ? 'トップ' : 'Home'}</a>
+					<a href={`/${lang}/about/`}>{lang === 'ja' ? 'ABOUT' : 'About'}</a>
+					<a href={`/${lang}/privacy/`}>{lang === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy'}</a>
+				</nav>
+				<div class="footer-bottom">
+					<p>&copy; 2025-2026 防音Lab - Science of Silence</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--bg-dark: #0D0B0A;
+		--bg-mocha: #1A1614;
+		--primary-gold: #D4AF37;
+		--text-light: #E0D7D0;
+		--text-dim: #99908A;
+		/* フォント定義：可読性を極める */
+		--font-ud-mincho: 'BIZ UDPMincho', serif;
+		--font-ud-gothic: 'BIZ UDPGothic', sans-serif;
+		/* UD新ゴ系へのリスペクトスタック（ローカルにあれば優先） */
+		--font-body-text: "UDShinGoPr6N-R", "UD Shin Go", "BIZ UDPGothic", sans-serif;
+	}
+
+	html, body {
+		margin: 0;
+		padding: 0;
+		background-color: #0D0B0A !important;
+		color: #E0D7D0 !important;
+		font-family: var(--font-body-text);
+		font-feature-settings: "palt"; /* プロポーショナルメトリクス有効化 */
+		scroll-behavior: smooth;
+		padding-top: 70px; /* Header height */
+	}
+
+	body.menu-open {
+		overflow: hidden;
+	}
+
+	body.dark-mocha-theme {
+		background-color: var(--bg-dark);
+		color: var(--text-light);
+	}
+
+	h1, h2, h3, h4 {
+		font-family: var(--font-ud-mincho);
+		color: var(--primary-gold) !important;
+		font-weight: 700;
+	}
+
+	a {
+		color: var(--primary-gold);
+		text-decoration: none;
+	}
+
+	.site-footer {
+		padding: 6rem 2rem 4rem;
+		background: #000;
+		color: var(--text-dim);
+		font-size: 0.95rem;
+		border-top: 1px solid rgba(255,255,255,0.05);
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		text-align: left;
+	}
+
+	.footer-brand h3 {
+		margin: 0 0 1rem;
+		font-size: 1.5rem;
+		color: var(--primary-gold);
+	}
+
+	.footer-nav {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.footer-nav a {
+		color: var(--text-dim);
+		transition: color 0.3s;
+	}
+
+	.footer-nav a:hover {
+		color: var(--primary-gold);
+	}
+
+	.footer-bottom {
+		grid-column: span 2;
+		margin-top: 4rem;
+		padding-top: 2rem;
+		border-top: 1px solid rgba(255,255,255,0.03);
+		text-align: center;
+		font-size: 0.8rem;
+		letter-spacing: 0.1rem;
+	}
+
+	.container {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	@media (max-width: 768px) {
+		.footer-content {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+		.footer-bottom {
+			grid-column: span 1;
+		}
+	}
+</style>

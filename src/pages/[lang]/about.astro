@@ -1,0 +1,261 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+    return [
+        { params: { lang: 'ja' } },
+        { params: { lang: 'en' } }
+    ];
+}
+
+const { lang } = Astro.params;
+
+const content = {
+    ja: {
+        title: "ABOUT | 防音Lab",
+        heading: "「資産」としての静寂を、創り出す。",
+        subheading: "防音Lab（BouonLab）とは",
+        text: "防音Labは、防音・音響対策を単なる「設備の導入」ではなく、人生の質と物理的な価値を高める「資産形成」の一環として捉える専門メディアです。",
+        mission_title: "運営ミッション",
+        mission_text: "音の悩みから解放されるだけでなく、防音室のリセール価値、公的補助金、ローン活用、そして節税対策といった「金融的視点」を融合させることで、持続可能で賢い防音ライフを提案します。",
+        features: [
+            {
+                title: "科学的アプローチ",
+                body: "透過損失（D値）や質量則、定在波解析といった音響物理学に基づき、曖昧な「静かさ」ではなく、数値に裏打ちされた確実な対策を提示します。"
+            },
+            {
+                title: "金融・資産価値の最大化",
+                body: "防音室は数百万規模の投資です。残価率の高いメーカーの選定、リフォームローンの最適化、補助金申請のノウハウなど、購入者の経済的利益を最大化する情報を発信します。"
+            },
+            {
+                title: "法的・社会的解決",
+                body: "近隣騒音トラブルの法的解決指針や、賃貸借契約における原状回復義務の解釈など、トラブルを未然に防ぎ、調和のとれた住環境をプロデュースします。"
+            }
+        ]
+    },
+    en: {
+        title: "ABOUT | BouonLab",
+        heading: "Creating Silence as an Asset.",
+        subheading: "What is BouonLab?",
+        text: "BouonLab is a specialized media platform that views soundproofing and acoustic solutions not just as 'equipment installation' but as part of 'asset formation' that enhances the quality of life and physical value.",
+        mission_text: "Beyond just being free from noise issues, I propose a sustainable and smart soundproof lifestyle by integrating 'financial perspectives' such as the resale value of soundproof rooms, public subsidies, loan utilization, and tax saving strategies.",
+        features: [
+            {
+                title: "Scientific Approach",
+                body: "Based on acoustic physics such as transmission loss (D-value), the mass law, and standing wave analysis, we provide certain measures backed by numbers rather than vague 'quietness'."
+            },
+            {
+                title: "Maximizing Financial & Asset Value",
+                body: "A soundproof room is a multi-million yen investment. We provide information to maximize the economic interest of the purchaser, such as selecting manufacturers with high resale value, optimizing reform loans, and know-how for subsidy applications."
+            },
+            {
+                title: "Legal & Social Solutions",
+                body: "We produce a harmonious living environment by providing legal resolution guidelines for neighborhood noise troubles and interpretation of restoration obligations in rental agreements to prevent troubles before they occur."
+            }
+        ]
+    }
+};
+
+const t = content[lang as keyof typeof content];
+---
+
+<Layout title={t.title}>
+    <main class="page-container">
+        <header class="page-header">
+            <div class="eyebrow-box">
+                <div class="line"></div>
+                <span class="eyebrow">ABOUT US</span>
+                <div class="line"></div>
+            </div>
+            <h1>{t.heading}</h1>
+            <p class="intro-text-large">{t.text}</p>
+        </header>
+
+        <section class="page-content">
+            <div class="mission-section">
+                <h2>{t.mission_title}</h2>
+                <p>{t.mission_text}</p>
+            </div>
+
+            <div class="feature-grid">
+                {t.features.map(feature => (
+                    <div class="feature-card">
+                        <h3>{feature.title}</h3>
+                        <p>{feature.body}</p>
+                    </div>
+                ))}
+            </div>
+
+            <aside class="identity-card">
+                <div class="card-content">
+                    <h4>運営方針とステートメント</h4>
+                    <p>
+                        私は、防音の専門家（管理人）として、中立的かつ高度に専門的な情報を発信することをお約束いたします。
+                        単なる商品の紹介に留まらず、ユーザーの皆様が「賢い投資」を行えるよう、法的・金融的・科学的なあらゆる角度からサポートいたします。
+                    </p>
+                </div>
+            </aside>
+        </section>
+
+        <div class="back-link">
+            <a href={`/${lang}/`}>
+                <span class="arrow">←</span> {lang === 'ja' ? 'トップページへ' : 'Back to Home'}
+            </a>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .page-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 10rem 2rem;
+    }
+
+    .page-header {
+        margin-bottom: 6rem;
+        text-align: center;
+    }
+
+    .eyebrow-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .line {
+        width: 40px;
+        height: 1px;
+        background: var(--primary-gold);
+        opacity: 0.5;
+    }
+
+    .eyebrow {
+        font-size: 0.85rem;
+        letter-spacing: 0.4rem;
+        color: var(--primary-gold);
+        font-weight: 500;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.2;
+        background: linear-gradient(to bottom, #fff, #aaa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .intro-text-large {
+        font-size: 1.25rem;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.8;
+        color: var(--text-light);
+    }
+
+    .mission-section {
+        margin-bottom: 6rem;
+        padding: 4rem;
+        background: rgba(212, 175, 55, 0.03);
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .mission-section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: var(--primary-gold);
+    }
+
+    .mission-section p {
+        font-size: 1.15rem;
+        line-height: 2;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 6rem;
+    }
+
+    .feature-card {
+        padding: 2.5rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+        background: rgba(212, 175, 55, 0.05);
+        border-color: rgba(212, 175, 55, 0.2);
+        transform: translateY(-5px);
+    }
+
+    .feature-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary-gold);
+    }
+
+    .feature-card p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+        color: var(--text-dim);
+    }
+
+    .identity-card {
+        padding: 3rem;
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(20, 20, 20, 0) 100%);
+        border-left: 4px solid var(--primary-gold);
+        border-radius: 0 12px 12px 0;
+    }
+
+    .identity-card h4 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+
+    .identity-card p {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: var(--text-dim);
+    }
+
+    .back-link {
+        margin-top: 10rem;
+        text-align: center;
+    }
+
+    .back-link a {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-dim);
+        text-decoration: none;
+        letter-spacing: 0.1rem;
+        transition: color 0.3s ease;
+    }
+
+    .back-link a:hover {
+        color: var(--primary-gold);
+    }
+
+    .arrow {
+        margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .page-container { padding: 6rem 1.5rem; }
+        h1 { font-size: 2.25rem; }
+        .mission-section { padding: 2rem; }
+        .feature-grid { grid-template-columns: 1fr; }
+    }
+</style>

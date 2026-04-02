@@ -1,0 +1,322 @@
+---
+/**
+ * CtaBox.astro
+ * 高級防音室や高単価案件向けの、よりリッチなコンバージョン用コンポーネント
+ * 
+ * 使用例:
+ *   <CtaBox slug="yamaha-avitex" />
+ */
+import { getAffiliate } from '../data/affiliates';
+import { Image } from 'astro:assets';
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+const item = getAffiliate(slug);
+
+if (!item) {
+  console.warn(`[CtaBox] Affiliate slug "${slug}" not found in affiliates.ts`);
+}
+
+// リンクURLを解決
+let href = '#';
+if (item?.type === 'amazon') {
+  // Amazon型はCtaBoxではあまり使わない想定だが一応対応
+  href = `https://www.amazon.co.jp/dp/${item.asin}?tag=${item.tag}&linkCode=ogi&th=1&psc=1`;
+} else if (item?.type === 'link') {
+  href = item.url;
+}
+
+// プレミアム・ハイチケット判定
+const isHighTicket = item?.variant === 'high-ticket';
+const isPremium = item?.variant === 'premium';
+
+// 画像URLの解決
+let imgSrc: any = (item as any)?.image;
+if (imgSrc && imgSrc.startsWith('images/I/')) {
+  imgSrc = `https://m.media-amazon.com/${imgSrc}`;
+} else if (imgSrc) {
+  // ローカルアセットの動的インポート
+  const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{jpeg,jpg,png,webp}');
+  const assetPath = `/src/assets/${imgSrc}`;
+  if (images[assetPath]) {
+    imgSrc = images[assetPath]();
+  } else {
+    imgSrc = `/${imgSrc}`;
+  }
+}
+---
+
+{item ? (
+  <div class={`cta-box-container ${isHighTicket ? 'high-ticket' : ''} ${isPremium ? 'premium' : ''}`}>
+    <div class="cta-header">
+      <span class="cta-label">SPECIAL OFFER</span>
+      <span class="cta-badge">{(item as any).badge || 'PREMIUM'}</span>
+    </div>
+    
+    <div class="cta-main">
+      <div class="cta-content">
+        <h3 class="cta-title">{(item as any).name}</h3>
+        <p class="cta-description">{(item as any).description}</p>
+        
+        <div class="cta-benefits">
+          <ul>
+            {isHighTicket ? (
+              <>
+                <li>専門のアドバイザーによる無料設計相談</li>
+                <li>ローンシミュレーション対応（低金利ローン案内）</li>
+                <li>全国ショールームでの試弾・体験予約可能</li>
+              </>
+            ) : (
+              <>
+                <li>圧倒的な遮音性能（Dr-35〜40対応）</li>
+                <li>資産価値が高く、中古市場での需要も安定</li>
+                <li>24時間の演奏・配信を可能にする究極の空間</li>
+              </>
+            )}
+          </ul>
+        </div>
+
+        <div class="cta-price-row">
+          <span class="price-label">価格目安:</span>
+          <span class="price-value">{(item as any).price || '要問合せ'}</span>
+        </div>
+
+        <div class="cta-actions">
+          <a href={href} target="_blank" rel="nofollow sponsored noopener" class="primary-button">
+            {isHighTicket ? '無料カタログ・内見予約をする →' : '製品スペックと詳細を確認する →'}
+          </a>
+          <p class="cta-note">※外部サイトへ移動します</p>
+        </div>
+      </div>
+      
+      {imgSrc && (
+        <div class="cta-image">
+          <Image src={imgSrc} alt={(item as any).name} width={400} height={300} format="webp" />
+        </div>
+      )}
+    </div>
+
+    <div class="cta-footer">
+      <p class="roi-hook">
+        {isHighTicket 
+          ? "「家賃＋スタジオ代」のランニングコストを見直しませんか？" 
+          : "一生モノの演奏環境を手に入れる、賢い投資の第一歩。"}
+      </p>
+    </div>
+  </div>
+) : (
+  <div class="affiliate-missing">⚠️ CtaBox: slug="{slug}" not found</div>
+)}
+
+<style>
+  .cta-box-container {
+    margin: 4rem 0;
+    padding: 2.5rem;
+    background: #1A1614; /* var(--bg-mocha) */
+    border: 1px solid rgba(212, 175, 55, 0.2); /* var(--primary-gold) */
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  /* グラデーションのアクセント */
+  .cta-box-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #D4AF37, #F1E5AC, #D4AF37);
+  }
+
+  .cta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .cta-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--text-dim);
+    font-weight: bold;
+  }
+
+  .cta-badge {
+    background: var(--primary-gold);
+    color: #000;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 3px 12px;
+    border-radius: 50px;
+    letter-spacing: 0.1em;
+  }
+
+  .cta-main {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .cta-content {
+    flex: 1;
+  }
+
+  .cta-title {
+    font-family: var(--font-ud-mincho);
+    font-size: 1.75rem;
+    color: var(--primary-gold) !important;
+    margin: 0 0 1.25rem 0;
+    line-height: 1.3;
+  }
+
+  .cta-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-benefits {
+    margin-bottom: 2rem;
+  }
+
+  .cta-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cta-benefits li {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .cta-benefits li::before {
+    content: '✓';
+    color: var(--primary-gold);
+    font-weight: bold;
+  }
+
+  .cta-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .price-label {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+
+  .price-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: var(--font-ud-mincho);
+  }
+
+  .cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .primary-button {
+    display: block;
+    text-align: center;
+    padding: 1.25rem;
+    background: var(--primary-gold);
+    color: #000 !important;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  }
+
+  .cta-note {
+    font-size: 0.7rem;
+    text-align: center;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .cta-image {
+    flex: 0 0 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    height: fit-content;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .cta-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+  }
+
+  .cta-box-container:hover .cta-image img {
+    transform: scale(1.05);
+  }
+
+  .cta-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px dotted rgba(255, 255, 255, 0.1);
+  }
+
+  .roi-hook {
+    font-size: 0.9rem;
+    color: var(--primary-gold);
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+  }
+
+  /* レスポンシブ対応 */
+  @media (max-width: 850px) {
+    .cta-main {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .cta-image {
+      flex: none;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cta-box-container {
+      padding: 1.5rem;
+    }
+    .cta-title {
+      font-size: 1.4rem;
+    }
+    .primary-button {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,159 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+    return [
+        { params: { lang: 'ja' } },
+        { params: { lang: 'en' } }
+    ];
+}
+
+const { lang } = Astro.params;
+
+const content = {
+    ja: {
+        title: "Privacy Policy | 防音Lab",
+        heading: "プライバシーポリシー・免責事項",
+        text: "防音Lab（以下「当サイト」といいます。）は、本ウェブサイト上で提供するサービスにおける個人情報の取扱いについて、以下の通りプライバシーポリシーを定めます。",
+        sections: [
+            {
+                title: "1. 個人情報の収集と利用目的",
+                body: "当サイトでは、お問い合わせやコメントの際に、氏名やメールアドレス等の個人情報を入力いただく場合があります。これらの情報は、質問に対する回答や必要な情報を電子メールなどでご連絡する場合にのみ利用し、目的以外では利用いたしません。"
+            },
+            {
+                title: "2. 広告の配信について",
+                body: "当サイトは、第三者配信の広告サービス「Googleアドセンス」を利用しています。広告配信事業者は、ユーザーの興味に応じた広告を表示するためにクッキー（Cookie）を使用することがあります。クッキーを無効にする設定およびGoogleアドセンスに関する詳細は、Googleの「広告 – ポリシーと規約」をご覧ください。また、当サイトはAmazon.co.jpを宣伝しリンクすることによって紹介料を獲得できる手段を提供することを目的に設定されたアフィリエイトプログラムである、Amazonアソシエイト・プログラムの参加者です。"
+            },
+            {
+                title: "3. アクセス解析ツールについて",
+                body: "当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。このGoogleアナリティクスはトラフィックデータの収集のためにクッキー（Cookie）を使用しています。トラフィックデータは匿名で収集されており、個人を特定するものではありません。"
+            },
+            {
+                title: "4. 免責事項",
+                body: "当サイトのコンテンツ・情報について、できる限り正確な情報を提供するよう努めておりますが、正確性や安全性を保証するものではありません。情報が古くなっていることもございます。当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。また、当サイトからリンクやバナーなどによって他のサイトに移動された場合、移動先サイトで提供される情報、サービス等について一切の責任を負いません。"
+            },
+            {
+                title: "5. 著作権・肖像権について",
+                body: "当サイトで掲載しているすべてのコンテンツ（文章、画像、動画、デザイン等）の著作権・肖像権等は、当サイト所有者または各権利所有者が保有し、許可なく無断転載することを禁止します。"
+            }
+        ]
+    },
+    en: {
+        title: "Privacy Policy | BouonLab",
+        heading: "Privacy Policy & Disclaimer",
+        text: "BouonLab (hereinafter referred to as 'this site') establishes the following privacy policy regarding the handling of personal information in the services provided on this website.",
+        sections: [
+            {
+                title: "1. Collection and Use of Personal Information",
+                body: "On this site, we may request that you provide personal information such as your name and email address when making inquiries or leaving comments. This information is used solely for responding to inquiries or providing necessary information via email and will not be used for any other purpose."
+            },
+            {
+                title: "2. Advertising",
+                body: "This site uses Google AdSense, a third-party advertising service. Advertising providers may use cookies to display advertisements based on your interests. For more information on disabling cookies and Google AdSense, please visit Google's 'Advertising - Policies and Terms'. This site is also a participant in the Amazon Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.co.jp."
+            },
+            {
+                title: "3. Access Analysis Tools",
+                body: "This site uses Google Analytics for traffic analysis. Google Analytics uses cookies to collect traffic data. This data is collected anonymously and does not identify individuals."
+            },
+            {
+                title: "4. Disclaimer",
+                body: "While we strive to provide the most accurate information possible, we do not guarantee the accuracy or safety of the content on this site. Information may be outdated. We assume no responsibility for any damage caused by the content posted on this site. Furthermore, we are not responsible for the information or services provided on third-party sites reached via links or banners from this site."
+            },
+            {
+                title: "5. Copyright and Image Rights",
+                body: "The copyright and image rights for all content (text, images, video, design, etc.) on this site are owned by the site owner or the respective rights holders. Unauthorized reproduction is prohibited."
+            }
+        ]
+    }
+};
+
+const t = content[lang as keyof typeof content];
+---
+
+<Layout title={t.title}>
+    <main class="page-container">
+        <header class="page-header">
+            <h1>{t.heading}</h1>
+        </header>
+
+        <section class="page-content">
+            <p class="intro-text">{t.text}</p>
+
+            {t.sections.map(section => (
+                <div class="legal-section">
+                    <h2>{section.title}</h2>
+                    <p>{section.body}</p>
+                </div>
+            ))}
+        </section>
+
+        <div class="back-link">
+            <a href={`/${lang}/`}>← {lang === 'ja' ? 'トップへ戻る' : 'Back to Home'}</a>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .page-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 8rem 2rem;
+    }
+
+    .page-header {
+        margin-bottom: 4rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        padding-bottom: 3rem;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+        margin: 0;
+        color: var(--primary-gold);
+        letter-spacing: 0.1rem;
+    }
+
+    .intro-text {
+        color: var(--text-light);
+        font-weight: 500;
+        margin-bottom: 4rem;
+    }
+
+    .legal-section {
+        margin-bottom: 4rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        color: #fff;
+        margin-top: 3rem;
+        margin-bottom: 1.25rem;
+        padding-left: 1rem;
+        border-left: 3px solid var(--primary-gold);
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: var(--text-dim);
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.03rem;
+    }
+
+    .back-link {
+        margin-top: 6rem;
+        text-align: center;
+    }
+
+    .back-link a {
+        font-weight: bold;
+        color: var(--text-dim);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .back-link a:hover {
+        color: var(--primary-gold);
+    }
+</style>

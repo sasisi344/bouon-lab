@@ -1,0 +1,269 @@
+---
+/**
+ * AssetValueTable.astro
+ * 防音室の「資産価値」と「実質負担額」を可視化する比較表コンポーネント
+ * 汎用性を高め、外部からデータを注入可能にリファクタリング
+ */
+interface TableItem {
+  name: string;
+  spec: string;
+  initial: string;
+  resale5yr: string;
+  resaleRate: string;
+  monthlyNet: string;
+  investment: string;
+  highlight?: boolean;
+}
+
+interface Props {
+  variant?: 'full' | 'compact';
+  title?: string;
+  items?: TableItem[];
+  showType?: 'asset' | 'price' | 'investment'; // 表示の強調ポイントを切り替え可能に
+}
+
+const { 
+  variant = 'full', 
+  title = '防音室の「資産価値」と実質月額コスト比較（5年運用時）',
+  items 
+} = Astro.props;
+
+// デフォルトデータ（既存のものを維持しつつ、共通化）
+const defaultData: TableItem[] = [
+  {
+    name: 'ヤマハ セフィーネNS',
+    spec: '1.5畳 / Dr-35',
+    initial: '1,075,800円',
+    resale5yr: '500,000円',
+    resaleRate: '46%',
+    monthlyNet: '実質 15,000円',
+    investment: '★★★★★',
+    highlight: true,
+  },
+  {
+    name: 'カワイ ナサール',
+    spec: '1.5畳 / Dr-35',
+    initial: '1,025,200円',
+    resale5yr: '420,000円',
+    resaleRate: '41%',
+    monthlyNet: '実質 18,000円',
+    investment: '★★★★☆',
+    highlight: false,
+  },
+  {
+    name: 'OTODASU II',
+    spec: '1.2畳 / 簡易防音',
+    initial: '149,000円',
+    resale5yr: '15,000円',
+    resaleRate: '10%',
+    monthlyNet: '実質 2,250円',
+    investment: '★★☆☆☆',
+    highlight: false,
+  },
+  {
+    name: '外部スタジオ利用',
+    spec: '週3回 / 各2時間',
+    initial: '0円',
+    resale5yr: 'ー',
+    resaleRate: '0%',
+    monthlyNet: '支出 39,000円',
+    investment: '★☆☆☆☆',
+    highlight: false,
+  }
+];
+
+const displayData = items || defaultData;
+---
+
+<div class="asset-table-wrapper">
+  {variant === 'full' && (
+    <div class="table-header">
+      <h3 class="table-tag">FINANCIAL ANALYSIS</h3>
+      <p class="table-title">{title}</p>
+    </div>
+  )}
+
+  <div class="scroll-hint">← 横スクロールで詳細を確認</div>
+  
+  <div class="table-container">
+    <table class="asset-table">
+      <thead>
+        <tr>
+          <th>対象モデル / サービス</th>
+          <th>初期費用</th>
+          <th>5年後売却価格 <span class="sub">(期待値)</span></th>
+          <th class="resale-rate">残価率</th>
+          <th>実質月額コスト <span class="sub">(5年換算)</span></th>
+          <th>投資評価</th>
+        </tr>
+      </thead>
+      <tbody>
+        {displayData.map((row) => (
+          <tr class={row.highlight ? 'highlight-row' : ''}>
+            <td class="model-cell">
+              <span class="model-name">{row.name}</span>
+              <span class="model-spec">{row.spec}</span>
+              {row.highlight && <span class="recommend-badge">ASSET BEST BUY</span>}
+            </td>
+            <td class="price">{row.initial}</td>
+            <td class="resale">{row.resale5yr}</td>
+            <td class="rate">{row.resaleRate}</td>
+            <td class="net-cost">
+              <span class="cost-value">{row.monthlyNet}</span>
+            </td>
+            <td class="stars">{row.investment}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-footer">
+    <slot name="footer">
+      <p class="note">※ヤマハ・カワイは楽器ローン（金利3.5%）利用、5年後売却時の搬出費引込後の実質負担額。外部スタジオは都内平均（時給1,500円）で算出。</p>
+    </slot>
+  </div>
+</div>
+
+<style>
+  .asset-table-wrapper {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #1A1614;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  .table-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .table-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--primary-gold);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  .table-title {
+    font-size: 1.25rem;
+    font-family: var(--font-ud-mincho);
+    color: #fff;
+    margin: 0;
+  }
+
+  .scroll-hint {
+    display: none;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    text-align: right;
+    margin-bottom: 0.5rem;
+  }
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .asset-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+    font-size: 0.9rem;
+  }
+
+  .asset-table th {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-dim);
+    font-weight: normal;
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    white-space: nowrap;
+  }
+
+  .asset-table th .sub {
+    font-size: 0.7rem;
+    display: block;
+    opacity: 0.6;
+  }
+
+  .asset-table td {
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #fff;
+    vertical-align: middle;
+  }
+
+  .highlight-row {
+    background: rgba(212, 175, 55, 0.08);
+  }
+
+  .model-cell {
+    position: relative;
+  }
+
+  .model-name {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--primary-gold);
+  }
+
+  .model-spec {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-top: 0.25rem;
+  }
+
+  .recommend-badge {
+    position: absolute;
+    top: -5px;
+    left: 1rem;
+    background: var(--primary-gold);
+    color: #000;
+    font-size: 0.6rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    transform: translateY(-50%);
+  }
+
+  .cost-value {
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .stars {
+    color: var(--primary-gold);
+    letter-spacing: 2px;
+  }
+
+  .table-footer {
+    margin-top: 1.5rem;
+  }
+
+  .note {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* レスポンシブ */
+  @media (max-width: 768px) {
+    .scroll-hint {
+      display: block;
+    }
+    .asset-table-wrapper {
+      padding: 1.5rem 1rem;
+    }
+  }
+</style>

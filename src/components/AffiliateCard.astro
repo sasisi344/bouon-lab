@@ -1,0 +1,295 @@
+---
+/**
+ * AffiliateCard.astro
+ * MDX内でショートコードとして使用するアフィリエイトカード
+ *
+ * 使用例（MDX内）:
+ *   <AffiliateCard slug="yamaha-avitex" />
+ *   <AffiliateCard slug="danbocchi-grande" variant="compact" />
+ */
+import { getAffiliate, buildAmazonUrl } from '../data/affiliates';
+import { Image } from 'astro:assets';
+
+interface Props {
+  slug: string;
+  variant?: 'default' | 'compact';
+}
+
+const { slug, variant = 'default' } = Astro.props;
+const item = getAffiliate(slug);
+
+if (!item) {
+  console.warn(`[AffiliateCard] Affiliate slug "${slug}" not found in affiliates.ts`);
+}
+
+// リンクURLを解決
+let href = '#';
+if (item?.type === 'amazon') {
+  href = buildAmazonUrl(item.asin, item.tag);
+} else if (item?.type === 'link') {
+  href = item.url;
+}
+
+// HTMLタグ型（バリューコマース）の場合はset:htmlで描画
+const isHtmlType = item?.type === 'html';
+
+// バッジ・バリアントクラス
+const variantClass = item?.variant === 'high-ticket' ? 'high-ticket'
+  : item?.variant === 'premium' ? 'premium'
+  : 'standard';
+
+// 画像URLの解決
+let imgSrc: any = (item as any)?.image;
+let isRemoteImage = false;
+
+if (imgSrc && imgSrc.startsWith('images/I/')) {
+  imgSrc = `https://m.media-amazon.com/${imgSrc}`;
+  isRemoteImage = true;
+} else if (imgSrc) {
+  // ローカルアセットの動的インポート
+  const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{jpeg,jpg,png,webp}');
+  const assetPath = `/src/assets/${imgSrc}`;
+  if (images[assetPath]) {
+    imgSrc = images[assetPath]();
+  } else {
+    console.warn(`[AffiliateCard] Image not found: ${assetPath}`);
+    // フォールバックとして元のパスを使用（publicに残っている場合など）
+    imgSrc = `/${imgSrc}`;
+  }
+}
+---
+
+{item ? (
+  isHtmlType ? (
+    <!-- HTMLタグ型: バリューコマース等のバナーをそのまま描画 -->
+    <div class={`affiliate-wrap html-type ${variantClass}`}>
+      {item.description && <p class="html-label">{item.name}</p>}
+      <div class="html-tag-container" set:html={(item as any).htmlTag} />
+      <p class="disclosure">※広告・PR</p>
+    </div>
+  ) : (
+    <!-- リンク型 / Amazon型: カードUI -->
+    <div class={`affiliate-card ${variantClass} ${variant}`}>
+      <div class="badge-row">
+        {(item as any).badge && <span class="badge">{(item as any).badge}</span>}
+        {item.variant === 'high-ticket' && <span class="badge high">高単価案件</span>}
+        <span class="disclosure-inline">PR</span>
+      </div>
+
+      <a href={href} target="_blank" rel="nofollow sponsored noopener" class="card-inner">
+        {imgSrc && (
+          <div class="card-img-wrap">
+            {typeof imgSrc === 'string' ? (
+              <Image src={imgSrc} alt={(item as any).name} width={240} height={180} format="webp" class="card-img" />
+            ) : (
+              <Image src={imgSrc} alt={(item as any).name} width={240} height={180} format="webp" class="card-img" />
+            )}
+          </div>
+        )}
+        <div class="card-body">
+          <p class="product-name">{(item as any).name}</p>
+          {(item as any).description && (
+            <p class="product-desc">{(item as any).description}</p>
+          )}
+          {(item as any).price && (
+            <p class="product-price">{(item as any).price}</p>
+          )}
+          <span class="cta-btn">
+            {item.variant === 'high-ticket' ? '無料相談・詳細を見る →'
+              : item.type === 'amazon' ? 'Amazonで確認する →'
+              : '詳しく見る →'}
+          </span>
+        </div>
+      </a>
+
+      {/* Amazon計測pixel */}
+      {item.type === 'amazon' && (
+        <img
+          src={`https://ir-jp.amazon-adsystem.com/e/ir?t=${item.tag}&l=ur2&o=9`}
+          width="1" height="1" border="0" alt=""
+          style="border:none !important; margin:0px !important; display:none;"
+        />
+      )}
+      {/* もしも等の計測pixelタグ */}
+      {item.type === 'link' && (item as any).pixelTag && (
+        <div set:html={(item as any).pixelTag} style="display:none;" />
+      )}
+    </div>
+  )
+) : (
+  <!-- slug が見つからない場合は開発用警告のみ表示 -->
+  <div class="affiliate-missing">⚠️ AffiliateCard: slug="{slug}" not found</div>
+)}
+
+<style>
+  .affiliate-card {
+    margin: 2.5rem 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .affiliate-card:hover {
+    border-color: var(--primary-gold);
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15);
+  }
+
+  /* 高単価はゴールド枠 */
+  .affiliate-card.high-ticket {
+    border-color: rgba(212, 175, 55, 0.3);
+    background: rgba(212, 175, 55, 0.04);
+  }
+
+  .badge-row {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem 0;
+    align-items: center;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--primary-gold);
+    color: #000;
+  }
+
+  .badge.high {
+    background: transparent;
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+  }
+
+  .disclosure-inline {
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    margin-left: auto;
+    letter-spacing: 0.05rem;
+  }
+
+  .card-inner {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1rem 1.25rem 1.25rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card-img-wrap {
+    flex: 0 0 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .product-name {
+    font-family: var(--font-ud-mincho);
+    font-size: 1.05rem;
+    color: #fff;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  .product-desc {
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .product-price {
+    font-size: 1rem;
+    color: var(--primary-gold);
+    font-weight: bold;
+    margin: 0.25rem 0 0;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 8px 18px;
+    background: var(--primary-gold);
+    color: #000;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    letter-spacing: 0.05em;
+    align-self: flex-start;
+    transition: opacity 0.2s;
+  }
+
+  .affiliate-card:hover .cta-btn {
+    opacity: 0.85;
+  }
+
+  /* HTMLタグ型 */
+  .affiliate-wrap {
+    margin: 2.5rem 0;
+    text-align: center;
+  }
+
+  .html-label {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .html-tag-container {
+    display: inline-block;
+  }
+
+  .disclosure {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    margin-top: 0.4rem;
+  }
+
+  /* コンパクト */
+  .affiliate-card.compact .card-img-wrap {
+    flex: 0 0 80px;
+  }
+
+  /* 開発用警告 */
+  .affiliate-missing {
+    border: 2px dashed #ff4444;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #ff4444;
+    font-size: 0.85rem;
+    margin: 1rem 0;
+  }
+
+  @media (max-width: 640px) {
+    .card-inner {
+      flex-direction: column;
+    }
+    .card-img-wrap {
+      flex: none;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+  }
+</style>

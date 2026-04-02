@@ -1,0 +1,589 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../../layouts/Layout.astro';
+import SmartLink from '../../../components/SmartLink.astro';
+import RegionBanner from '../../../components/RegionBanner.astro';
+import ArchiveCarousel from '../../../components/ArchiveCarousel.astro';
+import AffiliateCard from '../../../components/AffiliateCard.astro';
+import CtaBox from '../../../components/CtaBox.astro';
+import MultiplexAd from '../../../components/MultiplexAd.astro';
+import AssetValueTable from '../../../components/AssetValueTable.astro';
+
+export async function getStaticPaths() {
+  const knowledge = await getCollection('knowledge');
+  const solutions = await getCollection('solutions');
+  const useCase = await getCollection('use-case');
+  const company = await getCollection('company');
+  const column = await getCollection('column');
+  
+  const allContent = [...knowledge, ...solutions, ...useCase, ...company, ...column];
+  
+  console.log('Generating paths for allContent. Size:', allContent.length);
+  
+  return allContent.map(post => {
+    const parts = post.id.split('/');
+    const lang = post.data.lang || 'ja';
+    const category = post.collection;
+    
+    // スラッグを生成: 言語コードと 'index' を除去
+    const slugParts = parts.filter(p => p !== lang && p !== 'index');
+    const slug = slugParts.length > 0 ? slugParts.join('/') : undefined;
+    
+    console.log(`Mapping Path: /${lang}/${category}/${slug || ''}`);
+    const isIndex = slug === undefined;
+
+    // 関連記事・アーカイブ記事を取得
+    // 同一言語の全記事から抽出（コレクションを跨いでもOKにする）
+    const langPosts = allContent
+      .filter(p => 
+        (p.data.lang || 'ja') === lang && 
+        !p.id.endsWith('/index') &&
+        p.id !== 'index'
+      )
+      .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+    const categoryPosts = langPosts.filter(p => p.collection === category);
+
+    const relatedPosts = langPosts
+      .filter(p => p.id !== post.id)
+      .sort(() => Math.random() - 0.5) // ランダムシャッフル
+      .slice(0, 12); // 最大12件
+
+    return {
+      params: { lang, category, slug },
+      props: { post, relatedPosts, isIndex, allCategoryPosts: categoryPosts },
+    };
+  });
+}
+
+const { post, relatedPosts, isIndex, allCategoryPosts } = Astro.props;
+const { Content } = await render(post);
+
+// パンくず等の情報を取得
+const lang = post.data.lang || 'ja';
+const category = post.collection;
+
+function getUrl(post: any) {
+    const parts = post.id.split('/');
+    const lang = post.data.lang || 'ja';
+    const segment = post.collection;
+    const slugParts = parts.filter(p => p !== lang && p !== 'index');
+    const slug = slugParts.join('/');
+    return slug ? `/${lang}/${segment}/${slug}/` : `/${lang}/${segment}/`;
+}
+
+const components = {
+    SmartLink,
+    RegionBanner,
+    ArchiveCarousel,
+    AffiliateCard,
+    CtaBox,
+    AssetValueTable
+};
+---
+
+<Layout title={post.data.title}>
+  <div class="article-wrapper">
+    <!-- 知的なパンくずリスト -->
+    <nav class="breadcrumb">
+      <a href={`/${lang}/`}>HOME</a>
+      <span class="sep">/</span>
+      {isIndex ? (
+        <span class="current">{category.toUpperCase()}</span>
+      ) : (
+        <>
+          <a href={`/${lang}/${category}/`}>{category.toUpperCase()}</a>
+          <span class="sep">/</span>
+          <span class="current">{post.data.subcategory || 'RESEARCH'}</span>
+        </>
+      )}
+    </nav>
+
+    <article class="article-content">
+      <header class="article-header">
+        <div class="meta-top">
+           <span class="date">{post.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
+           <span class="lang-tag">{lang.toUpperCase()}</span>
+        </div>
+        <h1>{post.data.title}</h1>
+        <p class="description">{post.data.description}</p>
+        {post.data.image && (
+          <div class="featured-image-container">
+            <Image src={post.data.image} alt={post.data.title} class="featured-image" width={1200} height={675} format="webp" />
+          </div>
+        )}
+      </header>
+
+      <div class="region-notif">
+        <RegionBanner />
+      </div>
+
+      <div class="prose-body">
+        <Content components={components} relatedPosts={relatedPosts} lang={lang} />
+      </div>
+
+      {isIndex && (
+        <section class="category-posts-list">
+          <div class="section-divider">
+            <span class="divider-text">{lang === 'ja' ? '研究成果一覧' : 'All Research'}</span>
+          </div>
+          <div class="posts-grid" id="posts-grid">
+            {allCategoryPosts.map((item, index) => (
+              <article class="post-card" data-index={index} style={index >= 6 ? "display: none;" : ""}>
+                {item.data.image && (
+                  <div class="card-image-box">
+                    <Image src={item.data.image} alt={item.data.title} class="card-img" width={600} height={338} format="webp" />
+                  </div>
+                )}
+                <div class="card-content">
+                  <div class="card-meta">
+                    <span class="date">{item.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
+                  </div>
+                  <h3 class="post-title">
+                    <a href={getUrl(item)} class="link-text">
+                      {item.data.title}
+                    </a>
+                  </h3>
+                  <p>{item.data.description}</p>
+                  <div class="card-footer">
+                    <a href={getUrl(item)} class="read-more">
+                      READ MORE →
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+          
+          {allCategoryPosts.length > 6 && (
+            <div class="load-more-container">
+              <button id="load-more-btn" class="btn-load-more">
+                {lang === 'ja' ? 'さらに記事を読み込む' : 'Load More Articles'}
+                <span class="count-info">
+                  (<span id="current-count">6</span> / {allCategoryPosts.length})
+                </span>
+              </button>
+            </div>
+          )}
+        </section>
+      )}
+
+      <script is:inline>
+        function initLoadMore() {
+          const btn = document.getElementById('load-more-btn');
+          const grid = document.getElementById('posts-grid');
+          if (!btn || !grid) return;
+
+          let currentVisible = 6;
+          const increment = 6;
+          const allCards = grid.querySelectorAll('.post-card');
+          const total = allCards.length;
+          const countDisplay = document.getElementById('current-count');
+
+          btn.addEventListener('click', () => {
+            const nextCount = currentVisible + increment;
+            
+            allCards.forEach((card, index) => {
+              if (index < nextCount) {
+                card.style.display = 'flex';
+                // フェードイン効果
+                card.style.animation = 'fadeIn 0.5s ease forwards';
+              }
+            });
+
+            currentVisible = nextCount;
+            if (countDisplay) countDisplay.textContent = Math.min(currentVisible, total);
+
+            if (currentVisible >= total) {
+              btn.style.display = 'none';
+            }
+          });
+        }
+
+        // 初期化
+        initLoadMore();
+        // View Transitions対応
+        document.addEventListener('astro:after-swap', initLoadMore);
+      </script>
+
+      {!isIndex && (
+        <footer class="article-footer">
+            <div class="tag-label">KEYWORDS</div>
+            <div class="tag-cloud">
+                {post.data.tags.map(tag => (
+                    <span class="tag-item">#{tag}</span>
+                ))}
+            </div>
+
+            <MultiplexAd />
+
+            {relatedPosts && relatedPosts.length > 0 && (
+              <section class="related-articles-section">
+                <div class="section-divider">
+                  <span class="divider-text">{lang === 'ja' ? 'こちらの研究成果もおすすめ' : 'Recommended Research'}</span>
+                </div>
+                <ArchiveCarousel relatedPosts={relatedPosts} lang={lang} />
+              </section>
+            )}
+        </footer>
+      )}
+    </article>
+  </div>
+</Layout>
+
+<style>
+  .article-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem 8rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem;
+    color: var(--text-dim);
+    text-align: center;
+  }
+  .breadcrumb a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .breadcrumb a:hover { color: var(--primary-gold); }
+  .breadcrumb .sep { margin: 0 0.5rem; opacity: 0.3; }
+  .breadcrumb .current { color: var(--primary-gold); font-weight: bold; }
+
+  .article-content {
+    background: var(--bg-mocha);
+    padding: 4rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.03);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  }
+
+  .article-header {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .meta-top {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.2rem;
+    color: var(--text-dim);
+  }
+
+  .lang-tag {
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    padding: 0 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+  }
+
+  h1 {
+    font-family: var(--font-ud-mincho);
+    font-size: 3rem;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+  }
+
+  .description {
+    font-family: var(--font-ud-gothic);
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+    letter-spacing: 0.05rem;
+  }
+
+  .featured-image-container {
+    margin-top: 3rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  }
+  .featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .region-notif {
+    margin: 2rem 0 4rem;
+  }
+
+  /* 文章本体のスタイリング */
+  .prose-body {
+    color: var(--text-light);
+    font-size: 1.125rem;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+  }
+
+  .prose-body :global(p) {
+    font-family: var(--font-body-text);
+    font-weight: 400; /* Regular */
+    margin-bottom: 2rem;
+  }
+
+  .prose-body :global(h2) {
+    font-family: var(--font-ud-mincho);
+    font-size: 2rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    padding-bottom: 0.5rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .prose-body :global(strong) {
+    color: #fff;
+    box-shadow: inset 0 -0.5em 0 rgba(212, 175, 55, 0.1);
+  }
+
+  /* 記事内画像の共通制御：デフォルトはコンテンツ幅に収める */
+  .prose-body :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
+  /* インフォグラフィック等、あえて広く見せたい画像用のクラス */
+  .prose-body :global(img.wide) {
+    max-width: none;
+    width: 100%;
+  }
+
+  /* アーカイブ（記事一覧）セクション */
+  .archive-section {
+    margin-top: 8rem;
+    padding-top: 4rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .divider-text {
+    font-family: var(--font-ud-mincho);
+    font-size: 1.5rem;
+    color: var(--primary-gold);
+    white-space: nowrap;
+    letter-spacing: 0.2rem;
+  }
+
+  .section-divider::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(212, 175, 55, 0.4), transparent);
+  }
+
+  .related-articles-section {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .article-footer {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .tag-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+  }
+
+  .tag-cloud {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .tag-item {
+    background: rgba(255,255,255,0.03);
+    color: var(--text-dim);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+  }
+
+  .tag-item:hover {
+    color: var(--primary-gold);
+    background: rgba(212, 175, 55, 0.05);
+  }
+
+  /* 記事一覧グリッド（インデックス用） */
+  .category-posts-list {
+    margin-top: 6rem;
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .post-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .post-card:hover {
+    border-color: var(--primary-gold);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    transform: translateY(-5px);
+  }
+
+  .card-image-box {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .post-card:hover .card-img {
+    transform: scale(1.05);
+  }
+
+  .read-more::after {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .card-meta {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .post-title { 
+    font-size: 1.2rem !important; 
+    margin: 0 0 1rem 0 !important; 
+    line-height: 1.4 !important; 
+    color: #fff !important; 
+    text-align: left !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .post-card p { 
+    color: var(--text-dim); 
+    font-size: 0.9rem;
+    flex-grow: 1; 
+    letter-spacing: 0.05rem; 
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-footer { 
+    margin-top: auto; 
+  }
+
+  .read-more {
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  .btn-load-more {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--primary-gold);
+    color: #fff;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-family: var(--font-ud-mincho);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn-load-more:hover {
+    background: var(--primary-gold);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+  }
+
+  .count-info {
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .posts-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .article-content { padding: 2rem; }
+    h1 { font-size: 2.2rem; }
+    .posts-grid { grid-template-columns: 1fr; }
+  }
+</style>
