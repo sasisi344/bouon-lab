@@ -81,7 +81,7 @@ When converting the draft to the final article:
 
 1.  **Read Prompts**: Extract the English prompts from the draft.
 2.  **Execute Generation**: Use the project script or available tools to generate the image.
-    - _Script_: `node .agent/scripts/generate-image.js "PROMPT" "path/to/image.jpg"`
+    - _Script_: `node .agents/scripts/generate-image.js "PROMPT" "path/to/image.jpg"`
 3.  **Embed**: Replace the comment with the standard Markdown image syntax.
     - **Alt Text**: Detailed description for SEO.
     - **Caption**: `*Fig: ...*` below the image.

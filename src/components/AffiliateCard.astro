@@ -42,19 +42,28 @@ const variantClass = item?.variant === 'high-ticket' ? 'high-ticket'
 let imgSrc: any = (item as any)?.image;
 let isRemoteImage = false;
 
-if (imgSrc && imgSrc.startsWith('images/I/')) {
-  imgSrc = `https://m.media-amazon.com/${imgSrc}`;
-  isRemoteImage = true;
-} else if (imgSrc) {
-  // ローカルアセットの動的インポート
-  const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{jpeg,jpg,png,webp}');
-  const assetPath = `/src/assets/${imgSrc}`;
-  if (images[assetPath]) {
-    imgSrc = images[assetPath]();
+if (typeof imgSrc === 'string') {
+  if (imgSrc.startsWith('http')) {
+    // 既にフルURLの場合
+    isRemoteImage = true;
+  } else if (imgSrc.startsWith('images/I/')) {
+    // Amazonの相対パス（旧仕様互換）
+    imgSrc = `https://m.media-amazon.com/${imgSrc}`;
+    isRemoteImage = true;
   } else {
-    console.warn(`[AffiliateCard] Image not found: ${assetPath}`);
-    // フォールバックとして元のパスを使用（publicに残っている場合など）
-    imgSrc = `/${imgSrc}`;
+    // ローカルアセットの動的インポート
+    const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,webp,svg}');
+    // 先頭の / を除去してパスを作成
+    const cleanPath = imgSrc.startsWith('/') ? imgSrc : `/${imgSrc}`;
+    const assetPath = `/src/assets${cleanPath}`;
+    
+    if (images[assetPath]) {
+      imgSrc = images[assetPath]();
+    } else {
+      console.warn(`[AffiliateCard] Image not found in /src/assets: ${assetPath}`);
+      // フォールバック: publicフォルダまたは直リンク
+      imgSrc = cleanPath;
+    }
   }
 }
 ---
@@ -106,7 +115,9 @@ if (imgSrc && imgSrc.startsWith('images/I/')) {
       {item.type === 'amazon' && (
         <img
           src={`https://ir-jp.amazon-adsystem.com/e/ir?t=${item.tag}&l=ur2&o=9`}
-          width="1" height="1" border="0" alt=""
+          width="1"
+          height="1"
+          alt=""
           style="border:none !important; margin:0px !important; display:none;"
         />
       )}

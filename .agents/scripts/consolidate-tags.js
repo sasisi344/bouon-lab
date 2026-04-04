@@ -1,9 +1,12 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const fs = require('fs');
-const path = require('path');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const POSTS_DIR = path.join(__dirname, '../../content/posts');
-const TAG_LIST_PATH = path.join(__dirname, '../dataset/tag-list.md');
+const POSTS_DIR = path.join(__dirname, '../../src/content');
+const TAG_LIST_PATH = path.join(__dirname, '../../.workspace/.data-set/tag-list.md');
 
 // --- 1. Define Allowed Tags (Tier Structure) ---
 const TIER = {
@@ -217,8 +220,8 @@ function processFiles() {
     let allTags = {}; // Count of final tags
 
     files.forEach(filePath => {
-        if (!filePath.endsWith('.md')) return;
-        const isJa = !filePath.endsWith('.en.md');
+        if (!filePath.endsWith('.md') && !filePath.endsWith('.mdx')) return;
+        const isJa = !filePath.match(/\.en\.mdx?$/);
         
         try {
             let content = fs.readFileSync(filePath, 'utf8');

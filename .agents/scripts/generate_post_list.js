@@ -7,8 +7,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Define paths
-const contentDir = path.join(__dirname, '../../content/posts');
-const datasetDir = path.join(__dirname, '../dataset');
+const contentDir = path.join(__dirname, '../../src/content');
+const datasetDir = path.join(__dirname, '../../.workspace/.data-set');
 
 // Ensure dataset directory exists
 if (!fs.existsSync(datasetDir)) {
@@ -64,10 +64,13 @@ function scanPosts(dir) {
         const fullPath = path.join(dir, item.name);
         
         if (item.isDirectory()) {
-            const indexFile = path.join(fullPath, 'index.md');
-            if (fs.existsSync(indexFile)) {
+            const indexMd = path.join(fullPath, 'index.md');
+            const indexMdx = path.join(fullPath, 'index.mdx');
+            const targetIndex = fs.existsSync(indexMd) ? indexMd : (fs.existsSync(indexMdx) ? indexMdx : null);
+
+            if (targetIndex) {
                 // Found a page bundle
-                const content = fs.readFileSync(indexFile, 'utf8');
+                const content = fs.readFileSync(targetIndex, 'utf8');
                 const fm = getFrontMatter(content);
                 
                 if (fm && (!fm.draft || fm.draft === 'false')) {
@@ -83,14 +86,14 @@ function scanPosts(dir) {
                 // Recurse deeper
                 results = results.concat(scanPosts(fullPath));
             }
-        } else if (item.name.endsWith('.md') && !item.name.startsWith('_')) {
+        } else if ((item.name.endsWith('.md') || item.name.endsWith('.mdx')) && !item.name.startsWith('_')) {
             // Single file post
             const content = fs.readFileSync(fullPath, 'utf8');
             const fm = getFrontMatter(content);
             if (fm && (!fm.draft || fm.draft === 'false')) {
                 results.push({
                     title: fm.title || 'No Title',
-                    slug: item.name.replace(/\.md$/, ''),
+                    slug: item.name.replace(/\.mdx?$/, ''),
                     categories: Array.isArray(fm.categories) ? fm.categories : (fm.categories ? [fm.categories] : []),
                     tags: Array.isArray(fm.tags) ? fm.tags : (fm.tags ? [fm.tags] : []),
                     date: fm.date || ''
@@ -175,4 +178,4 @@ for (const cat of sortedCats) {
 
 fs.writeFileSync(path.join(datasetDir, 'category-list.md'), catListMd);
 
-console.log('All lists generated successfully in .agent/dataset/');
+console.log('All lists generated successfully in .workspace/.data-set/');

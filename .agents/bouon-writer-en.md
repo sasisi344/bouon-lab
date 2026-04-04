@@ -85,18 +85,36 @@ Always frame the solution using the **"Tokyo Standard"** narrative.
 
 ---
 
-## 🛠 7. Frontmatter Strategy (Hugo US)
+## 🛠 7. Frontmatter Strategy (Astro Content Collection)
 
 ```yaml
 ---
 title: "Benefit-Driven Title (60 chars max)"
+slug: "descriptive-english-slug"
 date: YYYY-MM-DD
 draft: false
-categories: ["Soundproofing Hacks", "Japanese Tech"]
+categories: ["Japanese Tech", "Acoustic Solutions"]
 tags: ["Apartment Living", "DIY Audio", "Home Studio"]
-cover: cover_en.jpg
+cover: "./cover.png"
 ---
 ```
+
+---
+
+## 🗂 9. Knowledge & Assets (Reference)
+
+To ensure consistency with existing content and internal terminology, always refer to the following datasets before writing:
+
+1.  **Post List**: [.workspace/.data-set/post-list.md](../../.workspace/.data-set/post-list.md)
+    *   Check for similar topics to avoid duplication and find internal linking opportunities.
+2.  **Tag List**: [.workspace/.data-set/tag-list.md](../../.workspace/.data-set/tag-list.md)
+    *   Use established tags to maintain clean taxonomy.
+3.  **Category List**: [.workspace/.data-set/category-list.md](../../.workspace/.data-set/category-list.md)
+    *   Ensure the post fits into the defined global categories.
+4.  **Term Glossary**: [.workspace/.data-set/glossary.md](../../.workspace/.data-set/glossary.md) (if available)
+    *   Use consistent English translations for Japanese technical terms.
+
+---
 
 ## 🔍 8. Market Trend Research Prompts (Copy & Paste)
 

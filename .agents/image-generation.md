@@ -44,8 +44,8 @@ Use the local script to generate images via Gemini API. The script automatically
 
 ### Script & Presets Paths
 
-- **Script**: `.agent/scripts/generate-image.js`
-- **Presets**: `.agent/scripts/prompts/bouon-presets.json`
+- **Script**: `.agents/scripts/generate-image.js`
+- **Presets**: `.agents/scripts/prompts/bouon-presets.json`
 
 ### Resolution Limit
 
@@ -56,20 +56,20 @@ Use the local script to generate images via Gemini API. The script automatically
 #### Basic (with auto BouonLab context)
 
 ```bash
-node .agent/scripts/generate-image.js "YOUR_PROMPT_HERE" "./cover.png"
+node .agents/scripts/generate-image.js "YOUR_PROMPT_HERE" "./cover.png"
 ```
 
 #### With Preset (recommended)
 
 ```bash
-node .agent/scripts/generate-image.js --preset cover "防音室のある静かなリビング" "./cover.png"
-node .agent/scripts/generate-image.js --preset content "吸音パネルの断面図" "./infographic.png"
+node .agents/scripts/generate-image.js --preset cover "防音室のある静かなリビング" "./cover.png"
+node .agents/scripts/generate-image.js --preset content "吸音パネルの断面図" "./infographic.png"
 ```
 
 #### List Available Presets
 
 ```bash
-node .agent/scripts/generate-image.js --list-presets
+node .agents/scripts/generate-image.js --list-presets
 ```
 
 ### Available Presets

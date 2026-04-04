@@ -17,20 +17,20 @@ Follow this sequence to identify and prioritize articles for rewriting.
 
 ### A. Identification (Target Selection)
 
-- **Schedule Reference**: Refer to `.agent/strategies/content-rewrite-schedule.md`.
-- **SC Data Priority**: Prioritize posts with high impressions but **CTR < 3%** (Data: `.agent/dataset/.SCaccessdata/`).
+- **Schedule Reference**: Refer to `.workspace/strategies/content-rewrite-schedule.md`.
+- **SC Data Priority**: Prioritize posts with high impressions but **CTR < 3%** (Data: `.workspace/.data-set/.SCaccessdata/`).
 - **Recency Filter**: Prioritize articles published before **2025/12** for structural migration.
 
 ### B. Persona Prediction & Reconstruction (The "Persona Ω" Protocol)
 
-- **Mandatory Alignment**: Before rewriting any text, critically analyze the legacy content and **predict the exact Target Persona (A through L)** by referencing `.agent/strategies/persona/01_Consumer-Personas.md` or `02_Supplier-Personas.md`.
+- **Mandatory Alignment**: Before rewriting any text, critically analyze the legacy content and **predict the exact Target Persona (A through L)** by referencing `.agents/persona/01_Consumer-Personas.md` or `02_Supplier-Personas.md`.
 - **Omega Filter Application**: Adopt the perspective of **Persona Ω (Editor-in-Chief)**. Ruthlessly cut exaggerated claims, apply the mass law of physics, and highlight secondary risks (like ventilation/mold).
 - **Optimal Reconstruction**: Do not merely "edit" the text. Completely rebuild the headings and narrative to perfectly solve the predicted persona's specific pain points and guide them to their ideal QOL (Quality of Life).
 
-### C. Structural Migration (PageBundle)
+### C. Structural Migration (Astro Content Collection)
 
-- **Requirement**: Articles before 2025/12 must be migrated to **Hugo PageBundle** format.
-- **Action**: Move `*.md` files into a directory named after their `slug`. Rename content to `index.md`.
+- **Requirement**: Articles before 2025/12 must be migrated to the current **Astro Content Collection** format.
+- **Action**: Place `.md` files in `src/content/ja/` or `src/content/en/` according to their category.
 
 ---
 
@@ -44,7 +44,7 @@ Follow this sequence to identify and prioritize articles for rewriting.
 
 ### B. Technical Hygiene (Legacy Data Audit & Formatting)
 
-- **Crucial**: Soundproof room specs (Yamaha/Kawai) change over time. Check `.agent/dataset/product_specifications.md`.
+- **Crucial**: Soundproof room specs (Yamaha/Kawai) change over time. Check `.workspace/.data-set/product_specifications.md`.
 - **Emphasis Rule (Strict)**: All keyword and list emphasis MUST be converted from `**bold**` to `<strong>強調内容</strong>` tags. Ensure list labels use `<strong>` and colons have spaces before and after (`- <strong>Label</strong> : `).
 - **Update**: Remove discontinued models, update prices, and reference current loan/subsidy data from `financial_support.md`.
 - **E-E-A-T**: Add specific dates or "Updated for 2026" stamps to technical data sections.
@@ -69,7 +69,7 @@ Follow this sequence to identify and prioritize articles for rewriting.
 
 ### B. Internal Link & CTA Optimization
 
-- **Mapping DB**: Cross-reference `.agent/dataset/【MAP】トピック・リンク・CTA統合マッピング.md`.
+- **Mapping DB**: Cross-reference `.workspace/.data-set/【MAP】トピック・リンク・CTA統合マッピング.md`.
 - **CTA Updates**: Replace old text links with the modern `{{< ctabox ... >}}` shortcode to increase CVR.
 
 ---
@@ -78,9 +78,9 @@ Follow this sequence to identify and prioritize articles for rewriting.
 
 Before concluding a rewrite, verify against these points:
 
-- [ ] **Structural**: Is the article now a PageBundle?
+- [ ] **Structural**: Is the article now in an Astro Content Collection?
 - [ ] **CTR**: Does the new title address the high-impression query found in SC?
 - [ ] **Accuracy**: Are the technical specs (Dr-value/Price) synced with the latest local dataset?
 - [ ] **Flow**: Does it follow the Conclusion-First (PREP) structure?
 - [ ] **LTV**: Does the conclusion explicitly state the long-term benefit for the user's life?
-- [ ] **Links**: Are all internal links updated using `relref` and current slugs?
+- [ ] **Links**: Are all internal links updated using proper relative paths and current slugs?

@@ -1,8 +1,12 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const POSTS_DIR = path.join(__dirname, '../../content/posts');
-const CATEGORY_LIST_FILE = path.join(__dirname, '../dataset/category-list.md');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const POSTS_DIR = path.join(__dirname, '../../src/content');
+const CATEGORY_LIST_FILE = path.join(__dirname, '../../.workspace/.data-set/category-list.md');
 
 const TARGET_CATEGORIES = [
     "防音室",
@@ -51,7 +55,7 @@ function getFiles(dir) {
         const stat = fs.statSync(fullPath);
         if (stat && stat.isDirectory()) {
             results = results.concat(getFiles(fullPath));
-        } else if (fullPath.endsWith('.md')) {
+        } else if (fullPath.endsWith('.md') || fullPath.endsWith('.mdx')) {
             results.push(fullPath);
         }
     });
@@ -98,7 +102,7 @@ function consolidate() {
         // Unique
         newCats = [...new Set(newCats)];
 
-        const isEnglish = file.endsWith('.en.md');
+        const isEnglish = file.match(/\.en\.mdx?$/);
         let finalCats = newCats;
         if (isEnglish) {
             finalCats = newCats.map(cat => ENGLISH_MAPPING[cat] || cat);

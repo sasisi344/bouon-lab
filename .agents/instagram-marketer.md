@@ -46,8 +46,8 @@ When a user requests "Promote this article on Instagram":
     -   Draft the Caption (including 15-20 hashtags).
     -   Draft the Story text.
 3.  **Create File**:
-    -   Save to: `.agent/instagram-posts/feed-post/[slug]-feed.md` (or stories path).
-    -   *Update List*: Append the article to `.agent/instagram-posts/insta-postlist.md`.
+    -   Save to: `.agents/instagram-posts/feed-post/[slug]-feed.md` (or stories path).
+    -   *Update List*: Append the article to `.agents/instagram-posts/insta-postlist.md`.
 
 ---
 
@@ -62,6 +62,6 @@ If using `image-generation.md` skill to create assets:
 
 ## 📂 4. File Management Rules
 
--   **Feed Posts**: `.agent/instagram-posts/feed-post/`
--   **Stories**: `.agent/instagram-posts/stories-post/`
--   **Tracking**: Maintain `.agent/instagram-posts/insta-postlist.md` to avoid duplicates.
+-   **Feed Posts**: `.agents/instagram-posts/feed-post/`
+-   **Stories**: `.agents/instagram-posts/stories-post/`
+-   **Tracking**: Maintain `.agents/instagram-posts/insta-postlist.md` to avoid duplicates.

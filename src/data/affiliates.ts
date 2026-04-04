@@ -209,6 +209,79 @@ export const affiliates: Record<string, AffiliateItem> = {
     variant: 'high-ticket',
   },
   */
+  // ================================================
+  // オーナー・配信者向け：環境整備グッズ (2026-04-04 追加)
+  // ================================================
+
+  // 【加湿器】防音室内向け（気化式推奨）
+  'humidifier-vaporizer-daikin': {
+    type: 'amazon',
+    slug: 'humidifier-vaporizer-daikin',
+    name: 'ダイキン 気化式加湿器 MCK70Y',
+    description: '防音室の密閉空間に最適な気化式。結露しにくく、ギターや電子機器を湿度ダメージから保護。静音性も高く収録の邪魔をしない。',
+    price: '¥40,000〜',
+    image: 'https://m.media-amazon.com/images/I/41zyCyWr0aL._AC_SL1000_.jpg',
+    badge: 'ROOM-SAFE',
+    asin: 'B09J4RCV5J', 
+    tag: 'sasisi344-22',
+    variant: 'standard',
+  },
+
+  // 【音響パネル】吸音・拡散材（デザイン採用可）
+  'acoustic-panel-felmenon': {
+    type: 'amazon',
+    slug: 'acoustic-panel-felmenon',
+    name: 'FELMENON 吸音パネル 60×60cm',
+    description: '壁に貼るだけで反響音を大幅にカット。デザイン性も高く「配信映え」する背景壁作りにも活用できる。',
+    price: '¥6,000〜',
+    image: 'https://m.media-amazon.com/images/I/21pqXxzXZ-L._AC_.jpg',
+    badge: 'DESIGN-OK',
+    asin: 'B07XG5CX8X', 
+    tag: 'sasisi344-22',
+    variant: 'standard',
+  },
+
+  // 【騒音測定器】施工後の性能確認に
+  'sound-level-meter-pro': {
+    type: 'amazon',
+    slug: 'sound-level-meter-pro',
+    name: 'デジタル騒音計（Class 2対応）',
+    description: '防音リノベーション施工前後のdB計測に。オーナーが自ら性能を確認・証明するための必須ツール。',
+    price: '¥3,000〜',
+    image: 'https://m.media-amazon.com/images/I/71yC1SRHohL._SL1500_.jpg',
+    badge: 'OWNER-TOOL',
+    asin: 'B0D59P6Q9Q', 
+    tag: 'sasisi344-22',
+    variant: 'standard',
+  },
+
+  // 【アース線・グランドループ対策】配信者向け
+  'ground-cable-mogami': {
+    type: 'amazon',
+    slug: 'ground-cable-mogami',
+    name: 'MOGAMI 2534 マイクケーブル（グランドノイズ対策）',
+    description: 'ハムノイズ・グランドループを根絶するプロ仕様のバランスケーブル。配信マイクの「ジー」音を物理的に解消。',
+    price: '¥2,000〜',
+    image: 'https://m.media-amazon.com/images/I/7138ct+UUbL._AC_SL1500_.jpg',
+    badge: 'NOISE-FREE',
+    asin: 'B07D738MM2', 
+    tag: 'sasisi344-22',
+    variant: 'standard',
+  },
+
+  // 【防振マット】グランドピアノ・ドラム向け
+  '防振-mat-piano': {
+    type: 'amazon',
+    slug: '防振-mat-piano',
+    name: '防振インシュレーター（ピアノ・重量機材対応）',
+    description: 'グランドピアノ設置時の床への振動を物理的に遮断。周囲への低周波ノイズを大幅に軽減。400kg超の重量物に対応。',
+    price: '¥2,000〜',
+    image: 'https://m.media-amazon.com/images/I/51481RxNHJL._SL1000_.jpg',
+    badge: 'HEAVY-DUTY',
+    asin: 'B00B58K61Y', 
+    tag: 'sasisi344-22',
+    variant: 'standard',
+  },
 };
 
 /**

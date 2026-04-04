@@ -15,16 +15,16 @@ This is the **Primary Writing Directive** for BouonLab. It merges technical expe
 
 ## 📚 2. Knowledge Source (Mandatory Dataset Reference)
 
-When creating articles, you MUST refer to these **Domain Datasets** in the `.data-set/` directory for facts and technical details.
+When creating articles, you MUST refer to these **Domain Datasets** in the **`.workspace/.data-set/`** directory for facts and technical details.
 
-| Domain                  | Dataset Path to Reference                    |
-| :---------------------- | :------------------------------------------- |
-| **Market & ROI**        | `.data-set/market_trends.md`                 |
-| **Product & Tech**      | `.data-set/product_specifications.md`         |
-| **Companies & Service** | `.data-set/company_directory.md`             |
-| **User Experience**     | `.data-set/user_guides.md`                   |
-| **Audience Logic**      | `.data-set/target_audience_profiles.md`      |
-| **Finance & Subsidy**   | `.data-set/financial_support.md`             |
+| Domain                  | Dataset Path to Reference                                  |
+| :---------------------- | :--------------------------------------------------------- |
+| **Market & ROI**        | `.workspace/.data-set/market_trends.md`                 |
+| **Product & Tech**      | `.workspace/.data-set/product_specifications.md`         |
+| **Companies & Service** | `.workspace/.data-set/company_directory.md`             |
+| **User Experience**     | `.workspace/.data-set/user_guides.md`                   |
+| **Audience Logic**      | `.workspace/.data-set/target_audience_profiles.md`      |
+| **Finance & Subsidy**   | `.workspace/.data-set/financial_support.md`             |
 
 ---
 
@@ -114,6 +114,8 @@ image: ./cover.png
 volume: "Medium" # Small | Medium | Large
 ---
 ```
+
+---
 
 ---
 

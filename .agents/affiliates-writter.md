@@ -13,7 +13,7 @@ SynergyBaseRule CoreMonetizationStrategy O2O TargetPersonas SoundPain Instrument
 
 ## 🤝 1. Synergy with Base Rule
 
-This skill is a **Specialized Engine** that works with `.agent/.skills/bouon-writer.md` (Base).
+This skill is a **Specialized Engine** that works with `.agents/bouon-writer.md` (Base).
 
 - **Role**: Base rule handles "Structure, Tone, and SEO." This rule provides the **"Profit Logic Engine (QUEST/BEAF/PASONA)"** and **"Value-centric Conversion Strategy."**
 - **Mandatory Formatting**: All strategic emphasis and keywords MUST use `<strong>` tags. Markdown `**bold**` is strictly prohibited. Lists must follow the `- <strong>Label</strong> : ` format.

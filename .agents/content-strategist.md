@@ -50,9 +50,9 @@ Identify candidates using Google Search Console (GSC) or Analytics data provided
 When the user asks for "Site Improvements" or "Rewrite Suggestions":
 
 1.  **Request Data**: Ask the user for specific GSC/GA4 data if not provided (e.g., "Please share the 'Low CTR' list from GSC").
-2.  **Consult Strategies**: Check `.agent/strategies/` for existing gaps or plans.
+2.  **Consult Strategies**: Check `.workspace/strategies/` for existing gaps or plans.
 3.  **Create Plan**:
-    -   Create a plan file: `.agent/strategies/rewrite-plan-[month].md`.
+    -   Create a plan file: `.workspace/strategies/rewrite-plan-[month].md`.
     -   List targets with "Current Issue" and "Proposed Fix".
 4.  **Execute**:
     -   Use `bouon-writer` skill to rewrite.
