@@ -1,0 +1,6 @@
+MISSING IMAGE: ./cover.jpg in C:\Users\sasis\344dev\bouon-lab\src\content\column\ja\mass-law-limitation-coincidence-effect\index.mdx
+MISSING IMAGE: ./cover.jpg in C:\Users\sasis\344dev\bouon-lab\src\content\company\ja\housing-builder-soundproof-comparison\index.mdx
+MISSING IMAGE: ./cover.jpg in C:\Users\sasis\344dev\bouon-lab\src\content\knowledge\ja\mass-law-diy-complete-guide\index.mdx
+MISSING IMAGE: ./cover.jpg in C:\Users\sasis\344dev\bouon-lab\src\content\solutions\environment\ja\streamer-thermal-air-quality-simulation\index.mdx
+MISSING IMAGE: ./cover.jpg in C:\Users\sasis\344dev\bouon-lab\src\content\solutions\investment\ja\renovation-roi-strategy\index.mdx
+Image audit complete.
