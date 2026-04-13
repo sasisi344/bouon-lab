@@ -114,7 +114,13 @@ const labels = {
     }
 
     resultsContainer.innerHTML = results.map(item => `
-      <a href="${item.url}" class="search-result-item">
+      <a
+        href="${item.url}"
+        class="search-result-item"
+        data-track-event="search_result_click"
+        data-track-source="search_modal"
+        data-track-label="${item.title.replace(/"/g, '&quot;')}"
+      >
         <div class="result-category">${item.category}</div>
         <div class="result-title">${item.title}</div>
         <div class="result-desc">${item.description.substring(0, 100)}...</div>

@@ -15,7 +15,8 @@ const useCase = await getCollection('use-case');
 const company = await getCollection('company');
 const column = await getCollection('column');
 
-const allPosts = [...knowledge, ...solutions, ...useCase, ...company, ...column];
+const allPosts = [...knowledge, ...solutions, ...useCase, ...company, ...column]
+  .filter(post => post.data.draft !== true);
 
 // MDXから現在の言語を取得（propsとして渡す運用にするのが確実）
 // もしくは全記事から「指定したスラッグ かつ 現在のURLに含まれる言語」を優先して探す
@@ -34,15 +35,17 @@ const post = allPosts.find((p) => {
 // 多言語対応パスの解決: /[lang]/[collection]/[slug]/
 let url = '#';
 if (post) {
-    const parts = post.id.split('/');
     const lang = post.data.lang || 'ja';
     const category = post.collection;
-    
-    // Construct slug: all parts except lang, index, and suffix
-    const slugParts = parts.filter(p => p !== lang && p !== 'index' && !p.endsWith('.mdx'));
-    const finalSlug = slugParts.join('/');
-    
-    url = `/${lang}/${category}/${finalSlug}/`;
+    const preferredSlug = post.data.slug?.trim();
+    if (preferredSlug) {
+      url = `/${lang}/${category}/${preferredSlug}/`;
+    } else {
+      const parts = post.id.split('/');
+      const slugParts = parts.filter(p => p !== lang && p !== 'index' && !p.endsWith('.mdx'));
+      const finalSlug = slugParts.join('/');
+      url = `/${lang}/${category}/${finalSlug}/`;
+    }
 }
 
 if (!post && slug !== "index" && slug !== "") {

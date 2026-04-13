@@ -7,14 +7,17 @@ export async function GET() {
   const company = await getCollection('company');
   const column = await getCollection('column');
 
-  const allPosts = [...knowledge, ...solutions, ...useCase, ...company, ...column];
+  const allPosts = [...knowledge, ...solutions, ...useCase, ...company, ...column]
+    .filter(post => post.data.draft !== true);
 
   const searchIndex = allPosts.map(post => {
-    const parts = post.id.split('/');
     const lang = post.data.lang || 'ja';
     const category = post.collection;
+    const preferredSlug = post.data.slug?.trim();
+    const parts = post.id.split('/');
     const slugParts = parts.filter(p => p !== lang && p !== 'index');
-    const slug = slugParts.join('/');
+    const fallbackSlug = slugParts.join('/');
+    const slug = preferredSlug || fallbackSlug;
     const url = slug ? `/${lang}/${category}/${slug}/` : `/${lang}/${category}/`;
 
     return {

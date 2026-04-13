@@ -2,8 +2,8 @@
 import { getCollection } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
-import SmartLink from '../../components/SmartLink.astro';
 import heroImage from '../../assets/images/hero-mocha.png';
+import { HUB_CLUSTERS } from '../../data/hubClusters';
 
 export async function getStaticPaths() {
     return [
@@ -20,14 +20,18 @@ const useCase = await getCollection('use-case');
 const column = await getCollection('column');
 const company = await getCollection('company');
 
-const allContent = [...knowledge, ...solutions, ...useCase, ...column, ...company];
+const allContent = [...knowledge, ...solutions, ...useCase, ...column, ...company]
+  .filter(post => post.data.draft !== true);
 const filteredPosts = allContent.filter(p => p.data.lang === lang);
 const latestPosts = filteredPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 9);
 
 function getSlug(post: any) {
+    const preferredSlug = post.data.slug?.trim();
+    if (preferredSlug) return preferredSlug;
+
     const parts = post.id.split('/');
     const lang = post.data.lang || 'ja';
-    const slugParts = parts.filter(p => p !== lang && p !== 'index');
+    const slugParts = parts.filter((p: string) => p !== lang && p !== 'index');
     return slugParts.join('/');
 }
 
@@ -37,6 +41,25 @@ function getUrl(post: any) {
     const lang = post.data.lang || 'ja';
     return slug ? `/${lang}/${category}/${slug}/` : `/${lang}/${category}/`;
 }
+
+const hubRoutes = HUB_CLUSTERS.map((cluster) => {
+  const pool = filteredPosts.filter((post) => {
+    const text = `${post.data.title} ${post.data.description} ${(post.data.tags || []).join(' ')}`.toLowerCase();
+    return cluster.matchKeywords.some((keyword) => text.includes(keyword.toLowerCase()));
+  });
+
+  const sortedPool = pool.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  const fallbackPool = filteredPosts
+    .filter((post) => post.collection === cluster.categoryHint)
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  const firstPost = sortedPool[0] ?? fallbackPool[0];
+
+  return {
+    ...cluster,
+    firstPost,
+    count: sortedPool.length,
+  };
+}).filter((route) => route.firstPost);
 
 // ヒーロー画像の最適化
 const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
@@ -79,6 +102,45 @@ const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
   </section>
 
   <main class="container" id="knowledge">
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">{lang === 'ja' ? '課題別ハブから読み進める' : 'Start from Persona Hubs'}</h2>
+        <p class="section-desc">{lang === 'ja' ? '対象ユーザーと悩みから、最初に読むべき記事へ案内します。' : 'Pick your user context and jump to the best first article.'}</p>
+      </div>
+      <div class="hub-grid">
+        {hubRoutes.map((hub) => (
+          <article class="hub-card">
+            <div class="hub-label">{hub.labels[lang as 'ja' | 'en'].audience}</div>
+            <h3>{hub.labels[lang as 'ja' | 'en'].title}</h3>
+            <p>{hub.labels[lang as 'ja' | 'en'].pain}</p>
+            <p class="hub-entry">
+              {lang === 'ja' ? '最初に読む記事' : 'First Article'}:
+              <a
+                href={getUrl(hub.firstPost)}
+                data-track-event="hub_click"
+                data-track-source="hub_entry"
+                data-track-label={hub.firstPost.data.title}
+              >
+                {hub.firstPost.data.title}
+              </a>
+            </p>
+            <div class="hub-footer">
+              <a
+                href={getUrl(hub.firstPost)}
+                class="hub-link"
+                data-track-event="hub_click"
+                data-track-source="hub_cta"
+                data-track-label={hub.labels[lang as 'ja' | 'en'].title}
+              >
+                {hub.labels[lang as 'ja' | 'en'].primaryCta}
+              </a>
+              <span class="hub-count">{lang === 'ja' ? `${hub.count}件` : `${hub.count} posts`}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
     <!-- 最新の知見セクション -->
     <section class="section">
       <div class="section-header">
@@ -257,6 +319,64 @@ const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
 
   .section-desc { color: var(--text-dim); margin-top: 0.5rem; }
 
+  .hub-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .hub-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hub-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.08rem;
+    color: var(--primary-gold);
+  }
+
+  .hub-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .hub-card p {
+    margin: 0;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  .hub-entry a {
+    margin-left: 0.4rem;
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .hub-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hub-link {
+    text-decoration: none;
+    color: var(--primary-gold);
+    font-weight: bold;
+  }
+
+  .hub-count {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+  }
+
   .posts-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -264,6 +384,10 @@ const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
   }
 
   @media (max-width: 1024px) {
+    .hub-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .posts-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -404,6 +528,7 @@ const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
     h1 { font-size: 2.8rem; }
     .action-branch { flex-direction: column; align-items: center; }
     .btn { min-width: 100%; }
+    .hub-grid { grid-template-columns: 1fr; }
     .posts-grid { grid-template-columns: 1fr; }
   }
 </style>

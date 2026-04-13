@@ -24,6 +24,22 @@ const baseSchema = ({ image }: any) => z.object({
   
   // メタデータ
   isHighPriority: z.boolean().optional(),
+
+  // 記事末尾の「次に読む」導線を手動指定
+  nextSteps: z
+    .array(
+      z.object({
+        stage: z.enum(['beginner', 'compare', 'action']),
+        slug: z.string().optional(),
+        url: z.string().optional(),
+        title: z.string().optional(),
+      })
+    )
+    .max(3)
+    .optional(),
+
+  // カテゴリ index 記事向けのスターター手動キュレーション
+  starterSet: z.array(z.string()).max(3).optional(),
 });
 
 // 各コレクションの定義（AIクローラーが解釈しやすい階層構造）

@@ -2,9 +2,26 @@
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 
-const { subcategory, allPosts: providedPosts, relatedPosts: providedRelated, lang = 'ja' } = Astro.props;
+const {
+  subcategory,
+  allPosts: providedPosts,
+  relatedPosts: providedRelated,
+  lang = 'ja',
+  limitByDevice = false,
+  trackEvent = 'related_click',
+  trackSource = 'related_carousel'
+} = Astro.props;
 
-let filtered: any[];
+type CarouselItem = {
+  post?: any;
+  relationLabel?: string;
+  relationKey?: string;
+  data?: any;
+  id?: string;
+  collection?: string;
+};
+
+let filtered: CarouselItem[];
 
 if (providedRelated) {
   // relatedPosts が直接渡された場合（記事末尾など）はそのまま使う
@@ -20,52 +37,68 @@ if (providedRelated) {
       getCollection('company'),
       getCollection('column')
     ]);
-    allPosts = [...knowledge, ...solutions, ...useCase, ...company, ...column];
+    allPosts = [...knowledge, ...solutions, ...useCase, ...company, ...column]
+      .filter(post => post.data.draft !== true);
   }
 
   // Filter posts for this specific subcategory AND matching language
-  // Then shuffle randomly and take up to 12
+  // 更新日の新しい順で安定表示
   filtered = allPosts
-    .filter(p => 
+    .filter((p: any) => 
       p.data.subcategory === subcategory && 
       (p.data.lang || 'ja') === lang &&
       !p.id.endsWith('/index')
     )
-    .sort(() => Math.random() - 0.5)
+    .sort((a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf())
     .slice(0, 12);
 }
 
 function getUrl(post: any) {
-    const parts = post.id.split('/');
     const postLang = post.data.lang || 'ja';
     const segment = post.collection;
-    const slugParts = parts.filter(p => p !== postLang && p !== 'index');
+    const preferredSlug = post.data.slug?.trim();
+    if (preferredSlug) return `/${postLang}/${segment}/${preferredSlug}/`;
+
+    const parts = post.id.split('/');
+    const slugParts = parts.filter((p: string) => p !== postLang && p !== 'index');
     const slug = slugParts.join('/');
     return slug ? `/${postLang}/${segment}/${slug}/` : `/${postLang}/${segment}/`;
 }
 ---
 
 {filtered.length > 0 && (
-  <div class="archive-carousel" data-carousel>
+  <div class={`archive-carousel ${limitByDevice ? 'is-limited' : ''}`} data-carousel>
     <div class="carousel-viewport" data-viewport>
       <div class="carousel-track">
-        {filtered.map((item) => (
+        {filtered.map((item) => {
+          const entry = item.post ?? item;
+          const relationLabel = item.relationLabel;
+          const relationKey = item.relationKey;
+          return (
           <article class="carousel-card">
-            <a href={getUrl(item)} class="card-link-overlay" aria-label={item.data.title}></a>
-            {item.data.image && (
+            <a
+              href={getUrl(entry)}
+              class="card-link-overlay"
+              aria-label={entry.data.title}
+              data-track-event={trackEvent}
+              data-track-source={trackSource}
+              data-track-label={entry.data.title}
+            ></a>
+            {entry.data.image && (
               <div class="card-image">
-                <Image src={item.data.image} alt="" width={400} height={225} format="webp" />
+                <Image src={entry.data.image} alt="" width={400} height={225} format="webp" />
               </div>
             )}
             <div class="card-body">
               <div class="card-meta">
-                <span class="date">{item.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
+                <span class="date">{entry.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
+                {relationLabel && <span class={`relation-label ${relationKey || ''}`}>{relationLabel}</span>}
               </div>
-              <h4 class="card-title">{item.data.title}</h4>
-              <p class="card-excerpt">{item.data.description.length > 50 ? item.data.description.substring(0, 50) + "..." : item.data.description}</p>
+              <h4 class="card-title">{entry.data.title}</h4>
+              <p class="card-excerpt">{entry.data.description.length > 50 ? entry.data.description.substring(0, 50) + "..." : entry.data.description}</p>
             </div>
           </article>
-        ))}
+        )})}
       </div>
     </div>
     
@@ -156,9 +189,22 @@ function getUrl(post: any) {
   }
 
   .card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
     font-size: 0.75rem;
     color: var(--text-dim);
     letter-spacing: 0.05rem;
+  }
+
+  .relation-label {
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    color: var(--primary-gold);
+    border-radius: 999px;
+    padding: 0.15rem 0.5rem;
+    font-size: 0.68rem;
+    white-space: nowrap;
   }
 
   .card-title {
@@ -214,12 +260,20 @@ function getUrl(post: any) {
   }
 
   @media (max-width: 1024px) {
+    .archive-carousel.is-limited .carousel-card:nth-child(n+7) {
+      display: none;
+    }
+
     .carousel-card {
       flex: 0 0 calc(50% - 0.75rem);
     }
   }
 
   @media (max-width: 640px) {
+    .archive-carousel.is-limited .carousel-card:nth-child(n+4) {
+      display: none;
+    }
+
     .carousel-card {
       flex: 0 0 85%;
     }

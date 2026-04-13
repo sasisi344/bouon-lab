@@ -1,23 +1,52 @@
 ---
 interface Props {
 	title: string;
+	description?: string;
+	image?: string;
 }
 
 import Navigation from '../components/Navigation.astro';
 
-const { title } = Astro.props;
+const { title, description, image } = Astro.props;
 const pathname = Astro.url.pathname;
 const lang = pathname.startsWith('/en') ? 'en' : 'ja';
+const siteUrl = Astro.site ?? new URL('https://bouon-lab.online');
+const normalizedPath = pathname.endsWith('/') ? pathname : `${pathname}/`;
+const canonicalUrl = new URL(normalizedPath, siteUrl).toString();
+const metaDescription = description ?? '専門知識に基づいた防音対策のナレッジベース';
+const defaultOgImage = new URL('/og-default.png', siteUrl).toString();
+const ogImage = image ? new URL(image, siteUrl).toString() : defaultOgImage;
+
+const jaPath = normalizedPath.startsWith('/en/')
+	? normalizedPath.replace('/en/', '/ja/')
+	: normalizedPath;
+const enPath = normalizedPath.startsWith('/ja/')
+	? normalizedPath.replace('/ja/', '/en/')
+	: normalizedPath;
 ---
 
 <!doctype html>
 <html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="専門知識に基づいた防音対策のナレッジベース" />
+		<meta name="description" content={metaDescription} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="canonical" href={canonicalUrl} />
+		<link rel="alternate" hrefLang="ja" href={new URL(jaPath, siteUrl).toString()} />
+		<link rel="alternate" hrefLang="en" href={new URL(enPath, siteUrl).toString()} />
+		<link rel="alternate" hrefLang="x-default" href={new URL('/ja/', siteUrl).toString()} />
+		<meta property="og:type" content="article" />
+		<meta property="og:site_name" content="BouonLab" />
+		<meta property="og:title" content={`${title} | BouonLab`} />
+		<meta property="og:description" content={metaDescription} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={ogImage} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={`${title} | BouonLab`} />
+		<meta name="twitter:description" content={metaDescription} />
+		<meta name="twitter:image" content={ogImage} />
 		<title>{title} | BouonLab</title>
 		<!-- Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RWEHZPS976"></script>
@@ -26,6 +55,32 @@ const lang = pathname.startsWith('/en') ? 'en' : 'ja';
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 			gtag('config', 'G-RWEHZPS976');
+		</script>
+		<script is:inline>
+			function trackInternalClick(event) {
+				const target = event.target;
+				if (!(target instanceof Element)) return;
+				const trackingNode = target.closest('[data-track-event]');
+				if (!trackingNode) return;
+
+				const eventName = trackingNode.getAttribute('data-track-event');
+				if (!eventName || typeof window.gtag !== 'function') return;
+
+				const href = trackingNode.getAttribute('href') || '';
+				const label = trackingNode.getAttribute('data-track-label') || trackingNode.textContent?.trim() || '';
+				const source = trackingNode.getAttribute('data-track-source') || 'unknown';
+				const lang = document.documentElement.getAttribute('lang') || 'ja';
+
+				window.gtag('event', eventName, {
+					event_category: 'internal_navigation',
+					event_label: label,
+					link_url: href,
+					link_source: source,
+					lang
+				});
+			}
+
+			document.addEventListener('click', trackInternalClick);
 		</script>
 		<!-- Google AdSense -->
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9798094072282530"
@@ -48,12 +103,7 @@ const lang = pathname.startsWith('/en') ? 'en' : 'ja';
 			"@context": "https://schema.org",
 			"@type": "WebSite",
 			"name": "BouonLab",
-			"url": "https://bouon-lab.online/",
-			"potentialAction": {
-				"@type": "SearchAction",
-				"target": "https://bouon-lab.online/ja/search/?q={search_term_string}",
-				"query-input": "required name=search_term_string"
-			}
+			"url": "https://bouon-lab.online/"
 		})} />
 	</head>
 	<body class="dark-mocha-theme">

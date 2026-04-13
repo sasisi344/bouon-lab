@@ -9,6 +9,7 @@ import AffiliateCard from '../../../components/AffiliateCard.astro';
 import CtaBox from '../../../components/CtaBox.astro';
 import MultiplexAd from '../../../components/MultiplexAd.astro';
 import AssetValueTable from '../../../components/AssetValueTable.astro';
+import { HUB_CLUSTERS } from '../../../data/hubClusters';
 
 export async function getStaticPaths() {
   const knowledge = await getCollection('knowledge');
@@ -17,20 +18,37 @@ export async function getStaticPaths() {
   const company = await getCollection('company');
   const column = await getCollection('column');
   
-  const allContent = [...knowledge, ...solutions, ...useCase, ...company, ...column];
+  const allContent = [...knowledge, ...solutions, ...useCase, ...company, ...column]
+    .filter(post => post.data.draft !== true);
   
-  console.log('Generating paths for allContent. Size:', allContent.length);
-  
-  return allContent.map(post => {
+  const resolveSlug = (post: (typeof allContent)[number]) => {
+    const preferredSlug = post.data.slug?.trim();
+    if (preferredSlug) return preferredSlug;
+
     const parts = post.id.split('/');
     const lang = post.data.lang || 'ja';
+    const slugParts = parts.filter((p: string) => p !== lang && p !== 'index');
+    return slugParts.length > 0 ? slugParts.join('/') : undefined;
+  };
+
+  const getRelatedScore = (
+    basePost: (typeof allContent)[number],
+    candidate: (typeof allContent)[number]
+  ) => {
+    const baseTags = new Set(basePost.data.tags || []);
+    const candidateTags = candidate.data.tags || [];
+    const tagMatchCount = candidateTags.filter(tag => baseTags.has(tag)).length;
+    const categoryMatch = basePost.collection === candidate.collection ? 1 : 0;
+    const dayDiff = Math.abs(basePost.data.date.valueOf() - candidate.data.date.valueOf()) / (1000 * 60 * 60 * 24);
+    const recencyScore = Math.max(0, 365 - dayDiff) / 365;
+
+    return (tagMatchCount * 10) + (categoryMatch * 5) + recencyScore;
+  };
+
+  return allContent.map(post => {
+    const lang = post.data.lang || 'ja';
     const category = post.collection;
-    
-    // スラッグを生成: 言語コードと 'index' を除去
-    const slugParts = parts.filter(p => p !== lang && p !== 'index');
-    const slug = slugParts.length > 0 ? slugParts.join('/') : undefined;
-    
-    console.log(`Mapping Path: /${lang}/${category}/${slug || ''}`);
+    const slug = resolveSlug(post);
     const isIndex = slug === undefined;
 
     // 関連記事・アーカイブ記事を取得
@@ -47,7 +65,15 @@ export async function getStaticPaths() {
 
     const relatedPosts = langPosts
       .filter(p => p.id !== post.id)
-      .sort(() => Math.random() - 0.5) // ランダムシャッフル
+      .map(candidate => ({
+        post: candidate,
+        score: getRelatedScore(post, candidate),
+      }))
+      .sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score;
+        return b.post.data.date.valueOf() - a.post.data.date.valueOf();
+      })
+      .map(item => item.post)
       .slice(0, 12); // 最大12件
 
     return {
@@ -63,15 +89,193 @@ const { Content } = await render(post);
 // パンくず等の情報を取得
 const lang = post.data.lang || 'ja';
 const category = post.collection;
+const locale = lang === 'ja' ? 'ja-JP' : 'en-US';
+
+type NextStage = 'beginner' | 'compare' | 'action';
+type StepLink = {
+  stage: NextStage;
+  title: string;
+  url: string;
+  reason: string;
+};
 
 function getUrl(post: any) {
-    const parts = post.id.split('/');
     const lang = post.data.lang || 'ja';
     const segment = post.collection;
-    const slugParts = parts.filter(p => p !== lang && p !== 'index');
+    const preferredSlug = post.data.slug?.trim();
+
+    if (preferredSlug) return `/${lang}/${segment}/${preferredSlug}/`;
+
+    const parts = post.id.split('/');
+    const slugParts = parts.filter((p: string) => p !== lang && p !== 'index');
     const slug = slugParts.join('/');
     return slug ? `/${lang}/${segment}/${slug}/` : `/${lang}/${segment}/`;
 }
+
+const stageText: Record<NextStage, { ja: string; en: string }> = {
+  beginner: { ja: '基礎を理解する', en: 'Build Basics' },
+  compare: { ja: '選択肢を比較する', en: 'Compare Options' },
+  action: { ja: '導入を進める', en: 'Take Action' },
+};
+
+const allLangPosts = relatedPosts;
+const usedUrls = new Set<string>();
+
+const pickFallbackPost = (stage: NextStage) => {
+  const currentTags = new Set(post.data.tags || []);
+
+  const scored = allLangPosts
+    .map((candidate: any) => {
+      const candidateUrl = getUrl(candidate);
+      if (usedUrls.has(candidateUrl)) return null;
+
+      const tagMatches = (candidate.data.tags || []).filter((tag: string) => currentTags.has(tag)).length;
+      const categoryMatch = candidate.collection === post.collection ? 1 : 0;
+      const solutionBoost = stage === 'action' && ['solutions', 'use-case'].includes(candidate.collection) ? 2 : 0;
+      const compareBoost = stage === 'compare' && candidate.collection === post.collection ? 1 : 0;
+
+      return {
+        candidate,
+        score: (tagMatches * 10) + (categoryMatch * 5) + (solutionBoost * 5) + (compareBoost * 3),
+      };
+    })
+    .filter(Boolean)
+    .sort((a: any, b: any) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return b.candidate.data.date.valueOf() - a.candidate.data.date.valueOf();
+    });
+
+  return scored[0]?.candidate;
+};
+
+const hubMatch = HUB_CLUSTERS.find((cluster) => {
+  const haystack = `${post.data.title} ${post.data.description} ${(post.data.tags || []).join(' ')}`.toLowerCase();
+  return cluster.matchKeywords.some((keyword) => haystack.includes(keyword.toLowerCase()));
+});
+
+const manualSteps = (post.data.nextSteps || []).reduce((acc: Record<string, any>, step) => {
+  acc[step.stage] = step;
+  return acc;
+}, {});
+
+const nextSteps: StepLink[] = (['beginner', 'compare', 'action'] as NextStage[]).map((stage) => {
+  const manual = manualSteps[stage];
+  if (manual?.url) {
+    usedUrls.add(manual.url);
+    return {
+      stage,
+      title: manual.title || stageText[stage][lang === 'ja' ? 'ja' : 'en'],
+      url: manual.url,
+      reason: lang === 'ja' ? '手動設定' : 'Manual path',
+    };
+  }
+
+  if (manual?.slug) {
+    const manualPost = allLangPosts.find((candidate: any) => {
+      const candidateSlug = candidate.data.slug?.trim();
+      if (candidateSlug) return candidateSlug === manual.slug;
+      return candidate.id.endsWith(`/${manual.slug}`);
+    });
+    if (manualPost) {
+      const manualUrl = getUrl(manualPost);
+      usedUrls.add(manualUrl);
+      return {
+        stage,
+        title: manual.title || manualPost.data.title,
+        url: manualUrl,
+        reason: lang === 'ja' ? '手動指定' : 'Manual slug',
+      };
+    }
+  }
+
+  const fallbackPost = pickFallbackPost(stage);
+  if (fallbackPost) {
+    const fallbackUrl = getUrl(fallbackPost);
+    usedUrls.add(fallbackUrl);
+    return {
+      stage,
+      title: fallbackPost.data.title,
+      url: fallbackUrl,
+      reason: stage === 'beginner'
+        ? (lang === 'ja' ? '同タグ優先' : 'Tag match')
+        : stage === 'compare'
+          ? (lang === 'ja' ? '同カテゴリ優先' : 'Category match')
+          : (lang === 'ja' ? '導入記事を優先' : 'Action-oriented'),
+    };
+  }
+
+  const fallbackUrl = hubMatch ? `/${lang}/${hubMatch.categoryHint}/` : `/${lang}/${post.collection}/`;
+  return {
+    stage,
+    title: hubMatch ? hubMatch.labels[lang === 'ja' ? 'ja' : 'en'].title : stageText[stage][lang === 'ja' ? 'ja' : 'en'],
+    url: fallbackUrl,
+    reason: lang === 'ja' ? 'ハブ入口へフォールバック' : 'Hub fallback',
+  };
+});
+
+const nextStepUrls = new Set(nextSteps.map((step) => step.url));
+const dedupedRelatedPosts = relatedPosts.filter((candidate: any) => !nextStepUrls.has(getUrl(candidate)));
+const relatedPostsWithLabels = dedupedRelatedPosts.map((candidate: any) => {
+  const currentTags = new Set(post.data.tags || []);
+  const tagMatches = (candidate.data.tags || []).filter((tag: string) => currentTags.has(tag)).length;
+  const categoryMatch = candidate.collection === post.collection;
+
+  if (tagMatches > 0) {
+    return {
+      post: candidate,
+      relationLabel: lang === 'ja' ? `同タグ ${tagMatches}` : `${tagMatches} shared tags`,
+      relationKey: 'tag',
+    };
+  }
+
+  if (categoryMatch) {
+    return {
+      post: candidate,
+      relationLabel: lang === 'ja' ? '同カテゴリ' : 'Same category',
+      relationKey: 'category',
+    };
+  }
+
+  return {
+    post: candidate,
+    relationLabel: lang === 'ja' ? '近い更新時期' : 'Recent update',
+    relationKey: 'recency',
+  };
+});
+
+const manualStarterSlugs: string[] = post.data.starterSet || [];
+const manualStarterPosts = manualStarterSlugs
+  .map((slug: string) =>
+    allCategoryPosts.find((candidate: any) => {
+      const candidateSlug = candidate.data.slug?.trim();
+      if (candidateSlug) return candidateSlug === slug;
+      return candidate.id.endsWith(`/${slug}`);
+    })
+  )
+  .filter(Boolean);
+
+const starterSelectedUrls = new Set(manualStarterPosts.map((item: any) => getUrl(item)));
+const starterAutoPosts = allCategoryPosts
+  .filter((candidate: any) => !starterSelectedUrls.has(getUrl(candidate)))
+  .map((candidate: any) => {
+    const indexTags = new Set(post.data.tags || []);
+    const tagMatches = (candidate.data.tags || []).filter((tag: string) => indexTags.has(tag)).length;
+    const recencyBoost = Math.max(0, 365 - (Date.now() - candidate.data.date.valueOf()) / (1000 * 60 * 60 * 24));
+    return {
+      candidate,
+      score: tagMatches * 10 + recencyBoost,
+    };
+  })
+  .sort((a: any, b: any) => b.score - a.score)
+  .map((item: any) => item.candidate);
+
+const starterSetPosts = [...manualStarterPosts, ...starterAutoPosts].slice(0, 6);
+
+const getRecommendedReadMinutes = (entry: any) => {
+  const source = `${entry.data.title} ${entry.data.description}`;
+  const charsPerMinute = lang === 'ja' ? 550 : 900;
+  return Math.max(1, Math.round(source.length / charsPerMinute));
+};
 
 const components = {
     SmartLink,
@@ -83,7 +287,7 @@ const components = {
 };
 ---
 
-<Layout title={post.data.title}>
+<Layout title={post.data.title} description={post.data.description} image={post.data.image ? post.data.image.src : undefined}>
   <div class="article-wrapper">
     <!-- 知的なパンくずリスト -->
     <nav class="breadcrumb">
@@ -125,6 +329,25 @@ const components = {
 
       {isIndex && (
         <section class="category-posts-list">
+          <div class="starter-set">
+            <div class="section-divider">
+              <span class="divider-text">{lang === 'ja' ? '初めての人向けスターターセット' : 'Starter Set for Beginners'}</span>
+            </div>
+            <div class="starter-grid">
+              {starterSetPosts.map((item: any, index: number) => (
+                <article class="starter-card">
+                  <span class="starter-rank">#{index + 1}</span>
+                  <h3><a href={getUrl(item)}>{item.data.title}</a></h3>
+                  <p>{item.data.description}</p>
+                  <div class="starter-meta">
+                    <span>{item.data.date.toLocaleDateString(locale)}</span>
+                    <span>{lang === 'ja' ? `読了 ${getRecommendedReadMinutes(item)}分` : `${getRecommendedReadMinutes(item)} min read`}</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
           <div class="section-divider">
             <span class="divider-text">{lang === 'ja' ? '研究成果一覧' : 'All Research'}</span>
           </div>
@@ -138,7 +361,8 @@ const components = {
                 )}
                 <div class="card-content">
                   <div class="card-meta">
-                    <span class="date">{item.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
+                    <span class="date">{item.data.date.toLocaleDateString(locale)}</span>
+                    <span class="reading-time">{lang === 'ja' ? `読了 ${getRecommendedReadMinutes(item)}分` : `${getRecommendedReadMinutes(item)} min read`}</span>
                   </div>
                   <h3 class="post-title">
                     <a href={getUrl(item)} class="link-text">
@@ -218,12 +442,41 @@ const components = {
 
             <MultiplexAd />
 
-            {relatedPosts && relatedPosts.length > 0 && (
+            {nextSteps.length > 0 && (
+              <section class="next-step-section">
+                <div class="section-divider">
+                  <span class="divider-text">{lang === 'ja' ? '次に読む（Next Step）' : 'Next Step'}</span>
+                </div>
+                <div class="next-step-grid">
+                  {nextSteps.map((step) => (
+                    <a
+                      href={step.url}
+                      class="next-step-card"
+                      data-track-event="next_step_click"
+                      data-track-source={`next_step_${step.stage}`}
+                      data-track-label={step.title}
+                    >
+                      <div class="stage">{stageText[step.stage][lang === 'ja' ? 'ja' : 'en']}</div>
+                      <h3>{step.title}</h3>
+                      <p>{step.reason}</p>
+                    </a>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {relatedPostsWithLabels && relatedPostsWithLabels.length > 0 && (
               <section class="related-articles-section">
                 <div class="section-divider">
                   <span class="divider-text">{lang === 'ja' ? 'こちらの研究成果もおすすめ' : 'Recommended Research'}</span>
                 </div>
-                <ArchiveCarousel relatedPosts={relatedPosts} lang={lang} />
+                <ArchiveCarousel
+                  relatedPosts={relatedPostsWithLabels}
+                  lang={lang}
+                  limitByDevice={true}
+                  trackEvent="related_click"
+                  trackSource="related_section"
+                />
               </section>
             )}
         </footer>
@@ -399,6 +652,51 @@ const components = {
     margin-bottom: 2rem;
   }
 
+  .next-step-section {
+    margin-top: 4rem;
+  }
+
+  .next-step-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .next-step-card {
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+    padding: 1rem;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .next-step-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-gold);
+  }
+
+  .next-step-card .stage {
+    font-size: 0.75rem;
+    letter-spacing: 0.08rem;
+    color: var(--primary-gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .next-step-card h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: none;
+    padding: 0;
+  }
+
+  .next-step-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+
   .article-footer {
     margin-top: 6rem;
     padding-top: 3rem;
@@ -435,6 +733,56 @@ const components = {
   /* 記事一覧グリッド（インデックス用） */
   .category-posts-list {
     margin-top: 6rem;
+  }
+
+  .starter-set {
+    margin-bottom: 4rem;
+  }
+
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .starter-card {
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .starter-rank {
+    font-size: 0.75rem;
+    color: var(--primary-gold);
+    letter-spacing: 0.08rem;
+  }
+
+  .starter-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.05rem;
+    border: none;
+    padding: 0;
+  }
+
+  .starter-card h3 a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .starter-card p {
+    margin: 0;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .starter-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.8rem;
+    color: var(--text-dim);
+    font-size: 0.75rem;
   }
 
   .posts-grid {
@@ -496,10 +844,18 @@ const components = {
   }
 
   .card-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
     font-size: 0.75rem;
     color: var(--text-dim);
     margin-bottom: 1rem;
     letter-spacing: 0.1rem;
+  }
+
+  .reading-time {
+    color: var(--primary-gold);
+    white-space: nowrap;
   }
 
   .post-title { 
@@ -584,6 +940,8 @@ const components = {
   @media (max-width: 768px) {
     .article-content { padding: 2rem; }
     h1 { font-size: 2.2rem; }
+    .starter-grid { grid-template-columns: 1fr; }
+    .next-step-grid { grid-template-columns: 1fr; }
     .posts-grid { grid-template-columns: 1fr; }
   }
 </style>
