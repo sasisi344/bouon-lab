@@ -40,18 +40,13 @@ const variantClass = item?.variant === 'high-ticket' ? 'high-ticket'
 
 // 画像URLの解決
 let imgSrc: any = (item as any)?.image;
-let isRemoteImage = false;
 
 if (typeof imgSrc === 'string') {
-  if (imgSrc.startsWith('http')) {
-    // 既にフルURLの場合
-    isRemoteImage = true;
-  } else if (imgSrc.startsWith('images/I/')) {
+  if (imgSrc.startsWith('images/I/')) {
     // Amazonの相対パス（旧仕様互換）
     imgSrc = `https://m.media-amazon.com/${imgSrc}`;
-    isRemoteImage = true;
-  } else {
-    // ローカルアセットの動的インポート
+  } else if (!imgSrc.startsWith('http')) {
+    // ローカルアセットの動的インポート（http(s) はそのまま利用）
     const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,webp,svg}');
     // 先頭の / を除去してパスを作成
     const cleanPath = imgSrc.startsWith('/') ? imgSrc : `/${imgSrc}`;

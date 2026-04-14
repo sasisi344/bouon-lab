@@ -34,9 +34,9 @@ const enPath = normalizedPath.startsWith('/ja/')
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="canonical" href={canonicalUrl} />
-		<link rel="alternate" hrefLang="ja" href={new URL(jaPath, siteUrl).toString()} />
-		<link rel="alternate" hrefLang="en" href={new URL(enPath, siteUrl).toString()} />
-		<link rel="alternate" hrefLang="x-default" href={new URL('/ja/', siteUrl).toString()} />
+		<link rel="alternate" hreflang="ja" href={new URL(jaPath, siteUrl).toString()} />
+		<link rel="alternate" hreflang="en" href={new URL(enPath, siteUrl).toString()} />
+		<link rel="alternate" hreflang="x-default" href={new URL('/ja/', siteUrl).toString()} />
 		<meta property="og:type" content="article" />
 		<meta property="og:site_name" content="BouonLab" />
 		<meta property="og:title" content={`${title} | BouonLab`} />
