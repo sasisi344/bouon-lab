@@ -58,6 +58,13 @@ Follow this sequence to identify and prioritize articles for rewriting.
   - Use **BEAF** to prove technical value.
   - Use **PASONA** for high-urgency rental problems.
 
+### D. Volume Targets (Premium Standard)
+
+- **個別説明記事**: 5,000字以上を必達。各H2セクションは300〜600字規模で書き込む。
+- **一般記事（ナレッジ・コラム）**: 3,000字前後を標準とする。
+- **ハブ記事（ナビゲーション型）**: 字数より構造と誘導品質を優先。各セクションに2〜3文の文脈説明を付ける。
+- **禁止パターン**: 箇条書きのみで構成されたセクション、数行で終わるH2、ベネフィット記述のない締め。
+
 ---
 
 ## 🎨 3. Visual & Engagement Upgrade
