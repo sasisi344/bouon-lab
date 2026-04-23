@@ -1,28 +1,48 @@
 # BouonLab - Scientific Soundproof Knowledge Base
 
-A comprehensive knowledge base for soundproofing, acoustics, and legal regulations regarding noise management. Optimized for both human researchers and AI crawlers.
+Comprehensive knowledge base for soundproofing, acoustics, and noise dispute management. Optimized for both human researchers and AI crawlers.
 
-## Main Directories
+Last updated: 2026-04-23
 
-- **Solutions** [/ja/solutions/]: Technical and financial solutions including unit soundproof rooms, DIY methods, and professional rentals.
-- **Use-Case** [/ja/use-case/]: Practical examples and case studies for streamers, musicians, and residents.
-- **Knowledge** [/ja/knowledge/]: Foundational science of acoustics, asset value analysis, and legal precedents.
-- **About** [/ja/about/]: Mission, vision, and organizational background of BouonLab.
-- **Privacy Policy** [/ja/privacy/]: Data handling and transparency documentation.
+## Primary Locales
 
-## Pillar Articles
+- Japanese (ja): https://bouon-lab.online/ja/
+- English (en): https://bouon-lab.online/en/
 
-- **Soundproof Room Comparison 2026** [/ja/solutions/bouon-osusume-hikaku/]: The definitive guide to choosing between Yamaha, Kawai, and budget models like OTODASU. Includes resale value and sound characteristic analysis.
-- **Osaka Soundproof Rental Guide** [/ja/solutions/osaka-soundproof-rental-guide/]: Regional market data for soundproof apartments.
-- **Noise Complaint Manual** [/ja/use-case/noise-complaint-landlord-negotiation-guide/]: Step-by-step negotiation strategy for managing neighbor relations.
-- **Soundproof Room Buyback Guide** [/ja/knowledge/soundproof-room-buyback-guide/]: How to maximize the asset value of a soundproof room.
+## Main Directories (Japanese)
 
-## Technical Foundation & AI Optimization
+- Solutions: https://bouon-lab.online/ja/solutions/ (technical and financial solutions, including unit rooms, DIY, and rentals)
+- Use-Case: https://bouon-lab.online/ja/use-case/ (practical scenarios for streamers, musicians, families, and remote workers)
+- Knowledge: https://bouon-lab.online/ja/knowledge/ (acoustics fundamentals, regulation updates, and market context)
+- About: https://bouon-lab.online/ja/about/
+- Privacy Policy: https://bouon-lab.online/ja/privacy/
 
-- **Architecture**: Built with Astro (v6+), utilizing MDX for high-authoritative content delivery.
-- **Internationalization**: Full support for Japanese (`/ja/`) and English (`/en/`) locales.
-- **Analytics & Serving**: Integrated GA4 tracking (`G-RWEHZPS976`) and verified `ads.txt` for AdSense eligibility.
-- **Navigation**: Structured for both horizontal (menu) and vertical (breadcrumbs) crawling.
-- **Metadata**: Every article includes structured frontmatter with `slug`, `category`, and `lang`.
-- **Taxonomy**: Organized into functional segments: `knowledge`, `solutions`, `use-case`.
-- **Depth**: Pillar articles focus on 10x content depth with evidence-based data.
+## Main Directories (English)
+
+- Solutions: https://bouon-lab.online/en/solutions/
+- Use-Case: https://bouon-lab.online/en/use-case/
+- Knowledge: https://bouon-lab.online/en/knowledge/
+- About: https://bouon-lab.online/en/about/
+- Privacy Policy: https://bouon-lab.online/en/privacy/
+
+## Pillar Articles (Japanese)
+
+- [High] Soundproof Room Comparison 2026: https://bouon-lab.online/ja/solutions/bouon-osusume-hikaku/
+- [High] Osaka Soundproof Rental Guide: https://bouon-lab.online/ja/solutions/osaka-soundproof-rental-guide/
+- [High] Noise Complaint Manual: https://bouon-lab.online/ja/use-case/noise-complaint-landlord-negotiation-guide/
+- [High] Soundproof Room Buyback Guide: https://bouon-lab.online/ja/solutions/soundproof-room-buyback-guide/
+
+## Pillar Articles (English)
+
+- [High] Soundproof Room Comparison 2026: https://bouon-lab.online/en/solutions/bouon-osusume-hikaku/
+- [High] Osaka Soundproof Rental Guide: https://bouon-lab.online/en/solutions/osaka-soundproof-rental-guide/
+- [High] Noise Complaint Manual: https://bouon-lab.online/en/use-case/noise-complaint-landlord-negotiation-guide/
+- [High] Soundproof Room Buyback Guide: https://bouon-lab.online/en/knowledge/soundproof-room-buyback-guide/
+
+## Technical Foundation
+
+- Architecture: Astro v6+ with MDX content workflow
+- Internationalization: Locale routing for `/ja/` and `/en/`
+- Navigation: Hierarchical category and breadcrumb-friendly URL structure
+- Metadata: Structured frontmatter (`slug`, `category`, `lang`, `date`, `lastmod`)
+- Taxonomy: `knowledge`, `solutions`, `use-case`, `company`, `column`
