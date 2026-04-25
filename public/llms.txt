@@ -1,4 +1,4 @@
-# BouonLab - Scientific Soundproof Knowledge Base
+﻿# BouonLab - Scientific Soundproof Knowledge Base
 
 Comprehensive knowledge base for soundproofing, acoustics, and noise dispute management. Optimized for both human researchers and AI crawlers.
 
@@ -6,38 +6,38 @@ Last updated: 2026-04-23
 
 ## Primary Locales
 
-- Japanese (ja): https://bouon-lab.online/ja/
-- English (en): https://bouon-lab.online/en/
+- Japanese (ja): https://bouon-lab.com/ja/
+- English (en): https://bouon-lab.com/en/
 
 ## Main Directories (Japanese)
 
-- Solutions: https://bouon-lab.online/ja/solutions/ (technical and financial solutions, including unit rooms, DIY, and rentals)
-- Use-Case: https://bouon-lab.online/ja/use-case/ (practical scenarios for streamers, musicians, families, and remote workers)
-- Knowledge: https://bouon-lab.online/ja/knowledge/ (acoustics fundamentals, regulation updates, and market context)
-- About: https://bouon-lab.online/ja/about/
-- Privacy Policy: https://bouon-lab.online/ja/privacy/
+- Solutions: https://bouon-lab.com/ja/solutions/ (technical and financial solutions, including unit rooms, DIY, and rentals)
+- Use-Case: https://bouon-lab.com/ja/use-case/ (practical scenarios for streamers, musicians, families, and remote workers)
+- Knowledge: https://bouon-lab.com/ja/knowledge/ (acoustics fundamentals, regulation updates, and market context)
+- About: https://bouon-lab.com/ja/about/
+- Privacy Policy: https://bouon-lab.com/ja/privacy/
 
 ## Main Directories (English)
 
-- Solutions: https://bouon-lab.online/en/solutions/
-- Use-Case: https://bouon-lab.online/en/use-case/
-- Knowledge: https://bouon-lab.online/en/knowledge/
-- About: https://bouon-lab.online/en/about/
-- Privacy Policy: https://bouon-lab.online/en/privacy/
+- Solutions: https://bouon-lab.com/en/solutions/
+- Use-Case: https://bouon-lab.com/en/use-case/
+- Knowledge: https://bouon-lab.com/en/knowledge/
+- About: https://bouon-lab.com/en/about/
+- Privacy Policy: https://bouon-lab.com/en/privacy/
 
 ## Pillar Articles (Japanese)
 
-- [High] Soundproof Room Comparison 2026: https://bouon-lab.online/ja/solutions/bouon-osusume-hikaku/
-- [High] Osaka Soundproof Rental Guide: https://bouon-lab.online/ja/solutions/osaka-soundproof-rental-guide/
-- [High] Noise Complaint Manual: https://bouon-lab.online/ja/use-case/noise-complaint-landlord-negotiation-guide/
-- [High] Soundproof Room Buyback Guide: https://bouon-lab.online/ja/solutions/soundproof-room-buyback-guide/
+- [High] Soundproof Room Comparison 2026: https://bouon-lab.com/ja/solutions/bouon-osusume-hikaku/
+- [High] Osaka Soundproof Rental Guide: https://bouon-lab.com/ja/solutions/osaka-soundproof-rental-guide/
+- [High] Noise Complaint Manual: https://bouon-lab.com/ja/use-case/noise-complaint-landlord-negotiation-guide/
+- [High] Soundproof Room Buyback Guide: https://bouon-lab.com/ja/solutions/soundproof-room-buyback-guide/
 
 ## Pillar Articles (English)
 
-- [High] Soundproof Room Comparison 2026: https://bouon-lab.online/en/solutions/bouon-osusume-hikaku/
-- [High] Osaka Soundproof Rental Guide: https://bouon-lab.online/en/solutions/osaka-soundproof-rental-guide/
-- [High] Noise Complaint Manual: https://bouon-lab.online/en/use-case/noise-complaint-landlord-negotiation-guide/
-- [High] Soundproof Room Buyback Guide: https://bouon-lab.online/en/knowledge/soundproof-room-buyback-guide/
+- [High] Soundproof Room Comparison 2026: https://bouon-lab.com/en/solutions/bouon-osusume-hikaku/
+- [High] Osaka Soundproof Rental Guide: https://bouon-lab.com/en/solutions/osaka-soundproof-rental-guide/
+- [High] Noise Complaint Manual: https://bouon-lab.com/en/use-case/noise-complaint-landlord-negotiation-guide/
+- [High] Soundproof Room Buyback Guide: https://bouon-lab.com/en/knowledge/soundproof-room-buyback-guide/
 
 ## Technical Foundation
 

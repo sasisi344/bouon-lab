@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://bouon-lab.online/sitemap-index.xml
+Sitemap: https://bouon-lab.com/sitemap-index.xml

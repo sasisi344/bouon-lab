@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Read(//c/Users/sasis/344dev/bouon-lab/src/content/knowledge/ja$dir/**)",
-      "Read(//c/Users/sasis/344dev/bouon-lab/src/content/solutions/unit-rooms/ja$dir/**)"
+      "Read(//c/Users/sasis/344dev/bouon-lab/src/content/solutions/unit-rooms/ja$dir/**)",
+      "Bash(cat)",
+      "Read(//tmp/**)"
     ]
   }
 }

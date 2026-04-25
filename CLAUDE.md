@@ -1,10 +1,10 @@
-# CLAUDE.md
+﻿# CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
-**BouonLab（防音Lab）** は防音・遮音分野のE-E-A-T権威を目指すAstro 6製日本語ブログ。`https://bouon-lab.online/` で公開。コンテンツ戦略は `GEMINI.md` を参照。
+**BouonLab（防音Lab）** は防音・遮音分野のE-E-A-T権威を目指すAstro 6製日本語ブログ。`https://bouon-lab.com/` で公開。コンテンツ戦略は `GEMINI.md` を参照。
 
 ## Commands
 
