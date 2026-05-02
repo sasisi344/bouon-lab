@@ -2,7 +2,10 @@ export type HubClusterKey = 'remote-work' | 'instrument-practice' | 'streaming';
 
 type HubClusterDefinition = {
   key: HubClusterKey;
+  /** `ja` 記事のフォールバック先カテゴリ */
   categoryHint: string;
+  /** `en` 記事（Japan 文化発信カテゴリ）のフォールバック。未指定時は categoryHint を使う */
+  categoryHintEn?: string;
   matchKeywords: string[];
   labels: {
     ja: {
@@ -23,7 +26,8 @@ type HubClusterDefinition = {
 export const HUB_CLUSTERS: HubClusterDefinition[] = [
   {
     key: 'remote-work',
-    categoryHint: 'knowledge',
+    categoryHint: 'soundproof-rental',
+    categoryHintEn: 'japan-soundproof-housing',
     matchKeywords: ['在宅', 'テレワーク', 'work', 'office', 'リモート'],
     labels: {
       ja: {
@@ -42,7 +46,8 @@ export const HUB_CLUSTERS: HubClusterDefinition[] = [
   },
   {
     key: 'instrument-practice',
-    categoryHint: 'solutions',
+    categoryHint: 'soundproof-room',
+    categoryHintEn: 'japan-quiet-spaces',
     matchKeywords: ['楽器', 'ピアノ', 'ギター', 'instrument', 'music', 'practice'],
     labels: {
       ja: {
@@ -61,7 +66,8 @@ export const HUB_CLUSTERS: HubClusterDefinition[] = [
   },
   {
     key: 'streaming',
-    categoryHint: 'use-case',
+    categoryHint: 'soundproof-room',
+    categoryHintEn: 'japan-quiet-spaces',
     matchKeywords: ['配信', 'stream', 'vtuber', 'gaming', '実況'],
     labels: {
       ja: {

@@ -1,0 +1,553 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../../layouts/Layout.astro';
+import {
+  JA_TOP_CATEGORIES,
+  EN_TOP_CATEGORIES,
+  TOP_CATEGORY_LABELS,
+} from '../../../data/contentCategories';
+import { resolvePostCover } from '../../../data/categoryDefaultCover';
+import { resolvePostSlugSegment } from '../../../utils/resolvePostSlugSegment';
+
+const CATEGORY_LABELS = TOP_CATEGORY_LABELS;
+
+export async function getStaticPaths() {
+  const paths: { params: { lang: string; category: string } }[] = [];
+  for (const category of JA_TOP_CATEGORIES) {
+    paths.push({ params: { lang: 'ja', category } });
+  }
+  for (const category of EN_TOP_CATEGORIES) {
+    paths.push({ params: { lang: 'en', category } });
+  }
+  return paths;
+}
+
+const { lang: paramLang, category: paramCategory } = Astro.params;
+const lang = paramLang === 'en' ? 'en' : 'ja';
+const category = paramCategory || '';
+const locale = lang === 'ja' ? 'ja-JP' : 'en-US';
+
+const allContent = (await getCollection('posts')).filter((p) => p.data.draft !== true);
+
+const label =
+  CATEGORY_LABELS[category as keyof typeof CATEGORY_LABELS]?.[
+    lang === 'ja' ? 'ja' : 'en'
+  ] ?? category;
+const pageTitle =
+  lang === 'ja' ? `${label}｜記事一覧` : `${label} | Articles`;
+const pageDescription =
+  lang === 'ja'
+    ? `「${label}」カテゴリの防音Lab記事一覧です。`
+    : `Browse BouonLab articles in the ${label} category.`;
+
+function resolveSlug(post: (typeof allContent)[number]) {
+  return resolvePostSlugSegment(post) ?? '';
+}
+
+function getUrl(post: (typeof allContent)[number]) {
+  const postLang = post.data.lang || 'ja';
+  const segment = post.data.category;
+  const slug = resolvePostSlugSegment(post);
+  return slug ? `/${postLang}/${segment}/${slug}/` : `/${postLang}/${segment}/`;
+}
+
+const getRecommendedReadMinutes = (entry: (typeof allContent)[number]) => {
+  const source = `${entry.data.title} ${entry.data.description}`;
+  const charsPerMinute = lang === 'ja' ? 550 : 900;
+  return Math.max(1, Math.round(source.length / charsPerMinute));
+};
+
+const categoryPosts = allContent
+  .filter((p) => (p.data.lang || 'ja') === lang && p.data.category === category)
+  .filter((p) => resolveSlug(p) !== '')
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const starterSetPosts = categoryPosts.slice(0, 6);
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="article-wrapper">
+    <nav class="breadcrumb">
+      <a href={`/${lang}/`}>HOME</a>
+      <span class="sep">/</span>
+      <span class="current">{label}</span>
+    </nav>
+
+    <article class="article-content">
+      <header class="article-header">
+        <div class="meta-top">
+          <span class="lang-tag">{lang.toUpperCase()}</span>
+        </div>
+        <h1>{label}</h1>
+        <p class="description">{pageDescription}</p>
+      </header>
+
+      <section class="category-posts-list">
+        {starterSetPosts.length > 0 && (
+          <div class="starter-set">
+            <div class="section-divider">
+              <span class="divider-text">
+                {lang === 'ja' ? '注目の記事' : 'Featured'}
+              </span>
+            </div>
+            <div class="starter-grid">
+              {starterSetPosts.map((item, index) => (
+                <article class="starter-card">
+                  <span class="starter-rank">#{index + 1}</span>
+                  <h3>
+                    <a href={getUrl(item)}>{item.data.title}</a>
+                  </h3>
+                  <p>{item.data.description}</p>
+                  <div class="starter-meta">
+                    <span>{item.data.date.toLocaleDateString(locale)}</span>
+                    <span>
+                      {lang === 'ja'
+                        ? `読了 ${getRecommendedReadMinutes(item)}分`
+                        : `${getRecommendedReadMinutes(item)} min read`}
+                    </span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div class="section-divider">
+          <span class="divider-text">
+            {lang === 'ja' ? '記事一覧' : 'All articles'}
+          </span>
+        </div>
+        {categoryPosts.length === 0 && (
+          <p class="empty-hint">
+            {lang === 'ja'
+              ? 'このカテゴリの記事はまだありません。'
+              : 'No articles in this category yet.'}
+          </p>
+        )}
+        <div class="posts-grid" id="posts-grid">
+          {categoryPosts.map((item, index) => (
+            <article
+              class="post-card"
+              data-index={index}
+              style={index >= 6 ? 'display: none;' : ''}
+            >
+              <div class="card-image-box">
+                <Image
+                  src={resolvePostCover(item)}
+                  alt={item.data.title}
+                  class="card-img"
+                  width={600}
+                  height={338}
+                  format="webp"
+                />
+              </div>
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="date">{item.data.date.toLocaleDateString(locale)}</span>
+                  <span class="reading-time">
+                    {lang === 'ja'
+                      ? `読了 ${getRecommendedReadMinutes(item)}分`
+                      : `${getRecommendedReadMinutes(item)} min read`}
+                  </span>
+                </div>
+                <h3 class="post-title">
+                  <a href={getUrl(item)} class="link-text">
+                    {item.data.title}
+                  </a>
+                </h3>
+                <p>{item.data.description}</p>
+                <div class="card-footer">
+                  <a href={getUrl(item)} class="read-more">
+                    READ MORE →
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {categoryPosts.length > 6 && (
+          <div class="load-more-container">
+            <button id="load-more-btn" class="btn-load-more" type="button">
+              {lang === 'ja' ? 'さらに記事を読み込む' : 'Load More Articles'}
+              <span class="count-info">
+                (<span id="current-count">6</span> / {categoryPosts.length})
+              </span>
+            </button>
+          </div>
+        )}
+      </section>
+    </article>
+  </div>
+</Layout>
+
+<script is:inline>
+  function initLoadMore() {
+    const btn = document.getElementById('load-more-btn');
+    const grid = document.getElementById('posts-grid');
+    if (!btn || !grid) return;
+
+    let currentVisible = 6;
+    const increment = 6;
+    const allCards = grid.querySelectorAll('.post-card');
+    const total = allCards.length;
+    const countDisplay = document.getElementById('current-count');
+
+    btn.addEventListener('click', () => {
+      const nextCount = currentVisible + increment;
+
+      allCards.forEach((card, index) => {
+        if (index < nextCount) {
+          card.style.display = 'flex';
+          card.style.animation = 'fadeIn 0.5s ease forwards';
+        }
+      });
+
+      currentVisible = nextCount;
+      if (countDisplay) countDisplay.textContent = Math.min(currentVisible, total);
+
+      if (currentVisible >= total) {
+        btn.style.display = 'none';
+      }
+    });
+  }
+
+  initLoadMore();
+  document.addEventListener('astro:after-swap', initLoadMore);
+</script>
+
+<style>
+  .article-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem 8rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem;
+    color: var(--text-dim);
+    text-align: center;
+  }
+  .breadcrumb a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .breadcrumb a:hover {
+    color: var(--primary-gold);
+  }
+  .breadcrumb .sep {
+    margin: 0 0.5rem;
+    opacity: 0.3;
+  }
+  .breadcrumb .current {
+    color: var(--primary-gold);
+    font-weight: bold;
+  }
+
+  .article-content {
+    background: var(--bg-mocha);
+    padding: 4rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  .article-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .meta-top {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.2rem;
+    color: var(--text-dim);
+  }
+
+  .lang-tag {
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    padding: 0 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+  }
+
+  h1 {
+    font-family: var(--font-ud-mincho);
+    font-size: 3rem;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+  }
+
+  .description {
+    font-family: var(--font-ud-gothic);
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+    letter-spacing: 0.05rem;
+  }
+
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .divider-text {
+    font-family: var(--font-ud-mincho);
+    font-size: 1.5rem;
+    color: var(--primary-gold);
+    white-space: nowrap;
+    letter-spacing: 0.2rem;
+  }
+
+  .section-divider::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(212, 175, 55, 0.4), transparent);
+  }
+
+  .category-posts-list {
+    margin-top: 3rem;
+  }
+
+  .empty-hint {
+    text-align: center;
+    color: var(--text-dim);
+    margin: 2rem 0 0;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .starter-set {
+    margin-bottom: 4rem;
+  }
+
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .starter-card {
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .starter-rank {
+    font-size: 0.75rem;
+    color: var(--primary-gold);
+    letter-spacing: 0.08rem;
+  }
+
+  .starter-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.05rem;
+    border: none;
+    padding: 0;
+  }
+
+  .starter-card h3 a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .starter-card p {
+    margin: 0;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .starter-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.8rem;
+    color: var(--text-dim);
+    font-size: 0.75rem;
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .post-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .post-card:hover {
+    border-color: var(--primary-gold);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    transform: translateY(-5px);
+  }
+
+  .card-image-box {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .post-card:hover .card-img {
+    transform: scale(1.05);
+  }
+
+  .read-more::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .reading-time {
+    color: var(--primary-gold);
+    white-space: nowrap;
+  }
+
+  .post-title {
+    font-size: 1.2rem !important;
+    margin: 0 0 1rem 0 !important;
+    line-height: 1.4 !important;
+    color: #fff !important;
+    text-align: left !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .post-card p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    flex-grow: 1;
+    letter-spacing: 0.05rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-footer {
+    margin-top: auto;
+  }
+
+  .read-more {
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  .btn-load-more {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--primary-gold);
+    color: #fff;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-family: var(--font-ud-mincho);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn-load-more:hover {
+    background: var(--primary-gold);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+  }
+
+  .count-info {
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .posts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .article-content {
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+    }
+    .starter-grid {
+      grid-template-columns: 1fr;
+    }
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

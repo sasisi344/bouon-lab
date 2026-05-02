@@ -1,0 +1,27 @@
+---
+description: 既存記事リライト戦略（旧content-strategist/re-writting-rules統合）
+alwaysApply: true
+---
+
+# BouonLab Rewrite Strategy
+
+## 優先順位
+
+- 既存記事の改善を新規作成より優先する。
+- 高imp・低CTR記事を優先（目安: CTR 3%未満）。
+- レガシー記事は現行の構造・語彙・導線に再構成する。
+
+## 実行フロー
+
+1. 既存記事の課題を診断（タイトル、導入、検索意図とのズレ）。
+2. データセットで仕様・価格・制度情報を最新化する。
+3. 見出し・本文を再設計し、薄いセクションを排除する。
+4. 内部リンクを更新し、回遊導線を補強する。
+
+## リライト時の必須ルール
+
+- 既存 `slug` は原則変更しない（SEO評価保護）。
+- 内部リンクの追加・差し替えは `.workspace/.data-set/interlink-postlist.md` でリンク先を確認する（詳細は `bouon-internal-link-postlist.mdc`）。
+- `<strong>` 記法、内部リンク形式、frontmatter整合を必ず維持する。
+- 結論先出し（PREP）で冒頭3秒の理解速度を上げる。
+- 「文字数だけを増やす」加筆は禁止。比較・数値・事例を足す。

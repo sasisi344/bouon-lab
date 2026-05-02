@@ -1,16 +1,29 @@
 ---
 import Search from './Search.astro';
+import {
+  topCategoriesForLang,
+  labelForCategory,
+} from '../data/contentCategories';
 
 const pathname = Astro.url.pathname;
 const lang = pathname.startsWith('/en') ? 'en' : 'ja';
+const normalizedPath = pathname.endsWith('/') ? pathname : `${pathname}/`;
 
+const directoryCats = topCategoriesForLang(lang);
 const navItems = [
-  { href: `/${lang}/`, label: lang === 'ja' ? 'トップ' : 'Home' },
-  { href: `/${lang}/solutions/`, label: 'SOLUTIONS' },
-  { href: `/${lang}/use-case/`, label: 'USE CASE' },
-  { href: `/${lang}/knowledge/`, label: 'KNOWLEDGE' },
-  { href: `/${lang}/about/`, label: 'ABOUT' },
+  { href: `/${lang}/`, label: lang === 'ja' ? 'トップ' : 'Home', match: 'exact' as const },
+  ...directoryCats.map((cat) => ({
+    href: `/${lang}/${cat}/`,
+    label: labelForCategory(cat, lang),
+    match: 'prefix' as const,
+  })),
+  { href: `/${lang}/about/`, label: 'ABOUT', match: 'exact' as const },
 ];
+
+const isActive = (item: (typeof navItems)[number]) =>
+  item.match === 'prefix'
+    ? normalizedPath.startsWith(item.href)
+    : normalizedPath === item.href;
 ---
 
 <header class="site-header">
@@ -22,7 +35,7 @@ const navItems = [
     <!-- Desktop Nav -->
     <nav class="desktop-nav">
       {navItems.map(item => (
-        <a href={item.href} class={pathname === item.href ? 'active' : ''}>{item.label}</a>
+        <a href={item.href} class={isActive(item) ? 'active' : ''}>{item.label}</a>
       ))}
       <div class="search-nav-item">
         <Search lang={lang} />
@@ -44,7 +57,7 @@ const navItems = [
         <Search lang={lang} />
       </div>
       {navItems.map(item => (
-        <a href={item.href} class={pathname === item.href ? 'active' : ''}>{item.label}</a>
+        <a href={item.href} class={isActive(item) ? 'active' : ''}>{item.label}</a>
       ))}
       <div class="lang-switch">
          <a href={lang === 'ja' ? pathname.replace('/ja', '/en') : pathname.replace('/en', '/ja')} class="lang-btn">

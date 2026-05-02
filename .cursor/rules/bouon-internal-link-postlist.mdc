@@ -1,0 +1,23 @@
+---
+description: 内部リンクの作成・更新時に記事正本リスト（interlink-postlist）を参照する
+globs: src/content/**/*.mdx,_draft/**/*.md
+alwaysApply: false
+---
+
+# 内部リンクと interlink-postlist
+
+## 正本ファイル
+
+- **パス**: `.workspace/.data-set/interlink-postlist.md`
+- **用途**: 現在の `src/content` 掲載記事の `title` / **URL用 `slug`（フォルダ名）** / `tags` / `category` / `subcategory` / `internal_url` / `draft` を一覧化したもの。
+
+## エージェント・編集者向けルール
+
+1. **内部リンクを追加・変更するとき**は、リンク先URLを手入力で推測せず、まず `interlink-postlist.md` で **存在する `internal_url`** を確認する。
+2. **スラッグはフォルダ名が正**。frontmatter の `slug` がフォルダ名と異なる場合があるため、リストの **`slug` 列と `internal_url` を優先**する（`fm_slug` 列は注意喚起用）。
+3. **記事の追加・移動・フォルダ名変更・公開切替**のあと、リストを **`node .workspace/scripts/build-interlink-postlist.mjs`** で再生成する（または手動で同ファイルを更新する）。
+
+## 関連
+
+- 生成スクリプト: `.workspace/scripts/build-interlink-postlist.mjs`
+- 運用チェックリスト: `.cursor/skills/internal-link-ops/SKILL.md`

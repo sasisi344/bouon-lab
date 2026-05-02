@@ -1,0 +1,35 @@
+---
+description: BouonLab の言語ファーストコンテンツ階層・スラッグ・パーマリンク規約
+alwaysApply: true
+---
+
+# BouonLab コンテンツカテゴリ構造
+
+## 前提
+
+- **主軸は `ja` 記事**。企画・原稿の起点は常に日本語。
+- **`en` は別ディレクトリ設計（Japan lens）**。AI翻訳の「ローカル言語版コピー」ではなく、**日本の防音・静寂・住宅文化を世界向けに説明する**記事とする。`ja` と **トップカテゴリ（URL第2セグメント）を揃えない**（`README-content.md` と `src/data/contentCategories.ts` を参照）。
+
+## ディレクトリとパーマリンク
+
+- **`ja` 物理パス（例）**: `src/content/ja/soundproof-room/solution/post-slug/index.mdx`
+- **`ja` 公開URL（例）**: `https://bouon-lab.com/ja/soundproof-room/solution/post-slug/`（末尾スラッシュ）
+- **`en` 物理パス（例）**: `src/content/en/japan-quiet-spaces/unit-booths/post-slug/index.mdx`
+- **`en` 公開URL（例）**: `https://bouon-lab.com/en/japan-quiet-spaces/unit-booths/post-slug/`（末尾スラッシュ）
+- フォルダ階層の正本は **`src/content/README-content.md`**。
+
+## スラッグ・フォルダ名
+
+- カテゴリパスに `soundproof-room` などトピックが含まれる場合、**同じ意味を記事 `slug` に繰り返さない**（例: `soundproof-` の冗長プレフィックスは避ける）。
+- **フォルダ名・スラッグは省略・略語にしない**。意味がずれるため、意図が伝わる語を使う。
+- **スラッグはトピックが伝わる程度**でよい。キーワードの過剰積み上げより明確さを優先。
+
+## frontmatter とパスの整合
+
+- `lang` / `category` / `subcategory` は **ディレクトリ構造と一致**させる。
+- `category`（メイン）と `subcategory`（サブ）は **両方設定**し、パンくずと情報設計に使う。
+- カテゴリの表示名は言語別に出し分ける（`en` のトップカテゴリは `Noise & Society in Japan` など **Japan lens 用ラベル**。実装は `src/data/contentCategories.ts`）。
+- `tags` は **1〜7個**に制限する（関連導線の精度維持のため）。
+- 内部リンクは **`/{lang}/.../末尾スラッシュ/`**（例: `/ja/soundproof-room/solution/post-slug/`、`/en/japan-quiet-spaces/unit-booths/post-slug/`）。
+
+詳細のライティング記法・コンポーネントはリポジトリ直下の **`CLAUDE.md`** を参照。

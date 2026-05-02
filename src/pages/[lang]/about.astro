@@ -89,10 +89,32 @@ const t = content[lang as keyof typeof content];
 
             <aside class="identity-card">
                 <div class="card-content">
-                    <h4>運営方針とステートメント</h4>
+                    <div class="author-row">
+                        <svg class="author-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <span class="author-name">さしし</span>
+                        <div class="author-links">
+                            <a href="https://x.com/sasisi344" target="_blank" rel="noopener noreferrer" class="author-link">
+                                <svg class="x-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                                @sasisi344
+                            </a>
+                            <span class="author-sep">·</span>
+                            <a href="https://4thavenue.info" target="_blank" rel="noopener noreferrer" class="author-link">4thavenue.info</a>
+                        </div>
+                    </div>
+                    <h4>このサイトについて</h4>
                     <p>
-                        私は、防音の専門家（管理人）として、中立的かつ高度に専門的な情報を発信することをお約束いたします。
-                        単なる商品の紹介に留まらず、ユーザーの皆様が「賢い投資」を行えるよう、法的・金融的・科学的なあらゆる角度からサポートいたします。
+                        私は防音の専門家ではありませんが、防音・音響に関する知識を持ち、徹底したリサーチを得意としています。そのような背景から、このサイトを立ち上げました。
+                    </p>
+                    <p>
+                        現代の日本では、人口が減少しているにもかかわらず住宅の密集化は進んでおり、騒音に関するお悩みを抱える方が非常に多くいらっしゃいます。騒音問題は睡眠の質を大きく左右するだけでなく、在宅ワークのパフォーマンスにも影響します。また、ボイスチャットや電話で気軽に友人と話すことさえ、周囲への気遣いから難しくなっている方も少なくないと思います。
+                    </p>
+                    <p>
+                        こうした問題を少しでも解決するための、正確で実践的な情報をお届けすること——それが防音Labの使命だと考えています。
                     </p>
                 </div>
             </aside>
@@ -217,6 +239,61 @@ const t = content[lang as keyof typeof content];
         background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(20, 20, 20, 0) 100%);
         border-left: 4px solid var(--primary-gold);
         border-radius: 0 12px 12px 0;
+    }
+
+    .author-row {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.75rem;
+    }
+
+    .author-icon {
+        width: 26px;
+        height: 26px;
+        color: var(--primary-gold);
+        flex-shrink: 0;
+    }
+
+    .author-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: 0.05em;
+    }
+
+    .author-links {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-left: 0.25rem;
+    }
+
+    .author-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .author-link:hover {
+        color: var(--primary-gold);
+    }
+
+    .x-icon {
+        width: 13px;
+        height: 13px;
+        flex-shrink: 0;
+    }
+
+    .author-sep {
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        opacity: 0.4;
     }
 
     .identity-card h4 {

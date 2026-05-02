@@ -1,0 +1,41 @@
+---
+description: BouonLab記事制作の統合ルール（旧bouon-writer系を統合）
+alwaysApply: true
+---
+
+# BouonLab Writing Master
+
+## 基本方針
+
+- 記事の起点は常に `ja`。
+- **`ja` 文体**: 敬体（です・ます調）。1文は60文字以内を目安にする。
+- **`en` 文体**: 明瞭な英語。読者は「日本の実情を知りたい国際読者」前提。**直訳・ja の章立てコピーは禁止**。結論と読み手の疑問（Why should I care if I’m not in Japan?）を先に述べる。
+- 薄い説明を禁止し、「なぜ」「どう行動するか」（または文化記事では **「何が違うか」「誤解しやすい点」**）まで書き切る。
+
+## frontmatter運用
+
+- `lang` / `category` / `subcategory` はディレクトリ構造と一致させる。
+- `category` と `subcategory` は原則セットで設定する（パンくず・導線設計に利用）。
+- `tags` は 1〜7個。関連導線はタグを主軸にしつつ、カテゴリ階層を補助的に使う。
+
+### カバー画像（個別・カテゴリ共通）
+
+- **個別カバー**: `image` は `./cover.png` を標準とする。**`image` 行を書くときは**、そのパスに **実ファイルがあること** を確認する。存在しないパスを書くと Content Collections の `image()` 解決で **ビルドが失敗** しうる。
+- **カテゴリ共通カバー（フォールバック）**: `image` を **省略** した記事は、表示・OG 画像とも **`src/data/categoryDefaultCover.ts`** の `resolvePostCover` により、トップカテゴリ（`category`）に対応する **`src/assets/images/category-default/{カテゴリキー}.png`** が使われる（`soundproof-room` / `soundproof-rental` / `column`、および `en` の `japan-*` 各種）。未対応カテゴリは `report-common-cover.png` にフォールバック。
+- **共通画の差し替え** は `category-default/` 内の該当 PNG を置き換える（記事フォルダごとに `cover.png` を増やさない運用にできる）。
+- **ビルド時に記事フォルダへ `cover.png` を自動生成・書き込み** は、プリビルドスクリプトでは可能だが **リポジトリが汚れやすく CI とローカルの差分も出やすい**。運用上は **`image` を省略して共通フォールバックに任せる**か、画像を置いた **後に** `image: ./cover.png` を書くことを推奨する。
+
+## 記法ルール
+
+- 強調は `<strong>text</strong>` のみ。`**text**` は使用しない。
+- リストラベルは `- <strong>ラベル</strong> : 説明` を徹底する。
+- MDX 内のローカル `import` は禁止。グローバル登録コンポーネントを直接使う。
+- 内部リンクは `/{lang}/.../` の絶対パスかつ末尾スラッシュ必須。
+
+## 英語記事（`en`）の追加ルール — Japan lens
+
+- **配置**: `src/content/en/` は **`japan-noise-and-society` / `japan-soundproof-housing` / `japan-quiet-spaces`** のみをトップカテゴリとする（`ja` と同じ `soundproof-room` 等に置かない）。
+- **目的**: 仕様表の羅列より **社会・住宅・市場・クリエイター文化**としての文脈を先に渡す。数値・用語（例: D値）は「日本でそう呼ばれる」「海外との違い」をセットで書く。
+- タイトルと導入は Answer-First。想定クエリは *soundproof Japan* / *Japanese apartment noise* / *rental musician Tokyo* など **日本＋文脈**寄り。
+- 見出しは「比較」「誤解」「日本ならでは」のどれかが分かる疑問形・対比形を優先する。
+- **内部リンク**: 同一記事の `ja` 版がある場合でも、本文は **en 読者向けに自立**させる（「日本語版で手順全文」への依存を避ける）。

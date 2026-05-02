@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**BouonLab（防音Lab）** は防音・遮音分野のE-E-A-T権威を目指すAstro 6製日本語ブログ。`https://bouon-lab.com/` で公開。コンテンツ戦略は `GEMINI.md` を参照。
+**BouonLab（防音Lab）** は防音・遮音分野のE-E-A-T権威を目指すAstro 6製ブログ。`https://bouon-lab.com/` で公開。**記事の主軸は常に日本語（`ja`）**。コンテンツ戦略は `GEMINI.md` を参照。
 
 ## Commands
 
@@ -21,23 +21,27 @@ npx astro check # 型チェック
 
 全コンテンツは `src/pages/[lang]/[category]/[...slug].astro` 1ファイルで処理。
 
-- URL構造: `/{lang}/{collection}/{slug}/`
-- `lang` はファイルパスではなく **frontmatterの `lang` フィールド** から取得
-- `slug` はファイルパスから `/{lang}/` と `/index` を除去したもの
+- **公開URL（パーマリンク）例**: `https://bouon-lab.com/ja/soundproof-room/solution/post-slug/`（末尾スラッシュ）
+- **ファイル配置例**: `src/content/ja/soundproof-room/solution/post-slug/index.mdx`
+- URLの `lang`・カテゴリ階層は **ディレクトリ構造と frontmatter（`lang` / `category` / `subcategory`）を一致**させる
+- 階層の全体像は **`src/content/README-content.md`** を正とする
+
+### コンテンツ配置と多言語
+
+- **主言語**: すべての企画・更新の起点は **`ja` 記事**。英語版は後追いでもよいが、**原稿は日本語を先に固定**する。
+- **英語記事（`en`）**: **`ja` と同じトップカテゴリ階層は使わない**。`japan-noise-and-society` / `japan-soundproof-housing` / `japan-quiet-spaces` の **Japan lens** で、日本の社会・住宅・市場・文化として防音を説明する（翻訳量産より文脈の再構成）。詳細は `src/content/README-content.md` と `.cursor/rules/bouon-writing-master.mdc`。
+
+### スラッグ・フォルダ名のルール
+
+- **カテゴリ語の重複禁止**: パスに `soundproof-room` などトピックが既に含まれる場合、**同じ意味を `slug` に繰り返し入れない**（例: `soundproof-room` 配下で `soundproof-...` といった冗長スラッグは避ける）。
+- **省略しない**: フォルダ名・スラッグは**略語にしない**。意味が変わるため、意図が伝わる語を使う。
+- **スラッグの長さ**: SEO用のキーワード詰め込みより、**トピックが一意に伝わる程度**でよい。
 
 ### Content Collections
 
-`src/content.config.ts` で定義。全コレクションが共通の `baseSchema` を使用。
+`src/content.config.ts` のローダー・スキーマ定義を参照。エントリは共通の `baseSchema`（`lang` / `category` / `subcategory` 等）に従う。
 
-| Collection  | ディレクトリ             | ターゲット読者                      |
-| ----------- | ------------------------ | ----------------------------------- |
-| `knowledge` | `src/content/knowledge/` | 一般ユーザー（Myth Busterスタイル） |
-| `solutions` | `src/content/solutions/` | 投資家・オーナー・プロユーザー      |
-| `use-case`  | `src/content/use-case/`  | シナリオ別ガイド                    |
-| `company`   | `src/content/company/`   | メーカー・ブランド分析              |
-| `column`    | `src/content/column/`    | コラム全般                          |
-
-コンテンツファイルの配置: `src/content/{collection}/{lang}/{slug}/index.mdx`
+**物理パスは言語ファースト**: `src/content/{lang}/{カテゴリ系}/{サブ区分}/{記事スラッグ}/index.mdx`（詳細ツリーは `src/content/README-content.md`）。
 
 ### Frontmatter テンプレート
 
@@ -49,12 +53,16 @@ slug: "unique-slug"
 date: "YYYY-MM-DD"
 lastmod: "YYYY-MM-DD"
 draft: false # true=非公開, false=公開
-lang: "ja" # ja | en | zh | ko
-category: "knowledge" # コレクション名と一致させる
-tags: ["タグ1", "タグ2"] # 1-10個
+lang: "ja" # ja | en | zh | ko（主軸は ja）
+category: "soundproof-room" # ディレクトリのカテゴリ段と一致
+subcategory: "solution" # サブ区分フォルダと一致（パンくずにも使用）
+tags: ["タグ1", "タグ2"] # 1-7個
 image: ./cover.png # クォートなし・エスケープなし
 ---
 ```
+
+- `category` と `subcategory` は原則セットで運用し、URL階層・パンくず・内部導線の一貫性を保つ。
+- カテゴリの表示ラベルは言語別に出し分ける（`en` トップカテゴリのラベルは `src/data/contentCategories.ts` の `TOP_CATEGORY_LABELS`）。
 
 ### MDX コンポーネント
 
@@ -64,7 +72,7 @@ image: ./cover.png # クォートなし・エスケープなし
 <RegionBanner />
 <AffiliateCard />
 <CtaBox />
-<SmartLink href="/ja/solutions/slug/" />
+<SmartLink href="/ja/soundproof-room/solution/post-slug/" />
 <AssetValueTable />
 <ArchiveCarousel />
 <MultiplexAd />
@@ -79,30 +87,24 @@ image: ./cover.png # クォートなし・エスケープなし
 
 ---
 
-## エージェント体系
+## Cursorルール体系
 
 タスクに応じて適切なエージェントルールを参照すること。
 
-### エージェント一覧と用途
+### ルール一覧と用途
 
-| エージェントファイル                 | 役割                         | いつ使うか                                        |
-| ------------------------------------ | ---------------------------- | ------------------------------------------------- |
-| `.agents/bouon-writer.md`            | **ライティング統括（必読）** | 新規記事・既存記事の編集、全コンテンツ作業の基本  |
-| `.agents/bouon-writer-en.md`         | 英語記事ライティング         | `lang: "en"` の記事作成時                         |
-| `.agents/content-strategist.md`      | コンテンツ戦略・リライト計画 | サイト改善提案、GSCデータ分析、月次サイクル管理   |
-| `.agents/re-writting-rules.md`       | リライト実行ルール           | 既存記事の品質改善、CTR向上、レガシー記事の近代化 |
-| `.agents/affiliates-writter.md`      | アフィリエイト・クロージング | 防音室・防音賃貸の高単価コンテンツ、CTA設計       |
-| `.agents/image-generation.md`        | 画像生成ワークフロー         | カバー画像・記事内画像の生成                      |
-| `.agents/instagram-marketer.md`      | Instagram投稿コンテンツ作成  | 記事のInstagramプロモーション                     |
-| `.agents/visual-content-designer.md` | ビジュアルコンテンツ設計     | インフォグラフィック、図解の設計                  |
+| ルールファイル                                  | 役割                         | いつ使うか                                      |
+| ----------------------------------------------- | ---------------------------- | ----------------------------------------------- |
+| `.cursor/rules/bouon-content-categories.mdc`    | カテゴリ・階層・パーマリンク（`en` は Japan lens 階層） | 記事の配置、slug設計、frontmatter整合を確認するとき |
+| `.cursor/rules/bouon-writing-master.mdc`        | **ライティング統括（必読）** | 新規記事・既存記事編集、日英の文体・記法統一        |
+| `.cursor/rules/bouon-rewrite-strategy.mdc`      | リライト戦略・実行基準       | 既存記事の改善、CTR改善、レガシー更新              |
+| `.cursor/rules/bouon-growth-ops.mdc`            | 収益導線・ビジュアル・SNS    | 高単価導線設計、図解設計、Instagram運用            |
 
 ### ペルソナ体系
 
 記事のターゲットや語り口を設計するときに参照:
 
-- `.agents/persona/00_Persona-Omega.md` — **編集長視点**。全記事の最終チェッカー（誇大広告排除・物理法則遵守・二次リスク提示）
-- `.agents/persona/01_Consumer-Personas.md` — 消費者ペルソナA〜G（楽器演奏者・配信者・テレワーク等）
-- `.agents/persona/02_Supplier-Personas.md` — サプライヤーペルソナH〜L
+- ペルソナ運用は `.cursor/rules/bouon-writing-master.mdc` の基準に統合し、誇大表現排除・物理法則遵守・二次リスク提示を常時適用する。
 
 ---
 
@@ -115,25 +117,27 @@ image: ./cover.png # クォートなし・エスケープなし
 3. `/publish-draft {ファイル名}` で本番記事を生成
 4. **生成完了後、使用した `_draft/` ファイルを削除する**（管理コストを増やさない）
 
+**ドラフト内の `> [!forAI]` ブロック**: 清書・本番投稿時は、本文にそのブロックがある場合 **最優先で参照**する。カテゴリ・想定読者・主張・見出し構成・トーンをそこに合わせて反映する。**本番記事には `> [!forAI]` ブロックそのものは載せない**（執筆用注記として削除する）。
+
 ### 新規記事を作成するとき
 
 1. `GEMINI.md` でカテゴリ戦略を確認
-2. `.agents/bouon-writer.md` を読む（ライティングルールの基本）
-3. 英語記事の場合は `.agents/bouon-writer-en.md` も読む
+2. `.cursor/rules/bouon-writing-master.mdc` を確認（ライティングルールの基本）
+3. 英語記事の場合は Answer-First ルールを同ファイルで適用
 4. ターゲットペルソナを `01_Consumer-Personas.md` で確認
-5. `src/content/{collection}/{lang}/{slug}/` ディレクトリを作成
+5. `src/content/{lang}/{カテゴリ}/{サブ区分}/{slug}/` ディレクトリを作成（詳細は `src/content/README-content.md`）
 6. 画像が必要なら画像生成スクリプトを実行してから frontmatter を書く
 
 ### 既存記事をリライトするとき
 
-1. `.agents/content-strategist.md` でリライト戦略・優先度を確認
-2. `.agents/re-writting-rules.md` で実行手順を確認
+1. `.cursor/rules/bouon-rewrite-strategy.mdc` で戦略・優先度を確認
+2. 同ルールの実行手順に沿って改稿する
 3. ターゲット記事を読み、ペルソナΩフィルターを適用
 4. **URLスラッグは変更しない**（既存SEO評価を保護）
 
 ### アフィリエイト・高単価記事のとき
 
-`.agents/affiliates-writter.md` を読んでROI/PASONA/QUESTロジックを適用:
+`.cursor/rules/bouon-growth-ops.mdc` を参照し、ROI/PASONA/QUESTロジックを適用:
 
 - 防音賃貸: PASONA（痛みの解決）を最大適用
 - 防音室（ユニット）: QUEST（冒険型）を最大適用
@@ -145,7 +149,7 @@ image: ./cover.png # クォートなし・エスケープなし
 
 - **強調**: `<strong>text</strong>` を使う — `**text**` は絶対禁止
 - **リストラベル**: `- <strong>ラベル</strong> : 説明文`（コロン前後にスペース）
-- **内部リンク（日本語）**: `[テキスト](/ja/collection/slug/)` — 末尾スラッシュ必須
+- **内部リンク（日本語）**: `[テキスト](/ja/{カテゴリ}/{サブ区分}/{slug}/)` — 末尾スラッシュ必須（例: `/ja/soundproof-room/solution/post-slug/`）
 - **内部リンク（英語）**: `/en/` プレフィックスを使う
 - **文体**: 敬体（です・ます調）、1文60文字以内
 - **H2/H3の番号付け禁止**: 「1.」「2.」等の手動番号を見出しに使わない
@@ -156,14 +160,14 @@ image: ./cover.png # クォートなし・エスケープなし
 
 ```bash
 # 基本実行
-node .agents/scripts/generate-image.js "YOUR_PROMPT_HERE" "./cover.png"
+node .workspace/scripts/generate-image.js "YOUR_PROMPT_HERE" "./cover.png"
 
 # プリセット使用（推奨）
-node .agents/scripts/generate-image.js --preset cover "防音室のある静かなリビング" "./cover.png"
-node .agents/scripts/generate-image.js --preset content "吸音パネルの断面図" "./infographic.png"
+node .workspace/scripts/generate-image.js --preset cover "防音室のある静かなリビング" "./cover.png"
+node .workspace/scripts/generate-image.js --preset content "吸音パネルの断面図" "./infographic.png"
 
 # プリセット一覧確認
-node .agents/scripts/generate-image.js --list-presets
+node .workspace/scripts/generate-image.js --list-presets
 ```
 
 | プリセット    | 用途               | アスペクト比 |
@@ -176,13 +180,13 @@ node .agents/scripts/generate-image.js --list-presets
 
 - プロンプトは**英語**で書く（生成精度向上のため）
 - 画像内テキストが必要な場合は**日本語**で指定
-- API Key: `GEMINI_API_KEY` を `.agents/scripts/.env` に設定
+- API Key: `GEMINI_API_KEY` を `.workspace/scripts/.env` に設定
 
 ---
 
 ## Instagram投稿フロー
 
-`.agents/instagram-marketer.md` を参照。作成後は必ず追跡ファイルを更新:
+`.cursor/rules/bouon-growth-ops.mdc` を参照。作成後は必ず追跡ファイルを更新:
 
 - Feed投稿: `.agents/instagram-posts/feed-post/{slug}-feed.md`
 - Stories: `.agents/instagram-posts/stories-post/{slug}-stories.md`
@@ -192,6 +196,8 @@ node .agents/scripts/generate-image.js --list-presets
 
 ## 主要ファイル参照先
 
+- `src/data/contentCategories.ts` — `ja` / `en` のトップカテゴリ一覧とナビ・一覧用ラベル（`en` は Japan lens の3カテゴリ）
+- `.workspace/.data-set/interlink-postlist.md` — 内部リンク整理用の記事一覧（`title` / URL用`slug` / `tags` / `category` 等）。更新は `node .workspace/scripts/build-interlink-postlist.mjs`
 - `src/data/affiliates.ts` — アフィリエイトリンクデータ
 - `.workspace/strategies/` — コンテンツ計画・リライトスケジュール
 - `.workspace/.data-set/` — 防音スペック・市場データ・企業DB（アーカイブ）

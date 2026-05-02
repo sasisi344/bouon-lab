@@ -34,6 +34,12 @@
 - **`company` (市場誘導)**:
     - 特定メーカー（ヤマハ、カワイ等）やブランド（ミュージション等）の資産価値を客観データで評価。
 
+## 4. 英語（`en`）— Japan lens 方針（2026-05 〜）
+
+- **目的**: 日本の防音・静寂・集合住宅文化を**国際読者向けに説明**する。汎用の「英訳ハウツー」やローカル言語版の量産は優先しない。
+- **URL・フォルダ**: `ja` の `soundproof-room` / `soundproof-rental` / `column` とは別系統。`japan-noise-and-society` / `japan-soundproof-housing` / `japan-quiet-spaces` の3トップと、その下のサブ区分（`README-content.md` 正本）。
+- **執筆**: Answer-First。数値・用語は必ず**日本文脈と海外との差**をセットで書く。`ja` 記事がある場合も、本文は `en` 読者で完結させる。
+
 ---
 **運用開始日**: 2026年4月4日
 **更新責任者**: @344dev (Antigravity Integration)

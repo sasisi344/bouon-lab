@@ -1,48 +1,80 @@
-﻿# BouonLab - Scientific Soundproof Knowledge Base
+# BouonLab — Japan Soundproofing Knowledge Base
 
-Comprehensive knowledge base for soundproofing, acoustics, and noise dispute management. Optimized for both human researchers and AI crawlers.
+Practical knowledge base on soundproofing, acoustic treatment, and noise solutions for homes and rentals in Japan. Covers both technical/DIY content and market/financial perspectives. Optimized for AI crawlers and human researchers.
 
-Last updated: 2026-04-23
+Last updated: 2026-05-02
 
 ## Primary Locales
 
-- Japanese (ja): https://bouon-lab.com/ja/
-- English (en): https://bouon-lab.com/en/
+- Japanese (ja): https://bouon-lab.com/ja/ — primary content axis; all topics originate here
+- English (en): https://bouon-lab.com/en/ — Japan-lens reframe for international readers
+
+---
 
 ## Main Directories (Japanese)
 
-- Solutions: https://bouon-lab.com/ja/solutions/ (technical and financial solutions, including unit rooms, DIY, and rentals)
-- Use-Case: https://bouon-lab.com/ja/use-case/ (practical scenarios for streamers, musicians, families, and remote workers)
-- Knowledge: https://bouon-lab.com/ja/knowledge/ (acoustics fundamentals, regulation updates, and market context)
-- About: https://bouon-lab.com/ja/about/
-- Privacy Policy: https://bouon-lab.com/ja/privacy/
+### Soundproof Room (`soundproof-room`)
+Unit rooms, DIY builds, acoustic fundamentals, and investment/asset perspective.
 
-## Main Directories (English)
+- Solution: https://bouon-lab.com/ja/soundproof-room/solution/
+- DIY: https://bouon-lab.com/ja/soundproof-room/diy/
+- Knowledge: https://bouon-lab.com/ja/soundproof-room/knowledge/
+- Others: https://bouon-lab.com/ja/soundproof-room/others/
 
-- Solutions: https://bouon-lab.com/en/solutions/
-- Use-Case: https://bouon-lab.com/en/use-case/
-- Knowledge: https://bouon-lab.com/en/knowledge/
-- About: https://bouon-lab.com/en/about/
-- Privacy Policy: https://bouon-lab.com/en/privacy/
+### Soundproof Rental (`soundproof-rental`)
+Music-friendly apartments, noise complaint handling, renovation ROI for landlords.
+
+- Solution: https://bouon-lab.com/ja/soundproof-rental/solution/
+- DIY: https://bouon-lab.com/ja/soundproof-rental/diy/
+- Knowledge: https://bouon-lab.com/ja/soundproof-rental/knowledge/
+- Others: https://bouon-lab.com/ja/soundproof-rental/others/
+
+### Column (`column`)
+Market trends, company analysis, and lifestyle/culture articles.
+
+- Company: https://bouon-lab.com/ja/column/company/
+- News: https://bouon-lab.com/ja/column/news/
+- Others: https://bouon-lab.com/ja/column/others/
+
+---
+
+## Main Directories (English — Japan Lens)
+
+English content reframes Japanese soundproofing through cultural, social, and market context.
+
+- Noise & Society in Japan: https://bouon-lab.com/en/japan-noise-and-society/
+- Soundproof Housing in Japan: https://bouon-lab.com/en/japan-soundproof-housing/
+- Quiet Spaces & Booths in Japan: https://bouon-lab.com/en/japan-quiet-spaces/
+
+---
 
 ## Pillar Articles (Japanese)
 
-- [High] Soundproof Room Comparison 2026: https://bouon-lab.com/ja/solutions/bouon-osusume-hikaku/
-- [High] Osaka Soundproof Rental Guide: https://bouon-lab.com/ja/solutions/osaka-soundproof-rental-guide/
-- [High] Noise Complaint Manual: https://bouon-lab.com/ja/use-case/noise-complaint-landlord-negotiation-guide/
-- [High] Soundproof Room Buyback Guide: https://bouon-lab.com/ja/solutions/soundproof-room-buyback-guide/
+- [Comprehensive] Soundproof Room Comparison 2026 (ROI + resale analysis): https://bouon-lab.com/ja/soundproof-room/others/bouon-osusume-hikaku/
+- [Comprehensive] Soundproof Rental Complete Guide 2026: https://bouon-lab.com/ja/soundproof-rental/knowledge/bouon-rental-market-guide/
+- [High] MUSISION Comprehensive Guide: https://bouon-lab.com/ja/soundproof-rental/knowledge/musision-comprehensive-guide/
+- [High] Soundproof Room Price Market 2026: https://bouon-lab.com/ja/soundproof-room/others/soundproof-room-price-market/
+- [High] Noise Complaint 3-Phase Manual: https://bouon-lab.com/ja/soundproof-rental/solution/noise-complaint-landlord-negotiation-guide/
+- [High] Soundproof Room Buyback Guide 2026: https://bouon-lab.com/ja/soundproof-room/others/soundproof-room-buyback-guide/
+- [High] Osaka Soundproof Rental Guide: https://bouon-lab.com/ja/soundproof-rental/others/osaka-soundproof-rental-guide/
+- [High] Streamer/VTuber Soundproof Environment Complete Guide: https://bouon-lab.com/ja/soundproof-rental/solution/streamer-soundproof-room-comprehensive-guide/
+- [High] Tokyo Soundproof Rental Summary 2026: https://bouon-lab.com/ja/soundproof-rental/others/tokyo-soundproof-rental-summary/
+- [High] D-value Truth and Myths (spec sheet traps): https://bouon-lab.com/ja/soundproof-room/knowledge/d-value-truth-and-myths/
 
-## Pillar Articles (English)
+---
 
-- [High] Soundproof Room Comparison 2026: https://bouon-lab.com/en/solutions/bouon-osusume-hikaku/
-- [High] Osaka Soundproof Rental Guide: https://bouon-lab.com/en/solutions/osaka-soundproof-rental-guide/
-- [High] Noise Complaint Manual: https://bouon-lab.com/en/use-case/noise-complaint-landlord-negotiation-guide/
-- [High] Soundproof Room Buyback Guide: https://bouon-lab.com/en/knowledge/soundproof-room-buyback-guide/
+## Sitemap
+
+https://bouon-lab.com/sitemap-index.xml
+
+---
 
 ## Technical Foundation
 
-- Architecture: Astro v6+ with MDX content workflow
-- Internationalization: Locale routing for `/ja/` and `/en/`
-- Navigation: Hierarchical category and breadcrumb-friendly URL structure
-- Metadata: Structured frontmatter (`slug`, `category`, `lang`, `date`, `lastmod`)
-- Taxonomy: `knowledge`, `solutions`, `use-case`, `company`, `column`
+- Architecture: Astro v6+ with MDX content collections
+- Internationalization: `/ja/` (primary) and `/en/` (Japan-lens)
+- URL structure: `/{lang}/{category}/{subcategory}/{slug}/` (trailing slash required)
+- Frontmatter keys: `slug`, `category`, `subcategory`, `lang`, `date`, `lastmod`, `draft`
+- Taxonomy (ja): `soundproof-room` / `soundproof-rental` / `column`
+- Taxonomy (en): `japan-noise-and-society` / `japan-soundproof-housing` / `japan-quiet-spaces`
+- Draft articles (`draft: true`) are excluded from build and sitemap

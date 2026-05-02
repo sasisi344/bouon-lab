@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { resolvePostSlugSegment } from '../utils/resolvePostSlugSegment';
 
 interface Props {
   slug: string;
@@ -8,15 +9,9 @@ interface Props {
 
 const { slug, className } = Astro.props;
 
-// 全記事から対象のslug（ディレクトリ名またはファイル名ベース）を探す
-const knowledge = await getCollection('knowledge');
-const solutions = await getCollection('solutions');
-const useCase = await getCollection('use-case');
-const company = await getCollection('company');
-const column = await getCollection('column');
-
-const allPosts = [...knowledge, ...solutions, ...useCase, ...company, ...column]
-  .filter(post => post.data.draft !== true);
+// 全記事から対象のslug（frontmatter slug優先、次点でid末尾）を探す
+const allPosts = (await getCollection('posts'))
+  .filter((post) => post.data.draft !== true);
 
 // MDXから現在の言語を取得（propsとして渡す運用にするのが確実）
 // もしくは全記事から「指定したスラッグ かつ 現在のURLに含まれる言語」を優先して探す
@@ -24,28 +19,20 @@ const currentPath = Astro.url.pathname;
 const currentLang = currentPath.startsWith('/en') ? 'en' : 'ja';
 
 const post = allPosts.find((p) => {
-  const parts = p.id.split('/');
   const lang = p.data.lang || 'ja';
-  const slugSegment = parts.find(part => part === slug);
-  
-  // スラッグが一致し、かつ現在の表示言語と同じ記事を優先
-  return slugSegment !== undefined && lang === currentLang;
+  const preferredSlug = p.data.slug?.trim();
+  const idTail = p.id.split('/').pop();
+  const isSlugMatch = preferredSlug === slug || idTail === slug;
+  return isSlugMatch && lang === currentLang;
 });
 
 // 多言語対応パスの解決: /[lang]/[collection]/[slug]/
 let url = '#';
 if (post) {
     const lang = post.data.lang || 'ja';
-    const category = post.collection;
-    const preferredSlug = post.data.slug?.trim();
-    if (preferredSlug) {
-      url = `/${lang}/${category}/${preferredSlug}/`;
-    } else {
-      const parts = post.id.split('/');
-      const slugParts = parts.filter(p => p !== lang && p !== 'index' && !p.endsWith('.mdx'));
-      const finalSlug = slugParts.join('/');
-      url = `/${lang}/${category}/${finalSlug}/`;
-    }
+    const category = post.data.category;
+    const segment = resolvePostSlugSegment(post);
+    url = segment ? `/${lang}/${category}/${segment}/` : '#';
 }
 
 if (!post && slug !== "index" && slug !== "") {

@@ -51,7 +51,9 @@ description: _draft/ の下書きをボリューム指定（small/medium/high-qu
 
 ## Step 2. ドラフト読み込みとメタ情報抽出
 
-ドラフトを読み込み、以下を判断する。
+ドラフトを読み込み、**`> [!forAI]` ブロックがある場合は最優先で参照**し、カテゴリ・読者・主張・構成・トーンをそこに合わせる。本番記事には **`> [!forAI]` ブロックを載せない**（削除する）。
+
+以下を判断する。
 
 | 判断項目      | 確認方法                                                                                               |
 | ------------- | ------------------------------------------------------------------------------------------------------ |
@@ -89,7 +91,7 @@ description: _draft/ の下書きをボリューム指定（small/medium/high-qu
 - テーブルのヘッダー行セルに `<strong>` を使わない（本文セルのみ使用）
 - 数値推定値には「目安」「概算」を明記する
 - 税務・法務・医療の内容には「専門家に確認を」の免責を入れる
-- ドラフトの執筆用注記（「本番公開前に〜」等）は削除する
+- ドラフトの執筆用注記（「本番公開前に〜」等）、**`> [!forAI]` ブロック**は削除する（ただし清書時は [!forAI] を最優先で内容に反映済みであること）
 
 ---
 
@@ -273,7 +275,7 @@ image: ./cover.png
 記事の `description` と主要テーマから英語プロンプトを生成し、スクリプトを実行する。
 
 ```bash
-node .agents/scripts/generate-image.js --preset cover "英語プロンプト" "src/content/{category}/{lang}/{slug}/cover.png"
+node .workspace/scripts/generate-image.js --preset cover "英語プロンプト" "src/content/{category}/{lang}/{slug}/cover.png"
 ```
 
 **プロンプト生成ルール**:
@@ -335,7 +337,7 @@ rm "_draft/{元ファイル名}"
 ### 次のステップ
 - `pnpm build` でビルドエラーがないか確認
 - カバー画像が未生成の場合:
-  node .agents/scripts/generate-image.js --preset cover "..." "src/content/{category}/ja/{slug}/cover.png"
+  node .workspace/scripts/generate-image.js --preset cover "..." "src/content/{category}/ja/{slug}/cover.png"
 ```
 
 ---

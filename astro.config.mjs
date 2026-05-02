@@ -6,7 +6,32 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://bouon-lab.com',
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      serialize(item) {
+        const url = item.url;
+        // Top-level lang pages: /ja/, /en/
+        if (/\/(?:ja|en)\/$/.test(url)) {
+          item.priority = 1.0;
+          item.changefreq = 'weekly';
+        // Category index pages: /ja/soundproof-room/, /en/japan-quiet-spaces/, etc.
+        } else if (/\/(?:ja|en)\/[^/]+\/$/.test(url)) {
+          item.priority = 0.8;
+          item.changefreq = 'weekly';
+        // Subcategory index pages
+        } else if (/\/(?:ja|en)\/[^/]+\/[^/]+\/$/.test(url)) {
+          item.priority = 0.7;
+          item.changefreq = 'monthly';
+        // Individual articles
+        } else {
+          item.priority = 0.6;
+          item.changefreq = 'monthly';
+        }
+        return item;
+      },
+    }),
+  ],
   redirects: {
     '/': { destination: '/ja/', status: 308 },
 

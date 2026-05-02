@@ -1,23 +1,14 @@
 import { getCollection } from 'astro:content';
+import { resolvePostSlugSegment } from '../../utils/resolvePostSlugSegment';
 
 export async function GET() {
-  const knowledge = await getCollection('knowledge');
-  const solutions = await getCollection('solutions');
-  const useCase = await getCollection('use-case');
-  const company = await getCollection('company');
-  const column = await getCollection('column');
-
-  const allPosts = [...knowledge, ...solutions, ...useCase, ...company, ...column]
-    .filter(post => post.data.draft !== true);
+  const allPosts = (await getCollection('posts'))
+    .filter((post) => post.data.draft !== true);
 
   const searchIndex = allPosts.map(post => {
     const lang = post.data.lang || 'ja';
-    const category = post.collection;
-    const preferredSlug = post.data.slug?.trim();
-    const parts = post.id.split('/');
-    const slugParts = parts.filter(p => p !== lang && p !== 'index');
-    const fallbackSlug = slugParts.join('/');
-    const slug = preferredSlug || fallbackSlug;
+    const category = post.data.category;
+    const slug = resolvePostSlugSegment(post) ?? '';
     const url = slug ? `/${lang}/${category}/${slug}/` : `/${lang}/${category}/`;
 
     return {
@@ -25,7 +16,7 @@ export async function GET() {
       description: post.data.description,
       url: url,
       lang: lang,
-      category: category.toUpperCase(),
+      category: [post.data.category, post.data.subcategory].filter(Boolean).join(' / '),
       tags: post.data.tags || []
     };
   });

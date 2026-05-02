@@ -4,6 +4,12 @@ import { Image, getImage } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import heroImage from '../../assets/images/hero-mocha.png';
 import { HUB_CLUSTERS } from '../../data/hubClusters';
+import {
+  topCategoriesForLang,
+  labelForCategory,
+} from '../../data/contentCategories';
+import { resolvePostCover } from '../../data/categoryDefaultCover';
+import { resolvePostSlugSegment } from '../../utils/resolvePostSlugSegment';
 
 export async function getStaticPaths() {
     return [
@@ -13,31 +19,26 @@ export async function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
+const uiLang: 'ja' | 'en' = lang === 'en' ? 'en' : 'ja';
 
-const knowledge = await getCollection('knowledge');
-const solutions = await getCollection('solutions');
-const useCase = await getCollection('use-case');
-const column = await getCollection('column');
-const company = await getCollection('company');
-
-const allContent = [...knowledge, ...solutions, ...useCase, ...column, ...company]
-  .filter(post => post.data.draft !== true);
+const allContent = (await getCollection('posts'))
+  .filter((post) => post.data.draft !== true);
 const filteredPosts = allContent.filter(p => p.data.lang === lang);
-const latestPosts = filteredPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 9);
+
+/** トップ「最新」一覧：最大50件・初期表示9件・もっと見るで9件ずつ追加（クライアント側スクリプトと同期） */
+const MAX_HOME_LATEST = 50;
+const HOME_INITIAL_VISIBLE = 9;
+
+const sortedByDate = filteredPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const latestPostsForHome = sortedByDate.slice(0, MAX_HOME_LATEST);
 
 function getSlug(post: any) {
-    const preferredSlug = post.data.slug?.trim();
-    if (preferredSlug) return preferredSlug;
-
-    const parts = post.id.split('/');
-    const lang = post.data.lang || 'ja';
-    const slugParts = parts.filter((p: string) => p !== lang && p !== 'index');
-    return slugParts.join('/');
+    return resolvePostSlugSegment(post) ?? '';
 }
 
 function getUrl(post: any) {
     const slug = getSlug(post);
-    const category = post.collection;
+    const category = post.data.category;
     const lang = post.data.lang || 'ja';
     return slug ? `/${lang}/${category}/${slug}/` : `/${lang}/${category}/`;
 }
@@ -49,8 +50,12 @@ const hubRoutes = HUB_CLUSTERS.map((cluster) => {
   });
 
   const sortedPool = pool.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  const categoryFallback =
+    lang === 'en' && cluster.categoryHintEn
+      ? cluster.categoryHintEn
+      : cluster.categoryHint;
   const fallbackPool = filteredPosts
-    .filter((post) => post.collection === cluster.categoryHint)
+    .filter((post) => post.data.category === categoryFallback)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   const firstPost = sortedPool[0] ?? fallbackPool[0];
 
@@ -63,6 +68,8 @@ const hubRoutes = HUB_CLUSTERS.map((cluster) => {
 
 // ヒーロー画像の最適化
 const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
+
+const directoryCategories = topCategoriesForLang(uiLang);
 ---
 
 <Layout title="BouonLab | 科学的防音ナレッジベース">
@@ -90,11 +97,26 @@ const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
             <small>{lang === 'ja' ? '蓄積された防音の知見にアクセス' : 'Access accumulated insights'}</small>
           </span>
         </a>
-        <a href={`/${lang}/solutions/`} class="btn secondary">
+        <a
+          href={
+            lang === 'ja'
+              ? `/${lang}/soundproof-room/`
+              : `/${lang}/japan-quiet-spaces/`
+          }
+          class="btn secondary"
+        >
           <span class="icon">🔍</span>
           <span class="text">
-            <strong>{lang === 'ja' ? '音の悩みを顕在化する' : 'Identify Your Needs'}</strong>
-            <small>{lang === 'ja' ? '診断アプリで解決策を特定' : 'Find your solution via app'}</small>
+            <strong>
+              {lang === 'ja'
+                ? '音の悩みを顕在化する'
+                : 'Japan: Rooms & Creators'}
+            </strong>
+            <small>
+              {lang === 'ja'
+                ? '診断アプリで解決策を特定'
+                : 'How booths and quiet spaces work here'}
+            </small>
           </span>
         </a>
       </div>
@@ -102,6 +124,56 @@ const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
   </section>
 
   <main class="container" id="knowledge">
+    <!-- 最新の知見（先頭表示・最大50件・もっと見る） -->
+    <section class="section section--latest">
+      <div class="section-header">
+        <h2 class="section-title">{lang === 'ja' ? '最新の研究成果' : 'Latest Research'}</h2>
+        <p class="section-desc">{lang === 'ja' ? '日々更新される防音の最新ナレッジ' : 'Continually updated acoustical insights'}</p>
+      </div>
+
+      <div class="posts-grid posts-grid--latest" id="latest-posts-grid">
+        {latestPostsForHome.map((post, index) => (
+          <article
+            class="post-card"
+            data-index={index}
+            style={index >= HOME_INITIAL_VISIBLE ? 'display: none;' : ''}
+          >
+            <div class="card-image-box">
+              <Image src={resolvePostCover(post)} alt={post.data.title} class="card-img" width={600} height={338} format="webp" />
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="category">{labelForCategory(post.data.category, uiLang)}</span>
+                <span class="date">{post.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
+              </div>
+              <h3 class="post-title">
+                <a href={getUrl(post)} class="link-text">
+                  {post.data.title}
+                </a>
+              </h3>
+              <p>{post.data.description}</p>
+              <div class="card-footer">
+                <a href={getUrl(post)} class="read-more">
+                  READ MORE →
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {latestPostsForHome.length > HOME_INITIAL_VISIBLE && (
+        <div class="load-more-container">
+          <button id="latest-load-more-btn" class="btn-load-more" type="button">
+            {lang === 'ja' ? 'もっと見る' : 'Show more'}
+            <span class="count-info">
+              (<span id="latest-current-count">{HOME_INITIAL_VISIBLE}</span> / {latestPostsForHome.length})
+            </span>
+          </button>
+        </div>
+      )}
+    </section>
+
     <section class="section">
       <div class="section-header">
         <h2 class="section-title">{lang === 'ja' ? '課題別ハブから読み進める' : 'Start from Persona Hubs'}</h2>
@@ -141,56 +213,54 @@ const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
       </div>
     </section>
 
-    <!-- 最新の知見セクション -->
-    <section class="section">
-      <div class="section-header">
-        <h2 class="section-title">{lang === 'ja' ? '最新の研究成果' : 'Latest Research'}</h2>
-        <p class="section-desc">{lang === 'ja' ? '日々更新される防音の最新ナレッジ' : 'Continually updated acoustical insights'}</p>
-      </div>
-
-      <div class="posts-grid">
-        {latestPosts.map((post) => (
-          <article class="post-card">
-            {post.data.image && (
-              <div class="card-image-box">
-                <Image src={post.data.image} alt={post.data.title} class="card-img" width={600} height={338} format="webp" />
-              </div>
-            )}
-            <div class="card-content">
-              <div class="card-meta">
-                <span class="category">{post.data.category.toUpperCase()}</span>
-                <span class="date">{post.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
-              </div>
-              <h3 class="post-title">
-                <a href={getUrl(post)} class="link-text">
-                  {post.data.title}
-                </a>
-              </h3>
-              <p>{post.data.description}</p>
-              <div class="card-footer">
-                 <a href={getUrl(post)} class="read-more">
-                   READ MORE →
-                 </a>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-
     <!-- カテゴリ・ナビゲーション -->
     <section class="section">
       <h2 class="section-title centered">{lang === 'ja' ? 'ナレッジ・ディレクトリ' : 'Knowledge Directory'}</h2>
       <div class="category-pills">
-        {['solutions', 'use-case', 'knowledge', 'column', 'company'].map(cat => (
+        {directoryCategories.map((cat) => (
           <a href={`/${lang}/${cat}/`} class="pill">
-            <span class="pill-name">{cat.toUpperCase()}</span>
-            <span class="pill-count">{filteredPosts.filter(p => p.collection === cat).length}</span>
+            <span class="pill-name">{labelForCategory(cat, uiLang)}</span>
+            <span class="pill-count">{filteredPosts.filter(p => p.data.category === cat).length}</span>
           </a>
         ))}
       </div>
     </section>
   </main>
+
+  <script is:inline>
+    function initLatestLoadMore() {
+      const btn = document.getElementById('latest-load-more-btn');
+      const grid = document.getElementById('latest-posts-grid');
+      if (!btn || !grid) return;
+
+      let currentVisible = 9;
+      const increment = 9;
+      const allCards = grid.querySelectorAll('.post-card');
+      const total = allCards.length;
+      const countDisplay = document.getElementById('latest-current-count');
+
+      btn.addEventListener('click', () => {
+        const nextCount = Math.min(currentVisible + increment, total);
+
+        allCards.forEach((card, index) => {
+          if (index < nextCount) {
+            card.style.display = 'flex';
+            card.style.animation = 'fadeIn 0.5s ease forwards';
+          }
+        });
+
+        currentVisible = nextCount;
+        if (countDisplay) countDisplay.textContent = String(currentVisible);
+
+        if (currentVisible >= total) {
+          btn.style.display = 'none';
+        }
+      });
+    }
+
+    initLatestLoadMore();
+    document.addEventListener('astro:after-swap', initLatestLoadMore);
+  </script>
 </Layout>
 
 <style>
@@ -377,19 +447,70 @@ const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
     font-size: 0.85rem;
   }
 
-  .posts-grid {
+  .posts-grid--latest {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
   }
 
+  /* タブレット縦・スマホ：1カラム／横768px以上は3カラム */
   @media (max-width: 1024px) {
     .hub-grid {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .posts-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .posts-grid--latest {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) and (min-width: 768px) {
+    .posts-grid--latest {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  .btn-load-more {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--primary-gold);
+    color: #fff;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-family: var(--font-ud-mincho);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn-load-more:hover {
+    background: var(--primary-gold);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+  }
+
+  .count-info {
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
@@ -529,6 +650,6 @@ const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
     .action-branch { flex-direction: column; align-items: center; }
     .btn { min-width: 100%; }
     .hub-grid { grid-template-columns: 1fr; }
-    .posts-grid { grid-template-columns: 1fr; }
+    .posts-grid--latest { grid-template-columns: 1fr; }
   }
 </style>

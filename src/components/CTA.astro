@@ -1,23 +1,20 @@
 ---
 import { getCollection } from 'astro:content';
+import { resolvePostSlugSegment } from '../utils/resolvePostSlugSegment';
 
 interface Props {
   slug: string;
 }
 
 const { slug } = Astro.props;
-const knowledge = await getCollection('knowledge');
-const solutions = await getCollection('solutions');
-const useCase = await getCollection('use-case');
-
-const allPosts = [...knowledge, ...solutions, ...useCase]
-  .filter(post => post.data.draft !== true);
+const allPosts = (await getCollection('posts'))
+  .filter((post) => post.data.draft !== true);
 
 // スラッシュの正規化とスラッグ検索
 const post = allPosts.find((p) => {
-    const parts = p.id.split('/');
-    const postSlug = parts[parts.length - 2] || parts[0];
-    return postSlug === slug;
+    const preferredSlug = p.data.slug?.trim();
+    const idTail = p.id.split('/').pop();
+    return preferredSlug === slug || idTail === slug;
 });
 
 // 本来は cta-data.ts 等から個別の訴求文言を引くが、まずは記事データから動的に生成
@@ -27,15 +24,9 @@ const description = post ? post.data.description : "";
 let url = '#';
 if (post) {
     const lang = post.data.lang || 'ja';
-    const category = post.collection;
-    const preferredSlug = post.data.slug?.trim();
-    if (preferredSlug) {
-      url = `/${lang}/${category}/${preferredSlug}/`;
-    } else {
-      const parts = post.id.split('/');
-      const finalSlug = parts[parts.length - 2] || parts[0];
-      url = `/${lang}/${category}/${finalSlug}/`;
-    }
+    const category = post.data.category;
+    const segment = resolvePostSlugSegment(post);
+    if (segment) url = `/${lang}/${category}/${segment}/`;
 }
 
 ---

@@ -16,8 +16,8 @@ const baseSchema = ({ image }: any) => z.object({
   category: z.string(), // メインカテゴリ（フォルダ名と同期）
   subcategory: z.string().optional(),
   
-  // タグ
-  tags: z.array(z.string()).min(1).max(10).default(['未分類']),
+  // タグ（過剰付与を防ぐため最大7個）
+  tags: z.array(z.string()).min(1).max(7).default(['未分類']),
   
   // 画像アセット
   image: image().optional(),
@@ -42,38 +42,15 @@ const baseSchema = ({ image }: any) => z.object({
   starterSet: z.array(z.string()).max(3).optional(),
 });
 
-// 各コレクションの定義（AIクローラーが解釈しやすい階層構造）
+// 言語ファースト構造: src/content/{lang}/{category}/{subcategory}/{slug}/index.mdx
+// ja の category は soundproof-room 等。en のみ japan-noise-and-society 等（src/data/contentCategories.ts）
 const generateId = ({ entry }: { entry: string }) => entry.replace(/\.[^/.]+$/, '').replace(/\/index$/, '');
 
-const knowledge = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/knowledge", generateId }),
-  schema: baseSchema,
-});
-
-const solutions = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/solutions", generateId }),
-  schema: baseSchema,
-});
-
-const useCase = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/use-case", generateId }),
-  schema: baseSchema,
-});
-
-const company = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/company", generateId }),
-  schema: baseSchema,
-});
-
-const column = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/column", generateId }),
+const posts = defineCollection({
+  loader: glob({ pattern: "{ja,en,zh,ko}/**/*.{md,mdx}", base: "./src/content", generateId }),
   schema: baseSchema,
 });
 
 export const collections = { 
-  knowledge, 
-  solutions, 
-  'use-case': useCase, 
-  company, 
-  column 
+  posts,
 };

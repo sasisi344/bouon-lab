@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
+import { resolvePostCover } from '../data/categoryDefaultCover';
+import { resolvePostSlugSegment } from '../utils/resolvePostSlugSegment';
 
 const {
   subcategory,
@@ -30,15 +32,8 @@ if (providedRelated) {
   // コレクションから取得してフィルタリング
   let allPosts = providedPosts;
   if (!allPosts) {
-    const [knowledge, solutions, useCase, company, column] = await Promise.all([
-      getCollection('knowledge'),
-      getCollection('solutions'),
-      getCollection('use-case'),
-      getCollection('company'),
-      getCollection('column')
-    ]);
-    allPosts = [...knowledge, ...solutions, ...useCase, ...company, ...column]
-      .filter(post => post.data.draft !== true);
+    allPosts = (await getCollection('posts'))
+      .filter((post) => post.data.draft !== true);
   }
 
   // Filter posts for this specific subcategory AND matching language
@@ -55,13 +50,8 @@ if (providedRelated) {
 
 function getUrl(post: any) {
     const postLang = post.data.lang || 'ja';
-    const segment = post.collection;
-    const preferredSlug = post.data.slug?.trim();
-    if (preferredSlug) return `/${postLang}/${segment}/${preferredSlug}/`;
-
-    const parts = post.id.split('/');
-    const slugParts = parts.filter((p: string) => p !== postLang && p !== 'index');
-    const slug = slugParts.join('/');
+    const segment = post.data.category;
+    const slug = resolvePostSlugSegment(post);
     return slug ? `/${postLang}/${segment}/${slug}/` : `/${postLang}/${segment}/`;
 }
 ---
@@ -84,11 +74,9 @@ function getUrl(post: any) {
               data-track-source={trackSource}
               data-track-label={entry.data.title}
             ></a>
-            {entry.data.image && (
-              <div class="card-image">
-                <Image src={entry.data.image} alt="" width={400} height={225} format="webp" />
-              </div>
-            )}
+            <div class="card-image">
+              <Image src={resolvePostCover(entry)} alt="" width={400} height={225} format="webp" />
+            </div>
             <div class="card-body">
               <div class="card-meta">
                 <span class="date">{entry.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
