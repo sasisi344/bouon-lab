@@ -71,12 +71,18 @@ image: ./cover.png # クォートなし・エスケープなし
 ```mdx
 <RegionBanner />
 <AffiliateCard />
-<CtaBox />
+<CtaBox slug="yamaha-avitex" />
 <SmartLink href="/ja/soundproof-room/solution/post-slug/" />
 <AssetValueTable />
 <ArchiveCarousel />
 <MultiplexAd />
 ```
+
+**`<CtaBox>` の使用ルール（当面）**:
+- `slug` は必須。省略すると記事内にエラーが表示される
+- 使用できる slug は `yamaha-avitex`（アビテックス）と `kawai-nasal`（ナサール）の2つのみ
+- **記事本文でその商品名に言及している場合のみ**配置する
+- 商品名が登場しない記事には置かない
 
 ### 画像アセット
 
