@@ -6,7 +6,12 @@
 export const JA_TOP_CATEGORIES = [
   'soundproof-room',
   'soundproof-rental',
-  'column',
+  'diy',
+  'money',
+  'creator',
+  'knowledge',
+  'local',
+  'business',
 ] as const;
 
 export const EN_TOP_CATEGORIES = [
@@ -23,9 +28,14 @@ export const TOP_CATEGORY_LABELS: Record<
   JaTopCategory | EnTopCategory,
   { ja: string; en: string }
 > = {
-  'soundproof-room': { ja: '防音室', en: 'Soundproof Room' },
-  'soundproof-rental': { ja: '防音賃貸', en: 'Soundproof Rental' },
-  column: { ja: 'コラム', en: 'Column' },
+  'soundproof-room':  { ja: '防音室',           en: 'Soundproof Room' },
+  'soundproof-rental':{ ja: '防音賃貸',         en: 'Soundproof Rental' },
+  diy:               { ja: 'DIY防音',          en: 'DIY Soundproofing' },
+  money:             { ja: 'お金・補助金',      en: 'Cost & Subsidies' },
+  creator:           { ja: '配信・クリエイター', en: 'Creators & Streamers' },
+  knowledge:         { ja: '防音の基礎知識',    en: 'Acoustics Knowledge' },
+  local:             { ja: '地域ガイド',         en: 'Local Guide' },
+  business:          { ja: '企業・法人向け',    en: 'Business & Enterprise' },
   'japan-noise-and-society': {
     ja: '（en）騒音と社会',
     en: 'Noise & Society in Japan',

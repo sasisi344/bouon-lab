@@ -20,9 +20,6 @@ const ogImage = image ? new URL(image, siteUrl).toString() : defaultOgImage;
 const jaPath = normalizedPath.startsWith('/en/')
 	? normalizedPath.replace('/en/', '/ja/')
 	: normalizedPath;
-const enPath = normalizedPath.startsWith('/ja/')
-	? normalizedPath.replace('/ja/', '/en/')
-	: normalizedPath;
 ---
 
 <!doctype html>
@@ -35,7 +32,6 @@ const enPath = normalizedPath.startsWith('/ja/')
 		<meta name="generator" content={Astro.generator} />
 		<link rel="canonical" href={canonicalUrl} />
 		<link rel="alternate" hreflang="ja" href={new URL(jaPath, siteUrl).toString()} />
-		<link rel="alternate" hreflang="en" href={new URL(enPath, siteUrl).toString()} />
 		<link rel="alternate" hreflang="x-default" href={new URL('/ja/', siteUrl).toString()} />
 		<meta property="og:type" content="article" />
 		<meta property="og:site_name" content="BouonLab" />

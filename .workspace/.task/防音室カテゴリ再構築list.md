@@ -1,159 +1,512 @@
-# 防音室カテゴリ（`ja/soundproof-room`）再構築リスト
+# カテゴリ移行タスクリスト
 
-作成日: 2026-05-16  
-関連タスク: [`bouonroom-reno.md`](./bouonroom-reno.md)
-
----
-
-## 1. 現状サマリ
-
-| 項目 | 値 |
-|------|-----|
-| 記事数（`index.mdx`） | **74** |
-| `draft: true` | **7** |
-| `diy` | 16 |
-| `knowledge` | 25 |
-| `others` | 14 |
-| `solution` | 19 |
-
-公開URLの形式: `/ja/soundproof-room/{subcategory}/{slug}/`（末尾スラッシュ）
+作成: 2026-05-16 / 更新: 2026-06-01
+関連: [`bouonroom-reno.md`](./bouonroom-reno.md) / [`/category-rule` スキル]
 
 ---
 
-## 2. 記事リノベプラン（新規・強化の優先リスト）
+## 移行サマリー
 
-`bouonroom-reno.md` にあるゴール・ユーザー悩み前提に沿った、**盤石化のための着手順**。既存74本は量的には十分なため、**ハブ記事の新規作成・下書き公開・カニバ整理**が主戦場になる想定。
+| Phase | 対象 | ファイル数 | リスク | ステータス |
+|-------|------|----------|--------|-----------|
+| 0 | コード設定（カテゴリ定義追加） | - | 低 | [x] 完了（2026-06-01） |
+| 0+ | 薄い記事の統合（column/others 先行）| 5→2本 | 低 | [x] 完了（2026-06-01） |
+| 1 | `others` + `column` 廃止（残り43本） | 43 | 低 | [x] 完了（2026-06-01） |
+| 2 | 新カテゴリへの移行 | 52 | 中 | [x] 完了（2026-06-01） |
+| 3 | Tier 1 フラット化 | 39 | 高 | [x] 完了（2026-06-01） |
+| **合計** | | **134** | | |
 
-### S（最優先：ハブ・フロー）
+### Phase 0 完了内容（2026-06-01）
+- [x] `contentCategories.ts` に8カテゴリ（diy/money/creator/knowledge/local/business を追加）
+- [x] `TOP_CATEGORY_LABELS` に各カテゴリの ja/en ラベルを追加
 
-| # | テーマ（記事コンセプト） |
-|---|--------------------------|
-| S1 | 防音室とは何か｜ユニット／簡易ブース／DIYボックス／工事の違いを一画面で（初心者の「そもそも」用・既存比較記事へのハブ） |
-| S2 | 用途別フローチャート｜楽器・ボイス配信・睡眠・ホームシアターで最適解が変わる理由 |
-| S3 | 「どこまで静かになるか」の読み方｜話し声・大音量エンタメ・サイレン系の期待値と限界（`sound-reduction-simulation` を補う期待調整記事） |
-| S4 | 高性能でも無音にならないケース｜振動・低音・叫び声・マイクゲインと「防音室後の生活設計」 |
+### 統合済み記事（2026-06-01）
 
-### A（悩み別・検索の柱）
+**統合A：ビジネス活用系 3本 → 1本**
+| 削除したファイル | 統合先 |
+|----------------|--------|
+| `soundproof-room/others/soundproof-asset-sharing` | `/ja/business/soundproof-space-business-guide/` |
+| `column/others/empty-tenant-soundproof-renovation-possibility` | 同上 |
+| `column/others/soundproof-booth-rental-business-feasibility` | 同上 |
 
-| # | テーマ（記事コンセプト） |
-|---|--------------------------|
-| A1 | ゲーム実況・ボイスチャット専用｜吸音配置だけでは足りない「声の立ち方・時間帯・機材順」チェックリスト（`gamer-acoustic-placement` の補完） |
-| A2 | カラオケ配信・歌ってみた｜音圧と遮音の現実、ブースとユニットの分岐 |
-| A3 | ピアノ・電子ピアノ・キーボード｜打鍵・スピーカー・ペダル振動の視点（`soundproof-performance-drum` の兄弟記事） |
-| A4 | 寝室を最優先すべきケース｜外音対策は防音室か窓かカーテンかの判定（下書き `sleep-quality-soundproof-room` との統合も可） |
-| A5 | 賃貸でユニット防音室を置く前チェックリスト｜荷重・搬入経路・原状回復・管理会社交渉の順番（`soundproof-rental` の許可系記事と相互リンク） |
+**統合B：オーナーリノベ系 2本 → 1本**
+| 削除したファイル | 統合先 |
+|----------------|--------|
+| `soundproof-rental/others/owner-soundproof-renovation-strategy` | `/ja/soundproof-rental/owner-soundproof-renovation-strategy/` |
+| `column/company/renovation-roi-strategy` | 同上 |
 
-### B（差別化・中長期）
+### 統合しなかった薄い記事（単体で展開・移行のみ）
 
-| # | テーマ（記事コンセプト） |
-|---|--------------------------|
-| B1 | 防音室内の音響調整｜吸音過多・耳詰まり・モニタリング／録音の質 |
-| B2 | ホームシアター｜低音と振動が近隣に効く理由と、防音室／全体工事の判断 |
-| B3 | 騒音クレーム後の優先順位フロー｜話し方・時間・機材・遮音・管理者介入 |
-| B4 | ペットの吠えと防音室｜期待できること／できないこと |
-| B5 | 防音室メンテナンス総覧｜カビ・臭い・フィルター・床の傷 |
+| ファイル | 判断理由 | Phase 1で移行先 |
+|---------|---------|---------------|
+| `bouon-setti-checkpoint` | 設置チェックリストとして独自性あり | soundproof-room |
+| `streamer-tax-strategy` | 税務は専門的で独立した価値あり | money |
+| `web-meeting-voice-soundleak-prevention` | Web会議角度は unique | business |
+| `asmr-vtuber-booth-guide` | 機種比較が独自。streaming-layout とは別テーマ | creator |
+| `streaming-room-layout-guide` | 部屋設計テーマとして独立 | creator |
+| `global-soundproof-market-trends` | グローバル市場視点として独立 | business |
+| 都市ガイド（osaka/tokyo/hiroshima/sapporo等） | 各都市に固有の市場情報あり。統合より拡充 | local |
+| draft:true の全ファイル | 公開前なので移行時に判断 | — |
 
-### 既存ストックの活用メモ（リノベ時に参照）
-
-- **下書きを先に仕上げる候補**: 睡眠・メンタル・判例・投資シミュレーション・加湿器・季節統計・屋外カーテン（いずれも S/A と親和性が高い）。
-- **カニバ・統合の検討候補**: `diy/soundproof-room-diy-cost` と `diy/diy-soundproof-room-cost-breakdown`（タイトル・検索意図が近い）。資産価値・買取・レンタル比較・シミュレーション系は「投資・出口」ハブへの集約を検討。
+### 各アクションの意味
+- **ファイル移動**: `src/content/ja/{old-cat}/{subcategory}/{slug}/` → `src/content/ja/{new-cat}/{slug}/`
+- **frontmatter更新**: `category:` を新しい値に変更。`subcategory:` は削除（任意）
+- **リダイレクト追加**: `astro.config.mjs` の `redirects` に旧URL → 新URLを追加
 
 ---
 
-## 3. 既存記事タイトル一覧（`soundproof-room`）
+## Phase 0 — コード設定（移行前に必ず実施）
 
-表記: **slug** は URL 最終セグメント。`draft` が `true` の行は非公開。
+- [ ] `src/data/contentCategories.ts` の `JA_TOP_CATEGORIES` に新カテゴリを追加
 
-### `diy`（16）
+```ts
+export const JA_TOP_CATEGORIES = [
+  'soundproof-room',
+  'soundproof-rental',
+  'diy',
+  'money',
+  'creator',
+  'knowledge',
+  'local',
+  'business',
+  'column',   // ← Phase 1完了まで残す
+] as const;
+```
 
-| slug | draft | title |
-|------|-------|-------|
-| bass-trap-installation-guide | false | ベーストラップ導入ガイド｜低音こもりの改善術 |
-| bedroom-telework-layout-soundproof | false | 「寝室でテレワーク」がつらい理由。睡眠と仕事を分ける「部屋の中の部屋」レイアウト |
-| closet-diy-soundproof-room | false | クローゼットを防音室にDIY！費用3万円〜で実現する「自分だけの音空間」 2026 |
-| danbotchi-diy-blueprints | false | 【図面あり】ホームセンターの資材だけで「自作だんぼっち」！本家の半額で作る設計図公開 |
-| diy-led-acoustic-panels | false | 配信映えする「LED付き自作吸音パネル」の作り方！光と音を同時に操る |
-| diy-soundproof-room-cost-breakdown | false | 自作防音室の費用内訳｜材料費だけでいくらかかる？プロの施工と徹底比較 |
-| diy-soundproof-room-failures-solutions | false | 防音パネルの罠｜DIY失敗例から学ぶ『遮音と吸音』の物理学的黄金比 |
-| diy-soundproofing-tips | false | DIY防音のコツ｜安価で効果的な遮音・吸音テクニックを音響エンジニアが解剖 |
-| free-cardboard-soundproof-tech | false | スーパーの無料段ボールは使えるか？厚さ重視で選ぶ「最強の段ボール」と多重貼りテクニック |
-| futon-cardboard-karaoke-booth | false | 見た目はヤバいが効果はガチ。布団と段ボールで囲う「ひとり用カラオケボックス」の作り方 |
-| gamer-acoustic-placement | false | 吸音材を貼る位置で音が変わる？モニター裏・スピーカー裏に貼るべき理由 |
-| outdoor-soundproof-curtain-market-guide | true | 【市場整理】屋外用防音カーテン｜防音シートの構造と調達・選定の実務ポイント |
-| proofroom-aircondition-select | false | 防音室のエアコン選びと静音化の極意｜2026年最新の空調・換気戦略 |
-| shanon-vs-bouon-window | false | 「遮音窓」と「防音窓」の違いとは？費用と効果で選ぶ窓リフォーム完全ガイド |
-| soundproof-room-diy-cost | false | 自作防音室の費用内訳｜材料費だけでいくらかかる？ |
-| soundproof-sheet-heavy-diy-tips | false | 防音室DIYの落とし穴。「遮音シート」の重さで自作ブースが崩壊しないためのフレーム補強術 |
+- [ ] `TOP_CATEGORY_LABELS` に新カテゴリのラベルを追加
 
-### `knowledge`（25）
+```ts
+diy:              { ja: 'DIY防音',      en: 'DIY Soundproofing' },
+money:            { ja: 'お金・補助金', en: 'Cost & Subsidies' },
+creator:          { ja: '配信・クリエイター', en: 'Creators & Streamers' },
+knowledge:        { ja: '防音の基礎知識', en: 'Acoustics Knowledge' },
+local:            { ja: '地域ガイド',   en: 'Local Guide' },
+business:         { ja: '企業・法人向け', en: 'Business & Enterprise' },
+```
 
-| slug | draft | title |
-|------|-------|-------|
-| biophilic-acoustics | false | バイオフィリック・アコースティック：苔と緑で「静寂の庭」を壁に作る技法 |
-| bouon-asset-value-analysis | false | 防音室の資産価値分析｜リセールバリューと不動産投資的視点でのROI |
-| bouon-dchiseinou-meyasu | false | 遮音性能の基準「D値」とは？楽器・用途別の目安を徹底解説 |
-| bouon-size-choice | false | 防音室サイズ選びの決定版｜失敗しないための判断基準と畳数別ガイド |
-| d-value-truth-and-myths | false | 防音のプロが教えるD値の嘘と本当｜カタログスペックだけで選ぶと失敗する理由 |
-| daiwa-house-jiyuku-soundproof-review | false | 大和ハウス「私の自由区」防音室を検討して分かったこと |
-| danbocchi-floor-protection | false | 木造アパート2階に「だんぼっち」は危険？点でかかる荷重を分散させるDIY補強術 |
-| diy-soundproof-truth | false | DIY防音の不都合な真実を解説｜科学的根拠に乏しい製品を見抜く思考法 |
-| diy-wall-soundproofing-room-guide | false | 自分の部屋を防音室にしたい？DIYの壁防音と専門工事の現実的な選択肢 |
-| hsp-soundproof-curtain-guide | false | HSP気質の方へ。生活音のストレスを劇的に減らす「防音（遮音）カーテン」の正しい選び方と限界 |
-| million-yen-soundproof-room-professional | false | 100万円クラス防音室の到達レベル｜プロ用途で選ぶべき基準と投資対効果 |
-| neighborhood-noise-seasonal-pattern-statistics | true | 近隣騒音の相談件数が示す季節パターン｜最新統計から見る騒音トラブルの実態 |
-| nitori-soundproof-acoustic-guide | false | ニトリの吸音・防音グッズはどこまで使える？効果と限界を徹底解説 |
-| noise-complaint-legal-precedent-manual | true | 騒音苦情への正しい対応｜解決事例と判例から学ぶ受忍限度の境界線 |
-| otodasu-voice-chat-test | false | OTODASU（オトダス）の実力検証｜深夜2時のボイスチャットは隣室に許されるのか？ |
-| privacy-pod-market-growth | false | プライバシーポッド市場が伸びる背景 \| 企業・公共設置の実態と課題 |
-| small-business-soundproof-subsidy-guide | false | 【個人事業主向け】防音室は贅沢品ではない！「小規模事業者持続化補助金」採択のための申請ノウハウ |
-| soundproof-room-budget-selection-guide | false | 予算別防音室選び方ガイド｜50万円・100万円・200万円で選ぶ方法 |
-| soundproof-room-moving | false | 引越しで防音室を移設する費用は？専門業者の選び方と失敗しない手順 |
-| soundproof-room-rental-lease | false | 防音室はレンタル・リース可能？個人と法人の「一番賢い借り方」と料金比較 |
-| soundproof-subsidy-check-guide | false | うちの家は対象？防音工事の補助金エリアの調べ方【空港・自衛隊・道路】 |
-| soundproof-subsidy-news-2025 | false | 防音室の補助金2026年最新版｜二重窓リノベで最大200万円受給する裏技 |
-| soundproof-subsidy-tokyo-osaka | false | 【東京・大阪】防音工事で補助金が出る地域は？空港や幹線道路沿いの調べ方 |
-| soundproof-window-subsidy-2025-guide | false | 【2025年最新】防音窓リフォームで使える補助金制度まとめ｜先進的窓リノベ対応 |
-| vtuber-soundproof-environment-complete-guide | false | 【2026最新】配信者・VTuber向け防音室導入完全ガイド｜タイミング・資金計画・技術スペック |
+- [ ] `npx astro check` でエラーがないことを確認
 
-### `others`（14）
+---
 
-| slug | draft | title |
-|------|-------|-------|
-| bouon-osusume-hikaku | false | 【2026最新】防音室おすすめ比較｜失敗しない選び方と5年後の売却価格（ROI）を分析 |
-| bouon-setti-checkpoint | false | 防音室導入の最終チェックリスト｜後悔しないためのサイズ・重量・搬入のデッドライン |
-| kawai-nasal-soundproof-room-guide | false | カワイ防音室ナサール（Nasal）完全ガイド｜特徴・価格・ヤマハとの違い |
-| noise-regulation-update-2025 | false | 2025-2026年騒音規制アップデート｜隣人の騒音に「法的エビデンス」で勝つための数値基準と対策 |
-| rental-vs-purchase-soundproof-room | false | 「防音室は買わずに借りる時代」とは言うが損益分岐はどこだ |
-| report-japan-soundproof-unit-resale-value-simulation | true | 【投資シミュレーション】防音室は「動産」か？ 5年後の売却価値と出口戦略の実証 |
-| shimamura-music-soundproof-room-guide | false | 島村楽器で防音室を選ぶメリット｜試奏体験と限定コラボモデル「S-OTODASU」 |
-| soundproof-asset-sharing | false | 空き時間を「練習場所」として収益化。防音室を資産運用するシェアリング戦略の全貌 |
-| soundproof-room-buyback-guide | false | 防音室を高く売るには？買取査定のポイントと個人売買の注意点【2026年版】 |
-| soundproof-room-loan-guide | false | 防音室のローン・分割払いガイド2026｜審査の要点と月々の支払シミュレーション |
-| soundproof-room-price-market | false | 防音室サイズ別価格相場2026｜0.5畳〜4.5畳の実勢価格と隠れコスト完全比較 |
-| soundproof-room-rental-cost | false | 防音室レンタルの初期費用と月額相場｜2026年最新・購入との損益分岐点 |
-| soundproof-room-size | false | ユニット防音室のサイズと選び方：演奏スタイルに合わせた内寸確認法 |
-| why-your-80-percent-rug-rule-fails | false | 北米の80%ラグルールが失敗する理由｜日本の積層物理学で振動を止める |
+## Phase 1 — `others` + `column` 廃止（48ファイル・低リスク）
 
-### `solution`（19）
+> SEO評価が低い記事・新カテゴリ群が対象。Tier 1（soundproof-room/rental）は触らない。
 
-| slug | draft | title |
-|------|-------|-------|
-| absorption-vs-soundproofing-materials | false | 吸音材か遮音材か迷う人へ｜あなたの環境で“必要なのはどっち？”徹底ガイド |
-| bouon-humidifier-comparison | true | 防音室での加湿器選び：スチーム式 vs 気化式の結露・湿気シミュレーション |
-| budget-soundproof-booth-comparison | false | 【2025年版】格安防音室の残酷な真実。だんぼっち・OTODASU・自作…20万円以下で買える現実解 |
-| diy-internal-window-road-noise-reduction | false | 内窓の防音効果を実測｜賃貸DIYポリカ窓から本格インプラスまで徹底比較【2025-2026年版】 |
-| diy-refrigeration-noise-reduction | false | 配信者のための家電・生活音対策｜冷蔵庫と換気扇のノイズを物理的に沈める方法 |
-| diy-soundproof-ventilation-heat-exhaust | false | 【灼熱対策】0.5畳の防音室にエアコンが付けられない！DIYで「空気の通り道」を作る排熱・換気術 |
-| mental-health-benefits-of-silence | true | 静寂の力：なぜ防音室は『最強のメンタルケア』になるのか |
-| musician-soundproof-loan-strategy | false | 音楽家・演奏家のための防音室導入戦略｜「本職の信用」と「ファンの応援」を賢く使う |
-| night-practice-soundproof-guide | false | 夜間練習はどこまで許される？深夜でも楽器を弾くための防音室選びと「振動」の罠 |
-| proofroom-humidity-airconditionlist | false | 防音室の温湿度管理ガイド2026｜暑さ・結露・乾燥を物理的に防ぐ改善術 |
-| proofroom-soudmore-manual | false | 防音室の音漏れ対策ガイド2026｜原因特定から段階的改善のマニュアル |
-| sleep-quality-soundproof-room | true | 短時間でも深い眠りを：『超静寂睡眠』がもたらす驚異の疲労回復効果 |
-| sound-reduction-simulation | false | 【シミュレーション】防音室で音はどこまで消える？用途別の軽減率を徹底検証 |
-| soundproof-performance-drum | false | ドラム防音のD値基準｜振動対策と個体伝搬音の壁 |
-| soundproof-room-demolition-guide | false | 防音室の解体・処分完全ガイド｜自分でやるリスクと業者費用の相場 |
-| soundproof-room-large-size | false | 2畳以上の広々防音室ガイド｜グランドピアノ・声楽・プロ仕様の空間作り |
-| soundproof-room-pollen-protection | false | 防音室の花粉対策｜換気を止めずに春の「花粉・黄砂」をシャットアウトする方法 |
-| telework-soundproof-loan-strategy | false | テレワーク・在宅勤務のための防音室ローン活用｜集中環境と耳の健康への戦略投資 |
-| workbooth-office-soundproof-trend | false | Web会議の「声漏れ」を劇的に減らす｜パーティションを魔法の壁に変える裏技 |
+### 1-A. soundproof-room/others → 14ファイル
+
+各ファイルの作業: ① ディレクトリ移動 ② frontmatter `category:` 更新 ③ リダイレクト追加
+
+**→ `soundproof-room`（5本）: サブカテゴリ層を除去するだけ**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | bouon-osusume-hikaku | `/ja/soundproof-room/others/bouon-osusume-hikaku/` | `/ja/soundproof-room/bouon-osusume-hikaku/` |
+| [ ] | bouon-setti-checkpoint | `/ja/soundproof-room/others/bouon-setti-checkpoint/` | `/ja/soundproof-room/bouon-setti-checkpoint/` |
+| [ ] | kawai-nasal-soundproof-room-guide | `/ja/soundproof-room/others/kawai-nasal-soundproof-room-guide/` | `/ja/soundproof-room/kawai-nasal-soundproof-room-guide/` |
+| [ ] | shimamura-music-soundproof-room-guide | `/ja/soundproof-room/others/shimamura-music-soundproof-room-guide/` | `/ja/soundproof-room/shimamura-music-soundproof-room-guide/` |
+| [ ] | soundproof-room-size | `/ja/soundproof-room/others/soundproof-room-size/` | `/ja/soundproof-room/soundproof-room-size/` |
+
+**→ `money`（6本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | rental-vs-purchase-soundproof-room | `/ja/soundproof-room/others/rental-vs-purchase-soundproof-room/` | `/ja/money/rental-vs-purchase-soundproof-room/` |
+| [ ] | soundproof-room-buyback-guide | `/ja/soundproof-room/others/soundproof-room-buyback-guide/` | `/ja/money/soundproof-room-buyback-guide/` |
+| [ ] | soundproof-room-loan-guide | `/ja/soundproof-room/others/soundproof-room-loan-guide/` | `/ja/money/soundproof-room-loan-guide/` |
+| [ ] | soundproof-room-price-market | `/ja/soundproof-room/others/soundproof-room-price-market/` | `/ja/money/soundproof-room-price-market/` |
+| [ ] | soundproof-room-rental-cost | `/ja/soundproof-room/others/soundproof-room-rental-cost/` | `/ja/money/soundproof-room-rental-cost/` |
+| [ ] | report-japan-soundproof-unit-resale-value-simulation | `/ja/soundproof-room/others/report-japan-soundproof-unit-resale-value-simulation/` | `/ja/money/report-japan-soundproof-unit-resale-value-simulation/` |
+
+**→ `knowledge`（2本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | noise-regulation-update-2025 | `/ja/soundproof-room/others/noise-regulation-update-2025/` | `/ja/knowledge/noise-regulation-update-2025/` |
+| [ ] | why-your-80-percent-rug-rule-fails | `/ja/soundproof-room/others/why-your-80-percent-rug-rule-fails/` | `/ja/knowledge/why-your-80-percent-rug-rule-fails/` |
+
+**→ `business`（1本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | soundproof-asset-sharing | `/ja/soundproof-room/others/soundproof-asset-sharing/` | `/ja/business/soundproof-asset-sharing/` |
+
+---
+
+### 1-B. soundproof-rental/others → 13ファイル
+
+**→ `local`（10本：都市ガイド）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | chiba-soundproof-rental-guide | `/ja/soundproof-rental/others/chiba-soundproof-rental-guide/` | `/ja/local/chiba-soundproof-rental-guide/` |
+| [ ] | hiroshima-soundproof-rental-guide | `/ja/soundproof-rental/others/hiroshima-soundproof-rental-guide/` | `/ja/local/hiroshima-soundproof-rental-guide/` |
+| [ ] | kanagawa-soundproof-rental-guide | `/ja/soundproof-rental/others/kanagawa-soundproof-rental-guide/` | `/ja/local/kanagawa-soundproof-rental-guide/` |
+| [ ] | kobe-soundproof-rental-guide | `/ja/soundproof-rental/others/kobe-soundproof-rental-guide/` | `/ja/local/kobe-soundproof-rental-guide/` |
+| [ ] | kyoto-soundproof-rental-guide | `/ja/soundproof-rental/others/kyoto-soundproof-rental-guide/` | `/ja/local/kyoto-soundproof-rental-guide/` |
+| [ ] | osaka-soundproof-rental-guide | `/ja/soundproof-rental/others/osaka-soundproof-rental-guide/` | `/ja/local/osaka-soundproof-rental-guide/` |
+| [ ] | saitama-soundproof-rental-guide | `/ja/soundproof-rental/others/saitama-soundproof-rental-guide/` | `/ja/local/saitama-soundproof-rental-guide/` |
+| [ ] | sapporo-soundproof-rental-guide | `/ja/soundproof-rental/others/sapporo-soundproof-rental-guide/` | `/ja/local/sapporo-soundproof-rental-guide/` |
+| [ ] | sendai-soundproof-rental-guide | `/ja/soundproof-rental/others/sendai-soundproof-rental-guide/` | `/ja/local/sendai-soundproof-rental-guide/` |
+| [ ] | tokyo-soundproof-rental-summary | `/ja/soundproof-rental/others/tokyo-soundproof-rental-summary/` | `/ja/local/tokyo-soundproof-rental-summary/` |
+
+**→ `money`（1本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | owner-renovation-roi-simulation-tool | `/ja/soundproof-rental/others/owner-renovation-roi-simulation-tool/` | `/ja/money/owner-renovation-roi-simulation-tool/` |
+
+**→ `soundproof-rental`（2本：オーナー向け、サブカテゴリ層を除去）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | owner-renovation-shibuya-shinjuku-vtuber-strategy | `/ja/soundproof-rental/others/owner-renovation-shibuya-shinjuku-vtuber-strategy/` | `/ja/soundproof-rental/owner-renovation-shibuya-shinjuku-vtuber-strategy/` |
+| [ ] | owner-soundproof-renovation-strategy | `/ja/soundproof-rental/others/owner-soundproof-renovation-strategy/` | `/ja/soundproof-rental/owner-soundproof-renovation-strategy/` |
+
+---
+
+### 1-C. column/company → `business`（7ファイル）
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | bouonrental-areasec-newbusiness | `/ja/column/company/bouonrental-areasec-newbusiness/` | `/ja/business/bouonrental-areasec-newbusiness/` |
+| [ ] | datacenter-soundproof-technology-facts | `/ja/column/company/datacenter-soundproof-technology-facts/` | `/ja/business/datacenter-soundproof-technology-facts/` |
+| [ ] | japan-bouonproof-marketnextasia | `/ja/column/company/japan-bouonproof-marketnextasia/` | `/ja/business/japan-bouonproof-marketnextasia/` |
+| [ ] | renovation-roi-strategy | `/ja/column/company/renovation-roi-strategy/` | `/ja/business/renovation-roi-strategy/` |
+| [ ] | report-japan-asmr-vtuber-streaming-studio-standard | `/ja/column/company/report-japan-asmr-vtuber-streaming-studio-standard/` | `/ja/business/report-japan-asmr-vtuber-streaming-studio-standard/` |
+| [ ] | soundproof-market-esg-trend | `/ja/column/company/soundproof-market-esg-trend/` | `/ja/business/soundproof-market-esg-trend/` |
+| [ ] | soundproof-renovation-cost-outlook-2026 | `/ja/column/company/soundproof-renovation-cost-outlook-2026/` | `/ja/business/soundproof-renovation-cost-outlook-2026/` |
+
+---
+
+### 1-D. column/news → 5ファイル
+
+**→ `knowledge`（2本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | future-ssi-silent-speech-interface-revolution | `/ja/column/news/future-ssi-silent-speech-interface-revolution/` | `/ja/knowledge/future-ssi-silent-speech-interface-revolution/` |
+| [ ] | proofroom-maker-2025productcheck | `/ja/column/news/proofroom-maker-2025productcheck/` | `/ja/knowledge/proofroom-maker-2025productcheck/` |
+
+**→ `business`（2本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | global-soundproof-market-trends | `/ja/column/news/global-soundproof-market-trends/` | `/ja/business/global-soundproof-market-trends/` |
+| [ ] | shared-streaming-studio-growth-pricing-utilization | `/ja/column/news/shared-streaming-studio-growth-pricing-utilization/` | `/ja/business/shared-streaming-studio-growth-pricing-utilization/` |
+
+**→ `soundproof-room`（1本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | yamaha-tabisuru-bouon-room | `/ja/column/news/yamaha-tabisuru-bouon-room/` | `/ja/soundproof-room/yamaha-tabisuru-bouon-room/` |
+
+---
+
+### 1-E. column/others → 9ファイル
+
+**→ `creator`（3本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | asmr-vtuber-booth-guide | `/ja/column/others/asmr-vtuber-booth-guide/` | `/ja/creator/asmr-vtuber-booth-guide/` |
+| [ ] | kominka-renovation-streaming-room | `/ja/column/others/kominka-renovation-streaming-room/` | `/ja/creator/kominka-renovation-streaming-room/` |
+| [ ] | streaming-room-layout-guide | `/ja/column/others/streaming-room-layout-guide/` | `/ja/creator/streaming-room-layout-guide/` |
+
+**→ `knowledge`（2本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | soundproof-culture-japan-vs-america | `/ja/column/others/soundproof-culture-japan-vs-america/` | `/ja/knowledge/soundproof-culture-japan-vs-america/` |
+| [ ] | vibration-isolation-technology-trend | `/ja/column/others/vibration-isolation-technology-trend/` | `/ja/knowledge/vibration-isolation-technology-trend/` |
+
+**→ `business`（3本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | empty-tenant-soundproof-renovation-possibility | `/ja/column/others/empty-tenant-soundproof-renovation-possibility/` | `/ja/business/empty-tenant-soundproof-renovation-possibility/` |
+| [ ] | soundproof-booth-rental-business-feasibility | `/ja/column/others/soundproof-booth-rental-business-feasibility/` | `/ja/business/soundproof-booth-rental-business-feasibility/` |
+| [ ] | web-meeting-voice-soundleak-prevention | `/ja/column/others/web-meeting-voice-soundleak-prevention/` | `/ja/business/web-meeting-voice-soundleak-prevention/` |
+
+**→ `money`（1本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | streamer-tax-strategy | `/ja/column/others/streamer-tax-strategy/` | `/ja/money/streamer-tax-strategy/` |
+
+### 1 完了後の後処理
+- [ ] `column` カテゴリが空になったら `JA_TOP_CATEGORIES` から削除
+- [ ] `npx astro check` でエラーがないことを確認
+- [ ] `pnpm build` でビルドが通ることを確認
+
+---
+
+## Phase 2 — 新カテゴリへの分配（52ファイル・中リスク）
+
+> `diy`/`money`/`creator`/`business`/`knowledge` に散らばった記事を集約する。
+> SEO評価のある記事（CTR高・表示数多）を含むため、リダイレクトを慎重に設定すること。
+
+### 2-A. soundproof-room/diy → 16ファイル
+
+**→ `diy`（14本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | bass-trap-installation-guide | `/ja/soundproof-room/diy/bass-trap-installation-guide/` | `/ja/diy/bass-trap-installation-guide/` |
+| [ ] | bedroom-telework-layout-soundproof | `/ja/soundproof-room/diy/bedroom-telework-layout-soundproof/` | `/ja/diy/bedroom-telework-layout-soundproof/` |
+| [ ] | closet-diy-soundproof-room | `/ja/soundproof-room/diy/closet-diy-soundproof-room/` | `/ja/diy/closet-diy-soundproof-room/` |
+| [ ] | danbotchi-diy-blueprints | `/ja/soundproof-room/diy/danbotchi-diy-blueprints/` | `/ja/diy/danbotchi-diy-blueprints/` |
+| [ ] | diy-led-acoustic-panels | `/ja/soundproof-room/diy/diy-led-acoustic-panels/` | `/ja/diy/diy-led-acoustic-panels/` |
+| [ ] | diy-soundproof-room-cost-breakdown | `/ja/soundproof-room/diy/diy-soundproof-room-cost-breakdown/` | `/ja/diy/diy-soundproof-room-cost-breakdown/` |
+| [ ] | diy-soundproof-room-failures-solutions | `/ja/soundproof-room/diy/diy-soundproof-room-failures-solutions/` | `/ja/diy/diy-soundproof-room-failures-solutions/` |
+| [ ] | diy-soundproofing-tips | `/ja/soundproof-room/diy/diy-soundproofing-tips/` | `/ja/diy/diy-soundproofing-tips/` |
+| [ ] | free-cardboard-soundproof-tech | `/ja/soundproof-room/diy/free-cardboard-soundproof-tech/` | `/ja/diy/free-cardboard-soundproof-tech/` |
+| [ ] | futon-cardboard-karaoke-booth | `/ja/soundproof-room/diy/futon-cardboard-karaoke-booth/` | `/ja/diy/futon-cardboard-karaoke-booth/` |
+| [ ] | gamer-acoustic-placement | `/ja/soundproof-room/diy/gamer-acoustic-placement/` | `/ja/diy/gamer-acoustic-placement/` |
+| [ ] | outdoor-soundproof-curtain-market-guide | `/ja/soundproof-room/diy/outdoor-soundproof-curtain-market-guide/` | `/ja/diy/outdoor-soundproof-curtain-market-guide/` |
+| [ ] | soundproof-room-diy-cost | `/ja/soundproof-room/diy/soundproof-room-diy-cost/` | `/ja/diy/soundproof-room-diy-cost/` |
+| [ ] | soundproof-sheet-heavy-diy-tips | `/ja/soundproof-room/diy/soundproof-sheet-heavy-diy-tips/` | `/ja/diy/soundproof-sheet-heavy-diy-tips/` |
+
+**→ `soundproof-room`（2本：製品・選択系のため）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | proofroom-aircondition-select | `/ja/soundproof-room/diy/proofroom-aircondition-select/` | `/ja/soundproof-room/proofroom-aircondition-select/` |
+| [ ] | shanon-vs-bouon-window | `/ja/soundproof-room/diy/shanon-vs-bouon-window/` | `/ja/soundproof-room/shanon-vs-bouon-window/` |
+
+---
+
+### 2-B. soundproof-rental/diy → 4ファイル
+
+**→ `diy`（3本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | renter-parent-house-soundproofing | `/ja/soundproof-rental/diy/renter-parent-house-soundproofing/` | `/ja/diy/renter-parent-house-soundproofing/` |
+| [ ] | soundproof-window-merit-demerit | `/ja/soundproof-rental/diy/soundproof-window-merit-demerit/` | `/ja/diy/soundproof-window-merit-demerit/` |
+| [ ] | wooden-apartment-soundproof-guide | `/ja/soundproof-rental/diy/wooden-apartment-soundproof-guide/` | `/ja/diy/wooden-apartment-soundproof-guide/` |
+
+**→ `creator`（1本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | one-room-streaming-soundproof | `/ja/soundproof-rental/diy/one-room-streaming-soundproof/` | `/ja/creator/one-room-streaming-soundproof/` |
+
+---
+
+### 2-C. soundproof-room/knowledge → 17ファイル（Phase 2分）
+
+**→ `money`（8本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | bouon-asset-value-analysis | `/ja/soundproof-room/knowledge/bouon-asset-value-analysis/` | `/ja/money/bouon-asset-value-analysis/` |
+| [ ] | small-business-soundproof-subsidy-guide | `/ja/soundproof-room/knowledge/small-business-soundproof-subsidy-guide/` | `/ja/money/small-business-soundproof-subsidy-guide/` |
+| [ ] | soundproof-room-moving | `/ja/soundproof-room/knowledge/soundproof-room-moving/` | `/ja/money/soundproof-room-moving/` |
+| [ ] | soundproof-room-rental-lease | `/ja/soundproof-room/knowledge/soundproof-room-rental-lease/` | `/ja/money/soundproof-room-rental-lease/` |
+| [ ] | soundproof-subsidy-check-guide | `/ja/soundproof-room/knowledge/soundproof-subsidy-check-guide/` | `/ja/money/soundproof-subsidy-check-guide/` |
+| [ ] | soundproof-subsidy-news-2025 | `/ja/soundproof-room/knowledge/soundproof-subsidy-news-2025/` | `/ja/money/soundproof-subsidy-news-2025/` |
+| [ ] | soundproof-subsidy-tokyo-osaka | `/ja/soundproof-room/knowledge/soundproof-subsidy-tokyo-osaka/` | `/ja/money/soundproof-subsidy-tokyo-osaka/` |
+| [ ] | soundproof-window-subsidy-2025-guide | `/ja/soundproof-room/knowledge/soundproof-window-subsidy-2025-guide/` | `/ja/money/soundproof-window-subsidy-2025-guide/` |
+
+**→ `creator`（1本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | vtuber-soundproof-environment-complete-guide | `/ja/soundproof-room/knowledge/vtuber-soundproof-environment-complete-guide/` | `/ja/creator/vtuber-soundproof-environment-complete-guide/` |
+
+**→ `business`（1本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | privacy-pod-market-growth | `/ja/soundproof-room/knowledge/privacy-pod-market-growth/` | `/ja/business/privacy-pod-market-growth/` |
+
+**→ `diy`（2本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | danbocchi-floor-protection | `/ja/soundproof-room/knowledge/danbocchi-floor-protection/` | `/ja/diy/danbocchi-floor-protection/` |
+| [ ] | diy-wall-soundproofing-room-guide | `/ja/soundproof-room/knowledge/diy-wall-soundproofing-room-guide/` | `/ja/diy/diy-wall-soundproofing-room-guide/` |
+
+**→ `knowledge`（5本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | biophilic-acoustics | `/ja/soundproof-room/knowledge/biophilic-acoustics/` | `/ja/knowledge/biophilic-acoustics/` |
+| [ ] | d-value-truth-and-myths | `/ja/soundproof-room/knowledge/d-value-truth-and-myths/` | `/ja/knowledge/d-value-truth-and-myths/` |
+| [ ] | diy-soundproof-truth | `/ja/soundproof-room/knowledge/diy-soundproof-truth/` | `/ja/knowledge/diy-soundproof-truth/` |
+| [ ] | neighborhood-noise-seasonal-pattern-statistics | `/ja/soundproof-room/knowledge/neighborhood-noise-seasonal-pattern-statistics/` | `/ja/knowledge/neighborhood-noise-seasonal-pattern-statistics/` |
+| [ ] | noise-complaint-legal-precedent-manual | `/ja/soundproof-room/knowledge/noise-complaint-legal-precedent-manual/` | `/ja/knowledge/noise-complaint-legal-precedent-manual/` |
+
+---
+
+### 2-D. soundproof-room/solution → 8ファイル（Phase 2分）
+
+**→ `diy`（3本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | diy-internal-window-road-noise-reduction | `/ja/soundproof-room/solution/diy-internal-window-road-noise-reduction/` | `/ja/diy/diy-internal-window-road-noise-reduction/` |
+| [ ] | diy-refrigeration-noise-reduction | `/ja/soundproof-room/solution/diy-refrigeration-noise-reduction/` | `/ja/diy/diy-refrigeration-noise-reduction/` |
+| [ ] | diy-soundproof-ventilation-heat-exhaust | `/ja/soundproof-room/solution/diy-soundproof-ventilation-heat-exhaust/` | `/ja/diy/diy-soundproof-ventilation-heat-exhaust/` |
+
+**→ `knowledge`（2本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | absorption-vs-soundproofing-materials | `/ja/soundproof-room/solution/absorption-vs-soundproofing-materials/` | `/ja/knowledge/absorption-vs-soundproofing-materials/` |
+| [ ] | mental-health-benefits-of-silence | `/ja/soundproof-room/solution/mental-health-benefits-of-silence/` | `/ja/knowledge/mental-health-benefits-of-silence/` |
+
+**→ `money`（2本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | musician-soundproof-loan-strategy | `/ja/soundproof-room/solution/musician-soundproof-loan-strategy/` | `/ja/money/musician-soundproof-loan-strategy/` |
+| [ ] | telework-soundproof-loan-strategy | `/ja/soundproof-room/solution/telework-soundproof-loan-strategy/` | `/ja/money/telework-soundproof-loan-strategy/` |
+
+**→ `business`（1本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | workbooth-office-soundproof-trend | `/ja/soundproof-room/solution/workbooth-office-soundproof-trend/` | `/ja/business/workbooth-office-soundproof-trend/` |
+
+---
+
+### 2-E. soundproof-rental/knowledge → 2ファイル（Phase 2分）
+
+**→ `creator`（2本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | bourentakl-streamer-settingsetubi | `/ja/soundproof-rental/knowledge/bourentakl-streamer-settingsetubi/` | `/ja/creator/bourentakl-streamer-settingsetubi/` |
+| [ ] | streamer-rental-selection-guide | `/ja/soundproof-rental/knowledge/streamer-rental-selection-guide/` | `/ja/creator/streamer-rental-selection-guide/` |
+
+---
+
+### 2-F. soundproof-rental/solution → 5ファイル（Phase 2分）
+
+**→ `knowledge`（1本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | vibration-reduction-science | `/ja/soundproof-rental/solution/vibration-reduction-science/` | `/ja/knowledge/vibration-reduction-science/` |
+
+**→ `creator`（2本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | soundproof-rental-life-streamer | `/ja/soundproof-rental/solution/soundproof-rental-life-streamer/` | `/ja/creator/soundproof-rental-life-streamer/` |
+| [ ] | streamer-soundproof-room-comprehensive-guide | `/ja/soundproof-rental/solution/streamer-soundproof-room-comprehensive-guide/` | `/ja/creator/streamer-soundproof-room-comprehensive-guide/` |
+
+**→ `diy`（1本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | treadmill-apartment-soundproofing-layering | `/ja/soundproof-rental/solution/treadmill-apartment-soundproofing-layering/` | `/ja/diy/treadmill-apartment-soundproofing-layering/` |
+
+**→ `business`（1本）**
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | owner-soundproof-renovation-investment-strategy-2026 | `/ja/soundproof-rental/solution/owner-soundproof-renovation-investment-strategy-2026/` | `/ja/business/owner-soundproof-renovation-investment-strategy-2026/` |
+
+### 2 完了後の後処理
+- [ ] 空になったディレクトリを削除（`soundproof-room/diy/`・`soundproof-rental/diy/`）
+- [ ] `npx astro check` でエラーがないことを確認
+- [ ] `pnpm build` でビルドが通ることを確認
+
+---
+
+## Phase 3 — Tier 1 フラット化（39ファイル・高リスク）
+
+> `soundproof-room` と `soundproof-rental` のサブカテゴリ層を廃止する。
+> **既存SEO評価が高い記事を含む。必ずリダイレクトを追加してから移動すること。**
+
+### 3-A. soundproof-room/knowledge → soundproof-room（8ファイル）
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | bouon-dchiseinou-meyasu | `/ja/soundproof-room/knowledge/bouon-dchiseinou-meyasu/` | `/ja/soundproof-room/bouon-dchiseinou-meyasu/` |
+| [ ] | bouon-size-choice | `/ja/soundproof-room/knowledge/bouon-size-choice/` | `/ja/soundproof-room/bouon-size-choice/` |
+| [ ] | daiwa-house-jiyuku-soundproof-review | `/ja/soundproof-room/knowledge/daiwa-house-jiyuku-soundproof-review/` | `/ja/soundproof-room/daiwa-house-jiyuku-soundproof-review/` |
+| [ ] | hsp-soundproof-curtain-guide | `/ja/soundproof-room/knowledge/hsp-soundproof-curtain-guide/` | `/ja/soundproof-room/hsp-soundproof-curtain-guide/` |
+| [ ] | million-yen-soundproof-room-professional | `/ja/soundproof-room/knowledge/million-yen-soundproof-room-professional/` | `/ja/soundproof-room/million-yen-soundproof-room-professional/` |
+| [ ] | nitori-soundproof-acoustic-guide | `/ja/soundproof-room/knowledge/nitori-soundproof-acoustic-guide/` | `/ja/soundproof-room/nitori-soundproof-acoustic-guide/` |
+| [ ] | otodasu-voice-chat-test | `/ja/soundproof-room/knowledge/otodasu-voice-chat-test/` | `/ja/soundproof-room/otodasu-voice-chat-test/` |
+| [ ] | soundproof-room-budget-selection-guide | `/ja/soundproof-room/knowledge/soundproof-room-budget-selection-guide/` | `/ja/soundproof-room/soundproof-room-budget-selection-guide/` |
+
+---
+
+### 3-B. soundproof-room/solution → soundproof-room（11ファイル）
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | bouon-humidifier-comparison | `/ja/soundproof-room/solution/bouon-humidifier-comparison/` | `/ja/soundproof-room/bouon-humidifier-comparison/` |
+| [ ] | budget-soundproof-booth-comparison | `/ja/soundproof-room/solution/budget-soundproof-booth-comparison/` | `/ja/soundproof-room/budget-soundproof-booth-comparison/` |
+| [ ] | night-practice-soundproof-guide | `/ja/soundproof-room/solution/night-practice-soundproof-guide/` | `/ja/soundproof-room/night-practice-soundproof-guide/` |
+| [ ] | proofroom-humidity-airconditionlist | `/ja/soundproof-room/solution/proofroom-humidity-airconditionlist/` | `/ja/soundproof-room/proofroom-humidity-airconditionlist/` |
+| [ ] | proofroom-soudmore-manual | `/ja/soundproof-room/solution/proofroom-soudmore-manual/` | `/ja/soundproof-room/proofroom-soudmore-manual/` |
+| [ ] | sleep-quality-soundproof-room | `/ja/soundproof-room/solution/sleep-quality-soundproof-room/` | `/ja/soundproof-room/sleep-quality-soundproof-room/` |
+| [ ] | sound-reduction-simulation | `/ja/soundproof-room/solution/sound-reduction-simulation/` | `/ja/soundproof-room/sound-reduction-simulation/` |
+| [ ] | soundproof-performance-drum | `/ja/soundproof-room/solution/soundproof-performance-drum/` | `/ja/soundproof-room/soundproof-performance-drum/` |
+| [ ] | soundproof-room-demolition-guide | `/ja/soundproof-room/solution/soundproof-room-demolition-guide/` | `/ja/soundproof-room/soundproof-room-demolition-guide/` |
+| [ ] | soundproof-room-large-size | `/ja/soundproof-room/solution/soundproof-room-large-size/` | `/ja/soundproof-room/soundproof-room-large-size/` |
+| [ ] | soundproof-room-pollen-protection | `/ja/soundproof-room/solution/soundproof-room-pollen-protection/` | `/ja/soundproof-room/soundproof-room-pollen-protection/` |
+
+---
+
+### 3-C. soundproof-rental/knowledge → soundproof-rental（9ファイル）
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | bouon-rental-market-guide | `/ja/soundproof-rental/knowledge/bouon-rental-market-guide/` | `/ja/soundproof-rental/bouon-rental-market-guide/` |
+| [ ] | bouonrental-market-research2025 | `/ja/soundproof-rental/knowledge/bouonrental-market-research2025/` | `/ja/soundproof-rental/bouonrental-market-research2025/` |
+| [ ] | bourental-syaouseid-choiceindi | `/ja/soundproof-rental/knowledge/bourental-syaouseid-choiceindi/` | `/ja/soundproof-rental/bourental-syaouseid-choiceindi/` |
+| [ ] | housing-builder-soundproof-comparison | `/ja/soundproof-rental/knowledge/housing-builder-soundproof-comparison/` | `/ja/soundproof-rental/housing-builder-soundproof-comparison/` |
+| [ ] | musision-comprehensive-guide | `/ja/soundproof-rental/knowledge/musision-comprehensive-guide/` | `/ja/soundproof-rental/musision-comprehensive-guide/` |
+| [ ] | owner-renovation-musician-24h-practice-strategy | `/ja/soundproof-rental/knowledge/owner-renovation-musician-24h-practice-strategy/` | `/ja/soundproof-rental/owner-renovation-musician-24h-practice-strategy/` |
+| [ ] | pet-noise-soundproof-measures | `/ja/soundproof-rental/knowledge/pet-noise-soundproof-measures/` | `/ja/soundproof-rental/pet-noise-soundproof-measures/` |
+| [ ] | rental-caution-cello | `/ja/soundproof-rental/knowledge/rental-caution-cello/` | `/ja/soundproof-rental/rental-caution-cello/` |
+| [ ] | rental-price-index-13cities-soundproof | `/ja/soundproof-rental/knowledge/rental-price-index-13cities-soundproof/` | `/ja/soundproof-rental/rental-price-index-13cities-soundproof/` |
+
+---
+
+### 3-D. soundproof-rental/solution → soundproof-rental（11ファイル）
+
+| 完了 | slug | 旧URL | 新URL |
+|------|------|-------|-------|
+| [ ] | apartment-weight-limit-500kg | `/ja/soundproof-rental/solution/apartment-weight-limit-500kg/` | `/ja/soundproof-rental/apartment-weight-limit-500kg/` |
+| [ ] | child-rearing-soundproof-pillar | `/ja/soundproof-rental/solution/child-rearing-soundproof-pillar/` | `/ja/soundproof-rental/child-rearing-soundproof-pillar/` |
+| [ ] | home-theater-karaoke-soundproof-design | `/ja/soundproof-rental/solution/home-theater-karaoke-soundproof-design/` | `/ja/soundproof-rental/home-theater-karaoke-soundproof-design/` |
+| [ ] | noise-canceling-headphones-sleep | `/ja/soundproof-rental/solution/noise-canceling-headphones-sleep/` | `/ja/soundproof-rental/noise-canceling-headphones-sleep/` |
+| [ ] | noise-complaint-landlord-negotiation-guide | `/ja/soundproof-rental/solution/noise-complaint-landlord-negotiation-guide/` | `/ja/soundproof-rental/noise-complaint-landlord-negotiation-guide/` |
+| [ ] | remote-work-family-harmony-soundproof | `/ja/soundproof-rental/solution/remote-work-family-harmony-soundproof/` | `/ja/soundproof-rental/remote-work-family-harmony-soundproof/` |
+| [ ] | rental-permission-proposal-template | `/ja/soundproof-rental/solution/rental-permission-proposal-template/` | `/ja/soundproof-rental/rental-permission-proposal-template/` |
+| [ ] | rental-proofroom-contractcheck | `/ja/soundproof-rental/solution/rental-proofroom-contractcheck/` | `/ja/soundproof-rental/rental-proofroom-contractcheck/` |
+| [ ] | rental-unit-soundproof-room | `/ja/soundproof-rental/solution/rental-unit-soundproof-room/` | `/ja/soundproof-rental/rental-unit-soundproof-room/` |
+| [ ] | report-japan-soundproof-rental-market-needs | `/ja/soundproof-rental/solution/report-japan-soundproof-rental-market-needs/` | `/ja/soundproof-rental/report-japan-soundproof-rental-market-needs/` |
+| [ ] | soundproof-room-installation-conditions | `/ja/soundproof-rental/solution/soundproof-room-installation-conditions/` | `/ja/soundproof-rental/soundproof-room-installation-conditions/` |
+
+### 3 完了後の後処理
+- [ ] 空になったサブカテゴリディレクトリをすべて削除（`knowledge/`・`solution/`・`diy/`・`others/`）
+- [ ] `contentCategories.ts` の `column` を削除（空になった場合）
+- [ ] `npx astro check` でエラーがないことを確認
+- [ ] `pnpm build` & 全リダイレクトの動作確認（代表URLで301確認）
+- [ ] Google Search Console でURL変更ツールを使用
+
+---
+
+## 各ファイル移動時の標準手順
+
+```
+1. src/content/ja/{new-category}/{slug}/ ディレクトリを作成
+2. src/content/ja/{old-category}/{subcategory}/{slug}/index.mdx を移動
+3. frontmatter の category: を新しい値に更新
+4. frontmatter の subcategory: フィールドを削除（任意）
+5. astro.config.mjs の redirects に追加:
+   '/{old-URL}/': '/{new-URL}/',
+6. pnpm build でビルドエラーがないことを確認
+```
+
+---
+
+*更新: 2026-06-01 / 総移行ファイル数: 139*

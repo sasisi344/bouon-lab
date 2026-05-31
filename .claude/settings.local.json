@@ -7,7 +7,12 @@
       "Read(//tmp/**)",
       "Bash(node .workspace/scripts/generate-image.js --preset cover \"Privacy pod office booth in modern corporate workspace, white minimal design, acoustic treatment, soft lighting, no people, product photography style\" \"src/content/ja/soundproof-room/knowledge/privacy-pod-market-growth/cover.png\")",
       "Bash(node .workspace/scripts/generate-image.js --preset cover \"Japanese apartment buildings cityscape with rental market concept, urban Tokyo skyline, soft daytime photography, no people\" \"src/content/ja/soundproof-rental/knowledge/rental-price-index-13cities-soundproof/cover.png\")",
-      "Bash(node .workspace/scripts/generate-image.js --preset cover \"Cozy Japanese apartment interior with pet-friendly soundproofing setup, acoustic rugs and panels, calm home environment, no people or pets visible, soft natural lighting\" \"src/content/ja/soundproof-rental/knowledge/pet-noise-soundproof-measures/cover.png\")"
+      "Bash(node .workspace/scripts/generate-image.js --preset cover \"Cozy Japanese apartment interior with pet-friendly soundproofing setup, acoustic rugs and panels, calm home environment, no people or pets visible, soft natural lighting\" \"src/content/ja/soundproof-rental/knowledge/pet-noise-soundproof-measures/cover.png\")",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\sasis\\\\344dev\\\\bouon-lab\\\\src\\\\content\\\\en\" -Recurse -Filter \"*.mdx\")",
+      "Bash(Measure-Object)",
+      "Bash(Select-Object -ExpandProperty Count)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\sasis\\\\344dev\\\\bouon-lab\\\\src\\\\content\\\\en\" -Recurse -Filter \"*.md\")",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\sasis\\\\344dev\\\\bouon-lab\\\\src\\\\content\\\\ja\" -Recurse -Filter \"index.mdx\" | ForEach-Object { $_.FullName.Replace\\(\"c:\\\\Users\\\\sasis\\\\344dev\\\\bouon-lab\\\\src\\\\content\\\\ja\\\\\",\"\"\\) } | Sort-Object)"
     ]
   }
 }

@@ -52,7 +52,7 @@ description: _draft/ の下書きを 2000〜7000 字の本番記事に仕上げ�
 
 | 判断項目     | 確認方法                                                                                                                |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| **category** | frontmatter の `category` フィールド。なければ本文の内容から推定（knowledge / solutions / use-case / company / column） |
+| **category** | frontmatter の `category` フィールド。なければ `/category-rule` の判定フローで推定（soundproof-room / soundproof-rental / diy / money / creator / knowledge / local / business） |
 | **slug**     | frontmatter の `slug`。なければファイル名からローマ字変換して生成（日本語はローマ字化）                                 |
 | **lang**     | frontmatter の `lang`。なければ `ja`                                                                                    |
 | **tags**     | frontmatter の `tags`。なければ本文から最大5個抽出                                                                      |
@@ -183,13 +183,20 @@ src/content/{category}/{lang}/{slug}/index.mdx
 
 ## 補足：カテゴリの判定基準
 
-| category    | コレクション           | 読者                                 |
-| ----------- | ---------------------- | ------------------------------------ |
-| `knowledge` | 知識・解説記事         | 一般ユーザー（Myth Busterスタイル）  |
-| `solutions` | 投資・選択記事         | オーナー・プロ・購入検討者           |
-| `use-case`  | シナリオ別ガイド       | 配信者・在宅ワーカー等の特定ペルソナ |
-| `company`   | メーカー・サービス分析 | B2B・業界関係者                      |
-| `column`    | コラム全般             | 広い読者層                           |
+カテゴリ判定は `/category-rule` スキルを参照する。
+
+| category | 記事の中心 | 優先度 |
+|----------|-----------|--------|
+| `soundproof-room` | 防音室製品・設置・性能・選び方 | ★★★ |
+| `soundproof-rental` | 賃貸物件・契約・管理会社・大家 | ★★★ |
+| `diy` | 自作・素材・DIY手順 | ★★ |
+| `money` | 費用・ローン・補助金・節税・ROI | ★★ |
+| `creator` | 配信者・VTuber・宅録の活動環境 | ★★ |
+| `knowledge` | 仕組み・法令・科学的解説 | ★ |
+| `local` | 特定都市・地域の防音事情 | ★ |
+| `business` | 企業・法人・オフィス・市場分析 | ☆ |
+
+> `subcategory` フィールドは新規記事では**不要**。旧構造（diy/knowledge/solution/others）は廃止済み。
 
 ---
 

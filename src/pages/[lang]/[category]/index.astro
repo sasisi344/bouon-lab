@@ -4,7 +4,6 @@ import { Image } from 'astro:assets';
 import Layout from '../../../layouts/Layout.astro';
 import {
   JA_TOP_CATEGORIES,
-  EN_TOP_CATEGORIES,
   TOP_CATEGORY_LABELS,
 } from '../../../data/contentCategories';
 import { resolvePostCover } from '../../../data/categoryDefaultCover';
@@ -16,9 +15,6 @@ export async function getStaticPaths() {
   const paths: { params: { lang: string; category: string } }[] = [];
   for (const category of JA_TOP_CATEGORIES) {
     paths.push({ params: { lang: 'ja', category } });
-  }
-  for (const category of EN_TOP_CATEGORIES) {
-    paths.push({ params: { lang: 'en', category } });
   }
   return paths;
 }

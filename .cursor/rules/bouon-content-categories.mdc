@@ -1,35 +1,68 @@
 ---
-description: BouonLab の言語ファーストコンテンツ階層・スラッグ・パーマリンク規約
+description: BouonLab の言語ファーストコンテンツ階層・カテゴリ定義・スラッグ・パーマリンク規約
 alwaysApply: true
 ---
 
-# BouonLab コンテンツカテゴリ構造
+# BouonLab コンテンツカテゴリ構造（2026-06-01 改定）
 
 ## 前提
 
 - **主軸は `ja` 記事**。企画・原稿の起点は常に日本語。
-- **`en` は別ディレクトリ設計（Japan lens）**。AI翻訳の「ローカル言語版コピー」ではなく、**日本の防音・静寂・住宅文化を世界向けに説明する**記事とする。`ja` と **トップカテゴリ（URL第2セグメント）を揃えない**（`README-content.md` と `src/data/contentCategories.ts` を参照）。
+- **`en` は一時停止中**（2026-05-31〜）。`src/content/en/` ディレクトリは保持するが記事ファイルは存在しない。再開時はこのルールを更新する。
+- **サブカテゴリ（diy/knowledge/solution/others）は廃止**。新規記事はすべて3階層URLに配置する。
 
 ## ディレクトリとパーマリンク
 
-- **`ja` 物理パス（例）**: `src/content/ja/soundproof-room/solution/post-slug/index.mdx`
-- **`ja` 公開URL（例）**: `https://bouon-lab.com/ja/soundproof-room/solution/post-slug/`（末尾スラッシュ）
-- **`en` 物理パス（例）**: `src/content/en/japan-quiet-spaces/unit-booths/post-slug/index.mdx`
-- **`en` 公開URL（例）**: `https://bouon-lab.com/en/japan-quiet-spaces/unit-booths/post-slug/`（末尾スラッシュ）
-- フォルダ階層の正本は **`src/content/README-content.md`**。
+- **物理パス**: `src/content/ja/{category}/{slug}/index.mdx`
+- **公開URL**: `https://bouon-lab.com/ja/{category}/{slug}/`（末尾スラッシュ必須）
 
-## スラッグ・フォルダ名
+## 8トップカテゴリ定義
 
-- カテゴリパスに `soundproof-room` などトピックが含まれる場合、**同じ意味を記事 `slug` に繰り返さない**（例: `soundproof-` の冗長プレフィックスは避ける）。
-- **フォルダ名・スラッグは省略・略語にしない**。意味がずれるため、意図が伝わる語を使う。
-- **スラッグはトピックが伝わる程度**でよい。キーワードの過剰積み上げより明確さを優先。
+| # | カテゴリ | セグメント | 記事の中心 | 優先度 |
+|---|---------|-----------|-----------|--------|
+| 1 | 防音室 | `soundproof-room` | 防音室製品・設置・性能・選び方 | ★★★ |
+| 2 | 防音賃貸 | `soundproof-rental` | 賃貸物件・契約・管理会社・大家 | ★★★ |
+| 3 | DIY防音 | `diy` | 自作・素材・DIY手順・コスト | ★★ |
+| 4 | お金・補助金 | `money` | 費用・ローン・補助金・節税・ROI | ★★ |
+| 5 | 配信・クリエイター | `creator` | 配信者・VTuber・宅録の活動環境 | ★★ |
+| 6 | 防音の基礎知識 | `knowledge` | 仕組み・法令・科学・統計 | ★ |
+| 7 | 地域ガイド | `local` | 特定都市・地域の防音情報 | ★ |
+| 8 | 企業・法人向け | `business` | オフィス・スタジオ・市場分析 | ☆ |
+
+**カテゴリ判定の詳細フローは `/category-rule` スキルを参照。**
+
+## スラッグ・フォルダ名のルール
+
+- カテゴリパスに意味語が含まれる場合、**同じ意味を `slug` に繰り返さない**
+  - 例: `soundproof-room` 配下で `soundproof-room-...` は冗長
+- **省略・略語にしない**。意図が伝わる語を使う
+- **SEO過剰積み上げより明確さを優先**
 
 ## frontmatter とパスの整合
 
-- `lang` / `category` / `subcategory` は **ディレクトリ構造と一致**させる。
-- `category`（メイン）と `subcategory`（サブ）は **両方設定**し、パンくずと情報設計に使う。
-- カテゴリの表示名は言語別に出し分ける（`en` のトップカテゴリは `Noise & Society in Japan` など **Japan lens 用ラベル**。実装は `src/data/contentCategories.ts`）。
-- `tags` は **1〜7個**に制限する（関連導線の精度維持のため）。
-- 内部リンクは **`/{lang}/.../末尾スラッシュ/`**（例: `/ja/soundproof-room/solution/post-slug/`、`/en/japan-quiet-spaces/unit-booths/post-slug/`）。
+```yaml
+lang: "ja"
+category: "{上記8カテゴリのいずれか}"   # ディレクトリ名と一致させる
+tags: ["タグ1", "タグ2"]               # 1〜7個
+image: ./cover.png                      # クォートなし相対パス
+```
+
+- `subcategory` フィールドは**新規記事では不要**（旧構造の移行時のみ参考値として使用可）
+- `tags` はクロスカテゴリの関連性を表現する手段として使う
+  - 例: DIY記事が防音室関連 → `tags: ["防音室", "diy"]`
+- 内部リンクは末尾スラッシュ必須: `/ja/{category}/{slug}/`
+
+## 旧サブカテゴリとの対照（移行参考）
+
+| 旧パス | 新カテゴリ |
+|--------|-----------|
+| `soundproof-room/diy/` | `diy/` |
+| `soundproof-room/knowledge/` | 内容により `soundproof-room` / `knowledge` / `money` / `creator` |
+| `soundproof-room/solution/` | 内容により `soundproof-room` / `diy` |
+| `soundproof-room/others/` | 内容により `soundproof-room` / `money` / `business` |
+| `soundproof-rental/others/` | `local`（地域系）/ `soundproof-rental`（その他） |
+| `column/company/` | `business` |
+| `column/news/` | `knowledge` |
+| `column/others/` | 内容により `creator` / `knowledge` / `business` |
 
 詳細のライティング記法・コンポーネントはリポジトリ直下の **`CLAUDE.md`** を参照。

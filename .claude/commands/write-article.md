@@ -57,7 +57,7 @@ description: _draft/ の下書きをボリューム指定（small/medium/high-qu
 
 | 判断項目      | 確認方法                                                                                               |
 | ------------- | ------------------------------------------------------------------------------------------------------ |
-| **category**  | frontmatter の `category`。なければ本文から推定（knowledge / solutions / use-case / company / column） |
+| **category**  | frontmatter の `category`。なければ `/category-rule` の判定フローで推定（soundproof-room / soundproof-rental / diy / money / creator / knowledge / local / business） |
 | **slug**      | frontmatter の `slug`。なければファイル名から生成（日本語はローマ字化・スペースはハイフン）            |
 | **lang**      | frontmatter の `lang`。なければ `ja`                                                                   |
 | **tags**      | frontmatter の `tags`。なければ本文から最大5個抽出                                                     |
