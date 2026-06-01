@@ -54,14 +54,15 @@ jobs:
         run: npm run build
 
       - name: 🚀 Deploy via FTP (Diff only)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.BOUON_FTP_SERVER || secrets.FTP_SERVER }}
           username: ${{ secrets.BOUON_FTP_USERNAME || secrets.FTP_USERNAME }}
           password: ${{ secrets.BOUON_FTP_PASSWORD || secrets.FTP_PASSWORD }}
           local-dir: dist/
           server-dir: /bouon-lab.com/public_html/
-          state-name: .ftp-deploy-sync-state-bouon.json
+          # en 停止後に dist から消えたパスを旧 state が「削除対象」と誤認し 550 になるのを防ぐ（2026-06-01）
+          state-name: .ftp-deploy-sync-state-bouon-v2.json
           exclude: |
             **/.git*
             **/.git*/**
