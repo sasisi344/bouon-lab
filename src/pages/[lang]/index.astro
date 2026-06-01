@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
-import Layout from '../../layouts/Layout.astro';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import heroImage from '../../assets/images/hero-mocha.png';
 import { HUB_CLUSTERS } from '../../data/hubClusters';
 import {
@@ -71,7 +71,7 @@ const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
 const directoryCategories = topCategoriesForLang(uiLang);
 ---
 
-<Layout title="BouonLab | 科学的防音ナレッジベース">
+<StarlightPage frontmatter={{ title: '防音Lab | 科学的防音ナレッジベース', description: '防音・音響対策の科学的ナレッジベース', template: 'splash' }} hasSidebar={false}>
   <!-- ダーク・モカ・ヒーローセクション -->
   <section class="hero-dark" style={`background-image: url('${optimizedHero.src}')`}>
     <div class="overlay"></div>
@@ -260,7 +260,7 @@ const directoryCategories = topCategoriesForLang(uiLang);
     initLatestLoadMore();
     document.addEventListener('astro:after-swap', initLatestLoadMore);
   </script>
-</Layout>
+</StarlightPage>
 
 <style>
   /* ヒーロー：暗室と光の演出 */

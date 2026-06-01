@@ -17,7 +17,7 @@ for (const p of [path.join(__dirname, '.env'), path.join(process.cwd(), '.env')]
 const API_KEY = process.env.GEMINI_API_KEY;
 if (!API_KEY) { console.error('Error: GEMINI_API_KEY が設定されていません (.env に記述してください)'); process.exit(1); }
 
-const MODEL = 'gemini-3.1-flash-image-preview';
+const MODEL = 'gemini-3.1-flash-image';
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 const MAX_OUTPUT_TOKENS = 8192;
 

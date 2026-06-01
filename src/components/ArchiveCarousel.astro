@@ -26,38 +26,34 @@ type CarouselItem = {
 let filtered: CarouselItem[];
 
 if (providedRelated) {
-  // relatedPosts が直接渡された場合（記事末尾など）はそのまま使う
   filtered = providedRelated;
 } else {
-  // コレクションから取得してフィルタリング
   let allPosts = providedPosts;
   if (!allPosts) {
     allPosts = (await getCollection('posts'))
       .filter((post) => post.data.draft !== true);
   }
 
-  // Filter posts for this specific subcategory AND matching language
-  // 更新日の新しい順で安定表示
   filtered = allPosts
-    .filter((p: any) => 
-      p.data.subcategory === subcategory && 
+    .filter((p: any) =>
+      p.data.subcategory === subcategory &&
       (p.data.lang || 'ja') === lang &&
       !p.id.endsWith('/index')
     )
     .sort((a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf())
-    .slice(0, 12);
+    .slice(0, 6); // 最大6件固定
 }
 
 function getUrl(post: any) {
-    const postLang = post.data.lang || 'ja';
-    const segment = post.data.category;
-    const slug = resolvePostSlugSegment(post);
-    return slug ? `/${postLang}/${segment}/${slug}/` : `/${postLang}/${segment}/`;
+  const postLang = post.data.lang || 'ja';
+  const segment = post.data.category;
+  const slug = resolvePostSlugSegment(post);
+  return slug ? `/${postLang}/${segment}/${slug}/` : `/${postLang}/${segment}/`;
 }
 ---
 
 {filtered.length > 0 && (
-  <div class={`archive-carousel ${limitByDevice ? 'is-limited' : ''}`} data-carousel>
+  <div class="archive-carousel" data-carousel>
     <div class="carousel-viewport" data-viewport>
       <div class="carousel-track">
         {filtered.map((item) => {
@@ -65,31 +61,32 @@ function getUrl(post: any) {
           const relationLabel = item.relationLabel;
           const relationKey = item.relationKey;
           return (
-          <article class="carousel-card">
-            <a
-              href={getUrl(entry)}
-              class="card-link-overlay"
-              aria-label={entry.data.title}
-              data-track-event={trackEvent}
-              data-track-source={trackSource}
-              data-track-label={entry.data.title}
-            ></a>
-            <div class="card-image">
-              <Image src={resolvePostCover(entry)} alt="" width={400} height={225} format="webp" />
-            </div>
-            <div class="card-body">
-              <div class="card-meta">
-                <span class="date">{entry.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
-                {relationLabel && <span class={`relation-label ${relationKey || ''}`}>{relationLabel}</span>}
+            <article class="carousel-card">
+              <a
+                href={getUrl(entry)}
+                class="card-link-overlay"
+                aria-label={entry.data.title}
+                data-track-event={trackEvent}
+                data-track-source={trackSource}
+                data-track-label={entry.data.title}
+              ></a>
+              <div class="card-image">
+                <Image src={resolvePostCover(entry)} alt="" width={400} height={225} format="webp" />
               </div>
-              <h4 class="card-title">{entry.data.title}</h4>
-              <p class="card-excerpt">{entry.data.description.length > 50 ? entry.data.description.substring(0, 50) + "..." : entry.data.description}</p>
-            </div>
-          </article>
-        )})}
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="date">{entry.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
+                  {relationLabel && <span class={`relation-label ${relationKey || ''}`}>{relationLabel}</span>}
+                </div>
+                <h4 class="card-title">{entry.data.title}</h4>
+                <p class="card-excerpt">{entry.data.description.length > 50 ? entry.data.description.substring(0, 50) + '...' : entry.data.description}</p>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </div>
-    
+
     <div class="carousel-nav">
       <button class="nav-btn prev" data-prev aria-label="Previous">
         <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
@@ -105,44 +102,51 @@ function getUrl(post: any) {
   .archive-carousel {
     position: relative;
     margin: 2rem 0 4rem;
-    padding: 0 1rem;
   }
 
+  /* ── スクロール領域 ── */
   .carousel-viewport {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
+    /* スナップ位置を padding と一致させる */
+    padding: 0 1rem;
+    scroll-padding-left: 1rem;
   }
 
   .carousel-viewport::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none;
   }
 
+  /* ── カードトラック ── */
   .carousel-track {
     display: flex;
-    gap: 1.5rem;
-    padding-bottom: 1rem;
+    align-items: stretch; /* 全カードを同一高さに揃える */
+    gap: 1rem;
   }
 
+  /* ── カード ── */
   .carousel-card {
-    flex: 0 0 calc(33.333% - 1rem);
-    min-width: 280px;
+    /* PC: 3枚 */
+    flex: 0 0 calc(33.333% - 0.68rem);
+    min-width: 220px;
     scroll-snap-align: start;
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 12px;
     overflow: hidden;
     position: relative;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                border-color 0.3s;
   }
 
   .carousel-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-gold);
+    transform: translateY(-4px);
+    border-color: var(--sl-color-accent);
     background: rgba(255, 255, 255, 0.05);
   }
 
@@ -152,10 +156,12 @@ function getUrl(post: any) {
     z-index: 2;
   }
 
+  /* ── 画像エリア（アスペクト比固定） ── */
   .card-image {
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
+    flex-shrink: 0; /* 画像エリアが縮まないよう固定 */
   }
 
   .card-image img {
@@ -163,44 +169,46 @@ function getUrl(post: any) {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
+    display: block; /* inline のデフォルト隙間を除去 */
   }
 
   .carousel-card:hover .card-image img {
     transform: scale(1.05);
   }
 
+  /* ── カード本文（残り高さを埋める） ── */
   .card-body {
-    padding: 1.25rem;
+    flex: 1;
+    padding: 1.1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
   .card-meta {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0.5rem;
-    font-size: 0.75rem;
-    color: var(--text-dim);
-    letter-spacing: 0.05rem;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    color: var(--sl-color-gray-3);
+    letter-spacing: 0.04rem;
   }
 
   .relation-label {
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    color: var(--primary-gold);
+    border: 1px solid rgba(201, 168, 48, 0.35);
+    color: var(--sl-color-accent);
     border-radius: 999px;
-    padding: 0.15rem 0.5rem;
-    font-size: 0.68rem;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.65rem;
     white-space: nowrap;
   }
 
   .card-title {
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.4;
-    color: #fff;
-    font-family: var(--font-ud-mincho);
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: var(--sl-color-white);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -209,67 +217,68 @@ function getUrl(post: any) {
 
   .card-excerpt {
     margin: 0;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    color: var(--text-dim);
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--sl-color-gray-3);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
-  /* Navigation Buttons */
+  /* ── ナビゲーションボタン ── */
   .carousel-nav {
     display: flex;
     justify-content: flex-end;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    padding: 0 1rem;
   }
 
   .nav-btn {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-dim);
-    width: 40px;
-    height: 40px;
+    color: var(--sl-color-gray-3);
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s;
+    transition: all 0.25s;
   }
 
   .nav-btn:hover {
-    background: var(--primary-gold);
+    background: var(--sl-color-accent);
     color: #000;
-    border-color: var(--primary-gold);
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    border-color: var(--sl-color-accent);
   }
 
+  /* ── タブレット: 2枚 ── */
   @media (max-width: 1024px) {
-    .archive-carousel.is-limited .carousel-card:nth-child(n+7) {
-      display: none;
-    }
-
     .carousel-card {
-      flex: 0 0 calc(50% - 0.75rem);
+      flex: 0 0 calc(50% - 1rem);
+      min-width: 0;
     }
   }
 
+  /* ── スマートフォン: 1.1枚ぶん（次を少し見せる） ── */
   @media (max-width: 640px) {
-    .archive-carousel.is-limited .carousel-card:nth-child(n+4) {
-      display: none;
+    .carousel-viewport {
+      /* padding-left で左余白を確保し scroll-padding-left と同期 */
+      padding: 0 0.75rem;
+      scroll-padding-left: 0.75rem;
     }
 
     .carousel-card {
-      flex: 0 0 85%;
+      /* 左余白(0.75rem)を引いた残り幅 ≒ カード1枚 + 次のカードが少し見える */
+      flex: 0 0 calc(100% - 2.5rem);
+      min-width: 0;
     }
+
     .carousel-nav {
-      display: none; /* Hide buttons on mobile, use native scroll */
-    }
-    .archive-carousel {
-       padding: 0; /* Full width on mobile */
+      display: none; /* モバイルはネイティブスクロールで操作 */
     }
   }
 </style>
@@ -277,17 +286,17 @@ function getUrl(post: any) {
 <script>
   function initCarousels() {
     const carousels = document.querySelectorAll('[data-carousel]');
-    
+
     carousels.forEach(carousel => {
-      const viewport = carousel.querySelector('[data-viewport]');
+      const viewport = carousel.querySelector('[data-viewport]') as HTMLElement | null;
       const nextBtn = carousel.querySelector('[data-next]');
       const prevBtn = carousel.querySelector('[data-prev]');
-      
+
       if (!viewport || !nextBtn || !prevBtn) return;
-      
+
       const scrollAmount = () => {
-        const card = viewport.querySelector('.carousel-card');
-        return card ? card.clientWidth + 24 : 300; // card width + gap
+        const card = viewport.querySelector('.carousel-card') as HTMLElement | null;
+        return card ? card.offsetWidth + 16 : 280; // カード幅 + gap(1rem=16px)
       };
 
       nextBtn.addEventListener('click', () => {
@@ -300,7 +309,6 @@ function getUrl(post: any) {
     });
   }
 
-  // Handle both initial load and view transitions
   initCarousels();
   document.addEventListener('astro:after-swap', initCarousels);
 </script>

@@ -1,65 +1,100 @@
-# BouonLab — Japan Soundproofing Knowledge Base
+# BouonLab — 防音ナレッジベース（Japan Soundproofing Knowledge Base）
 
-Practical knowledge base on soundproofing, acoustic treatment, and noise solutions for homes and rentals in Japan. Covers both technical/DIY content and market/financial perspectives. Optimized for AI crawlers and human researchers.
+Practical knowledge base on soundproofing, acoustic treatment, noise reduction, and quiet living in Japan.
+Covers unit soundproof rooms, DIY acoustic treatment, soundproof rental apartments, financial/subsidy guides, creator environments, and market analysis.
+All primary content is in Japanese; English version is currently paused.
 
-Last updated: 2026-05-02
-
-## Primary Locales
-
-- Japanese (ja): https://bouon-lab.com/ja/ — primary content axis; all topics originate here
-- English (en): https://bouon-lab.com/en/ — Japan-lens reframe for international readers
+Last updated: 2026-06-01
 
 ---
 
-## Main Directories (Japanese)
+## Primary Locale
 
-### Soundproof Room (`soundproof-room`)
-Unit rooms, DIY builds, acoustic fundamentals, and investment/asset perspective.
-
-- Solution: https://bouon-lab.com/ja/soundproof-room/solution/
-- DIY: https://bouon-lab.com/ja/soundproof-room/diy/
-- Knowledge: https://bouon-lab.com/ja/soundproof-room/knowledge/
-- Others: https://bouon-lab.com/ja/soundproof-room/others/
-
-### Soundproof Rental (`soundproof-rental`)
-Music-friendly apartments, noise complaint handling, renovation ROI for landlords.
-
-- Solution: https://bouon-lab.com/ja/soundproof-rental/solution/
-- DIY: https://bouon-lab.com/ja/soundproof-rental/diy/
-- Knowledge: https://bouon-lab.com/ja/soundproof-rental/knowledge/
-- Others: https://bouon-lab.com/ja/soundproof-rental/others/
-
-### Column (`column`)
-Market trends, company analysis, and lifestyle/culture articles.
-
-- Company: https://bouon-lab.com/ja/column/company/
-- News: https://bouon-lab.com/ja/column/news/
-- Others: https://bouon-lab.com/ja/column/others/
+- Japanese (ja): https://bouon-lab.com/ja/ — primary content; all topics originate here
 
 ---
 
-## Main Directories (English — Japan Lens)
+## URL Structure
 
-English content reframes Japanese soundproofing through cultural, social, and market context.
+`https://bouon-lab.com/{lang}/{category}/{slug}/` (trailing slash required)
 
-- Noise & Society in Japan: https://bouon-lab.com/en/japan-noise-and-society/
-- Soundproof Housing in Japan: https://bouon-lab.com/en/japan-soundproof-housing/
-- Quiet Spaces & Booths in Japan: https://bouon-lab.com/en/japan-quiet-spaces/
+- lang: `ja`
+- category: one of 8 top-level categories listed below
+- slug: article-specific identifier
 
 ---
 
-## Pillar Articles (Japanese)
+## Content Categories (Japanese)
 
-- [Comprehensive] Soundproof Room Comparison 2026 (ROI + resale analysis): https://bouon-lab.com/ja/soundproof-room/others/bouon-osusume-hikaku/
-- [Comprehensive] Soundproof Rental Complete Guide 2026: https://bouon-lab.com/ja/soundproof-rental/knowledge/bouon-rental-market-guide/
-- [High] MUSISION Comprehensive Guide: https://bouon-lab.com/ja/soundproof-rental/knowledge/musision-comprehensive-guide/
-- [High] Soundproof Room Price Market 2026: https://bouon-lab.com/ja/soundproof-room/others/soundproof-room-price-market/
-- [High] Noise Complaint 3-Phase Manual: https://bouon-lab.com/ja/soundproof-rental/solution/noise-complaint-landlord-negotiation-guide/
-- [High] Soundproof Room Buyback Guide 2026: https://bouon-lab.com/ja/soundproof-room/others/soundproof-room-buyback-guide/
-- [High] Osaka Soundproof Rental Guide: https://bouon-lab.com/ja/soundproof-rental/others/osaka-soundproof-rental-guide/
-- [High] Streamer/VTuber Soundproof Environment Complete Guide: https://bouon-lab.com/ja/soundproof-rental/solution/streamer-soundproof-room-comprehensive-guide/
-- [High] Tokyo Soundproof Rental Summary 2026: https://bouon-lab.com/ja/soundproof-rental/others/tokyo-soundproof-rental-summary/
-- [High] D-value Truth and Myths (spec sheet traps): https://bouon-lab.com/ja/soundproof-room/knowledge/d-value-truth-and-myths/
+### 防音室 — Soundproof Room (`soundproof-room`)
+Unit rooms, installation, product comparison, acoustic design, size selection, maintenance.
+Index: https://bouon-lab.com/ja/soundproof-room/
+
+### 防音賃貸 — Soundproof Rental (`soundproof-rental`)
+Music-friendly apartments, contract checks, renovation ROI for landlords, market data.
+Index: https://bouon-lab.com/ja/soundproof-rental/
+
+### DIY防音 — DIY Soundproofing (`diy`)
+Self-built booths, acoustic panels, bass traps, materials, cost breakdowns, failure patterns.
+Index: https://bouon-lab.com/ja/diy/
+
+### お金・補助金 — Cost & Subsidies (`money`)
+Pricing, loans, subsidies (airport/road/ZEH), tax strategy, resale/ROI simulation.
+Index: https://bouon-lab.com/ja/money/
+
+### 配信・クリエイター — Creators & Streamers (`creator`)
+VTuber/ASMR/gaming environments, heat management, streaming setup, rental selection.
+Index: https://bouon-lab.com/ja/creator/
+
+### 防音の基礎知識 — Acoustics Knowledge (`knowledge`)
+D-value, STC, RT60, sound absorption vs insulation, noise regulations, seasonal statistics.
+Index: https://bouon-lab.com/ja/knowledge/
+
+### 地域ガイド — Local Guide (`local`)
+City-specific soundproof rental guides for Tokyo, Osaka, Sendai, Kobe, Kyoto, etc.
+Index: https://bouon-lab.com/ja/local/
+
+### 企業・法人向け — Business & Enterprise (`business`)
+Office soundproofing, shared studio market, ESG trends, corporate renovation strategy.
+Index: https://bouon-lab.com/ja/business/
+
+---
+
+## Key Articles (Japanese)
+
+### 防音室
+- 防音室おすすめ比較（ROI・リセール分析）: https://bouon-lab.com/ja/soundproof-room/bouon-osusume-hikaku/
+- D値の真実と誤解: https://bouon-lab.com/ja/knowledge/d-value-truth-and-myths/
+- 予算別防音室選び方ガイド: https://bouon-lab.com/ja/soundproof-room/soundproof-room-budget-selection-guide/
+- HSP・音過敏のための防音室完全ガイド: https://bouon-lab.com/ja/soundproof-room/hsp-soundproof-room-guide/
+- カワイ ナサール完全ガイド: https://bouon-lab.com/ja/soundproof-room/kawai-nasal-soundproof-room-guide/
+
+### 防音賃貸
+- 防音賃貸市場ガイド2026: https://bouon-lab.com/ja/soundproof-rental/bouon-rental-market-guide/
+- ミュージション総合ガイド: https://bouon-lab.com/ja/soundproof-rental/musision-comprehensive-guide/
+- 賃貸防音室の契約書チェックリスト: https://bouon-lab.com/ja/soundproof-rental/rental-proofroom-contractcheck/
+- 騒音苦情対応マニュアル: https://bouon-lab.com/ja/soundproof-rental/noise-complaint-landlord-negotiation-guide/
+- 賃貸オーナー向け防音リノベ経営戦略: https://bouon-lab.com/ja/soundproof-rental/owner-soundproof-renovation-strategy/
+
+### 地域ガイド
+- 東京の防音賃貸相場2026: https://bouon-lab.com/ja/local/tokyo-soundproof-rental-summary/
+- 大阪の防音賃貸ガイド: https://bouon-lab.com/ja/local/osaka-soundproof-rental-guide/
+- 仙台の防音賃貸事情: https://bouon-lab.com/ja/local/sendai-soundproof-rental-guide/
+
+### お金・補助金
+- 防音室価格相場2026: https://bouon-lab.com/ja/money/soundproof-room-price-market/
+- 防音室ローン・分割払い完全ガイド: https://bouon-lab.com/ja/money/soundproof-room-loan-guide/
+- 防音室の買取ガイド2026: https://bouon-lab.com/ja/money/soundproof-room-buyback-guide/
+- 補助金の対象エリア調べ方: https://bouon-lab.com/ja/money/soundproof-subsidy-check-guide/
+
+### 配信・クリエイター
+- 配信者・VTuber防音環境完全ガイド: https://bouon-lab.com/ja/creator/streamer-soundproof-room-comprehensive-guide/
+- VTuber向け防音室完全ガイド: https://bouon-lab.com/ja/creator/vtuber-soundproof-environment-complete-guide/
+
+### DIY防音
+- ベーストラップ設置ガイド: https://bouon-lab.com/ja/diy/bass-trap-installation-guide/
+- クローゼット防音室DIY: https://bouon-lab.com/ja/diy/closet-diy-soundproof-room/
+- DIY防音マスクの作り方: https://bouon-lab.com/ja/diy/diy-vocal-soundproof-mask/
 
 ---
 
@@ -71,10 +106,9 @@ https://bouon-lab.com/sitemap-index.xml
 
 ## Technical Foundation
 
-- Architecture: Astro v6+ with MDX content collections
-- Internationalization: `/ja/` (primary) and `/en/` (Japan-lens)
-- URL structure: `/{lang}/{category}/{subcategory}/{slug}/` (trailing slash required)
-- Frontmatter keys: `slug`, `category`, `subcategory`, `lang`, `date`, `lastmod`, `draft`
-- Taxonomy (ja): `soundproof-room` / `soundproof-rental` / `column`
-- Taxonomy (en): `japan-noise-and-society` / `japan-soundproof-housing` / `japan-quiet-spaces`
+- Framework: Astro v6 + Starlight + MDX
+- Primary locale: `/ja/` (Japanese)
+- URL pattern: `/ja/{category}/{slug}/` (flat, no subcategory layer)
+- 8 top-level categories: soundproof-room, soundproof-rental, diy, money, creator, knowledge, local, business
 - Draft articles (`draft: true`) are excluded from build and sitemap
+- All articles include `lang`, `category`, `slug`, `date`, `lastmod`, `tags` in frontmatter

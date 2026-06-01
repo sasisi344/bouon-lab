@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import starlight from '@astrojs/starlight';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
@@ -7,25 +8,58 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://bouon-lab.com',
   integrations: [
+    starlight({
+      title: '防音Lab',
+      description: '防音・音響対策の科学的ナレッジベース',
+      defaultLocale: 'root',
+      locales: {
+        root: { label: '日本語', lang: 'ja' },
+      },
+      sidebar: [
+        { label: '防音室',           link: '/ja/soundproof-room/' },
+        { label: '防音賃貸',         link: '/ja/soundproof-rental/' },
+        { label: 'DIY防音',          link: '/ja/diy/' },
+        { label: 'お金・補助金',      link: '/ja/money/' },
+        { label: '配信・クリエイター', link: '/ja/creator/' },
+        { label: '基礎知識',          link: '/ja/knowledge/' },
+        { label: '地域ガイド',         link: '/ja/local/' },
+        { label: '企業・法人向け',    link: '/ja/business/' },
+      ],
+      customCss: ['./src/styles/bouon-custom.css'],
+      favicon: '/favicon.svg',
+      components: {
+        Head:          './src/components/starlight/Head.astro',
+        PageTitle:     './src/components/starlight/PageTitle.astro',
+        Footer:        './src/components/starlight/Footer.astro',
+        ThemeProvider: './src/components/starlight/ThemeProvider.astro',
+        ThemeSelect:   './src/components/starlight/ThemeSelect.astro',
+      },
+    }),
     mdx(),
     sitemap({
+      filter(page) {
+        // /ja/ 以外のページはすべて除外（Starlight docs ルート、en/ など）
+        if (!page.includes('/ja/')) return false;
+        // about / privacy はサイトマップから除外（noindex ページ）
+        if (/\/(about|privacy)\/$/.test(page)) return false;
+        return true;
+      },
       serialize(item) {
         const url = item.url;
-        // Top-level lang page: /ja/
+        // トップページ: /ja/
         if (/\/ja\/$/.test(url)) {
           item.priority = 1.0;
           item.changefreq = 'weekly';
-        // Category index pages: /ja/soundproof-room/, etc.
+        // カテゴリ index: /ja/soundproof-room/ など（1セグメント）
         } else if (/\/ja\/[^/]+\/$/.test(url)) {
           item.priority = 0.8;
           item.changefreq = 'weekly';
-        // Subcategory index pages
+        // 記事ページ: /ja/{category}/{slug}/（2セグメント）
         } else if (/\/ja\/[^/]+\/[^/]+\/$/.test(url)) {
           item.priority = 0.7;
           item.changefreq = 'monthly';
-        // Individual articles
         } else {
-          item.priority = 0.6;
+          item.priority = 0.5;
           item.changefreq = 'monthly';
         }
         return item;
@@ -204,68 +238,65 @@ export default defineConfig({
     '/ja/soundproof-rental/others/owner-soundproof-renovation-strategy/': '/ja/soundproof-rental/owner-soundproof-renovation-strategy/',
     '/ja/column/company/renovation-roi-strategy/': '/ja/soundproof-rental/owner-soundproof-renovation-strategy/',
 
-    // ── 旧Hugo /posts/ → 新Astro URL (301) ──────────────────────────────
-    // solutions
-    '/posts/soundproof-room-humidifier-guide/': '/ja/solutions/soundproof-room-humidifier-guide/',
-    '/posts/rental-proofroom-contractcheck/': '/ja/solutions/rental-proofroom-contractcheck/',
-    '/posts/bass-trap-installation-guide/': '/ja/solutions/bass-trap-installation-guide/',
-    '/posts/closet-diy-soundproof-room/': '/ja/solutions/closet-diy-soundproof-room/',
-    '/posts/diy-vocal-soundproof-mask/': '/ja/solutions/diy-vocal-soundproof-mask/',
-    '/posts/soundproof-room-wifi-guide/': '/ja/solutions/soundproof-room-wifi-guide/',
-    '/posts/rt60-reverberation-measurement-guide/': '/ja/solutions/rt60-reverberation-measurement-guide/',
-    '/posts/soundproof-room-internet-lan-guide/': '/ja/solutions/soundproof-room-internet-lan-guide/',
-    '/posts/soundproof-room-cheapest/': '/ja/solutions/soundproof-room-cheapest/',
-    '/posts/bouon-osusume-hikaku/': '/ja/solutions/bouon-osusume-hikaku/',
-    '/posts/soundproof-room-gap-caulking/': '/ja/solutions/soundproof-room-gap-caulking/',
-    '/posts/sendai-soundproof-rental-guide/': '/ja/solutions/sendai-soundproof-rental-guide/',
-    '/posts/rental-unit-soundproof-room/': '/ja/solutions/rental-unit-soundproof-room/',
-    '/posts/soundproof-performance-dr-standard/': '/ja/solutions/soundproof-performance-dr-standard/',
-    '/posts/musision-soundproof-rental-review/': '/ja/solutions/musision-soundproof-rental-review/',
-    '/posts/acoustic-panel-placement/': '/ja/solutions/acoustic-panel-placement/',
-    '/posts/soundproof-room-rental-cost/': '/ja/solutions/soundproof-room-rental-cost/',
-    '/posts/soundproof-room-tax-guide/': '/ja/solutions/soundproof-room-tax-guide/',
-    '/posts/soundproof-room-loan/': '/ja/solutions/soundproof-room-loan/',
-    '/posts/soundproof-room-standard-size/': '/ja/solutions/soundproof-room-standard-size/',
-    '/posts/bourental-music-ensoutaime/': '/ja/solutions/bourental-music-ensoutaime/',
-    '/posts/osaka-soundproof-rental-guide/': '/ja/solutions/osaka-soundproof-rental-guide/',
-    '/posts/soundproof-room-effectiveness/': '/ja/solutions/soundproof-room-effectiveness/',
-    '/posts/nitori-soundproof-acoustic-guide/': '/ja/solutions/nitori-soundproof-acoustic-guide/',
-    '/posts/airport-soundproof-subsidy/': '/ja/solutions/airport-soundproof-subsidy/',
-    '/posts/soundproof-room-diy-complete-manual/': '/ja/solutions/soundproof-room-diy-complete-manual/',
-    '/posts/soundproof-room-price-market/': '/ja/solutions/soundproof-room-price-market/',
-    '/posts/bouon-rental-yatinsouba/': '/ja/solutions/bouon-rental-yatinsouba/',
-    '/posts/building-code-reform-2025-soundproof/': '/ja/solutions/building-code-reform-2025-soundproof/',
-    '/posts/diy-soundproofing-tips/': '/ja/solutions/diy-soundproofing-tips/',
-    '/posts/soundproof-room-types/': '/ja/solutions/soundproof-room-types/',
-    '/posts/soundproof-subsidy-news-2025/': '/ja/solutions/soundproof-subsidy-news-2025/',
-    '/posts/yamaha-avitecs-cefine-ns-guide/': '/ja/solutions/yamaha-avitecs-cefine-ns-guide/',
-    '/posts/rental-vs-purchase-soundproof-room/': '/ja/solutions/rental-vs-purchase-soundproof-room/',
-    // use-case
-    '/posts/streaming-room-layout-examples/': '/ja/use-case/streaming-room-layout-examples/',
-    '/posts/asmr-proofroom-guide/': '/ja/use-case/asmr-proofroom-guide/',
-    '/posts/keyboard-sound-streaming-soundproof-guide/': '/ja/use-case/keyboard-sound-streaming-soundproof-guide/',
-    '/posts/streamer-proofroom-choicetech/': '/ja/use-case/streamer-proofroom-choicetech/',
-    '/posts/streamer-trouble-rule/': '/ja/use-case/streamer-trouble-rule/',
-    '/posts/rental-game-soundproof-booth-3man/': '/ja/use-case/rental-game-soundproof-booth-3man/',
-    '/posts/cello-vibration-proof/': '/ja/use-case/cello-vibration-proof/',
-    '/posts/cable-noise-ground-loop-prevention/': '/ja/use-case/cable-noise-ground-loop-prevention/',
-    '/posts/drum-soundproof-room/': '/ja/use-case/drum-soundproof-room/',
-    '/posts/gamer-acoustic-placement/': '/ja/use-case/gamer-acoustic-placement/',
-    '/posts/gamer-bouon-room-select/': '/ja/use-case/gamer-bouon-room-select/',
-    // knowledge
-    '/posts/noise-regulation-update-2025/': '/ja/knowledge/noise-regulation-update-2025/',
-    '/posts/soundproof-culture-japan-vs-america/': '/ja/knowledge/soundproof-culture-japan-vs-america/',
-    '/posts/workbooth-office-soundproof-trend/': '/ja/knowledge/workbooth-office-soundproof-trend/',
-    // column (traffic確認済み記事のみ)
-    '/posts/hsp-soundproof-room-guide/': '/ja/column/hsp-soundproof-room-guide/',
-    // 近接記事へのリダイレクト（元記事がアーカイブ済み or 削除）
-    '/posts/gaming-streaming-floor-noise-control/': '/ja/use-case/streaming-room-layout-examples/',
-    '/posts/thunder-bouon-stopnoise-knowlkefge/': '/ja/knowledge/noise-regulation-update-2025/',
-    '/posts/vtuber-heat-noise-management/': '/ja/use-case/streamer-proofroom-choicetech/',
-    '/posts/bouon-kujyou-taisaku/': '/ja/knowledge/noise-regulation-update-2025/',
-    '/posts/soundproof-room-price-complete-guide-2025/': '/ja/solutions/soundproof-room-price-market/',
-    '/posts/bouoproof-maintnace/': '/ja/solutions/soundproof-room-effectiveness/',
-    '/posts/piano-proofroom-select-guide/': '/ja/use-case/cello-vibration-proof/',
+    // ── 旧Hugo /posts/ → 現カテゴリ構造へ転送（存在しない記事は最近接カテゴリへ）
+    // soundproof-room カテゴリ（記事が存在するもの）
+    '/posts/soundproof-room-humidifier-guide/': '/ja/soundproof-room/bouon-humidifier-comparison/',
+    '/posts/rental-proofroom-contractcheck/':   '/ja/soundproof-rental/rental-proofroom-contractcheck/',
+    '/posts/bass-trap-installation-guide/':     '/ja/diy/bass-trap-installation-guide/',
+    '/posts/closet-diy-soundproof-room/':       '/ja/diy/closet-diy-soundproof-room/',
+    '/posts/diy-vocal-soundproof-mask/':        '/ja/diy/diy-vocal-soundproof-mask/',
+    '/posts/bouon-osusume-hikaku/':             '/ja/soundproof-room/bouon-osusume-hikaku/',
+    '/posts/sendai-soundproof-rental-guide/':   '/ja/local/sendai-soundproof-rental-guide/',
+    '/posts/rental-unit-soundproof-room/':      '/ja/soundproof-rental/rental-unit-soundproof-room/',
+    '/posts/musision-soundproof-rental-review/':'/ja/soundproof-rental/musision-comprehensive-guide/',
+    '/posts/soundproof-room-rental-cost/':      '/ja/money/soundproof-room-rental-cost/',
+    '/posts/soundproof-room-loan/':             '/ja/money/soundproof-room-loan-guide/',
+    '/posts/osaka-soundproof-rental-guide/':    '/ja/local/osaka-soundproof-rental-guide/',
+    '/posts/nitori-soundproof-acoustic-guide/': '/ja/soundproof-room/nitori-soundproof-acoustic-guide/',
+    '/posts/soundproof-room-price-market/':     '/ja/money/soundproof-room-price-market/',
+    '/posts/diy-soundproofing-tips/':           '/ja/diy/diy-soundproofing-tips/',
+    '/posts/soundproof-subsidy-news-2025/':     '/ja/money/soundproof-subsidy-news-2025/',
+    '/posts/rental-vs-purchase-soundproof-room/':'/ja/money/rental-vs-purchase-soundproof-room/',
+    '/posts/gamer-acoustic-placement/':         '/ja/diy/gamer-acoustic-placement/',
+    '/posts/cello-vibration-proof/':            '/ja/soundproof-rental/rental-caution-cello/',
+    '/posts/drum-soundproof-room/':             '/ja/soundproof-room/soundproof-performance-drum/',
+    '/posts/streaming-room-layout-examples/':   '/ja/creator/streaming-room-layout-guide/',
+    '/posts/noise-regulation-update-2025/':     '/ja/knowledge/noise-regulation-update-2025/',
+    '/posts/soundproof-culture-japan-vs-america/':'/ja/knowledge/soundproof-culture-japan-vs-america/',
+    '/posts/workbooth-office-soundproof-trend/':'/ja/business/workbooth-office-soundproof-trend/',
+    '/posts/hsp-soundproof-room-guide/':        '/ja/soundproof-room/hsp-soundproof-room-guide/',
+    // 記事が存在しない → 最近接カテゴリへ転送
+    '/posts/soundproof-room-wifi-guide/':               '/ja/soundproof-room/',
+    '/posts/rt60-reverberation-measurement-guide/':     '/ja/knowledge/d-value-truth-and-myths/',
+    '/posts/soundproof-room-internet-lan-guide/':       '/ja/soundproof-room/',
+    '/posts/soundproof-room-cheapest/':                 '/ja/soundproof-room/',
+    '/posts/soundproof-room-gap-caulking/':             '/ja/soundproof-room/',
+    '/posts/soundproof-performance-dr-standard/':       '/ja/knowledge/d-value-truth-and-myths/',
+    '/posts/acoustic-panel-placement/':                 '/ja/diy/bass-trap-installation-guide/',
+    '/posts/soundproof-room-tax-guide/':                '/ja/money/',
+    '/posts/soundproof-room-standard-size/':            '/ja/soundproof-room/',
+    '/posts/bourental-music-ensoutaime/':               '/ja/soundproof-rental/',
+    '/posts/soundproof-room-effectiveness/':            '/ja/soundproof-room/',
+    '/posts/airport-soundproof-subsidy/':               '/ja/money/soundproof-subsidy-check-guide/',
+    '/posts/soundproof-room-diy-complete-manual/':      '/ja/diy/',
+    '/posts/bouon-rental-yatinsouba/':                  '/ja/soundproof-rental/',
+    '/posts/building-code-reform-2025-soundproof/':     '/ja/knowledge/',
+    '/posts/soundproof-room-types/':                    '/ja/soundproof-room/',
+    '/posts/yamaha-avitecs-cefine-ns-guide/':           '/ja/soundproof-room/kawai-nasal-soundproof-room-guide/',
+    '/posts/asmr-proofroom-guide/':                     '/ja/creator/',
+    '/posts/keyboard-sound-streaming-soundproof-guide/':'/ja/creator/',
+    '/posts/streamer-proofroom-choicetech/':            '/ja/creator/',
+    '/posts/streamer-trouble-rule/':                    '/ja/soundproof-rental/',
+    '/posts/rental-game-soundproof-booth-3man/':        '/ja/soundproof-rental/',
+    '/posts/cable-noise-ground-loop-prevention/':       '/ja/diy/',
+    '/posts/gamer-bouon-room-select/':                  '/ja/soundproof-room/',
+    '/posts/gaming-streaming-floor-noise-control/':     '/ja/creator/',
+    '/posts/thunder-bouon-stopnoise-knowlkefge/':       '/ja/knowledge/noise-regulation-update-2025/',
+    '/posts/vtuber-heat-noise-management/':             '/ja/creator/',
+    '/posts/bouon-kujyou-taisaku/':                     '/ja/soundproof-rental/',
+    '/posts/soundproof-room-price-complete-guide-2025/':'/ja/money/soundproof-room-price-market/',
+    '/posts/bouoproof-maintnace/':                      '/ja/soundproof-room/',
+    '/posts/piano-proofroom-select-guide/':             '/ja/soundproof-room/',
 
     // ── 旧Hugo /en/posts/ → /ja/ へ転送（英語ページ一時停止中） ──────────
     '/en/posts/budget-soundproof-booth-comparison/': '/ja/',
@@ -286,12 +317,12 @@ export default defineConfig({
     '/en/posts/sendai-soundproof-rental-guide/': '/ja/',
 
     // ── 旧Astro パス変更（slug frontmatter追加によるURL変更） ─────────────
-    '/ja/knowledge/diy-vocal-soundproof-mask/': '/ja/solutions/diy-vocal-soundproof-mask/',
-    '/ja/solutions/unit-rooms/bouon-osusume-hikaku/': '/ja/solutions/bouon-osusume-hikaku/',
+    '/ja/knowledge/diy-vocal-soundproof-mask/': '/ja/diy/diy-vocal-soundproof-mask/',
+    '/ja/solutions/unit-rooms/bouon-osusume-hikaku/': '/ja/soundproof-room/bouon-osusume-hikaku/',
     '/en/knowledge/soundproof-room-rental-cost/': '/ja/',
     '/en/knowledge/acoustic-panel-placement/': '/ja/',
-    '/ja/knowledge/absorption-vs-soundproofing-materials/': '/ja/solutions/soundproof-room-effectiveness/',
-    '/ja/knowledge/soundproof-subsidy-zero-cost/': '/ja/solutions/airport-soundproof-subsidy/',
+    '/ja/knowledge/absorption-vs-soundproofing-materials/': '/ja/knowledge/absorption-vs-soundproofing-materials/',
+    '/ja/knowledge/soundproof-subsidy-zero-cost/': '/ja/money/soundproof-subsidy-check-guide/',
     '/en/knowledge/soundproof-subsidy-zero-cost/': '/ja/',
   },
   image: {

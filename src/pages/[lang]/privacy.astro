@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
 export async function getStaticPaths() {
     return [
@@ -9,79 +9,280 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 
+const lastUpdated = '2026-06-01';
+const contactEmail = 'sasisi344@gmail.com';
+
 const content = {
     ja: {
         title: "Privacy Policy | 防音Lab",
         heading: "プライバシーポリシー・免責事項",
-        text: "防音Lab（以下「当サイト」といいます。）は、本ウェブサイト上で提供するサービスにおける個人情報の取扱いについて、以下の通りプライバシーポリシーを定めます。",
+        text: "防音Lab（以下「当サイト」といいます。）は、本ウェブサイト上で提供するサービス（以下「本サービス」といいます。）における、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。",
+        updatedLabel: "最終更新日",
         sections: [
             {
-                title: "1. 個人情報の収集と利用目的",
-                body: "当サイトでは、お問い合わせやコメントの際に、氏名やメールアドレス等の個人情報を入力いただく場合があります。これらの情報は、質問に対する回答や必要な情報を電子メールなどでご連絡する場合にのみ利用し、目的以外では利用いたしません。"
+                title: "1. 基本方針",
+                paragraphs: [
+                    "当サイトは、個人情報の重要性を認識し、個人情報の保護に関する法律（個人情報保護法）その他の関連法令およびガイドラインを遵守します。",
+                    "当サイトは、取得した個人情報を適法かつ公正な手段で取得し、利用目的の範囲内で適切に取り扱います。",
+                ],
             },
             {
-                title: "2. 広告の配信について",
-                body: "当サイトは、第三者配信の広告サービス「Googleアドセンス」を利用しています。広告配信事業者は、ユーザーの興味に応じた広告を表示するためにクッキー（Cookie）を使用することがあります。クッキーを無効にする設定およびGoogleアドセンスに関する詳細は、Googleの「広告 – ポリシーと規約」をご覧ください。また、当サイトはAmazon.co.jpを宣伝しリンクすることによって紹介料を獲得できる手段を提供することを目的に設定されたアフィリエイトプログラムである、Amazonアソシエイト・プログラムの参加者です。"
+                title: "2. 個人情報の定義",
+                paragraphs: [
+                    "本ポリシーにおいて「個人情報」とは、個人情報保護法にいう「個人情報」を指し、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日、住所、電話番号、メールアドレスその他の記述等により特定の個人を識別できる情報、および個人識別符号が含まれる情報をいいます。",
+                ],
             },
             {
-                title: "3. アクセス解析ツールについて",
-                body: "当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。このGoogleアナリティクスはトラフィックデータの収集のためにクッキー（Cookie）を使用しています。トラフィックデータは匿名で収集されており、個人を特定するものではありません。"
+                title: "3. 個人情報の収集方法",
+                paragraphs: [
+                    "当サイトは、ユーザーがお問い合わせフォームやメール等を通じて情報を入力・送信した場合に、氏名、メールアドレス、お問い合わせ内容等の個人情報を取得することがあります。",
+                    "また、本サービスの利用にあたり、Cookie、端末情報、IPアドレス、ブラウザの種類、アクセス日時、閲覧ページ、参照元URL等の情報を、自動的に取得する場合があります。",
+                ],
             },
             {
-                title: "4. 免責事項",
-                body: "当サイトのコンテンツ・情報について、できる限り正確な情報を提供するよう努めておりますが、正確性や安全性を保証するものではありません。情報が古くなっていることもございます。当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。また、当サイトからリンクやバナーなどによって他のサイトに移動された場合、移動先サイトで提供される情報、サービス等について一切の責任を負いません。"
+                title: "4. 個人情報の利用目的",
+                paragraphs: [
+                    "当サイトは、取得した個人情報を以下の目的で利用します。",
+                    "・お問い合わせへの回答、連絡、本人確認のため",
+                    "・本サービスの提供、運営、改善、新機能の開発のため",
+                    "・利用状況の分析、コンテンツの品質向上のため",
+                    "・不正利用の防止、セキュリティの確保のため",
+                    "・法令に基づく対応、および利用規約等の違反への対応のため",
+                    "利用目的を変更する場合は、変更後の目的を公表するか、本人に通知します。",
+                ],
             },
             {
-                title: "5. 著作権・肖像権について",
-                body: "当サイトで掲載しているすべてのコンテンツ（文章、画像、動画、デザイン等）の著作権・肖像権等は、当サイト所有者または各権利所有者が保有し、許可なく無断転載することを禁止します。"
-            }
-        ]
+                title: "5. 個人情報の第三者提供",
+                paragraphs: [
+                    "当サイトは、次のいずれかに該当する場合を除き、あらかじめユーザーの同意を得ることなく、個人情報を第三者に提供しません。",
+                    "・人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき",
+                    "・公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき",
+                    "・国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき",
+                    "・法令に基づき開示・提供が求められた場合",
+                ],
+            },
+            {
+                title: "6. 個人情報の安全管理措置",
+                paragraphs: [
+                    "当サイトは、個人情報の漏えい、滅失、き損等を防止するため、必要かつ適切な安全管理措置を講じます。",
+                    "外部サービスを利用する場合は、当該事業者のセキュリティ水準を確認し、必要な契約・設定を行います。",
+                    "ただし、インターネット上の通信の性質上、完全な安全性を保証するものではありません。",
+                ],
+            },
+            {
+                title: "7. Cookieおよび類似技術の利用",
+                paragraphs: [
+                    "当サイトは、ユーザー体験の向上、利用状況の把握、広告配信の最適化等のため、Cookieおよびこれに類する技術（ローカルストレージ、ウェブビーコン等）を使用することがあります。",
+                    "Cookieは、ユーザーのブラウザに保存される小さなテキストファイルです。ブラウザの設定により、Cookieの受け入れを拒否したり、保存済みのCookieを削除したりできます。",
+                    "Cookieを無効にした場合、本サービスの一部機能が正常に動作しないことがあります。",
+                ],
+            },
+            {
+                title: "8. 広告の配信について",
+                paragraphs: [
+                    "当サイトは、第三者配信の広告サービス「Googleアドセンス」を利用しています。広告配信事業者は、ユーザーの興味に応じた広告を表示するためにCookieを使用することがあります。",
+                    "Googleアドセンスに関する詳細およびCookieの無効化方法については、Googleの「広告 – ポリシーと規約」および「Google 広告設定」をご確認ください。",
+                    "また、当サイトはAmazon.co.jpを宣伝しリンクすることによって紹介料を獲得できる手段を提供することを目的としたアフィリエイトプログラム「Amazonアソシエイト・プログラム」の参加者です。",
+                    "アフィリエイトリンクから外部サイトへ移動し、商品を購入等された場合、当サイトに紹介料が支払われることがあります。これによりユーザーに追加費用が発生することはありません。",
+                ],
+            },
+            {
+                title: "9. アクセス解析ツールについて",
+                paragraphs: [
+                    "当サイトでは、Google LLCが提供するアクセス解析ツール「Googleアナリティクス」を利用しています。",
+                    "GoogleアナリティクスはCookieを使用してトラフィックデータを収集します。収集されるデータは匿名化された統計情報として処理され、個人を直接特定するものではありません。",
+                    "Googleアナリティクスの利用規約およびプライバシーポリシーについては、Googleの公式サイトをご確認ください。",
+                    "ブラウザの拡張機能（Google アナリティクス オプトアウト アドオン等）により、解析対象から除外することも可能です。",
+                ],
+            },
+            {
+                title: "10. 外部サービス・外部リンク",
+                paragraphs: [
+                    "当サイトは、利便性向上のため、外部サイトへのリンクを設置することがあります。",
+                    "リンク先サイトは、それぞれ独立したプライバシーポリシーおよび利用規約に基づいて運営されています。当サイトは、リンク先サイトにおける個人情報の取扱いについて責任を負いません。",
+                    "外部サービス（Google、Amazon等）への情報送信については、各事業者のプライバシーポリシーが適用されます。",
+                ],
+            },
+            {
+                title: "11. 個人情報の開示・訂正・利用停止等",
+                paragraphs: [
+                    "ユーザー本人から、個人情報の開示、訂正、追加、削除、利用停止、第三者提供の停止（以下「開示等」といいます。）を求められた場合、本人確認のうえ、法令に従い合理的な範囲で速やかに対応します。",
+                    "開示等の請求にあたっては、末尾のお問い合わせ窓口までご連絡ください。",
+                    "本人確認ができない場合、代理人による請求の要件を満たさない場合、または法令により開示等を行わないことが認められる場合は、請求に応じられないことがあります。",
+                ],
+            },
+            {
+                title: "12. 本ポリシーの変更",
+                paragraphs: [
+                    "当サイトは、法令の改正、サービス内容の変更等に応じて、本ポリシーの内容を変更することがあります。",
+                    "変更後の本ポリシーは、本ページに掲載した時点から効力を生じます。重要な変更を行う場合は、本サイト上で告知します。",
+                ],
+            },
+            {
+                title: "13. お問い合わせ窓口",
+                contactEmail: true,
+                paragraphs: [
+                    "本ポリシーに関するお問い合わせ、個人情報の開示等の請求は、下記メールアドレスあてにご連絡ください。",
+                    "お問い合わせの際は、件名に「個人情報のお問い合わせ」等とご記載いただくとスムーズです。",
+                ],
+            },
+            {
+                title: "14. 免責事項",
+                paragraphs: [
+                    "当サイトのコンテンツ・情報について、できる限り正確な情報を提供するよう努めておりますが、正確性、完全性、最新性、有用性、安全性等を保証するものではありません。",
+                    "掲載内容は予告なく変更・削除される場合があります。情報が古くなっていることもございます。",
+                    "当サイトの情報を参考にして行った判断・行動により生じた損害等について、当サイトは一切の責任を負いかねます。",
+                    "本サービスの中断、停止、終了、データの消失、機器の故障等により生じた損害についても、当サイトは責任を負いません。",
+                    "当サイトからリンクやバナー等により外部サイトへ移動された場合、移動先で提供される情報・サービス等について、当サイトは一切の責任を負いません。",
+                ],
+            },
+            {
+                title: "15. 著作権・肖像権について",
+                paragraphs: [
+                    "当サイトで掲載しているすべてのコンテンツ（文章、画像、動画、図表、デザイン、プログラム等）の著作権・肖像権その他の権利は、当サイト運営者または各権利者に帰属します。",
+                    "私的使用の範囲を超える複製、転載、改変、公衆送信等を、権利者の許可なく行うことを禁止します。",
+                    "引用する場合は、著作権法の定める範囲内とし、出典を明示してください。",
+                ],
+            },
+        ],
     },
     en: {
-        title: "Privacy Policy | BouonLab",
+        title: "Privacy Policy | 防音Lab",
         heading: "Privacy Policy & Disclaimer",
-        text: "BouonLab (hereinafter referred to as 'this site') establishes the following privacy policy regarding the handling of personal information in the services provided on this website.",
+        text: "防音Lab (hereinafter referred to as 'this site') establishes the following privacy policy regarding the handling of personal information in the services provided on this website.",
+        updatedLabel: "Last updated",
         sections: [
             {
-                title: "1. Collection and Use of Personal Information",
-                body: "On this site, we may request that you provide personal information such as your name and email address when making inquiries or leaving comments. This information is used solely for responding to inquiries or providing necessary information via email and will not be used for any other purpose."
+                title: "1. Basic Policy",
+                paragraphs: [
+                    "This site recognizes the importance of personal information and complies with applicable privacy laws and guidelines.",
+                    "Personal information is obtained by lawful and fair means and handled only within the scope of the stated purposes.",
+                ],
             },
             {
-                title: "2. Advertising",
-                body: "This site uses Google AdSense, a third-party advertising service. Advertising providers may use cookies to display advertisements based on your interests. For more information on disabling cookies and Google AdSense, please visit Google's 'Advertising - Policies and Terms'. This site is also a participant in the Amazon Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.co.jp."
+                title: "2. Definition of Personal Information",
+                paragraphs: [
+                    "In this policy, 'personal information' means information about a living individual that can identify a specific person, including name, date of birth, address, phone number, email address, and similar descriptors.",
+                ],
             },
             {
-                title: "3. Access Analysis Tools",
-                body: "This site uses Google Analytics for traffic analysis. Google Analytics uses cookies to collect traffic data. This data is collected anonymously and does not identify individuals."
+                title: "3. How We Collect Information",
+                paragraphs: [
+                    "We may collect personal information such as your name, email address, and inquiry details when you contact us via forms or email.",
+                    "We may also automatically collect cookies, device information, IP addresses, browser type, access times, pages viewed, and referral URLs.",
+                ],
             },
             {
-                title: "4. Disclaimer",
-                body: "While we strive to provide the most accurate information possible, we do not guarantee the accuracy or safety of the content on this site. Information may be outdated. We assume no responsibility for any damage caused by the content posted on this site. Furthermore, we are not responsible for the information or services provided on third-party sites reached via links or banners from this site."
+                title: "4. Purpose of Use",
+                paragraphs: [
+                    "We use collected personal information for the following purposes:",
+                    "· Responding to inquiries and verifying identity",
+                    "· Providing, operating, and improving the service",
+                    "· Analyzing usage and improving content quality",
+                    "· Preventing unauthorized use and ensuring security",
+                    "· Complying with laws and addressing violations of terms",
+                ],
             },
             {
-                title: "5. Copyright and Image Rights",
-                body: "The copyright and image rights for all content (text, images, video, design, etc.) on this site are owned by the site owner or the respective rights holders. Unauthorized reproduction is prohibited."
-            }
-        ]
-    }
+                title: "5. Disclosure to Third Parties",
+                paragraphs: [
+                    "We will not provide personal information to third parties without your consent, except as required by law or in cases permitted under applicable privacy regulations.",
+                ],
+            },
+            {
+                title: "6. Security Measures",
+                paragraphs: [
+                    "We take necessary and appropriate measures to prevent leakage, loss, or damage of personal information.",
+                    "However, due to the nature of internet communications, complete security cannot be guaranteed.",
+                ],
+            },
+            {
+                title: "7. Cookies and Similar Technologies",
+                paragraphs: [
+                    "This site may use cookies and similar technologies to improve user experience, analyze usage, and optimize advertising.",
+                    "You can refuse or delete cookies through your browser settings. Some features may not work correctly if cookies are disabled.",
+                ],
+            },
+            {
+                title: "8. Advertising",
+                paragraphs: [
+                    "This site uses Google AdSense. Ad providers may use cookies to display interest-based ads.",
+                    "This site is also a participant in the Amazon Associates Program.",
+                ],
+            },
+            {
+                title: "9. Access Analytics",
+                paragraphs: [
+                    "This site uses Google Analytics to collect traffic data via cookies. Data is processed as anonymized statistics.",
+                ],
+            },
+            {
+                title: "10. External Services and Links",
+                paragraphs: [
+                    "This site may link to external websites. Each linked site has its own privacy policy, and we are not responsible for their handling of personal information.",
+                ],
+            },
+            {
+                title: "11. Disclosure, Correction, and Suspension of Use",
+                paragraphs: [
+                    "If you request disclosure, correction, deletion, or suspension of use of your personal information, we will respond within a reasonable scope after verifying your identity.",
+                ],
+            },
+            {
+                title: "12. Changes to This Policy",
+                paragraphs: [
+                    "We may revise this policy due to legal changes or service updates. The revised policy takes effect when posted on this page.",
+                ],
+            },
+            {
+                title: "13. Contact",
+                contactEmail: true,
+                paragraphs: [
+                    "For inquiries regarding this policy or requests related to personal information, please contact us at the email address below.",
+                ],
+            },
+            {
+                title: "14. Disclaimer",
+                paragraphs: [
+                    "While we strive to provide accurate information, we do not guarantee accuracy, completeness, timeliness, or usefulness of content.",
+                    "We are not liable for any damages arising from use of information on this site or from linked external sites.",
+                ],
+            },
+            {
+                title: "15. Copyright",
+                paragraphs: [
+                    "All content on this site is owned by the site operator or respective rights holders. Unauthorized reproduction is prohibited.",
+                ],
+            },
+        ],
+    },
 };
 
 const t = content[lang as keyof typeof content];
 ---
 
-<Layout title={t.title}>
+<StarlightPage frontmatter={{ title: t.title, description: t.text.slice(0, 120), head: [{ tag: 'meta', attrs: { name: 'robots', content: 'noindex,follow' } }] }} hasSidebar={false}>
     <main class="page-container">
         <header class="page-header">
-            <h1>{t.heading}</h1>
+            <h1 id="_top">{t.heading}</h1>
+            <p class="updated-at">{t.updatedLabel}：{lastUpdated}</p>
         </header>
 
         <section class="page-content">
             <p class="intro-text">{t.text}</p>
 
-            {t.sections.map(section => (
+            {t.sections.map((section) => (
                 <div class="legal-section">
                     <h2>{section.title}</h2>
-                    <p>{section.body}</p>
+                    {section.paragraphs.map((paragraph) => (
+                        <p>{paragraph}</p>
+                    ))}
+                    {section.contactEmail && (
+                        <p class="contact-email">
+                            {lang === 'ja' ? 'メールアドレス' : 'Email'}：
+                            <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+                        </p>
+                    )}
                 </div>
             ))}
         </section>
@@ -90,7 +291,7 @@ const t = content[lang as keyof typeof content];
             <a href={`/${lang}/`}>← {lang === 'ja' ? 'トップへ戻る' : 'Back to Home'}</a>
         </div>
     </main>
-</Layout>
+</StarlightPage>
 
 <style>
     .page-container {
@@ -113,6 +314,13 @@ const t = content[lang as keyof typeof content];
         letter-spacing: 0.1rem;
     }
 
+    .updated-at {
+        margin: 1rem 0 0;
+        font-size: 0.875rem;
+        color: var(--text-dim);
+        letter-spacing: 0.05rem;
+    }
+
     .intro-text {
         color: var(--text-light);
         font-weight: 500;
@@ -120,13 +328,13 @@ const t = content[lang as keyof typeof content];
     }
 
     .legal-section {
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
     }
 
     h2 {
         font-size: 1.3rem;
         color: #fff;
-        margin-top: 3rem;
+        margin-top: 2.5rem;
         margin-bottom: 1.25rem;
         padding-left: 1rem;
         border-left: 3px solid var(--primary-gold);
@@ -136,8 +344,17 @@ const t = content[lang as keyof typeof content];
         font-size: 1rem;
         line-height: 1.8;
         color: var(--text-dim);
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         letter-spacing: 0.03rem;
+    }
+
+    .contact-email a {
+        color: var(--primary-gold);
+        text-decoration: none;
+    }
+
+    .contact-email a:hover {
+        text-decoration: underline;
     }
 
     .back-link {

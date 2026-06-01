@@ -1,0 +1,222 @@
+/* =====================================================
+   BouonLab カスタムスタイル — Starlight ダーク固定
+   ===================================================== */
+
+/* ---- 共通: フォント ---- */
+:root {
+  --sl-font: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN',
+             'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  --sl-font-system: var(--sl-font);
+  --sl-text-body-size: 1rem;
+  --sl-line-height-heading: 1.4;
+
+  /* グレースケール */
+  --sl-color-white: #f2f4f8;
+  --sl-color-black: #080a0e;
+  --sl-color-gray-1: #e8ecf3;
+  --sl-color-gray-2: #c0c8d8;
+  --sl-color-gray-3: #8090a8;
+  --sl-color-gray-4: #4a5568;
+  --sl-color-gray-5: #2a3245;
+  --sl-color-gray-6: #161c28;
+  --sl-color-gray-7: #0d1018;
+
+  /* 背景 */
+  --sl-color-bg:             #0f1117;
+  --sl-color-bg-nav:         #090c14;
+  --sl-color-bg-sidebar:     #0f1117;
+  --sl-color-bg-inline-code: #1a2035;
+  --sl-color-bg-accent:      #1a1500;
+
+  /* テキスト */
+  --sl-color-text:        #dde3ef;
+  --sl-color-text-accent: #e8c84a;
+  --sl-color-text-invert: #0f1117;
+
+  /* ボーダー */
+  --sl-color-hairline:       #252d40;
+  --sl-color-hairline-light: #1a2035;
+
+  /* アクセント: ゴールド */
+  --sl-color-accent-low:  #1e1600;
+  --sl-color-accent:      #c9a830;
+  --sl-color-accent-high: #e8d070;
+}
+
+/* StarlightPage カスタムレイアウト: 空の PageTitle パネルを非表示 */
+main > .content-panel:first-of-type:not(:has(.sl-markdown-content)) {
+  display: none;
+}
+
+main > .content-panel:first-of-type:not(:has(.sl-markdown-content)) + .content-panel {
+  border-top: none;
+}
+
+/* =====================================================
+   サイドバー
+   ===================================================== */
+
+nav.sidebar {
+  border-right: 1px solid var(--sl-color-hairline);
+}
+
+nav.sidebar a {
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+nav.sidebar a[aria-current='page'],
+nav.sidebar a[aria-current='true'] {
+  color: var(--sl-color-accent);
+  font-weight: 700;
+}
+
+/* =====================================================
+   記事本文 (.sl-markdown-content)
+   ===================================================== */
+
+.sl-markdown-content {
+  line-height: 1.9;
+  letter-spacing: 0.025em;
+  font-size: 1rem;
+}
+
+.sl-markdown-content h2 {
+  border-bottom: 2px solid var(--sl-color-accent);
+  padding-bottom: 0.35em;
+  margin-top: 2.8rem;
+  font-size: 1.35rem;
+}
+
+.sl-markdown-content h3 {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+.sl-markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1.5rem 0;
+}
+
+.sl-markdown-content th {
+  background: var(--sl-color-bg-nav);
+  padding: 0.55rem 0.8rem;
+  text-align: left;
+  border: 1px solid var(--sl-color-hairline);
+  font-weight: 600;
+}
+
+.sl-markdown-content td {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--sl-color-hairline-light);
+  vertical-align: top;
+}
+
+.sl-markdown-content tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.sl-markdown-content a {
+  color: var(--sl-color-text-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.sl-markdown-content a:hover {
+  opacity: 0.8;
+}
+
+.sl-markdown-content strong {
+  color: #f5e680;
+}
+
+.sl-markdown-content :not(pre) > code {
+  background: var(--sl-color-bg-inline-code);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+.sl-markdown-content hr {
+  border: none;
+  border-top: 1px solid var(--sl-color-hairline);
+  margin: 2.5rem 0;
+}
+
+.sl-markdown-content ul,
+.sl-markdown-content ol {
+  padding-left: 1.5rem;
+}
+
+.sl-markdown-content li {
+  margin-bottom: 0.4rem;
+}
+
+/* =====================================================
+   カスタムコンポーネント
+   ===================================================== */
+
+.region-banner {
+  background: rgba(201, 168, 48, 0.07);
+  border-left: 3px solid var(--sl-color-accent);
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+}
+
+.related-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* =====================================================
+   ヘッダー
+   ===================================================== */
+
+header.header {
+  border-bottom: 1px solid var(--sl-color-hairline);
+  background: var(--sl-color-bg-nav);
+  backdrop-filter: blur(12px);
+}
+
+.site-title {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* =====================================================
+   フッター（Starlight Footer コンポーネント）
+   ===================================================== */
+
+footer.bouon-footer {
+  border-top: 1px solid var(--sl-color-hairline);
+}
+
+/* =====================================================
+   スクロールバー
+   ===================================================== */
+
+:root {
+  scrollbar-color: var(--sl-color-gray-4) var(--sl-color-gray-6);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--sl-color-gray-6); }
+::-webkit-scrollbar-thumb {
+  background: var(--sl-color-gray-4);
+  border-radius: 4px;
+}

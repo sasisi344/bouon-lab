@@ -1,0 +1,8 @@
+---
+// テーマをダーク固定に強制する ThemeProvider 上書き
+---
+<script is:inline>
+  // data-theme を常に 'dark' に固定し、localStorage への書き込みも上書き
+  document.documentElement.setAttribute('data-theme', 'dark');
+  try { localStorage.setItem('starlight-theme', 'dark'); } catch (_) {}
+</script>

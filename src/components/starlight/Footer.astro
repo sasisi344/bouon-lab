@@ -1,0 +1,97 @@
+---
+// BouonLab カスタムフッター（日本語固定・starlightRoute 非依存）
+const siteTitle = 'BouonLab';
+const prefix = '/ja';
+
+const labels = {
+  nav: '運営情報',
+  about: 'サイトについて',
+  privacy: 'プライバシーポリシー・免責',
+  tagline: '防音・音響対策の科学的ナレッジベース',
+};
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bouon-footer">
+  <div class="bouon-footer__inner">
+    <div class="bouon-footer__brand">
+      <a href={`${prefix}/`} class="bouon-footer__title">{siteTitle}</a>
+      <p class="bouon-footer__tagline">{labels.tagline}</p>
+    </div>
+
+    <nav class="bouon-footer__nav" aria-label={labels.nav}>
+      <a href={`${prefix}/about/`}>{labels.about}</a>
+      <span class="bouon-footer__sep" aria-hidden="true">·</span>
+      <a href={`${prefix}/privacy/`}>{labels.privacy}</a>
+    </nav>
+
+    <p class="bouon-footer__copy">© {year} {siteTitle}</p>
+  </div>
+</footer>
+
+<style>
+  .bouon-footer {
+    margin-top: 3rem;
+    padding: 2rem 0 1.5rem;
+    border-top: 1px solid var(--sl-color-hairline);
+  }
+
+  .bouon-footer__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  .bouon-footer__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--sl-color-accent);
+    text-decoration: none;
+  }
+
+  .bouon-footer__title:hover {
+    color: var(--sl-color-accent-high);
+  }
+
+  .bouon-footer__tagline {
+    margin: 0.35rem 0 0;
+    font-size: 0.8rem;
+    color: var(--sl-color-gray-3);
+    letter-spacing: 0.04em;
+  }
+
+  .bouon-footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .bouon-footer__nav a {
+    color: var(--sl-color-gray-2);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .bouon-footer__nav a:hover {
+    color: var(--sl-color-accent);
+  }
+
+  .bouon-footer__sep {
+    color: var(--sl-color-gray-4);
+    user-select: none;
+  }
+
+  .bouon-footer__copy {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--sl-color-gray-4);
+    letter-spacing: 0.03em;
+  }
+</style>

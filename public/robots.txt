@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /_astro/
+Disallow: /en/
 
 # AI Crawlers — explicitly allowed for indexing and training
 User-agent: GPTBot

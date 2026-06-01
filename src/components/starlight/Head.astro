@@ -1,0 +1,17 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import DefaultHead from '@astrojs/starlight/components/Head.astro';
+
+const noindex = false; // 個別ページの noindex は frontmatter.head で制御
+---
+
+<DefaultHead {...Astro.props} />
+{noindex && <meta name="robots" content="noindex,follow" />}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RWEHZPS976"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RWEHZPS976');
+</script>

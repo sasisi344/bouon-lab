@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
-import Layout from '../../../layouts/Layout.astro';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import SmartLink from '../../../components/SmartLink.astro';
 import RegionBanner from '../../../components/RegionBanner.astro';
 import ArchiveCarousel from '../../../components/ArchiveCarousel.astro';
@@ -73,7 +73,7 @@ export async function getStaticPaths() {
 }
 
 const { post, relatedPosts, isIndex, allCategoryPosts } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 
 // パンくず等の情報を取得
 const lang = post.data.lang || 'ja';
@@ -268,9 +268,20 @@ const starterAutoPosts = allCategoryPosts
 const starterSetPosts = [...manualStarterPosts, ...starterAutoPosts].slice(0, 6);
 
 const getRecommendedReadMinutes = (entry: any) => {
-  const source = `${entry.data.title} ${entry.data.description}`;
-  const charsPerMinute = lang === 'ja' ? 550 : 900;
-  return Math.max(1, Math.round(source.length / charsPerMinute));
+  const raw = entry.body ?? '';
+  const body = raw
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/`[^`]*`/g, '')
+    .replace(/<[^>]+\/?>/g, '')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/[*_~|]/g, '')
+    .replace(/^[-*+>]\s+/gm, '')
+    .replace(/^\d+\.\s+/gm, '')
+    .trim();
+  const total = `${entry.data.title} ${entry.data.description} ${body}`;
+  const charsPerMinute = lang === 'ja' ? 500 : 1000;
+  return Math.max(1, Math.round(total.length / charsPerMinute));
 };
 
 const components = {
@@ -283,7 +294,14 @@ const components = {
 };
 ---
 
-<Layout title={post.data.title} description={post.data.description} image={resolvePostCover(post).src}>
+<StarlightPage
+  frontmatter={{
+    title: post.data.title,
+    description: post.data.description,
+  }}
+  headings={headings}
+  hasSidebar={true}
+>
   <div class="article-wrapper">
     <!-- 知的なパンくずリスト -->
     <nav class="breadcrumb">
@@ -306,7 +324,7 @@ const components = {
            <span class="date">{post.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
            <span class="lang-tag">{lang.toUpperCase()}</span>
         </div>
-        <h1>{post.data.title}</h1>
+        <h1 id="_top">{post.data.title}</h1>
         <p class="description">{post.data.description}</p>
         <div class="featured-image-container">
           <Image src={resolvePostCover(post)} alt={post.data.title} class="featured-image" width={1200} height={675} format="webp" />
@@ -475,7 +493,7 @@ const components = {
       )}
     </article>
   </div>
-</Layout>
+</StarlightPage>
 
 <style>
   .article-wrapper {
