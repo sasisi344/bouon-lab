@@ -10,7 +10,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: '防音Lab',
-      description: '防音・音響対策の科学的ナレッジベース',
+      description: '住まい・予算・用途に合わせた防音の解決策をまとめたガイド',
       defaultLocale: 'root',
       locales: {
         root: { label: '日本語', lang: 'ja' },
@@ -321,7 +321,6 @@ export default defineConfig({
     '/ja/solutions/unit-rooms/bouon-osusume-hikaku/': '/ja/soundproof-room/bouon-osusume-hikaku/',
     '/en/knowledge/soundproof-room-rental-cost/': '/ja/',
     '/en/knowledge/acoustic-panel-placement/': '/ja/',
-    '/ja/knowledge/absorption-vs-soundproofing-materials/': '/ja/knowledge/absorption-vs-soundproofing-materials/',
     '/ja/knowledge/soundproof-subsidy-zero-cost/': '/ja/money/soundproof-subsidy-check-guide/',
     '/en/knowledge/soundproof-subsidy-zero-cost/': '/ja/',
   },

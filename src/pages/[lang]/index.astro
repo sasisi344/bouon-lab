@@ -24,9 +24,9 @@ const allContent = (await getCollection('posts'))
   .filter((post) => post.data.draft !== true);
 const filteredPosts = allContent.filter(p => p.data.lang === lang);
 
-/** トップ「最新」一覧：最大50件・初期表示9件・もっと見るで9件ずつ追加（クライアント側スクリプトと同期） */
+/** トップ「最新」一覧：最大50件・初期表示6件・もっと見るで6件ずつ追加（クライアント側スクリプトと同期） */
 const MAX_HOME_LATEST = 50;
-const HOME_INITIAL_VISIBLE = 9;
+const HOME_INITIAL_VISIBLE = 6;
 
 const sortedByDate = filteredPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const latestPostsForHome = sortedByDate.slice(0, MAX_HOME_LATEST);
@@ -42,6 +42,8 @@ function getUrl(post: any) {
     return slug ? `/${lang}/${category}/${slug}/` : `/${lang}/${category}/`;
 }
 
+const HUB_POSTS_COUNT = 3;
+
 const hubRoutes = HUB_CLUSTERS.map((cluster) => {
   const pool = filteredPosts.filter((post) => {
     const text = `${post.data.title} ${post.data.description} ${(post.data.tags || []).join(' ')}`.toLowerCase();
@@ -56,14 +58,21 @@ const hubRoutes = HUB_CLUSTERS.map((cluster) => {
   const fallbackPool = filteredPosts
     .filter((post) => post.data.category === categoryFallback)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-  const firstPost = sortedPool[0] ?? fallbackPool[0];
+
+  const matchedIds = new Set(sortedPool.map((post) => post.id));
+  const mergedPool = [
+    ...sortedPool,
+    ...fallbackPool.filter((post) => !matchedIds.has(post.id)),
+  ];
+  const featuredPosts = mergedPool.slice(0, HUB_POSTS_COUNT);
 
   return {
     ...cluster,
-    firstPost,
-    count: sortedPool.length,
+    featuredPosts,
+    count: sortedPool.length || fallbackPool.length,
+    categoryUrl: `/${lang}/${categoryFallback}/`,
   };
-}).filter((route) => route.firstPost);
+}).filter((route) => route.featuredPosts.length > 0);
 
 // ヒーロー画像の最適化
 const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
@@ -71,20 +80,20 @@ const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
 const directoryCategories = topCategoriesForLang(uiLang);
 ---
 
-<StarlightPage frontmatter={{ title: '防音Lab | 科学的防音ナレッジベース', description: '防音・音響対策の科学的ナレッジベース', template: 'splash' }} hasSidebar={false}>
+<StarlightPage frontmatter={{ title: 'あなたの環境に合わせた防音ガイド', description: '住まい・予算・用途の違いに寄り添い、あなたに合う防音の解決策をまとめたガイドです。', template: 'splash' }} hasSidebar={false}>
   <!-- ダーク・モカ・ヒーローセクション -->
   <section class="hero-dark" style={`background-image: url('${optimizedHero.src}')`}>
     <div class="overlay"></div>
     <div class="hero-content">
       <div class="eyebrow-box">
         <div class="line"></div>
-        <span class="eyebrow">{lang === 'ja' ? 'SCIENCE OF SILENCE' : 'INTELLECTUAL ACOUSTICS'}</span>
+        <span class="eyebrow">{lang === 'ja' ? 'YOUR QUIET SPACE' : 'YOUR QUIET SPACE'}</span>
       </div>
-      <h1>{lang === 'ja' ? '静寂を、科学する。' : 'The Science of Silence.'}</h1>
+      <h1>{lang === 'ja' ? 'あなたの環境に、合わせた防音を。' : 'Soundproofing that fits your space.'}</h1>
       <p class="lead">
         {lang === 'ja' 
-          ? '防音Labは、音の問題を理論とデータで解き明かす、専門家による知的ナレッジベースです。' 
-          : 'A dedicated platform for acoustical knowledge, solving sound issues through science and data.'}
+          ? '防音Labは、住まい・予算・用途の違いに寄り添い、あなたに合う防音の解決策をまとめたガイドです。' 
+          : 'BouonLab helps you find soundproofing options that fit your home, budget, and how you live.'}
       </p>
 
       <!-- 二分するナビゲーション -->
@@ -92,8 +101,8 @@ const directoryCategories = topCategoriesForLang(uiLang);
         <a href="#knowledge" class="btn primary">
           <span class="icon">📖</span>
           <span class="text">
-            <strong>{lang === 'ja' ? 'ナレッジベースを探る' : 'Explore Knowledge'}</strong>
-            <small>{lang === 'ja' ? '蓄積された防音の知見にアクセス' : 'Access accumulated insights'}</small>
+            <strong>{lang === 'ja' ? '記事から探す' : 'Browse articles'}</strong>
+            <small>{lang === 'ja' ? 'あなたの状況に近い記事から読み始める' : 'Start with articles close to your situation'}</small>
           </span>
         </a>
         <a
@@ -108,12 +117,12 @@ const directoryCategories = topCategoriesForLang(uiLang);
           <span class="text">
             <strong>
               {lang === 'ja'
-                ? '音の悩みを顕在化する'
+                ? '課題から探す'
                 : 'Japan: Rooms & Creators'}
             </strong>
             <small>
               {lang === 'ja'
-                ? '診断アプリで解決策を特定'
+                ? '防音室・賃貸・配信など用途別に絞り込む'
                 : 'How booths and quiet spaces work here'}
             </small>
           </span>
@@ -123,11 +132,11 @@ const directoryCategories = topCategoriesForLang(uiLang);
   </section>
 
   <main class="container" id="knowledge">
-    <!-- 最新の知見（先頭表示・最大50件・もっと見る） -->
+    <!-- 最新記事（先頭表示・最大50件・もっと見る） -->
     <section class="section section--latest">
       <div class="section-header">
-        <h2 class="section-title">{lang === 'ja' ? '最新の研究成果' : 'Latest Research'}</h2>
-        <p class="section-desc">{lang === 'ja' ? '日々更新される防音の最新ナレッジ' : 'Continually updated acoustical insights'}</p>
+        <h2 class="section-title">{lang === 'ja' ? '最新記事' : 'Latest Articles'}</h2>
+        <p class="section-desc">{lang === 'ja' ? '日々更新される防音の実践ナレッジ' : 'Practical soundproofing articles, updated regularly'}</p>
       </div>
 
       <div class="posts-grid posts-grid--latest" id="latest-posts-grid">
@@ -184,20 +193,23 @@ const directoryCategories = topCategoriesForLang(uiLang);
             <div class="hub-label">{hub.labels[lang as 'ja' | 'en'].audience}</div>
             <h3>{hub.labels[lang as 'ja' | 'en'].title}</h3>
             <p>{hub.labels[lang as 'ja' | 'en'].pain}</p>
-            <p class="hub-entry">
-              {lang === 'ja' ? '最初に読む記事' : 'First Article'}:
-              <a
-                href={getUrl(hub.firstPost)}
-                data-track-event="hub_click"
-                data-track-source="hub_entry"
-                data-track-label={hub.firstPost.data.title}
-              >
-                {hub.firstPost.data.title}
-              </a>
-            </p>
+            <ul class="hub-entries">
+              {hub.featuredPosts.map((post) => (
+                <li>
+                  <a
+                    href={getUrl(post)}
+                    data-track-event="hub_click"
+                    data-track-source="hub_entry"
+                    data-track-label={post.data.title}
+                  >
+                    {post.data.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
             <div class="hub-footer">
               <a
-                href={getUrl(hub.firstPost)}
+                href={hub.categoryUrl}
                 class="hub-link"
                 data-track-event="hub_click"
                 data-track-source="hub_cta"
@@ -232,8 +244,8 @@ const directoryCategories = topCategoriesForLang(uiLang);
       const grid = document.getElementById('latest-posts-grid');
       if (!btn || !grid) return;
 
-      let currentVisible = 9;
-      const increment = 9;
+      let currentVisible = 6;
+      const increment = 6;
       const allCards = grid.querySelectorAll('.post-card');
       const total = allCards.length;
       const countDisplay = document.getElementById('latest-current-count');
@@ -390,7 +402,8 @@ const directoryCategories = topCategoriesForLang(uiLang);
 
   .hub-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* min-content 幅に引っ張られて左右列が微妙にズレるのを防ぐ */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
   }
 
@@ -402,6 +415,9 @@ const directoryCategories = topCategoriesForLang(uiLang);
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    /* CSS Grid の縮小時に中身の最小幅が原因で溢れ/ズレるのを抑制 */
+    min-width: 0;
+    margin-top: 0; /* Starlight の @layer content-gap リセット */
   }
 
   .hub-label {
@@ -421,9 +437,34 @@ const directoryCategories = topCategoriesForLang(uiLang);
     line-height: 1.6;
   }
 
-  .hub-entry a {
-    margin-left: 0.4rem;
+  .hub-entries {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .hub-entries li {
+    padding-left: 0.75rem;
+    border-left: 2px solid rgba(212, 175, 55, 0.35);
+  }
+
+  .hub-entries a {
     color: #fff;
+    text-decoration: none;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color 0.2s;
+  }
+
+  .hub-entries a:hover {
+    color: var(--primary-gold);
     text-decoration: underline;
   }
 
@@ -448,25 +489,8 @@ const directoryCategories = topCategoriesForLang(uiLang);
 
   .posts-grid--latest {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
-  }
-
-  /* タブレット縦・スマホ：1カラム／横768px以上は3カラム */
-  @media (max-width: 1024px) {
-    .hub-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .posts-grid--latest {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 1024px) and (orientation: landscape) and (min-width: 768px) {
-    .posts-grid--latest {
-      grid-template-columns: repeat(3, 1fr);
-    }
   }
 
   .load-more-container {
@@ -522,6 +546,7 @@ const directoryCategories = topCategoriesForLang(uiLang);
     transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
     overflow: hidden;
     position: relative; /* 全面クリックの基準 */
+    margin-top: 0; /* Starlight の @layer content-gap リセット */
   }
 
   .post-card:hover {
@@ -635,11 +660,12 @@ const directoryCategories = topCategoriesForLang(uiLang);
   }
 
   .pill:hover {
-    background: var(--primary-gold);
-    color: #000;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-gold);
   }
 
-  .pill:hover .pill-name, .pill:hover .pill-count { color: #000; }
+  .pill:hover .pill-name { color: #fff; }
+  .pill:hover .pill-count { color: var(--primary-gold); }
 
   .pill-name { color: #fff; font-weight: bold; font-size: 0.9rem; }
   .pill-count { color: var(--primary-gold); font-size: 0.8rem; }

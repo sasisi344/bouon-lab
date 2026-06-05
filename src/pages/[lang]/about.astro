@@ -12,45 +12,45 @@ const { lang } = Astro.params;
 const content = {
     ja: {
         title: "ABOUT | 防音Lab",
-        heading: "「資産」としての静寂を、創り出す。",
+        heading: "高い技術を、あなたの住まいへ。",
         subheading: "防音Lab（BouonLab）とは",
-        text: "防音Labは、防音・音響対策を単なる「設備の導入」ではなく、人生の質と物理的な価値を高める「資産形成」の一環として捉える専門メディアです。",
+        text: "防音Labは、日本の防音技術は世界でも高い水準にあるのに、一般の住宅や賃貸には十分届いていない——そんなギャップに向き合うメディアです。あなたの住まい・予算・用途に合わせて、今すぐ試せる対策から本格的な選択肢まで案内します。",
         mission_title: "運営ミッション",
-        mission_text: "音の悩みから解放されるだけでなく、防音室のリセール価値、公的補助金、ローン活用、そして節税対策といった「金融的視点」を融合させることで、持続可能で賢い防音ライフを提案します。",
+        mission_text: "スタジオや商業施設で培われた防音の知見を、在宅ワーク・楽器練習・配信・騒音トラブルといった、身近な悩みに落とし込むこと。専門用語だけで終わらせず、「自分の環境なら何から始めるか」が分かる情報を届けます。",
         features: [
             {
-                title: "科学的アプローチ",
-                body: "透過損失（D値）や質量則、定在波解析といった音響物理学に基づき、曖昧な「静かさ」ではなく、数値に裏打ちされた確実な対策を提示します。"
+                title: "あなたの環境に合わせた案内",
+                body: "賃貸か持ち家か、予算はいくらか、何のために静かにしたいか——状況が違えば最適解も変わります。防音Labは、一律の答えではなく、あなたの条件に近い記事と選択肢から読み始められるよう整理しています。"
             },
             {
-                title: "金融・資産価値の最大化",
-                body: "防音室は数百万規模の投資です。残価率の高いメーカーの選定、リフォームローンの最適化、補助金申請のノウハウなど、購入者の経済的利益を最大化する情報を発信します。"
+                title: "住宅に届いていない技術を橋渡しする",
+                body: "日本には優れた防音メーカー、防音賃貸、補助金制度、地域の物件情報があります。一方で、一般住宅の間取りや生活音の実態には、そのままでは当てはまりません。現場で使われている技術を、住まいの文脈で理解できる形に翻訳します。"
             },
             {
-                title: "法的・社会的解決",
-                body: "近隣騒音トラブルの法的解決指針や、賃貸借契約における原状回復義務の解釈など、トラブルを未然に防ぎ、調和のとれた住環境をプロデュースします。"
+                title: "トラブル前の予防と、困ったときの道筋",
+                body: "騒音は我慢の問題だけではなく、近隣関係や契約、費用の問題でもあります。苦情が来る前にできること、トラブルが起きたときの進め方、費用の見通しまで、実生活で使える情報をまとめています。"
             }
         ]
     },
     en: {
         title: "ABOUT | BouonLab",
-        heading: "Creating Silence as an Asset.",
+        heading: "Bringing advanced soundproofing home.",
         subheading: "What is BouonLab?",
-        text: "BouonLab is a specialized media platform that views soundproofing and acoustic solutions not just as 'equipment installation' but as part of 'asset formation' that enhances the quality of life and physical value.",
+        text: "BouonLab focuses on a gap in Japan: world-class soundproofing exists, yet ordinary apartments and houses rarely benefit from it. We help you find practical steps that fit your home, budget, and daily life.",
         mission_title: "Our Mission",
-        mission_text: "Beyond just being free from noise issues, I propose a sustainable and smart soundproof lifestyle by integrating 'financial perspectives' such as the resale value of soundproof rooms, public subsidies, loan utilization, and tax saving strategies.",
+        mission_text: "Translate studio-grade and commercial acoustic know-how into everyday problems—remote work, practice, streaming, and neighbor noise—so readers know what to try first in their own situation.",
         features: [
             {
-                title: "Scientific Approach",
-                body: "Based on acoustic physics such as transmission loss (D-value), the mass law, and standing wave analysis, we provide certain measures backed by numbers rather than vague 'quietness'."
+                title: "Guidance for your situation",
+                body: "Rent or own, budget, and purpose all change the answer. BouonLab organizes articles so you can start from conditions close to yours, not a one-size-fits-all recommendation."
             },
             {
-                title: "Maximizing Financial & Asset Value",
-                body: "A soundproof room is a multi-million yen investment. We provide information to maximize the economic interest of the purchaser, such as selecting manufacturers with high resale value, optimizing reform loans, and know-how for subsidy applications."
+                title: "Bridging tech to housing",
+                body: "Japan has strong manufacturers, soundproof rentals, subsidies, and regional guides—but standard homes need a different lens. We explain professional solutions in the context of where people actually live."
             },
             {
-                title: "Legal & Social Solutions",
-                body: "We produce a harmonious living environment by providing legal resolution guidelines for neighborhood noise troubles and interpretation of restoration obligations in rental agreements to prevent troubles before they occur."
+                title: "Prevention and next steps",
+                body: "Noise issues touch neighbors, contracts, and cost—not just volume. We cover what to do before complaints arise, how to respond when trouble starts, and how to plan expenses."
             }
         ]
     }
@@ -110,10 +110,10 @@ const t = content[lang as keyof typeof content];
                         私は防音の専門家ではありませんが、防音・音響に関する知識を持ち、徹底したリサーチを得意としています。そのような背景から、このサイトを立ち上げました。
                     </p>
                     <p>
-                        現代の日本では、人口が減少しているにもかかわらず住宅の密集化は進んでおり、騒音に関するお悩みを抱える方が非常に多くいらっしゃいます。騒音問題は睡眠の質を大きく左右するだけでなく、在宅ワークのパフォーマンスにも影響します。また、ボイスチャットや電話で気軽に友人と話すことさえ、周囲への気遣いから難しくなっている方も少なくないと思います。
+                        日本にはスタジオや商業施設向けの高い防音技術があります。一方で、マンションや戸建ての暮らしには、その知見が十分に届いていないと感じています。在宅ワーク、楽器練習、配信、近隣の生活音——悩みは多様ですが、共通しているのは「自分の環境に合う答えが見つけにくい」ということです。
                     </p>
                     <p>
-                        こうした問題を少しでも解決するための、正確で実践的な情報をお届けすること——それが防音Labの使命だと考えています。
+                        防音Labでは、専門用語の整理だけでなく、あなたの状況から読み始められる記事を増やしていきます。少しでも役立つ一歩が見つかることを目指しています。
                     </p>
                 </div>
             </aside>
