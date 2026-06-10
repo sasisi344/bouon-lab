@@ -95,3 +95,30 @@
 6. `night-streaming-neighbor-tips` — 深夜配信の近隣トラブル回避
 7. `streamer-rental-preview-checklist` — 防音賃貸の内見チェックリスト
 8. `game-streamer-sound-types` — ゲーム実況者の音種別対策
+
+---
+
+## 第2弾：未カバーテーマ（30記事完了後の追加候補）
+
+既存30記事＋他カテゴリ（diy/soundproof-rental/knowledge/business）と照合し、重複しない角度のみ抽出。
+
+### 優先度A
+
+- [ ] `streaming-pc-fan-noise-mic` — PC本体の動作音（ファン・HDD・電源）がマイクに乗る問題への対策
+  - 既存`streaming-mic-noise-room`は「部屋づくり」視点が中心。静音PCケース・ファン交換・防振ゴムなど機材内部ノイズは未カバー
+  - リサーチ完了：`.workspace/.data-set/05_商品/research-2026-06-10-streamer-equipment.md` §1（防振インシュレーター候補ASIN・構成案）
+- [ ] `streamer-pet-noise-balance` — 配信中のペット騒音と両立する防音術
+  - `pet-noise-soundproof-measures`（soundproof-rental）は集合住宅一般向け。生配信中に鳴いた時の対応・映り込み・収録時間帯の工夫は配信者特有の角度として未着手
+  - リサーチ完了：`.workspace/.data-set/05_商品/research-2026-06-10-streamer-equipment.md` §2（ケージ防音カバー実測データ・隙間テープ候補ASIN・構成案）
+
+### 優先度B
+
+- [ ] `dance-fitness-streamer-soundproof` — ダンス・フィットネス・歌ってみた（高デシベル/振動）系配信者の防音
+  - `utaite-vs-streamer-soundproof`/`singer-instrumentalist-stream-soundproof`は座って演奏・歌唱が前提。立って踊る配信者の床振動・足音対策は未着手
+- [ ] `roommate-streamer-soundproof` — ルームシェア・同居人がいる配信者の防音と生活音調整
+  - `parenting-streamer-soundproof`は育児前提。パートナー/友人とのルームシェアでの収録時間帯調整・遮音は別角度
+
+### 優先度C
+
+- [ ] `podcast-collab-recording-acoustics` — 2人以上のポッドキャスト・対談配信の音響セッティング
+  - `collab-streaming-soundproof-space`は「広さ・防音室」視点。マイク配置・反響処理など音響セッティング寄りの記事は無い
