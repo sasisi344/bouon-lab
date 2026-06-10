@@ -1,158 +1,134 @@
-# SEO改善・リライト チェックリスト
-## データ統合: ctr-check-list.md × pagerank-list.md × DeepResearch_prompt
+# SEO改善・リライト チェックリスト（2026-06-10 棚卸し版）
 
-> 3ファイルを横断して「複数の指標で上位に現れた記事」だけを対象にしている。
-> 1つのファイルにしか登場しない記事は除外。
->
-> チェック方法: 作業完了後に `[ ]` を `[x]` に変更
+## 重要な前提（2026-06-10更新）
+
+- 元データは `ctr-check-list.md` / `pagerank-list.md`（**Search Console 2026-04-25時点**）と `DeepResearch_prompt_hometheater_karaoke.md` を作成日2026-05-31に統合したもの。
+- その後 **2026-06-01 にカテゴリ構造の大規模フラット化（Phase 1〜3）** を実施し、`astro.config.mjs` の `redirects` に旧URL→新URLのマッピングを追加済み。URL形式は `/{lang}/{category}/{subcategory}/{slug}/` → `/{lang}/{category}/{slug}/` に変更。
+- さらに **2026-05-02 の「revuild」コミット**で、重複・アーカイブ済みだった記事（`_archived-posts/` や旧 `solutions/` 配下）が大量に削除されている。**`ctr-check-list.md`/`pagerank-list.md` の数値はこれら削除済み記事のものを含んでいる**ため、そのままでは実行不可能なタスクが多数残っていた。
+- 直近データは `.workspace/access-data/2026/W24/`（2026-05-30〜06-06）にあるが、**復旧直後の1週間で絶対数が極小（クリック数 0〜1件が大半）のため、本格的な再評価には不十分**。次回更新は **W26〜W28（リダイレクト反映から3〜4週間後）** を目安に新URLでのGSCデータが溜まってから行う。
+- 本ファイルは「①記事が現存しURL更新のみで実行可能」「②記事はリネーム・統合済みで指標の再計測が必要」「③記事自体が消滅し対応不可」の3区分で棚卸しした。
 
 ---
 
-## 🔴 ZONE A — タイトルリライト（即効・工数最小）
-> 条件: 掲載順位8位以内 × CTR5%未満 × 表示数が多い
-> 理由: すでに上位に出ているのにクリックされない = タイトルが検索意図とズレている
+## ✅ ZONE A — タイトルリライト（記事は現存・実行価値あり）
 
 ### rental-proofroom-contractcheck
-- データ: 順位7.2位 / CTR 1.65% / 16クリック / **972表示**（サイト最多）
+- 現URL: `/ja/soundproof-rental/rental-proofroom-contractcheck/`（旧 `/ja/soundproof-rental/solution/...` からリダイレクト済み）
+- データ(2026-04-25): 順位7.2位 / CTR 1.65% / 16クリック / **972表示**（サイト最多表示）
+- W24時点でも旧URL `/ja/soundproof-rental/solution/rental-proofroom-contractcheck/` で13表示・平均順位9.7と検索結果に残存（リダイレクト浸透待ち）
 - 問題: 「契約確認」は行動の目的が見えない。ユーザーは「騙されたくない」「損したくない」という感情で検索している
-- [ ] タイトルを「失敗談」「○○項目」「チェックすべき」などの具体的な危機感ワードに変更
-- [ ] メタディスクリプションも同様のトーンに合わせる
-- [ ] H2見出しにチェックリスト形式の見出しを追加してスニペット狙い
-
-### bouon-rental-yatinsouba
-- データ: 順位6.4位 / CTR 0.27% / 1クリック / **373表示**
-- 問題: 「家賃相場」だけでは情報密度が伝わらない。数値や比較が見出しで見えると押される
-- [ ] タイトルに「通常賃貸より◯%高い？」「2025年最新データ」などの数値・年号を入れる
-- [ ] リード文に相場の結論数値を先出しする（Answer-First）
-- [ ] 地域別の相場表を追加してコンテンツ量を増やす
+- [x] タイトルを「退去時に損する人」「契約前に確認すべき5項目」など危機感ワードに変更（2026-06-10）
+- [x] メタディスクリプションも損失回避のトーンに変更（2026-06-10）
+- [x] H2に「賃貸防音室で『損する人』を防ぐ5項目チェックリスト」を新設しスニペット狙い（2026-06-10）
+- [ ] 効果測定: GSCで新URLのインデックス・CTR・順位推移を1〜2週間後に確認
 
 ### soundproof-culture-japan-vs-america
-- データ: 順位**2.8位** / CTR 0.52% / 2クリック / 387表示
-- 問題: 2.8位という最高順位でほぼ押されない = 検索意図と完全にズレている
-- [ ] このキーワードで何を求めているユーザーが検索しているかを再定義する
-- [ ] 「文化比較」コンテンツとして成立させるか、実用的な防音情報に転換するか方針決定
-- [ ] 転換しない場合: 削除 or 別記事へのリダイレクト検討（SEOリソースの無駄を排除）
-
-### soundproof-room-wifi-guide / soundproof-room-internet-lan-guide
-- データ(WiFi): 順位7.6位 / CTR 3.27% / 11クリック / 336表示
-- データ(LAN): 順位7.0位 / CTR 2.61% / 8クリック / 306表示
-- 問題: 類似テーマの記事が2本存在しカニバリゼーションの可能性。どちらも表示は多いがCTRが低い
-- [ ] 2記事の検索キーワードが重複していないか確認（Search Console クエリ別で確認）
-- [ ] 重複していれば1本に統合してコンテンツ強化
-- [ ] タイトルに「繋がらない原因と解決策」「電波遮断の仕組み」など解決型ワードを追加
+- 現URL: `/ja/knowledge/soundproof-culture-japan-vs-america/`
+- データ(2026-04-25): 順位**2.8位** / CTR 0.52% / 2クリック / 387表示
+- 問題: 2.8位という最高順位でほぼ押されない = 検索意図と完全にズレている、またはメタディスクリプションで答えが完結し本文を読む必要がない
+- [x] タイトルを「なぜ日本はユニット型防音室が主流なのか」という問いかけ型に変更（2026-06-10）
+- [x] メタディスクリプションを「D-50≒STC50-55」のような結論先出しから、視点提供型に変更（クリックしないと結論が分からない構成に、2026-06-10）
+- [ ] 効果測定: 1〜2週間後にCTR改善の有無を確認。改善しない場合は記事の統合・削除を再検討
 
 ---
 
-## 🟠 ZONE B — 内部リンク強化（即効・工数低）
-> 条件: 掲載順位9〜15位 × CTR5%以上
-> 理由: 良いコンテンツがあるのに内部評価が低い。内部リンクを集中させれば短期で8位以内に入れる可能性が高い
+## ✅ ZONE B — 内部リンク強化（記事は現存・実行価値あり）
 
 ### diy-vocal-soundproof-mask ⭐ 最優先
-- データ: 順位10.3位 / CTR **14.43%** / 14クリック / 97表示
+- 現URL: `/ja/diy/diy-vocal-soundproof-mask/`
+- データ(2026-04-25): 順位10.3位 / CTR **14.43%** / 14クリック / 97表示
 - 期待値: 5位達成で月35〜50クリックへ（現在の2.5〜3.5倍）
-- [ ] 関連記事（closet-diy-soundproof-room / asmr-proofroom-guide）から本記事へのリンクを追加
-- [ ] 「DIY防音」カテゴリページからリンクを貼る
-- [ ] 本記事内のH2構成を見直し、FAQ形式のセクションを追加（スニペット狙い）
+- [x] 関連記事（`/ja/diy/closet-diy-soundproof-room/`）から本記事へのリンクを追加（2026-06-10）
+- [x] 本記事内にFAQ形式のセクションを追加（スニペット狙い、2026-06-10）
+- [ ] 効果測定: GSCで新規流入経路・順位の変化を1〜2週間後に確認
 
 ### hsp-soundproof-room-guide ⭐ 最優先
-- データ: 順位9.3位 / CTR **21.88%** / 7クリック / 32表示
+- 現URL: `/ja/soundproof-room/hsp-soundproof-room-guide/`
+- データ(2026-04-25): 順位9.3位 / CTR **21.88%** / 7クリック / 32表示
 - 期待値: 5位達成で月20〜30クリックへ（現在の3〜4倍）
-- [ ] soundproof-room-pollen-protection / noise-canceling-headphones-sleep から内部リンクを追加
-- [ ] 「聴覚過敏」「ミソフォニア」などの関連キーワードをH2・H3に組み込む
-- [ ] ペルソナ（HSP）の具体的な悩みをリード文でより強く訴求する
+- [x] `/ja/soundproof-room/soundproof-room-pollen-protection/`、`/ja/soundproof-rental/noise-canceling-headphones-sleep/`、`/ja/soundproof-room/hsp-soundproof-curtain-guide/` から内部リンクを追加（2026-06-10）
+- [x] 「聴覚過敏」「ミソフォニア」などの関連キーワードをH2・H3・リード文に組み込み（2026-06-10）
+- [ ] 効果測定: GSCで新規流入経路・順位の変化を1〜2週間後に確認
 
-### asmr-proofroom-guide
-- データ: 順位8.0位（境界線） / CTR 7.84% / 8クリック / 102表示
-- [ ] 「ASMR」「防音室」「録音環境」をテーマにした記事群から内部リンクを集中
-- [ ] diy-vocal-soundproof-mask と相互リンクを張る
-- [ ] タイトルに「録音環境」「ノイズ対策」のワードを追加してキーワード幅を広げる
-
-### soundproof-room-cheapest
-- データ: 順位9.6位 / CTR 5.59% / 8クリック / 143表示
-- [ ] budget-soundproof-booth-comparison / soundproof-room-rental-cost からリンク追加
-- [ ] 「安く防音室を手に入れる方法」として価格比較表を追加
-- [ ] 中古・レンタル・DIYの3択比較をコンテンツに組み込む
+### budget-soundproof-booth-comparison
+- 現URL: `/ja/soundproof-room/budget-soundproof-booth-comparison/`
+- データ(2026-04-25): 順位7.3〜7.6位 / CTR 3.6% / 3クリック / 83表示（8位ボーダーで低CTR）
+- [x] だんぼっち・OTODASU II・ISOVOX 2・自作の価格帯比較表を追加（2026-06-10）
+- [x] `/ja/money/soundproof-room-rental-cost/`、`/ja/soundproof-room/soundproof-room-budget-selection-guide/`、`/ja/soundproof-room/otodasu-voice-chat-test/` 等と相互リンク（2026-06-10）
+- [x] 「20万円以下」「価格帯」を見出し・本文に明示してCTR改善（2026-06-10）
+- [ ] 効果測定: GSCで順位8位ボーダーからの改善・CTR変化を1〜2週間後に確認
 
 ---
 
-## 🟡 ZONE C — コンテンツ強化（中期・工数中）
-> 条件: 掲載順位15〜25位 × CTR5%以上
-> 理由: コンテンツの網羅性・専門性が競合に劣っている可能性が高い。内容を強化して自然順位アップを狙う
+## ⚠️ ZONE C — リネーム・統合済み記事（新URL/新タイトルでの再計測が必要）
 
-### bass-trap-installation-guide ⭐
-- データ: 順位14.0位 / CTR 8.24% / 15クリック / **182表示**
-- 期待値: 8位以内で月25〜35クリックへ
-- [ ] 設置位置の図解または説明図（テキストベースでもよい）を追加
-- [ ] 周波数帯別の効果データ（低域・中域・高域のHz値）を本文に組み込む
-- [ ] rt60-reverberation-measurement-guide と相互リンク（音響測定×バストラップの連携）
-- [ ] 製品比較テーブル（価格・サイズ・吸音係数）を追加
+> 旧スラッグの指標は「revuild（2026-05-02）」以前の記事のもの。後継記事として現存するが、
+> リライト判断は**新URL・新タイトルでのGSCデータが溜まってから**行う（目安: W27以降）。
 
-### soundproof-room-standard-size
-- データ: 順位15.0位 / CTR **15.62%** / 5クリック / 32表示
-- [ ] サイズ別（0.5畳・1畳・1.5畳・2畳・3畳）の用途・価格・メーカー比較表を追加
-- [ ] 「何畳あれば○○できる」という判断基準をH2見出しで整理
-- [ ] soundproof-room-budget-selection-guide から内部リンクを追加
+### soundproof-room-loan → soundproof-room-loan-guide
+- 現URL: `/ja/money/soundproof-room-loan-guide/`
+- 旧データ(2026-04-25, soundproof-room-loan): 順位24.0位 / CTR 7.35% / 5クリック / 68表示
+- [ ] `/ja/money/soundproof-room-loan-guide/` の現在のGSC順位・CTRを確認（旧記事と別物のため指標リセット済みの可能性が高い）
+- [ ] 住宅ローン組み込みの具体的な申請手順（step-by-step）が含まれているか確認・補強
+- [ ] `/ja/money/streamer-tax-strategy/`・`/ja/money/telework-soundproof-loan-strategy/` と相互リンク（金融シリーズとして連携）
 
-### soundproof-room-loan
-- データ: 順位24.0位 / CTR 7.35% / 5クリック / 68表示
-- [ ] 住宅ローン組み込みの具体的な申請手順を追加（step-by-step）
-- [ ] soundproof-room-tax-guide と相互リンク（金融シリーズとして連携）
-- [ ] 金融機関別の利用可否・金利目安テーブルを追加
+### soundproof-room-humidifier-guide → bouon-humidifier-comparison ⭐要追跡
+- 現URL: `/ja/soundproof-room/bouon-humidifier-comparison/`
+- 旧データ(2026-04-25): 順位7.0位 / CTR **14.20%** / **24クリック（サイト最多）** / 169表示
+- 旧記事は2026-05-02に削除済み・`/posts/soundproof-room-humidifier-guide/` → 新URLへのリダイレクトは設定済み
+- [ ] **最優先**: 新URL `/ja/soundproof-room/bouon-humidifier-comparison/` のGSCデータを確認し、旧記事が持っていた「月24クリック・順位7.0・CTR14.2%」の水準を維持できているか検証する
+- [ ] 順位が大きく落ちている場合、旧記事の見出し構成・キーワード密度を比較して差分を補強する
+- [ ] 維持できていれば「防音室×生活環境」シリーズの軸記事として、カビ・花粉・CO2系の関連記事からリンクを集める（`/ja/soundproof-room/soundproof-room-pollen-protection/` など）
 
 ### sendai-soundproof-rental-guide
-- データ: 順位13.8位 / CTR 11.54% / 6クリック / 52表示
-- [ ] 仙台市内の駅・エリア別の物件情報を具体化（青葉区・泉区など）
-- [ ] 地元不動産会社や防音賃貸の特徴を追記
-- [ ] 「仙台」ローカルSEOとして地名をH2に組み込む
+- 現URL: `/ja/local/sendai-soundproof-rental-guide/`（旧 `/ja/soundproof-rental/others/...` からリダイレクト済み）
+- データ(2026-04-25): 順位13.8位 / CTR 11.54% / 6クリック / 52表示
+- [x] 仙台市内のエリア別情報（青葉区・太白区・泉区）、不動産会社情報は既に充実済みと確認
+- [x] 「仙台」をH2見出し2箇所に追加してローカルSEOを強化（2026-06-10）
+- [ ] カテゴリ移転（local）後の順位変動をGSCで確認（W27以降）
 
-### vtuber-heat-noise-management
-- データ: 順位9.0位 / CTR 16.13% / 5クリック / 31表示
-- [ ] 夏・冬の具体的な熱管理方法（スポットクーラー・サーキュレーター推奨製品）を追加
-- [ ] spot-cooler-gaming-streamer と相互リンク
-- [ ] 「8時間配信を想定した熱設計」という具体的なシナリオで書き直す
-
----
-
-## 🟢 ZONE D — 維持・横展開（高CTR×上位表示 — 崩さず広げる）
-> 条件: 掲載順位8位以内 × CTR5%以上
-> 理由: すでに理想状態。崩さずに関連記事・内部リンクで横展開する
-
-### soundproof-room-humidifier-guide（サイト最多クリック）
-- データ: 順位7.0位 / CTR 14.20% / **24クリック** / 169表示
-- [ ] リライトは最小限に（CTRを崩さない）
-- [ ] 「防音室×生活環境」シリーズの軸記事としてカビ・花粉・CO2の関連記事からリンクを集める
-- [ ] soundproof-room-pollen-protection / co2-concentration-lossnay-productivity と相互リンク
-
-### gaming-streaming-floor-noise-control
-- データ: 順位7.3位 / CTR 5.70% / 11クリック / 193表示
-- [ ] 配信者向けの関連記事（spot-cooler-gaming-streamer / vtuber-heat-noise-management）から内部リンク
-- [ ] 「ゲーム配信×防音」シリーズとして記事群をカテゴリ内でまとめる
-
-### rt60-reverberation-measurement-guide
-- データ: 順位6.0位 / CTR 8.49% / 9クリック / 106表示
-- [ ] bass-trap-installation-guide と相互リンク（音響設計の上位・下位記事として連携）
-- [ ] 測定アプリの具体的な使い方手順を追加してロングテールキーワードを拾う
-
-### thunder-bouon-stopnoise-knowlkefge
-- データ: 順位6.3位 / CTR 9.57% / 11クリック / 115表示
-- [ ] thunder-noise-reflect（CTR 12.5%・順位8.9位）と内部リンクで連携
-- [ ] 「雷シリーズ」として関連性を強化
+### bass-trap-installation-guide
+- 現URL: `/ja/diy/bass-trap-installation-guide/`（旧 `soundproof-room/diy/...` からリダイレクト済み）
+- 旧データ(2026-04-25): 順位14.0位 / CTR 8.24% / 15クリック / 182表示
+- W24時点: 表示6・クリック0・平均順位20.7 → **順位悪化の兆候**（要観察。カテゴリ移転直後のため断定は保留）
+- [x] 設置位置の図解・周波数帯別データ・製品比較テーブルは既に本文に含まれていることを確認（2026-06-10時点で対応済み）
+- [x] 末尾の「RT60残響測定ガイド」リンクが削除済み記事（`rt60-reverberation-measurement-guide`）への誤リンクだったため削除（2026-06-10）
+- [ ] W27目安で順位回復しているかGSCで再確認。回復しなければカテゴリ移転（soundproof-room→diy）の影響を疑う
 
 ---
 
-## 🔵 ZONE E — 新規記事（DeepResearch調査済みテーマ）
-> DeepResearch_prompt_hometheater_karaoke.md に詳細調査プロンプトが存在する
-> 既存記事との差別化が明確で、高CTRが期待できるニッチテーマ
+## ❌ ZONE D — 対象記事が現存しない（対応不要・記録として保持）
+
+> 2026-05-02 revuild または2026-06-01リライト時に削除・統合された記事。
+> `interlink-postlist.md` に該当slugなし。新規に同テーマで書き直す場合のみ「新規記事候補」として扱う。
+
+- `bouon-rental-yatinsouba`（防音賃貸家賃相場） → 同テーマは `/ja/soundproof-rental/bouonrental-market-research2025/` 等で代替カバー済み
+- `soundproof-room-wifi-guide` / `soundproof-room-internet-lan-guide` → カニバリ懸念ごと記事自体が削除済み。再発不要
+- `asmr-proofroom-guide` → `/ja/creator/asmr-vtuber-booth-guide/`、`/ja/creator/asmr-external-noise-elimination/` 等で類似テーマをカバー済み
+- `soundproof-room-cheapest` → `/ja/soundproof-room/budget-soundproof-booth-comparison/`（ZONE B参照）で代替
+- `soundproof-room-standard-size` → `/ja/soundproof-room/soundproof-room-size/`、`/ja/soundproof-room/soundproof-room-budget-selection-guide/` で類似テーマをカバー済み
+- `soundproof-room-tax-guide` → `/ja/money/streamer-tax-strategy/` で代替
+- `vtuber-heat-noise-management` / `gaming-streaming-floor-noise-control` / `spot-cooler-gaming-streamer` → `/ja/creator/soundproof-room-fatigue-ventilation/`、`/ja/creator/vtuber-soundproof-environment-complete-guide/` 等の配信者向け記事群でカバー済み
+- `rt60-reverberation-measurement-guide` → 削除済み・後継記事なし。需要があれば新規企画として再検討
+- `thunder-bouon-stopnoise-knowlkefge` / `thunder-noise-reflect` → 「雷シリーズ」両記事とも削除済み。連携施策は対象外
+- `co2-concentration-lossnay-productivity` → 削除済み。CO2×換気テーマは `/ja/soundproof-room/proofroom-aircondition-select/`、`/ja/soundproof-room/proofroom-humidity-airconditionlist/` で部分的にカバー
+
+---
+
+## ✅ ZONE E — 新規記事（完了）
 
 ### 自宅映画×自宅カラオケ 両立防音設計ガイド
-- 調査プロンプト: カテゴリA〜F（音響設計・施工事例・費用・換気）が整備済み
-- [ ] DeepResearch_prompt_hometheater_karaoke.md のプロンプトA-1（残響時間）を実行して調査
-- [ ] プロンプトA-2（低音処理）を実行
-- [ ] プロンプトB-1（施工事例）を実行
-- [ ] 調査結果をもとに `_draft/` に下書きを作成
-- [ ] `/draft-plan` でブレスト → 方向性確定
-- [ ] 配置先: `src/content/ja/soundproof-room/solution/hometheater-karaoke-dual-design/`
-- 期待値: ホームシアター×防音のニッチで競合が薄い。CTR 10%超が狙えるテーマ
+- [x] `/ja/soundproof-rental/home-theater-karaoke-soundproof-design/` として公開済み
+- 公開後のGSCデータ蓄積後、CTR・順位を `pagerank-list.md` 形式で再評価する
+
+---
+
+## 🆕 次の調査アクション（優先度順）
+
+1. **リダイレクト浸透の確認**（最優先）: 2026-06-01のPhase1〜3リダイレクトが正しく機能しているか、W24以降のGSCで旧URL（`/ja/soundproof-rental/solution/...`等）の表示が新URLに移行しているかを継続観測する。
+2. **bouon-humidifier-comparison（旧 soundproof-room-humidifier-guide）の指標復元確認**（ZONE C参照）: サイト最多クリック記事だったため最優先で追跡。
+3. **bass-trap-installation-guide のカテゴリ移転影響確認**（ZONE C参照）: W24で順位悪化の兆候あり。
+4. **次回データ更新**: W27〜W28（2026-06-20頃以降）のGSCエクスポートを `.workspace/access-data/2026/` に追加し、`ctr-check-list.md` / `pagerank-list.md` を新URLベースで作り直す。
 
 ---
 
@@ -160,12 +136,12 @@
 
 | ZONE | 対象記事数 | 完了数 | アクション種別 |
 |------|---------|--------|--------------|
-| A タイトルリライト | 5記事 | 0 | タイトル・メタ変更 |
-| B 内部リンク強化 | 4記事 | 0 | リンク追加のみ |
-| C コンテンツ強化 | 5記事 | 0 | 本文追記・構成改善 |
-| D 維持・横展開 | 4記事 | 0 | リンク整備のみ |
-| E 新規記事 | 1記事 | 0 | 調査→執筆 |
+| A タイトルリライト（現存） | 2記事 | 2（効果測定待ち） | タイトル・メタ変更 |
+| B 内部リンク強化（現存） | 3記事 | 3（効果測定待ち） | リンク追加・比較表追加 |
+| C リネーム/統合（再計測必要） | 4記事 | 2（内容確認・微修正済み、指標確認待ち） | 指標確認 → リライト判断 |
+| D 対応不要（記事消滅） | 11記事 | - | 記録のみ |
+| E 新規記事 | 1記事 | 1 | 完了 |
 
 ---
 
-*作成日: 2026-05-31 / 参照: ctr-check-list.md / pagerank-list.md / DeepResearch_prompt_hometheater_karaoke.md*
+*更新日: 2026-06-10 / 参照: ctr-check-list.md（2026-04-25データ）/ pagerank-list.md / interlink-postlist.md / interlink-tag-clusters.md / astro.config.mjs（リダイレクト）/ .workspace/access-data/2026/W24/*

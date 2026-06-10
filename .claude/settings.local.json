@@ -24,7 +24,8 @@
       "Bash(node .workspace/scripts/generate-image.js --preset cover \"Two options concept - soundproof apartment building vs DIY acoustic setup in regular room, split comparison visual, clean modern style, no people\" \"./src/content/ja/creator/soundproof-rental-vs-diy-streamer/cover.png\")",
       "Bash(node .workspace/scripts/generate-image.js --preset cover \"ASMR microphone setup in very quiet dark room with heavy curtains and acoustic panels, ultra-clean no-noise environment feel, no people\" \"./src/content/ja/creator/asmr-external-noise-elimination/cover.png\")",
       "Bash(node .workspace/scripts/generate-image.js --preset cover \"Two microphones on stands facing each other in a cozy home studio room with acoustic panels, warm lighting, podcast setup, no people\" \"./src/content/ja/creator/collab-streaming-soundproof-space/cover.png\")",
-      "Bash(node .workspace/scripts/generate-image.js --preset cover \"Calm apartment building exterior at night, quiet neighborhood concept, soft lighting, no conflict imagery, peaceful Japanese residential area\" \"./src/content/ja/creator/streamer-noise-complaint-response/cover.png\")"
+      "Bash(node .workspace/scripts/generate-image.js --preset cover \"Calm apartment building exterior at night, quiet neighborhood concept, soft lighting, no conflict imagery, peaceful Japanese residential area\" \"./src/content/ja/creator/streamer-noise-complaint-response/cover.png\")",
+      "WebSearch"
     ]
   }
 }

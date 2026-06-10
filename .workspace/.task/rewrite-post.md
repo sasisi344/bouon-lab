@@ -257,13 +257,13 @@
 
 | 優先度 | 記事スラッグ | 問題の種類 | 対応工数 |
 |--------|------------|-----------|---------|
-| **P1-A** | `knowledge/absorption-vs-soundproofing-materials` | スタブ(150字) | 完全再執筆 |
-| **P1-B** | `soundproof-room/night-practice-soundproof-guide` | スタブ(150字) | 完全再執筆 |
-| **P1-C** | `diy/free-cardboard-soundproof-tech` | スタブ(200字) | 完全再執筆 |
-| **P1-D** | `business/workbooth-office-soundproof-trend` | スタブ(150字) | 完全再執筆 or カテゴリ変更+再執筆 |
-| **P2-A** | `business/soundproof-market-esg-trend` | 匿名事例・情報密度低 | 大幅改稿（実名事例への置換） |
-| **P2-B** | `business/report-japan-asmr-vtuber-streaming-studio-standard` | ボリューム不足(1000字) | 加筆(+1500字) |
-| **P2-C** | `soundproof-rental/report-japan-soundproof-rental-market-needs` | ボリューム不足(1300字) | 加筆(+1200字) |
-| **P3-A** | `local/chiba-soundproof-rental-guide` | テンプレート的・固有情報なし | 構成見直し |
-| **P3-B** | `soundproof-room/soundproof-room-pollen-protection` | 壊れたリンク・画像タグ | 軽微修正+加筆 |
-| **P3-C** | `knowledge/vibration-isolation-technology-trend` | 出典不明数値・情報更新 | 出典追記or数値削除 |
+| **P1-A** | `knowledge/absorption-vs-soundproofing-materials` | スタブ(150字) | ✅完了（約2,700字に再執筆、2026-06-10） |
+| **P1-B** | `soundproof-room/night-practice-soundproof-guide` | スタブ(150字) | ✅完了（約2,200字に再執筆、2026-06-10） |
+| **P1-C** | `diy/free-cardboard-soundproof-tech` | スタブ(200字) | ✅完了（約2,000字に再執筆、2026-06-10） |
+| **P1-D** | `business/workbooth-office-soundproof-trend` | スタブ(150字) | ✅完了（約2,200字に再執筆、2026-06-10。「BEAF法」表記は出典不明のため削除しタイトルロジックを再構成。カテゴリは現状維持） |
+| **P2-A** | `business/soundproof-market-esg-trend` | 匿名事例・情報密度低 | ✅完了（2026-06-10。出典不明の匿名企業事例・数値を全削除し、断熱材と吸音材の素材レベルでの関係／2025年4月省エネ基準義務化／CASBEEの音環境項目という、検証可能な情報を軸に全面再構成。約2,400字） |
+| **P2-B** | `business/report-japan-asmr-vtuber-streaming-studio-standard` | ボリューム不足(1000字) | ✅完了（2026-06-10。ASMR/歌枠/雑談のNC値別基準、PC室外設置の機材費、0.8畳→1.5畳の買い替えコスト試算を加筆し約2,500字に） |
+| **P2-C** | `soundproof-rental/report-japan-soundproof-rental-market-needs` | ボリューム不足(1300字) | ✅完了（2026-06-10。出典不明の「ラシクラス」を削除し、サイト内既出のMUSISION/Livlan/Sonareの3ブランド比較表に置換。入居までのアクションプラン・非演奏者層の需要動向・23区外への波及を加筆し約2,500字に） |
+| **P3-A** | `local/chiba-soundproof-rental-guide` | テンプレート的・固有情報なし | ✅完了（2026-06-10。出典不明の「防音賃貸数」「空室率」を削除し5エリア分の繰り返し構成を整理。MUSISION/Livlan/Sonare等専門ブランドが千葉では少ない実態を明示し、「一般賃貸＋防音室ユニット後付け」という現実的ルートを提示。「東京vs千葉」の判断フレームワークを追加し関連記事へ内部リンク） |
+| **P3-B** | `soundproof-room/soundproof-room-pollen-protection` | 壊れたリンク・画像タグ | ✅完了（2026-06-10。壊れた画像タグを `![...](./kafun-ventilation-concept.jpg)` に修正し既存画像を表示。フィルター交換時期・空気清浄機の適用畳数等を加筆。内部リンク切れは現行版では確認されず） |
+| **P3-C** | `knowledge/vibration-isolation-technology-trend` | 出典不明数値・情報更新 | ✅完了（2026-06-10。出典不明の「ナノ防振マット30%コスト削減」「廃タイヤゴムチップ40%削減」「東京の大型スタジオ」等の匿名事例・数値を全削除し、防振材の種類・BOX in BOX構法・施工精度の重要性という検証可能な内容に再構成。「石墨烯」を「グラフェン」に統一。タイトル・descriptionも変更） |

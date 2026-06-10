@@ -7,7 +7,7 @@ description: 記事公開時の内部リンク品質を標準化し、回遊導�
 
 ## 正本リスト（必読）
 
-内部リンクの **リンク先URL・slug・tags・category** の確認は、`.workspace/.data-set/interlink-postlist.md` を正本とする。記事追加・移動・フォルダ名変更後は `node .workspace/scripts/build-interlink-postlist.mjs` で再生成する。ルール詳細は `.cursor/rules/bouon-internal-link-postlist.mdc`。
+内部リンクの **リンク先URL・slug・tags・category** の確認は、`.workspace/.data-set/interlink-postlist.md` を正本とする。リンク候補探しはカテゴリ別・タグ別クラスタをまとめた `.workspace/.data-set/interlink-tag-clusters.md` を使う。記事追加・移動・フォルダ名変更後は `node .workspace/scripts/build-interlink-postlist.mjs` で両ファイルを再生成する。ルール詳細は `.cursor/rules/bouon-internal-link-postlist.mdc`。
 
 ## 目的
 - 記事公開時の内部リンク品質を標準化する。
