@@ -7,6 +7,7 @@ import {
 } from '../../../data/contentCategories';
 import { resolvePostCover } from '../../../data/categoryDefaultCover';
 import { resolvePostSlugSegment } from '../../../utils/resolvePostSlugSegment';
+import AdUnit from '../../../components/AdUnit.astro';
 
 const CATEGORY_LABELS = TOP_CATEGORY_LABELS;
 
@@ -88,6 +89,8 @@ const starterSetPosts = categoryPosts.slice(0, 3);
         <h1 id="_top">{label}</h1>
         <p class="description">{pageDescription}</p>
       </header>
+
+      <AdUnit placement="rectangleList" class="ad-placement--page-top" />
 
       <section class="category-posts-list">
 

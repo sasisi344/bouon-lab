@@ -1,0 +1,38 @@
+---
+import {
+  ADSENSE_CLIENT,
+  getPlacement,
+  type AdPlacementId,
+} from '../data/adsensePlacements';
+
+interface Props {
+  placement: AdPlacementId;
+  class?: string;
+}
+
+const { placement, class: className } = Astro.props;
+const config = getPlacement(placement);
+
+if (!config.slot) {
+  return null;
+}
+
+const insAttrs: Record<string, string> = {
+  'data-ad-client': ADSENSE_CLIENT,
+  'data-ad-slot': config.slot,
+  'data-ad-format': config.format,
+  'data-full-width-responsive': 'true',
+};
+---
+
+<aside
+  class:list={['ad-placement', `ad-placement--${placement}`, className]}
+  aria-label="Advertisement"
+  data-ad-placement={placement}
+>
+  <div class="ad-placement__label">ADVERTISEMENT</div>
+  <ins class="adsbygoogle" style="display:block" {...insAttrs}></ins>
+  <script is:inline>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</aside>

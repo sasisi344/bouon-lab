@@ -1,35 +1,6 @@
 ---
-/**
- * AdSense Multiplex Ad Unit
- * Replace the data-ad-client and data-ad-slot with actual values when available.
- */
+/** @deprecated rectangleArticleEnd を使用 */
+import AdUnit from './AdUnit.astro';
 ---
-<div class="multiplex-ad-container">
-  <div class="ad-label">ADVERTISEMENT</div>
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-format="autorelaxed"
-       data-ad-client="ca-pub-9798094072282530"
-       data-ad-slot="3778705007"></ins>
-  <script is:inline>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-</div>
 
-<style>
-  .multiplex-ad-container {
-    margin: 4rem 0;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    overflow: hidden;
-  }
-  .ad-label {
-    font-size: 0.65rem;
-    color: var(--text-dim);
-    letter-spacing: 0.1rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-  }
-</style>
+<AdUnit placement="rectangleArticleEnd" />

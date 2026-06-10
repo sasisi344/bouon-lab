@@ -10,6 +10,7 @@ import {
 } from '../../data/contentCategories';
 import { resolvePostCover } from '../../data/categoryDefaultCover';
 import { resolvePostSlugSegment } from '../../utils/resolvePostSlugSegment';
+import AdUnit from '../../components/AdUnit.astro';
 
 export async function getStaticPaths() {
     return [
@@ -132,6 +133,8 @@ const directoryCategories = topCategoriesForLang(uiLang);
   </section>
 
   <main class="container" id="knowledge">
+    <AdUnit placement="rectangleList" class="ad-placement--page-top" />
+
     <!-- 最新記事（先頭表示・最大50件・もっと見る） -->
     <section class="section section--latest">
       <div class="section-header">

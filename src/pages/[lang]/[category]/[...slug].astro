@@ -7,7 +7,7 @@ import RegionBanner from '../../../components/RegionBanner.astro';
 import ArchiveCarousel from '../../../components/ArchiveCarousel.astro';
 import AffiliateCard from '../../../components/AffiliateCard.astro';
 import CtaBox from '../../../components/CtaBox.astro';
-import MultiplexAd from '../../../components/MultiplexAd.astro';
+import AdUnit from '../../../components/AdUnit.astro';
 import AssetValueTable from '../../../components/AssetValueTable.astro';
 import { HUB_CLUSTERS } from '../../../data/hubClusters';
 import { resolvePostCover } from '../../../data/categoryDefaultCover';
@@ -443,14 +443,14 @@ const components = {
 
       {!isIndex && (
         <footer class="article-footer">
+            <AdUnit placement="rectangleArticleEnd" />
+
             <div class="tag-label">KEYWORDS</div>
             <div class="tag-cloud">
                 {post.data.tags.map(tag => (
                     <span class="tag-item">#{tag}</span>
                 ))}
             </div>
-
-            <MultiplexAd />
 
             {nextSteps.length > 0 && (
               <section class="next-step-section">
