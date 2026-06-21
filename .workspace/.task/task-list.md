@@ -10,8 +10,8 @@
 2026-06-21：記事構成全体調査（169記事・全8カテゴリ）で発見したウィークポイント。トリアージ後に下記セクションへ移動する。
 
 - [x] **CtaBox再構成**: `.workspace/.task/ctabox-task.md`で完了。提携実体なしを確認しrelのsponsored表記を削除、配置基準を「単独の決断ポイント」に絞り込んだ上で4記事5箇所（A類2記事＋B類2記事3箇所）に設置、残り44件の言及はC類（並列比較・一般論）と判定して非設置を維持
-- [ ] **AffiliateCard活用が薄い**: `affiliates.ts`に19商品登録済みだが`<AffiliateCard>`使用は5記事のみ。本文で言及済みだがカード未設置の記事を商品ごとに洗い出す
-- [ ] **内部リンクゼロ記事が169記事中76記事（45%）**: 内部リンクを持たない記事の一覧化と、最低1本のリンク設置（既存ハブ記事からの誘導を優先）
+- [x] **AffiliateCard活用が薄い**: `.workspace/.task/link-check.md`で完了。未設置8商品中6商品・19箇所に設置（`danbocchi-standard`4・`reflection-filter`6・`防振-mat-piano`5・`booth-workspace`1・`sound-level-meter-pro`1・`humidifier-vaporizer-daikin`1）。`otodasu-dx-pro`は候補記事が安価な別モデル「OTODASU II」を指しており登録商品（プロ仕様¥149,000〜）と price/性能が不一致のため見送り、`affiliates.ts`側のSKU追加・説明見直しが今後の課題として残存
+- [x] **内部リンクゼロ記事が169記事中76記事（45%）**: `.workspace/.task/link-check.md`で完了。76記事全件に文脈リンクを追加し、内部リンクゼロ件数0件を確認済み（既存の未リンク参照テキストの実リンク化・壊れたリンク修正も含む）
 - [ ] **EEAT評価の対象漏れ**: `eeat-filecheck-list.md`は111記事評価だが実際は169記事。差58記事（主に`creator`の新規分）が未評価のまま → 評価対象を現状の全記事に拡大して再実施
 - [ ] **`en`記事が0件**: `contentCategories.ts`/`README-content.md`でJapan lens 3カテゴリ定義済みだが実記事ゼロ。`non_jpn_queries.md`の需要データ（"livestream soundproof" 251表示等）を起点に着手検討
 - [ ] **`src/content/README-content.md`が陳腐化**: 2026-06-01のカテゴリフラット化前の旧階層（column/soundproof-rental/soundproof-room配下にdiy/knowledge/others/solution）を記載したままで、実際の8カテゴリ構造（business/creator/diy/knowledge/local/money/soundproof-rental/soundproof-room）と不一致。CLAUDE.mdが「正とする」と指示しているため誤記載が記事配置ミスを誘発するリスク → 現状構造に合わせて修正
