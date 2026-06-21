@@ -121,6 +121,7 @@ export default defineConfig({
     '/ja/column/others/vibration-isolation-technology-trend/':   '/ja/knowledge/vibration-isolation-technology-trend/',
     '/ja/column/others/web-meeting-voice-soundleak-prevention/': '/ja/business/web-meeting-voice-soundleak-prevention/',
     '/ja/column/others/streamer-tax-strategy/':                  '/ja/money/streamer-tax-strategy/',
+    '/ja/use-case/vtuber-family-privacy-rules/':                 '/ja/creator/vtuber-family-privacy-rules/',
 
     // ── Phase 3 Tier1 フラット化リダイレクト（2026-06-01）───────────────────
     // soundproof-room/knowledge → soundproof-room

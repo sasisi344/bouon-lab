@@ -124,5 +124,6 @@
 
 ### 優先度C
 
-- [ ] `podcast-collab-recording-acoustics` — 2人以上のポッドキャスト・対談配信の音響セッティング
-  - `collab-streaming-soundproof-space`は「広さ・防音室」視点。マイク配置・反響処理など音響セッティング寄りの記事は無い
+- [x] `podcast-collab-recording-acoustics` — 2人以上のポッドキャスト・対談配信のマイク構成・音響セッティング
+  - `collab-streaming-soundproof-space`は広さ・防音性能側。本記事はマイク本数・配置・オーディオインターフェースでのチャンネル管理・マイクブリード対策で差別化
+  - 公開済み：`src/content/ja/creator/podcast-collab-recording-acoustics/index.mdx`（2026-06-19）

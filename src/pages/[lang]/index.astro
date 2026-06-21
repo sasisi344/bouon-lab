@@ -81,7 +81,13 @@ const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
 const directoryCategories = topCategoriesForLang(uiLang);
 ---
 
-<StarlightPage frontmatter={{ title: 'あなたの環境に合わせた防音ガイド', description: '住まい・予算・用途の違いに寄り添い、あなたに合う防音の解決策をまとめたガイドです。', template: 'splash' }} hasSidebar={false}>
+<StarlightPage frontmatter={{
+  title: lang === 'ja' ? '防音の悩みを症状別に解決｜賃貸・防音室・DIY対策ガイド' : 'Soundproofing that fits your space | BouonLab',
+  description: lang === 'ja'
+    ? '「うるさい」「音漏れが心配」「防音室を選びたい」——あなたの状況別に最適な対策が見つかります。賃貸の防音問題から防音室選び、DIY対策まで実例とデータで解説します。'
+    : 'Find soundproofing solutions that fit your home, budget, and how you live in Japan.',
+  template: 'splash',
+}} hasSidebar={false}>
   <!-- ダーク・モカ・ヒーローセクション -->
   <section class="hero-dark" style={`background-image: url('${optimizedHero.src}')`}>
     <div class="overlay"></div>

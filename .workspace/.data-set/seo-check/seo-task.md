@@ -20,7 +20,6 @@
 - [x] タイトルを「退去時に損する人」「契約前に確認すべき5項目」など危機感ワードに変更（2026-06-10）
 - [x] メタディスクリプションも損失回避のトーンに変更（2026-06-10）
 - [x] H2に「賃貸防音室で『損する人』を防ぐ5項目チェックリスト」を新設しスニペット狙い（2026-06-10）
-- [ ] 効果測定: GSCで新URLのインデックス・CTR・順位推移を1〜2週間後に確認
 
 ### soundproof-culture-japan-vs-america
 - 現URL: `/ja/knowledge/soundproof-culture-japan-vs-america/`
@@ -28,7 +27,6 @@
 - 問題: 2.8位という最高順位でほぼ押されない = 検索意図と完全にズレている、またはメタディスクリプションで答えが完結し本文を読む必要がない
 - [x] タイトルを「なぜ日本はユニット型防音室が主流なのか」という問いかけ型に変更（2026-06-10）
 - [x] メタディスクリプションを「D-50≒STC50-55」のような結論先出しから、視点提供型に変更（クリックしないと結論が分からない構成に、2026-06-10）
-- [ ] 効果測定: 1〜2週間後にCTR改善の有無を確認。改善しない場合は記事の統合・削除を再検討
 
 ---
 
@@ -40,7 +38,6 @@
 - 期待値: 5位達成で月35〜50クリックへ（現在の2.5〜3.5倍）
 - [x] 関連記事（`/ja/diy/closet-diy-soundproof-room/`）から本記事へのリンクを追加（2026-06-10）
 - [x] 本記事内にFAQ形式のセクションを追加（スニペット狙い、2026-06-10）
-- [ ] 効果測定: GSCで新規流入経路・順位の変化を1〜2週間後に確認
 
 ### hsp-soundproof-room-guide ⭐ 最優先
 - 現URL: `/ja/soundproof-room/hsp-soundproof-room-guide/`
@@ -48,7 +45,6 @@
 - 期待値: 5位達成で月20〜30クリックへ（現在の3〜4倍）
 - [x] `/ja/soundproof-room/soundproof-room-pollen-protection/`、`/ja/soundproof-rental/noise-canceling-headphones-sleep/`、`/ja/soundproof-room/hsp-soundproof-curtain-guide/` から内部リンクを追加（2026-06-10）
 - [x] 「聴覚過敏」「ミソフォニア」などの関連キーワードをH2・H3・リード文に組み込み（2026-06-10）
-- [ ] 効果測定: GSCで新規流入経路・順位の変化を1〜2週間後に確認
 
 ### budget-soundproof-booth-comparison
 - 現URL: `/ja/soundproof-room/budget-soundproof-booth-comparison/`
@@ -56,7 +52,6 @@
 - [x] だんぼっち・OTODASU II・ISOVOX 2・自作の価格帯比較表を追加（2026-06-10）
 - [x] `/ja/money/soundproof-room-rental-cost/`、`/ja/soundproof-room/soundproof-room-budget-selection-guide/`、`/ja/soundproof-room/otodasu-voice-chat-test/` 等と相互リンク（2026-06-10）
 - [x] 「20万円以下」「価格帯」を見出し・本文に明示してCTR改善（2026-06-10）
-- [ ] 効果測定: GSCで順位8位ボーダーからの改善・CTR変化を1〜2週間後に確認
 
 ---
 
@@ -68,24 +63,17 @@
 ### soundproof-room-loan → soundproof-room-loan-guide
 - 現URL: `/ja/money/soundproof-room-loan-guide/`
 - 旧データ(2026-04-25, soundproof-room-loan): 順位24.0位 / CTR 7.35% / 5クリック / 68表示
-- [ ] `/ja/money/soundproof-room-loan-guide/` の現在のGSC順位・CTRを確認（旧記事と別物のため指標リセット済みの可能性が高い）
-- [ ] 住宅ローン組み込みの具体的な申請手順（step-by-step）が含まれているか確認・補強
-- [ ] `/ja/money/streamer-tax-strategy/`・`/ja/money/telework-soundproof-loan-strategy/` と相互リンク（金融シリーズとして連携）
 
 ### soundproof-room-humidifier-guide → bouon-humidifier-comparison ⭐要追跡
 - 現URL: `/ja/soundproof-room/bouon-humidifier-comparison/`
 - 旧データ(2026-04-25): 順位7.0位 / CTR **14.20%** / **24クリック（サイト最多）** / 169表示
 - 旧記事は2026-05-02に削除済み・`/posts/soundproof-room-humidifier-guide/` → 新URLへのリダイレクトは設定済み
-- [ ] **最優先**: 新URL `/ja/soundproof-room/bouon-humidifier-comparison/` のGSCデータを確認し、旧記事が持っていた「月24クリック・順位7.0・CTR14.2%」の水準を維持できているか検証する
-- [ ] 順位が大きく落ちている場合、旧記事の見出し構成・キーワード密度を比較して差分を補強する
-- [ ] 維持できていれば「防音室×生活環境」シリーズの軸記事として、カビ・花粉・CO2系の関連記事からリンクを集める（`/ja/soundproof-room/soundproof-room-pollen-protection/` など）
 
 ### sendai-soundproof-rental-guide
 - 現URL: `/ja/local/sendai-soundproof-rental-guide/`（旧 `/ja/soundproof-rental/others/...` からリダイレクト済み）
 - データ(2026-04-25): 順位13.8位 / CTR 11.54% / 6クリック / 52表示
 - [x] 仙台市内のエリア別情報（青葉区・太白区・泉区）、不動産会社情報は既に充実済みと確認
 - [x] 「仙台」をH2見出し2箇所に追加してローカルSEOを強化（2026-06-10）
-- [ ] カテゴリ移転（local）後の順位変動をGSCで確認（W27以降）
 
 ### bass-trap-installation-guide
 - 現URL: `/ja/diy/bass-trap-installation-guide/`（旧 `soundproof-room/diy/...` からリダイレクト済み）
@@ -93,7 +81,6 @@
 - W24時点: 表示6・クリック0・平均順位20.7 → **順位悪化の兆候**（要観察。カテゴリ移転直後のため断定は保留）
 - [x] 設置位置の図解・周波数帯別データ・製品比較テーブルは既に本文に含まれていることを確認（2026-06-10時点で対応済み）
 - [x] 末尾の「RT60残響測定ガイド」リンクが削除済み記事（`rt60-reverberation-measurement-guide`）への誤リンクだったため削除（2026-06-10）
-- [ ] W27目安で順位回復しているかGSCで再確認。回復しなければカテゴリ移転（soundproof-room→diy）の影響を疑う
 
 ---
 
@@ -123,12 +110,9 @@
 
 ---
 
-## 🆕 次の調査アクション（優先度順）
+## 🆕 次の調査アクション
 
-1. **リダイレクト浸透の確認**（最優先）: 2026-06-01のPhase1〜3リダイレクトが正しく機能しているか、W24以降のGSCで旧URL（`/ja/soundproof-rental/solution/...`等）の表示が新URLに移行しているかを継続観測する。
-2. **bouon-humidifier-comparison（旧 soundproof-room-humidifier-guide）の指標復元確認**（ZONE C参照）: サイト最多クリック記事だったため最優先で追跡。
-3. **bass-trap-installation-guide のカテゴリ移転影響確認**（ZONE C参照）: W24で順位悪化の兆候あり。
-4. **次回データ更新**: W27〜W28（2026-06-20頃以降）のGSCエクスポートを `.workspace/access-data/2026/` に追加し、`ctr-check-list.md` / `pagerank-list.md` を新URLベースで作り直す。
+GSC効果測定・W27以降の追跡タスクは`.workspace/.task/task-list.md`（2026-06-19棚卸し セクションD）に集約済み。
 
 ---
 

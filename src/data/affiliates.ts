@@ -54,24 +54,6 @@ export type AffiliateItem =
  */
 export const affiliates: Record<string, AffiliateItem> = {
   // ================================================
-  // サンプル: もしも（シンプルリンク型）
-  // ================================================
-  /*
-  'yamaha-avitex': {
-    type: 'link',
-    slug: 'yamaha-avitex',
-    name: 'ヤマハ アビテックス セフィーネNS',
-    description: '歌枠・ASMRに最適なヤマハ公式ユニット防音室。0.8〜1.2畳サイズ対応。',
-    price: '¥350,000〜',
-    image: '/affiliates/yamaha-avitex.jpg',
-    badge: 'RECOMMENDED',
-    program: 'moshimo',
-    url: 'https://af.moshimo.com/af/c/click?a_id=XXXXX&p_id=XXXXX', // ← 実際のURLに変更
-    variant: 'premium',
-  },
-  */
-
-  // ================================================
   // サンプル: Amazon Associates（ASIN型）
   // ================================================
   /*
@@ -278,7 +260,61 @@ export const affiliates: Record<string, AffiliateItem> = {
     price: '¥2,000〜',
     image: 'https://m.media-amazon.com/images/I/51481RxNHJL._SL1000_.jpg',
     badge: 'HEAVY-DUTY',
-    asin: 'B00B58K61Y', 
+    asin: 'B00B58K61Y',
+    tag: 'sasisi344-22',
+    variant: 'standard',
+  },
+
+  // ================================================
+  // streaming-pc-fan-noise-mic / streamer-pet-noise-balance 用 (2026-06-19 追加)
+  // ================================================
+
+  // 【防振インシュレーター】PC本体ノイズ対策
+  'pc-fan-vibration-insulator': {
+    type: 'amazon',
+    slug: 'pc-fan-vibration-insulator',
+    name: 'ワイドワーク 防振・防音インシュレーター（非反発ゴム）WW-THI-425',
+    description: 'PCケース脚に挟み、ファン振動による共振音（ビビリ音）を抑制。天然ゴム比で約10倍の制振性。',
+    price: '¥1,000〜2,000（4個入）',
+    asin: 'B000FHIPD2',
+    tag: 'sasisi344-22',
+    variant: 'standard',
+  },
+
+  // 【静音ジェルパッド】PC本体ノイズ対策
+  'silent-gel-pad-clamworks': {
+    type: 'amazon',
+    slug: 'silent-gel-pad-clamworks',
+    name: 'ClamWorks NP4012GEL 静音ジェルパッド',
+    description: 'HDD・SSD・ファン部に貼付し駆動音の共振を軽減。',
+    price: '¥1,000〜（複数枚入）',
+    asin: 'B009JYMVJ6',
+    tag: 'sasisi344-22',
+    variant: 'standard',
+  },
+
+  // 【防音ケージカバー】ペット同居配信者向け
+  'soundproof-cage-cover-k4': {
+    type: 'amazon',
+    slug: 'soundproof-cage-cover-k4',
+    name: '防音ケージカバーIV 犬小屋工房K',
+    description: '室内ケージにかぶせて無駄吠え85dB→53dBの実測値。ロスナイ付きで酸欠対策済み、国産天然木フレーム。',
+    price: '数千円〜',
+    image: 'https://m.media-amazon.com/images/I/71NEMZ245pL._AC_SL1370_.jpg',
+    asin: 'B0756RD44W',
+    tag: 'sasisi344-22',
+    variant: 'standard',
+  },
+
+  // 【隙間テープ】ペット同居配信者向け
+  'gap-tape-meicyan': {
+    type: 'amazon',
+    slug: 'gap-tape-meicyan',
+    name: 'Meicyan 隙間テープ 防音・断熱 25mm×6m',
+    description: 'ドア下・窓枠の隙間を埋め、鳴き声の音漏れ・外音侵入を軽減。',
+    price: '¥500〜1,500',
+    image: 'https://m.media-amazon.com/images/I/51Js0Q2M4+L._AC_SL1500_.jpg',
+    asin: 'B096M2T5Z4',
     tag: 'sasisi344-22',
     variant: 'standard',
   },
