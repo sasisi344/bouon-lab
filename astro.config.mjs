@@ -175,7 +175,7 @@ export default defineConfig({
     '/ja/soundproof-room/diy/closet-diy-soundproof-room/':                '/ja/diy/closet-diy-soundproof-room/',
     '/ja/soundproof-room/diy/danbotchi-diy-blueprints/':                  '/ja/diy/danbotchi-diy-blueprints/',
     '/ja/soundproof-room/diy/diy-led-acoustic-panels/':                   '/ja/diy/diy-led-acoustic-panels/',
-    '/ja/soundproof-room/diy/diy-soundproof-room-cost-breakdown/':        '/ja/diy/diy-soundproof-room-cost-breakdown/',
+    '/ja/soundproof-room/diy/diy-soundproof-room-cost-breakdown/':        '/ja/diy/soundproof-room-diy-cost/',
     '/ja/soundproof-room/diy/diy-soundproof-room-failures-solutions/':    '/ja/diy/diy-soundproof-room-failures-solutions/',
     '/ja/soundproof-room/diy/diy-soundproofing-tips/':                    '/ja/diy/diy-soundproofing-tips/',
     '/ja/soundproof-room/diy/free-cardboard-soundproof-tech/':            '/ja/diy/free-cardboard-soundproof-tech/',
@@ -238,6 +238,8 @@ export default defineConfig({
     // オーナーリノベ2本 → owner-soundproof-renovation-strategy
     '/ja/soundproof-rental/others/owner-soundproof-renovation-strategy/': '/ja/soundproof-rental/owner-soundproof-renovation-strategy/',
     '/ja/column/company/renovation-roi-strategy/': '/ja/soundproof-rental/owner-soundproof-renovation-strategy/',
+    // 自作防音室の費用内訳が同テーマで重複 → soundproof-room-diy-cost に統合（2026-06-24）
+    '/ja/diy/diy-soundproof-room-cost-breakdown/': '/ja/diy/soundproof-room-diy-cost/',
 
     // ── 旧Hugo /posts/ → 現カテゴリ構造へ転送（存在しない記事は最近接カテゴリへ）
     // soundproof-room カテゴリ（記事が存在するもの）

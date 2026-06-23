@@ -11,13 +11,14 @@
 | lang | category | slug | fm_slug | title | tags | internal_url | draft |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | ja | business | `bouonrental-areasec-newbusiness` |  | 防音賃貸市場の地域格差が示す新たなビジネス機会：都市部集中から地方分散への転換点を分析 | 防音賃貸, 地方創生, ビジネス機会, 市場分析, クリエイター経済 | `/ja/business/bouonrental-areasec-newbusiness/` | false |
-| ja | business | `datacenter-soundproof-technology-facts` |  | データセンターにも防音技術が使われる理由 \| BtoB提案の入口 | BtoB, データセンター, 防音パネル, 吸音材, 法人提案 | `/ja/business/datacenter-soundproof-technology-facts/` | false |
+| ja | business | `datacenter-soundproof-technology-facts` |  | なぜデータセンターは静かなのか｜防音技術から学ぶBtoB提案の作り方 | BtoB, データセンター, 防音パネル, 吸音材, 法人提案 | `/ja/business/datacenter-soundproof-technology-facts/` | false |
 | ja | business | `global-soundproof-market-trends` |  | 世界の防音市場予測2026｜北米・欧州・アジアの潮流と「住まいの静寂」の価値 | 防音市場, 海外動向, 北米, アジア, 国際比較 | `/ja/business/global-soundproof-market-trends/` | false |
 | ja | business | `japan-bouonproof-marketnextasia` |  | 【2026】日本の防音市場は次にアジアのどこを攻めるべきか｜中国・韓国・ベトナムの最新動向 | アジア展開, 防音市場, 国際戦略, 配信・実況, 市場分析 | `/ja/business/japan-bouonproof-marketnextasia/` | false |
 | ja | business | `owner-soundproof-renovation-investment-strategy-2026` |  | マンションオーナーの防音リノベ投資戦略 \| 利回りと出口戦略 | 不動産投資, 防音リノベ, 収益改善, 空室対策, 資産価値 | `/ja/business/owner-soundproof-renovation-investment-strategy-2026/` | false |
 | ja | business | `privacy-pod-market-growth` |  | プライバシーポッド市場が伸びる背景 \| 企業・公共設置の実態と課題 | プライバシーポッド, ワーキングスペース, フリーアドレス, 防音室, オフィス設計 | `/ja/business/privacy-pod-market-growth/` | false |
 | ja | business | `report-japan-asmr-vtuber-streaming-studio-standard` |  | 【技術解説】ASMR・VTuberに求められる「配信専用スタジオ」の防音・熱対策基準 (2026) | ASMR, VTuber, 配信・実況, 熱対策, PC排熱 | `/ja/business/report-japan-asmr-vtuber-streaming-studio-standard/` | false |
 | ja | business | `shared-streaming-studio-growth-pricing-utilization` |  | シェア型配信スタジオが急成長｜利用料金の相場と稼働率の最新データ | 配信・実況, 利用料金, 稼働率 | `/ja/business/shared-streaming-studio-growth-pricing-utilization/` | false |
+| ja | business | `soundproof-industry-news-2026-06` |  | 防音賃貸・防音室ニュースまとめ｜2026年最新の業界動向と新製品情報 | 防音賃貸, 防音室, 市場動向, 業界ニュース, 防音ブース | `/ja/business/soundproof-industry-news-2026-06/` | false |
 | ja | business | `soundproof-market-esg-trend` |  | 防音市場にESGの波｜省エネ構造・循環素材がもたらす新トレンド | ESG, 省エネ, 循環素材, 防音市場, サステナビリティ | `/ja/business/soundproof-market-esg-trend/` | false |
 | ja | business | `soundproof-renovation-cost-outlook-2026` |  | 防音リノベ費用高騰の最新動向とオーナー投資判断【2026年版】 | 防音リノベ, 防音賃貸, 建設コスト, 不動産投資, 市場動向 | `/ja/business/soundproof-renovation-cost-outlook-2026/` | false |
 | ja | business | `soundproof-space-business-guide` |  | 防音スペースのビジネス活用ガイド｜副業シェアから事業化まで3パターン | 防音室, シェアリングエコノミー, 副業, レンタル事業, スモールビジネス | `/ja/business/soundproof-space-business-guide/` | false |
@@ -26,12 +27,15 @@
 | ja | creator | `asmr-external-noise-elimination` |  | ASMR配信者が外音を消す部屋づくり｜現実的な防音対策まとめ | ASMR, 配信・実況, 外音対策, 遮音, 防音対策 | `/ja/creator/asmr-external-noise-elimination/` | false |
 | ja | creator | `asmr-vtuber-booth-guide` |  | 【2026年最新】ASMR・VTuber専用防音ブースの選び方。失敗しないための「静寂と配信効率」の両立術 | VTuber, ASMR, 防音室, 配信・実況 | `/ja/creator/asmr-vtuber-booth-guide/` | false |
 | ja | creator | `bourentakl-streamer-settingsetubi` |  | VTuber・ゲーム配信者向け防音賃貸の選び方｜回線・電源・防音性能で失敗しない完全ガイド | VTuber, 配信・実況, 防音賃貸, ネット回線, 遮音性能 | `/ja/creator/bourentakl-streamer-settingsetubi/` | false |
+| ja | creator | `cable-noise-ground-loop-prevention` |  | 配信の『サー』『ジー』音はグランドループが原因？アース・ケーブル対策ガイド | 配信・実況, ノイズ対策, グランドループ, マイクケーブル, 音質改善 | `/ja/creator/cable-noise-ground-loop-prevention/` | false |
 | ja | creator | `collab-streaming-soundproof-space` |  | 2人配信・コラボ収録できる防音部屋の広さと最低条件 | 配信・実況, コラボ配信, 防音室, 広さ, VTuber | `/ja/creator/collab-streaming-soundproof-space/` | false |
+| ja | creator | `dance-fitness-streamer-soundproof` |  | ダンス・フィットネス配信の防音｜足音・ジャンプ音の対策 | 配信・実況, ダンス配信, 防音対策, 床衝撃音, 防振マット | `/ja/creator/dance-fitness-streamer-soundproof/` | false |
 | ja | creator | `game-streamer-sound-types` |  | ゲーム実況者の防音環境｜打鍵音・マウス音・叫び声ごとの対策 | 配信・実況, ゲーム実況, キーボード騒音, 打鍵音, 防音対策 | `/ja/creator/game-streamer-sound-types/` | false |
 | ja | creator | `kominka-renovation-streaming-room` |  | 古民家を配信スタジオ防音室にリノベ！費用と注意点を徹底試算 | DIY防音, 古民家リノベ, 防音室, 配信・実況 | `/ja/creator/kominka-renovation-streaming-room/` | false |
 | ja | creator | `night-streaming-neighbor-tips` |  | 深夜配信を続けるための「近隣トラブル回避術」賃貸編 | 配信・実況, 深夜配信, 近隣トラブル, 賃貸防音, 騒音対策 | `/ja/creator/night-streaming-neighbor-tips/` | false |
 | ja | creator | `one-room-streaming-soundproof` |  | ワンルーム配信の防音ハック｜1万円以下で隣人の壁ドンを回避する現実的な解 | 一人暮らし, 低予算, 配信・実況, DIY防音, 騒音トラブル | `/ja/creator/one-room-streaming-soundproof/` | false |
-| ja | creator | `parenting-streamer-soundproof` |  | 子育て中に配信を続けるための防音・生活音コントロール術 | 配信・実況, 子育て, 生活音, 防音対策, 在宅ワーク | `/ja/creator/parenting-streamer-soundproof/` | false |
+| ja | creator | `parenting-streamer-soundproof` |  | 子育て・同居人と暮らす配信者の防音と生活音調整術 | 配信・実況, 子育て, ルームシェア, 生活音, 防音対策 | `/ja/creator/parenting-streamer-soundproof/` | false |
+| ja | creator | `podcast-collab-recording-acoustics` |  | 2人以上のポッドキャスト・対談配信｜マイク構成と音響セッティングの基本 | 配信・実況, ポッドキャスト, マイク設定, 音響セッティング, コラボ配信 | `/ja/creator/podcast-collab-recording-acoustics/` | false |
 | ja | creator | `singer-instrumentalist-stream-soundproof` |  | ピアノ・ギター弾き語り配信の防音設計｜楽器音と声を同時に処理する | 配信・実況, 楽器演奏, 吸音パネル, 防音対策, DIY防音 | `/ja/creator/singer-instrumentalist-stream-soundproof/` | false |
 | ja | creator | `soundproof-rental-life-streamer` |  | 防音賃貸の住み心地｜ゲーム配信者が語る引っ越して半年のリアルな暮らし | 防音賃貸, 配信・実況 | `/ja/creator/soundproof-rental-life-streamer/` | false |
 | ja | creator | `soundproof-rental-vs-diy-streamer` |  | 防音賃貸 vs 普通の部屋で防音DIY｜配信者が選ぶべきはどちらか | 配信・実況, 防音賃貸, DIY防音, VTuber, 部屋選び | `/ja/creator/soundproof-rental-vs-diy-streamer/` | false |
@@ -39,6 +43,7 @@
 | ja | creator | `streamer-budget-temp-soundproof` |  | 防音室を買う前に試したい2万円以下の騒音対策【配信者向け】 | 配信・実況, 防音室, 低予算, DIY防音, 騒音対策 | `/ja/creator/streamer-budget-temp-soundproof/` | false |
 | ja | creator | `streamer-noise-complaint-response` |  | 配信中に「苦情が来た」ときの対処フロー｜謝罪・改善・再発防止まで | 配信・実況, 騒音苦情, 近隣トラブル, 賃貸, 対処法 | `/ja/creator/streamer-noise-complaint-response/` | false |
 | ja | creator | `streamer-noise-quick-fix` |  | ゲーム配信者が防音より先にやるべき騒音対策3つ | 配信・実況, ゲーム実況, 騒音対策, 賃貸防音, DIY防音 | `/ja/creator/streamer-noise-quick-fix/` | false |
+| ja | creator | `streamer-pet-noise-balance` |  | 配信中のペットの鳴き声対策｜防音ケージ＋隙間テープの両立術 | 配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル | `/ja/creator/streamer-pet-noise-balance/` | false |
 | ja | creator | `streamer-regional-studio-move` |  | 地方移住して配信スタジオを作った人の話｜広さ・家賃・防音のリアル | 配信・実況, 地方移住, 配信スタジオ, 防音室, リモートワーク | `/ja/creator/streamer-regional-studio-move/` | false |
 | ja | creator | `streamer-rental-preview-checklist` |  | 配信者が防音賃貸を内見するときのチェックリスト10項目 | 配信・実況, 防音賃貸, 内見チェック, 物件選び, VTuber | `/ja/creator/streamer-rental-preview-checklist/` | false |
 | ja | creator | `streamer-rental-selection-guide` |  | 配信者向け賃貸の選び方｜静かに配信できる部屋を探すコツ | 配信・実況, 防音賃貸, 騒音対策 | `/ja/creator/streamer-rental-selection-guide/` | false |
@@ -48,10 +53,12 @@
 | ja | creator | `streamer-soundproof-room-comprehensive-guide` |  | 【2026完全版】配信者・VTuberのための防音環境完全ガイド｜ワンルームから防音室まで全解説 | 配信・実況, VTuber, ASMR, 防音室, キーボード騒音, 節税, マイク設定 | `/ja/creator/streamer-soundproof-room-comprehensive-guide/` | false |
 | ja | creator | `streamer-soundproof-timing` |  | 配信者が防音室を買うべきタイミング｜月収・再生数・苦情リスクで判断する方法 | 配信・実況, 防音室, 購入タイミング, 投資判断, VTuber | `/ja/creator/streamer-soundproof-timing/` | false |
 | ja | creator | `streaming-mic-noise-room` |  | マイクの「音割れ・ノイズ」を防ぐ部屋づくり｜吸音と遮音どちらが先か | 配信・実況, マイクノイズ, 吸音パネル, 音質改善, 防音対策 | `/ja/creator/streaming-mic-noise-room/` | false |
+| ja | creator | `streaming-pc-fan-noise-mic` |  | 配信のマイクノイズはPC本体が原因？ファン音・振動対策ガイド | 配信・実況, マイクノイズ, PC静音化, 防振対策, 音質改善 | `/ja/creator/streaming-pc-fan-noise-mic/` | false |
 | ja | creator | `streaming-room-layout-guide` |  | 【配信部屋のレイアウト学】狭くても「映える」部屋は作れる！カメラ画角と防音室の配置ルール | 配信・実況, デスク周り, レイアウト, 防音室, カメラ写り | `/ja/creator/streaming-room-layout-guide/` | false |
 | ja | creator | `streaming-room-reverb-absorption` |  | 配信部屋の反響を消す吸音パネルの選び方と設置場所 | 配信・実況, 吸音パネル, 音響改善, 残響対策, DIY防音 | `/ja/creator/streaming-room-reverb-absorption/` | false |
 | ja | creator | `utaite-vs-streamer-soundproof` |  | 歌ってみた・宅録の防音とゲーム配信の防音｜何が違うのか | 歌ってみた, 宅録, 配信・実況, 吸音パネル, 防音対策 | `/ja/creator/utaite-vs-streamer-soundproof/` | false |
 | ja | creator | `voice-chat-soundleak-fix` |  | ボイスチャットの音漏れを今すぐ防ぐ7つの方法｜家族・隣人への配慮 | 配信・実況, ボイスチャット, 音漏れ対策, 近隣トラブル, 賃貸防音 | `/ja/creator/voice-chat-soundleak-fix/` | false |
+| ja | creator | `vtuber-family-privacy-rules` |  | 実家・同棲VTuberの「身バレ・親フラ」対策！深夜配信も安心な鉄壁の防音ルール | 実家暮らし, 同棲, 親フラ, 配信・実況, プライバシー | `/ja/creator/vtuber-family-privacy-rules/` | false |
 | ja | creator | `vtuber-soundproof-environment-complete-guide` |  | 【2026最新】配信者・VTuber向け防音室導入完全ガイド｜タイミング・資金計画・技術スペック | VTuber, 配信・実況, 防音室, 資金計画, 確定申告, D値 | `/ja/creator/vtuber-soundproof-environment-complete-guide/` | false |
 | ja | diy | `bass-trap-installation-guide` |  | ベーストラップ設置ガイド｜低音こもりを解消する配置・DIY・測定の全手順 | ベーストラップ, 低音, 音響補正, 吸音材, 防音室 | `/ja/diy/bass-trap-installation-guide/` | false |
 | ja | diy | `bedroom-telework-layout-soundproof` |  | 「寝室でテレワーク」がつらい理由。睡眠と仕事を分ける「部屋の中の部屋」レイアウト | テレワーク, 寝室, レイアウト, 防音室, 睡眠 | `/ja/diy/bedroom-telework-layout-soundproof/` | false |
@@ -61,7 +68,6 @@
 | ja | diy | `diy-internal-window-road-noise-reduction` |  | 内窓の防音効果を実測｜賃貸DIYポリカ窓から本格インプラスまで徹底比較【2025-2026年版】 | 内窓, DIY防音, 実測, 補助金, インプラス | `/ja/diy/diy-internal-window-road-noise-reduction/` | false |
 | ja | diy | `diy-led-acoustic-panels` |  | 配信映えする「LED付き自作吸音パネル」の作り方！光と音を同時に操る | 吸音材, LED, 配信・実況, DIY防音, インテリア | `/ja/diy/diy-led-acoustic-panels/` | false |
 | ja | diy | `diy-refrigeration-noise-reduction` |  | 配信者のための家電・生活音対策｜冷蔵庫と換気扇のノイズを物理的に沈める方法 | 配信・実況, 騒音対策, 冷蔵庫, 換気, 防振, ASMR | `/ja/diy/diy-refrigeration-noise-reduction/` | false |
-| ja | diy | `diy-soundproof-room-cost-breakdown` |  | 自作防音室の費用内訳｜材料費だけでいくらかかる？プロの施工と徹底比較 | DIY防音, 費用, 材料選び, 防音工事 | `/ja/diy/diy-soundproof-room-cost-breakdown/` | false |
 | ja | diy | `diy-soundproof-room-failures-solutions` |  | 防音パネルの罠｜DIY失敗例から学ぶ『遮音と吸音』の物理学的黄金比 | DIY防音, 遮音, 吸音, 遮音性能, 失敗談 | `/ja/diy/diy-soundproof-room-failures-solutions/` | false |
 | ja | diy | `diy-soundproof-ventilation-heat-exhaust` |  | 【灼熱対策】0.5畳の防音室にエアコンが付けられない！DIYで「空気の通り道」を作る排熱・換気術 | 排熱, 換気, DIY防音, エアコンなし, だんぼっち, OTODASU | `/ja/diy/diy-soundproof-ventilation-heat-exhaust/` | false |
 | ja | diy | `diy-soundproofing-tips` |  | DIY防音のコツ｜安価で効果的な遮音・吸音テクニックを音響エンジニアが解剖 | DIY防音, 遮音シート, 吸音材, 防音賃貸, 音響設計 | `/ja/diy/diy-soundproofing-tips/` | false |
@@ -120,7 +126,7 @@
 | ja | money | `soundproof-subsidy-news-2025` |  | 防音室の補助金2026年最新版｜二重窓リノベで最大200万円受給する裏技 | 補助金, 節税 | `/ja/money/soundproof-subsidy-news-2025/` | false |
 | ja | money | `soundproof-subsidy-tokyo-osaka` |  | 【東京・大阪】防音工事で補助金が出る地域は？空港や幹線道路沿いの調べ方 | 防音工事, 補助金, 東京, 大阪, 空港, 幹線道路 | `/ja/money/soundproof-subsidy-tokyo-osaka/` | false |
 | ja | money | `soundproof-window-subsidy-2025-guide` |  | 【2025年最新】防音窓リフォームで使える補助金制度まとめ｜先進的窓リノベ対応 | 補助金, 内窓リフォーム | `/ja/money/soundproof-window-subsidy-2025-guide/` | false |
-| ja | money | `streamer-tax-strategy` |  | 配信者のための防音室「節税・経費化」戦略：個人事業主・法人が知るべき減価償却のルール | 確定申告, 節税, 減価償却, 個人事業主, 青色申告, 配信・実況 | `/ja/money/streamer-tax-strategy/` | false |
+| ja | money | `streamer-tax-strategy` |  | 配信者の防音室は経費にできる｜30万円特例で節税する減価償却ガイド | 確定申告, 節税, 減価償却, 個人事業主, 青色申告, 配信・実況 | `/ja/money/streamer-tax-strategy/` | false |
 | ja | money | `telework-soundproof-loan-strategy` |  | テレワーク・在宅勤務のための防音室ローン活用｜集中環境と耳の健康への戦略投資 | テレワーク, ローン, 生産性, 節税 | `/ja/money/telework-soundproof-loan-strategy/` | false |
 | ja | soundproof-rental | `apartment-weight-limit-500kg` |  | 築20年のマンションに重さ500kgの防音室を置ける？床補強なしで設置するための安全基準と計算術 | 防音 | `/ja/soundproof-rental/apartment-weight-limit-500kg/` | false |
 | ja | soundproof-rental | `bouon-rental-market-guide` |  | 【2026完全版】防音賃貸・防音マンション完全ガイド｜全国相場・D値・ブランド・選び方を総まとめ | 防音賃貸, 家賃相場, 防音マンション, ミュージション, D値, 楽器可物件 | `/ja/soundproof-rental/bouon-rental-market-guide/` | false |

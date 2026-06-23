@@ -2,65 +2,62 @@
 
 本番記事格納フォルダ `src/content` のフォルダ構造を指定。
 
+**2026-06-01のカテゴリフラット化以降、`ja` はサブ区分フォルダを使わない**（旧 `diy/knowledge/others/solution` 階層は廃止済み）。本ファイルは現状構造を正とする。
+
 ## フォルダ階層指示
 
-### 日本語（`ja`）— 実務ナレッジ軸
+### 日本語（`ja`）— 実務ナレッジ軸（フラット構造）
 
 ```
 src/content/ja/
-├── column/
-│   ├── company/
-│   ├── news/
-│   └── others/
-├── soundproof-rental/
-│   ├── diy/
-│   ├── knowledge/
-│   ├── others/
-│   └── solution/
-└── soundproof-room/
-    ├── diy/
-    ├── knowledge/
-    ├── others/
-    └── solution/
+├── soundproof-room/      # 防音室（ユニット・製品）
+│   └── {slug}/index.mdx
+├── soundproof-rental/    # 防音賃貸
+│   └── {slug}/index.mdx
+├── diy/                  # DIY防音
+│   └── {slug}/index.mdx
+├── money/                # お金・補助金・ローン
+│   └── {slug}/index.mdx
+├── creator/              # 配信・クリエイター
+│   └── {slug}/index.mdx
+├── knowledge/            # 防音の基礎知識
+│   └── {slug}/index.mdx
+├── local/                # 地域ガイド
+│   └── {slug}/index.mdx
+└── business/             # 企業・法人向け
+    └── {slug}/index.mdx
 ```
 
-### 英語（`en`）— Japan lens（文化・社会・市場の国際発信）
+- 第1階層: 言語コード（`ja` / `en`）
+- 第2階層: トップカテゴリ（上記8種。`column` 等の旧カテゴリは廃止済み）
+- 第3階層: 記事スラッグのフォルダ（`index.mdx` + `cover.png` を格納）。**サブ区分フォルダは挟まない**
+- frontmatterの `subcategory` はスキーマ上 optional だが、現行記事では未使用（ディレクトリ階層には現れない）
 
-`en` は **ja と同じトップカテゴリ名を使わない**。海外読者向けに「日本の防音・静寂がどう機能しているか」を説明する軸で整理する。
+トップカテゴリの正本はコード上 `src/data/contentCategories.ts` の `JA_TOP_CATEGORIES`。
+
+### 英語（`en`）— Japan lens（文化・社会・市場の国際発信、**現状記事ゼロ**）
+
+`en` 記事は2026-06-24時点で0件。`src/content/en/` 配下に残っている `column/` `soundproof-rental/` `soundproof-room/` 等のフォルダは2026-06-01のフラット化前の空フォルダ（実体なし）であり、現行の方針とは無関係。
+
+将来 `en` を書く場合は `contentCategories.ts` の `EN_TOP_CATEGORIES` に定義済みの **Japan lens** 3カテゴリ（`japan-noise-and-society` / `japan-soundproof-housing` / `japan-quiet-spaces`）を使う。`ja` と同じトップカテゴリ名は使わない。
 
 ```
 src/content/en/
 ├── japan-noise-and-society/     # 騒音と社会：近隣・マナー・住宅文化・日米欧比較
-│   ├── culture/                 # 集合住宅・期待される静けさ・クレームの文脈
-│   ├── etiquette/               # 作法・証拠・コミュニケーション
-│   └── comparison/              # 海外との制度・生活文化の対比
 ├── japan-soundproof-housing/    # 住まいと防音市場：防音賃貸・リノベ・オーナー視点
-│   ├── rental-market/           # 防音賃貸・用語・相場の「日本ならでは」
-│   ├── renovation-investment/   # 投資・リノベ・収益モデル（日本文脈）
-│   └── foreign-residents/       # 外国人・駐在・留学と「日本の音」のリアル
 └── japan-quiet-spaces/          # 静かな空間：ユニット防音室・クリエイター文化・ルール
-    ├── unit-booths/             # ブランド・製品文化・部屋の中の部屋
-    ├── creators/                # 演奏・配信・ナイトプラクティスと防音
-    └── rules-and-diy/           # 賃貸契約・耐荷重・原状回復など日本ルール下のDIY
 ```
 
-- 第1階層: 言語コード（`ja` / `en`）
-- 第2階層: **`ja`** は `column` / `soundproof-rental` / `soundproof-room`。**`en`** は上記3つの **Japan lens** カテゴリのみを使う。
-- 第3階層: サブ区分（記事タイプ・編集上の束ね。上表を正とする）
-
-ナビ・カテゴリ一覧の正本はコード上 `src/data/contentCategories.ts`（`JA_TOP_CATEGORIES` / `EN_TOP_CATEGORIES`）も参照。
+ただし `task-list.md` の方針により **`en` 記事は現時点で作成しなくてよい**（着手は需要データを起点に別途判断）。
 
 ## _draft から本番記事へ移す際のカテゴリ厳密ルール
 
-- 下書きは必ず `_draft` に作成し、公開時に `src/content/ja/` 配下へ移す（**企画の起点は基本 `ja`**）。
-- **`en` を新規に書く場合**も、上記 `en` ツリーの **第2・第3階層**にだけ配置する（`ja` と同じ `soundproof-room` 等には置かない）。
-- 主要キーワードが防音室なら（ja）`soundproof-room`、（en）ではテーマに応じて `japan-quiet-spaces` または `japan-soundproof-housing` を選ぶ。
-- 主要キーワードが防音賃貸なら（ja）`soundproof-rental`、（en）では `japan-soundproof-housing` を優先する。
-- 最新情報・企業関連の話題は（ja）`column`。（en）では「日本の市場・文化としてのニュース」なら `japan-noise-and-society` か `japan-quiet-spaces` のサブ区分を選ぶ。
-- 第3階層は必ずフォルダで切る（上表のいずれか）。
+- 下書きは必ず `_draft` に作成し、公開時に `src/content/ja/{category}/{slug}/` 配下へ移す（**企画の起点は基本 `ja`**）。
+- 主要キーワードが防音室なら `soundproof-room`、防音賃貸なら `soundproof-rental`、DIYなら `diy`、費用・補助金・ローンなら `money`、配信者・クリエイター向けなら `creator`、基礎知識・法規制・物理なら `knowledge`、地域別ガイドなら `local`、法人・市場動向なら `business`。
+- 第3階層は必ずスラッグのフォルダで切る（サブ区分フォルダを挟まない）。
 
 ## frontmatter ルール（categories / slug）
 
-- `lang` / `category` / `subcategory` は **ディレクトリ構造と一致**させる。
+- `lang` / `category` は **ディレクトリ構造と一致**させる。
 - `category` で使った英数字列は、`slug` では可能な限り重複使用しない。
 - パーマリンク全体で記事意図が伝わるよう、`slug` は固有テーマを簡潔に表現する。

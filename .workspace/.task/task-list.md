@@ -1,21 +1,15 @@
 # 現在抱えているタスク
 
 作成日：2026-06-10
-最終整理：2026-06-21（完了タスクをアーカイブ化、未整理枠を新設、W27〜W28待ちタスクを優先度Bに集約）
+最終整理：2026-06-24（2026-06-21の未整理タスク群が全件完了・アーカイブ化。未整理セクションは現在空）
 
 ---
 
 ## 未整理
 
-2026-06-21：記事構成全体調査（169記事・全8カテゴリ）で発見したウィークポイント。トリアージ後に下記セクションへ移動する。
+現在トリアージ待ちの新規項目なし。
 
-- [x] **CtaBox再構成**: `.workspace/.task/ctabox-task.md`で完了。提携実体なしを確認しrelのsponsored表記を削除、配置基準を「単独の決断ポイント」に絞り込んだ上で4記事5箇所（A類2記事＋B類2記事3箇所）に設置、残り44件の言及はC類（並列比較・一般論）と判定して非設置を維持
-- [x] **AffiliateCard活用が薄い**: `.workspace/.task/link-check.md`で完了。未設置8商品中6商品・19箇所に設置（`danbocchi-standard`4・`reflection-filter`6・`防振-mat-piano`5・`booth-workspace`1・`sound-level-meter-pro`1・`humidifier-vaporizer-daikin`1）。`otodasu-dx-pro`は候補記事が安価な別モデル「OTODASU II」を指しており登録商品（プロ仕様¥149,000〜）と price/性能が不一致のため見送り、`affiliates.ts`側のSKU追加・説明見直しが今後の課題として残存
-- [x] **内部リンクゼロ記事が169記事中76記事（45%）**: `.workspace/.task/link-check.md`で完了。76記事全件に文脈リンクを追加し、内部リンクゼロ件数0件を確認済み（既存の未リンク参照テキストの実リンク化・壊れたリンク修正も含む）
-- [ ] **EEAT評価の対象漏れ**: `eeat-filecheck-list.md`は111記事評価だが実際は169記事。差58記事（主に`creator`の新規分）が未評価のまま → 評価対象を現状の全記事に拡大して再実施
-- [ ] **`en`記事が0件**: `contentCategories.ts`/`README-content.md`でJapan lens 3カテゴリ定義済みだが実記事ゼロ。`non_jpn_queries.md`の需要データ（"livestream soundproof" 251表示等）を起点に着手検討
-- [ ] **`src/content/README-content.md`が陳腐化**: 2026-06-01のカテゴリフラット化前の旧階層（column/soundproof-rental/soundproof-room配下にdiy/knowledge/others/solution）を記載したままで、実際の8カテゴリ構造（business/creator/diy/knowledge/local/money/soundproof-rental/soundproof-room）と不一致。CLAUDE.mdが「正とする」と指示しているため誤記載が記事配置ミスを誘発するリスク → 現状構造に合わせて修正
-- [ ] **`creator`カテゴリの肥大化・カニバリリスク**: 全169記事中36記事（21%）が集中し、`streamer-*`/`streaming-*`系の似た接頭辞スラッグが多数。体系的なトピッククラスタ管理がなく都度手動確認に依存 → トピッククラスタ表の作成を検討
+en記事は作成しなくていい。
 
 ---
 
@@ -32,6 +26,33 @@ W24〜W26（3週連続）のGSCデータでは判断材料が不十分（サイ�
 ---
 
 <!--
+### 2026-06-24棚卸し：未整理セクション（2026-06-21発見分）全件完了
+
+`.workspace/.task/eeat-filecheck-list.md`の対象漏れ発見を起点に、169記事・全8カテゴリ調査で見つかったウィークポイント6件を全件完了。
+
+- [x] **`local/kobe-soundproof-rental-guide`と`kyoto-soundproof-rental-guide`が定型文の重複**: 両記事ほぼ同一の抽象的な「対策」文言の繰り返しで独自データ・出典に乏しい（B評価） → 神戸（港町・震災後の建て替え・ジャズ文化）と京都（景観条例による高さ制限・音楽大学集積）の実在事実を軸に全面リライト。「対策」section も都市固有の助言に書き分け、一字一句一致する定型文を排除。両記事ともA評価へ格上げ（神戸約3,900字・京都約4,000字）。未確認の固有名詞「Quintet神戸」は削除
+- [x] **2026-06-01のカテゴリフラット化で他記事にも同種の壊れた内部リンクが残っている可能性**: 全記事を`grep`で全件調査完了。新たに3件発見・修正（`creator/streamer-noise-complaint-response`1件、`creator/streamer-rental-preview-checklist`2件、いずれも旧サブ区分付きパス＋カテゴリ誤りを修正）。再調査で残存ゼロを確認、`npx astro check`も0エラー
+- 結果：EEAT評価は最終的にA148(88%)/B21(12%)/C0(0%)
+
+- [x] **CtaBox再構成**: `.workspace/.task/ctabox-task.md`で完了。提携実体なしを確認しrelのsponsored表記を削除、配置基準を「単独の決断ポイント」に絞り込んだ上で4記事5箇所（A類2記事＋B類2記事3箇所）に設置、残り44件の言及はC類（並列比較・一般論）と判定して非設置を維持
+- [x] **AffiliateCard活用が薄い**: `.workspace/.task/link-check.md`で完了。未設置8商品中6商品・19箇所に設置（`danbocchi-standard`4・`reflection-filter`6・`防振-mat-piano`5・`booth-workspace`1・`sound-level-meter-pro`1・`humidifier-vaporizer-daikin`1）。`otodasu-dx-pro`は候補記事が安価な別モデル「OTODASU II」を指しており登録商品（プロ仕様¥149,000〜）と price/性能が不一致のため見送り、`affiliates.ts`側のSKU追加・説明見直しが今後の課題として残存
+- [x] **内部リンクゼロ記事が169記事中76記事（45%）**: `.workspace/.task/link-check.md`で完了。76記事全件に文脈リンクを追加し、内部リンクゼロ件数0件を確認済み（既存の未リンク参照テキストの実リンク化・壊れたリンク修正も含む）
+- [x] **EEAT評価の対象漏れ**: 2026-06-24：未評価68記事（旧記載の58件は集計漏れ）を全件評価し完了。全170行（A138/B23/C9）に更新済み。
+  - [x] **C評価9記事（本文400〜700字で極端に短い）の重要度判定と対応**: 各記事が防音Labの核心トピックかを判定。`diy/diy-soundproof-room-cost-breakdown`は既存A評価記事`diy/soundproof-room-diy-cost`（タイトル・主題が実質同一）と重複と判定し**削除**（リダイレクト設定・内部リンク修正・`interlink-postlist.md`再生成済み）。残り8記事は重複なし・核心/差別化トピックと判定し**全件加筆完了、全てA評価へ格上げ**：
+    - `soundproof-room/proofroom-aircondition-select`（防音室の空調・換気）→ 約4,200字
+    - `soundproof-room/proofroom-humidity-airconditionlist`（温湿度管理・楽器保護）→ 約3,700字
+    - `soundproof-room/proofroom-soudmore-manual`（音漏れ診断・段階的改善）→ 約3,000字
+    - `diy/diy-refrigeration-noise-reduction`（配信者の家電ノイズ対策）→ 約2,188字
+    - `diy/diy-soundproof-room-failures-solutions`（DIY失敗例・遮音吸音の混同分析）→ 約2,268字
+    - `diy/diy-wall-soundproofing-room-guide`（部屋全体DIY防音の工法比較）→ 約2,541字
+    - `diy/soundproof-sheet-heavy-diy-tips`（遮音シートの重量・フレーム補強）→ 約2,394字
+    - `money/musician-soundproof-loan-strategy`（音楽家ペルソナの資金調達戦略）→ 約2,350字
+    - 結果：EEAT評価は最終的にA146(86%)/B23(14%)/C0(0%)。`npx astro check`は0エラーを確認済み
+  - [x] **`creator/night-streaming-neighbor-tips`の内部リンク2件が旧サブ区分付きパス（`/ja/soundproof-rental/solution/...`・`/ja/soundproof-rental/knowledge/...`）のまま**: 修正済み。`/ja/soundproof-rental/noise-complaint-landlord-negotiation-guide/`と`/ja/creator/streamer-rental-selection-guide/`（カテゴリ違いも修正）に更新
+- [x] **`en`記事が0件**: `non_jpn_queries.md`等の需要データ起点の着手検討は対象外。**`task-list.md`本文に明記の通りen記事は作成しない方針のため対応不要**と確認
+- [x] **`src/content/README-content.md`が陳腐化**: 現状の8カテゴリ・フラット構造（サブ区分フォルダ廃止）に合わせて全面修正。`en`は実記事0件・空フォルダのみであることも明記
+- [x] **`creator`カテゴリの肥大化・カニバリリスク**: `.workspace/.task/creator-topic-clusters.md`に全36記事のトピッククラスタ表（8クラスタ）を作成。最大のカニバリ候補として`streamer-soundproof-room-comprehensive-guide`と`vtuber-soundproof-environment-complete-guide`（タイトル・スコープがほぼ同一）を特定し、次回リライト時の優先確認事項として提言
+
 ## 完了タスク（アーカイブ・2026-06-21整理）
 
 前提：`rewrite-post.md`（P1〜P3 全10記事）/ `streamer-post.md`（creator新規21記事）/ `seo-task.md`（ZONE A〜C）が完了済み。
