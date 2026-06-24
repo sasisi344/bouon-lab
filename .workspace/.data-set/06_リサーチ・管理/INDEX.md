@@ -1,6 +1,6 @@
 # .workspace/.data-set/ INDEX
 
-**Last Optimized**: 2026-04-14
+**Last Optimized**: 2026-06-24
 **Purpose**: Central knowledge index for BouonLab Content Strategy.
 
 ## 🏠 01\_防音室 (Soundproof Rooms)
@@ -13,6 +13,7 @@
 
 - **[防音賃貸：ユーザー潜在ニーズ・意思決定阻害要因のDeep Research.md](../02\_防音賃貸/防音賃貸：ユーザー潜在ニーズ・意思決定阻害要因のDeep Research.md)**: Deep dive into soundproof rental needs.
 - **[analysis-rental-market-2026.md](../02_防音賃貸/analysis-rental-market-2026.md)**: 日本主要5都市の防音賃貸市場比較・都市別インサイト・アフィリエイト戦略（2026年4月版）。
+- **[research-rent-price-urban-suburban-gap-2026-06.md](../02_防音賃貸/research-rent-price-urban-suburban-gap-2026-06.md)**: 家賃相場の都心/郊外ギャップ検証・MUSISION全棟サンプル・プレミアム率・コスパ判断フレーム（2026-06-24）。
 - **[analysis-rental-market-cities-detail.md](../02_防音賃貸/analysis-rental-market-cities-detail.md)**: 各都市の定量モデル・推計ロジック・地価データを含む詳細版。
 - **[strategy-affiliate-rental.md](../02_防音賃貸/strategy-affiliate-rental.md)**: Optimization of rental affiliate conversions.
 

@@ -41,6 +41,9 @@
   --sl-color-accent-low:  #1e1600;
   --sl-color-accent:      #c9a830;
   --sl-color-accent-high: #e8d070;
+
+  /* 左サイドバー幅: デフォルト18.75remの6割（記事本文を圧迫しないよう縮小） */
+  --sl-sidebar-width: 11.25rem;
 }
 
 /* StarlightPage カスタムレイアウト: 空の PageTitle パネルを非表示 */

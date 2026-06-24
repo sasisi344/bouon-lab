@@ -1,13 +1,29 @@
 # 現在抱えているタスク
 
 作成日：2026-06-10
-最終整理：2026-06-24（2026-06-21の未整理タスク群が全件完了・アーカイブ化。未整理セクションは現在空）
+最終整理：2026-06-24（サイト全体トピッククラスタ・カニバリ調査の結果を未整理セクションに追加）
 
 ---
 
 ## 未整理
 
-現在トリアージ待ちの新規項目なし。
+### GSCクエリ分析（2026-06-24エクスポート）からの弱点・新規コンテンツ機会
+
+出典: `.workspace/.task/202606-querty.md`（過去3か月のクエリ272件・ページ429件を分析。CTR改善余地のある記事7本、コンテンツギャップ3件、伸ばせば成果が出る記事群を特定し優先度別タスク化済み）。詳細・個別タスクは同ファイル参照。
+
+### サイト全体のカテゴリ内・カテゴリ横断カニバリ対策
+
+出典: `.workspace/.task/site-topic-clusters.md`（business・diy・knowledge・local・money・soundproof-rental・soundproof-room の7カテゴリ132記事）／`.workspace/.task/creator-topic-clusters.md`（creator38記事、2026-06-24に36→38記事へ更新済み）。
+
+- [x] **最優先・クロスカテゴリA**: オーナー向け防音リノベROI・投資戦略が3カテゴリ4記事に分散（business`owner-soundproof-renovation-investment-strategy-2026`・business`soundproof-renovation-cost-outlook-2026`・soundproof-rental`owner-soundproof-renovation-strategy`・money`owner-renovation-roi-simulation-tool`）。読み比べて1本を総合ハブに据え、残り3本を明確な差別化軸（市場動向／コスト動向／個別シミュレーションツール）にピボットするか統合する → 2026-06-24対応：4記事それぞれ内容自体は元々差別化済み（ROI/出口戦略・建設コスト動向・ペルソナ別経営戦略・A4簡易シミュレーション）と判断し統合は見送り。各記事の冒頭に他3記事との違いを明示する一文を追加し、4記事相互の内部リンクを完全に張り直した（mesh化）。lastmodを全件2026-06-24に更新
+- [x] **優先・money内**: 「防音室レンタル vs 購入」3本（`rental-vs-purchase-soundproof-room`・`soundproof-room-rental-cost`・`soundproof-room-rental-lease`）の損益分岐点訴求が重複 → 2026-06-24対応済み。役割分担を本文冒頭で明示（`rental-vs-purchase-soundproof-room`＝ヤマハMCプラン単体の総合比較／`soundproof-room-rental-cost`＝複数ブランドの料金相場・初期費用／`soundproof-room-rental-lease`＝法人リース・経費処理）し3本相互リンクを追加。損益分岐点の数字（5年・18ヶ月・3〜4年）が記事間で異なる理由（算出基準の違い）も各記事に注記。削除・統合は実施せず差別化で解消
+- [x] **優先・soundproof-rental内**: 「導入・許可・原状回復・耐荷重」5本中、特に`rental-permission-proposal-template`・`rental-unit-soundproof-room`・`rental-proofroom-contractcheck`の3本が「導入前に確認すること」という同一検索意図に収斂。差別化または統合を検討する → 2026-06-24対応：5本（`rental-permission-proposal-template`・`rental-unit-soundproof-room`・`rental-proofroom-contractcheck`・`soundproof-room-installation-conditions`・`apartment-weight-limit-500kg`）を読み比べ、削除・統合は見送り役割分担で解消（テンプレート書式／交渉〜原状回復の総合ロードマップ／契約書・原状回復チェック／耐荷重・搬入・空調の技術基準／500kg超の荷重計算特化）。各記事冒頭に差別化文を追加し相互リンクをmesh化。`apartment-weight-limit-500kg`の汎用タグ（`["防音"]`）も具体化。lastmod全件2026-06-24に更新
+- [x] **優先・soundproof-room内**: 「サイズ選び」2本（`bouon-size-choice`・`soundproof-room-size`）がタイトル・スコープともにほぼ同一。読み比べて統合かどちらかを別意図にピボットする → 2026-06-24対応：読み比べた結果、一字一句の同一ではなく統合は見送り。`bouon-size-choice`は予算・用途別の決定版（総合比較表＋購入前チェックリスト）、`soundproof-room-size`は楽器ごとの「内寸（外寸との差）」の当たり判定に軸を絞り、両記事冒頭に役割の違いを明示する一文を追加。`soundproof-room-large-size`（2畳以上特化）も含め3記事を相互リンクでmesh化。`soundproof-room-size`のdescriptionに混入していた文字化け（韓国語の「의」）も修正。lastmodを3記事とも2026-06-24に更新
+- [x] **中優先・クロスカテゴリC**: 内窓・防音窓が3記事に分散（diy`diy-internal-window-road-noise-reduction`・diy`soundproof-window-merit-demerit`・soundproof-room`shanon-vs-bouon-window`）→ 2026-06-24対応：統合・カテゴリ移動はせず、3記事それぞれの導入部に他記事との違い（実測dB比較／賃貸の原状回復ハック／製品名・ブランド比較）を明示し、3記事相互の内部リンクを設置。`shanon-vs-bouon-window`の番号付き見出し（規約違反）も修正
+- [x] **中優先・クロスカテゴリD**: D値（遮音等級）の解説がsoundproof-room`bouon-dchiseinou-meyasu`とsoundproof-rental`bourental-syaouseid-choiceindi`で重複気味 → 2026-06-24対応：`bourental-syaouseid-choiceindi`は元々`bouon-dchiseinou-meyasu`への片方向リンクと役割分担（賃貸物件選び基準）が明確だったため、`bouon-dchiseinou-meyasu`側に「防音室の性能観点」である旨と逆方向の内部リンクを追加して解消
+- [x] **中優先・クロスカテゴリE**: 賃貸への防音室設置チェックがsoundproof-room`bouon-setti-checkpoint`（1本）とsoundproof-rental③クラスタ（5本）に分散。「設置条件」というテーマでどちらかのカテゴリに統一するか役割分担を明示する → 2026-06-24対応：上記soundproof-rental内タスクと一括対応。`bouon-setti-checkpoint`＝購入直前の個別搬入シナリオ（演奏フォーム・扉干渉・エレベーター死角）、`soundproof-room-installation-conditions`＝耐荷重・搬入・空調の体系的技術基準と役割分担を明示。両記事間・賃貸交渉クラスタとの相互リンクをmesh化しカテゴリ統一は見送り
+- [x] **中優先・money内**: 資産価値・リセール系2本（`bouon-asset-value-analysis`・`report-japan-soundproof-unit-resale-value-simulation`）は視点の違い（不動産投資ROI vs 売却シミュレーション）があるが統合検討の余地あり → 2026-06-24対応：一字一句の重複ではなく統合は見送り。両記事冒頭に視点の違い（オーナーROI・賃料上乗せ vs 個人のスタジオ代比較シミュレーション）を明示する一文を追加し、相互リンクを設置。lastmodを2026-06-24に更新
+- [ ] **運用ルール化**: 新規記事を作る際は該当カテゴリのクラスタ表（`site-topic-clusters.md`／`creator-topic-clusters.md`）に当てはめてから着手し、同クラスタ3本以上・クロスカテゴリで同テーマが既にある場合は差別化ポイントを一行で書き出すフローを全カテゴリに適用する。本表自体も新規記事追加のたびに更新する
 
 en記事は作成しなくていい。
 

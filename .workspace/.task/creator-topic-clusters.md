@@ -1,6 +1,6 @@
-# creator カテゴリ トピッククラスタ表（2026-06-24作成）
+# creator カテゴリ トピッククラスタ表（2026-06-24作成、2026-06-24更新）
 
-`task-list.md`未整理セクション「`creator`カテゴリの肥大化・カニバリリスク」への対応。全36記事（21%）をテーマでクラスタ化し、似た接頭辞・似た主張のカニバリ候補を洗い出す。
+`task-list.md`未整理セクション「`creator`カテゴリの肥大化・カニバリリスク」への対応。全38記事（サイト全体170記事中22%）をテーマでクラスタ化し、似た接頭辞・似た主張のカニバリ候補を洗い出す。サイト全体（他7カテゴリ）の同種調査は`site-topic-clusters.md`を参照。
 
 ---
 
@@ -8,16 +8,20 @@
 
 | クラスタ | 記事数 | スラッグ |
 |---|---|---|
-| ① 防音室・ブース導入（包括ガイド系） | 6 | `streamer-soundproof-room-comprehensive-guide`・`vtuber-soundproof-environment-complete-guide`・`asmr-vtuber-booth-guide`・`streamer-soundproof-timing`・`streamer-soundproof-budget-roadmap`・`streamer-budget-temp-soundproof` |
+| ① 防音室・ブース導入（包括ガイド系） | 7 | `streamer-soundproof-room-comprehensive-guide`・`vtuber-soundproof-environment-complete-guide`・`asmr-vtuber-booth-guide`・`streamer-soundproof-timing`・`streamer-soundproof-budget-roadmap`・`streamer-budget-temp-soundproof`・`young-streamer-smartphone-monetization-roadmap` |
 | ② 防音賃貸の選び方・内見・暮らし | 7 | `bourentakl-streamer-settingsetubi`・`streamer-rental-selection-guide`・`streamer-rental-preview-checklist`・`soundproof-rental-vs-diy-streamer`・`soundproof-rental-life-streamer`・`streamer-soundproof-rental-share`・`streamer-regional-studio-move` |
 | ③ 近隣・苦情・プライバシー対応 | 4 | `night-streaming-neighbor-tips`・`streamer-noise-complaint-response`・`streamer-noise-quick-fix`・`vtuber-family-privacy-rules` |
-| ④ 機材・音質トラブル別対策 | 5 | `cable-noise-ground-loop-prevention`・`streaming-pc-fan-noise-mic`・`streaming-mic-noise-room`・`streaming-room-reverb-absorption`・`voice-chat-soundleak-fix` |
+| ④ 機材・音質トラブル別対策 | 6 | `cable-noise-ground-loop-prevention`・`streaming-pc-fan-noise-mic`・`streaming-mic-noise-room`・`streaming-room-reverb-absorption`・`voice-chat-soundleak-fix`・`streaming-audio-first-low-budget` |
 | ⑤ 配信ジャンル別の防音設計 | 7 | `game-streamer-sound-types`・`dance-fitness-streamer-soundproof`・`singer-instrumentalist-stream-soundproof`・`utaite-vs-streamer-soundproof`・`podcast-collab-recording-acoustics`・`collab-streaming-soundproof-space`・`asmr-external-noise-elimination` |
 | ⑥ 暮らし・同居人・生活音の調整 | 4 | `parenting-streamer-soundproof`・`streamer-pet-noise-balance`・`one-room-streaming-soundproof`・`soundproof-room-fatigue-ventilation` |
 | ⑦ リノベ・移住・体験談 | 2 | `kominka-renovation-streaming-room`・`streamer-soundproof-evolution-story` |
 | ⑧ 部屋レイアウト | 1 | `streaming-room-layout-guide` |
 
-合計36記事。
+合計38記事（2026-06-24時点で新規2記事を追加：`streaming-audio-first-low-budget`→④、`young-streamer-smartphone-monetization-roadmap`→①）。
+
+### 追加2記事のカニバリ確認
+- `young-streamer-smartphone-monetization-roadmap`（防音室なしでスマホ1台から収益化）は①クラスタの中で唯一「防音室を導入しない」前提の記事。`streamer-budget-temp-soundproof`（防音室を買う前の2万円以下対策）と読者層が近接するが、本記事は「収益化ロードマップ」が主軸で防音は従属テーマのため重複は限定的。
+- `streaming-audio-first-low-budget`（画質より音質を直す0円対策）は④クラスタ内で`streaming-mic-noise-room`（マイクノイズの部屋対策）と対象が近い。本記事は「初心者が最初にやること」という超入門の優先順位整理が主軸で、`streaming-mic-noise-room`はより技術的な原因特定にフォーカスしており、現時点では入門記事→技術記事の導線として機能し得る。本文相互リンクの有無を確認推奨。
 
 ---
 

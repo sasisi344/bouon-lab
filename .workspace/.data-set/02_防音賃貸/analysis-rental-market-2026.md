@@ -2,6 +2,7 @@
 
 **Keywords**: 防音賃貸, 楽器可, 防音室, 東京, 大阪, 福岡, 市場分析, アフィリエイト
 **Context**: 防音賃貸の市場データ・都市比較・アフィリエイト戦略の根拠。コンテンツ記事と affiliate 施策に活用。
+**Last supplement**: 2026-06-24 — 家賃相場・都心/郊外ギャップの定量検証は [`research-rent-price-urban-suburban-gap-2026-06.md`](./research-rent-price-urban-suburban-gap-2026-06.md) を参照。
 
 ---
 
@@ -68,6 +69,8 @@ _地価：2024年公示地価（全用途平均）。賃貸：SUUMO/LIFULL HOME'
 
 - 新宿・渋谷エリア: **+30〜50%**
 - 郊外（八王子・多摩）: **+15〜25%**
+
+> **2026-06 補足（MUSISION実掲載ベース）**: 郊外の**絶対家賃**は都心より3〜5万安い（1K中央値 埼玉8.0万 vs 都心13.2万）が、**地域相場に対するプレミアム率**は川越+63%・西台+100%など都心と同水準。詳細は [`research-rent-price-urban-suburban-gap-2026-06.md`](./research-rent-price-urban-suburban-gap-2026-06.md) §4。
 
 ---
 
