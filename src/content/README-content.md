@@ -35,11 +35,11 @@ src/content/ja/
 
 トップカテゴリの正本はコード上 `src/data/contentCategories.ts` の `JA_TOP_CATEGORIES`。
 
-### 英語（`en`）— Japan lens（文化・社会・市場の国際発信、**現状記事ゼロ**）
+### 英語（`en`）— Japan lens（文化・社会・市場の国際発信）
 
-`en` 記事は2026-06-24時点で0件。`src/content/en/` 配下に残っている `column/` `soundproof-rental/` `soundproof-room/` 等のフォルダは2026-06-01のフラット化前の空フォルダ（実体なし）であり、現行の方針とは無関係。
+`en` 記事は2026-07-02時点で1件（`japan-noise-and-society/building-code-reform-2025-noise-insulation/`、GSCの需要データ起点で作成）。`src/content/en/` 配下に残っている `column/` `soundproof-rental/` `soundproof-room/` 等の空フォルダは2026-06-01のフラット化前の名残（実体なし）であり、現行の方針とは無関係。
 
-将来 `en` を書く場合は `contentCategories.ts` の `EN_TOP_CATEGORIES` に定義済みの **Japan lens** 3カテゴリ（`japan-noise-and-society` / `japan-soundproof-housing` / `japan-quiet-spaces`）を使う。`ja` と同じトップカテゴリ名は使わない。
+`en` を書く場合は `contentCategories.ts` の `EN_TOP_CATEGORIES` に定義済みの **Japan lens** 3カテゴリ（`japan-noise-and-society` / `japan-soundproof-housing` / `japan-quiet-spaces`）を使う。`ja` と同じトップカテゴリ名は使わない。
 
 ```
 src/content/en/
@@ -48,7 +48,7 @@ src/content/en/
 └── japan-quiet-spaces/          # 静かな空間：ユニット防音室・クリエイター文化・ルール
 ```
 
-ただし `task-list.md` の方針により **`en` 記事は現時点で作成しなくてよい**（着手は需要データを起点に別途判断）。
+`task-list.md` の方針により **`en` 記事は原則として現時点で新規作成しなくてよい**（着手はGSC等の需要データを起点に個別判断。2026-07-02の1件目はこの条件を満たしたケース）。
 
 ## _draft から本番記事へ移す際のカテゴリ厳密ルール
 

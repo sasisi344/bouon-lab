@@ -7,25 +7,27 @@
 
 ## 未整理
 
-### GSCクエリ分析（2026-06-24エクスポート）からの弱点・新規コンテンツ機会
+（2026-07-02棚卸し：旧「GSCクエリ分析からの弱点・新規コンテンツ機会」メモは下記の完了セクションに統合済みのため削除。クエリファンアウト分析は`.workspace/strategies/qfo-20260702.md`として完成、改善/排除の分類は`query-article-match-20260702.md`のA/A'/B群分類として完了）
 
-出典: `.workspace/.task/202606-querty.md`（過去3か月のクエリ272件・ページ429件を分析。CTR改善余地のある記事7本、コンテンツギャップ3件、伸ばせば成果が出る記事群を特定し優先度別タスク化済み）。詳細・個別タスクは同ファイル参照。
+### 2026-07-02：`gsc-query-task.md`のA群・B群対応（完了分）
 
-### サイト全体のカテゴリ内・カテゴリ横断カニバリ対策
+`.workspace/.task/gsc-query-task.md`（本タスクの詳細指示）・`.workspace/.data-set/seo-check/gsc-analysis-20260702/query-article-match-20260702.md`（突合せ表・対応状況）を参照。
 
-出典: `.workspace/.task/site-topic-clusters.md`（business・diy・knowledge・local・money・soundproof-rental・soundproof-room の7カテゴリ132記事）／`.workspace/.task/creator-topic-clusters.md`（creator38記事、2026-06-24に36→38記事へ更新済み）。
+- [x] A群: 「防音室 自作」の対象記事を`bass-trap-installation-guide`（無関係）から`closet-diy-soundproof-room`に訂正、キーワード加筆
+- [x] A群: `rental-permission-proposal-template`の表記ゆれ統合（description/導入文）＋アビテックス言及箇所に`<CtaBox slug="yamaha-avitex">`追加
+- [x] A'群: `report-japan-asmr-vtuber-streaming-studio-standard`に個人勢VTuber向け予算別対策セクション新設
+- [x] A'群: `streamer-noise-complaint-response`に一戸建て特有の対応セクション新設
+- [x] A'群: `bouon-osusume-hikaku`に`housing-builder-soundproof-comparison`（既存記事）への内部リンク・違いの説明セクション追加
+- [x] B-1: `en`初の実記事`japan-noise-and-society/building-code-reform-2025-noise-insulation/`を新規作成（GSC需要データ起点、ユーザー承認済み。`astro check`/`astro build`で0エラー確認）
+- [x] B-2: `soundproof-subsidy-tokyo-osaka`に伊丹空港「いくら」への回答セクション追加（具体的金額は区域により変動するため断定は回避、公式窓口へ誘導）
+- [x] B-2: `en`2件目`japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/`を新規作成（DIY〜購入〜住宅補助金の4段階費用比較、Japan lens文脈付き）
+- [x] QFO拡張: `.workspace/strategies/qfo-20260702.md`に階層リスト作成。Google Suggest等の外部データ非使用のため、4〜8週間後のGSC再エクスポートでの答え合わせが前提条件と明記
+- [x] リダイレクト修正: `missing-redirects-20260702.csv`の`AUTO_MATCH`15件を`astro.config.mjs`に追記、リダイレクト先の実在確認・`astro build`でのリダイレクト動作確認済み
+- [x] `missing-redirects`の`NEEDS_MANUAL_REVIEW`17件（2026-07-02）: 全17件が同日実施の138件リダイレクト全件監査（`redirect-gap-full-audit-20260702.md`）で既に`astro.config.mjs`に追記済みであることを確認。追加対応不要
+- [x] `livestream soundproof`（zenki表示回数1493・最大のギャップ）対応（2026-07-03）: 英語クエリが日本語のB2B記事`datacenter-soundproof-technology-facts`に着地していたミスマッチと判明。同記事の骨格変更（B2B用途を薄める）は避け、`en`3件目`japan-quiet-spaces/how-japanese-streamers-soundproof/`を新規作成（ブース文化・PC排熱・サイズ選定のJapan lens解説）。`astro check`/`astro build`で0エラー確認
+- [ ] 未着手（保留・優先度低、実需データ待ち）: 一戸建て騒音源別記事（ピアノ／室外機／ペット）、`japan-soundproof-housing`カテゴリの賃貸文化記事
+- [x] ランキング崩壊の根本原因調査（2026-07-02、ユーザー指摘を受けて再監査）: 当初`astro.config.mjs`の`site`ドメイン誤記（`bouon-lab.online`、2026-04-13〜04-25に実在）を主因と推定したが、ユーザーの「URL構造変更＋記事整理による404化が主因」との指摘を受けzenki全データ（クエリ920件・ページ521件）を再監査。**旧Hugo`/posts/`URL 207件中138件（67%）がリダイレクト未登録で404化**していたことが判明（zenki表示回数の約26%相当）。138件全てを`astro.config.mjs`に追記・`astro build`で動作確認済み。ドメイン誤記は副次的要因に位置づけを更新。個別レポート2本: `ranking-collapse-root-cause-20260702.md`（更新済み）・`redirect-gap-full-audit-20260702.md`（新規、全件監査の詳細）。GSC UIでの裏付け確認（インデックス登録・サイトマップ・手動対策レポート）はユーザー対応待ち
 
-- [x] **最優先・クロスカテゴリA**: オーナー向け防音リノベROI・投資戦略が3カテゴリ4記事に分散（business`owner-soundproof-renovation-investment-strategy-2026`・business`soundproof-renovation-cost-outlook-2026`・soundproof-rental`owner-soundproof-renovation-strategy`・money`owner-renovation-roi-simulation-tool`）。読み比べて1本を総合ハブに据え、残り3本を明確な差別化軸（市場動向／コスト動向／個別シミュレーションツール）にピボットするか統合する → 2026-06-24対応：4記事それぞれ内容自体は元々差別化済み（ROI/出口戦略・建設コスト動向・ペルソナ別経営戦略・A4簡易シミュレーション）と判断し統合は見送り。各記事の冒頭に他3記事との違いを明示する一文を追加し、4記事相互の内部リンクを完全に張り直した（mesh化）。lastmodを全件2026-06-24に更新
-- [x] **優先・money内**: 「防音室レンタル vs 購入」3本（`rental-vs-purchase-soundproof-room`・`soundproof-room-rental-cost`・`soundproof-room-rental-lease`）の損益分岐点訴求が重複 → 2026-06-24対応済み。役割分担を本文冒頭で明示（`rental-vs-purchase-soundproof-room`＝ヤマハMCプラン単体の総合比較／`soundproof-room-rental-cost`＝複数ブランドの料金相場・初期費用／`soundproof-room-rental-lease`＝法人リース・経費処理）し3本相互リンクを追加。損益分岐点の数字（5年・18ヶ月・3〜4年）が記事間で異なる理由（算出基準の違い）も各記事に注記。削除・統合は実施せず差別化で解消
-- [x] **優先・soundproof-rental内**: 「導入・許可・原状回復・耐荷重」5本中、特に`rental-permission-proposal-template`・`rental-unit-soundproof-room`・`rental-proofroom-contractcheck`の3本が「導入前に確認すること」という同一検索意図に収斂。差別化または統合を検討する → 2026-06-24対応：5本（`rental-permission-proposal-template`・`rental-unit-soundproof-room`・`rental-proofroom-contractcheck`・`soundproof-room-installation-conditions`・`apartment-weight-limit-500kg`）を読み比べ、削除・統合は見送り役割分担で解消（テンプレート書式／交渉〜原状回復の総合ロードマップ／契約書・原状回復チェック／耐荷重・搬入・空調の技術基準／500kg超の荷重計算特化）。各記事冒頭に差別化文を追加し相互リンクをmesh化。`apartment-weight-limit-500kg`の汎用タグ（`["防音"]`）も具体化。lastmod全件2026-06-24に更新
-- [x] **優先・soundproof-room内**: 「サイズ選び」2本（`bouon-size-choice`・`soundproof-room-size`）がタイトル・スコープともにほぼ同一。読み比べて統合かどちらかを別意図にピボットする → 2026-06-24対応：読み比べた結果、一字一句の同一ではなく統合は見送り。`bouon-size-choice`は予算・用途別の決定版（総合比較表＋購入前チェックリスト）、`soundproof-room-size`は楽器ごとの「内寸（外寸との差）」の当たり判定に軸を絞り、両記事冒頭に役割の違いを明示する一文を追加。`soundproof-room-large-size`（2畳以上特化）も含め3記事を相互リンクでmesh化。`soundproof-room-size`のdescriptionに混入していた文字化け（韓国語の「의」）も修正。lastmodを3記事とも2026-06-24に更新
-- [x] **中優先・クロスカテゴリC**: 内窓・防音窓が3記事に分散（diy`diy-internal-window-road-noise-reduction`・diy`soundproof-window-merit-demerit`・soundproof-room`shanon-vs-bouon-window`）→ 2026-06-24対応：統合・カテゴリ移動はせず、3記事それぞれの導入部に他記事との違い（実測dB比較／賃貸の原状回復ハック／製品名・ブランド比較）を明示し、3記事相互の内部リンクを設置。`shanon-vs-bouon-window`の番号付き見出し（規約違反）も修正
-- [x] **中優先・クロスカテゴリD**: D値（遮音等級）の解説がsoundproof-room`bouon-dchiseinou-meyasu`とsoundproof-rental`bourental-syaouseid-choiceindi`で重複気味 → 2026-06-24対応：`bourental-syaouseid-choiceindi`は元々`bouon-dchiseinou-meyasu`への片方向リンクと役割分担（賃貸物件選び基準）が明確だったため、`bouon-dchiseinou-meyasu`側に「防音室の性能観点」である旨と逆方向の内部リンクを追加して解消
-- [x] **中優先・クロスカテゴリE**: 賃貸への防音室設置チェックがsoundproof-room`bouon-setti-checkpoint`（1本）とsoundproof-rental③クラスタ（5本）に分散。「設置条件」というテーマでどちらかのカテゴリに統一するか役割分担を明示する → 2026-06-24対応：上記soundproof-rental内タスクと一括対応。`bouon-setti-checkpoint`＝購入直前の個別搬入シナリオ（演奏フォーム・扉干渉・エレベーター死角）、`soundproof-room-installation-conditions`＝耐荷重・搬入・空調の体系的技術基準と役割分担を明示。両記事間・賃貸交渉クラスタとの相互リンクをmesh化しカテゴリ統一は見送り
-- [x] **中優先・money内**: 資産価値・リセール系2本（`bouon-asset-value-analysis`・`report-japan-soundproof-unit-resale-value-simulation`）は視点の違い（不動産投資ROI vs 売却シミュレーション）があるが統合検討の余地あり → 2026-06-24対応：一字一句の重複ではなく統合は見送り。両記事冒頭に視点の違い（オーナーROI・賃料上乗せ vs 個人のスタジオ代比較シミュレーション）を明示する一文を追加し、相互リンクを設置。lastmodを2026-06-24に更新
-- [ ] **運用ルール化**: 新規記事を作る際は該当カテゴリのクラスタ表（`site-topic-clusters.md`／`creator-topic-clusters.md`）に当てはめてから着手し、同クラスタ3本以上・クロスカテゴリで同テーマが既にある場合は差別化ポイントを一行で書き出すフローを全カテゴリに適用する。本表自体も新規記事追加のたびに更新する
-
-en記事は作成しなくていい。
 
 ---
 
@@ -38,6 +40,16 @@ W24〜W26（3週連続）のGSCデータでは判断材料が不十分（サイ�
 - [ ] ZONE A/B（`rental-proofroom-contractcheck`・`soundproof-culture-japan-vs-america`・`diy-vocal-soundproof-mask`・`hsp-soundproof-room-guide`・`budget-soundproof-booth-comparison`）の効果測定 → W24〜W26の3週とも5記事ともGSC表示回数0件（`rental-proofroom-contractcheck`は旧URL`/ja/soundproof-rental/solution/...`への残存表示13→3→0と減衰中で新URLへの移行はまだ確認できず）。W27〜W28も0が続く場合のみ個別調査に着手
 - [ ] `/ja/local/sendai-soundproof-rental-guide/` のカテゴリ移転後の順位変動確認 → W24〜W26の3週ともGSC表示回数0件（旧データ52表示/6クリックから未回復）。W27以降も継続確認
 - [ ] 次回GSCエクスポート（W27〜W28、2026-06-27頃以降）を`.workspace/access-data/2026/`に追加し、`ctr-check-list.md`/`pagerank-list.md`を新URLベースで作り直す（W26時点ではサイト全体の週間表示が65件程度と少なく、新URLベースの再構築には時期尚早）
+
+### W28週報PDCAデータ確定後に実行（2026-07-02追加・保留中）
+
+**前提**: 2026-07-02にランキング崩壊の根本原因調査として、旧Hugo `/posts/` URL 138件のリダイレクト追加（`astro.config.mjs`）と`site`ドメイン誤記の副次要因整理を実施済み（詳細: `.workspace/.data-set/seo-check/gsc-analysis-20260702/redirect-gap-full-audit-20260702.md`・`ranking-collapse-root-cause-20260702.md`）。ユーザー判断により、**この効果測定はW28の週次PDCAデータが揃ってから実行するのがベスト**という方針。W28分析が完了するまでは着手しない。
+
+- [ ] W28（2026-06-27〜07-03想定）のGSCエクスポートを`.workspace/access-data/2026/`に取り込む
+- [ ] 今回リダイレクト追加した旧`/posts/`URL 138件（+前回32件、計170件）に対応する旧クエリ群が、表示回数・掲載順位で回復傾向を示しているか確認する（`redirect-gap-full-audit-20260702.md`記載の個別マッチング27件を優先的にチェック、特に表示回数上位: `bouon-price-souba`・`streamer-proofroom-setting`・`vtuber-proofroom-knowledge`等）
+- [ ] サイト全体のインプレッション・平均掲載順位がzenki水準（348.8/日・21.1位）に向けて回復し始めているか、`summary.md`と同形式で前週比較する
+- [ ] 回復が確認できない場合、`ranking-collapse-root-cause-20260702.md`に記載したGSC UI確認項目（ページのインデックス登録・サイトマップ・手動対策レポート）をユーザーに依頼し、次の要因切り分けに進む
+- [ ] 回復が確認できた場合、`.workspace/strategies/qfo-20260702.md`のQFO拡張施策・B群新規記事の効果測定もあわせて実施する
 
 ---
 
