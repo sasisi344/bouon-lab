@@ -12,13 +12,30 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
 # environment variables
 .env
 .env.production
+.workspace/scripts/.env
 
 # macOS-specific files
 .DS_Store
 
 # jetbrains setting folder
 .idea/
+
+# local agent / IDE settings
+.claude/settings.local.json
+
+# workspace: GSC/GA4 exports (keep locally, do not commit)
+.workspace/access-data/
+
+# workspace: archived datasets, tasks, scratch analysis
+.workspace/.data-set/.archieve/
+.workspace/.task/archieve/
+.workspace/.task/query-analyize/analysis_raw.txt
+
+# workspace: legacy one-off migration scripts (removed from repo)
+.workspace/scripts/legacy-root-scripts/
+
+# legacy agent definitions (personas live in .agents/persona/)
+.archive/
