@@ -17,7 +17,11 @@ for (const p of [path.join(__dirname, '.env'), path.join(process.cwd(), '.env')]
 const API_KEY = process.env.GEMINI_API_KEY;
 if (!API_KEY) { console.error('Error: GEMINI_API_KEY が設定されていません (.env に記述してください)'); process.exit(1); }
 
-const MODEL = 'gemini-3.1-flash-image';
+const MODEL = process.env.GEMINI_IMAGE_MODEL;
+if (!MODEL) {
+    console.error('Error: GEMINI_IMAGE_MODEL が設定されていません (.env に記述してください)');
+    process.exit(1);
+}
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 const MAX_OUTPUT_TOKENS = 8192;
 
@@ -94,6 +98,7 @@ function generateImage(prompt) {
 async function main() {
     console.log(`📝 プロンプト: ${userPrompt}`);
     if (presetKey) console.log(`🏷️  プリセット: ${presetKey}`);
+    console.log(`🤖 モデル: ${MODEL}`);
     console.log(`📂 出力先: ${outputPath}\n${'─'.repeat(50)}\n生成中...\n`);
 
     const response = await generateImage(buildPrompt());

@@ -1,13 +1,68 @@
 # 現在抱えているタスク
 
 作成日：2026-06-10
-最終整理：2026-06-24（サイト全体トピッククラスタ・カニバリ調査の結果を未整理セクションに追加）
+最終整理：2026-07-05（未完了タスクを先頭に集約、完了分をアーカイブセクションへ整理）
 
 ---
 
-## 未整理
+## 未完了タスク
 
-（2026-07-02棚卸し：旧「GSCクエリ分析からの弱点・新規コンテンツ機会」メモは下記の完了セクションに統合済みのため削除。クエリファンアウト分析は`.workspace/strategies/qfo-20260702.md`として完成、改善/排除の分類は`query-article-match-20260702.md`のA/A'/B群分類として完了）
+### カテゴリ別記事分配の偏り是正（2026-07-05方針決定・着手前）
+
+`.workspace/.task/eeat-filecheck-list.md`のカテゴリ別記事数を集計した結果、`creator`が一極集中（168記事中36件＝21%、直前に追加した6記事を含めると実質42件）している一方、`knowledge`（15件・9%）・`business`（14件・8%）・`local`（12件・7%）は記事数が少なく、`.agents/persona/01_Consumer-Personas.md`のペルソナG（60代以上・リタイア層）に至っては該当記事が実質ゼロという偏りを確認。ユーザー承認済みの方針は以下の3方向：
+
+- [x] `creator`の新規記事量産を当面停止し、既存のカニバリペア（`streamer-soundproof-room-comprehensive-guide` vs `vtuber-soundproof-environment-complete-guide`）の差別化を実施（2026-07-05）。両記事とも内容自体は既に役割分担できていた（前者＝予算段階別の全ロードマップ、後者＝購入意思決定済み層向けのタイミング・D値・資金計画）ため統合はせず、タイトル・description・導入文の重複ワード（「完全ガイド」「防音室導入」等）を解消して意図の違いを明示する差別化を選択。`vtuber-soundproof-environment-complete-guide`のtitleを「配信者の防音室、買うなら今｜D値の選び方と資金計画・節税で損しない判断基準」に変更し、冒頭に「本記事は購入をすでに決めている読者向け」と明記。相互リンクのアンカーテキストも新タイトルに同期、`interlink-postlist.md`を再生成、`npx astro check`/`build`で0エラー確認済み。効果測定は次回GSCエクスポート待ち
+- [x] `knowledge`カテゴリを拡充する（2026-07-05）。ペルソナC【カテゴリ5：スペック比較・技術検証】に残る技術系未着手企画3件を新規記事化。事前に既存15記事を`grep`で確認し、いずれも未カバー（カニバリなし）であることを確認済み：
+  - `d-value-vs-rw-value-confusion`（D値とRw値の混同。日本JISと国際ISO規格の違い、換算表が存在しない理由）
+  - `coincidence-effect-soundproofing`（コインシデンス効果。質量則だけでは説明できない周波数依存の遮音低下）
+  - `dry-floating-floor-natural-frequency`（乾式浮き床の固有振動数。防振材のばね定数×床の質量による共振設計の考え方）
+  - 既存記事（`d-value-truth-and-myths`・`vibration-isolation-technology-trend`・`absorption-vs-soundproofing-materials`）との間に相互内部リンクを追加、`interlink-postlist.md`再生成、`npx astro check`/`build`で0エラー確認済み（206ページ生成）
+- [x] `local`カテゴリを拡充する（2026-07-05）。未カバーの政令指定都市5市（浜松・金沢・岡山・熊本・新潟）を新規記事化。ユーザー承認済みの優先順位「政令指定都市を優先網羅」に基づき選定。各記事は既存の神戸・京都リライトと同じ「実在する土地柄（音楽イベント・大学・産業集積等）を軸に相場感を提示する」スタイルを踏襲し、`当社調査`のような未検証データの主張は避けた：
+  - `hamamatsu-soundproof-rental-guide`（ヤマハ・カワイ・ローランド発祥の「楽器の街」という差別化軸。既存CtaBoxのヤマハ導線と親和性が高い）
+  - `kanazawa-soundproof-rental-guide`（城下町・邦楽文化・芸術系大学）
+  - `okayama-soundproof-rental-guide`（中国・四国地方の交通結節点）
+  - `kumamoto-soundproof-rental-guide`（熊本地震後の建て替え事情、神戸と同型の切り口）
+  - `niigata-soundproof-rental-guide`（音楽イベントの蓄積、日本海側最大級の都市）
+  - 全記事`image`省略でカテゴリ共通カバーにフォールバック（画像生成は指示があるまで実行しない方針のため）
+  - 既存記事（名古屋・広島・福岡・仙台・大阪・京都）から新規記事への相互内部リンクを追加、`interlink-postlist.md`を再生成、`npx astro check`/`build`で0エラー確認済み（203ページ生成）
+  - 効果測定は次回GSCエクスポート待ち
+- [x] ペルソナG（60代以上・リタイア層）向けの想定を、ユーザー指示（2026-07-05）により<strong>ペルソナH：40〜60代・子育て世代の「一人になれる空間」希求層</strong>へ変更して着手。子育て中で自宅に防音室・遮音性の高い個室がなく、趣味や一人の時間のための空間を欲しがっている層（退職後の余裕層ではなく現役世代）と定義し直し、`.agents/persona/01_Consumer-Personas.md`にペルソナHとして追加
+  - フラッグシップ記事`money/quiet-space-budget-decision-guide`（自宅に防音室がなくても「一人になれる空間」を作る4つの方法｜40〜60代の予算別ガイド）を新規作成。引っ越し・DIY・専門業者への依頼・防音室購入の4選択肢を、予算感（すぐ動ける数万円／数十万円／100万円以上）別に整理する構成
+  - 既存4記事（`diy/renter-parent-house-soundproofing`・`money/rental-vs-purchase-soundproof-room`・`money/soundproof-room-price-market`・`money/soundproof-subsidy-check-guide`）との間に相互内部リンクを追加
+  - `interlink-postlist.md`再生成、`npx astro check`/`build`で0エラー確認済み（207ページ生成）
+  - 各選択肢の深掘り記事（引っ越し編・DIY実践編等）は今後の追加候補として残存
+- [ ] 上記の具体的な記事タイトル・優先順位はまだ未着手。着手時にペルソナ資料と既存記事の突合を行う
+
+### ニッチ化リライト6記事の効果測定（次回GSCエクスポート待ち、目安2026-08）
+
+`bouon-humidifier-comparison`・`rental-proofroom-contractcheck`・`soundproof-culture-japan-vs-america`・`diy-vocal-soundproof-mask`・`budget-soundproof-booth-comparison`・`sendai-soundproof-rental-guide`の6記事を2026-07-05にニッチ化リライト済み（詳細はアーカイブ「W28確定後の次アクション」参照）。
+
+- [ ] 次回GSCエクスポートで、表示回数0件が解消するか・新設したニッチクエリ（例：「防音室 加湿器 結露 PC」「格安防音室 熱中症」等）での表示が発生するかを確認する
+
+### 新規creator6記事の効果測定（次回GSCエクスポート待ち）
+
+2026-07-05にペルソナBバックログとの突合で新規公開した6記事（`streamer-discord-noise-cancel-vs-physical`等、詳細はアーカイブ参照）について、
+
+- [ ] 次回GSCエクスポートで表示回数・クリックの発生状況を確認する
+
+### 一戸建て騒音源別記事（保留・優先度低）
+
+- [ ] 一戸建て騒音源別記事（ピアノ／室外機／ペット）、`japan-soundproof-housing`カテゴリの賃貸文化記事は実需データ待ちのため未着手のまま保留
+
+### ランキング崩壊調査：GSC UI確認・効果測定（ユーザー対応待ち）
+
+2026-07-02のランキング崩壊根本原因調査（旧`/posts/`URL138件のリダイレクト追加等）を受けて、以下が未着手・対応待ち。
+
+- [ ] `ranking-collapse-root-cause-20260702.md`記載のGSC UI確認項目（ページのインデックス登録レポート・サイトマップの送信状況・手動対策レポートの有無）をユーザーに依頼する
+- [ ] QFO拡張施策（`.workspace/strategies/qfo-20260702.md`）・B群新規記事の効果測定は、サイト全体の回復が確認されるまで保留
+
+---
+
+## 完了タスク（アーカイブ）
+
+### 2026-07-05：カテゴリ別記事分配偏り是正の分析（完了、対応は上記「未完了タスク」参照）
+
+- [x] `.workspace/.task/eeat-filecheck-list.md`のカテゴリ別記事数を集計し、`creator`一極集中とペルソナG（60代以上）の空白を確認。3方向の対応方針をユーザーに承認済み
 
 ### 2026-07-05：`creator-topic-clusters.md`の拡張性調査・新規6記事（完了）
 
@@ -22,7 +77,51 @@
   - `family-home-soundproof-reno-negotiation`（実家暮らし配信者の防音リフォーム費用交渉、既存の身バレ対策記事とは別軸）
   - `female-streamer-privacy-soundproof`（女性配信者の音・声からの特定防止、安全優先の注意書き付き）
   - 全6記事とも`slug`・`category: creator`で新規作成、`npx astro check`・`npx astro build`で0エラー確認済み（198ページ生成）
-  - creator カテゴリ合計は39→45記事に増加。効果測定は次回GSCエクスポートで実施
+  - creator カテゴリ合計は39→45記事に増加
+
+### 2026-07-05：優先度B「W27〜W28アクセスデータ待ち」全項目対応（完了）
+
+出典: `.workspace/.data-set/seo-check/seo-task.md` ZONE C ／ `.workspace/.task/query-analiize/seo-report-20260324.md`。
+
+- [x] **最優先**: `/ja/soundproof-room/bouon-humidifier-comparison/`（旧記事比でサイト最多クリック）→ W27・W28のGSCデータで確認: **表示回数0件が5週連続（W24〜W28）で継続**（旧データ169表示/24クリックから未回復）。ページは`draft:false`・リダイレクトチェーンとも正常
+- [x] ZONE A/B（`rental-proofroom-contractcheck`・`soundproof-culture-japan-vs-america`・`diy-vocal-soundproof-mask`・`hsp-soundproof-room-guide`・`budget-soundproof-booth-comparison`）の効果測定 → `hsp-soundproof-room-guide`のみW27（表示2・クリック1・順位5）・W28（表示5・クリック0・順位12.6）とわずかに表示が戻り始めている。残り4記事は5週連続0件
+- [x] `/ja/local/sendai-soundproof-rental-guide/` のカテゴリ移転後の順位変動確認 → 表示回数0件が5週連続で継続
+- [x] W27〜W28のGSCエクスポートを`.workspace/access-data/2026/`に取り込み済み。新URLベースの`ctr-check-list.md`/`pagerank-list.md`再構築は、W27で表示回数が一時的に急増（65→264/週）したためサイト全体の変動が大きく、次週以降（傾向が安定してから）に先送り
+
+#### W28確定後の次アクション（2026-07-05、結論確定済み）
+
+5週連続（W24〜W28）で表示回数0件が続く記事群について、GSC UIの「URL検査」をユーザーが実施。
+
+- [x] GSC UI「URL検査」実施結果（ユーザー確認）: **対象記事の一部はインデックス登録済みと確認**。インデックス未登録が原因ではなかった
+- [x] **結論**: インデックス済みにもかかわらず表示回数0件が続くのは、技術的な未クロール・未登録の問題ではなく、**現在のコンテンツが検索ニーズ（クエリ）に合致していない**ためと判断（ユーザー判断）。「再インデックス待ち」仮説はこれで棄却
+- [x] 対象記事の対応方針決定（ユーザー判断）: 「メジャーな話題すぎて埋もれている」という診断のもと、**案A（切り口をニッチ化してリライト）を全6記事に適用**
+- [x] 6記事のニッチ化リライト実施。`slug`・`category`（URL）はいずれも変更なし：
+  - `bouon-humidifier-comparison`: 防音室全般の加湿論 → <strong>配信者・宅録勢の小型ブース内でのPC/マイク結露保護</strong>に特化
+  - `rental-proofroom-contractcheck`: 許可交渉・原状回復チェックリスト（既存2記事と役割重複） → <strong>アビテックス/ナサールの退去時費用・原状回復実例・中古売却相場</strong>の金額特化に転換
+  - `soundproof-culture-japan-vs-america`: 日米防音文化の一般比較論 → <strong>分譲マンション管理規約 vs アメリカHOA（CC&Rs）の騒音ルール比較</strong>という制度面の独自角度を追加
+  - `diy-vocal-soundproof-mask`: 防音マスク自作の比較 → <strong>段ボールヘッドボックスの酸欠リスク検証</strong>（CO2濃度の目安・安全な使用時間）を主軸に追加
+  - `budget-soundproof-booth-comparison`: だんぼっち/OTODASU/ISOVOX比較 → <strong>夏場の排熱・熱中症リスク比較</strong>と<strong>中古購入時の劣化チェックポイント</strong>を追加
+  - `sendai-soundproof-rental-guide`: 仙台の防音賃貸一般 → <strong>宮城教育大学生・予算7万円以下</strong>という特定ペルソナに絞り込み、大学練習室・時間貸しスタジオの代替案を追加
+  - `npx astro check`で0エラー確認済み（効果測定は上記「未完了タスク」参照）
+
+### 2026-07-02〜07-05：ランキング崩壊調査・リダイレクト修正・W28週報PDCA（完了分）
+
+**前提**: 2026-07-02にランキング崩壊の根本原因調査として、旧Hugo `/posts/` URL 138件のリダイレクト追加（`astro.config.mjs`）と`site`ドメイン誤記の副次要因整理を実施済み（詳細: `.workspace/.data-set/seo-check/gsc-analysis-20260702/redirect-gap-full-audit-20260702.md`・`ranking-collapse-root-cause-20260702.md`）。
+
+- [x] ランキング崩壊の根本原因調査（2026-07-02、ユーザー指摘を受けて再監査）: 当初`astro.config.mjs`の`site`ドメイン誤記（`bouon-lab.online`、2026-04-13〜04-25に実在）を主因と推定したが、ユーザーの「URL構造変更＋記事整理による404化が主因」との指摘を受けzenki全データ（クエリ920件・ページ521件）を再監査。**旧Hugo`/posts/`URL 207件中138件（67%）がリダイレクト未登録で404化**していたことが判明（zenki表示回数の約26%相当）。138件全てを`astro.config.mjs`に追記・`astro build`で動作確認済み
+- [x] W28（2026-06-27〜07-04）のGSCエクスポートを`.workspace/access-data/2026/W28/`に取り込み済み
+- [x] 個別マッチング27件（`redirect-gap-full-audit-20260702.md`記載）を確認: **回復の兆候なし**。表示回数上位のリダイレクト先はW27・W28いずれのGSC上位ランディングページにも登場せず。リダイレクト自体は`astro build`で動作確認済みのため、Google側の再クロール・評価移行がまだ反映されていないと推定
+- [x] サイト全体のインプレッション・平均掲載順位のzenki水準（348.8/日・21.1位）との比較（`summary.md`と同形式）:
+  | 週 | 期間 | 表示回数/週 | 表示回数/日 | 平均掲載順位 |
+  |---|---|---|---|---|
+  | zenki基準 | (2025/10/12-2026/03/05) | ~2,442 | 348.8 | 21.1 |
+  | W24 | 05/30-06/06 | 83 | 11.9 | 15.2 |
+  | W25 | 06/06-06/13 | 84 | 12.0 | 14.5 |
+  | W26 | 06/13-06/20 | 65 | 9.3 | 20.5 |
+  | W27 | 06/20-06/27 | 264 | 37.7 | 9.5 |
+  | W28 | 06/27-07/04 | 217 | 31.0 | 14.5 |
+
+  **回復は確認できず**。W27の一時的な急増（65→264）は138件のリダイレクト追加（2026-07-02実施）より前の期間のため無関係。W28はむしろ264→217へ減少しており、zenki基準の1割にも届いていない
 
 ### 2026-07-02：`gsc-query-task.md`のA群・B群対応（完了分）
 
@@ -38,68 +137,12 @@
 - [x] B-2: `en`2件目`japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/`を新規作成（DIY〜購入〜住宅補助金の4段階費用比較、Japan lens文脈付き）
 - [x] QFO拡張: `.workspace/strategies/qfo-20260702.md`に階層リスト作成。Google Suggest等の外部データ非使用のため、4〜8週間後のGSC再エクスポートでの答え合わせが前提条件と明記
 - [x] リダイレクト修正: `missing-redirects-20260702.csv`の`AUTO_MATCH`15件を`astro.config.mjs`に追記、リダイレクト先の実在確認・`astro build`でのリダイレクト動作確認済み
-- [x] `missing-redirects`の`NEEDS_MANUAL_REVIEW`17件（2026-07-02）: 全17件が同日実施の138件リダイレクト全件監査（`redirect-gap-full-audit-20260702.md`）で既に`astro.config.mjs`に追記済みであることを確認。追加対応不要
+- [x] `missing-redirects`の`NEEDS_MANUAL_REVIEW`17件: 全17件が同日実施の138件リダイレクト全件監査（`redirect-gap-full-audit-20260702.md`）で既に`astro.config.mjs`に追記済みであることを確認。追加対応不要
 - [x] `livestream soundproof`（zenki表示回数1493・最大のギャップ）対応（2026-07-03）: 英語クエリが日本語のB2B記事`datacenter-soundproof-technology-facts`に着地していたミスマッチと判明。同記事の骨格変更（B2B用途を薄める）は避け、`en`3件目`japan-quiet-spaces/how-japanese-streamers-soundproof/`を新規作成（ブース文化・PC排熱・サイズ選定のJapan lens解説）。`astro check`/`astro build`で0エラー確認
-- [ ] 未着手（保留・優先度低、実需データ待ち）: 一戸建て騒音源別記事（ピアノ／室外機／ペット）、`japan-soundproof-housing`カテゴリの賃貸文化記事
-- [x] ランキング崩壊の根本原因調査（2026-07-02、ユーザー指摘を受けて再監査）: 当初`astro.config.mjs`の`site`ドメイン誤記（`bouon-lab.online`、2026-04-13〜04-25に実在）を主因と推定したが、ユーザーの「URL構造変更＋記事整理による404化が主因」との指摘を受けzenki全データ（クエリ920件・ページ521件）を再監査。**旧Hugo`/posts/`URL 207件中138件（67%）がリダイレクト未登録で404化**していたことが判明（zenki表示回数の約26%相当）。138件全てを`astro.config.mjs`に追記・`astro build`で動作確認済み。ドメイン誤記は副次的要因に位置づけを更新。個別レポート2本: `ranking-collapse-root-cause-20260702.md`（更新済み）・`redirect-gap-full-audit-20260702.md`（新規、全件監査の詳細）。GSC UIでの裏付け確認（インデックス登録・サイトマップ・手動対策レポート）はユーザー対応待ち
 
+<details>
+<summary>2026-06-24以前のアーカイブ（棚卸し・週次タスク・E-E-A-T評価完了分）</summary>
 
----
-
-## 優先度B：W27〜W28アクセスデータ待ち
-
-出典: `.workspace/.data-set/seo-check/seo-task.md` ZONE C ／ `.workspace/.task/query-analyize/seo-report-20260324.md`。
-W24〜W26（3週連続）のGSCデータでは判断材料が不十分（サイト全体の週間表示が46〜65件と極小）なため、W27〜W28（2026-06-27頃以降）のエクスポートが揃ってから着手する。
-
-- [x] **最優先**: `/ja/soundproof-room/bouon-humidifier-comparison/`（旧記事比でサイト最多クリック）→ W27・W28のGSCデータでも確認（2026-07-05）: **表示回数0件が5週連続（W24〜W28）で継続**（旧データ169表示/24クリックから未回復）。ページは`draft:false`・リダイレクトチェーンとも正常のため、コンテンツ側の問題ではなく再インデックス待ちと判断。5週連続0件の閾値に達したため、次のアクション（内部リンク強化・サイトマップ再送）に着手が必要 → 具体策は下記「W28確定後の次アクション」に切り出し
-- [x] ZONE A/B（`rental-proofroom-contractcheck`・`soundproof-culture-japan-vs-america`・`diy-vocal-soundproof-mask`・`hsp-soundproof-room-guide`・`budget-soundproof-booth-comparison`）の効果測定 → W27・W28で確認（2026-07-05）: `hsp-soundproof-room-guide`のみW27（表示2・クリック1・順位5）・W28（表示5・クリック0・順位12.6）とわずかに表示が戻り始めている。残り4記事（`rental-proofroom-contractcheck`・`soundproof-culture-japan-vs-america`・`diy-vocal-soundproof-mask`・`budget-soundproof-booth-comparison`）はW27・W28とも表示回数0件が継続（5週連続）。`rental-proofroom-contractcheck`の旧URL残存表示も0まで減衰しきっており、新URLへの評価移行が進んでいないと判断 → 個別調査に着手（下記次アクション参照）
-- [x] `/ja/local/sendai-soundproof-rental-guide/` のカテゴリ移転後の順位変動確認 → W27・W28で確認（2026-07-05）: 表示回数0件が5週連続（W24〜W28）で継続（旧データ52表示/6クリックから未回復）。上記humidifier・ZONE A/Bと同じ「再インデックス待ち」グループとして次アクションに合流
-- [x] 次回GSCエクスポート（W27〜W28）を`.workspace/access-data/2026/`に取り込み済み。`ctr-check-list.md`/`pagerank-list.md`の新URLベース再構築は、W27で表示回数が一時的に急増（65→264/週）したためサイト全体の変動がまだ大きく、再構築のタイミングとしては次週以降（傾向が安定してから）に先送り
-
-### W28確定後の次アクション（2026-07-05追加・2026-07-05結論更新）
-
-5週連続（W24〜W28）で表示回数0件が続く記事群について、GSC UIの「URL検査」をユーザーが実施。
-
-- [x] GSC UI「URL検査」実施結果（ユーザー確認、2026-07-05）: **対象記事の一部はインデックス登録済みと確認**。インデックス未登録が原因ではなかった
-- **結論**: インデックス済みにもかかわらず表示回数0件が続くのは、技術的な未クロール・未登録の問題ではなく、**現在のコンテンツが検索ニーズ（クエリ）に合致していない**ためと判断（ユーザー判断）。「再インデックス待ち」仮説はこれで棄却。内部リンク強化・サイトマップ再送は的外れな対策になるため見送り
-- [x] 対象記事の対応方針決定（2026-07-05、ユーザー判断）: 「メジャーな話題すぎて埋もれている」という診断のもと、**案A（切り口をニッチ化してリライト）を全6記事に適用**。他記事との重複（`rental-proofroom-contractcheck`）や未開拓の安全性・実例角度（酸欠リスク・排熱リスク・原状回復実例）を軸に選定
-- [x] 6記事のニッチ化リライト実施（2026-07-05）。`slug`・`category`（URL）はいずれも変更なし：
-  - `bouon-humidifier-comparison`: 防音室全般の加湿論 → <strong>配信者・宅録勢の小型ブース内でのPC/マイク結露保護</strong>に特化
-  - `rental-proofroom-contractcheck`: 許可交渉・原状回復チェックリスト（既存2記事と役割重複） → <strong>アビテックス/ナサールの退去時費用・原状回復実例・中古売却相場</strong>の金額特化に転換
-  - `soundproof-culture-japan-vs-america`: 日米防音文化の一般比較論 → <strong>分譲マンション管理規約 vs アメリカHOA（CC&Rs）の騒音ルール比較</strong>という制度面の独自角度を追加
-  - `diy-vocal-soundproof-mask`: 防音マスク自作の比較 → <strong>段ボールヘッドボックスの酸欠リスク検証</strong>（CO2濃度の目安・安全な使用時間）を主軸に追加
-  - `budget-soundproof-booth-comparison`: だんぼっち/OTODASU/ISOVOX比較 → <strong>夏場の排熱・熱中症リスク比較</strong>と<strong>中古購入時の劣化チェックポイント</strong>を追加
-  - `sendai-soundproof-rental-guide`: 仙台の防音賃貸一般 → <strong>宮城教育大学生・予算7万円以下</strong>という特定ペルソナに絞り込み、大学練習室・時間貸しスタジオの代替案を追加
-  - `npx astro check`で0エラー確認済み
-- [ ] 効果測定は次回GSCエクスポート（目安：2026-08頃、ニッチ化した新タイトル・切り口でのクロール・再評価に数週間要する）で実施。表示回数0件が解消するか、新設したニッチクエリ（例：「防音室 加湿器 結露 PC」「格安防音室 熱中症」等）での表示が発生するかを確認する
-
-### W28週報PDCAデータ確定後に実行（2026-07-02追加・保留中）
-
-**前提**: 2026-07-02にランキング崩壊の根本原因調査として、旧Hugo `/posts/` URL 138件のリダイレクト追加（`astro.config.mjs`）と`site`ドメイン誤記の副次要因整理を実施済み（詳細: `.workspace/.data-set/seo-check/gsc-analysis-20260702/redirect-gap-full-audit-20260702.md`・`ranking-collapse-root-cause-20260702.md`）。ユーザー判断により、**この効果測定はW28の週次PDCAデータが揃ってから実行するのがベスト**という方針。W28分析が完了するまでは着手しない。
-
-- [x] W28（2026-06-27〜07-04）のGSCエクスポートを`.workspace/access-data/2026/W28/`に取り込み済み（`bouon-gsc-w28.csv`・`bouon-ga4-w28.csv`）
-- [x] 今回リダイレクト追加した旧`/posts/`URL 138件（+前回32件、計170件）の個別マッチング27件（`redirect-gap-full-audit-20260702.md`記載）を確認（2026-07-05）: **回復の兆候なし**。表示回数上位のリダイレクト先である`/ja/money/soundproof-room-price-market/`（`bouon-price-souba`受け皿）・`/ja/creator/streamer-soundproof-room-comprehensive-guide/`（`streamer-proofroom-setting`・`vtuber-proofroom-knowledge`・`steram-soudncondition-check`受け皿）等は、W27・W28いずれのGSC上位ランディングページにも登場せず（表示回数を計測できるレベルに達していない）。リダイレクト自体は`astro build`で動作確認済みのため、Google側の再クロール・評価移行がまだ反映されていないと推定。次回（W29〜W30目安）も未反映なら、GSC「ページのインデックス登録」レポートで該当URLのクロール状況を個別確認する
-- [x] サイト全体のインプレッション・平均掲載順位のzenki水準（348.8/日・21.1位）との比較（2026-07-05、`summary.md`と同形式）:
-  | 週 | 期間 | 表示回数/週 | 表示回数/日 | 平均掲載順位 |
-  |---|---|---|---|---|
-  | zenki基準 | (2025/10/12-2026/03/05) | ~2,442 | 348.8 | 21.1 |
-  | W24 | 05/30-06/06 | 83 | 11.9 | 15.2 |
-  | W25 | 06/06-06/13 | 84 | 12.0 | 14.5 |
-  | W26 | 06/13-06/20 | 65 | 9.3 | 20.5 |
-  | W27 | 06/20-06/27 | 264 | 37.7 | 9.5 |
-  | W28 | 06/27-07/04 | 217 | 31.0 | 14.5 |
-
-  **回復は確認できず**。W27で表示回数が一時的に跳ねた（65→264）が、これは138件のリダイレクト追加（2026-07-02実施）より前の期間のため無関係な変動。W28（リダイレクト追加日を含む週）はむしろ264→217へ減少しており、zenki基準（348.8/日）の1割にも届いていない。掲載順位は9.5〜14.5位で推移しているが、これはW27/W28データの集計方法（週次エクスポートの単純平均、`summary.md`のインプレッション加重平均とは非同一）による差である点に注意（数値の絶対比較はできないが、傾向としては未回復）
-- [x] 回復が確認できなかったため、`ranking-collapse-root-cause-20260702.md`記載のGSC UI確認項目をユーザーに依頼する必要あり（次回対話時に依頼予定）:
-  - GSC「ページのインデックス登録」レポートで`ja`ページのインデックス状況（特にリダイレクト先170件）
-  - サイトマップの送信状況・エラー有無
-  - 手動対策（Manual Actions）レポートの有無
-- [ ] 上記GSC UI確認の回答待ち（ユーザー対応待ち、未着手）
-- [ ] QFO拡張施策・B群新規記事の効果測定は、サイト全体の回復が確認されるまで保留（現時点では未着手）
-
----
-
-<!--
 ### 2026-06-24棚卸し：未整理セクション（2026-06-21発見分）全件完了
 
 `.workspace/.task/eeat-filecheck-list.md`の対象漏れ発見を起点に、169記事・全8カテゴリ調査で見つかったウィークポイント6件を全件完了。
@@ -127,47 +170,47 @@ W24〜W26（3週連続）のGSCデータでは判断材料が不十分（サイ�
 - [x] **`src/content/README-content.md`が陳腐化**: 現状の8カテゴリ・フラット構造（サブ区分フォルダ廃止）に合わせて全面修正。`en`は実記事0件・空フォルダのみであることも明記
 - [x] **`creator`カテゴリの肥大化・カニバリリスク**: `.workspace/.task/creator-topic-clusters.md`に全36記事のトピッククラスタ表（8クラスタ）を作成。最大のカニバリ候補として`streamer-soundproof-room-comprehensive-guide`と`vtuber-soundproof-environment-complete-guide`（タイトル・スコープがほぼ同一）を特定し、次回リライト時の優先確認事項として提言
 
-## 完了タスク（アーカイブ・2026-06-21整理）
+### 完了タスク（アーカイブ・2026-06-21整理）
 
 前提：`rewrite-post.md`（P1〜P3 全10記事）/ `streamer-post.md`（creator新規21記事）/ `seo-task.md`（ZONE A〜C）が完了済み。
 当時「次に着手するタスク」を ①権威性UP（残存記事の補強） ②内部リンク改善 ③不足コンテンツ追加 の3軸で棚卸しした記録。
 
-### ストリーマー記事の商品アフィコンポーネント登録作業（完了）
+#### ストリーマー記事の商品アフィコンポーネント登録作業（完了）
 `.workspace\.task\affi-item-list.md`
 提示された商品は記事中で使う予定なので、Amazonなりで商品のASINを確認。確認後、affiliates.tsへの登録をして記事作成を円滑にする。
 - [x] 2026-06-19：`affiliates.ts`への4商品登録（前述セクションA参照）に加え、`streaming-pc-fan-noise-mic`（`pc-fan-vibration-insulator`・`silent-gel-pad-clamworks`）、`streamer-pet-noise-balance`（`soundproof-cage-cover-k4`・`gap-tape-meicyan`）の本文該当箇所に`<AffiliateCard>`を設置済み
 
-#### Check（前週からの改善・要因仮説）
+##### Check（前週からの改善・要因仮説）
 - 数値変化: ユーザー数20→19（-5.0%）、PV 56→28（-50.0%）、CTR 約3.6%→約4.8%（+32.2%）、平均滞在時間 約44.0秒→約55.0秒（+25.0%）、直帰率 約50%→約37.5%（-25.0%）、掲載順位 約15.2→約14.5（-4.3%、改善）
 - 推定要因（LP/ページのどれに起因？）: PVは前週56から28へ半減したが、W24は初回計測でPVが一時的に多かった可能性がある。一方で直帰率（-25.0%）・平均滞在時間（+25.0%）・CTR（+32.2%）・掲載順位（-4.3%、改善）はすべて改善方向であり、PV数は減少しつつも質的なエンゲージメントは向上している
 - ⚠️ サイト全体のPVが28と小規模なため、LP Top5・4-Box分析ともにPV>5/表示5以上の基準を満たすページが少なく、参考値中心の掲載となった（[[ga4-weekly-import]]既知の制約：サンプルサイズが小さい点に注意）
 
-#### Act（次週のToDo・優先度つき）
+##### Act（次週のToDo・優先度つき）
 - [x] `/ja/diy/bass-trap-installation-guide/`（表示23・順位11.61・CTR13.0%）は内部リンク強化で順位5以内への押し上げを狙う → `gamer-acoustic-placement`・`diy-soundproofing-tips`・`streamer-soundproof-room-comprehensive-guide`（高優先度ハブ）から内部リンクを追加（2026-06-19確認：3記事とも本文中にリンク実在を確認済み）
 - [x] `/ja/money/streamer-tax-strategy/`（表示11・順位9.09・CTR0%）はタイトル・meta descriptionを見直しクリック獲得を狙う → タイトルに「30万円特例」の具体的フックを追加し、descriptionも一括償却・中古2年償却を前面に出して再構成（2026-06-19確認：frontmatter反映済み）
 - [x] AdSense計測が今週から正常稼働開始したため、来週は収益データの推移（PV14・クリック2・推定収益1からの変化）を追う（GA4/AdSenseの来週データが出てから対応）
 
-### 2026-06-19 棚卸し：`.workspace`内の残タスク集約
+#### 2026-06-19 棚卸し：`.workspace`内の残タスク集約
 
 `.workspace`配下の各タスクファイルを実記事・コードの現状と突き合わせ、未完了分のみ集約。完了済みと判断したものは各ファイル側に注記済み。
 
-#### A. アフィリエイト商品登録（完了）
+##### A. アフィリエイト商品登録（完了）
 `.workspace/.task/affi-item-list.md`
 - [x] ASIN実在・価格確認済（`B000FHIPD2`・`B009JYMVJ6`・`B0756RD44W`・`B096M2T5Z4`）
 - [x] 防音ケージカバーはIV（`B0756RD44W`）を採用、III（`B0756RD2WX`）は不採用
 - [x] 隙間テープはMeicyan（`B096M2T5Z4`）を採用、`B0BJK98HNH`は不採用
 - [x] 採用4商品を`affiliates.ts`に追加済み（2026-06-19）：`pc-fan-vibration-insulator`・`silent-gel-pad-clamworks`・`soundproof-cage-cover-k4`・`gap-tape-meicyan`（PC用2点は画像URL未確定のため`image`省略）
 
-#### B. creator新規記事の残り1本（完了）
+##### B. creator新規記事の残り1本（完了）
 `.workspace/.task/streamer-post.md`（第2弾・優先度C）
 - [x] `podcast-collab-recording-acoustics`（2人以上のポッドキャスト・対談配信の音響セッティング）2026-06-19公開：`src/content/ja/creator/podcast-collab-recording-acoustics/index.mdx`。`collab-streaming-soundproof-space`は広さ・防音性能側、本記事はマイク構成・配置・チャンネル管理側で差別化
 
-#### C. 新規記事候補（完了）
+##### C. 新規記事候補（完了）
 `.workspace/.task/query-analiize/seo-report-20260324.md`
 - [x] 「ストリーマーを悩ませる『サー』音：グランドループとアース線の正しい処理方法」2026-06-19公開：`src/content/ja/creator/cable-noise-ground-loop-prevention/index.mdx`。`streaming-pc-fan-noise-mic`へ相互リンクし、既存の`ground-cable-mogami`アフィカードを本記事に集約
 - 加湿器特化記事・ハウスメーカー比較記事は既存記事（`bouon-humidifier-comparison`／`housing-builder-soundproof-comparison`・`daiwa-house-jiyuku-soundproof-review`）でカバー済みのため対応不要
 
-#### D完了分（2026-06-21棚卸し時点）
+##### D完了分（2026-06-21棚卸し時点）
 `.workspace/.data-set/seo-check/seo-task.md`（2026-06-10更新版。リライト自体は完了、GSC指標確認が残っている）
 
 2026-06-21 棚卸し：W24〜W26（`.workspace/access-data/2026/W24〜W26`、20260530〜20260620）のGSC/GA4データで進捗確認
@@ -175,16 +218,14 @@ W24〜W26（3週連続）のGSCデータでは判断材料が不十分（サイ�
 - [x] `/ja/diy/bass-trap-installation-guide/` カテゴリ移転後の順位悪化 → **回復を確認**（W24: 順位20.7・表示6・クリック0 → W25: 順位11.6・表示23・クリック3・CTR13.0% → W26: 順位10.6・表示14・クリック2・CTR14.3%）。3週連続で順位・CTRともに改善傾向のため移転の悪影響は解消したと判断
 - [x] `/ja/money/soundproof-room-loan-guide/` → GSC確認：現URLは3週とも表示0件（W25に出現した`/ja/solutions/soundproof-room-loan-guide/`はリダイレクト未設定の死にURL＝404の残存インデックスで実体なし、対応不要）。コンテンツ側は対応済み：「住宅ローンに防音室費用を組み込む申請手順」セクション（5ステップ）を追加し、`streamer-tax-strategy`・`telework-soundproof-loan-strategy`と相互リンクを設置（2026-06-21、3記事すべてlastmod更新）
 
-未完了分はW27〜W28アクセスデータ待ちのため「優先度B」セクションへ移動済み（本ファイル上部参照）。
-
-#### E. 陳腐化バックログ（判断完了・以降はSection D に統合）
+##### E. 陳腐化バックログ（判断完了・以降はSection D に統合）
 `.workspace/.task/query-analiize/kaizen.md`（旧URL `/posts/...` 形式のCTRレポート。2026-05-02のrevuildと2026-06-01のカテゴリフラット化で大半の対象記事が削除・移転済み）
 - 30件中ほとんどが現存しない（`grobal-soundproof-marketcheck`・`soundproof-room-types`・`bouon-price-souba`等）→ 対応不要
 - [x] 「現存するが旧タイトルのまま」とされた4記事（`japan-bouonproof-marketnextasia`・`soundproof-room-budget-selection-guide`・`million-yen-soundproof-room-professional`・`nitori-soundproof-acoustic-guide`）を実ファイルで確認 → 2026-06-19：4記事とも現在のtitle/descriptionはkaizen.md記載の旧タイトルと既に異なり、いずれも改善済みのタイトルに更新されていることを確認（再改稿は不要）
 - 残作業は新タイトルでのCTR効果測定のみのため、Section D（W27以降のGSC確認）に統合し本セクションは終了
 - `.workspace/.task/query-analiize/non_jpn_queries.md`は英語圏需要の生データ（`livestream soundproof`251表示等）。具体タスクではなく`en`記事戦略の参考資料として保持
 
-#### F. E-E-A-T評価（完了確認のみ・ファイル側のステータス更新が必要）
+##### F. E-E-A-T評価（完了確認のみ・ファイル側のステータス更新が必要）
 `.workspace/.task/eeat-filecheck-list.md`（評価日2026-06-05、C評価2記事）
 - [x] `knowledge/absorption-vs-soundproofing-materials`（評価時150字）→ 2026-06-19確認：本文約4,000字に拡充済み、再執筆完了
 - [x] `business/report-japan-asmr-vtuber-streaming-studio-standard`（評価時1,000字）→ 2026-06-19確認：本文約4,000字に拡充済み、加筆完了
@@ -194,7 +235,7 @@ W24〜W26（3週連続）のGSCデータでは判断材料が不十分（サイ�
 
 F完了：セクションF全項目完了。最終結果 A109/B2/C0（全111記事）
 
-### 2026-06-21：W26週次タスク（`.workspace/.task/w26-comp-weekly-task.md`に分離管理・全項目完了）
+#### 2026-06-21：W26週次タスク（`.workspace/.task/w26-comp-weekly-task.md`に分離管理・全項目完了）
 - [x] W25のAct実施（bass-trap内部リンク強化・streamer-tax-strategyタイトル改善・AdSense追跡継続）
 - [x] `/ja/diy/bass-trap-installation-guide/`へ4記事目の内部リンク追加（`streaming-room-reverb-absorption`）
 - [x] トップページ（`/ja/`）のtitle/description見直し（問いかけ・悩み別フレームに変更、ja/en個別設定バグも修正）
@@ -202,4 +243,5 @@ F完了：セクションF全項目完了。最終結果 A109/B2/C0（全111記�
 - [x] `vtuber-family-privacy-rules`の復元・リダイレクト追加（W26のGSCで需要実証、`/ja/creator/`へ移設）
 - [x] `/ja/business/datacenter-soundproof-technology-facts/`のタイトル・description問いかけ型化
 - [x] 監視のみ・優先度低: bass-trapへのGA4セッション1件で英語タイトル記録（n=1、対応不要と結論）
--->
+
+</details>
