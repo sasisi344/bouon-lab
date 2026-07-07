@@ -31,19 +31,34 @@
   - 既存4記事（`diy/renter-parent-house-soundproofing`・`money/rental-vs-purchase-soundproof-room`・`money/soundproof-room-price-market`・`money/soundproof-subsidy-check-guide`）との間に相互内部リンクを追加
   - `interlink-postlist.md`再生成、`npx astro check`/`build`で0エラー確認済み（207ページ生成）
   - 各選択肢の深掘り記事（引っ越し編・DIY実践編等）は今後の追加候補として残存
-- [ ] 上記の具体的な記事タイトル・優先順位はまだ未着手。着手時にペルソナ資料と既存記事の突合を行う
+- [x] 深掘り記事の具体的タイトル・優先順位を決定（2026-07-08）。ペルソナ資料と既存記事を突合し、DIY実践編を最優先とした：
+  - `diy/parenting-generation-quiet-corner-diy`（子育て世代のDIY「一人になれる場所」｜1万円台から始める段階的な作り方）を新規作成。既存`diy/renter-parent-house-soundproofing`（Z世代・α世代向け、完全防音志向）とは読者層・切り口とも別軸であることを本文確認の上で差別化。突っ張り棒・遮音カーテン・耳栓等の低予算道具と、吸音パネル（`acoustic-panel-felmenon`）・隙間テープ（`gap-tape-meicyan`）のAffiliateCardを設置
+  - `money/quiet-space-budget-decision-guide`・`diy/renter-parent-house-soundproofing`との間に相互内部リンクを追加、`interlink-postlist.md`再生成、`npx astro check`/`build`で0エラー確認済み（208ページ生成）
+  - 残る2案（引っ越し編・専門業者依頼編）は次回以降の追加候補として残存
+- [x] 残る2案（引っ越し編・専門業者依頼編）を記事化（2026-07-08）。事前にWebSearchでリアルな失敗・成功パターン（建物構造別の防音性、内見の落とし穴、業者選びの失敗パターン、良い業者の見分け方等）をリサーチし、個人の実名口コミは捏造せず「よくあるパターン」として一般化して反映。両記事ともFAQセクションを新設し権威性を補強：
+  - `money/quiet-space-relocation-decision-guide`（防音賃貸への引っ越し、失敗しない判断基準｜子育て世代の住み替えガイド）：既存`money/soundproof-room-moving`（防音室ユニット自体の移設が主題）とは対象読者・フェーズが異なることを本文確認の上で差別化
+  - `money/soundproof-contractor-selection-guide`（防音リフォーム業者の選び方｜失敗しない相見積もりと契約前チェック）：既存`money/owner-renovation-roi-simulation-tool`（賃貸オーナー向けROI試算）とは対象読者・視点が異なることを本文確認の上で差別化
+  - `money/quiet-space-budget-decision-guide`・`money/soundproof-room-moving`・`money/owner-renovation-roi-simulation-tool`との間に相互内部リンクを追加、`interlink-postlist.md`再生成、`npx astro check`/`build`で0エラー確認済み（210ページ生成）
+  - トーンはユーザー指示により「優しく教える感じのですます調」で統一
+  - 効果測定は次回GSCエクスポート待ち
 
-### ニッチ化リライト6記事の効果測定（次回GSCエクスポート待ち、目安2026-08）
+### ニッチ化リライト6記事・新規creator6記事の効果測定（W29・W30が両方出揃ってから実行）
 
-`bouon-humidifier-comparison`・`rental-proofroom-contractcheck`・`soundproof-culture-japan-vs-america`・`diy-vocal-soundproof-mask`・`budget-soundproof-booth-comparison`・`sendai-soundproof-rental-guide`の6記事を2026-07-05にニッチ化リライト済み（詳細はアーカイブ「W28確定後の次アクション」参照）。
+`bouon-humidifier-comparison`・`rental-proofroom-contractcheck`・`soundproof-culture-japan-vs-america`・`diy-vocal-soundproof-mask`・`budget-soundproof-booth-comparison`・`sendai-soundproof-rental-guide`の6記事を2026-07-05にニッチ化リライト済み（詳細はアーカイブ「W28確定後の次アクション」参照）。同日、ペルソナBバックログとの突合で新規creator6記事（`streamer-discord-noise-cancel-vs-physical`等、詳細はアーカイブ参照）も公開済み。
 
-- [ ] 次回GSCエクスポートで、表示回数0件が解消するか・新設したニッチクエリ（例：「防音室 加湿器 結露 PC」「格安防音室 熱中症」等）での表示が発生するかを確認する
+2026-07-08：W27・W28データで測定を試みたが、いずれも施策日（2026-07-05）より前の期間（W28: 06/27〜07/04）のため効果は反映されず、以下を「改稿直前の最終ベースライン」として確定した:
 
-### 新規creator6記事の効果測定（次回GSCエクスポート待ち）
+- [x] ニッチ化リライト6記事のGSCオーガニック表示回数: W27・W28とも0件（既存の「5週連続0件」の継続を再確認）
+- [x] ニッチ化リライト6記事のGA4全流入（オーガニック以外含む）: `bouon-humidifier-comparison`（W28: 1ユーザー・エンゲージ93秒）・`rental-proofroom-contractcheck`（W28: 1ユーザー・エンゲージ6秒）に極小のアクセスあり（n=1のため参考値、GSCが0件のためオーガニック検索以外の流入と推定）。残り4記事はGA4も0件
+- [x] 新規creator6記事: W27・W28ともに該当データ行なし（公開がW28終了より後のため計測対象外。W29が実質初回計測になる）
 
-2026-07-05にペルソナBバックログとの突合で新規公開した6記事（`streamer-discord-noise-cancel-vs-physical`等、詳細はアーカイブ参照）について、
+実行タイミングの方針（ユーザー指示・2026-07-08）: 1週分だけでは新規記事のインデックス反映遅延の影響を受けやすいため、<strong>W29・W30が両方出揃ってから</strong>まとめて実行する。実行時のチェックリストは`.workspace/.task/weekly-task.md`のActセクションで管理（重複記載を避けるためここには記載しない）。
 
-- [ ] 次回GSCエクスポートで表示回数・クリックの発生状況を確認する
+- [ ] W29・W30データ入手後、`weekly-task.md`のAct該当項目を実行する
+
+**2026-07-08：W27・W28データでの測定試行結果（完了、データなしを確認）**
+
+- [x] W27（06/20〜07/04）・W28（06/27〜07/04）のGSC/GA4データを6記事全てで確認 → 全記事とも該当行なし＝データ0件。6記事は2026-07-05公開でW28終了（07/04）より後のため、そもそも計測対象期間外だった。ベースラインすら取得できないため、次回エクスポート（W29以降）が実質的な初回測定になる
 
 ### 一戸建て騒音源別記事（保留・優先度低）
 

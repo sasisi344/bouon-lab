@@ -17,7 +17,7 @@
 | ja | business | `datacenter-soundproof-technology-facts` |  | なぜデータセンターは静かなのか｜防音技術から学ぶBtoB提案の作り方 | BtoB, データセンター, 防音パネル, 吸音材, 法人提案 | `/ja/business/datacenter-soundproof-technology-facts/` | false |
 | ja | business | `global-soundproof-market-trends` |  | 世界の防音市場予測2026｜北米・欧州・アジアの潮流と「住まいの静寂」の価値 | 防音市場, 海外動向, 北米, アジア, 国際比較 | `/ja/business/global-soundproof-market-trends/` | false |
 | ja | business | `japan-bouonproof-marketnextasia` |  | 【2026】日本の防音市場は次にアジアのどこを攻めるべきか｜中国・韓国・ベトナムの最新動向 | アジア展開, 防音市場, 国際戦略, 配信・実況, 市場分析 | `/ja/business/japan-bouonproof-marketnextasia/` | false |
-| ja | business | `japan-soundproof-market-size` |  | 日本の防音市場規模と動向｜配信者経済とテレワークが変える需要構造 | 市場規模, 防音業界, 配信者経済, テレワーク | `/ja/business/japan-soundproof-market-size/` | false |
+| ja | business | `japan-soundproof-market-size` |  | 日本の防音市場規模の統計データ｜配信者経済とテレワークが押し上げる需要 | 市場規模, 防音業界, 配信者経済, テレワーク | `/ja/business/japan-soundproof-market-size/` | false |
 | ja | business | `owner-soundproof-renovation-investment-strategy-2026` |  | マンションオーナーの防音リノベ投資戦略 \| 利回りと出口戦略 | 不動産投資, 防音リノベ, 収益改善, 空室対策, 資産価値 | `/ja/business/owner-soundproof-renovation-investment-strategy-2026/` | false |
 | ja | business | `privacy-pod-market-growth` |  | プライバシーポッド市場が伸びる背景 \| 企業・公共設置の実態と課題 | プライバシーポッド, ワーキングスペース, フリーアドレス, 防音室, オフィス設計 | `/ja/business/privacy-pod-market-growth/` | false |
 | ja | business | `report-japan-asmr-vtuber-streaming-studio-standard` |  | 【技術解説】ASMR・VTuberに求められる「配信専用スタジオ」の防音・熱対策基準 (2026) | ASMR, VTuber, 配信・実況, 熱対策, PC排熱 | `/ja/business/report-japan-asmr-vtuber-streaming-studio-standard/` | false |
@@ -38,7 +38,7 @@
 | ja | creator | `family-home-soundproof-reno-negotiation` |  | 実家暮らし配信者の防音リフォーム交渉｜親に費用を出してもらう判断基準 | 実家暮らし, 家族交渉, 防音リフォーム, 資金計画, 配信環境 | `/ja/creator/family-home-soundproof-reno-negotiation/` | false |
 | ja | creator | `female-streamer-privacy-soundproof` |  | 女性配信者が「一人暮らし」を特定されないための音の対策｜ボイスチェンジャーと防音壁 | 女性配信者, 防犯対策, ボイスチェンジャー, プライバシー保護, 配信環境 | `/ja/creator/female-streamer-privacy-soundproof/` | false |
 | ja | creator | `game-streamer-sound-types` |  | ゲーム実況者の防音環境｜打鍵音・マウス音・叫び声ごとの対策 | 配信・実況, ゲーム実況, キーボード騒音, 打鍵音, 防音対策 | `/ja/creator/game-streamer-sound-types/` | false |
-| ja | creator | `gaming-floor-impact-noise-fix` |  | ゲームの台パン・足音、下の階への対策は2,000円から始められる | 台パン, 足音対策, 床衝撃音, 防振 | `/ja/creator/gaming-floor-impact-noise-fix/` | false |
+| ja | creator | `gaming-floor-impact-noise-fix` |  | 台パン・足音が下の階に響く仕組みと原因｜今すぐできる2,000円の防振対策 | 台パン, 足音対策, 床衝撃音, 防振 | `/ja/creator/gaming-floor-impact-noise-fix/` | false |
 | ja | creator | `horror-game-scream-soundproof-mic` |  | ホラーゲーム実況の絶叫、近所には漏らさずマイクにはしっかり乗せる配置術 | ホラーゲーム実況, 絶叫対策, 指向性マイク, 防音DIY, 深夜配信 | `/ja/creator/horror-game-scream-soundproof-mic/` | false |
 | ja | creator | `kominka-renovation-streaming-room` |  | 古民家を配信スタジオ防音室にリノベ！費用と注意点を徹底試算 | DIY防音, 古民家リノベ, 防音室, 配信・実況 | `/ja/creator/kominka-renovation-streaming-room/` | false |
 | ja | creator | `night-streaming-neighbor-tips` |  | 深夜配信を続けるための「近隣トラブル回避術」賃貸編 | 配信・実況, 深夜配信, 近隣トラブル, 賃貸防音, 騒音対策 | `/ja/creator/night-streaming-neighbor-tips/` | false |
@@ -90,6 +90,7 @@
 | ja | diy | `futon-cardboard-karaoke-booth` |  | 見た目はヤバいが効果はガチ。布団と段ボールで囲う「ひとり用カラオケボックス」の作り方 | 防音室, 費用, ひとりカラオケ, DIY防音, 歌ってみた | `/ja/diy/futon-cardboard-karaoke-booth/` | false |
 | ja | diy | `gamer-acoustic-placement` |  | 吸音材を貼る位置で音が変わる？モニター裏・スピーカー裏に貼るべき理由 | 吸音材, ルームアコースティック, 配信・実況, DIY防音 | `/ja/diy/gamer-acoustic-placement/` | false |
 | ja | diy | `outdoor-soundproof-curtain-market-guide` |  | 【市場整理】屋外用防音カーテン｜防音シートの構造と調達・選定の実務ポイント | 屋外用防音カーテン, 防音シート, 建設資材, 調達, 騒音対策, BtoB | `/ja/diy/outdoor-soundproof-curtain-market-guide/` | false |
+| ja | diy | `parenting-generation-quiet-corner-diy` |  | 子育て世代のDIY「一人になれる場所」｜1万円台から始める段階的な作り方 | 子育て世代, DIY防音, 一人の時間, 納戸活用, 在宅ワーク | `/ja/diy/parenting-generation-quiet-corner-diy/` | false |
 | ja | diy | `renter-parent-house-soundproofing` |  | 賃貸・実家でも原状回復0円！壁を傷つけず「防音室」並みの静寂を作る裏技5選 | 防音賃貸, 原状回復, DIY防音, 遮音シート | `/ja/diy/renter-parent-house-soundproofing/` | false |
 | ja | diy | `soundproof-room-diy-cost` |  | 自作防音室の費用内訳｜材料費だけでいくらかかる？ | DIY防音, 費用 | `/ja/diy/soundproof-room-diy-cost/` | false |
 | ja | diy | `soundproof-sheet-heavy-diy-tips` |  | 防音室DIYの落とし穴。「遮音シート」の重さで自作ブースが崩壊しないためのフレーム補強術 | 遮音シート, DIY防音, フレーム補強, 失敗しないコツ | `/ja/diy/soundproof-sheet-heavy-diy-tips/` | false |
@@ -136,9 +137,11 @@
 | ja | money | `musician-soundproof-loan-strategy` |  | 音楽家・演奏家のための防音室導入戦略｜「本職の信用」と「ファンの応援」を賢く使う | 楽器演奏, 副業, ローン, 配信・実況 | `/ja/money/musician-soundproof-loan-strategy/` | false |
 | ja | money | `owner-renovation-roi-simulation-tool` |  | 【A4一枚】防音リノベ ROI収益シミュレーション \| オーナー向け5年回収モデル完全解説 | ROI, 防音リノベ, 不動産投資, 賃料プレミアム | `/ja/money/owner-renovation-roi-simulation-tool/` | false |
 | ja | money | `quiet-space-budget-decision-guide` |  | 自宅に防音室がなくても「一人になれる空間」を作る4つの方法｜40〜60代の予算別ガイド | 防音室, 子育て世代, 趣味の時間, 予算別, DIY防音 | `/ja/money/quiet-space-budget-decision-guide/` | false |
+| ja | money | `quiet-space-relocation-decision-guide` |  | 防音賃貸への引っ越し、失敗しない判断基準｜子育て世代の住み替えガイド | 防音賃貸, 引っ越し, 子育て世代, 住み替え, 内見チェック | `/ja/money/quiet-space-relocation-decision-guide/` | false |
 | ja | money | `rental-vs-purchase-soundproof-room` |  | 「防音室は買わずに借りる時代」とは言うが損益分岐はどこだ | 防音室, レンタル, 購入, リース, 損益分岐, 予算 | `/ja/money/rental-vs-purchase-soundproof-room/` | false |
 | ja | money | `report-japan-soundproof-unit-resale-value-simulation` |  | 【投資シミュレーション】防音室は「動産」か？5年後の売却価値と出口戦略の実証 | 資産価値, リセールバリュー, ヤマハ, カワイ, ローン | `/ja/money/report-japan-soundproof-unit-resale-value-simulation/` | false |
 | ja | money | `small-business-soundproof-subsidy-guide` |  | 【個人事業主向け】防音室は贅沢品ではない！「小規模事業者持続化補助金」採択のための申請ノウハウ | 防音 | `/ja/money/small-business-soundproof-subsidy-guide/` | false |
+| ja | money | `soundproof-contractor-selection-guide` |  | 防音リフォーム業者の選び方｜失敗しない相見積もりと契約前チェック | 防音リフォーム, 業者選び, 相見積もり, 子育て世代, 契約チェック | `/ja/money/soundproof-contractor-selection-guide/` | false |
 | ja | money | `soundproof-room-buyback-guide` |  | 防音室を高く売るには？買取査定のポイントと個人売買の注意点【2026年版】 | 防音室, 買取, 売却, 高く売る, 費用 | `/ja/money/soundproof-room-buyback-guide/` | false |
 | ja | money | `soundproof-room-loan-guide` |  | 防音室ローン・分割払い完全ガイド2026｜月々いくら？審査・無金利・節税を解説 | ローン, 分割払い, 費用, 減価償却, 節税 | `/ja/money/soundproof-room-loan-guide/` | false |
 | ja | money | `soundproof-room-moving` |  | 引越しで防音室を移設する費用は？専門業者の選び方と失敗しない手順 | 防音室, 引越し, 移設, 解体, 専門業者 | `/ja/money/soundproof-room-moving/` | false |
@@ -184,7 +187,7 @@
 | ja | soundproof-room | `construction-types-cost-comparison` |  | 防音工事の種類と価格比較｜壁・床・開口部、業者の選び方まで | 防音工事, リフォーム, 価格比較, 防音壁 | `/ja/soundproof-room/construction-types-cost-comparison/` | false |
 | ja | soundproof-room | `daiwa-house-jiyuku-soundproof-review` |  | 大和ハウス「私の自由区」防音室を検討して分かったこと | 注文住宅, 大和ハウス, 防音室, ハウスメーカー | `/ja/soundproof-room/daiwa-house-jiyuku-soundproof-review/` | false |
 | ja | soundproof-room | `hsp-soundproof-curtain-guide` |  | HSP気質の方へ。生活音のストレスを劇的に減らす「防音（遮音）カーテン」の正しい選び方と限界 | 防音カーテン, HSP, 睡眠, 騒音対策, 遮音性能 | `/ja/soundproof-room/hsp-soundproof-curtain-guide/` | false |
-| ja | soundproof-room | `hsp-soundproof-room-guide` |  | HSP・音過敏のための防音室完全ガイド｜D値の目安から設置費用まで | HSP, 音過敏, 防音室選び, 感覚過敏, 防音室 | `/ja/soundproof-room/hsp-soundproof-room-guide/` | false |
+| ja | soundproof-room | `hsp-soundproof-room-guide` |  | HSP・音過敏のための防音室完全ガイド｜D-40以上の遮音性能と設置費用 | HSP, 音過敏, 防音室選び, 感覚過敏, 防音室 | `/ja/soundproof-room/hsp-soundproof-room-guide/` | false |
 | ja | soundproof-room | `kawai-nasal-soundproof-room-guide` |  | カワイ防音室ナサール（Nasal）完全ガイド｜特徴・価格・ヤマハとの違い | カワイ | `/ja/soundproof-room/kawai-nasal-soundproof-room-guide/` | false |
 | ja | soundproof-room | `million-yen-soundproof-room-professional` |  | 100万円クラス防音室の到達レベル｜プロ用途で選ぶべき基準と投資対効果 | 防音室, プロ向け, ヤマハ, カワイ, 遮音性能, ROI | `/ja/soundproof-room/million-yen-soundproof-room-professional/` | false |
 | ja | soundproof-room | `night-practice-soundproof-guide` |  | 夜間練習はどこまで許される？深夜でも楽器を弾くための防音室選びと「振動」の罠 | 夜間練習, D値, 振動対策, ヤマハ, カワイ, サイレント楽器 | `/ja/soundproof-room/night-practice-soundproof-guide/` | false |
@@ -203,5 +206,5 @@
 | ja | soundproof-room | `soundproof-room-large-size` |  | 2畳以上の広々防音室ガイド｜グランドピアノ・声楽・プロ仕様の空間作り | 防音室, 2畳, 3畳, グランドピアノ, DIY防音, 自宅スタジオ | `/ja/soundproof-room/soundproof-room-large-size/` | false |
 | ja | soundproof-room | `soundproof-room-pollen-protection` |  | 防音室の花粉対策｜換気を止めずに春の「花粉・黄砂」をシャットアウトする方法 | 花粉対策, 換気, ロスナイ, 春, 空気清浄機, メンテナンス | `/ja/soundproof-room/soundproof-room-pollen-protection/` | false |
 | ja | soundproof-room | `soundproof-room-size` |  | ユニット防音室のサイズと選び方：演奏スタイルに合わせた内寸確認法 | 防音室, サイズ選び, 0.8畳, 1.5畳, ヤマハ, カワイ | `/ja/soundproof-room/soundproof-room-size/` | false |
-| ja | soundproof-room | `wifi-connection-guide` |  | 防音室でWi-Fiが繋がらない理由と対策｜有線LANという解決策 | Wi-Fi, 有線LAN, 通信環境, 配信 | `/ja/soundproof-room/wifi-connection-guide/` | false |
+| ja | soundproof-room | `wifi-connection-guide` |  | 防音室でWi-Fiが繋がらない理由と解決策｜有線LAN引き込みで通信安定化 | Wi-Fi, 有線LAN, 通信環境, 配信 | `/ja/soundproof-room/wifi-connection-guide/` | false |
 | ja | soundproof-room | `yamaha-tabisuru-bouon-room` |  | ヤマハ「旅する防音室」とは｜移動体験プログラムの設計思想と活用の視点 | ヤマハ, 防音室体験, 移動展示, 防音室選び | `/ja/soundproof-room/yamaha-tabisuru-bouon-room/` | false |

@@ -115,7 +115,7 @@ const directoryCategories = topCategoriesForLang(uiLang);
         <a
           href={
             lang === 'ja'
-              ? `/${lang}/soundproof-room/`
+              ? '#persona-hub'
               : `/${lang}/japan-quiet-spaces/`
           }
           class="btn secondary"
@@ -139,6 +139,48 @@ const directoryCategories = topCategoriesForLang(uiLang);
   </section>
 
   <main class="container" id="knowledge">
+    <section class="section" id="persona-hub">
+      <div class="section-header">
+        <h2 class="section-title">{lang === 'ja' ? '課題別ハブから読み進める' : 'Start from Persona Hubs'}</h2>
+        <p class="section-desc">{lang === 'ja' ? '対象ユーザーと悩みから、最初に読むべき記事へ案内します。' : 'Pick your user context and jump to the best first article.'}</p>
+      </div>
+      <div class="hub-grid">
+        {hubRoutes.map((hub) => (
+          <article class="hub-card">
+            <div class="hub-label">{hub.labels[lang as 'ja' | 'en'].audience}</div>
+            <h3>{hub.labels[lang as 'ja' | 'en'].title}</h3>
+            <p>{hub.labels[lang as 'ja' | 'en'].pain}</p>
+            <ul class="hub-entries">
+              {hub.featuredPosts.map((post) => (
+                <li>
+                  <a
+                    href={getUrl(post)}
+                    data-track-event="hub_click"
+                    data-track-source="hub_entry"
+                    data-track-label={post.data.title}
+                  >
+                    {post.data.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div class="hub-footer">
+              <a
+                href={hub.categoryUrl}
+                class="hub-link"
+                data-track-event="hub_click"
+                data-track-source="hub_cta"
+                data-track-label={hub.labels[lang as 'ja' | 'en'].title}
+              >
+                {hub.labels[lang as 'ja' | 'en'].primaryCta}
+              </a>
+              <span class="hub-count">{lang === 'ja' ? `${hub.count}件` : `${hub.count} posts`}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
     <AdUnit placement="rectangleList" class="ad-placement--page-top" />
 
     <!-- 最新記事（先頭表示・最大50件・もっと見る） -->
@@ -189,48 +231,6 @@ const directoryCategories = topCategoriesForLang(uiLang);
           </button>
         </div>
       )}
-    </section>
-
-    <section class="section">
-      <div class="section-header">
-        <h2 class="section-title">{lang === 'ja' ? '課題別ハブから読み進める' : 'Start from Persona Hubs'}</h2>
-        <p class="section-desc">{lang === 'ja' ? '対象ユーザーと悩みから、最初に読むべき記事へ案内します。' : 'Pick your user context and jump to the best first article.'}</p>
-      </div>
-      <div class="hub-grid">
-        {hubRoutes.map((hub) => (
-          <article class="hub-card">
-            <div class="hub-label">{hub.labels[lang as 'ja' | 'en'].audience}</div>
-            <h3>{hub.labels[lang as 'ja' | 'en'].title}</h3>
-            <p>{hub.labels[lang as 'ja' | 'en'].pain}</p>
-            <ul class="hub-entries">
-              {hub.featuredPosts.map((post) => (
-                <li>
-                  <a
-                    href={getUrl(post)}
-                    data-track-event="hub_click"
-                    data-track-source="hub_entry"
-                    data-track-label={post.data.title}
-                  >
-                    {post.data.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <div class="hub-footer">
-              <a
-                href={hub.categoryUrl}
-                class="hub-link"
-                data-track-event="hub_click"
-                data-track-source="hub_cta"
-                data-track-label={hub.labels[lang as 'ja' | 'en'].title}
-              >
-                {hub.labels[lang as 'ja' | 'en'].primaryCta}
-              </a>
-              <span class="hub-count">{lang === 'ja' ? `${hub.count}件` : `${hub.count} posts`}</span>
-            </div>
-          </article>
-        ))}
-      </div>
     </section>
 
     <!-- カテゴリ・ナビゲーション -->
