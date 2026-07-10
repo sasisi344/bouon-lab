@@ -105,12 +105,39 @@ image: ./cover.png # クォートなし・エスケープなし
 | `.cursor/rules/bouon-writing-master.mdc`        | **ライティング統括（必読）** | 新規記事・既存記事編集、日英の文体・記法統一        |
 | `.cursor/rules/bouon-rewrite-strategy.mdc`      | リライト戦略・実行基準       | 既存記事の改善、CTR改善、レガシー更新              |
 | `.cursor/rules/bouon-growth-ops.mdc`            | 収益導線・ビジュアル・SNS    | 高単価導線設計、図解設計、Instagram運用            |
+| `.cursor/rules/bouon-task-ops.mdc`              | **タスク管理運用**           | `.workspace/.task/` の更新・完了・アーカイブ時     |
 
 ### ペルソナ体系
 
 記事のターゲットや語り口を設計するときに参照:
 
 - ペルソナ運用は `.cursor/rules/bouon-writing-master.mdc` の基準に統合し、誇大表現排除・物理法則遵守・二次リスク提示を常時適用する。
+
+---
+
+## タスク管理（`.workspace/.task/`）
+
+防音Labの作業タスクは `.workspace/.task/` に集約する。詳細は `.cursor/rules/bouon-task-ops.mdc` を参照。
+
+### マスターファイル（削除厳禁）
+
+- **`task-list.md`** — 中長期・横断タスクの正
+- **`weekly-task.md`** — 週次PDCAの正
+
+この2ファイルは作業の起点であり、**ファイル自体の削除は厳禁**。中身の更新と、完了済み項目の削除（アーカイブ移動）は可。
+
+### archieve/
+
+- 完了済みタスク・セクション・派生タスクファイルは `.workspace/.task/archieve/` に格納する
+- 新規タスク追加前に `archieve/` と差分チェックし、過去の完了内容との重複・競合を避ける
+- **`task-list.md` から削除する完了タスク**は `archieve/task-list-01.md` 形式で連番保存する（索引: `archieve/task-list-index.md`）。1ファイルは実施内容の簡潔な記録でよい。`task-list.md` 内に新たな「完了タスク」セクションを増やさない
+
+### 運用の要点
+
+1. 作業開始前に `task-list.md` と `weekly-task.md` を確認する
+2. 詳細チェックリストは派生ファイルに分離し、マスター間の重複記載を避ける（一方に集約し、他方からリンク）
+3. **`task-list.md` 完了時**: `archieve/task-list-NN.md` を作成 → `task-list-index.md` 更新 → マスターから該当ブロックを削除
+4. 派生タスクファイル（`qfo-recheck-task-*.md` 等）の完了時はファイルごと `archieve/` へ移動
 
 ---
 
@@ -205,5 +232,9 @@ node .workspace/scripts/generate-image.js --list-presets
 - `src/data/contentCategories.ts` — `ja` / `en` のトップカテゴリ一覧とナビ・一覧用ラベル（`en` は Japan lens の3カテゴリ）
 - `.workspace/.data-set/interlink-postlist.md` — 内部リンク整理用の記事一覧（`title` / URL用`slug` / `tags` / `category` 等）。更新は `node .workspace/scripts/build-interlink-postlist.mjs`
 - `src/data/affiliates.ts` — アフィリエイトリンクデータ
+- `.workspace/.task/task-list.md` — 中長期タスクの正（**削除厳禁**）
+- `.workspace/.task/weekly-task.md` — 週次PDCAの正（**削除厳禁**）
+- `.workspace/.task/archieve/` — 完了済みタスクの保管（新規タスク追加時の差分チェック用）
+- `.workspace/.task/archieve/task-list-index.md` — `task-list-NN.md` 連番の索引
 - `.workspace/strategies/` — コンテンツ計画・リライトスケジュール
 - `.workspace/.data-set/` — 防音スペック・市場データ・企業DB（アーカイブ）
