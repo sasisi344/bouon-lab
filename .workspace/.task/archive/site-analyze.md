@@ -7,6 +7,19 @@ source: "リポジトリ実査（astro.config.mjs / dist 出力 / robots.txt / l
 
 # BouonLab サイト構成分析レポート（2026-07-09）
 
+## 2026-07-10対応状況
+
+❌判定だった項目はすべて対応済み。
+
+- <strong>P0-1（`/en/` 可視性矛盾）</strong>: `public/robots.txt`の`Disallow: /en/`を撤廃、`astro.config.mjs`のsitemap filter/serializeを`/ja/`・`/en/`両対応に変更、`llms.txt`の「English version is currently paused」記述をen記事3本のリスト付き記述に更新。ビルド確認済み（sitemap-0.xmlにen記事3本のURLが出力されることを確認）。
+- <strong>P0-2（JSON-LD未実装）</strong>: `astro.config.mjs`のstarlight `head`オプションでサイト全体に`Organization`/`WebSite`を追加。`src/pages/[lang]/[category]/[...slug].astro`で記事ごとに`BreadcrumbList`と`BlogPosting`（headline/description/image/datePublished/dateModified/author/publisher）を生成し、StarlightPageの`frontmatter.head`経由で出力。ビルド後のHTMLで4件のJSON-LDスクリプトを確認済み。
+- <strong>P1-1（`og:image`なし）</strong>: 上記と同じ実装内で`getImage()`によりcover画像を1200x675 webpに最適化し、`og:image`・`og:image:width/height`・`twitter:image`を出力。ビルド後のHTMLで確認済み。
+- <strong>llms.txt仕様非準拠</strong>: H1直後を`>` blockquote化、Index/Key ArticlesのURLを全て`- [title](url): description`形式に統一、Sitemap/Technical Foundationを`## Optional`配下に移動、`Last updated`を2026-07-10に更新。
+
+未対応のまま：P1-2（需要未回収クラスター、qfo-recheckタスクに委譲）、P2-1（カテゴリ偏在・ハブページ）、P2-2（RSSフィード・ドキュメントドリフト）、llms.txtの自動生成スクリプト化・llms-full.txt併設（5・6番、余力があれば）。
+
+---
+
 ## エグゼクティブサマリー
 
 サイトの基盤（URL設計・canonical・リダイレクト・サイトマップ）は良好で、2026-06-01のカテゴリフラット化も丁寧に移行されている。一方で、<strong>致命度の高い矛盾が1件</strong>（公開済み `/en/` 記事3本がrobots.txtでブロックされ検索エンジンから不可視）、<strong>E-E-A-T戦略と直結する欠落が1件</strong>（構造化データJSON-LDが全ページでゼロ）ある。llms.txtは記載URLの実在性は全て確認できたが、llmstxt.org仕様への準拠と内容の鮮度に問題がある。

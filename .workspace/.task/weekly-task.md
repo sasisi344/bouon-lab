@@ -11,6 +11,13 @@
 - ニッチ化リライト6記事・新規creator6記事・local5記事の初回GSC効果測定
 - `/ja/`トップの症状別導線・CTR改善の継続
 
+### Act候補（データ由来ドラフト・このサイト単独の全候補）
+- [x] 「台パン 衝撃吸収」（🔴後回し、表示8・順位9・CTR0%）はタイトル・メタディスクリプション改善でCTR獲得を狙う → 2026-07-14実施: `gaming-floor-impact-noise-fix`のtitle/descriptionに「衝撃吸収」を明示的に追加（結論先出しは維持）。CTR変化はW30以降で確認
+- [x] `/ja/creator/gaming-floor-impact-noise-fix/`はCTR9.09%と改善傾向のため、関連記事からの内部リンクで露出を拡大 → 2026-07-14実施: `streamer-noise-quick-fix`・`diy-soundproofing-tips`・`dance-fitness-streamer-soundproof`の3記事から文脈に沿って内部リンクを追加
+- [x] `/ja/diy/bass-trap-installation-guide/`はクリック12→2・表示105→30と大幅減のため、要因調査とリライトを検討 → 2026-07-14調査: W24〜W28のGSCエクスポート実データを確認したところ「クリック12→2・表示105→30」という数値はどの週にも一致せず、実際の推移はW24: 0/6 → W25: 3/23 → W26: 2/14 → W27: 2/28 → W28: 5/52と一貫して増加傾向。当初のAct候補は誤ったデータに基づいていたと判断し、リライトは不要と結論。`diy-led-acoustic-panels`からの内部リンク追加は施策として維持
+- [x] 「東京 防音 工事 補助金」（🆕新規クエリ、表示8）は需要の芽として関連記事の作成・強化を検討 → 2026-07-14実施、詳細は`archive/weekly-PPDCA-task-07W29.md`参照。W30以降の効果測定は`task-list.md`に記録済み
+- [ ] (direct)流入の実態（SNS・ブックマーク・UTM未計測等）を確認し、流入経路の可視化を進める → 2026-07-14確認: 現行のGA4週次エクスポート（ランディングページ×セグメント）には参照元/メディアの内訳が含まれず分析不可。セッションのソース/メディアレポートの取得が必要なため`task-list.md`に追記
+
 ---
 
 ### Do（W28期間中に実施済み）
@@ -87,12 +94,12 @@ zenki基準（348.8表示/日・21.1位）との比較: W28は31.0表示/日・1
 - [ ] `/ja/soundproof-room/hsp-soundproof-room-guide/` — title修正後の順位（W28: 12.6位）の回復有無
 - [ ] `/ja/`トップページ — persona-hub再配置・CTAリンク修正後のモバイル直帰率（W28: 84.2%）改善有無
 - [ ] `/ja/creator/streamer-noise-quick-fix/` — 順位急落（11.7→33.8位）が一時的変動かカニバリか、W29推移で判断
-- [ ] `/ja/soundproof-room/construction-types-cost-comparison/` — `bouon-osusume-hikaku`からの内部リンク強化未実施。実施の上で順位推移（W28: 44.1位）を観察
+- [x] `/ja/soundproof-room/construction-types-cost-comparison/` — `bouon-osusume-hikaku`からの内部リンク強化未実施。実施の上で順位推移（W28: 44.1位）を観察 → 2026-07-14確認: `bouon-osusume-hikaku`からのリンクは既存だった（未実施の記載は誤り）。逆方向（`construction-types-cost-comparison`→`bouon-osusume-hikaku`）が未設置だったため追加し、双方向リンクに強化。順位変化はW30以降で確認
 
-#### 継続中（未着手）
+#### 継続中
 
-- [ ] `/ja/diy/bass-trap-installation-guide/`（表示52・CTR9.6%・順位9.98）— 被リンク・内部導線強化で上位化を狙う。関連DIY記事からのハブ化を検討
-- [ ] `/ja/business/datacenter-soundproof-technology-facts/`（表示17・CTR0%・順位10.0）— リライト/内容刷新を検討
+- [x] `/ja/diy/bass-trap-installation-guide/`（表示52・CTR9.6%・順位9.98）— 被リンク・内部導線強化で上位化を狙う。関連DIY記事からのハブ化を検討 → 2026-07-14: `diy-led-acoustic-panels`から低音域対策の文脈で内部リンクを追加（既存7本の被リンクに加えて8本目）。順位変化はW30以降で確認
+- [x] `/ja/business/datacenter-soundproof-technology-facts/`（表示17・CTR0%・順位10.0）— リライト/内容刷新を検討 → 2026-07-14: title/descriptionをBtoB提案訴求から「なぜ静かなのか」の一般検索意図優先に修正（結論先出し）。本文は維持。CTR変化はW30以降で確認
 - [ ] 138件リダイレクトの評価移行 — W29 GSCで旧`/posts/`URL由来の表示・クリックが新URLに移ったか再確認（W27・W28とも未回復）
 
 #### ニッチ化リライト6記事・新規creator6記事の効果測定（W29・W30が両方出揃ってから実行）
@@ -102,6 +109,6 @@ zenki基準（348.8表示/日・21.1位）との比較: W28は31.0表示/日・1
 - [ ] ニッチ化リライト6記事 — GSC表示0が解消するか、新設したニッチクエリでの表示が発生するかを確認。6週連続0件のままなら「統合・noindex・別クエリへの再設計」のいずれかを方針決定
 - [ ] 新規creator6記事 — 表示回数・クリックの発生状況を確認（W27・W28はデータ自体が存在せず、W29が実質初回計測になる）
 
-#### 新規発見（要対応）
+#### 新規発見（確認済み・対応不要）
 
-- [ ] `/ja/soundproof-rental/others/osaka-soundproof-rental-guide/`がGSCに旧カテゴリパスのままインデックスされている一方、`interlink-postlist.md`上の現URLは`/ja/local/osaka-soundproof-rental-guide/`。2026-06-01のカテゴリフラット化に伴うリダイレクト・canonical設定を確認すること（詳細: `pagerank-list.md`）
+- [x] `/ja/soundproof-rental/others/osaka-soundproof-rental-guide/`がGSCに旧カテゴリパスのままインデックスされている件 → 2026-07-14確認: `astro.config.mjs`で旧パス（`/ja/soundproof-rental/others/...`・`/posts/...`の両方）から`/ja/local/osaka-soundproof-rental-guide/`への308リダイレクトは設定済み、canonicalタグも現URLから正しく生成されている。コード側の問題はなく、Googleの再クロール待ちと判断。W30以降もGSCで旧パスのままなら再調査

@@ -34,28 +34,51 @@ export default defineConfig({
         ThemeProvider: './src/components/starlight/ThemeProvider.astro',
         ThemeSelect:   './src/components/starlight/ThemeSelect.astro',
       },
+      head: [
+        {
+          tag: 'script',
+          attrs: { type: 'application/ld+json' },
+          content: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: '防音Lab',
+            url: 'https://bouon-lab.com',
+            logo: 'https://bouon-lab.com/favicon.svg',
+          }),
+        },
+        {
+          tag: 'script',
+          attrs: { type: 'application/ld+json' },
+          content: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: '防音Lab',
+            url: 'https://bouon-lab.com',
+          }),
+        },
+      ],
     }),
     mdx(),
     sitemap({
       filter(page) {
-        // /ja/ 以外のページはすべて除外（Starlight docs ルート、en/ など）
-        if (!page.includes('/ja/')) return false;
+        // /ja/ または /en/ 以外のページはすべて除外（Starlight docs ルートなど）
+        if (!page.includes('/ja/') && !page.includes('/en/')) return false;
         // about / privacy はサイトマップから除外（noindex ページ）
         if (/\/(about|privacy)\/$/.test(page)) return false;
         return true;
       },
       serialize(item) {
         const url = item.url;
-        // トップページ: /ja/
-        if (/\/ja\/$/.test(url)) {
+        // トップページ: /ja/ または /en/
+        if (/\/(ja|en)\/$/.test(url)) {
           item.priority = 1.0;
           item.changefreq = 'weekly';
         // カテゴリ index: /ja/soundproof-room/ など（1セグメント）
-        } else if (/\/ja\/[^/]+\/$/.test(url)) {
+        } else if (/\/(ja|en)\/[^/]+\/$/.test(url)) {
           item.priority = 0.8;
           item.changefreq = 'weekly';
-        // 記事ページ: /ja/{category}/{slug}/（2セグメント）
-        } else if (/\/ja\/[^/]+\/[^/]+\/$/.test(url)) {
+        // 記事ページ: /{lang}/{category}/{slug}/（2セグメント）
+        } else if (/\/(ja|en)\/[^/]+\/[^/]+\/$/.test(url)) {
           item.priority = 0.7;
           item.changefreq = 'monthly';
         } else {

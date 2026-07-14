@@ -1,16 +1,22 @@
 # BouonLab — 防音ナレッジベース（Japan Soundproofing Knowledge Base）
 
-Practical knowledge base on soundproofing, acoustic treatment, noise reduction, and quiet living in Japan.
-Covers unit soundproof rooms, DIY acoustic treatment, soundproof rental apartments, financial/subsidy guides, creator environments, and market analysis.
-All primary content is in Japanese; English version is currently paused.
+> Practical knowledge base on soundproofing, acoustic treatment, noise reduction, and quiet living in Japan. Covers unit soundproof rooms, DIY acoustic treatment, soundproof rental apartments, financial/subsidy guides, creator environments, and market analysis. All primary content is in Japanese; a small set of English articles is published selectively under Japan-lens categories.
 
-Last updated: 2026-06-01
+Last updated: 2026-07-10
 
 ---
 
 ## Primary Locale
 
-- Japanese (ja): https://bouon-lab.com/ja/ — primary content; all topics originate here
+- [Japanese (ja)](https://bouon-lab.com/ja/): Primary content; all topics originate here
+
+## English (Japan lens)
+
+English content is not a translation layer. It is published selectively, reframing Japanese soundproofing topics through a "Japan lens" (society, housing market, culture) rather than mirroring the `ja` category structure.
+
+- [Building code reform 2025 and noise insulation](https://bouon-lab.com/en/japan-noise-and-society/building-code-reform-2025-noise-insulation/): How Japan's 2025 building code reform affects noise insulation requirements
+- [Cost to soundproof a room in Japan](https://bouon-lab.com/en/japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/): Realistic cost breakdown for soundproofing a room in Japan
+- [How Japanese streamers soundproof their rooms](https://bouon-lab.com/en/japan-quiet-spaces/how-japanese-streamers-soundproof/): How VTubers and streamers in Japan handle soundproofing on a budget
 
 ---
 
@@ -18,8 +24,8 @@ Last updated: 2026-06-01
 
 `https://bouon-lab.com/{lang}/{category}/{slug}/` (trailing slash required)
 
-- lang: `ja`
-- category: one of 8 top-level categories listed below
+- lang: `ja` (primary) or `en` (selective, Japan-lens categories)
+- category: one of 8 top-level `ja` categories, or 3 top-level `en` categories
 - slug: article-specific identifier
 
 ---
@@ -27,88 +33,79 @@ Last updated: 2026-06-01
 ## Content Categories (Japanese)
 
 ### 防音室 — Soundproof Room (`soundproof-room`)
-Unit rooms, installation, product comparison, acoustic design, size selection, maintenance.
-Index: https://bouon-lab.com/ja/soundproof-room/
+- [Index](https://bouon-lab.com/ja/soundproof-room/): Unit rooms, installation, product comparison, acoustic design, size selection, maintenance
 
 ### 防音賃貸 — Soundproof Rental (`soundproof-rental`)
-Music-friendly apartments, contract checks, renovation ROI for landlords, market data.
-Index: https://bouon-lab.com/ja/soundproof-rental/
+- [Index](https://bouon-lab.com/ja/soundproof-rental/): Music-friendly apartments, contract checks, renovation ROI for landlords, market data
 
 ### DIY防音 — DIY Soundproofing (`diy`)
-Self-built booths, acoustic panels, bass traps, materials, cost breakdowns, failure patterns.
-Index: https://bouon-lab.com/ja/diy/
+- [Index](https://bouon-lab.com/ja/diy/): Self-built booths, acoustic panels, bass traps, materials, cost breakdowns, failure patterns
 
 ### お金・補助金 — Cost & Subsidies (`money`)
-Pricing, loans, subsidies (airport/road/ZEH), tax strategy, resale/ROI simulation.
-Index: https://bouon-lab.com/ja/money/
+- [Index](https://bouon-lab.com/ja/money/): Pricing, loans, subsidies (airport/road/ZEH), tax strategy, resale/ROI simulation
 
 ### 配信・クリエイター — Creators & Streamers (`creator`)
-VTuber/ASMR/gaming environments, heat management, streaming setup, rental selection.
-Index: https://bouon-lab.com/ja/creator/
+- [Index](https://bouon-lab.com/ja/creator/): VTuber/ASMR/gaming environments, heat management, streaming setup, rental selection
 
 ### 防音の基礎知識 — Acoustics Knowledge (`knowledge`)
-D-value, STC, RT60, sound absorption vs insulation, noise regulations, seasonal statistics.
-Index: https://bouon-lab.com/ja/knowledge/
+- [Index](https://bouon-lab.com/ja/knowledge/): D-value, STC, RT60, sound absorption vs insulation, noise regulations, seasonal statistics
 
 ### 地域ガイド — Local Guide (`local`)
-City-specific soundproof rental guides for Tokyo, Osaka, Sendai, Kobe, Kyoto, etc.
-Index: https://bouon-lab.com/ja/local/
+- [Index](https://bouon-lab.com/ja/local/): City-specific soundproof rental guides for Tokyo, Osaka, Sendai, Kobe, Kyoto, etc.
 
 ### 企業・法人向け — Business & Enterprise (`business`)
-Office soundproofing, shared studio market, ESG trends, corporate renovation strategy.
-Index: https://bouon-lab.com/ja/business/
+- [Index](https://bouon-lab.com/ja/business/): Office soundproofing, shared studio market, ESG trends, corporate renovation strategy
 
 ---
 
 ## Key Articles (Japanese)
 
 ### 防音室
-- 防音室おすすめ比較（ROI・リセール分析）: https://bouon-lab.com/ja/soundproof-room/bouon-osusume-hikaku/
-- D値の真実と誤解: https://bouon-lab.com/ja/knowledge/d-value-truth-and-myths/
-- 予算別防音室選び方ガイド: https://bouon-lab.com/ja/soundproof-room/soundproof-room-budget-selection-guide/
-- HSP・音過敏のための防音室完全ガイド: https://bouon-lab.com/ja/soundproof-room/hsp-soundproof-room-guide/
-- カワイ ナサール完全ガイド: https://bouon-lab.com/ja/soundproof-room/kawai-nasal-soundproof-room-guide/
+- [防音室おすすめ比較（ROI・リセール分析）](https://bouon-lab.com/ja/soundproof-room/bouon-osusume-hikaku/): 主要防音室モデルをROI・リセール観点で比較
+- [D値の真実と誤解](https://bouon-lab.com/ja/knowledge/d-value-truth-and-myths/): 遮音性能指標D値の正しい理解と誤解の解消
+- [予算別防音室選び方ガイド](https://bouon-lab.com/ja/soundproof-room/soundproof-room-budget-selection-guide/): 予算帯別の防音室選定基準
+- [HSP・音過敏のための防音室完全ガイド](https://bouon-lab.com/ja/soundproof-room/hsp-soundproof-room-guide/): 音過敏傾向がある人向けの防音室選び
+- [カワイ ナサール完全ガイド](https://bouon-lab.com/ja/soundproof-room/kawai-nasal-soundproof-room-guide/): カワイ「ナサール」シリーズの仕様・価格・選び方
 
 ### 防音賃貸
-- 防音賃貸市場ガイド2026: https://bouon-lab.com/ja/soundproof-rental/bouon-rental-market-guide/
-- ミュージション総合ガイド: https://bouon-lab.com/ja/soundproof-rental/musision-comprehensive-guide/
-- 賃貸防音室の契約書チェックリスト: https://bouon-lab.com/ja/soundproof-rental/rental-proofroom-contractcheck/
-- 騒音苦情対応マニュアル: https://bouon-lab.com/ja/soundproof-rental/noise-complaint-landlord-negotiation-guide/
-- 賃貸オーナー向け防音リノベ経営戦略: https://bouon-lab.com/ja/soundproof-rental/owner-soundproof-renovation-strategy/
+- [防音賃貸市場ガイド2026](https://bouon-lab.com/ja/soundproof-rental/bouon-rental-market-guide/): 防音賃貸市場の全体像と選び方
+- [ミュージション総合ガイド](https://bouon-lab.com/ja/soundproof-rental/musision-comprehensive-guide/): 防音賃貸ブランド「ミュージション」の総合解説
+- [賃貸防音室の契約書チェックリスト](https://bouon-lab.com/ja/soundproof-rental/rental-proofroom-contractcheck/): 契約前に確認すべきポイント一覧
+- [騒音苦情対応マニュアル](https://bouon-lab.com/ja/soundproof-rental/noise-complaint-landlord-negotiation-guide/): 近隣・大家との騒音トラブル対応手順
+- [賃貸オーナー向け防音リノベ経営戦略](https://bouon-lab.com/ja/soundproof-rental/owner-soundproof-renovation-strategy/): オーナー視点の防音リノベ投資戦略
 
 ### 地域ガイド
-- 東京の防音賃貸相場2026: https://bouon-lab.com/ja/local/tokyo-soundproof-rental-summary/
-- 大阪の防音賃貸ガイド: https://bouon-lab.com/ja/local/osaka-soundproof-rental-guide/
-- 仙台の防音賃貸事情: https://bouon-lab.com/ja/local/sendai-soundproof-rental-guide/
+- [東京の防音賃貸相場2026](https://bouon-lab.com/ja/local/tokyo-soundproof-rental-summary/): 東京エリアの防音賃貸家賃相場まとめ
+- [大阪の防音賃貸ガイド](https://bouon-lab.com/ja/local/osaka-soundproof-rental-guide/): 大阪エリアの防音賃貸選びガイド
+- [仙台の防音賃貸事情](https://bouon-lab.com/ja/local/sendai-soundproof-rental-guide/): 仙台エリアの防音賃貸市場事情
 
 ### お金・補助金
-- 防音室価格相場2026: https://bouon-lab.com/ja/money/soundproof-room-price-market/
-- 防音室ローン・分割払い完全ガイド: https://bouon-lab.com/ja/money/soundproof-room-loan-guide/
-- 防音室の買取ガイド2026: https://bouon-lab.com/ja/money/soundproof-room-buyback-guide/
-- 補助金の対象エリア調べ方: https://bouon-lab.com/ja/money/soundproof-subsidy-check-guide/
+- [防音室価格相場2026](https://bouon-lab.com/ja/money/soundproof-room-price-market/): 防音室の価格相場まとめ
+- [防音室ローン・分割払い完全ガイド](https://bouon-lab.com/ja/money/soundproof-room-loan-guide/): 防音室購入時のローン・分割払い解説
+- [防音室の買取ガイド2026](https://bouon-lab.com/ja/money/soundproof-room-buyback-guide/): 中古防音室の買取相場と流れ
+- [補助金の対象エリア調べ方](https://bouon-lab.com/ja/money/soundproof-subsidy-check-guide/): 防音関連補助金の対象エリア確認方法
 
 ### 配信・クリエイター
-- 配信者・VTuber防音環境完全ガイド: https://bouon-lab.com/ja/creator/streamer-soundproof-room-comprehensive-guide/
-- VTuber向け防音室完全ガイド: https://bouon-lab.com/ja/creator/vtuber-soundproof-environment-complete-guide/
+- [配信者・VTuber防音環境完全ガイド](https://bouon-lab.com/ja/creator/streamer-soundproof-room-comprehensive-guide/): ワンルームから防音室まで活動規模別の環境構築ガイド
+- [VTuber向け防音室完全ガイド](https://bouon-lab.com/ja/creator/vtuber-soundproof-environment-complete-guide/): 防音室購入の意思決定・資金計画に特化したガイド
 
 ### DIY防音
-- ベーストラップ設置ガイド: https://bouon-lab.com/ja/diy/bass-trap-installation-guide/
-- クローゼット防音室DIY: https://bouon-lab.com/ja/diy/closet-diy-soundproof-room/
-- DIY防音マスクの作り方: https://bouon-lab.com/ja/diy/diy-vocal-soundproof-mask/
+- [ベーストラップ設置ガイド](https://bouon-lab.com/ja/diy/bass-trap-installation-guide/): 低音のこもりを解消するベーストラップ設置法
+- [クローゼット防音室DIY](https://bouon-lab.com/ja/diy/closet-diy-soundproof-room/): クローゼットを使ったDIY防音室の作り方
+- [DIY防音マスクの作り方](https://bouon-lab.com/ja/diy/diy-vocal-soundproof-mask/): 自作できる防音マスクの作成手順
 
 ---
 
-## Sitemap
+## Optional
 
-https://bouon-lab.com/sitemap-index.xml
+- [Sitemap](https://bouon-lab.com/sitemap-index.xml): Full sitemap index (ja + en)
 
----
-
-## Technical Foundation
+### Technical Foundation
 
 - Framework: Astro v6 + Starlight + MDX
-- Primary locale: `/ja/` (Japanese)
-- URL pattern: `/ja/{category}/{slug}/` (flat, no subcategory layer)
-- 8 top-level categories: soundproof-room, soundproof-rental, diy, money, creator, knowledge, local, business
+- Primary locale: `/ja/` (Japanese); selective `/en/` articles under Japan-lens categories
+- URL pattern: `/{lang}/{category}/{slug}/` (flat, no subcategory layer)
+- 8 top-level `ja` categories: soundproof-room, soundproof-rental, diy, money, creator, knowledge, local, business
+- 3 top-level `en` categories (Japan lens): japan-noise-and-society, japan-soundproof-housing, japan-quiet-spaces
 - Draft articles (`draft: true`) are excluded from build and sitemap
 - All articles include `lang`, `category`, `slug`, `date`, `lastmod`, `tags` in frontmatter
