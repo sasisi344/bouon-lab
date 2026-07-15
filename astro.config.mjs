@@ -355,6 +355,16 @@ export default defineConfig({
     '/ja/knowledge/soundproof-subsidy-zero-cost/': '/ja/money/soundproof-subsidy-check-guide/',
     '/en/knowledge/soundproof-subsidy-zero-cost/': '/ja/',
 
+    // ── 旧URL回収監査で検出（2026-07-15 G1: W26-28 GSC出現・未設定分） ──────
+    '/ja/solutions/bass-trap-installation-guide/': '/ja/diy/bass-trap-installation-guide/',
+    '/ja/solutions/musision-soundproof-rental-review/': '/ja/soundproof-rental/musision-comprehensive-guide/',
+    '/ja/solutions/sound-reduction-simulation/': '/ja/soundproof-room/sound-reduction-simulation/',
+    '/ja/solutions/soundproof-room-resale-strategy/': '/ja/money/report-japan-soundproof-unit-resale-value-simulation/',
+    '/ja/knowledge/bouontech-trendnews2025/': '/ja/business/soundproof-industry-news-2026-06/',
+    '/en/knowledge/bouontech-trendnews2025/': '/en/japan-noise-and-society/building-code-reform-2025-noise-insulation/',
+    '/en/knowledge/soundproof-room-price-market/': '/en/japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/',
+    '/en/knowledge/soundproof-subsidy-system-list/': '/en/japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/',
+
     // ── 旧Hugo /posts/ 未登録分（2026-07-02 GSCクエリ分析、AUTO_MATCH） ─────
     '/posts/bouon-dchiseinou-meyasu/':                       '/ja/soundproof-room/bouon-dchiseinou-meyasu/',
     '/posts/proofroom-humidity-airconditionlist/':           '/ja/soundproof-room/proofroom-humidity-airconditionlist/',
