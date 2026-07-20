@@ -20,13 +20,13 @@
 
 リライト・新規公開・W27/W28試行結果は `archieve/task-list-02.md`・`task-list-06.md`。W29・W30が両方出揃ってから実行（2026-07-08方針）。
 
-- [ ] W29・W30データ入手後、`weekly-task.md` のAct該当項目を実行する
+- [x] W29・W30データ入手後、`weekly-task.md` のAct該当項目を実行する → 2026-07-21実施、結果は`weekly-task.md`のAct該当項目（ニッチ化6記事・新規creator6記事）に記録済み。ニッチ化6記事中5記事・creator6記事中5記事が正規URLで表示0のまま（約7週連続）。次アクション（統合・noindex・再設計）はユーザー判断待ち
 
 ### 東京都補助金クエリ（W29内部リンク施策）の効果測定
 
 詳細は `archive/`（`weekly-PPDCA-task-07W29.md`）参照。「東京 防音 工事 補助金」向けに`soundproof-subsidy-tokyo-osaka`へ関連記事4本から内部リンクを追加済み（2026-07-14）。
 
-- [ ] W30以降のGSCエクスポートで`/ja/money/soundproof-subsidy-tokyo-osaka/`の表示回数・掲載順位（施策前42.38位）が改善したか確認
+- [x] W30以降のGSCエクスポートで`/ja/money/soundproof-subsidy-tokyo-osaka/`の表示回数・掲載順位（施策前42.38位）が改善したか確認 → 2026-07-21確認: W29時点で表示9・順位38、W30（過去3か月集計）で表示18・順位39.33。施策前（42.38位）からわずかに改善したが大きな回復ではない。旧URL（`/en/posts/...`表示80・`/posts/...`表示40）はW30で表示0となりリダイレクトの評価移行は進行中。継続観察が必要
 
 ### (direct)流入の実態把握（GA4追加データ待ち）
 
@@ -39,7 +39,8 @@
 - [x] G1: 旧URLリダイレクト監査 → 2026-07-15実施: W26-28出現の旧URL19件を監査、未設定8件（`/ja/solutions/`4・`/ja/knowledge/`1・`/en/knowledge/`3）を検出し `astro.config.mjs` に308リダイレクト追加（377→385件）。ビルドで転送先生成を確認。効果はW30以降のGSCで観測
 - [x] G2: ja新規 高優先3本 → 2026-07-15公開: `used-soundproof-room-buying-guide`（money）・`assembly-type-comparison`（soundproof-room）・`piano-room-guide`（soundproof-room）。カバー画像生成済み・相互リンク設置済み（buyback-guide/bouon-osusume-hikaku/budget-soundproof-booth-comparison/apartment-weight-limit-500kgから3記事へリンク追加）。ビルド検証済み（226ページ）。効果はW32以降のGSCで観測
 - [x] G3: en FAQ 1本目 → 2026-07-15公開: `why-noise-complaints-in-japan`（japan-noise-and-society）。FAQ型・文化文脈（欧米厚壁 vs 日本木造の遮音格差）。既存en 2記事と双方向リンク設置。ビルド検証済み（227ページ）。効果はW32以降のGSCで観測
-- [ ] G4: local 15本の統合設計（<strong>2026-07-20実行予定</strong>。W30データ入手後、既存PDCAの6週判定と同期）
+- [x] G4: local 15本の統合設計 → 2026-07-20完了。振り分け表を確定（`sitecheck-and-postcheck/suggest-task.md`参照）: 主要4都市+差別化ありの7都市+首都圏4都市=13本は「残す」、テンプレ型のkanazawa・okayama・kumamoto・niigataの4本は「統合候補（要観察）」。ハブ記事`bouon-rental-market-guide`と、未接続だった12都市ガイドの間に双方向内部リンクを追加（ビルド検証済み、`astro check`エラー0件）。sendaiは別トラックで既にnoindex済み
+- [ ] G4後続: kanazawa・okayama・kumamoto・niigataの4本、W32〜W33のGSCエクスポートで表示ゼロが継続するか確認し、継続する場合はnoindex化を検討
 
 ### 一戸建て騒音源別記事（保留・優先度低）
 

@@ -26,6 +26,9 @@ const baseSchema = ({ image }: any) => z.object({
   // メタデータ
   isHighPriority: z.boolean().optional(),
 
+  // 検索エンジンにインデックスさせない（公開は維持しつつnoindex,follow）
+  noindex: z.boolean().default(false),
+
   // 記事末尾の「次に読む」導線を手動指定
   nextSteps: z
     .array(

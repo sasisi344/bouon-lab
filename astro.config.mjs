@@ -65,6 +65,8 @@ export default defineConfig({
         if (!page.includes('/ja/') && !page.includes('/en/')) return false;
         // about / privacy はサイトマップから除外（noindex ページ）
         if (/\/(about|privacy)\/$/.test(page)) return false;
+        // ニッチ化リライト6記事（2026-07-21 noindex化）もサイトマップから除外
+        if (/\/(diy-vocal-soundproof-mask|soundproof-culture-japan-vs-america|sendai-soundproof-rental-guide|rental-proofroom-contractcheck|bouon-humidifier-comparison|budget-soundproof-booth-comparison)\/$/.test(page)) return false;
         return true;
       },
       serialize(item) {
@@ -364,6 +366,11 @@ export default defineConfig({
     '/en/knowledge/bouontech-trendnews2025/': '/en/japan-noise-and-society/building-code-reform-2025-noise-insulation/',
     '/en/knowledge/soundproof-room-price-market/': '/en/japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/',
     '/en/knowledge/soundproof-subsidy-system-list/': '/en/japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/',
+
+    // ── /en/solutions/ 未設定分（2026-07-21 W30 GSC出現・G1監査漏れ） ─────
+    '/en/solutions/musision-soundproof-rental-review/': '/ja/',
+    '/en/solutions/budget-soundproof-booth-comparison/': '/ja/',
+    '/en/solutions/soundproof-room-types/': '/ja/',
 
     // ── 旧Hugo /posts/ 未登録分（2026-07-02 GSCクエリ分析、AUTO_MATCH） ─────
     '/posts/bouon-dchiseinou-meyasu/':                       '/ja/soundproof-room/bouon-dchiseinou-meyasu/',
