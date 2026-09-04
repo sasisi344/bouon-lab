@@ -42,6 +42,15 @@
 - [x] G4: local 15本の統合設計 → 2026-07-20完了。振り分け表を確定（`sitecheck-and-postcheck/suggest-task.md`参照）: 主要4都市+差別化ありの7都市+首都圏4都市=13本は「残す」、テンプレ型のkanazawa・okayama・kumamoto・niigataの4本は「統合候補（要観察）」。ハブ記事`bouon-rental-market-guide`と、未接続だった12都市ガイドの間に双方向内部リンクを追加（ビルド検証済み、`astro check`エラー0件）。sendaiは別トラックで既にnoindex済み
 - [ ] G4後続: kanazawa・okayama・kumamoto・niigataの4本、W32〜W33のGSCエクスポートで表示ゼロが継続するか確認し、継続する場合はnoindex化を検討
 
+### 本音と建前リライト（2026-09-05、Tier1全23記事完了）
+
+詳細・candidate一覧・実施記録は `.workspace/.task/honne-tatemae-rewrite-survey.md`。既存211記事のうち83記事（約39%）が本音への言及ゼロと判明、Tier1〜4に分類。Tier1（高額な個人の意思決定記事）全23記事に本音の織り込み・ROI再構築・スマホ優先の段落分割を実施済み。
+
+- [ ] 次回GSCエクスポートでTier1全23記事の表示・CTR・順位変化を確認する（`construction-types-cost-comparison`はCTR0%からの改善が最も見えやすい）
+- [ ] `soundproof-room/budget-soundproof-booth-comparison`のnoindex設定（既存）を維持するか判断する
+- [ ] `soundproof-room-size`で発見した見出し数字欠落バグ（過去の手動番号禁止ルール一括適用の副作用の疑い）が他記事にも残っていないか横断チェックするか判断する
+- [ ] 改善が確認できたらTier2（30記事）・Tier3（地域ガイド15記事）への展開を判断する
+
 ### 一戸建て騒音源別記事（保留・優先度低）
 
 - [ ] 一戸建て騒音源別記事（ピアノ／室外機／ペット）、`japan-soundproof-housing` カテゴリの賃貸文化記事は実需データ待ちのため保留

@@ -28,7 +28,7 @@ description: _draft/ の下書きをボリューム指定（small/medium/high-qu
 以下を読み込む。
 
 1. `CLAUDE.md` — ライティング必須ルール・カテゴリ定義
-2. `.agents/bouon-writer.md` — ペルソナ別トーン・マーケティングロジック
+2. `.agents/bouon-writer.md` — 本音と建前シンキングルール（表面の検索意図の裏にある読者心理を掘り下げる）
 3. `.agents/persona/01_Consumer-Personas.md` — ターゲットペルソナ（A〜G）
 4. `.agents/persona/00_Persona-Omega.md` — 編集長フィルター
 
@@ -61,7 +61,7 @@ description: _draft/ の下書きをボリューム指定（small/medium/high-qu
 | **slug**      | frontmatter の `slug`。なければファイル名から生成（日本語はローマ字化・スペースはハイフン）            |
 | **lang**      | frontmatter の `lang`。なければ `ja`                                                                   |
 | **tags**      | frontmatter の `tags`。なければ本文から最大5個抽出                                                     |
-| **persona**   | テーマからペルソナ（A〜G）と `.agents/bouon-writer.md` のセグメントを特定する                          |
+| **persona**   | テーマからペルソナ（A〜G）と `/draft-plan` 末尾「トーン選択の早見表」のペルソナボイスを特定する         |
 | **framework** | 指定ボリュームから構成フレームワークを決定（下表）                                                     |
 
 **フレームワーク決定表**:

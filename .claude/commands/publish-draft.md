@@ -15,7 +15,7 @@ description: _draft/ の下書きを 2000〜7000 字の本番記事に仕上げ�
 まず以下を必ず読む。
 
 1. `CLAUDE.md` のライティング必須ルール（`**` 禁止・`<strong>`・敬体・末尾スラッシュ等）
-2. `.agents/bouon-writer.md`（ライティング統括ルール）
+2. `.agents/bouon-writer.md`（本音と建前シンキングルール。表面の検索意図の裏にある読者心理を掘り下げる）
 3. `.agents/persona/01_Consumer-Personas.md`（ターゲットペルソナ確認）
 
 ---

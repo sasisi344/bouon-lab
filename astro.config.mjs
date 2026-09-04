@@ -65,8 +65,8 @@ export default defineConfig({
         if (!page.includes('/ja/') && !page.includes('/en/')) return false;
         // about / privacy はサイトマップから除外（noindex ページ）
         if (/\/(about|privacy)\/$/.test(page)) return false;
-        // ニッチ化リライト6記事（2026-07-21 noindex化）もサイトマップから除外
-        if (/\/(diy-vocal-soundproof-mask|soundproof-culture-japan-vs-america|sendai-soundproof-rental-guide|rental-proofroom-contractcheck|bouon-humidifier-comparison|budget-soundproof-booth-comparison)\/$/.test(page)) return false;
+        // ニッチ化リライト5記事（2026-07-21 noindex化。budget-soundproof-booth-comparisonは2026-09-05に本音と建前リライトを機にnoindex解除）もサイトマップから除外
+        if (/\/(diy-vocal-soundproof-mask|soundproof-culture-japan-vs-america|sendai-soundproof-rental-guide|rental-proofroom-contractcheck|bouon-humidifier-comparison)\/$/.test(page)) return false;
         return true;
       },
       serialize(item) {
