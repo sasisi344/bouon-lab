@@ -1,0 +1,7 @@
+# 旧Hugoサイトのタクソノミページ・RSSフィード跡地
+# Astro移行後は該当ページ自体が存在せず、今後も作る予定がないため
+# 単純な404ではなく410 Gone（恒久的に削除）を明示してGoogleの索引除去を促す（2026-09-05）
+RewriteEngine On
+RewriteRule ^tags/ - [G]
+RewriteRule ^categories/ - [G]
+RewriteRule ^index\.xml$ - [G]
