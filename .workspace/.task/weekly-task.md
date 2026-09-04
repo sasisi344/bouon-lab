@@ -130,3 +130,15 @@ zenki基準（348.8表示/日・21.1位）との比較: W28は31.0表示/日・1
 - [ ] W30分析で浮上したその他のタスク（音大生シェアハウス・大阪クエリ・`/ja`トップのエンゲージメント率18.75%・ベーストラップ表記ゆれ等）は`weekly-PPDCA-task-07W30.md`の「解析中に浮かんだタスク」に集約。重複記載を避けるためここでは再掲しない
 
 - [ ] `/ja/soundproof-rental/others/osaka-soundproof-rental-guide/`がGSCに旧カテゴリパスのままインデックスされている件 → 2026-07-14確認: `astro.config.mjs`で旧パス（`/ja/soundproof-rental/others/...`・`/posts/...`の両方）から`/ja/local/osaka-soundproof-rental-guide/`への308リダイレクトは設定済み、canonicalタグも現URLから正しく生成されている。コード側の問題はなく、Googleの再クロール待ちと判断。W30以降もGSCで旧パスのままなら再調査 → <strong>2026-07-29再確認: 未解消につき「対応不要」から差し戻し</strong>。W30で旧パスが表示79件・順位42.42で生存。大阪・関西の防音賃貸クエリ6種（合計43表示・クリック0）も全て順位32〜54位と深く、評価分散の疑いが強い。再クロール待ちの受動対応ではなく、内部リンクの正規URL向け直し・sitemap再送信など能動的な手を検討する（詳細は`weekly-PPDCA-task-07W30.md`）
+
+---
+
+## 404リダイレクト全面対応フォローアップ（2026-09-05、`archive/redirect-check.md`より移管）
+
+GSC 404一覧（当時2,592件）の全件監査を実施。`/en/`をサイト全面廃止（コンテンツ削除・robots.txt全UAブロック）、`/tags/` `/categories/` `/index.xml` `/posts/page/N/`を410 Gone化、旧トップレベルカテゴリ（`solutions`/`use-case`/`knowledge`/`company`/`column`）と`/posts/`未登録分で計67件のリダイレクトを`astro.config.mjs`に追加済み。ビルド・デプロイ・本番URL検証まで完了。詳細な分類・内訳は`archive/redirect-check.md`参照。
+
+### Act（実行予定日を明記）
+
+- [ ] **2026-09-10**: GSC「非表示」画面で削除リクエスト4件（`/tags/` `/categories/` `/index.xml` `/en/`）が「完了」ステータスになっているか確認
+- [ ] **2026-10-05**（目安・再クロール完了後）: GSC「ページ」→「見つかりません（404）」の件数が対応前の2,592件から減少しているか確認。減少していれば同じ手順（CSVエクスポート→全件解析→`astro.config.mjs`追記→ビルド→デプロイ）をもう一度実施し、残る`/posts/{slug}/`・旧トップレベルカテゴリURLを追加監査する
+- [ ] **次回コミット時**: `.workspace/.task/movie/.skills/movie-generation-rules.md`の未コミット削除（今回のリダイレクト作業とは無関係の別件、放置されたまま残っている）を確認・対応
