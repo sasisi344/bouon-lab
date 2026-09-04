@@ -5,3 +5,4 @@ RewriteEngine On
 RewriteRule ^tags/ - [G]
 RewriteRule ^categories/ - [G]
 RewriteRule ^index\.xml$ - [G]
+RewriteRule ^posts/page/ - [G]

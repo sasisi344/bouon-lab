@@ -126,4 +126,51 @@ https://bouon-lab.com/en/tags/soundproof-room-budget/
 ### 未実施・保留
 
 - `src/data/contentCategories.ts` の `EN_TOP_CATEGORIES` / `TOP_CATEGORY_LABELS.en` フィールドや、`SmartLink.astro` / `Search.astro` 内のen分岐ロジックは、削除しても実害はないが**呼び出されなくなるだけの死んだコード**として残置（`[lang]/index.astro` と `[lang]/[category]/index.astro` の`getStaticPaths`は元々`lang: 'ja'`のみを返す実装だったため、`en`コンテンツを消した時点でこれらのUI分岐は到達不能）。将来的なコード整理のタイミングで削除して良い
-- `git rm` 済みだがコミットはしていない。ユーザーの明示的な依頼があればコミットする
+
+---
+
+## 最終ステータス（2026-09-05）— コミット・デプロイ・本番検証まで完了
+
+3コミットに分けてpush済み、GitHub Actionsのデプロイは全て成功（`gh run list`で確認）。本番URLで動作検証済み：
+
+| 対応 | 検証結果 |
+|---|---|
+| `/tags/*` `/categories/*` `/index.xml` → 410 Gone (`.htaccess`) | `curl`で410を確認済み |
+| `knowledge`/`use-case`/`solutions`旧URL3件 → `/ja/`該当記事へ | メタリフレッシュで転送先へ到達確認済み |
+| `/en/`全廃止（コンテンツ削除・robots.txt全UAブロック・4記事の転送） | robots.txt反映確認済み、転送先到達確認済み |
+| GSC削除リクエスト4件（`/tags/` `/categories/` `/index.xml` `/en/`） | 送信済み・「リクエストの処理中」（反映まで数日〜） |
+
+**技術的な注記（新規の問題ではなく既存仕様）**: このサイトはAstro静的出力＋Xserverの構成上、`astro.config.mjs`の`redirects`はサーバー側の真の301ではなく**HTTP 200 + `<meta http-equiv="refresh">`**として出力される（`.htaccess`で個別に`RewriteRule`を書かない限り不可）。これは今回追加した4件だけでなく、7/2監査で追加した`/posts/`系の既存リダイレクト全件も同じ挙動で、サイト全体で一貫している。Googleは0秒のmeta refreshを301相当として扱うため実害は小さいが、真の301にしたい場合は`.htaccess`側での書き換えが別途必要（今回はスコープ外として未対応）。
+
+---
+
+## 全件監査（2026-09-05）— GSCエクスポート1000件を突合
+
+ユーザーがGSC「ページ」→「見つかりません（404）」からエクスポートしたCSV（1000件、`.workspace/.data-set/seo-check/gsc-404-audit-20260905/404-urls-1000.csv`）を全件解析。7/2監査と同じ手法（既存記事slug・既存redirectキーとの突合）で分類した。
+
+| パターン | 件数 | 対応状況 |
+|---|---|---|
+| `/en/*`（コンテンツ・タグ・カテゴリ・posts等すべて） | 430件 | **対応済み**（本セッション前半でen全廃止・robots.txtブロック・GSC削除リクエスト済み） |
+| `/tags/*` `/categories/*` `/index.xml`（非en） | 465件 | **対応済み**（`.htaccess`で410 Gone・GSC削除リクエスト済み） |
+| `/posts/page/N/`（旧Hugoページネーション、非en） | 3件 | **今回対応**（`.htaccess`に`^posts/page/`の410ルール追加） |
+| `/posts/{slug}/`（非en、旧Hugo個別記事） | 40件 | 28件は既存リダイレクトで対応済みと判明。**残り12件を今回追加**（5件は現行記事へ完全一致転送、7件は7/2監査と同じ方式でカテゴリindexへフォールバック） |
+| `/ja/{knowledge,use-case,solutions,company,column}/*`（現行URLだが旧トップレベルカテゴリ時代の残骸） | 62件 | 7件は既存リダイレクトで対応済み。**残り55件を今回追加**（31件は現行記事へ完全一致転送、3件は近似記事へ、20件はカテゴリindexへフォールバック、1件は`/ja/company/`→`/ja/business/`） |
+| **合計** | **1000件** | **全件のパターンを特定・対応完了** |
+
+### 今回追加した67件のリダイレクトの内訳（`astro.config.mjs`に追記済み）
+
+- **完全一致（記事は現存、旧URLキーのみ漏れ）**: 36件
+- **近似記事への統合**（`remote-work-noise-solution-guide`→`remote-work-family-harmony-soundproof`など3件）
+- **既存の`/posts/`系リダイレクトと同じ宛先を再利用**（`bouonroom-tettei-kaisetsu`→`bouon-osusume-hikaku`など8件）
+- **カテゴリindexへの安全側フォールバック**（記事削除済みで受け皿なし、7/2監査と同じ方式）: 20件
+
+判明した重要な事実: `knowledge`だけでなく**`solutions`・`use-case`・`company`・`column`も過去にトップレベルカテゴリとして存在した世代**があり、Phase 1〜3・7/2監査ではこの世代のURLが対象外だった。今回の1000件監査でようやく全パターンを洗い出せた。
+
+`astro build`で687ファイル生成・エラーなしを確認済み（追加67件分の redirect スタブ増加と一致）。
+
+### 残っている作業
+
+1. **GSCの1000件はUI表示上限による切り詰めの可能性が高い**（実際の合計は2,592件）。残り約1,592件が今回の1000件と同じ分布（en・tags・categories・posts・旧トップレベルカテゴリ）である可能性は高いが、念のため期間・フィルタを変えてもう一段エクスポートし、新しいパターンが出てこないか確認すると確実
+2. **GSC削除リクエストの完了確認**。送信直後のため「処理中」ステータス。数日後にGSCの「非表示」画面で「完了」になっているか確認するとよい
+3. **410/404が実際にGoogleのインデックスから消えたかの効果測定**。次回のGSC「ページ」レポート確認時（目安1〜2ヶ月後）に、404件数がどれだけ減ったか確認
+4. `.workspace/.task/movie/.skills/movie-generation-rules.md`の削除が未コミットのまま残っている（今回の作業とは無関係、別途確認・対応が必要）
