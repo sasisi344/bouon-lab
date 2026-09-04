@@ -534,6 +534,26 @@ export default defineConfig({
     '/posts/weekly-soundproof-news-20251202/':         '/ja/business/',
     '/posts/wind-instrument-soundproof-room-guide/':   '/ja/soundproof-room/',
     '/posts/yamaha-avitex-showroom-alternative/':      '/ja/knowledge/',
+
+    // ── 旧トップレベルカテゴリ（knowledge/use-case/solutions単体）未登録分（2026-09-05 GSC 404再監査）
+    //     Phase 1〜3のリダイレクトは「カテゴリ/旧サブカテゴリ」形式の旧URLしか吸収できておらず、
+    //     「knowledge」「use-case」「solutions」がトップレベルだった、さらに古い世代の旧URLが漏れていた ─
+    '/ja/knowledge/shanon-vs-bouon-window/':          '/ja/soundproof-room/shanon-vs-bouon-window/',
+    '/ja/use-case/child-rearing-soundproof-pillar/':  '/ja/soundproof-rental/child-rearing-soundproof-pillar/',
+    // soundproof-sheet-size-used-market-guideは記事自体を削除済み（コミット96e6446、代替記事なし）。
+    // 統合先が特定できないため、テーマの近いmoneyカテゴリindexへ安全側フォールバック。
+    '/ja/solutions/soundproof-sheet-size-used-market-guide/': '/ja/money/',
+
+    // ── /en/ 全面廃止（2026-09-05、ja単独構成へ方針転換）────────────────────
+    //     src/content/en/ を削除・robots.txtでも/en/を全UAでDisallow済み。
+    //     Astroのredirectsはワイルドカード([...slug])から静的パスへは転送できない仕様のため、
+    //     削除時点で実在していた4記事のみ個別に/ja/へ301。それ以外の/en/配下（旧タクソノミ等）は
+    //     元々ページ実体がなく意図的な廃止のため404のままでよい。
+    '/en/':                                                     '/ja/',
+    '/en/japan-noise-and-society/building-code-reform-2025-noise-insulation/': '/ja/',
+    '/en/japan-noise-and-society/why-noise-complaints-in-japan/':              '/ja/',
+    '/en/japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/':              '/ja/',
+    '/en/japan-quiet-spaces/how-japanese-streamers-soundproof/':               '/ja/',
   },
   image: {
     domains: ['m.media-amazon.com', 'ir-jp.amazon-adsystem.com'],

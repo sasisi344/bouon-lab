@@ -59,11 +59,6 @@ const isActive = (item: (typeof navItems)[number]) =>
       {navItems.map(item => (
         <a href={item.href} class={isActive(item) ? 'active' : ''}>{item.label}</a>
       ))}
-      <div class="lang-switch">
-         <a href={lang === 'ja' ? pathname.replace('/ja', '/en') : pathname.replace('/en', '/ja')} class="lang-btn">
-            {lang === 'ja' ? 'English' : '日本語'}
-         </a>
-      </div>
     </nav>
   </div>
 </header>
@@ -209,18 +204,6 @@ const isActive = (item: (typeof navItems)[number]) =>
 
   .mobile-nav a:hover, .mobile-nav a.active {
     color: var(--primary-gold);
-  }
-
-  .lang-switch {
-    margin-top: 2rem;
-  }
-
-  .lang-btn {
-    padding: 0.8rem 2rem;
-    border: 1px solid var(--primary-gold);
-    border-radius: 50px;
-    color: var(--primary-gold) !important;
-    font-size: 1rem !important;
   }
 
   /* Animation */

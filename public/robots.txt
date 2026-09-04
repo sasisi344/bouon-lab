@@ -1,36 +1,47 @@
 User-agent: *
 Allow: /
 Disallow: /_astro/
+Disallow: /en/
 
 # AI Crawlers — explicitly allowed for indexing and training
 User-agent: GPTBot
 Allow: /
+Disallow: /en/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /en/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /en/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /en/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /en/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /en/
 
 User-agent: Googlebot
 Allow: /
+Disallow: /en/
 
 User-agent: bingbot
 Allow: /
+Disallow: /en/
 
 User-agent: CCBot
 Allow: /
+Disallow: /en/
 
 User-agent: meta-externalagent
 Allow: /
+Disallow: /en/
 
 Sitemap: https://bouon-lab.com/sitemap-index.xml

@@ -28,27 +28,16 @@ src/content/ja/
     └── {slug}/index.mdx
 ```
 
-- 第1階層: 言語コード（`ja` / `en`）
+- 第1階層: 言語コード（`ja` 単独。`en` は2026-09-05に廃止済み — 下記参照）
 - 第2階層: トップカテゴリ（上記8種。`column` 等の旧カテゴリは廃止済み）
 - 第3階層: 記事スラッグのフォルダ（`index.mdx` + `cover.png` を格納）。**サブ区分フォルダは挟まない**
 - frontmatterの `subcategory` はスキーマ上 optional だが、現行記事では未使用（ディレクトリ階層には現れない）
 
 トップカテゴリの正本はコード上 `src/data/contentCategories.ts` の `JA_TOP_CATEGORIES`。
 
-### 英語（`en`）— Japan lens（文化・社会・市場の国際発信）
+### 英語（`en`）— 廃止済み（2026-09-05）
 
-`en` 記事は2026-07-02時点で1件（`japan-noise-and-society/building-code-reform-2025-noise-insulation/`、GSCの需要データ起点で作成）。`src/content/en/` 配下に残っている `column/` `soundproof-rental/` `soundproof-room/` 等の空フォルダは2026-06-01のフラット化前の名残（実体なし）であり、現行の方針とは無関係。
-
-`en` を書く場合は `contentCategories.ts` の `EN_TOP_CATEGORIES` に定義済みの **Japan lens** 3カテゴリ（`japan-noise-and-society` / `japan-soundproof-housing` / `japan-quiet-spaces`）を使う。`ja` と同じトップカテゴリ名は使わない。
-
-```
-src/content/en/
-├── japan-noise-and-society/     # 騒音と社会：近隣・マナー・住宅文化・日米欧比較
-├── japan-soundproof-housing/    # 住まいと防音市場：防音賃貸・リノベ・オーナー視点
-└── japan-quiet-spaces/          # 静かな空間：ユニット防音室・クリエイター文化・ルール
-```
-
-`task-list.md` の方針により **`en` 記事は原則として現時点で新規作成しなくてよい**（着手はGSC等の需要データを起点に個別判断。2026-07-02の1件目はこの条件を満たしたケース）。
+`src/content/en/`（Japan lens 4記事＋旧フラット化前の空フォルダ）は全削除し、`ja` 単独構成に統一した。`public/robots.txt` で全UAに `Disallow: /en/` を設定済み、削除時点で実在した4記事のURLは `astro.config.mjs` の `redirects` で `/ja/` へ301転送済み。**新規`en`記事は作成しない**。
 
 ## _draft から本番記事へ移す際のカテゴリ厳密ルール
 

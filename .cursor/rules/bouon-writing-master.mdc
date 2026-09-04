@@ -32,10 +32,6 @@ alwaysApply: true
 - MDX 内のローカル `import` は禁止。グローバル登録コンポーネントを直接使う。
 - 内部リンクは `/{lang}/.../` の絶対パスかつ末尾スラッシュ必須。
 
-## 英語記事（`en`）の追加ルール — Japan lens
+## 英語記事（`en`）— 廃止済み（2026-09-05）
 
-- **配置**: `src/content/en/` は **`japan-noise-and-society` / `japan-soundproof-housing` / `japan-quiet-spaces`** のみをトップカテゴリとする（`ja` と同じ `soundproof-room` 等に置かない）。
-- **目的**: 仕様表の羅列より **社会・住宅・市場・クリエイター文化**としての文脈を先に渡す。数値・用語（例: D値）は「日本でそう呼ばれる」「海外との違い」をセットで書く。
-- タイトルと導入は Answer-First。想定クエリは *soundproof Japan* / *Japanese apartment noise* / *rental musician Tokyo* など **日本＋文脈**寄り。
-- 見出しは「比較」「誤解」「日本ならでは」のどれかが分かる疑問形・対比形を優先する。
-- **内部リンク**: 同一記事の `ja` 版がある場合でも、本文は **en 読者向けに自立**させる（「日本語版で手順全文」への依存を避ける）。
+`src/content/en/` は全削除し、サイト構成は `ja` 単独に統一した。**新規`en`記事は作成しない**。

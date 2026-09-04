@@ -28,8 +28,8 @@ npx astro check # 型チェック
 
 ### コンテンツ配置と多言語
 
-- **主言語**: すべての企画・更新の起点は **`ja` 記事**。英語版は後追いでもよいが、**原稿は日本語を先に固定**する。
-- **英語記事（`en`）**: **`ja` と同じトップカテゴリ階層は使わない**。`japan-noise-and-society` / `japan-soundproof-housing` / `japan-quiet-spaces` の **Japan lens** で、日本の社会・住宅・市場・文化として防音を説明する（翻訳量産より文脈の再構成）。詳細は `src/content/README-content.md` と `.cursor/rules/bouon-writing-master.mdc`。
+- **主言語**: すべての企画・更新の起点は **`ja` 記事**。
+- **英語記事（`en`）は廃止済み（2026-09-05）**: `src/content/en/` は全削除し、`public/robots.txt` で全UA（Googlebotも含む）に `Disallow: /en/` を設定済み。旧`/en/`配下のURLで実記事があったもの（Japan lens 4記事）は `astro.config.mjs` の `redirects` で `/ja/` へ301転送。**今後 `en` ディレクトリ配下に新規記事を作成しない**（サイト構成をja単独に統一する方針転換のため、過去の「Japan lens」戦略は終了）。
 
 ### スラッグ・フォルダ名のルール
 
