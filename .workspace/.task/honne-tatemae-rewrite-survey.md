@@ -132,7 +132,7 @@
 
 共通して「資金に余裕のあるフリーランス・ノマドワーカーの静かな拠点」「音大生・配信者/クリエイターの低コスト活動拠点」という2つのペルソナ・ベネフィットを打ち出した。title/descriptionも新しい訴求軸に合わせて更新。既存のエリア別相場・注意点セクションは維持し、導入部とまとめに新セクションを追加する形。段落分割・見出し数字バグチェックも合わせて実施（バグ該当なし）。全4本`lastmod`を2026-09-05に更新。noindexは未適用のまま。`pnpm build`・コミット・pushは未実施。
 
-### Tier4（除外推奨・15記事）: 個人の悩みが薄いテーマ
+### Tier4（除外推奨・15記事）: 個人の悩みが薄いテーマ ✅精度チェック完了（2026-09-05、下記「Tier4のナレッジ精度チェック」参照）
 
 市場レポート・業界ニュース・技術リファレンスは、CLAUDE.mdの既存方針（「市場・ニュース系: アフィリエイトロジックは無効」）どおり読者個人の意思決定ドラマが存在しないため、本音と建前フレームワークの適用対象外と判断。
 
@@ -237,12 +237,35 @@ Tier1から3記事を選び、`/power-up-article`の分析手順（Step1〜4）�
 - [ ] Tier2全30記事についても同様にGSC推移を確認する
 - [ ] Tier3の11記事についても同様にGSC推移を確認する（local系はW30時点で表示ほぼゼロだったため、新規需要の掘り起こしが見えるかが焦点）
 
+## Tier4のナレッジ精度チェック（2026-09-05、本音と建前は対象外）
+
+Tier4（15記事）はユーザーの指摘どおり「知識面が強く本音と建前は使いづらい」ため、本音の織り込みは行わず、<strong>記事構成とナレッジの正確性</strong>のチェックに専念した。knowledge5記事は親エージェント自身が、business8記事＋soundproof-rental市場調査2記事はサブエージェントが担当し、実在の企業・製品・統計が出てきた箇所はWebSearchで裏取りした。
+
+**見つけて修正した誤り**:
+
+| 記事 | 誤り | 修正内容 |
+|---|---|---|
+| `knowledge/db-reduction-familiar-sound-scale` | 「D-40で20dB軽減、110dBが40dB台まで下がる」が数学的に矛盾 | 40dB軽減・70dB台に修正（D値≒dB軽減量の換算で検算） |
+| `knowledge/neighborhood-noise-seasonal-pattern-statistics` | 「国土交通省の調査...前月比25〜30%増」の出典・数値が確認不可（騒音規制法所管は環境省） | 出典の主張を弱め、根拠のない数字を削除 |
+| `knowledge/tokyo-bouon-whitekyuon-okudake-review` | OkudakeのMakuakeクラウドファンディングが「2021年」→実際は2020年10-11月 | 2020年に修正（PR Timesで確認） |
+| `business/global-soundproof-market-trends` | 世界市場規模「41億ドル」が実際の市場調査の4〜5倍過小 | 「200億ドル超（約3兆円規模）」に訂正 |
+| `business/japan-bouonproof-marketnextasia` | 「Mute-Labs」を韓国企業と誤記 | 実際はドイツ企業と判明、訂正 |
+| `business/shared-streaming-studio-growth-pricing-utilization` | 「総務省調査で動画配信市場2024年2.5兆円、前年比15%増」が実データ（5,930億円・3.3%増）の約4倍過大 | 正しい数値に訂正。加えて記事内に出典不明の精密統計（都市別スタジオ数・市場規模等）が多数残るため、独自推定である旨の断り書きを追加 |
+| `soundproof-rental/bouonrental-market-research2025` | 「防音室付き賃貸の家賃相場は？」が実際はリンクになっておらず、他記事にない独自タグを含む壊れた擬似リンクだった | 実在記事`rental-price-index-13cities-soundproof`への正式なmarkdownリンクに修正 |
+| `business/soundproof-renovation-cost-outlook-2026` | ファクトエラーはないが、空白行がなく3〜4文が1段落に詰まって表示される状態だった | 全面的に段落分割（10箇所以上） |
+
+**確認して問題なしと判断した記事**: `report-japan-asmr-vtuber-streaming-studio-standard`（ヤマハ アビテックス価格等WebSearchで一致確認）・`soundproof-industry-news-2026-06`（サイレントキャビン市場統計等一致確認）・`soundproof-market-esg-trend`（建築物省エネ法改正・CASBEE・質量則の説明すべて正確）・`workbooth-office-soundproof-trend`（質量則・面密度の説明正確）・`ground-loop-noise-basics`（グランドループの原理・対策の説明正確）・`soundproof-material-spec-chart`（質量則の数値が内部的に整合）・`report-japan-soundproof-rental-market-needs`（家賃プレミアム表の計算が正確、他記事との数値矛盾なし）
+
+**判断保留だった「ラシクラス」ブランドは実在確認済み**: `bouonrental-market-research2025`・`report-japan-soundproof-rental-market-needs`の2記事で言及されている防音賃貸ブランド「ラシクラス」は、サブエージェントのWebSearchでは確認できなかったが、親エージェントが再検索したところ株式会社ウチダハウスが運営する実在ブランドと確認できた（Dr値70・-80dB訴求、東京都内に複数物件）。修正不要。
+
+全記事: 本音と建前フックの追加なし、slug・カテゴリ・タグ変更なし。修正した記事のみ`lastmod`を2026-09-05に更新。`pnpm build`・コミット・pushは未実施。
+
 ## 次のアクション
 
-1. Tier1・Tier2・Tier3（計64記事）の効果をGSC次回エクスポートで確認する（ユーザー判断待ち）
+1. Tier1・Tier2・Tier3（計68記事）の効果をGSC次回エクスポートで確認する（ユーザー判断待ち）
 2. 見出し数字欠落バグ・AffiliateCard slug表記の横断チェックは`task-list.md`に作業内容を記録済み。着手判断はユーザー待ち
-3. Tier2・Tier3の`pnpm build`確認 → コミット → push を行うか判断する
-4. `kanazawa`・`okayama`・`kumamoto`・`niigata`の4本（noindex判断待ち）は、「差別化不足の診断を今回のリライトで解消できるか試す」対象にするか、それとも当初方針どおりGSC観測を待つかを判断する
+3. Tier4の修正内容を`pnpm build`確認 → コミット → push するか判断する
+4. `shared-streaming-studio-growth-pricing-utilization`は独自推定の断り書きは追加したが、都市別スタジオ数等の個別統計は未検証のまま残っている。追加の精査が必要か判断する
 
 ## 参照
 

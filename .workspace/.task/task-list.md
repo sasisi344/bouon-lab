@@ -9,28 +9,11 @@
 
 ## 未完了タスク
 
-### QFO再調査（2026-07-09）の効果測定
-
-実装完了分は `archieve/task-list-05.md`。以下はGSCでの答え合わせ待ち。
-
-- [ ] 2026-08-06以降のGSCエクスポートで、A-1〜A-8の核クエリ（`ワンタッチ防音壁 効果`・`アース ノイズ 対策`・`ピアノ 住宅ローン`等）に表示・クリックが付いたか確認（A-1・A-2は公開4週間で観測可能）
-- [ ] B-1（`nitori-soundproof-acoustic-guide`）・B-2（`housing-builder-soundproof-comparison`）のtitle/description改善後のCTR変化を確認
-
-### ニッチ化リライト6記事・新規creator6記事の効果測定
-
-リライト・新規公開・W27/W28試行結果は `archieve/task-list-02.md`・`task-list-06.md`。W29・W30が両方出揃ってから実行（2026-07-08方針）。
-
-- [x] W29・W30データ入手後、`weekly-task.md` のAct該当項目を実行する → 2026-07-21実施、結果は`weekly-task.md`のAct該当項目（ニッチ化6記事・新規creator6記事）に記録済み。ニッチ化6記事中5記事・creator6記事中5記事が正規URLで表示0のまま（約7週連続）。次アクション（統合・noindex・再設計）はユーザー判断待ち
-
-### 東京都補助金クエリ（W29内部リンク施策）の効果測定
-
-詳細は `archive/`（`weekly-PPDCA-task-07W29.md`）参照。「東京 防音 工事 補助金」向けに`soundproof-subsidy-tokyo-osaka`へ関連記事4本から内部リンクを追加済み（2026-07-14）。
-
-- [x] W30以降のGSCエクスポートで`/ja/money/soundproof-subsidy-tokyo-osaka/`の表示回数・掲載順位（施策前42.38位）が改善したか確認 → 2026-07-21確認: W29時点で表示9・順位38、W30（過去3か月集計）で表示18・順位39.33。施策前（42.38位）からわずかに改善したが大きな回復ではない。旧URL（`/en/posts/...`表示80・`/posts/...`表示40）はW30で表示0となりリダイレクトの評価移行は進行中。継続観察が必要
-
 ### (direct)流入の実態把握（GA4追加データ待ち）
 
 - [ ] 現行のGA4週次エクスポートはランディングページ×セグメント（全体/オーガニック/モバイル）のみで、参照元/メディアの内訳がない。セッションのソース/メディアレポート（GA4で「セッションのデフォルトチャネルグループ」または「参照元/メディア」ディメンションを追加したエクスポート）を取得し、(direct)流入がSNS・ブックマーク・UTM未計測のどれに由来するか分析する
+
+> これに関して「SNS流入の有無」は、防音LabのSNS運用はほぼしていないので、SNS共有されている記事があるかどうかが鍵になる。なければ現状の記事にそこまでの魅力とおすすめしたい熱量がないわけで、新しい改善をするべき段階を見極めることができる。
 
 ### サイト強化施策（サジェスト分析 2026-07-15）
 
@@ -41,14 +24,30 @@
 - [x] G3: en FAQ 1本目 → 2026-07-15公開: `why-noise-complaints-in-japan`（japan-noise-and-society）。FAQ型・文化文脈（欧米厚壁 vs 日本木造の遮音格差）。既存en 2記事と双方向リンク設置。ビルド検証済み（227ページ）。効果はW32以降のGSCで観測
 - [x] G4: local 15本の統合設計 → 2026-07-20完了。振り分け表を確定（`sitecheck-and-postcheck/suggest-task.md`参照）: 主要4都市+差別化ありの7都市+首都圏4都市=13本は「残す」、テンプレ型のkanazawa・okayama・kumamoto・niigataの4本は「統合候補（要観察）」。ハブ記事`bouon-rental-market-guide`と、未接続だった12都市ガイドの間に双方向内部リンクを追加（ビルド検証済み、`astro check`エラー0件）。sendaiは別トラックで既にnoindex済み
 - [ ] G4後続: kanazawa・okayama・kumamoto・niigataの4本、W32〜W33のGSCエクスポートで表示ゼロが継続するか確認し、継続する場合はnoindex化を検討
+  - 実施タイミングは急がなくてよい。現状のアクセス解析（GA4/GSC）から該当パラメータを取得・調査したうえで判断する
 
-### 本音と建前リライト（2026-09-05、Tier1・Tier2・Tier3〈11/15〉完了）
+### 本音と建前リライト（2026-09-05、Tier1〜3完了・Tier4は精度チェック完了）
 
-詳細・candidate一覧・実施記録は `.workspace/.task/honne-tatemae-rewrite-survey.md`。既存211記事のうち83記事（約39%）が本音への言及ゼロと判明、Tier1〜4に分類。Tier1（23記事）はリライト・noindex解除・ビルド確認・コミット/push済み（`843c212`）。Tier2（30記事、creator20・diy10）とTier3（地域ガイド11記事、`kanazawa`・`okayama`・`kumamoto`・`niigata`除く）はリライト済みだがビルド確認・コミット/pushは未実施。
+詳細・candidate一覧・実施記録は `.workspace/.task/honne-tatemae-rewrite-survey.md`。既存211記事のうち83記事（約39%）が本音への言及ゼロと判明、Tier1〜4に分類。
 
-- [ ] 次回GSCエクスポートでTier1・Tier2・Tier3（計64記事）の表示・CTR・順位変化を確認する（`construction-types-cost-comparison`はCTR0%からの改善が最も見えやすい）
-- [ ] Tier2・Tier3の`pnpm build`確認 → コミット → push を行うか判断する
-- [x] `kanazawa`・`okayama`・`kumamoto`・`niigata`の4本を「差別化不足の診断をリライトで解消できるか試す」対象にするか判断 → 2026-09-05実施: ユーザー提案により「東京・大阪より安く静かに拠点を構えられる場所」（フリーランス・ノマドワーカーの拠点／音大生・クリエイターの低コスト活動拠点）という新ポジショニングで4本とも再構築（title/description含む）。都市ごとの交通事情（新幹線・空港アクセス）は正確に確認した上で個別に反映。詳細は`honne-tatemae-rewrite-survey.md`の「保留4本の再構築」参照。noindexは未適用のままW32〜W33のGSC観測を継続
+- [x] Tier1（23記事）: リライト・noindex解除・ビルド確認・コミット/push済み（`843c212`）
+- [x] Tier2（30記事、creator20・diy10）: リライト・ビルド確認・コミット/push済み（`f2af3dc`）
+- [x] Tier3（地域ガイド15記事）: 11記事は本音リライト、`kanazawa`・`okayama`・`kumamoto`・`niigata`の4本は「東京・大阪より安く静かに拠点を構えられる場所」という新ポジショニングで再構築（都市ごとの交通事情はWebSearchで正確性確認済み）。ビルド確認・コミット/push済み（`f2af3dc`）。4本はnoindex未適用のままW32〜W33のGSC観測を継続
+- [x] Tier4（15記事）: 「知識面が強く本音と建前は使いづらい」というユーザーの判断どおり本音の織り込みは行わず、記事構成とナレッジの正確性をWebSearchで裏取りしながらチェック。8件の事実誤り（D値計算の矛盾、出典不明の統計、実在企業の誤記、市場規模の過小/過大など）を発見・修正。詳細は`honne-tatemae-rewrite-survey.md`の「Tier4のナレッジ精度チェック」参照
+- [ ] Tier4修正分の`pnpm build`確認 → コミット → push を行うか判断する
+- [ ] `shared-streaming-studio-growth-pricing-utilization`に残る出典不明の個別統計（都市別スタジオ数等）を追加精査するか判断する
+- [ ] 次回GSCエクスポートでTier1〜3（計68記事）の表示・CTR・順位変化を確認する（`construction-types-cost-comparison`はCTR0%からの改善が最も見えやすい）
+
+### 既存記事の構造強化タスク（2026-09-05、本音と建前フェーズの次）
+
+ハブは `.workspace/.task/content-structure-strengthening-survey.md`。本音と建前とは別軸（内部リンク構造・コンテンツの厚み・情報鮮度）で211記事全体を機械的に調査し、記事単位の進捗管理はTierごとに派生ファイルへ分離した。
+
+- [x] Tier A（`content-structure-tier-a-internal-links.md`）: 内部リンクが孤立（0本）44記事・希薄（1本のみ）39記事、計83記事への内部リンク追加 → 2026-09-05完了（83/83）。`pnpm build`検証済み（223ページ、エラー0件）
+- [ ] Tier B（`content-structure-tier-b-thin-content.md`）: 3,000字未満84記事のうち、GSC需要データと突き合わせて拡充すべき記事を選別（次回GSCエクスポート後に着手）
+- [x] Tier C（`content-structure-tier-c-stale-content.md`）: `lastmod`が2026-05以前の29記事の情報鮮度確認 → 2026-09-05完了（29/29）。9記事で事実誤り・陳腐化を修正（`noise-regulation-update-2025`の実在しない「2025年法改正」記述、`asmr-vtuber-booth-guide`の架空製品名、`shimamura-music-soundproof-room-guide`の価格・性能値誤り、`shared-streaming-studio-growth-pricing-utilization`の出典不明統計等）。詳細は同ファイル参照
+- [x] Tier D（`content-structure-tier-d-dedup-check.md`）: 上記とカニバリ調査・ランキング崩壊調査等の既存タスクとの重複がないか確認 → 2026-09-05完了、重複なしを確認
+- [ ] 壊れた画像記法（`![alt](url)`ではなく`!alt`のみになっているMarkdown）がTier A/C対象記事の調査中に計14記事で見つかった（`wooden-apartment-soundproof-guide`・`noise-canceling-headphones-sleep`・`rental-caution-cello`等）。既に修正した数記事以外は未対応。横断的なGrep洗い出しと一括修正を検討
+- [ ] `asmr-vtuber-booth-guide`に手動番号見出し（`### 1-1. 購入`・`### 1-2. レンタル・サブスク`）が残存（見出し数字欠落バグとは別種、既存の「H2/H3に手動番号禁止」ルール違反）。修正するか判断する
 
 ### 見出し数字欠落バグの横断チェック（2026-09-05発見）
 
