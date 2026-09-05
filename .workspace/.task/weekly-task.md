@@ -141,4 +141,17 @@ GSC 404一覧（当時2,592件）の全件監査を実施。`/en/`をサイト�
 
 - [ ] **2026-09-10**: GSC「非表示」画面で削除リクエスト4件（`/tags/` `/categories/` `/index.xml` `/en/`）が「完了」ステータスになっているか確認
 - [ ] **2026-10-05**（目安・再クロール完了後）: GSC「ページ」→「見つかりません（404）」の件数が対応前の2,592件から減少しているか確認。減少していれば同じ手順（CSVエクスポート→全件解析→`astro.config.mjs`追記→ビルド→デプロイ）をもう一度実施し、残る`/posts/{slug}/`・旧トップレベルカテゴリURLを追加監査する
+
+---
+
+## Tier B 拡充・統合の効果測定フォローアップ（2026-09-06、`archive/content-structure-tier-b-*.md`より移管）
+
+拡充候補34記事・統合検討36記事（計70記事）への方向性反映が完了（コミット`2b24ed9`、ビルド215ページ・エラー0件）。次回GSCエクスポート後に以下を確認する。
+
+### Act（次回GSCエクスポート後に実施）
+
+- [ ] 拡充候補34記事のうち、直近週の急伸・急落シグナルがあった優先記事の順位・CTR変化を確認: `streamer-noise-quick-fix`（順位急落からの回復有無）・`wifi-connection-guide`・`d-value-vs-rw-value-confusion`・`osaka-soundproof-rental-guide`・`daiwa-house-jiyuku-soundproof-review`・`housing-builder-soundproof-comparison`
+- [ ] 統合削除した8記事（`soundproof-room-fatigue-ventilation`・`diy-soundproof-ventilation-heat-exhaust`・`streamer-soundproof-evolution-story`・`streamer-budget-temp-soundproof`・`streamer-discord-noise-cancel-vs-physical`・`soundproof-window-merit-demerit`・`report-japan-soundproof-unit-resale-value-simulation`・`streaming-room-reverb-absorption`）について、301リダイレクトが統合先記事の表示回数増としてGSCに反映されているか確認する
+- [ ] `content-structure-tier-b-thin-content.md`（`archive/`移管済み）で「未判断」だった8記事（`streamer-regional-studio-move`・`asmr-external-noise-elimination`・`streamer-pet-noise-balance`・`diy-soundproof-truth`・`mental-health-benefits-of-silence`・`hiroshima-soundproof-rental-guide`・`saxophone-apartment-practice-guide`・`sleep-quality-soundproof-room`）を、次回GSCデータで「拡充候補」「統合検討」「現状維持」のいずれかに再分類する
+- [ ] 方向性メモとGSC実績の食い違いによりユーザー確認の上「維持」に確定した記事（`cable-noise-ground-loop-prevention`・`voice-chat-soundleak-fix`・`vtuber-family-privacy-rules`・`pet-noise-soundproof-measures`・`bouon-size-choice`・`night-streaming-neighbor-tips`・`danbocchi-floor-protection`・`soundproof-room-large-size`）が、その後も実際に実績を維持しているか継続確認する
 - [ ] **次回コミット時**: `.workspace/.task/movie/.skills/movie-generation-rules.md`の未コミット削除（今回のリダイレクト作業とは無関係の別件、放置されたまま残っている）を確認・対応

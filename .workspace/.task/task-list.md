@@ -43,9 +43,10 @@
 ハブは `.workspace/.task/content-structure-strengthening-survey.md`。本音と建前とは別軸（内部リンク構造・コンテンツの厚み・情報鮮度）で211記事全体を機械的に調査し、記事単位の進捗管理はTierごとに派生ファイルへ分離した。
 
 - [x] Tier A（`content-structure-tier-a-internal-links.md`）: 内部リンクが孤立（0本）44記事・希薄（1本のみ）39記事、計83記事への内部リンク追加 → 2026-09-05完了（83/83）。`pnpm build`検証済み（223ページ、エラー0件）
-- [x] Tier B（`content-structure-tier-b-thin-content.md`）: 3,000字未満84記事のうち、GSC需要データ（W36週次＋2026/03/06-06/30の4ヶ月集計）と突き合わせて選別 → 2026-09-05完了。拡充候補34・統合検討36・現状維持6・未判断8に分類（判定のみ、個別記事の拡充作業は次のタスク）
-- [ ] Tier B拡充候補34記事の本文拡充に着手するか判断する。表示急増幅が大きい`wifi-connection-guide`・`d-value-vs-rw-value-confusion`・`osaka-soundproof-rental-guide`・`streamer-noise-quick-fix`（順位急落中）が優先候補
-- [ ] Tier B統合検討36記事（4ヶ月+直近週とも表示ほぼゼロ）の扱いを判断する（リダイレクト統合／noindex化／様子見のいずれか）
+- [x] Tier B（`archive/content-structure-tier-b-thin-content.md`）: 3,000字未満84記事のうち、GSC需要データ（W36週次＋2026/03/06-06/30の4ヶ月集計）と突き合わせて選別 → 2026-09-05完了。拡充候補34・統合検討36・現状維持6・未判断8に分類（判定のみ、個別記事の拡充作業は次のタスク）
+- [x] Tier B拡充候補34記事の本文拡充 → 2026-09-06完了（`archive/content-structure-tier-b-action-plan.md`参照）。GSC優先度順（`wifi-connection-guide`・`d-value-vs-rw-value-confusion`・`osaka-soundproof-rental-guide`・`streamer-noise-quick-fix`等から着手）に全34記事へ加筆・データ追加・タイトル改善を実施。コミット`2b24ed9`
+- [x] Tier B統合検討36記事の扱いを判断 → 2026-09-06完了（`archive/content-structure-tier-b-action-plan.md`参照）。うち5件（`soundproof-room-fatigue-ventilation`・`diy-soundproof-ventilation-heat-exhaust`・`soundproof-window-merit-demerit`・`report-japan-soundproof-unit-resale-value-simulation`・`streaming-room-reverb-absorption`）は内容を移植のうえ統合記事へリダイレクト。方向性メモと現状記事が食い違う複数件はユーザー確認の上「維持」で確定。残りは軽微な拡充で対応。ビルド検証済み（215ページ、エラー0件）、コミット`2b24ed9`でpush済み
+- [ ] Tier B効果測定・8記事の再判定 → `weekly-task.md`の「Tier B拡充・統合の効果測定フォローアップ（2026-09-06）」に登録済み。次回GSCエクスポート後に実施
 - [x] Tier C（`content-structure-tier-c-stale-content.md`）: `lastmod`が2026-05以前の29記事の情報鮮度確認 → 2026-09-05完了（29/29）。9記事で事実誤り・陳腐化を修正（`noise-regulation-update-2025`の実在しない「2025年法改正」記述、`asmr-vtuber-booth-guide`の架空製品名、`shimamura-music-soundproof-room-guide`の価格・性能値誤り、`shared-streaming-studio-growth-pricing-utilization`の出典不明統計等）。詳細は同ファイル参照
 - [x] Tier D（`content-structure-tier-d-dedup-check.md`）: 上記とカニバリ調査・ランキング崩壊調査等の既存タスクとの重複がないか確認 → 2026-09-05完了、重複なしを確認
 - [ ] 壊れた画像記法（`![alt](url)`ではなく`!alt`のみになっているMarkdown）がTier A/C対象記事の調査中に計14記事で見つかった（`wooden-apartment-soundproof-guide`・`noise-canceling-headphones-sleep`・`rental-caution-cello`等）。既に修正した数記事以外は未対応。横断的なGrep洗い出しと一括修正を検討
