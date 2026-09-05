@@ -42,14 +42,33 @@
 - [x] G4: local 15本の統合設計 → 2026-07-20完了。振り分け表を確定（`sitecheck-and-postcheck/suggest-task.md`参照）: 主要4都市+差別化ありの7都市+首都圏4都市=13本は「残す」、テンプレ型のkanazawa・okayama・kumamoto・niigataの4本は「統合候補（要観察）」。ハブ記事`bouon-rental-market-guide`と、未接続だった12都市ガイドの間に双方向内部リンクを追加（ビルド検証済み、`astro check`エラー0件）。sendaiは別トラックで既にnoindex済み
 - [ ] G4後続: kanazawa・okayama・kumamoto・niigataの4本、W32〜W33のGSCエクスポートで表示ゼロが継続するか確認し、継続する場合はnoindex化を検討
 
-### 本音と建前リライト（2026-09-05、Tier1全23記事完了）
+### 本音と建前リライト（2026-09-05、Tier1・Tier2・Tier3〈11/15〉完了）
 
-詳細・candidate一覧・実施記録は `.workspace/.task/honne-tatemae-rewrite-survey.md`。既存211記事のうち83記事（約39%）が本音への言及ゼロと判明、Tier1〜4に分類。Tier1（高額な個人の意思決定記事）全23記事に本音の織り込み・ROI再構築・スマホ優先の段落分割を実施済み。
+詳細・candidate一覧・実施記録は `.workspace/.task/honne-tatemae-rewrite-survey.md`。既存211記事のうち83記事（約39%）が本音への言及ゼロと判明、Tier1〜4に分類。Tier1（23記事）はリライト・noindex解除・ビルド確認・コミット/push済み（`843c212`）。Tier2（30記事、creator20・diy10）とTier3（地域ガイド11記事、`kanazawa`・`okayama`・`kumamoto`・`niigata`除く）はリライト済みだがビルド確認・コミット/pushは未実施。
 
-- [ ] 次回GSCエクスポートでTier1全23記事の表示・CTR・順位変化を確認する（`construction-types-cost-comparison`はCTR0%からの改善が最も見えやすい）
-- [ ] `soundproof-room/budget-soundproof-booth-comparison`のnoindex設定（既存）を維持するか判断する
-- [ ] `soundproof-room-size`で発見した見出し数字欠落バグ（過去の手動番号禁止ルール一括適用の副作用の疑い）が他記事にも残っていないか横断チェックするか判断する
-- [ ] 改善が確認できたらTier2（30記事）・Tier3（地域ガイド15記事）への展開を判断する
+- [ ] 次回GSCエクスポートでTier1・Tier2・Tier3（計64記事）の表示・CTR・順位変化を確認する（`construction-types-cost-comparison`はCTR0%からの改善が最も見えやすい）
+- [ ] Tier2・Tier3の`pnpm build`確認 → コミット → push を行うか判断する
+- [x] `kanazawa`・`okayama`・`kumamoto`・`niigata`の4本を「差別化不足の診断をリライトで解消できるか試す」対象にするか判断 → 2026-09-05実施: ユーザー提案により「東京・大阪より安く静かに拠点を構えられる場所」（フリーランス・ノマドワーカーの拠点／音大生・クリエイターの低コスト活動拠点）という新ポジショニングで4本とも再構築（title/description含む）。都市ごとの交通事情（新幹線・空港アクセス）は正確に確認した上で個別に反映。詳細は`honne-tatemae-rewrite-survey.md`の「保留4本の再構築」参照。noindexは未適用のままW32〜W33のGSC観測を継続
+
+### 見出し数字欠落バグの横断チェック（2026-09-05発見）
+
+`soundproof-room-size`のリライト中に、H3見出しで小数点前の整数が欠落するバグを発見・修正した（例: `### 8畳〜1.0畳` → 正しくは `### 0.8畳〜1.0畳`、`### 0畳以上` → 正しくは `### 3.0畳以上`）。**再現パターン**: 見出しテキストが `数字.数字`（例: `0.8畳`）で始まる場合、先頭の `数字.`（例: `0.`）が丸ごと欠落する。「H2/H3の見出しに手動番号（1. 2. 等）を使わない」ルールを過去に一括適用した際、見出し冒頭の `\d+\.` パターンを（畳数などの小数点も含めて）誤って除去したことが原因と推測される（Tier1・Tier2の計53記事では他に該当なし）。
+
+- [ ] `src/content/ja/**/index.mdx` 全211記事のH2/H3見出しを対象に、見出し冒頭が「バラの1桁数字＋単位（畳・万円・kg・cm・m・dB等）」で始まっているもの（例: `### 8畳〜`）を横断的にGrepで洗い出す（`0.8畳`のような小数のはずが`8畳`になっている可能性がある箇所の一次候補）
+- [ ] 洗い出した候補それぞれについて、本文中の表・前後の文脈（同じ記事内の他の見出しとの整合、サイズ表記の一般的な刻み幅など）から正しい数値を推定し復元する
+- [ ] 可能であれば、過去に「手動番号禁止」ルールを一括適用したコミットを`git log`で特定し、その差分を確認して影響範囲を絞り込む
+- [ ] 畳数以外の単位（万円・kg・cm等）でも同様の欠落がないか確認する
+
+### AffiliateCardのslug表記チェック（2026-09-05発見）
+
+Tier2作業中、`creator/podcast-collab-recording-acoustics`と`creator/singer-instrumentalist-stream-soundproof`で使われている`<AffiliateCard slug="...">`のslugが、`src/data/affiliates.ts`内で確認したところ実際に以下のように登録されていることを確認した（機能上は動作するが命名規則が他と異なる）。
+
+- `acoustic-panel-felmenon`（英語表記だが登録されているブランド名としては要確認）
+- `防振-mat-piano`（日本語混じり。`affiliates.ts`に登録された19件中、日本語を含むのはこの1件のみで明確な外れ値）
+
+- [ ] `src/data/affiliates.ts`に登録された全slug（19件、2026-09-05時点）を洗い出し、命名規則（英語kebab-case）から外れているものがないか確認する
+- [ ] `防振-mat-piano`を英語kebab-case（例: `piano-vibration-mat`）にリネームするか判断する。リネームする場合は`affiliates.ts`のキーと、本文中の`<AffiliateCard slug="防振-mat-piano">`参照箇所（Grepで洗い出し）を同時に更新する
+- [ ] `acoustic-panel-felmenon`が実在の製品・ブランド名として正しいか確認する
 
 ### 一戸建て騒音源別記事（保留・優先度低）
 
