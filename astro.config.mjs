@@ -103,7 +103,7 @@ export default defineConfig({
     '/ja/soundproof-room/others/soundproof-room-size/':                '/ja/soundproof-room/soundproof-room-size/',
     // 1-A: soundproof-room/others → money
     '/ja/soundproof-room/others/rental-vs-purchase-soundproof-room/':              '/ja/money/rental-vs-purchase-soundproof-room/',
-    '/ja/soundproof-room/others/report-japan-soundproof-unit-resale-value-simulation/': '/ja/money/report-japan-soundproof-unit-resale-value-simulation/',
+    '/ja/soundproof-room/others/report-japan-soundproof-unit-resale-value-simulation/': '/ja/money/bouon-asset-value-analysis/',
     '/ja/soundproof-room/others/soundproof-room-buyback-guide/':                   '/ja/money/soundproof-room-buyback-guide/',
     '/ja/soundproof-room/others/soundproof-room-loan-guide/':                      '/ja/money/soundproof-room-loan-guide/',
     '/ja/soundproof-room/others/soundproof-room-price-market/':                    '/ja/money/soundproof-room-price-market/',
@@ -214,7 +214,7 @@ export default defineConfig({
     '/ja/soundproof-room/diy/shanon-vs-bouon-window/':        '/ja/soundproof-room/shanon-vs-bouon-window/',
     // soundproof-rental/diy → diy / creator
     '/ja/soundproof-rental/diy/renter-parent-house-soundproofing/': '/ja/diy/renter-parent-house-soundproofing/',
-    '/ja/soundproof-rental/diy/soundproof-window-merit-demerit/':   '/ja/diy/soundproof-window-merit-demerit/',
+    '/ja/soundproof-rental/diy/soundproof-window-merit-demerit/':   '/ja/diy/diy-internal-window-road-noise-reduction/',
     '/ja/soundproof-rental/diy/wooden-apartment-soundproof-guide/': '/ja/diy/wooden-apartment-soundproof-guide/',
     '/ja/soundproof-rental/diy/one-room-streaming-soundproof/':     '/ja/creator/one-room-streaming-soundproof/',
     // soundproof-room/knowledge → money
@@ -239,7 +239,7 @@ export default defineConfig({
     // soundproof-room/solution → diy / knowledge / money / business
     '/ja/soundproof-room/solution/diy-internal-window-road-noise-reduction/': '/ja/diy/diy-internal-window-road-noise-reduction/',
     '/ja/soundproof-room/solution/diy-refrigeration-noise-reduction/':        '/ja/diy/diy-refrigeration-noise-reduction/',
-    '/ja/soundproof-room/solution/diy-soundproof-ventilation-heat-exhaust/':  '/ja/diy/diy-soundproof-ventilation-heat-exhaust/',
+    '/ja/soundproof-room/solution/diy-soundproof-ventilation-heat-exhaust/':  '/ja/soundproof-room/proofroom-aircondition-select/',
     '/ja/soundproof-room/solution/absorption-vs-soundproofing-materials/':    '/ja/knowledge/absorption-vs-soundproofing-materials/',
     '/ja/soundproof-room/solution/mental-health-benefits-of-silence/':        '/ja/knowledge/mental-health-benefits-of-silence/',
     '/ja/soundproof-room/solution/musician-soundproof-loan-strategy/':        '/ja/money/musician-soundproof-loan-strategy/',
@@ -265,6 +265,20 @@ export default defineConfig({
     '/ja/column/company/renovation-roi-strategy/': '/ja/soundproof-rental/owner-soundproof-renovation-strategy/',
     // 自作防音室の費用内訳が同テーマで重複 → soundproof-room-diy-cost に統合（2026-06-24）
     '/ja/diy/diy-soundproof-room-cost-breakdown/': '/ja/diy/soundproof-room-diy-cost/',
+    // 防音室の換気・熱対策が同テーマで重複 → proofroom-aircondition-select に統合（2026-09-06）
+    '/ja/creator/soundproof-room-fatigue-ventilation/': '/ja/soundproof-room/proofroom-aircondition-select/',
+    // 極小ブースの排熱DIYが同テーマで重複・文字数最少 → proofroom-aircondition-select に統合（2026-09-06）
+    '/ja/diy/diy-soundproof-ventilation-heat-exhaust/': '/ja/soundproof-room/proofroom-aircondition-select/',
+    // GSC表示0が継続・需要なしのため削除（Tier B統合検討, 2026-09-06）
+    '/ja/creator/streamer-soundproof-evolution-story/': '/ja/creator/streamer-soundproof-budget-roadmap/',
+    '/ja/creator/streamer-budget-temp-soundproof/': '/ja/creator/streamer-noise-quick-fix/',
+    '/ja/creator/streamer-discord-noise-cancel-vs-physical/': '/ja/creator/voice-chat-soundleak-fix/',
+    // 内窓DIY記事へ内容統合（賃貸原状回復・断熱の観点を移植） → diy-internal-window-road-noise-reduction（2026-09-06）
+    '/ja/diy/soundproof-window-merit-demerit/': '/ja/diy/diy-internal-window-road-noise-reduction/',
+    // 資産価値分析記事へ統合（スタジオ代比較シミュレーションを移植） → bouon-asset-value-analysis（2026-09-06）
+    '/ja/money/report-japan-soundproof-unit-resale-value-simulation/': '/ja/money/bouon-asset-value-analysis/',
+    // 吸音パネル記事へ統合（素材種類・厚み別周波数表を移植） → gamer-acoustic-placement（2026-09-06）
+    '/ja/creator/streaming-room-reverb-absorption/': '/ja/diy/gamer-acoustic-placement/',
 
     // ── 旧Hugo /posts/ → 現カテゴリ構造へ転送（存在しない記事は最近接カテゴリへ）
     // soundproof-room カテゴリ（記事が存在するもの）
@@ -361,7 +375,7 @@ export default defineConfig({
     '/ja/solutions/bass-trap-installation-guide/': '/ja/diy/bass-trap-installation-guide/',
     '/ja/solutions/musision-soundproof-rental-review/': '/ja/soundproof-rental/musision-comprehensive-guide/',
     '/ja/solutions/sound-reduction-simulation/': '/ja/soundproof-room/sound-reduction-simulation/',
-    '/ja/solutions/soundproof-room-resale-strategy/': '/ja/money/report-japan-soundproof-unit-resale-value-simulation/',
+    '/ja/solutions/soundproof-room-resale-strategy/': '/ja/money/bouon-asset-value-analysis/',
     '/ja/knowledge/bouontech-trendnews2025/': '/ja/business/soundproof-industry-news-2026-06/',
     '/en/knowledge/bouontech-trendnews2025/': '/en/japan-noise-and-society/building-code-reform-2025-noise-insulation/',
     '/en/knowledge/soundproof-room-price-market/': '/en/japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/',
@@ -394,7 +408,7 @@ export default defineConfig({
     '/posts/bouonrental-areasec-newbusiness/':               '/ja/business/bouonrental-areasec-newbusiness/',
     '/posts/chiba-soundproof-rental-guide/':                 '/ja/local/chiba-soundproof-rental-guide/',
     '/posts/diy-soundproof-room-failures-solutions/':        '/ja/diy/diy-soundproof-room-failures-solutions/',
-    '/posts/diy-soundproof-ventilation-heat-exhaust/':       '/ja/diy/diy-soundproof-ventilation-heat-exhaust/',
+    '/posts/diy-soundproof-ventilation-heat-exhaust/':       '/ja/soundproof-room/proofroom-aircondition-select/',
     '/posts/diy-wall-soundproofing-room-guide/':             '/ja/diy/diy-wall-soundproofing-room-guide/',
     '/posts/d-value-truth-and-myths/':                       '/ja/knowledge/d-value-truth-and-myths/',
     '/posts/fukuoka-soundproof-rental-guide/':                '/ja/local/fukuoka-soundproof-rental-guide/',
@@ -425,7 +439,7 @@ export default defineConfig({
     '/posts/soundproof-room-rental-lease/':                  '/ja/money/soundproof-room-rental-lease/',
     '/posts/soundproof-subsidy-check-guide/':                '/ja/money/soundproof-subsidy-check-guide/',
     '/posts/soundproof-subsidy-tokyo-osaka/':                '/ja/money/soundproof-subsidy-tokyo-osaka/',
-    '/posts/soundproof-window-merit-demerit/':               '/ja/diy/soundproof-window-merit-demerit/',
+    '/posts/soundproof-window-merit-demerit/':               '/ja/diy/diy-internal-window-road-noise-reduction/',
     '/posts/soundproof-window-subsidy-2025-guide/':          '/ja/money/soundproof-window-subsidy-2025-guide/',
     '/posts/streamer-rental-selection-guide/':               '/ja/creator/streamer-rental-selection-guide/',
     '/posts/streaming-room-layout-guide/':                   '/ja/creator/streaming-room-layout-guide/',
@@ -440,7 +454,7 @@ export default defineConfig({
     '/posts/streamer-proofroom-setting/':                     '/ja/creator/streamer-soundproof-room-comprehensive-guide/',
     '/posts/vtuber-proofroom-knowledge/':                     '/ja/creator/streamer-soundproof-room-comprehensive-guide/',
     '/posts/gamesteram-proofroom-soudflash/':                 '/ja/creator/voice-chat-soundleak-fix/',
-    '/posts/bouon-kanki-taisaku/':                            '/ja/diy/diy-soundproof-ventilation-heat-exhaust/',
+    '/posts/bouon-kanki-taisaku/':                            '/ja/soundproof-room/proofroom-aircondition-select/',
     '/posts/bouonroom-tettei-kaisetsu/':                      '/ja/soundproof-room/bouon-osusume-hikaku/',
     '/posts/grobal-soundproof-marketcheck/':                  '/ja/business/global-soundproof-market-trends/',
     '/posts/proofroom-lowsound-windsoundnone/':               '/ja/soundproof-room/proofroom-aircondition-select/',
@@ -590,8 +604,8 @@ export default defineConfig({
     '/ja/use-case/vocal-recording-booth-guide/':                             '/ja/creator/',
     '/ja/use-case/gamer-acoustic-placement/':                                '/ja/diy/gamer-acoustic-placement/',
     '/ja/solutions/diy-soundproofing-tips/':                                 '/ja/diy/diy-soundproofing-tips/',
-    '/ja/solutions/soundproof-room-resale-value-comparison/':                '/ja/money/report-japan-soundproof-unit-resale-value-simulation/',
-    '/ja/solutions/diy-soundproof-ventilation-heat-exhaust/':                '/ja/diy/diy-soundproof-ventilation-heat-exhaust/',
+    '/ja/solutions/soundproof-room-resale-value-comparison/':                '/ja/money/bouon-asset-value-analysis/',
+    '/ja/solutions/diy-soundproof-ventilation-heat-exhaust/':                '/ja/soundproof-room/proofroom-aircondition-select/',
     '/ja/company/':                                                          '/ja/business/',
     '/ja/solutions/bourental-syaouseid-choiceindi/':                         '/ja/soundproof-rental/bourental-syaouseid-choiceindi/',
     '/ja/use-case/soundproof-solution-tier-map-streamer/':                   '/ja/creator/',

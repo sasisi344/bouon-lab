@@ -94,6 +94,101 @@
 
 ---
 
+## 進捗ログ（拡充候補・A）
+
+GSC優先度順（直近週の急伸・急落シグナルがある記事から）で3〜5記事ずつ着手。
+
+- [x] 2026-09-06: #7 streamer-noise-quick-fix — マイク設定（声量を下げる）を最優先対策として新設し、3対策→4対策に再構成。タイトル・meta description・tagsも更新
+- [x] 2026-09-06: #34 wifi-connection-guide — 冒頭に体験フック追加、モデム距離別のメッシュWi-Fi台数・費用目安テーブルを新設
+- [x] 2026-09-06: #20 d-value-vs-rw-value-confusion — 「換算表がなくても実務ではどう処理するか」セクションを追加（安全マージンの目安・実測確認の必須化）
+- [x] 2026-09-06: #30 daiwa-house-jiyuku-soundproof-review — 「公式情報だけで判断せず直接聞く」CTAセクションを追加し、資料請求・モデルルーム見学へ誘導
+- [x] 2026-09-06: #28 housing-builder-soundproof-comparison — 「大手5社以外の選択肢（設計事務所・専門業者）」「雨音・雷鳴への効果」の2セクションを追加
+
+- [x] 2026-09-06: #16 diy-soundproofing-tips — 初心者/経験者のペルソナ分岐セクションと「目指す性能別 必要機材・費用」表を追加
+- [x] 2026-09-06: #19 coincidence-effect-soundproofing — 「身近な製品に見るコインシデンス対策の考え方」セクションを追加（合わせガラス・複合遮音ボード等の実例）
+- [x] 2026-09-06: #25 soundproof-room-rental-cost — 「時間貸しスタジオとしてビジネス化する場合の費用対効果」試算セクションを追加
+- [x] 2026-09-06: #15 soundproof-room-diy-cost — DIY経験別の作業期間比較表を追加し、関連DIY記事へのリンクを増強してターミナル記事化
+
+- [x] 2026-09-06: #21 osaka-soundproof-rental-guide — 「なぜ大阪に住むか」をペルソナ別（配信者/音大生/会社員）に固定してからエリアを選ぶ導入セクションを追加
+- [x] 2026-09-06: #27 rental-price-index-13cities-soundproof — 「引っ越し先は安さより物件の厚みで見る」セクションを追加（架空の統計数値は使わず、ポータルでの件数確認という実務的アドバイスに留めた）
+- [x] 2026-09-06: #10 one-room-streaming-soundproof — 「共用壁の特定方法」セクションを追加し、家具配置の前提を明確化
+- [x] 2026-09-06: #29 soundproof-performance-drum — タイトルを「Dr値は？住む環境別」の疑問形に変更、環境別ペルソナ（田畑一戸建て/密集戸建て/アパート/RCマンション）で「これ私かも」導線を追加、電子ドラム記事への内部リンクを追加
+
+- [x] 2026-09-06: #9 vtuber-family-privacy-rules — 方向性記載（削除方針）とGSC実績（表示77・クリック4・順位6.39＝良好）が矛盾していたためユーザーに確認 → 削除せず維持と決定。female-streamer-privacy-soundproof（一人暮らしの特定リスク）との違い（同居家族との共存）を冒頭で明記しカニバリを回避
+- [x] 2026-09-06: #4 cable-noise-ground-loop-prevention — 確認の結果、既に方向性通り（EMI/グランドループの原因を体系的に説明＋タイトル変更）に改修済みのファイルだったため追加アクションなし
+- [x] 2026-09-06: #6 soundproof-room-fatigue-ventilation — `proofroom-aircondition-select`（防音室のエアコン選び）へ統合。CO2モニター・作業時間目安表を統合先へ移植し、旧記事は削除、astro.config.mjsにリダイレクト追加、参照元3記事のリンクを張り替え
+- [x] 2026-09-06: #13 gamer-acoustic-placement — タイトルを平易化、冒頭に5ポイントの結論リストを追加、未使用だった鏡の図解画像(mirror-method.png)を手順セクションに埋め込み
+
+- [x] 2026-09-06: #12 diy-led-acoustic-panels — 「カメラに映る面/映らない面で役割を分ける」配置ガイドとLEDネオンサイン風の代替案を追加
+- [x] 2026-09-06: #14 closet-diy-soundproof-room — サイズ×住居タイプ別の防音レベル早見表、「安さだけを追うと損をする理由」の注意喚起セクションを追加
+- [x] 2026-09-06: #18 vibration-reduction-science — タイトルを苦情対応の悩み起点に変更、「すでに苦情を受けた場合にまずやること」「重層長屋タイプは床防音済みのことが多い」の2セクションを追加
+- [x] 2026-09-06: #22 streamer-tax-strategy — タイトルを職業横断型に変更、「事業供用性」を判断基準とする対象職業リストのセクションを追加（YMYL配慮で経費化の条件を明確化）
+
+- [x] 2026-09-06: #1 soundproof-booth-food-odor-management — 「空気清浄機・消臭機のマイクノイズ注意点」「自分では気づきにくい匂い（コラボ・来客時の盲点）」の2セクションを追加
+- [x] 2026-09-06: #2 cramped-booth-gaming-chair-health — タイトルの「0.8畳」断定表現を「省スペース型」に変更、「離席する理由の仕組み化」「膝裏ストレッチ」の具体手順を追加
+- [x] 2026-09-06: #5 family-home-soundproof-reno-negotiation — 「まだ収入がない学生の場合の進め方」セクションを冒頭に追加（視聴者への支援訴求・親への相談フレーミングを含む）
+- [x] 2026-09-06: #11 diy-soundproof-ventilation-heat-exhaust — 全記事中最少文字数(1041字)かつproofroom-aircondition-selectと内容重複のため統合。PC外出し・吸排気設計の要点を移植し、旧記事削除・リダイレクト追加・参照元1記事のリンク張り替え
+
+### 進捗サマリー（25/34件処理済み）
+
+処理済み: #1, #4, #5, #6, #7, #9, #10, #11, #12, #13, #14, #15, #16, #18, #19, #20, #21, #22, #25, #27, #28, #29, #30, #34（うち#6・#11は統合により記事削除、#9は方向性の矛盾をユーザー確認のうえ維持に変更）
+
+未着手（残り9件）: #3 female-streamer-privacy-soundproof、#8 voice-chat-soundleak-fix、#17 electronic-drum-vibration-fuwafuwa-system、#23 soundproof-subsidy-news-2025、#24 soundproof-room-moving、#26 pet-noise-soundproof-measures、#31 bouon-size-choice、#32 bouon-setti-checkpoint、#33 kawai-nasal-soundproof-room-guide
+
+- [x] 2026-09-06: #32 bouon-setti-checkpoint — 「まず何で迷っているか（住宅/環境/金額）を3つに分解する」診断セクションを冒頭に追加
+- [x] 2026-09-06: #33 kawai-nasal-soundproof-room-guide — 方向性通り「リライト済み・維持」を確認。追加アクションなし
+- [x] 2026-09-06: #8 voice-chat-soundleak-fix — ユーザー確認の結果「削除せず維持、7つの対策見出しに数字を追加」で確定。①〜⑦の丸数字をH3見出しに追加
+- [x] 2026-09-06: #26 pet-noise-soundproof-measures — ユーザー確認の結果「統合せず独立維持」で確定。追加アクションなし
+- [x] 2026-09-06: #31 bouon-size-choice — ユーザー確認の結果「統合せず独立維持」で確定。追加アクションなし
+
+### 進捗サマリー（30/34件処理済み）
+
+処理済み: #1, #2, #4, #5, #6, #7, #8, #9, #10, #11, #12, #13, #14, #15, #16, #18, #19, #20, #21, #22, #25, #26, #27, #28, #29, #30, #31, #32, #33, #34（うち#6・#11は統合により記事削除。#4・#8・#9・#26・#31は方向性メモの前提が現状と食い違っていたためユーザー確認の上「維持」で確定）
+
+- [x] 2026-09-06: #3 female-streamer-privacy-soundproof — 「外部音のタイミング一致による特定リスク」の具体例と「選挙期間中は特に注意」の一文を追加
+- [x] 2026-09-06: #17 electronic-drum-vibration-fuwafuwa-system — 「防振マット＋合板の二層敷き」技法とRoland「Noise Eater（NE-10）」の実例をWebSearchで裏取りのうえ追加
+- [x] 2026-09-06: #23 soundproof-subsidy-news-2025 — 「示談・調停で防音対策費用を負担してもらえるケース」「大家・オーナーがすべき対策」の2セクションを追加（YMYL配慮で専門家相談を明記）
+- [x] 2026-09-06: #24 soundproof-room-moving — 一般引越し業者・宅配便が防音室輸送に対応していないことをWebSearchで確認し、その旨と対処法を追加
+
+## A. 拡充候補：全34件処理完了（2026-09-06）
+
+GSC優先度順で全34記事の方向性反映が完了。#6・#11は統合により記事削除（astro.config.mjsにリダイレクト設定済み、参照元記事のリンクも張り替え済み）。#4・#8・#9・#26・#31の5件は方向性メモの前提（削除/タイトル不明瞭/薄い内容）が改修後の現状記事と食い違っていたため、都度ユーザーに確認のうえ「維持」または軽微調整で確定。次はセクションB「統合検討（36記事）」へ進む想定。
+
+## 進捗ログ（統合検討・B）
+
+- [x] 2026-09-06: #5 streamer-soundproof-evolution-story, #8 streamer-budget-temp-soundproof, #17 streamer-discord-noise-cancel-vs-physical — いずれもGSC表示0/0が継続し方向性（削除）とデータが一致したため削除確定。参照元6箇所のリンクを張り替え、astro.config.mjsにリダイレクト追加
+- [x] 2026-09-06: #12 night-streaming-neighbor-tips — ユーザー確認の結果「リンクハブとして活用しボリュームアップ」で確定。管理会社への申告例文、配信ジャンル別リスク早見表を追加
+- [x] 2026-09-06: #23 soundproof-window-merit-demerit — ユーザー確認の結果「予定通り削除」で確定。賃貸原状回復・断熱の観点をdiy-internal-window-road-noise-reductionへ移植のうえ削除、リダイレクト・参照元2箇所のリンク張り替え
+- [x] 2026-09-06: #24 danbocchi-floor-protection — ユーザー確認の結果「類似記事があれば統合、なければ原則の拡張」で確定。apartment-weight-limit-500kg（重量ユニット型×RCマンション向け）とは対象が異なり統合せず、両記事をつなぐ橋渡しセクションを追加（軽量ブース以外でも床対策は必須という原則を明記）
+- [x] 2026-09-06: #26 report-japan-soundproof-unit-resale-value-simulation — ユーザー確認の結果「予定通り削除検討を実行」で確定。スタジオ代比較シミュレーションをbouon-asset-value-analysisへ移植のうえ削除、リダイレクト・参照元2箇所のリンク張り替え
+- [x] 2026-09-06: #1 web-meeting-voice-soundleak-prevention — 「防音室を用意する前に｜今すぐ試せるマイク設定」セクション（ゲイン調整・ノイズ抑制・布製品での反響対策）を追加、テレワークの防音ターミナル記事へリンク
+- [x] 2026-09-06: #2 global-soundproof-market-trends — 確認の結果、既に方向性通り（市場規模データ・AI/IoTトレンド・タイトル改善）に改修済みだったため追加アクションなし
+- [x] 2026-09-06: #3 privacy-pod-market-growth — 冒頭に「駅の宇宙船型ポッド」の例え、「カフェでの機密作業リスク→経費化提案」の企業向けセクションを追加
+- [x] 2026-09-06: #4 soundproof-market-esg-trend — 「植物由来・菌糸体（マイセリウム）素材の研究動向」セクションをWebSearchで裏取りのうえ追加（研究段階である旨を明記しYMYL配慮）
+- [x] 2026-09-06: #6 collab-streaming-soundproof-space, #7 soundproof-rental-vs-diy-streamer, #9 horror-game-scream-soundproof-mic, #10 streamer-soundproof-rental-share — 4件とも確認の結果、既に方向性通り（タイトル・切り口・比較表・リンク構成）に改修済みだったため追加アクションなし
+- [x] 2026-09-06: #11 utaite-vs-streamer-soundproof, #13 streamer-rental-preview-checklist, #15 streamer-soundproof-timing — 3件とも確認の結果、既に方向性通りに改修済みだったため追加アクションなし
+- [x] 2026-09-06: #14 streaming-room-reverb-absorption — ユーザー確認の結果「gamer-acoustic-placementへ統合して削除」で確定。素材種類・厚み別周波数表・賃貸設置方法をgamer-acoustic-placementへ移植のうえ削除、リダイレクト・参照元7箇所のリンク張り替え
+- [x] 2026-09-06: #16 streamer-soundproof-budget-roadmap — タイトルを汎用化（「配信者の」を本文へ）、「予算とDr値の関係｜右肩上がりの現実」表を追加
+- [x] 2026-09-06: #18 asmr-vtuber-booth-guide — 「ブース本体だけでなく接続経路のノイズも消す」セクションを追加（オーディオIF・XLRバランス接続・ゲインステージング、プロ級/入門ブースの音質差を明記）
+- [x] 2026-09-06: #19 danbotchi-diy-blueprints — タイトル・本文からブランド名依存を減らし「自作防音ブース」に一般化、「設計寸法の例」表を追加（従来「図面あり」を謳いながら寸法情報が皆無だった欠落を解消）、参照元2箇所のリンクテキストを更新
+- [x] 2026-09-06: #21 futon-cardboard-karaoke-booth — 確認の結果、既に方向性通り（学生向け0円DIY・安全注意点）に改修済みだったため追加アクションなし
+- [x] 2026-09-06: #22 bedroom-telework-layout-soundproof — 「ビデオ通話で寝室が映ることへの不安」セクションを追加（背景ぼかし・カメラ画角調整・パーティションの二次利用）
+- [x] 2026-09-06: #27 small-business-soundproof-subsidy-guide — 確認の結果、既に方向性通り（対象職業の具体例・行政サポート活用ノウハウ）に改修済みだったため追加アクションなし
+- [x] 2026-09-06: #28 telework-soundproof-loan-strategy — 「経理部門を納得させる資料の作り方」セクションを追加（情報セキュリティ根拠・ROI試算・他社前例・分割申請のコツ）
+- [x] 2026-09-06: #29 noise-complaint-landlord-negotiation-guide — 「賃貸マンションか戸建て住宅街かで頼れる相手が違う」セクションを追加し、責任の所在を明確に区別
+- [x] 2026-09-06: #30 bouonrental-market-research2025 — タイトル・本文を2026年版に更新、「東京の相場に引っ張られないための考え方」セクションを追加（地域別中央値の出し方、架空の統計数値は使わず実務的な確認方法に留めた）
+- [x] 2026-09-06: #25 noise-complaint-legal-precedent-manual — ユーザー確認の結果「既存の<strong>/引用ブロックで代替」で確定。「よくある騒音苦情Q&A集」を追加し、深夜配信・ペット・子供の足音・楽器・被害者側の5シチュエーションを各記事へのリンク付きで集合知化
+- [x] 2026-09-06: #31 owner-renovation-shibuya-shinjuku-vtuber-strategy — 方向性メモ（入居者目線）と実態（オーナー向けリノベ戦略）の食い違いをユーザーに確認 → オーナー視点は維持しつつ「入居者目線で見る欲しいものを先に押さえる」セクションを追加（狭くても防音優先・勉学訴求への間口拡大・短期解約対応の契約設計）
+- [x] 2026-09-06: #32 child-rearing-soundproof-pillar — 「引っ越し前にできる予防｜物件選びの2つのポイント」セクションを追加（1階/最上階の選択、床防音明記物件の優先）
+- [x] 2026-09-06: #33 soundproof-room-large-size — 方向性（削除検討）とGSC実績（表示3・順位6など実アクセスあり）の矛盾をユーザーに確認 → 削除せず維持で確定
+- [x] 2026-09-06: #34 hsp-soundproof-curtain-guide — 「自分はどのタイプ？対策の選び方チェック」セクションを追加（耳栓・ヘッドホンが苦手な人向けの分岐を含む）
+- [x] 2026-09-06: #35 otodasu-voice-chat-test — 「組み立て・搬入で見落としがちな重さの壁」セクションを追加（2人での組み立て・賃貸上階への搬入注意）
+- [x] 2026-09-06: #36 yamaha-tabisuru-bouon-room — 「巡回イベント以外の常設ショールーム選択肢」セクションを追加（島村楽器・イオンモール等のテナント型店舗）
+
+## B. 統合検討：全36件処理完了（2026-09-06）
+
+GSC優先度・データ検証を踏まえ全36記事の方向性反映が完了。#14・#23・#26は統合により記事削除（内容移植・リダイレクト・参照元リンク張り替え済み）。#12・#24・#31・#33ほか複数件は方向性メモの前提（削除/統合/入居者目線）が改修後の現状記事と食い違っていたため、都度ユーザーに確認のうえ「維持」または軽微調整で確定。セクションA・Bともに全件処理が完了。
+
 ## 記入後の流れ
 
 方向性列を埋めて共有いただければ、以下の単位で作業に着手します。
