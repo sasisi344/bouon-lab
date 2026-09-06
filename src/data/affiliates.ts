@@ -252,9 +252,9 @@ export const affiliates: Record<string, AffiliateItem> = {
   },
 
   // 【防振マット】グランドピアノ・ドラム向け
-  '防振-mat-piano': {
+  'piano-vibration-mat': {
     type: 'amazon',
-    slug: '防振-mat-piano',
+    slug: 'piano-vibration-mat',
     name: '防振インシュレーター（ピアノ・重量機材対応）',
     description: 'グランドピアノ設置時の床への振動を物理的に遮断。周囲への低周波ノイズを大幅に軽減。400kg超の重量物に対応。',
     price: '¥2,000〜',

@@ -11,5 +11,6 @@
 | 05 | [task-list-05.md](./task-list-05.md) | 2026-07-10 | QFO再調査の実装（A-1〜A-8・B群・カバー画像） |
 | 06 | [task-list-06.md](./task-list-06.md) | 2026-07-08 | ニッチ化/creator6記事のW27/W28ベースライン試行 |
 | 07 | [task-list-07.md](./task-list-07.md) | 2026-07-10 | トピッククラスタ表の最新化・D値ハブ化ほかカニバリ改善3件 |
+| 08 | [task-list-08.md](./task-list-08.md) | 2026-09-06 | 本音と建前Tier1〜4・構造強化Tier A〜D・見出しバグ横断チェック・AffiliateCard整備 |
 
-**次の番号**: `task-list-08`
+**次の番号**: `task-list-09`
