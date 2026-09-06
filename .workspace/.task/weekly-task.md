@@ -108,7 +108,7 @@ zenki基準（348.8表示/日・21.1位）との比較: W28は31.0表示/日・1
 
 ### Act候補（データ由来ドラフト・このサイト単独の全候補）
 - [x] サイト全体CTR2.61%・平均掲載順位15.7と伸び代が大きいため、表示回数上位ながら未クリックのページのタイトル・メタディスクリプションを見直す → 2026-07-20調査: kouki期間の未クリック上位15ページのうち13件が`/posts/...`旧URL（`soundproof-room-price-complete-guide`表示178件・`bouon-rental-yatinsouba`表示164件等）。現行ページのタイトル修正では効果がなく、138件リダイレクトの再クロール待ちが根本原因（line 118と同一問題）。個別タイトル修正は保留し、リダイレクト評価移行の進捗待ちに一本化 → <strong>2026-07-29に判断を更新</strong>: W30データを旧URL（`/posts/`・`/en/`）除外で再集計したところ、現行URLだけでも表示2,075・クリック63（CTR3.0%）で、クリック0の現行ページ上位25件が表示計約570件あることを確認。旧URL問題とは別に現行URL側の取りこぼしが存在するため保留を解除し、<strong>順位10位以内×クリック0の10記事のtitle/descriptionを改善</strong>（詳細は`weekly-PPDCA-task-07W30.md`）。効果測定はW32以降
-- [ ] 「シェアハウス ○○ 音大生」系の地域別クエリが多数新規表示されている。音大生向けシェアハウス特集記事や地域別ページの新設を検討 → 2026-07-20: 新規記事作成が必要なため未着手。着手する場合は`_draft/`にメモを置いて`/draft-plan`から開始する運用（ユーザー判断待ち）→ 2026-07-29: W30でエリア別クエリが20件以上・表示計152件まで拡大したがクリックは0。受け皿の`music-student-property-search-guide`は順位28.14と浅く、「シェアハウス 天王寺 音大生」のみ順位2.92。暫定対応としてタイトルにKW「防音シェアハウス」を左寄せしたが、<strong>検索意図は「ガイド」ではなく「そのエリアの物件情報」の可能性が高く記事設計の再検討が必要</strong>。優先度🔴に引き上げ
+- [ ] 「シェアハウス ○○ 音大生」系の地域別クエリが多数新規表示されている。音大生向けシェアハウス特集記事や地域別ページの新設を検討 → 2026-07-20: 新規記事作成が必要なため未着手。着手する場合は`_draft/`にメモを置いて`/draft-plan`から開始する運用（ユーザー判断待ち）→ 2026-07-29: W30でエリア別クエリが20件以上・表示計152件まで拡大したがクリックは0。受け皿の`music-student-property-search-guide`は順位28.14と浅く、「シェアハウス 天王寺 音大生」のみ順位2.92。暫定対応としてタイトルにKW「防音シェアハウス」を左寄せしたが、<strong>検索意図は「ガイド」ではなく「そのエリアの物件情報」の可能性が高く記事設計の再検討が必要</strong>。優先度🔴に引き上げ → 2026-09-06（W36実データ）: 新たに「シェアハウス 東京 音大生」46表示・「シェアハウス 中央区 音大生」14表示が新規出現し、エリア拡大が継続。受け皿`music-student-property-search-guide`は順位28.39・クリック0のままで改善なし。着手判断は引き続き保留
 - [x] 「musision」クエリの順位急落（10.1→35.6）の原因調査 → 2026-07-20調査: サイト独自問題ではなく既存の138件リダイレクト未回収が原因と特定。正規URL`/ja/soundproof-rental/musision-comprehensive-guide/`（表示17件・順位9.94）に対し、旧URL`/posts/musision-soundproof-rental-review/`（表示57件・順位7.81）・`/en/solutions/musision-soundproof-rental-review/`（表示131件）等がGoogle上でなお生存しクエリ評価を分散。2026-07-21のW30データ（過去3か月集計）で再確認したところ`/posts/musision-soundproof-rental-review/`は表示0に減少しリダイレクトが効き始めている一方、`/en/solutions/musision-soundproof-rental-review/`（表示131件）・`/en/solutions/budget-soundproof-booth-comparison/`（表示44件）・`/en/solutions/soundproof-room-types/`（表示20件）は`astro.config.mjs`に`/en/solutions/`パスのリダイレクトが1件も存在しないことが判明（2026-07-15のG1監査は`/ja/solutions/`のみ対象で`/en/solutions/`が漏れていた）。既存の`/en/posts/...→/ja/`パターンに合わせて3件を追加し、ビルド検証済み（227ページ）。効果はW31以降で確認
 
 #### 継続中
@@ -126,10 +126,10 @@ zenki基準（348.8表示/日・21.1位）との比較: W28は31.0表示/日・1
 
 #### 新規発見
 
-- [ ] <strong>2026-07-29発見: 実流入の主軸がGoogleではなくBing</strong> — GA4 W30（07-11〜07-18）のセッション参照元は`bing`が最多で、`google`は2セッションのみ。GSC（Googleのデータ）で分析している対象と、GA4に実際に来ているユーザーがほぼ別チャネルという状態。138件リダイレクト問題によるGoogle側の評価毀損が想定より深刻な可能性がある。Bing Webmaster Toolsのデータ取得か、Google評価回復の優先度再設定を検討
+- [ ] <strong>2026-07-29発見: 実流入の主軸がGoogleではなくBing</strong> — GA4 W30（07-11〜07-18）のセッション参照元は`bing`が最多で、`google`は2セッションのみ。GSC（Googleのデータ）で分析している対象と、GA4に実際に来ているユーザーがほぼ別チャネルという状態。138件リダイレクト問題によるGoogle側の評価毀損が想定より深刻な可能性がある。Bing Webmaster Toolsのデータ取得か、Google評価回復の優先度再設定を検討 → 2026-09-06（W36、08-15〜09-05）: 傾向継続。セッション参照元は(direct)650・bing341に対し`google`は40のみ。/en/廃止・67件リダイレクト整備後もGoogle経由の実流入は少ないまま
 - [ ] W30分析で浮上したその他のタスク（音大生シェアハウス・大阪クエリ・`/ja`トップのエンゲージメント率18.75%・ベーストラップ表記ゆれ等）は`weekly-PPDCA-task-07W30.md`の「解析中に浮かんだタスク」に集約。重複記載を避けるためここでは再掲しない
 
-- [ ] `/ja/soundproof-rental/others/osaka-soundproof-rental-guide/`がGSCに旧カテゴリパスのままインデックスされている件 → 2026-07-14確認: `astro.config.mjs`で旧パス（`/ja/soundproof-rental/others/...`・`/posts/...`の両方）から`/ja/local/osaka-soundproof-rental-guide/`への308リダイレクトは設定済み、canonicalタグも現URLから正しく生成されている。コード側の問題はなく、Googleの再クロール待ちと判断。W30以降もGSCで旧パスのままなら再調査 → <strong>2026-07-29再確認: 未解消につき「対応不要」から差し戻し</strong>。W30で旧パスが表示79件・順位42.42で生存。大阪・関西の防音賃貸クエリ6種（合計43表示・クリック0）も全て順位32〜54位と深く、評価分散の疑いが強い。再クロール待ちの受動対応ではなく、内部リンクの正規URL向け直し・sitemap再送信など能動的な手を検討する（詳細は`weekly-PPDCA-task-07W30.md`）
+- [ ] `/ja/soundproof-rental/others/osaka-soundproof-rental-guide/`がGSCに旧カテゴリパスのままインデックスされている件 → 2026-07-14確認: `astro.config.mjs`で旧パス（`/ja/soundproof-rental/others/...`・`/posts/...`の両方）から`/ja/local/osaka-soundproof-rental-guide/`への308リダイレクトは設定済み、canonicalタグも現URLから正しく生成されている。コード側の問題はなく、Googleの再クロール待ちと判断。W30以降もGSCで旧パスのままなら再調査 → <strong>2026-07-29再確認: 未解消につき「対応不要」から差し戻し</strong>。W30で旧パスが表示79件・順位42.42で生存。大阪・関西の防音賃貸クエリ6種（合計43表示・クリック0）も全て順位32〜54位と深く、評価分散の疑いが強い。再クロール待ちの受動対応ではなく、内部リンクの正規URL向け直し・sitemap再送信など能動的な手を検討する（詳細は`archive/weekly-PPDCA-task-07W30.md`） → 2026-09-06（W36実データ）: `osaka-soundproof-rental-guide`（旧パス）の順位が44.3→23.1に大幅改善（2026-09-06のTier B本文拡充の効果とみられる）。大阪・関西の指名クエリ（「防音 賃貸 大阪」等）は今回データに再出現せず、圏外脱出の兆候。正規URL`/ja/local/`への評価移行は次回も継続確認
 
 ---
 
@@ -144,14 +144,18 @@ GSC 404一覧（当時2,592件）の全件監査を実施。`/en/`をサイト�
 
 ---
 
-## Tier B 拡充・統合の効果測定フォローアップ（2026-09-06、`archive/content-structure-tier-b-*.md`より移管）
+## 既存記事の構造強化タスク（Tier A〜D）効果測定フォローアップ（2026-09-06、`archive/content-structure-*.md`より移管）
 
-拡充候補34記事・統合検討36記事（計70記事）への方向性反映が完了（コミット`2b24ed9`、ビルド215ページ・エラー0件）。次回GSCエクスポート後に以下を確認する。
+Tier A（内部リンク83記事）・Tier B（拡充候補34記事・統合検討36記事）・Tier C（情報鮮度29記事）・Tier D（重複整理）はすべて実施完了し、ハブ・各Tierファイルは`archive/`へ移動済み（詳細は`archive/content-structure-strengthening-survey.md`ほか参照）。
 
-### Act（次回GSCエクスポート後に実施）
+**W36データは使用不可**: `.workspace/access-data/2026/W36/GSC/`のエクスポートはファイル日時2026-09-05 01:21で、Tier1〜4本音と建前リライト・Tier A〜D構造強化・画像記法修正（いずれも2026-09-05 05:24以降〜2026-09-06 19:03）より前の期間のデータ。施策前のベースラインとしてのみ扱い、効果測定には使わない。**W37以降のエクスポートで実施**する。
+
+### Act（W37以降のGSCエクスポート入手後に実施）
 
 - [ ] 拡充候補34記事のうち、直近週の急伸・急落シグナルがあった優先記事の順位・CTR変化を確認: `streamer-noise-quick-fix`（順位急落からの回復有無）・`wifi-connection-guide`・`d-value-vs-rw-value-confusion`・`osaka-soundproof-rental-guide`・`daiwa-house-jiyuku-soundproof-review`・`housing-builder-soundproof-comparison`
+- [ ] `construction-types-cost-comparison`（Tier A内部リンク・本音リライト済み、lastmod 2026-09-05）— 2026-09-06（W36実データ）時点で順位40.3・表示63・クリック0のままで効果未確認。W37以降も改善しなければ内部リンクだけでなく構成見直しを検討
 - [ ] 統合削除した8記事（`soundproof-room-fatigue-ventilation`・`diy-soundproof-ventilation-heat-exhaust`・`streamer-soundproof-evolution-story`・`streamer-budget-temp-soundproof`・`streamer-discord-noise-cancel-vs-physical`・`soundproof-window-merit-demerit`・`report-japan-soundproof-unit-resale-value-simulation`・`streaming-room-reverb-absorption`）について、301リダイレクトが統合先記事の表示回数増としてGSCに反映されているか確認する
 - [ ] `content-structure-tier-b-thin-content.md`（`archive/`移管済み）で「未判断」だった8記事（`streamer-regional-studio-move`・`asmr-external-noise-elimination`・`streamer-pet-noise-balance`・`diy-soundproof-truth`・`mental-health-benefits-of-silence`・`hiroshima-soundproof-rental-guide`・`saxophone-apartment-practice-guide`・`sleep-quality-soundproof-room`）を、次回GSCデータで「拡充候補」「統合検討」「現状維持」のいずれかに再分類する
-- [ ] 方向性メモとGSC実績の食い違いによりユーザー確認の上「維持」に確定した記事（`cable-noise-ground-loop-prevention`・`voice-chat-soundleak-fix`・`vtuber-family-privacy-rules`・`pet-noise-soundproof-measures`・`bouon-size-choice`・`night-streaming-neighbor-tips`・`danbocchi-floor-protection`・`soundproof-room-large-size`）が、その後も実際に実績を維持しているか継続確認する
+- [ ] 方向性メモとGSC実績の食い違いによりユーザー確認の上「維持」に確定した記事（`cable-noise-ground-loop-prevention`・`voice-chat-soundleak-fix`・`vtuber-family-privacy-rules`・`pet-noise-soundproof-measures`・`bouon-size-choice`・`night-streaming-neighbor-tips`・`danbocchi-floor-protection`・`soundproof-room-large-size`）が、その後も実際に実績を維持しているか継続確認する → 2026-09-06（W36実データ）: `cable-noise-ground-loop-prevention`は新旧URLとも表示ほぼゼロ（旧`/posts/`は113→0表示、新URLは上位707件にも入らず）で実績を維持できていないことが判明。一方「ノイズ アース」「グランドループ 対策」等の関連クエリ（合計300表示超）は別記事`/ja/knowledge/ground-loop-noise-basics/`が受けており順位50〜74位と低迷。同一テーマを2記事に分散させているカニバリの疑いが強く、統合または一本化の検討課題として追加。他7記事は今回未確認、次回継続
+- [ ] <strong>2026-09-06発見: `cable-noise-ground-loop-prevention`（creator）と`ground-loop-noise-basics`（knowledge）のカニバリ疑い</strong> — 「ノイズ アース」「アース ノイズ 対策」「グランドループ 対策」等、表記ゆれ違いの新規クエリが多数出現（合計300表示超）しているが、いずれも`ground-loop-noise-basics`が順位50〜74位で受けており未クリック。同テーマの`cable-noise-ground-loop-prevention`は表示ほぼゼロで存在感なし。どちらのペルソナ・切り口で1本化するか、または内部リンクでの誘導整理を検討する
 - [ ] **次回コミット時**: `.workspace/.task/movie/.skills/movie-generation-rules.md`の未コミット削除（今回のリダイレクト作業とは無関係の別件、放置されたまま残っている）を確認・対応
