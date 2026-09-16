@@ -102,7 +102,7 @@ export default defineConfig({
     '/ja/soundproof-room/others/shimamura-music-soundproof-room-guide/': '/ja/soundproof-room/shimamura-music-soundproof-room-guide/',
     '/ja/soundproof-room/others/soundproof-room-size/':                '/ja/soundproof-room/soundproof-room-size/',
     // 1-A: soundproof-room/others → money
-    '/ja/soundproof-room/others/rental-vs-purchase-soundproof-room/':              '/ja/money/rental-vs-purchase-soundproof-room/',
+    '/ja/soundproof-room/others/rental-vs-purchase-soundproof-room/':              '/ja/money/soundproof-room-rental-cost/',
     '/ja/soundproof-room/others/report-japan-soundproof-unit-resale-value-simulation/': '/ja/money/bouon-asset-value-analysis/',
     '/ja/soundproof-room/others/soundproof-room-buyback-guide/':                   '/ja/money/soundproof-room-buyback-guide/',
     '/ja/soundproof-room/others/soundproof-room-loan-guide/':                      '/ja/money/soundproof-room-loan-guide/',
@@ -131,7 +131,7 @@ export default defineConfig({
     '/ja/column/company/japan-bouonproof-marketnextasia/':                      '/ja/business/japan-bouonproof-marketnextasia/',
     '/ja/column/company/report-japan-asmr-vtuber-streaming-studio-standard/':   '/ja/business/report-japan-asmr-vtuber-streaming-studio-standard/',
     '/ja/column/company/soundproof-market-esg-trend/':                          '/ja/business/soundproof-market-esg-trend/',
-    '/ja/column/company/soundproof-renovation-cost-outlook-2026/':              '/ja/business/soundproof-renovation-cost-outlook-2026/',
+    '/ja/column/company/soundproof-renovation-cost-outlook-2026/':              '/ja/money/owner-renovation-roi-simulation-tool/',
     // 1-D: column/news → business / knowledge / soundproof-room
     '/ja/column/news/global-soundproof-market-trends/':                    '/ja/business/global-soundproof-market-trends/',
     '/ja/column/news/shared-streaming-studio-growth-pricing-utilization/': '/ja/business/shared-streaming-studio-growth-pricing-utilization/',
@@ -151,7 +151,7 @@ export default defineConfig({
     // ── Phase 3 Tier1 フラット化リダイレクト（2026-06-01）───────────────────
     // soundproof-room/knowledge → soundproof-room
     '/ja/soundproof-room/knowledge/bouon-dchiseinou-meyasu/':                '/ja/soundproof-room/bouon-dchiseinou-meyasu/',
-    '/ja/soundproof-room/knowledge/bouon-size-choice/':                       '/ja/soundproof-room/bouon-size-choice/',
+    '/ja/soundproof-room/knowledge/bouon-size-choice/':                       '/ja/soundproof-room/soundproof-room-size/',
     '/ja/soundproof-room/knowledge/daiwa-house-jiyuku-soundproof-review/':    '/ja/soundproof-room/daiwa-house-jiyuku-soundproof-review/',
     '/ja/soundproof-room/knowledge/hsp-soundproof-curtain-guide/':            '/ja/soundproof-room/hsp-soundproof-curtain-guide/',
     '/ja/soundproof-room/knowledge/million-yen-soundproof-room-professional/': '/ja/soundproof-room/million-yen-soundproof-room-professional/',
@@ -187,11 +187,11 @@ export default defineConfig({
     '/ja/soundproof-rental/solution/noise-canceling-headphones-sleep/':        '/ja/soundproof-rental/noise-canceling-headphones-sleep/',
     '/ja/soundproof-rental/solution/noise-complaint-landlord-negotiation-guide/': '/ja/soundproof-rental/noise-complaint-landlord-negotiation-guide/',
     '/ja/soundproof-rental/solution/remote-work-family-harmony-soundproof/':   '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
-    '/ja/soundproof-rental/solution/rental-permission-proposal-template/':     '/ja/soundproof-rental/rental-permission-proposal-template/',
+    '/ja/soundproof-rental/solution/rental-permission-proposal-template/':     '/ja/soundproof-rental/rental-unit-soundproof-room/',
     '/ja/soundproof-rental/solution/rental-proofroom-contractcheck/':          '/ja/soundproof-rental/rental-proofroom-contractcheck/',
     '/ja/soundproof-rental/solution/rental-unit-soundproof-room/':             '/ja/soundproof-rental/rental-unit-soundproof-room/',
     '/ja/soundproof-rental/solution/report-japan-soundproof-rental-market-needs/': '/ja/soundproof-rental/report-japan-soundproof-rental-market-needs/',
-    '/ja/soundproof-rental/solution/soundproof-room-installation-conditions/': '/ja/soundproof-rental/soundproof-room-installation-conditions/',
+    '/ja/soundproof-rental/solution/soundproof-room-installation-conditions/': '/ja/soundproof-rental/rental-unit-soundproof-room/',
 
     // ── Phase 2 カテゴリ移行リダイレクト（2026-06-01）───────────────────────
     // soundproof-room/diy → diy
@@ -253,7 +253,7 @@ export default defineConfig({
     '/ja/soundproof-rental/solution/soundproof-rental-life-streamer/':               '/ja/creator/soundproof-rental-life-streamer/',
     '/ja/soundproof-rental/solution/streamer-soundproof-room-comprehensive-guide/':   '/ja/creator/streamer-soundproof-room-comprehensive-guide/',
     '/ja/soundproof-rental/solution/treadmill-apartment-soundproofing-layering/':     '/ja/diy/treadmill-apartment-soundproofing-layering/',
-    '/ja/soundproof-rental/solution/owner-soundproof-renovation-investment-strategy-2026/': '/ja/business/owner-soundproof-renovation-investment-strategy-2026/',
+    '/ja/soundproof-rental/solution/owner-soundproof-renovation-investment-strategy-2026/': '/ja/money/owner-renovation-roi-simulation-tool/',
 
     // ── 統合済み記事のリダイレクト（2026-06-01）────────────────────────────
     // ビジネス活用3本 → soundproof-space-business-guide
@@ -261,8 +261,8 @@ export default defineConfig({
     '/ja/column/others/empty-tenant-soundproof-renovation-possibility/': '/ja/business/soundproof-space-business-guide/',
     '/ja/column/others/soundproof-booth-rental-business-feasibility/': '/ja/business/soundproof-space-business-guide/',
     // オーナーリノベ2本 → owner-soundproof-renovation-strategy
-    '/ja/soundproof-rental/others/owner-soundproof-renovation-strategy/': '/ja/soundproof-rental/owner-soundproof-renovation-strategy/',
-    '/ja/column/company/renovation-roi-strategy/': '/ja/soundproof-rental/owner-soundproof-renovation-strategy/',
+    '/ja/soundproof-rental/others/owner-soundproof-renovation-strategy/': '/ja/money/owner-renovation-roi-simulation-tool/',
+    '/ja/column/company/renovation-roi-strategy/': '/ja/money/owner-renovation-roi-simulation-tool/',
     // 自作防音室の費用内訳が同テーマで重複 → soundproof-room-diy-cost に統合（2026-06-24）
     '/ja/diy/diy-soundproof-room-cost-breakdown/': '/ja/diy/soundproof-room-diy-cost/',
     // 防音室の換気・熱対策が同テーマで重複 → proofroom-aircondition-select に統合（2026-09-06）
@@ -298,7 +298,7 @@ export default defineConfig({
     '/posts/soundproof-room-price-market/':     '/ja/money/soundproof-room-price-market/',
     '/posts/diy-soundproofing-tips/':           '/ja/diy/diy-soundproofing-tips/',
     '/posts/soundproof-subsidy-news-2025/':     '/ja/money/soundproof-subsidy-news-2025/',
-    '/posts/rental-vs-purchase-soundproof-room/':'/ja/money/rental-vs-purchase-soundproof-room/',
+    '/posts/rental-vs-purchase-soundproof-room/':'/ja/money/soundproof-room-rental-cost/',
     '/posts/gamer-acoustic-placement/':         '/ja/diy/gamer-acoustic-placement/',
     '/posts/cello-vibration-proof/':            '/ja/soundproof-rental/rental-caution-cello/',
     '/posts/drum-soundproof-room/':             '/ja/soundproof-room/soundproof-performance-drum/',
@@ -335,7 +335,7 @@ export default defineConfig({
     '/posts/streamer-proofroom-choicetech/':            '/ja/creator/',
     '/posts/streamer-trouble-rule/':                    '/ja/soundproof-rental/',
     '/posts/rental-game-soundproof-booth-3man/':        '/ja/soundproof-rental/',
-    '/posts/cable-noise-ground-loop-prevention/':       '/ja/diy/',
+    '/posts/cable-noise-ground-loop-prevention/':       '/ja/knowledge/ground-loop-noise-basics/',
     '/posts/gamer-bouon-room-select/':                  '/ja/soundproof-room/',
     '/posts/gaming-streaming-floor-noise-control/':     '/ja/creator/gaming-floor-impact-noise-fix/',
     '/posts/thunder-bouon-stopnoise-knowlkefge/':       '/ja/knowledge/noise-regulation-update-2025/',
@@ -390,7 +390,7 @@ export default defineConfig({
     '/posts/bouon-dchiseinou-meyasu/':                       '/ja/soundproof-room/bouon-dchiseinou-meyasu/',
     '/posts/proofroom-humidity-airconditionlist/':           '/ja/soundproof-room/proofroom-humidity-airconditionlist/',
     '/posts/million-yen-soundproof-room-professional/':      '/ja/soundproof-room/million-yen-soundproof-room-professional/',
-    '/posts/bouon-size-choice/':                             '/ja/soundproof-room/bouon-size-choice/',
+    '/posts/bouon-size-choice/':                             '/ja/soundproof-room/soundproof-room-size/',
     '/posts/bouon-setti-checkpoint/':                        '/ja/soundproof-room/bouon-setti-checkpoint/',
     '/posts/one-room-streaming-soundproof/':                 '/ja/creator/one-room-streaming-soundproof/',
     '/posts/bouonrental-market-research2025/':               '/ja/soundproof-rental/bouonrental-market-research2025/',
@@ -462,7 +462,7 @@ export default defineConfig({
     '/posts/apartment-soundproof-room-floor-weight/':         '/ja/soundproof-rental/apartment-weight-limit-500kg/',
     '/posts/bourental-ippanrantal/':                          '/ja/soundproof-rental/bouon-rental-market-guide/',
     '/posts/bourenatal-naikencheck/':                         '/ja/creator/streamer-rental-preview-checklist/',
-    '/posts/bourenatal-sinsa-imagipoint/':                    '/ja/soundproof-rental/rental-permission-proposal-template/',
+    '/posts/bourenatal-sinsa-imagipoint/':                    '/ja/soundproof-rental/rental-unit-soundproof-room/',
     '/posts/proof-doorchoice-setting/':                       '/ja/soundproof-room/bouon-setti-checkpoint/',
     '/posts/streaming-noise-appliance-soundproof-guide/':     '/ja/diy/diy-refrigeration-noise-reduction/',
     '/posts/bouontech-trendnews2025/':                        '/ja/business/soundproof-industry-news-2026-06/',
@@ -586,7 +586,7 @@ export default defineConfig({
     '/posts/soundproof-room-price-complete-guide/':                          '/ja/money/',
     '/posts/streamer-keyboard-silence/':                                     '/ja/creator/',
     '/posts/subsidy-soundproof-window-combo/':                               '/ja/money/',
-    '/ja/knowledge/owner-soundproof-renovation-strategy/':                   '/ja/soundproof-rental/owner-soundproof-renovation-strategy/',
+    '/ja/knowledge/owner-soundproof-renovation-strategy/':                   '/ja/money/owner-renovation-roi-simulation-tool/',
     '/ja/knowledge/child-rearing-soundproof-pillar/':                        '/ja/soundproof-rental/child-rearing-soundproof-pillar/',
     '/ja/solutions/soundproof-room-loan-guide/':                             '/ja/money/soundproof-room-loan-guide/',
     '/ja/solutions/streamer-rental-selection-guide/':                        '/ja/creator/streamer-rental-selection-guide/',
@@ -624,7 +624,7 @@ export default defineConfig({
     '/ja/solutions/osaka-soundproof-rental-guide/':                          '/ja/local/osaka-soundproof-rental-guide/',
     '/ja/solutions/nitori-soundproof-acoustic-guide/':                       '/ja/soundproof-room/nitori-soundproof-acoustic-guide/',
     '/ja/knowledge/soundproof-solution-tier-map-streamer/':                  '/ja/creator/',
-    '/ja/solutions/rental-vs-purchase-soundproof-room/':                     '/ja/money/rental-vs-purchase-soundproof-room/',
+    '/ja/solutions/rental-vs-purchase-soundproof-room/':                     '/ja/money/soundproof-room-rental-cost/',
     '/ja/solutions/yamaha-avitecs-cefine-ns-guide/':                         '/ja/soundproof-room/kawai-nasal-soundproof-room-guide/',
     '/ja/column/streamer-soundproof-lifestyle-timing/':                      '/ja/creator/',
     '/ja/knowledge/soundproof-room-fixed-asset-tax/':                        '/ja/money/',
@@ -641,6 +641,17 @@ export default defineConfig({
     '/ja/solutions/bouon-rental-yatinsouba/':                                '/ja/soundproof-rental/',
     '/ja/knowledge/workbooth-office-soundproof-trend/':                      '/ja/business/workbooth-office-soundproof-trend/',
     '/ja/solutions/soundproof-app-review-2026/':                             '/ja/knowledge/soundproof-app-review-2026/',
+
+    // ── 統廃合リダイレクト（2026-09-16、アクセスほぼゼロのカニバリ記事を統合）─────
+    '/ja/business/owner-soundproof-renovation-investment-strategy-2026/':    '/ja/money/owner-renovation-roi-simulation-tool/',
+    '/ja/business/soundproof-renovation-cost-outlook-2026/':                 '/ja/money/owner-renovation-roi-simulation-tool/',
+    '/ja/soundproof-rental/owner-soundproof-renovation-strategy/':           '/ja/money/owner-renovation-roi-simulation-tool/',
+    '/ja/money/rental-vs-purchase-soundproof-room/':                        '/ja/money/soundproof-room-rental-cost/',
+    '/ja/soundproof-rental/rental-permission-proposal-template/':           '/ja/soundproof-rental/rental-unit-soundproof-room/',
+    '/ja/soundproof-rental/soundproof-room-installation-conditions/':       '/ja/soundproof-rental/rental-unit-soundproof-room/',
+    '/ja/soundproof-room/bouon-size-choice/':                               '/ja/soundproof-room/soundproof-room-size/',
+    // グランドループ記事のカニバリ統合（2026-09-16、creator版をknowledge版に統合）
+    '/ja/creator/cable-noise-ground-loop-prevention/':                      '/ja/knowledge/ground-loop-noise-basics/',
   },
   image: {
     domains: ['m.media-amazon.com', 'ir-jp.amazon-adsystem.com'],
