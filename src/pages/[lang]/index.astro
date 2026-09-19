@@ -89,7 +89,7 @@ const directoryCategories = topCategoriesForLang(uiLang);
   template: 'splash',
 }} hasSidebar={false}>
   <!-- ダーク・モカ・ヒーローセクション -->
-  <section class="hero-dark" style={`background-image: url('${optimizedHero.src}')`}>
+  <section class="hero-dark not-content" style={`background-image: url('${optimizedHero.src}')`}>
     <div class="overlay"></div>
     <div class="hero-content">
       <div class="eyebrow-box">
@@ -138,7 +138,7 @@ const directoryCategories = topCategoriesForLang(uiLang);
     </div>
   </section>
 
-  <main class="container" id="knowledge">
+  <main class="container not-content" id="knowledge">
     <section class="section" id="persona-hub">
       <div class="section-header">
         <h2 class="section-title">{lang === 'ja' ? '課題別ハブから読み進める' : 'Start from Persona Hubs'}</h2>
@@ -610,13 +610,18 @@ const directoryCategories = topCategoriesForLang(uiLang);
     /* ここに position: relative を入れると、全面クリックがこの範囲に限定されるため、入れない */
   }
 
-  .post-card h3 { 
-    font-size: 1.5rem; 
-    margin-top: 0; 
-    line-height: 1.4; 
-    color: #fff; 
-    position: relative; 
+  .post-card h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    line-height: 1.4;
+    color: #fff;
+    position: relative;
     z-index: 2; /* リンクの上に乗せて、ホバー効果やテキスト選択を可能に（任意） */
+  }
+
+  .post-card h3 .link-text {
+    color: inherit;
+    text-decoration: none;
   }
 
   .post-card p { 

@@ -44,6 +44,18 @@
 
   /* 左サイドバー幅: デフォルト18.75remの6割（記事本文を圧迫しないよう縮小） */
   --sl-sidebar-width: 11.25rem;
+
+  /* ---- レガシー配色/フォントトークン ----
+     各ページの scoped style から var(--primary-gold) 等で参照されている。
+     未定義だとボーダー消失・アンカー色の意図しない継承が発生するため、
+     --sl-color-* を正としてエイリアスを定義する。 */
+  --primary-gold: #d4af37;
+  --text-dim: var(--sl-color-gray-2);
+  --text-light: var(--sl-color-text);
+  --bg-mocha: #17120e;
+  --font-ud-mincho: "Hiragino Mincho ProN", "Yu Mincho", YuMincho, "MS PMincho", serif;
+  --font-ud-gothic: var(--sl-font);
+  --font-body-text: var(--sl-font);
 }
 
 /* StarlightPage カスタムレイアウト: 空の PageTitle パネルを非表示 */
@@ -122,14 +134,20 @@ nav.sidebar a[aria-current='true'] {
   background: rgba(255, 255, 255, 0.03);
 }
 
-.sl-markdown-content a {
+/* 実際の記事本文（.prose-body）内のリンクのみに限定。
+   これを .sl-markdown-content a のまま広く当てると、Starlight が
+   ページ全体に付与する .sl-markdown-content クラスの内側にある
+   カード一覧・次に読む等の非本文リンクの色/下線指定まで
+   上書きしてしまう（各コンポーネント側の scoped style は
+   Astro の :where() スコープ化で詳細度が負けるため）。 */
+.sl-markdown-content .prose-body a {
   color: var(--sl-color-text-accent);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
 }
 
-.sl-markdown-content a:hover {
+.sl-markdown-content .prose-body a:hover {
   opacity: 0.8;
 }
 

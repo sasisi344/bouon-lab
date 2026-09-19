@@ -158,7 +158,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'images/affiliates/yamaha-avitex.jpg',
     badge: 'PREMIUM-CHOICE',
     program: 'direct',
-    url: 'https://jp.yamaha.com/products/contents/soundproofing/avitex/index.html',
+    url: 'https://jp.yamaha.com/products/contents/soundproofing/ready-made_rooms/cefine_ns/index.html',
     variant: 'premium',
   },
 
@@ -171,7 +171,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'images/affiliates/kawai-nasal.jpg',
     badge: 'CUSTOM-PRO',
     program: 'direct',
-    url: 'https://www.kawai.jp/product/nasal/',
+    url: 'https://www.kawai-os.co.jp/showroom/',
     variant: 'high-ticket',
   },
   // ================================================
@@ -303,6 +303,18 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'https://m.media-amazon.com/images/I/71NEMZ245pL._AC_SL1370_.jpg',
     asin: 'B0756RD44W',
     tag: 'sasisi344-22',
+    variant: 'standard',
+  },
+
+  // 【吸音パネル】nitori-soundproof-acoustic-guide 用 (2026-09-18 追加)
+  'nitori-acoustic-wall-panel': {
+    type: 'link',
+    slug: 'nitori-acoustic-wall-panel',
+    name: 'ニトリ 吸音ウォールパネル 6枚セット',
+    description: '30×80cmのMDFパネル×6枚セット。裏面がフェルトボードになっており吸音効果あり。ホームセンター感覚で買える手軽さで、配信部屋のマイク回り込み対策の入門用に。',
+    badge: 'BUDGET-PICK',
+    program: 'direct',
+    url: 'https://www.nitori-net.jp/ec/product/4955872963990s/',
     variant: 'standard',
   },
 

@@ -1,5 +1,6 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { JA_TOP_CATEGORIES, TOP_CATEGORY_LABELS } from '../../data/contentCategories';
 
 export async function getStaticPaths() {
     return [
@@ -9,6 +10,17 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 
+const categoryDescriptions: Record<string, { ja: string; en: string }> = {
+    'soundproof-room': { ja: 'ユニット防音室・防音工事の選び方や費用相場', en: 'Choosing prefab or built-in soundproof rooms and costs' },
+    'soundproof-rental': { ja: '防音賃貸の探し方・契約時の注意点', en: 'Finding and contracting soundproof rental units' },
+    diy: { ja: '自分でできる防音・遮音の工夫', en: 'DIY soundproofing techniques you can try yourself' },
+    money: { ja: '防音関連の費用・補助金・ローン', en: 'Costs, subsidies, and financing for soundproofing' },
+    creator: { ja: '配信・実況・宅録者向けの防音対策', en: 'Soundproofing for streamers and home recording' },
+    knowledge: { ja: '遮音等級や測定方法などの基礎知識', en: 'Fundamentals like sound ratings and measurement' },
+    local: { ja: '地域別の防音賃貸事情', en: 'Regional soundproof rental market guides' },
+    business: { ja: '法人・商業施設向けの防音案件', en: 'Soundproofing for business and commercial facilities' },
+};
+
 const content = {
     ja: {
         title: "ABOUT | 防音Lab",
@@ -17,6 +29,8 @@ const content = {
         text: "防音Labは、日本の防音技術は世界でも高い水準にあるのに、一般の住宅や賃貸には十分届いていない——そんなギャップに向き合うメディアです。あなたの住まい・予算・用途に合わせて、今すぐ試せる対策から本格的な選択肢まで案内します。",
         mission_title: "運営ミッション",
         mission_text: "スタジオや商業施設で培われた防音の知見を、在宅ワーク・楽器練習・配信・騒音トラブルといった、身近な悩みに落とし込むこと。専門用語だけで終わらせず、「自分の環境なら何から始めるか」が分かる情報を届けます。",
+        structure_title: "サイトの構成",
+        structure_text: "防音Labの記事は、状況や目的別に8つのカテゴリーに分けています。まずは自分の悩みに近いカテゴリーから読み始めてください。",
         features: [
             {
                 title: "あなたの環境に合わせた案内",
@@ -39,6 +53,8 @@ const content = {
         text: "BouonLab focuses on a gap in Japan: world-class soundproofing exists, yet ordinary apartments and houses rarely benefit from it. We help you find practical steps that fit your home, budget, and daily life.",
         mission_title: "Our Mission",
         mission_text: "Translate studio-grade and commercial acoustic know-how into everyday problems—remote work, practice, streaming, and neighbor noise—so readers know what to try first in their own situation.",
+        structure_title: "Site Structure",
+        structure_text: "BouonLab articles are organized into 8 categories by situation and goal. Start from the category closest to your own concern.",
         features: [
             {
                 title: "Guidance for your situation",
@@ -59,8 +75,8 @@ const content = {
 const t = content[lang as keyof typeof content];
 ---
 
-<StarlightPage frontmatter={{ title: t.title, description: t.text, head: [{ tag: 'meta', attrs: { name: 'robots', content: 'noindex,follow' } }] }} hasSidebar={false}>
-    <main class="page-container">
+<StarlightPage frontmatter={{ title: t.title, description: t.text, tableOfContents: false, head: [{ tag: 'meta', attrs: { name: 'robots', content: 'noindex,follow' } }] }} hasSidebar={false}>
+    <main class="page-container not-content">
         <header class="page-header">
             <div class="eyebrow-box">
                 <div class="line"></div>
@@ -75,6 +91,21 @@ const t = content[lang as keyof typeof content];
             <div class="mission-section">
                 <h2>{t.mission_title}</h2>
                 <p>{t.mission_text}</p>
+            </div>
+
+            <div class="structure-section">
+                <h2>{t.structure_title}</h2>
+                <p class="structure-intro">{t.structure_text}</p>
+                <ul class="structure-list">
+                    {JA_TOP_CATEGORIES.map((cat) => (
+                        <li>
+                            <a href={`/${lang}/${cat}/`}>
+                                <span class="structure-label">{TOP_CATEGORY_LABELS[cat][lang as 'ja' | 'en']}</span>
+                                <span class="structure-desc">{categoryDescriptions[cat][lang as 'ja' | 'en']}</span>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
             </div>
 
             <div class="feature-grid">
@@ -198,6 +229,57 @@ const t = content[lang as keyof typeof content];
         line-height: 2;
         max-width: 800px;
         margin: 0 auto;
+    }
+
+    .structure-section {
+        margin-bottom: 6rem;
+    }
+
+    .structure-intro {
+        color: var(--text-dim);
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+    }
+
+    .structure-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .structure-list a {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        padding: 1.25rem 1.5rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-left: 3px solid var(--primary-gold);
+        border-radius: 0 12px 12px 0;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .structure-list a:hover {
+        background: rgba(212, 175, 55, 0.05);
+        border-color: rgba(212, 175, 55, 0.2);
+        border-left-color: var(--primary-gold);
+    }
+
+    .structure-label {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .structure-desc {
+        font-size: 0.85rem;
+        color: var(--text-dim);
+        line-height: 1.6;
     }
 
     .feature-grid {
@@ -334,5 +416,6 @@ const t = content[lang as keyof typeof content];
         h1 { font-size: 2.25rem; }
         .mission-section { padding: 2rem; }
         .feature-grid { grid-template-columns: 1fr; }
+        .structure-list { grid-template-columns: 1fr; }
     }
 </style>

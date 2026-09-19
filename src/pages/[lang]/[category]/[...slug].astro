@@ -384,7 +384,7 @@ const pageHead = [
     </nav>
 
     <article class="article-content">
-      <header class="article-header">
+      <header class="article-header not-content">
         <div class="meta-top">
            <span class="date">{post.data.date.toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US')}</span>
            <span class="lang-tag">{lang.toUpperCase()}</span>
@@ -396,16 +396,12 @@ const pageHead = [
         </div>
       </header>
 
-      <div class="region-notif">
-        <RegionBanner />
-      </div>
-
       <div class="prose-body">
         <Content components={components} relatedPosts={relatedPosts} lang={lang} />
       </div>
 
       {isIndex && (
-        <section class="category-posts-list">
+        <section class="category-posts-list not-content">
           <div class="starter-set">
             <div class="section-divider">
               <span class="divider-text">{lang === 'ja' ? '初めての人向けスターターセット' : 'Starter Set for Beginners'}</span>
@@ -507,7 +503,7 @@ const pageHead = [
       </script>
 
       {!isIndex && (
-        <footer class="article-footer">
+        <footer class="article-footer not-content">
             <AdUnit placement="rectangleArticleEnd" />
 
             <div class="tag-label">KEYWORDS</div>
@@ -645,10 +641,6 @@ const pageHead = [
     display: block;
   }
 
-  .region-notif {
-    margin: 2rem 0 4rem;
-  }
-
   /* 文章本体のスタイリング */
   .prose-body {
     color: var(--text-light);
@@ -665,11 +657,24 @@ const pageHead = [
 
   .prose-body :global(h2) {
     font-family: var(--font-ud-mincho);
-    font-size: 2rem;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-    padding-bottom: 0.5rem;
+    font-size: 1.85rem;
+    color: #fff;
     margin-top: 4rem;
     margin-bottom: 2rem;
+    padding: 0.9rem 1.25rem;
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.12), rgba(212, 175, 55, 0) 85%);
+    border-left: 4px solid var(--primary-gold);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .prose-body :global(h3) {
+    font-family: var(--font-ud-gothic);
+    font-size: 1.3rem;
+    color: var(--primary-gold);
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+    padding-left: 0.9rem;
+    border-left: 3px solid rgba(212, 175, 55, 0.4);
   }
 
   .prose-body :global(strong) {
@@ -741,6 +746,7 @@ const pageHead = [
     border: 1px solid rgba(212, 175, 55, 0.25);
     border-radius: 12px;
     padding: 1rem;
+    color: #fff;
     text-decoration: none;
     background: rgba(255, 255, 255, 0.02);
     transition: transform 0.2s ease, border-color 0.2s ease;
@@ -943,11 +949,16 @@ const pageHead = [
     padding: 0 !important;
   }
 
-  .post-card p { 
-    color: var(--text-dim); 
+  .post-title .link-text {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .post-card p {
+    color: var(--text-dim);
     font-size: 0.9rem;
-    flex-grow: 1; 
-    letter-spacing: 0.05rem; 
+    flex-grow: 1;
+    letter-spacing: 0.05rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
   }

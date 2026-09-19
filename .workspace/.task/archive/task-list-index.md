@@ -15,5 +15,7 @@
 | 09 | [task-list-09.md](./task-list-09.md) | 2026-09-16 | カニバリクラスタA〜D（計7記事）をアクセスほぼゼロにより削除・301リダイレクト統合 |
 | 10 | [task-list-10.md](./task-list-10.md) | 2026-09-16 | `cable-noise-ground-loop-prevention`と`ground-loop-noise-basics`のカニバリ統合（前者削除・301リダイレクト） |
 | 11 | [task-list-11.md](./task-list-11.md) | 2026-09-16 | ギター新規記事`guitar-apartment-practice-guide`を作成・公開 |
+| 12 | [task-list-12.md](./task-list-12.md) | 2026-09-19 | デザイン改善8項目対応＋CTAリンク修正・CtaBoxレイアウト修正・アフィリエイト画像差し替え |
+| 13 | [task-list-13.md](./task-list-13.md) | 2026-09-19 | 新規記事2件公開（ゲーム実況記事・カラオケボックス記事） |
 
-**次の番号**: `task-list-12`
+**次の番号**: `task-list-14`
