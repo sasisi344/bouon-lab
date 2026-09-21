@@ -17,5 +17,6 @@
 | 11 | [task-list-11.md](./task-list-11.md) | 2026-09-16 | ギター新規記事`guitar-apartment-practice-guide`を作成・公開 |
 | 12 | [task-list-12.md](./task-list-12.md) | 2026-09-19 | デザイン改善8項目対応＋CTAリンク修正・CtaBoxレイアウト修正・アフィリエイト画像差し替え |
 | 13 | [task-list-13.md](./task-list-13.md) | 2026-09-19 | 新規記事2件公開（ゲーム実況記事・カラオケボックス記事） |
+| 14 | [task-list-14.md](./task-list-14.md) | 2026-09-21 | 荷重分散リライト・窓防音記事の統合（新規記事アイデア4件のうち残り2件完了） |
 
-**次の番号**: `task-list-14`
+**次の番号**: `task-list-15`
