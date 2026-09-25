@@ -140,6 +140,10 @@ image: ./cover.png # クォートなし・エスケープなし
 3. **`task-list.md` 完了時**: `archieve/task-list-NN.md` を作成 → `task-list-index.md` 更新 → マスターから該当ブロックを削除
 4. 派生タスクファイル（`qfo-recheck-task-*.md` 等）の完了時はファイルごと `archieve/` へ移動
 
+### GitHub Project との住み分け（2026-09-25〜）
+
+ブログ横断の中期〜長期タスクは GitHub Project で一元管理: https://github.com/users/sasisi344/projects/1 （「ブログ運営タスク」）。カンバン列は `Backlog → Todo → In Progress → Done`。短期〜中期の目標タスクは Start date / End date を設定し、ロードマップビューで期間の進捗を管理する。新規タスクは `gh issue create --repo sasisi344/bouon-lab` でIssue化 → `gh project item-add 1 --owner sasisi344 --url <issue-url>` でボードに追加。詳細は `344ob/07_workspace/.agents/blog-registry.md` 参照。`task-list.md`・`weekly-task.md` は本リポジトリの詳細タスクの正本として維持し、GitHub Projectとは二重管理しない。
+
 ---
 
 ## コンテンツ作業フロー
