@@ -552,6 +552,55 @@ const pageHead = [
             )}
         </footer>
       )}
+
+      {!isIndex && (
+        <script is:inline>
+          function initReadingProgressTracking() {
+            if (window.__readingTrackingCleanup) {
+              window.__readingTrackingCleanup();
+            }
+
+            const article = document.querySelector('.prose-body');
+            if (!article) return;
+
+            const milestones = [50, 75, 90];
+            const reached = new Set();
+            let completed = false;
+
+            function checkScroll() {
+              const rect = article.getBoundingClientRect();
+              const total = rect.height;
+              if (total <= 0) return;
+
+              const scrolledPast = Math.min(Math.max(window.innerHeight - rect.top, 0), total);
+              const percent = Math.round((scrolledPast / total) * 100);
+
+              milestones.forEach((m) => {
+                if (percent >= m && !reached.has(m) && typeof gtag === 'function') {
+                  reached.add(m);
+                  gtag('event', 'scroll_milestone', { percent_scrolled: m });
+                }
+              });
+
+              if (percent >= 95 && !completed) {
+                completed = true;
+                if (typeof gtag === 'function') {
+                  gtag('event', 'article_read_complete', {});
+                }
+              }
+            }
+
+            window.addEventListener('scroll', checkScroll, { passive: true });
+            window.__readingTrackingCleanup = function () {
+              window.removeEventListener('scroll', checkScroll);
+            };
+            checkScroll();
+          }
+
+          initReadingProgressTracking();
+          document.addEventListener('astro:after-swap', initReadingProgressTracking);
+        </script>
+      )}
     </article>
   </div>
 </StarlightPage>

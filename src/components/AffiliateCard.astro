@@ -68,7 +68,14 @@ if (typeof imgSrc === 'string') {
     <!-- HTMLタグ型: バリューコマース等のバナーをそのまま描画 -->
     <div class={`affiliate-wrap html-type ${variantClass}`}>
       {item.description && <p class="html-label">{item.name}</p>}
-      <div class="html-tag-container" set:html={(item as any).htmlTag} />
+      <div
+        class="html-tag-container"
+        set:html={(item as any).htmlTag}
+        data-track-event="affiliate_click"
+        data-track-slug={slug}
+        data-track-variant={item.variant || 'standard'}
+        data-track-program={(item as any).program || item.type}
+      />
       <p class="disclosure">※広告・PR</p>
     </div>
   ) : (
@@ -80,7 +87,16 @@ if (typeof imgSrc === 'string') {
         <span class="disclosure-inline">PR</span>
       </div>
 
-      <a href={href} target="_blank" rel="nofollow sponsored noopener" class="card-inner">
+      <a
+        href={href}
+        target="_blank"
+        rel="nofollow sponsored noopener"
+        class="card-inner"
+        data-track-event="affiliate_click"
+        data-track-slug={slug}
+        data-track-variant={item.variant || 'standard'}
+        data-track-program={item.type === 'amazon' ? 'amazon' : (item as any).program || item.type}
+      >
         {imgSrc && (
           <div class="card-img-wrap">
             {typeof imgSrc === 'string' ? (

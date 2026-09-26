@@ -13,7 +13,37 @@ const noindex = false; // 個別ページの noindex は frontmatter.head で制
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-RWEHZPS976');
+
+  (function () {
+    // URLパス /{lang}/{category}/{subcategory}/{slug}/ からカテゴリ階層を推定し、
+    // 以後このページで送信される全イベントの既定パラメータとして付与する
+    var parts = window.location.pathname.split('/').filter(Boolean);
+    var contentCategory = parts[1] || '(none)';
+    var contentSubcategory = parts.length > 3 ? (parts[2] || '(none)') : '(none)';
+
+    gtag('config', 'G-RWEHZPS976', {
+      content_category: contentCategory,
+      content_subcategory: contentSubcategory,
+    });
+  })();
+
+  // 既存コンポーネント（次のステップ・関連記事・ハブ導線・検索結果等）に
+  // 埋め込み済みの data-track-* 属性を拾って GA4 イベントとして送信する委譲リスナー
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-track-event]');
+    if (!el || typeof gtag !== 'function') return;
+
+    var eventName = el.getAttribute('data-track-event');
+    var params = {};
+    for (var i = 0; i < el.attributes.length; i++) {
+      var attr = el.attributes[i];
+      if (attr.name.indexOf('data-track-') === 0 && attr.name !== 'data-track-event') {
+        var key = attr.name.slice('data-track-'.length).replace(/-/g, '_');
+        params[key] = attr.value;
+      }
+    }
+    gtag('event', eventName, params);
+  });
 </script>
 <!-- Google AdSense（自動広告: 管理画面でアンカー広告を ON にするとスマホ下部に表示） -->
 <script

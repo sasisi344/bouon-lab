@@ -39,6 +39,12 @@ if (!post && slug !== "index" && slug !== "") {
   console.warn(`[SmartLink] Warning: Slug "${slug}" not found in language "${currentLang}".`);
 }
 ---
-<a href={url} class={className}>
+<a
+  href={url}
+  class={className}
+  data-track-event="internal_link_click"
+  data-track-slug={slug}
+  data-track-target-category={post?.data.category || ''}
+>
   <slot>{post ? post.data.title : slug}</slot>
 </a>
