@@ -15,8 +15,9 @@ const noindex = false; // 個別ページの noindex は frontmatter.head で制
   gtag('js', new Date());
 
   (function () {
-    // URLパス /{lang}/{category}/{subcategory}/{slug}/ からカテゴリ階層を推定し、
+    // URLパス /{lang}/{category}/{slug}/ からカテゴリを推定し、
     // 以後このページで送信される全イベントの既定パラメータとして付与する
+    // （subcategoryは廃止済みだが、3階層以上のURLがあれば予備的に拾う）
     var parts = window.location.pathname.split('/').filter(Boolean);
     var contentCategory = parts[1] || '(none)';
     var contentSubcategory = parts.length > 3 ? (parts[2] || '(none)') : '(none)';

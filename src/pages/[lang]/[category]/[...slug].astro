@@ -550,6 +550,35 @@ const pageHead = [
                 />
               </section>
             )}
+
+            <section class="author-byline">
+              <svg class="byline-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <p class="byline-text">
+                {lang === 'ja' ? 'この記事は' : 'This article is published by'}
+                <a
+                  href={`/${lang}/about/`}
+                  data-track-event="author_byline_click"
+                  data-track-source="article_footer"
+                  data-track-label="about"
+                >防音Lab</a>
+                {lang === 'ja' ? 'が運営しています。' : '.'}
+              </p>
+              <a
+                href="https://www.threads.com/@bouonlab"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="byline-x-link"
+                data-track-event="author_byline_click"
+                data-track-source="article_footer"
+                data-track-label="threads_follow"
+              >
+                <span class="threads-badge" aria-hidden="true">@</span>
+                Threads @bouonlab
+              </a>
+            </section>
         </footer>
       )}
 
@@ -831,6 +860,75 @@ const pageHead = [
     margin-top: 6rem;
     padding-top: 3rem;
     border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .author-byline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+    margin-top: 4rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(212, 175, 55, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 12px;
+  }
+
+  .byline-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--primary-gold);
+    flex-shrink: 0;
+  }
+
+  .byline-text {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+
+  .byline-text a {
+    color: var(--primary-gold);
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .byline-text a:hover {
+    text-decoration: underline;
+  }
+
+  .byline-x-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .byline-x-link:hover {
+    color: var(--primary-gold);
+  }
+
+  .x-icon {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+  }
+
+  .threads-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    font-size: 0.65rem;
+    line-height: 1;
+    flex-shrink: 0;
   }
 
   .tag-label {

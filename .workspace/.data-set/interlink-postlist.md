@@ -6,7 +6,7 @@
 - **再生成**: `node .workspace/scripts/build-interlink-postlist.mjs`
 - **内部リンク形式**: `/{lang}/{category}/{slug}/`（末尾スラッシュ必須、subcategory は廃止）
 - **クラスタ一覧（カテゴリ別・タグ別）**: `.workspace/.data-set/interlink-tag-clusters.md`
-- **ルール**: `.cursor/rules/bouon-internal-link-postlist.mdc` および `internal-link-ops` スキル
+- **ルール**: `.claude/skills/bouon-internal-link-ops/SKILL.md`
 
 | lang | category | slug | fm_slug | title | tags | internal_url | draft |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |

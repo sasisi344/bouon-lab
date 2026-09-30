@@ -215,8 +215,7 @@ function main() {
 
   md += `## 参考（ルール）
 
-- \`.cursor/rules/bouon-internal-link-postlist.mdc\`
-- \`.cursor/skills/internal-link-ops/SKILL.md\`
+- \`.claude/skills/bouon-internal-link-ops/SKILL.md\`
 
 `;
 
