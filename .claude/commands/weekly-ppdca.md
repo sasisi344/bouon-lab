@@ -1,5 +1,5 @@
 ---
-description: GSC/GA4の週次アクセスデータを取り込み、ギャップを解析してtask-list.md・effect-monitoring.md・weekly-task.mdへタスク化する
+description: GSC/GA4の週次アクセスデータを取り込み、ギャップを解析してtask-list.md・weekly-task.mdへタスク化する
 ---
 
 # /weekly-ppdca — 週次PDCA解析コマンド
@@ -10,7 +10,7 @@ description: GSC/GA4の週次アクセスデータを取り込み、ギャップ
 
 ## Step 0. 事前ロード（毎回必ず実行）
 
-`bouon-task-ops` skillの3ファイル体制（`task-list.md`/`effect-monitoring.md`/`weekly-task.md`）を前提に、直近数週分と現在の未完了タスク・`archive/task-list-index.md`を読み込む。
+`.workspace/.task/CLAUDE.md` と `bouon-task-ops` skillの2本柱体制（`task-list.md`=T-NN／`weekly-task.md`=W-NN）を前提に、両ファイルの**索引表**、直近数週分の生データ、`archive/task-list-index.md`を読み込む（全文は必要なIDだけ読む）。
 
 ## Step 1. 取り込み・仕分け（`.workspace/access-data/_inbox/`）
 
@@ -19,14 +19,17 @@ description: GSC/GA4の週次アクセスデータを取り込み、ギャップ
 1. `_inbox/` が空なら「ファイルがありません」と伝えて止まる
 2. 対象週番号を決める（引数指定 or 実行時点の日付からISO週番号を算出）
 3. 各ファイルの中身（先頭数行）で種別を判定する（ファイル名では判定しない）: GSC（クリック数・表示回数・掲載順位等の列）/ GA4（セッション数・直帰率等の列）
-4. 判定結果に基づき `.workspace/access-data/{年}/W{NN}/GSC/ページ.csv`・`GSC/クエリ.csv`・`GA4/` へ移動する
-5. 移動結果を一覧で報告する
+4. 判定結果に基づき `.workspace/access-data/{年}/w{NN}/` へフラットに移動する（`ページ.csv`・`クエリ.csv`・`w{NN}-ga4-bouon.csv`。構成の正本は `.workspace/access-data/CLAUDE.md`）
+5. GSCが「7日」でない場合（累計・3か月など）は週次比較に使えないことを報告し、再取得を依頼する。取得期間は `_inbox/README.md` と `access-data/CLAUDE.md` の索引に記録する
+6. 移動結果を一覧で報告する。索引表と作業ログも同時に更新する
 
 ## Step 2. 対象データの確認
 
 仕分けたデータと直近の過去週フォルダを読み込む。CSVの列構成は週によってまちまちなので、決め打ちでパースせず都度構造を判断する。
 
 ## Step 3. ギャップ解析
+
+**集計は `bouon-weekly-report` skillのスクリプトで行う**（`python .claude/skills/bouon-weekly-report/scripts/weekly_report.py report w{NN}`）。事前に `access-data/gsc-periods.json` へ当週のGSC期間を登録する。比較不可の週は、スクリプトが理由を出すので前週比を書かない。以下は、その出力を読んでからの観点:
 
 - **サイト全体**: クリック・表示回数・CTR・平均掲載順位の前週比
 - **ページ別**: 表示は多いがクリック0のページ（順位で層別）、順位急落/急伸、新規表示ページ
@@ -35,7 +38,7 @@ description: GSC/GA4の週次アクセスデータを取り込み、ギャップ
 
 ## Step 4. 既存タスクとの重複チェック（`bouon-task-ops` skill準拠）
 
-1. `task-list.md`・`effect-monitoring.md`に同一テーマの未完了項目があれば「進捗更新」として扱う（重複セクションを増やさない）
+1. `task-list.md`・`weekly-task.md`の索引で同一テーマの未完了項目（T-NN／W-NN）があれば「進捗更新」として扱う（重複セクションを増やさない）
 2. 過去の分析ファイルや`archive/task-list-NN.md`で同じ論点が完了・却下済みか確認する
 3. 期限付きチェック項目が今回のデータ範囲に該当するか確認し、完了/継続を判定する
 
@@ -50,8 +53,8 @@ description: GSC/GA4の週次アクセスデータを取り込み、ギャップ
 ### 今すぐ着手できる候補（task-list.md行き）
 - {該当すれば}
 
-### 次回データ待ちの候補（effect-monitoring.md行き）
-- [ ] {事象} → {確認すべき次回データ}
+### 次回データ待ちの候補（weekly-task.md行き）
+- [ ] {事象} → {確認すべき次回データ・確認時期}（既存W-NNへの追記か新規W-NNかを明記）
 
 ### 陳腐化・archive行き候補
 - {前提が崩れた項目があれば}
@@ -61,8 +64,8 @@ description: GSC/GA4の週次アクセスデータを取り込み、ギャップ
 
 ## Step 6. 確定 → ファイルへの反映
 
-1. `weekly-task.md`: 対象週の生データスナップショットのみ追記する
-2. `effect-monitoring.md`: 次回データで確認するタスクを追記する（重複がないか確認してから）
-3. `task-list.md`: 今すぐ着手できるタスクを追加する場合のみ追記する
+1. `weekly-task.md`「週次生データ」: 対象週のスナップショットを先頭に追記する（直近3週分を超えたものは`archive/weekly-task-archive-YYYYMMDD.md`へ移す）
+2. `weekly-task.md`: 該当W-NNへ結果を追記し、次回データで確認する項目は新規W-NNとして起票する（重複がないか確認し、**索引表も同時に更新**する）
+3. `task-list.md`: 今すぐ着手できるタスクを新規T-NNとして追加する場合のみ追記する（**索引表も同時に更新**し、関連列にW-NNを書く）
 4. 分析が長くなる場合は`weekly-PPDCA-task-{NN}.md`として作成し、完了後は`bouon-task-ops` skillの手順で`archive/`へ移動する
 5. `pnpm build`等のコード変更は伴わないため実行不要。ファイル更新後は変更点を要約して報告する

@@ -1,17 +1,6 @@
-# Threads運用 作業フォルダ
+# Threads運用（旧作業フォルダ）
 
-防音LabのThreads（@bouonlab）運用に関する下書き・記録を管理する。ルール本体は `bouon-threads-ops` skill（`.claude/skills/bouon-threads-ops/SKILL.md`）を参照。
+週間ポストの作成・管理は `.workspace/_sns-post/` に移行した（ルール: `.workspace/_sns-post/CLAUDE.md`、ネタ台帳: `.workspace/_sns-post/archive/topic-index.md`）。
 
-## 構成
-
-- `postlist.md` — 投稿済みリスト（投稿タイプ・ソース・投稿日・URLを記録）
-- `used-sources.md` — 使用済みの記事・検索クエリの管理（重複防止）
-- `drafts/snippet/` — 小ネタ型（定期投稿）の下書き
-- `drafts/query-hook/` — クエリ疑問オープナー型（長文・エンゲージメント重視）の下書き
-
-## 運用の流れ
-
-1. `bouon-threads-ops` skillのルールに沿って下書きを`drafts/`配下に作成する
-2. `used-sources.md`で重複がないか確認する
-3. ユーザーがThreadsアプリから実際に投稿する
-4. 投稿後、`postlist.md`に投稿日・投稿URLを追記する
+- `drafts/query-hook/mansion-instrument-practice-time-rules-query-hook.md` は、最初の週間ポスト作成時に3スレッド構成へ再編して取り込む。取り込み後はこのフォルダの下書きを削除してよい
+- `postlist.md`・`used-sources.md` は移行済み。新規追記しない

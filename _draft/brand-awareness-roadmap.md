@@ -34,4 +34,4 @@
 2. **実施済み・方針決定** ユーザーがSNS運用の継続リソースありと確認。**プラットフォームはInstagramではなくThreads（@bouonlab、Instagramアカウントと連携済み）を採用**。`.cursor/rules/bouon-growth-ops.mdc`・`CLAUDE.md`のSNS運用セクションをInstagram前提からThreads前提に更新し、記事フッター・AboutページのフォローリンクもThreads（@bouonlab）に接続済み
 3. **実施済み・専用ルール制定**: 投稿タイプを2種（①小ネタ型＝既存記事からの定期投稿、②クエリ疑問オープナー型＝実検索クエリ起点の長文・エンゲージメント重視投稿）に分け、`.cursor/rules/bouon-threads-ops.mdc`として制定。作業フォルダ`.agents/threads-ops/`（`postlist.md`・`used-sources.md`・`drafts/snippet/`・`drafts/query-hook/`）を新設
 4. **次のアクション**: クエリ疑問オープナー型の初回下書き`.agents/threads-ops/drafts/query-hook/mansion-instrument-practice-time-rules-query-hook.md`を作成済み。ユーザーが実際にThreadsへ投稿し、投稿URLを`postlist.md`に記録する。小ネタ型の初回下書きは未作成
-4. **継続観察**: 指名検索「防音ラボ」のクリック推移と`author_byline_click`イベントを`effect-monitoring.md`で追跡する
+4. **継続観察**: 指名検索「防音ラボ」のクリック推移と`author_byline_click`イベントを`weekly-task.md` W-20で追跡する

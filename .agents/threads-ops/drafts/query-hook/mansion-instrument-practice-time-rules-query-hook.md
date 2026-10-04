@@ -1,7 +1,7 @@
 # Threads下書き（クエリ疑問オープナー型）: mansion-instrument-practice-time-rules
 
 対象記事: https://bouon-lab.com/ja/knowledge/mansion-instrument-practice-time-rules/
-起点クエリ: 「マンション 楽器 何時まで」（`effect-monitoring.md`「指名検索記事のAI Overview対策リライト」で追跡中、順位8.55・CTR0%）
+起点クエリ: 「マンション 楽器 何時まで」（`weekly-task.md` W-12「指名検索記事のAI Overview対策リライト」で追跡中、順位8.55・CTR0%）
 ルール: `bouon-threads-ops` skill「投稿タイプ②: クエリ疑問オープナー型」準拠
 
 ## 本文（1投稿目・長文）

@@ -35,19 +35,20 @@ npx astro check # 型チェック
 | `bouon-rewrite-strategy` | 既存記事の改善優先度判定・リライト実行時 |
 | `bouon-internal-link-ops` | 内部リンクの追加・変更、公開前チェック時 |
 | `bouon-task-ops` | `.workspace/.task/` の参照・更新・アーカイブ時 |
+| `bouon-weekly-report` | `.workspace/access-data/` のGSC/GA4の週報集計・前週比較・ページ別推移 |
 | `bouon-growth-ops` | 収益導線設計（QUEST/PASONA/BEAF）・ビジュアル設計時 |
-| `bouon-threads-ops` | Threads投稿の作成・記録時 |
+| `bouon-threads-ops` | Threads投稿の作成・記録時（週間運用は`.workspace/_sns-post/CLAUDE.md`） |
 | `bouon-draft-publish-pipeline` | `/publish-draft`・`/write-article` の実処理（コマンドから自動的に参照される） |
 
 ペルソナ定義（消費者A〜H・サプライヤーS1〜S5・編集長フィルター）は `.agents/persona/` を参照。`bouon-persona-thinking` skillと併用する。
 
 ## タスク管理（`.workspace/.task/`）
 
-3ファイル体制。詳細運用は `bouon-task-ops` skillを参照。
+2本柱＋索引運用。まず `.workspace/.task/CLAUDE.md`（索引・読み方・更新ルール）を読む。詳細手順は `bouon-task-ops` skillを参照。
 
-- **`task-list.md`** — 今すぐ着手できるタスクのみ（**削除厳禁**）
-- **`effect-monitoring.md`** — 効果測定・次回GSC/GA4データ待ちのタスク（**削除厳禁**）
-- **`weekly-task.md`** — 週次の生データスナップショットのみ（**削除厳禁**）
+- **`task-list.md`** — 今すぐ着手できるタスクのみ。項目ID `T-NN`（**削除厳禁**）
+- **`weekly-task.md`** — データ待ちの確認項目（期限・短期・継続観察）＋週次の生データ。項目ID `W-NN`（**削除厳禁**）
+- **`effect-monitoring.md`** — 2026-10-04に`weekly-task.md`へ統合済みの移行先ポインタ。新規追記しない（**削除厳禁**）
 - **`archive/`** — 完了済みタスクの保管（索引: `archive/task-list-index.md`）
 
 ブログ横断の中期〜長期タスクはGitHub Projectでも管理: https://github.com/users/sasisi344/projects/1 （詳細は`344ob/07_workspace/.agents/blog-registry.md`）。二重管理はしない。
@@ -65,7 +66,7 @@ npx astro check # 型チェック
 
 ## Threads投稿フロー
 
-`bouon-threads-ops` skillを参照。作業フォルダは `.agents/threads-ops/`（`postlist.md`・`used-sources.md`・`drafts/snippet/`・`drafts/query-hook/`）。
+`bouon-threads-ops` skill（投稿の作り方）と `.workspace/_sns-post/CLAUDE.md`（週間運用・ネタ台帳・重複防止）を参照。作業フォルダは `.workspace/_sns-post/`（`w{NN}-threads-post.md`・`archive/topic-index.md`）。
 
 ## 主要ファイル参照先
 
@@ -74,3 +75,4 @@ npx astro check # 型チェック
 - `src/data/affiliates.ts` — アフィリエイトリンクデータ
 - `.workspace/strategies/` — コンテンツ計画・リライトスケジュール
 - `.workspace/.data-set/` — 防音スペック・市場データ・企業DB（アーカイブ）
+- `.workspace/access-data/CLAUDE.md` — GSC/GA4エクスポートのフォルダ索引・取り込みルール・解析の作業ログ（CSVを開く前に読む）
