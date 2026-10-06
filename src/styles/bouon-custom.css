@@ -273,3 +273,52 @@ footer.bouon-footer {
   margin-bottom: 0.75rem;
   text-align: center;
 }
+
+/* =====================================================
+   レイアウト幅・表の可読性（2026-10-06 T-09）
+   ===================================================== */
+
+/* PC: 本文幅を広げる（Starlight既定の45remでは余白と合わせて本文が約560pxに縮む）。
+   max-width として働くため、狭い画面では自動的に縮む */
+:root {
+  --sl-content-width: 50rem;
+}
+
+/* スマホ: 外側の余白を詰めて本文の列幅を確保する */
+@media (max-width: 50rem) {
+  :root {
+    --sl-content-pad-x: 0.75rem;
+  }
+}
+
+/* 記事本文の表: 列が潰れて1文字ずつ縦に折り返されるのを防ぎ、
+   収まらない場合は表だけを横スクロールにする（ページ全体は横スクロールさせない）。
+   AssetValueTable は独自のラッパーを持つため対象外。 */
+.sl-markdown-content .prose-body table:not(.asset-table) {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sl-markdown-content .prose-body table:not(.asset-table) th,
+.sl-markdown-content .prose-body table:not(.asset-table) td {
+  min-width: 5em;
+}
+
+/* 1列目は項目名が入ることが多いため広めに確保する（5文字程度の材料名を折り返さない） */
+.sl-markdown-content .prose-body table:not(.asset-table) th:first-child,
+.sl-markdown-content .prose-body table:not(.asset-table) td:first-child {
+  min-width: 7em;
+}
+
+@media (max-width: 50rem) {
+  .sl-markdown-content .prose-body table:not(.asset-table) {
+    font-size: 0.85rem;
+  }
+
+  .sl-markdown-content .prose-body table:not(.asset-table) th,
+  .sl-markdown-content .prose-body table:not(.asset-table) td {
+    padding: 0.5rem 0.6rem;
+  }
+}

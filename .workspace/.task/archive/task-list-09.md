@@ -21,5 +21,5 @@
 
 ## 参照
 
-- 統合候補の詳細分析: `.workspace/.task/consolidation-candidates-20260916.md`
+- 統合候補の詳細分析: `.workspace/.task/archive/consolidation-candidates-20260916.md`
 - 元となったカニバリ調査: `archive/site-topic-clusters.md`

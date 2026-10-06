@@ -95,7 +95,7 @@
 - `.workspace/.task/content-structure-tier-b-thin-content.md`（Tier B: 薄いコンテンツの一覧と選別）
 - `.workspace/.task/content-structure-tier-c-stale-content.md`（Tier C: 情報鮮度確認の一覧と進捗）
 - `.workspace/.task/content-structure-tier-d-dedup-check.md`（Tier D: 既存タスクとの重複整理）
-- `.workspace/.task/honne-tatemae-rewrite-survey.md`（本音と建前フェーズの記録）
+- `.workspace/.task/archive/honne-tatemae-rewrite-survey.md`（本音と建前フェーズの記録）
 - `.workspace/.data-set/interlink-postlist.md`（記事一覧、内部リンク整理の基礎データ）
 - `.workspace/.data-set/pagerank-list.md`・`ctr-check-list.md`（既存のSEO優先度データ、Tier Bの絞り込みに活用予定）
 - `.workspace/.task/task-list.md`（既存の未解決タスク一覧）

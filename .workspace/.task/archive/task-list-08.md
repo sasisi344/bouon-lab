@@ -11,7 +11,7 @@
 
 ## 本音と建前リライト（2026-09-05〜09-06）
 
-詳細・candidate一覧は `.workspace/.task/honne-tatemae-rewrite-survey.md`。既存211記事のうち83記事（約39%）が本音への言及ゼロと判明、Tier1〜4に分類して対応。
+詳細・candidate一覧は `.workspace/.task/archive/honne-tatemae-rewrite-survey.md`。既存211記事のうち83記事（約39%）が本音への言及ゼロと判明、Tier1〜4に分類して対応。
 
 - [x] Tier1（23記事）: リライト・noindex解除・ビルド確認・コミット/push済み（`843c212`）
 - [x] Tier2（30記事、creator20・diy10）: リライト・ビルド確認・コミット/push済み（`f2af3dc`）

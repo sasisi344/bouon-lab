@@ -659,7 +659,7 @@ const pageHead = [
 
   .article-content {
     background: var(--bg-mocha);
-    padding: 4rem;
+    padding: 2.75rem;
     border-radius: 16px;
     border: 1px solid rgba(255,255,255,0.03);
     box-shadow: 0 30px 60px rgba(0,0,0,0.4);
@@ -691,6 +691,8 @@ const pageHead = [
   h1 {
     font-family: var(--font-ud-mincho);
     font-size: 3rem;
+    word-break: auto-phrase;
+    text-wrap: balance;
     color: #fff;
     line-height: 1.2;
     margin-bottom: 2rem;
@@ -731,6 +733,12 @@ const pageHead = [
     font-family: var(--font-body-text);
     font-weight: 400; /* Regular */
     margin-bottom: 2rem;
+  }
+
+  .prose-body :global(h2),
+  .prose-body :global(h3) {
+    word-break: auto-phrase;
+    text-wrap: balance;
   }
 
   .prose-body :global(h2) {
@@ -1170,9 +1178,29 @@ const pageHead = [
     .posts-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
+  /* スマホ最適化: 本文の列幅を確保する（余白の重なりで列が約65%に縮んでいたため） */
   @media (max-width: 768px) {
-    .article-content { padding: 2rem; }
-    h1 { font-size: 2.2rem; }
+    .article-wrapper { padding: 1rem 0 5rem; }
+    .breadcrumb { margin-bottom: 1.5rem; }
+    .article-content { padding: 1.5rem 1rem; border-radius: 12px; }
+    .article-header { margin-bottom: 2rem; }
+    h1 { font-size: 1.7rem; margin-bottom: 1.25rem; }
+    .description { font-size: 1rem; }
+    .section-divider { gap: 1rem; }
+    .divider-text { font-size: 1.15rem; letter-spacing: 0.1rem; white-space: normal; }
+    .prose-body { font-size: 1.0625rem; }
+    .prose-body :global(p) { margin-bottom: 1.5rem; }
+    .prose-body :global(h2) {
+      font-size: 1.45rem;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      padding: 0.7rem 0.9rem;
+    }
+    .prose-body :global(h3) {
+      font-size: 1.15rem;
+      margin-top: 2.25rem;
+      padding-left: 0.7rem;
+    }
     .starter-grid { grid-template-columns: 1fr; }
     .next-step-grid { grid-template-columns: 1fr; }
     .posts-grid { grid-template-columns: 1fr; }

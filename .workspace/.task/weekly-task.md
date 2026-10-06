@@ -4,7 +4,7 @@
 
 > 本ファイルは「データが揃うのを待って確認する項目（短期〜長期）」と「週次の生データスナップショット」を一元管理する。今すぐ着手できるタスクは `task-list.md`。
 > 過去の分析記録（W28〜W36のPlan/Do/Check/Act全文）は `archive/weekly-task-archive-20260916.md`。
-> **次回GSCエクスポートは2026-10-10前後**（カスタム1週間・GA4と同じ日付で取得）。
+> **次回GSCエクスポートは2026-10-10前後**（カスタム1週間・GA4と同じ日付で取得）。手順は`schedule-task.md` S-01（`schedule/2026-10-10-w42-gsc-ga4-import.md`）。日付が決まっているタスクは`schedule-task.md`に集約している。
 
 > **GSCデータの注意（2026-10-04更新）**: W41は7日分で再取得済み（`access-data/2026/w41/`、ファイル内に期間記載なし。GA4と同じ9/26〜10/3として扱う）。**これが最初の週次GSCデータ**で、W39=3週間分、W40=過去3か月累計、W36のbaselineも長期間のため、**W40以前との増減比較はできない**。比較はW42（10/10前後）から可能。GA4は1週間単位で比較可能。
 
@@ -17,7 +17,6 @@
 | ID | 区分 | 対象 | 確認に使うデータ | 確認時期 |
 |---|---|---|---|---|
 | W-03 | 短期 | meta refresh→301化・旧URL410化（9/25実施） | GSCインデックス登録 | 次回エクスポート |
-| W-04 | 短期 | 音大生向け地域別クエリ（9/22刷新） | GSCクエリ | 次回エクスポート |
 | W-05 | 短期 | Tier A内部リンク再強化（9/16、45記事） | GSCインデックス登録 | 次回エクスポート |
 | W-06 | 短期 | Tier B記事100本の選別 | GSCページ | 次回エクスポート |
 | W-07 | 短期 | カニバリクラスタA〜D統合4記事（9/16） | GSCページ | 次回エクスポート |
@@ -28,6 +27,8 @@
 | W-12 | 短期 | 指名検索記事のAI Overview対策（9/30） | GSCクエリ | 次回エクスポート |
 | W-13 | 短期 | 地域4本のnoindex判断（G4後続） | GSCページ | 次回エクスポート |
 | W-14 | 短期 | 新規記事3本のインデックス反映 | GSC URL検査・ページ | 次回エクスポート |
+| W-21 | 短期 | `soundproof-material-spec-chart`の入口化（10/6、出リンク4本・被リンク2本） | GA4 LP・GSCページ | 次回エクスポート |
+| W-22 | 短期 | サイトデザインのスマホ最適化（10/6、本文幅・表・見出し。デプロイ後に起算） | GA4（読了率・直帰率・エンゲージメント） | 次回エクスポート |
 | W-15 | 継続 | GA4改善傾向の持続（W41〜） | GA4週次 | 毎週 |
 | W-16 | 継続 | AI系流入の追跡 | GA4参照元 | 毎週 |
 | W-17 | 継続 | Teams経由流入（賃貸市場レポート） | GA4参照元 | 毎週 |
@@ -45,14 +46,11 @@
   - 2026-10-06: GSCの404件数2,526件はチャート最終日（2026-09-21）の値で、9/25の施策より前のデータ。施策の効果はまだ判定できない。エクスポート1,000件を`.htaccess`に当てた結果、999件はカバー済み（410が899・301が100）。旧W-01の詳細は`archive/weekly-task-archive-20261006.md`。GSC側のチャートが9/25以降に進んだ時点で件数を再確認する
 - [ ] 効果が出ない場合、9月施策（グランドループ統合・カニバリクラスタA〜D等）の301も同じmeta refresh問題の影響を受けていた可能性があるため、合わせて再確認する
 
-### W-04 音大生向けシェアハウス地域別クエリ（2026-09-22構成刷新）
-
-- [ ] エリア別クエリ（渋谷区・京都市・池袋・原宿等）の順位・CTR変化を確認する。表示が伸びるほど順位・CTRが悪化する逆相関が続いていないか特に注目
-  - 2026-10-04 W41（7日）: 「シェアハウス 音大生」22位、「中央区 音大生」36位、「渋谷 音大生」49位、「防音 シェアハウス」59位、「シェアハウス 防音」61位など各1表示。`music-student-property-search-guide`は表示6・順位47.3・クリック0。逆相関（表示増・順位悪化）はこの週は確認できず、表示そのものが細い
-
 ### W-05 Tier A内部リンク再強化（2026-09-16実施、45記事）
 
-- [ ] クロール・インデックス状況の改善が見られるか確認する
+- [ ] クロール・インデックス状況の改善が見られるか確認する（GSC「ページのインデックス登録」はエクスポートに含まれないため、判定は次回以降のUI確認とW42〜W44の7日表での表示有無で行う）
+  - 2026-10-06 現状確認（Claude）: 対象44本（`archive/content-structure-tier-a-round2-20260916.md`の表）へのリンクは**全件が現行ソースに残存**。W41（7日）のGSCに出た対象は11/44本（`onetouch-soundproof-wall-review` 表示32・クリック1、`japan-soundproof-market-size` 13、`wifi-connection-guide` 13、`daiwa-house-jiyuku-soundproof-review` 10、`farmland-prefab-streaming-room-legal` 3、`hsp-self-check-sound-sensitivity` 3、`tokyo-bouon-whitekyuon-okudake-review` 3、ほか4本は各1表示）。施策前の同条件データがないため増減は判定不能。**W42の7日表との比較が最初の判定材料**。判定基準: W42〜W44で表示が出る対象本数が11本から増えていれば改善傾向とみなす
+  - 2026-10-06 追加対応: 再スキャンで孤立2本（`creator/sleeping-parent-game-streaming-guide`・`diy/karaoke-box-soundproof-performance-guide`、いずれも9月公開の新規記事でW-14の対象）と希薄1本（`soundproof-rental/guitar-apartment-practice-guide`）を検出。本文中の文脈リンクを計6本追加して解消（孤立0、希薄は既知の2本のみ）。追加元: `creator/night-streaming-neighbor-tips`・`creator/family-home-soundproof-reno-negotiation`→sleeping-parent、`diy/futon-cardboard-karaoke-booth`・`soundproof-rental/home-theater-karaoke-soundproof-design`→karaoke-box、`soundproof-rental/saxophone-apartment-practice-guide`・`creator/singer-instrumentalist-stream-soundproof`→guitar。`pnpm build`成功（210ページ）。リンク元の`lastmod`は変更していない
 
 ### W-06 Tier B記事（3,000字未満・100記事）
 
@@ -101,6 +99,21 @@
 - [ ] `sleeping-parent-game-streaming-guide`（2026-09-18公開、GA4で高エンゲージメントセッション1件観測済み）
 - [ ] `karaoke-box-soundproof-performance-guide`（2026-09-17公開）
   - 2026-10-04 W41（7日）: 3本ともGSCの7日表に出現せず。GA4側でもbing/google経由の着地は確認できていないため、URL検査でインデックス登録状況を確認する
+  - 2026-10-06: `sleeping-parent-game-streaming-guide`・`karaoke-box-soundproof-performance-guide`は内部リンク0本の孤立状態だった（公開以来、W-05の再スキャンで判明）ため、クローラーが辿れずインデックスされなかった可能性がある。6本のリンク追加で解消済み（詳細はW-05）。URL検査は再クロール後のW42〜W43で行う。`guitar-apartment-practice-guide`は被リンク1本だったが追加で3本になった
+
+### W-21 `soundproof-material-spec-chart`の入口化（2026-10-06実施、T-05）
+
+W41でbing経由32セッション（W40は10）・エンゲージメント率88%・滞在約65秒だった記事から次の読み物へ誘導するため、出リンク4本（`bass-trap-installation-guide`・`diy-wall-soundproofing-room-guide`・`soundproof-sheet-heavy-diy-tips`・`bouon-osusume-hikaku`と`soundproof-room-price-market`）と、DIY系2記事からの被リンク2本を追加した。詳細は`archive/task-list-18.md`。
+
+- [ ] W42〜W44のGA4で、この記事のLPセッション数（W41=32）・エンゲージメント率（W41=88%）・滞在時間（W41=約65秒）が維持されるか、`related_click`・内部リンクのクリックイベントが出ているかを確認する。32件が一過性の可能性もあるため、セッションが10前後に戻っても施策の失敗とは判定しない
+- [ ] W42以降のGSC 7日表に`soundproof-material-spec-chart`と追加リンク先（`bass-trap-installation-guide`など）の表示が出るかを見る。リンク先側のセッションが増えていれば導線は機能している
+
+### W-22 サイトデザインのスマホ最適化（2026-10-06実装、T-09。デプロイ日から起算）
+
+スマホの本文幅を245px→317px、PCを558px→678pxに広げ、表を横スクロール化、見出しを文節改行にした。詳細は`archive/task-list-20.md`。デプロイ日はまだ確定していないため、デプロイ後に日付をここへ記入する（デプロイ日: 未記入）。
+
+- [ ] デプロイ後のW42〜W44のGA4で、エンゲージメント率（W41=56.5%）・平均エンゲージメント時間（W41=54.5秒）・読了イベント（`article_read_complete`）の発生件数が改善しているかを見る。デプロイ前後で週をまたぐ場合は、デプロイ日以降のみを比較する
+- [ ] 判定の注意: 他の施策（内部リンク追加、記事のリライト）と同時期の変化なので、デザイン単独の効果とは断定しない。スマホ・PCの端末別（GA4のデバイスカテゴリ）で差が出るかを補助的に見る
 
 ---
 
