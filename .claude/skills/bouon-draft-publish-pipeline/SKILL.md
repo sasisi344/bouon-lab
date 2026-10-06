@@ -44,6 +44,7 @@ description: _draft/ の下書きを本番記事として src/content/ に投稿
 - 執筆用注記（「執筆時の注意」等）は削除する
 - 記事冒頭（frontmatterの直後）に必ず `<RegionBanner />` を置く
 - 数値・スペックはドラフト記載を優先。推定値は「目安」「概算」と明記。税務・法務・医療内容は専門家確認の免責を入れる
+- 既存ナレッジ（防音スペック・市場データ・調査メモ）が必要なときは `bouon-dataset-lookup` skillで探す（`.workspace/.data-set/CLAUDE.md` の早見表）
 - 実在企業名・補助金額・統計等の事実主張は `bouon-research` skillの裏取り方針に従う
 
 ## Step 4. frontmatter生成

@@ -35,6 +35,7 @@ npx astro check # 型チェック
 | `bouon-rewrite-strategy` | 既存記事の改善優先度判定・リライト実行時 |
 | `bouon-internal-link-ops` | 内部リンクの追加・変更、公開前チェック時 |
 | `bouon-task-ops` | `.workspace/.task/` の参照・更新・アーカイブ時 |
+| `bouon-dataset-lookup` | 記事作成・リライトで防音スペック・市場データ・調査メモなどの既存ナレッジを探すとき |
 | `bouon-weekly-report` | `.workspace/access-data/` のGSC/GA4の週報集計・前週比較・ページ別推移 |
 | `bouon-growth-ops` | 収益導線設計（QUEST/PASONA/BEAF）・ビジュアル設計時 |
 | `bouon-threads-ops` | Threads投稿の作成・記録時（週間運用は`.workspace/_sns-post/CLAUDE.md`） |
@@ -71,8 +72,7 @@ npx astro check # 型チェック
 ## 主要ファイル参照先
 
 - `src/data/contentCategories.ts` — トップカテゴリ一覧とナビ・一覧用ラベル
-- `.workspace/.data-set/interlink-postlist.md` / `interlink-tag-clusters.md` — 内部リンク正本（`bouon-internal-link-ops` skill参照）
 - `src/data/affiliates.ts` — アフィリエイトリンクデータ
 - `.workspace/strategies/` — コンテンツ計画・リライトスケジュール
-- `.workspace/.data-set/` — 防音スペック・市場データ・企業DB（アーカイブ）
+- `.workspace/.data-set/CLAUDE.md` — ナレッジ置き場の索引・鮮度ラベル・「記事作成時にどこから取るか」の早見表（内部リンク正本 `interlink-postlist.md` を含む。検索は`bouon-dataset-lookup` skill）
 - `.workspace/access-data/CLAUDE.md` — GSC/GA4エクスポートのフォルダ索引・取り込みルール・解析の作業ログ（CSVを開く前に読む）
