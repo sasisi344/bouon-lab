@@ -118,14 +118,11 @@
 | ja | local | `hamamatsu-soundproof-rental-guide` |  | 【2026最新】浜松の防音賃貸ガイド｜楽器の街ならではの相場と選び方 | 防音賃貸, 浜松, 楽器の街, 家賃相場 | `/ja/local/hamamatsu-soundproof-rental-guide/` | false |
 | ja | local | `hiroshima-soundproof-rental-guide` |  | 広島で楽器可物件を探すなら「音大エリア」を狙え！中区・エリザベト周辺の防音事情と家賃相場 | 広島, 防音賃貸 | `/ja/local/hiroshima-soundproof-rental-guide/` | false |
 | ja | local | `kanagawa-soundproof-rental-guide` |  | 防音室 賃貸 神奈川の相場・人気エリア・選び方【2026年最新】 | 防音賃貸, 神奈川, 横浜, 川崎, 家賃相場 | `/ja/local/kanagawa-soundproof-rental-guide/` | false |
-| ja | local | `kanazawa-soundproof-rental-guide` |  | 【2026最新】金沢の防音賃貸ガイド｜東京2時間半・低コストな活動拠点として選ぶ | 防音賃貸, 金沢, 家賃相場 | `/ja/local/kanazawa-soundproof-rental-guide/` | false |
 | ja | local | `kobe-soundproof-rental-guide` |  | 【2026最新】神戸の防音賃貸ガイド｜三宮・灘・西宮の相場と選び方 | 防音賃貸, 神戸, 家賃相場 | `/ja/local/kobe-soundproof-rental-guide/` | false |
-| ja | local | `kumamoto-soundproof-rental-guide` |  | 【2026最新】熊本の防音賃貸ガイド｜羽田1時間35分・低コストな活動拠点として選ぶ | 防音賃貸, 熊本, 家賃相場 | `/ja/local/kumamoto-soundproof-rental-guide/` | false |
 | ja | local | `kyoto-soundproof-rental-guide` |  | 【2026最新】京都の防音賃貸ガイド｜中心部・伏見・嵐山の相場と選び方 | 防音賃貸, 京都, 音楽大学, 家賃相場 | `/ja/local/kyoto-soundproof-rental-guide/` | false |
 | ja | local | `nagoya-soundproof-rental-guide` |  | 【2026最新】名古屋の防音賃貸ガイド｜栄・今池・八事の最新相場と選び方 | 防音賃貸, 名古屋, 家賃相場 | `/ja/local/nagoya-soundproof-rental-guide/` | false |
-| ja | local | `niigata-soundproof-rental-guide` |  | 【2026最新】新潟の防音賃貸ガイド｜東京2時間・低コストな活動拠点として選ぶ | 防音賃貸, 新潟, 家賃相場 | `/ja/local/niigata-soundproof-rental-guide/` | false |
-| ja | local | `okayama-soundproof-rental-guide` |  | 【2026最新】岡山の防音賃貸ガイド｜大阪1時間・東京へも直通の拠点として選ぶ | 防音賃貸, 岡山, 家賃相場 | `/ja/local/okayama-soundproof-rental-guide/` | false |
 | ja | local | `osaka-soundproof-rental-guide` |  | 【2026最新】大阪の防音賃貸ガイド｜ペット可・駅近・格安エリアまで徹底網羅 | 防音賃貸, 大阪, 家賃相場, 豊中, 日本橋 | `/ja/local/osaka-soundproof-rental-guide/` | false |
+| ja | local | `regional-city-soundproof-rental-guide` |  | 【2026】地方都市の防音賃貸ガイド｜金沢・岡山・熊本（西日本）と新潟（東日本）の選び方 | 防音賃貸, 地方都市, 金沢, 岡山, 熊本, 新潟, 家賃相場 | `/ja/local/regional-city-soundproof-rental-guide/` | false |
 | ja | local | `saitama-soundproof-rental-guide` |  | 防音室 賃貸 埼玉の相場・人気エリア・選び方【2025年最新】 | 防音賃貸, 埼玉, さいたま, 川口, 家賃相場 | `/ja/local/saitama-soundproof-rental-guide/` | false |
 | ja | local | `sapporo-soundproof-rental-guide` |  | 札幌は楽器演奏に最高の環境？「二重窓」標準装備がもたらす防音メリットと物件探しのコツ | 札幌, 防音賃貸, 窓, 防音工事 | `/ja/local/sapporo-soundproof-rental-guide/` | false |
 | ja | local | `sendai-soundproof-rental-guide` |  | 宮城教育大学生向け｜家賃7万円以下で探す仙台の防音賃貸・練習室代替案 | 仙台, 防音賃貸, 音大生, 予算重視, 宮城教育大学 | `/ja/local/sendai-soundproof-rental-guide/` | false |
@@ -145,9 +142,8 @@
 | ja | money | `soundproof-room-price-market` |  | 防音室の値段・価格相場2026｜サイズ別の実勢価格と隠れコスト完全比較 | 費用, 価格相場, ヤマハ, カワイ | `/ja/money/soundproof-room-price-market/` | false |
 | ja | money | `soundproof-room-rental-cost` |  | 防音室レンタルの初期費用と月額相場｜2026年最新・購入との損益分岐点 | 防音室, レンタル, 初期費用, 相場 | `/ja/money/soundproof-room-rental-cost/` | false |
 | ja | money | `soundproof-room-rental-lease` |  | 防音室はレンタル・リース可能？個人と法人の「一番賢い借り方」と料金比較 | 防音室, レンタル, リース, 経費 | `/ja/money/soundproof-room-rental-lease/` | false |
-| ja | money | `soundproof-subsidy-check-guide` |  | うちの家は対象？防音工事の補助金エリアの調べ方【空港・自衛隊・道路】 | 防音工事, 補助金, 対象エリア, 空港, 自衛隊 | `/ja/money/soundproof-subsidy-check-guide/` | false |
+| ja | money | `soundproof-subsidy-check-guide` |  | うちの家は対象？防音工事の補助金エリアの調べ方【空港・基地・道路／東京・大阪の例つき】 | 防音工事, 補助金, 対象エリア, 空港, 自衛隊, 幹線道路, 東京・大阪 | `/ja/money/soundproof-subsidy-check-guide/` | false |
 | ja | money | `soundproof-subsidy-news-2025` |  | 防音室の補助金2026年最新版｜二重窓リノベで最大200万円受給する裏技 | 補助金, 節税 | `/ja/money/soundproof-subsidy-news-2025/` | false |
-| ja | money | `soundproof-subsidy-tokyo-osaka` |  | 【東京・大阪】防音工事で補助金が出る地域は？空港や幹線道路沿いの調べ方 | 防音工事, 補助金, 東京, 大阪, 空港, 幹線道路 | `/ja/money/soundproof-subsidy-tokyo-osaka/` | false |
 | ja | money | `soundproof-window-subsidy-2025-guide` |  | 【2025年最新】防音窓リフォームで使える補助金制度まとめ｜先進的窓リノベ対応 | 補助金, 内窓リフォーム | `/ja/money/soundproof-window-subsidy-2025-guide/` | false |
 | ja | money | `streamer-tax-strategy` |  | 防音室は経費にできる？配信者だけじゃない対象職業と判断基準 | 確定申告, 節税, 減価償却, 個人事業主, 青色申告, 配信・実況 | `/ja/money/streamer-tax-strategy/` | false |
 | ja | money | `telework-soundproof-loan-strategy` |  | テレワーク・在宅勤務のための防音室ローン活用｜集中環境と耳の健康への戦略投資 | テレワーク, ローン, 生産性, 節税 | `/ja/money/telework-soundproof-loan-strategy/` | false |

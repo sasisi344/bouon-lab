@@ -224,7 +224,7 @@ export default defineConfig({
     '/ja/soundproof-room/knowledge/soundproof-room-rental-lease/':         '/ja/money/soundproof-room-rental-lease/',
     '/ja/soundproof-room/knowledge/soundproof-subsidy-check-guide/':       '/ja/money/soundproof-subsidy-check-guide/',
     '/ja/soundproof-room/knowledge/soundproof-subsidy-news-2025/':         '/ja/money/soundproof-subsidy-news-2025/',
-    '/ja/soundproof-room/knowledge/soundproof-subsidy-tokyo-osaka/':       '/ja/money/soundproof-subsidy-tokyo-osaka/',
+    '/ja/soundproof-room/knowledge/soundproof-subsidy-tokyo-osaka/':       '/ja/money/soundproof-subsidy-check-guide/',
     '/ja/soundproof-room/knowledge/soundproof-window-subsidy-2025-guide/': '/ja/money/soundproof-window-subsidy-2025-guide/',
     // soundproof-room/knowledge → creator / business / diy / knowledge
     '/ja/soundproof-room/knowledge/vtuber-soundproof-environment-complete-guide/': '/ja/creator/vtuber-soundproof-environment-complete-guide/',
@@ -438,7 +438,7 @@ export default defineConfig({
     '/posts/soundproof-room-pollen-protection/':             '/ja/soundproof-room/soundproof-room-pollen-protection/',
     '/posts/soundproof-room-rental-lease/':                  '/ja/money/soundproof-room-rental-lease/',
     '/posts/soundproof-subsidy-check-guide/':                '/ja/money/soundproof-subsidy-check-guide/',
-    '/posts/soundproof-subsidy-tokyo-osaka/':                '/ja/money/soundproof-subsidy-tokyo-osaka/',
+    '/posts/soundproof-subsidy-tokyo-osaka/':                '/ja/money/soundproof-subsidy-check-guide/',
     '/posts/soundproof-window-merit-demerit/':               '/ja/diy/diy-internal-window-road-noise-reduction/',
     '/posts/soundproof-window-subsidy-2025-guide/':          '/ja/money/soundproof-window-subsidy-2025-guide/',
     '/posts/streamer-rental-selection-guide/':               '/ja/creator/streamer-rental-selection-guide/',
@@ -647,11 +647,17 @@ export default defineConfig({
     '/ja/business/soundproof-renovation-cost-outlook-2026/':                 '/ja/money/owner-renovation-roi-simulation-tool/',
     '/ja/soundproof-rental/owner-soundproof-renovation-strategy/':           '/ja/money/owner-renovation-roi-simulation-tool/',
     '/ja/money/rental-vs-purchase-soundproof-room/':                        '/ja/money/soundproof-room-rental-cost/',
+    '/ja/money/soundproof-subsidy-tokyo-osaka/':                            '/ja/money/soundproof-subsidy-check-guide/',
     '/ja/soundproof-rental/rental-permission-proposal-template/':           '/ja/soundproof-rental/rental-unit-soundproof-room/',
     '/ja/soundproof-rental/soundproof-room-installation-conditions/':       '/ja/soundproof-rental/rental-unit-soundproof-room/',
     '/ja/soundproof-room/bouon-size-choice/':                               '/ja/soundproof-room/soundproof-room-size/',
     // グランドループ記事のカニバリ統合（2026-09-16、creator版をknowledge版に統合）
     '/ja/creator/cable-noise-ground-loop-prevention/':                      '/ja/knowledge/ground-loop-noise-basics/',
+    // 地方4都市の防音賃貸ガイドを1記事に統合（2026-10-06、W-13）
+    '/ja/local/kanazawa-soundproof-rental-guide/':                          '/ja/local/regional-city-soundproof-rental-guide/',
+    '/ja/local/okayama-soundproof-rental-guide/':                           '/ja/local/regional-city-soundproof-rental-guide/',
+    '/ja/local/kumamoto-soundproof-rental-guide/':                          '/ja/local/regional-city-soundproof-rental-guide/',
+    '/ja/local/niigata-soundproof-rental-guide/':                           '/ja/local/regional-city-soundproof-rental-guide/',
   },
   image: {
     domains: ['m.media-amazon.com', 'ir-jp.amazon-adsystem.com'],
