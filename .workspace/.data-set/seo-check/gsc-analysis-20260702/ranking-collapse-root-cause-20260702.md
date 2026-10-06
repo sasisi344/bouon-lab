@@ -71,7 +71,7 @@ GSCページ表の日平均（W41は7日・9/26〜10/3）。
 
 ### 新しく気づいた点（未対応）
 
-- **http版とwww版が正規URLへ統一されていない。** `http://bouon-lab.com/`は`http://bouon-lab.com/ja/`へ、`https://www.bouon-lab.com/`は`https://www.bouon-lab.com/ja/`へ301し、どちらも200で表示される（`public/.htaccess`に`https`・`www`の統一ルールはない）。`canonical`は`https://bouon-lab.com/ja/`を指しているため大きな害は出ていない可能性が高いが、同一ページが複数のホストで200になる状態で、クロールの重複と評価の分散を招き得る。ユーザーがGSCでもwww版を確認済みのため、2026-10-06に`public/.htaccess`の先頭へ、www→apex・http→httpsを1回の301で`https://bouon-lab.com`へ統一するルールを追加した（**未デプロイ**。デプロイ後の確認は`task-list.md` T-18）
+- **http版とwww版が正規URLへ統一されていない。** `http://bouon-lab.com/`は`http://bouon-lab.com/ja/`へ、`https://www.bouon-lab.com/`は`https://www.bouon-lab.com/ja/`へ301し、どちらも200で表示される（`public/.htaccess`に`https`・`www`の統一ルールはない）。`canonical`は`https://bouon-lab.com/ja/`を指しているため大きな害は出ていない可能性が高いが、同一ページが複数のホストで200になる状態で、クロールの重複と評価の分散を招き得る。ユーザーがGSCでもwww版を確認済みのため、2026-10-06に`public/.htaccess`の先頭へ、www→apex・http→httpsを1回の301で`https://bouon-lab.com`へ統一するルールを追加した（デプロイ済み。本番で各版が1回の301で`https://bouon-lab.com`へ統一されることを2026-10-06にcurlで確認。残りのGSCプロパティ確認は`task-list.md` T-18）
 
 ### 残る確認（ユーザーのGSC UI、`task-list.md` T-01）
 

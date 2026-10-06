@@ -3,6 +3,31 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import { readdirSync, readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+// サイトマップのlastmod用: 記事ごとのfrontmatter `lastmod`（なければ`date`）を /ja/{category}/{slug}/ をキーに集める。
+// 記事以外のページ（トップ・一覧）は更新日が確定しないため、lastmodを付けない。
+function collectArticleLastmods() {
+  const map = new Map();
+  const root = 'src/content/ja';
+  if (!existsSync(root)) return map;
+  const pick = (fm, key) => fm.match(new RegExp(`^${key}:\\s*["']?(\\d{4}-\\d{2}-\\d{2})`, 'm'))?.[1];
+  for (const category of readdirSync(root, { withFileTypes: true })) {
+    if (!category.isDirectory()) continue;
+    for (const post of readdirSync(join(root, category.name), { withFileTypes: true })) {
+      const file = join(root, category.name, post.name, 'index.mdx');
+      if (!post.isDirectory() || !existsSync(file)) continue;
+      const fm = readFileSync(file, 'utf-8').split('---')[1] ?? '';
+      const lastmod = pick(fm, 'lastmod') ?? pick(fm, 'date');
+      if (!lastmod) continue;
+      const slug = fm.match(/^slug:\s*["']?([^"'\s]+)/m)?.[1] ?? post.name;
+      map.set(`/ja/${category.name}/${slug}/`, lastmod);
+    }
+  }
+  return map;
+}
+const articleLastmods = collectArticleLastmods();
 
 // https://astro.build/config
 export default defineConfig({
@@ -71,6 +96,8 @@ export default defineConfig({
       },
       serialize(item) {
         const url = item.url;
+        const lastmod = articleLastmods.get(new URL(url).pathname);
+        if (lastmod) item.lastmod = lastmod;
         // トップページ: /ja/ または /en/
         if (/\/(ja|en)\/$/.test(url)) {
           item.priority = 1.0;
