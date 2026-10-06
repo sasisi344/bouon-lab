@@ -50,5 +50,5 @@
 
 ## 後続
 
-- 改善後のGA4確認は `weekly-task.md` W-22
+- 改善後のGA4確認は `schedule-task.md` S-08（旧W-22）
 - 未確認だったスマホ表示（記事一覧ページ、`CtaBox`・`AffiliateCard`、検索など）は `task-list.md` T-14

@@ -2,6 +2,17 @@
 # Astro移行後は該当ページ自体が存在せず、今後も作る予定がないため
 # 単純な404ではなく410 Gone（恒久的に削除）を明示してGoogleの索引除去を促す（2026-09-05）
 RewriteEngine On
+
+# ── ホストとプロトコルを https://bouon-lab.com に統一（2026-10-06） ──────────────────────
+# http版・www版が200で表示され、同一ページが複数のホストに分散していたため、1回の301で正規ホストへ集約する。
+# 以降のルール（410・301）は、この統一後のURLに対して評価される。
+# X-Forwarded-Protoの条件は、プロキシ経由でHTTPS判定が外れても転送ループにならないための保険
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://bouon-lab.com%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://bouon-lab.com%{REQUEST_URI} [R=301,L]
+
 RewriteRule ^tags/ - [G,L]
 RewriteRule ^categories/ - [G,L]
 RewriteRule ^index\.xml$ - [G,L]

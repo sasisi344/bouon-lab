@@ -44,7 +44,7 @@
 | タワーマンションの防音（床スラブ厚、ジム騒音） | `tower-mansion-sound-insulation-memo.md` | ○ |
 | 検索クエリの勝ち筋・改善機会（3月時点） | `06_リサーチ・管理/query-analysis-90days-20260324.md` | ○ 最新の実績は `.workspace/access-data/`（`bouon-weekly-report` skill） |
 | 重要クエリと既存記事の突合（カバー済み／加筆／新規） | `seo-check/gsc-analysis-20260702/query-article-match-20260702.md` | ○ 前期データ基準 |
-| ランキング崩壊・旧URL・リダイレクト漏れの調査 | `seo-check/gsc-analysis-20260702/ranking-collapse-root-cause-20260702.md`、`seo-check/gsc-analysis-20260702/redirect-gap-full-audit-20260702.md`、`seo-check/gsc-analysis-20260702/summary.md` | ○ 対応済みの記録。経緯の確認用 |
+| ランキング崩壊・旧URL・リダイレクト漏れの調査 | `seo-check/gsc-analysis-20260702/ranking-collapse-root-cause-20260702.md`、`seo-check/gsc-analysis-20260702/redirect-gap-full-audit-20260702.md`、`seo-check/gsc-analysis-20260702/summary.md` | ○ 対応済みの記録。経緯の確認用。`ranking-collapse-root-cause`は2026-10-06に現状へ更新済み（冒頭「現在の状況」が正） |
 | 404一覧（2026-09 監査） | `seo-check/gsc-404-audit-20260905/` | ○ CSVは `head` で見る |
 | CTR改善・順位改善の対象ページ（W28版） | `ctr-check-list.md`、`pagerank-list.md` | ○ 2026-07-08。現在の対象は週報（`bouon-weekly-report`）で再判定する |
 | 補助金・助成金・税制 | `.archieve` の `【補助金・税制】防音室_v2025.01.md`、`financial_support.md`、`【DB】防音窓・リフォームデータベース.md` | △ **必ず一次情報で再確認**（制度は毎年変わる）。`bouon-research` skill |

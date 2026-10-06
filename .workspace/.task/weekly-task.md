@@ -20,11 +20,7 @@
 | W-08 | 短期 | グランドループ記事統合（9/16） | GSCクエリ | 次回エクスポート |
 | W-11 | 短期 | wifi-connection-guideタイトル調整（9/17） | GSCページ | 次回エクスポート |
 | W-12 | 短期 | 指名検索記事のAI Overview対策（9/30） | GSCクエリ | 次回エクスポート |
-| W-13 | 短期 | 地方4都市を`regional-city-soundproof-rental-guide`に統合（10/6、noindexから方針変更） | GSCページ・URL検査 | デプロイ後〜W43 |
-| W-14 | 短期 | 新規記事3本のインデックス反映 | GSC URL検査・ページ | 次回エクスポート |
 | W-21 | 短期 | `soundproof-material-spec-chart`の入口化（10/6、出リンク4本・被リンク2本） | GA4 LP・GSCページ | 次回エクスポート |
-| W-22 | 短期 | サイトデザインのスマホ最適化（10/6、本文幅・表・見出し。デプロイ後に起算） | GA4（読了率・直帰率・エンゲージメント） | 次回エクスポート |
-| W-23 | 短期 | 住宅系3本の公開とindex反映・ハウスメーカー比較記事の書き直し（10/6、T-10） | GSC URL検査・ページ・クエリ | デプロイ後〜次回エクスポート |
 | W-24 | 短期 | 補助金エリア記事の統合先`soundproof-subsidy-check-guide`の表示・順位（10/6、旧`tokyo-osaka`を301） | GSCページ・クエリ | デプロイ後〜W43 |
 | W-15 | 継続 | GA4改善傾向の持続（W41〜） | GA4週次 | 毎週 |
 | W-16 | 継続 | AI系流入の追跡 | GA4参照元 | 毎週 |
@@ -68,23 +64,6 @@
   - 2026-10-04 W41（7日、施策は9/30実施のため直後の観測）: ページ表示24・順位9.42・クリック0。「マンション 楽器 何時まで」表示8・順位9.38、「何時 まで」表示4・順位7.5、いずれもクリック0。再クロール前後の可能性が高く、判断はW42〜W43の7日データで行う
 - 関連: Threads初回投稿（クエリ疑問オープナー型）の起点クエリ。`.workspace/_sns-post/archive/topic-index.md`参照
 
-### W-13 G4後続：地方4都市の統合（noindexではなく1記事に集約）
-
-- [x] 2026-10-06: kanazawa・okayama・kumamoto・niigataの4本は需要が細く（W40累計で13〜24表示・クリック0、W41の7日表では表示0）、noindexではなく**1記事に統合して301**する方針に変更。統合先は`/ja/local/regional-city-soundproof-rental-guide/`（西日本=金沢・岡山・熊本、東日本=新潟の2セクション、ナレッジ型）
-  - 実施内容: 旧4記事を削除し、`astro.config.mjs`と`public/.htaccess`に301を追加。旧4本を指していた内部リンク6記事（`bouon-rental-market-guide`・sendai・osaka・kyoto・hiroshima・fukuoka）を新記事へ差し替え、interlink一覧を再生成
-  - 書き直した点: 旧記事のエリア別家賃表（出典なし・4都市でほぼ同一の帯）は転記せず、LIFULL HOME'Sの一般賃貸相場と新幹線・空路の所要時間（最速新潟1時間29分、金沢2時間24分、岡山→新大阪45分、熊本→博多約40分）に置き換えた。旧記事の「新潟 東京まで2時間」「熊本 博多35分」は誤りだったため訂正
-  - 注意: 防音物件の家賃（約5.8〜7.3万円）は福岡の上乗せ率+15〜30%を準用した試算で、4都市の実測ではない
-- [ ] デプロイ後、統合先のGSC URL検査でindex登録を確認し、旧4URLの301が効いているかを確認する（W-24と同じ観点）
-- [ ] W43以降、統合先の表示・順位を確認する。「金沢/岡山/熊本/新潟 防音賃貸」系クエリが拾えているか。表示0が続く場合は、地方4都市で単独の需要がないと判断して追加施策は打たない
-
-### W-14 新規記事のインデックス反映確認
-
-- [ ] `guitar-apartment-practice-guide`（2026-09-16公開）
-- [ ] `sleeping-parent-game-streaming-guide`（2026-09-18公開、GA4で高エンゲージメントセッション1件観測済み）
-- [ ] `karaoke-box-soundproof-performance-guide`（2026-09-17公開）
-  - 2026-10-04 W41（7日）: 3本ともGSCの7日表に出現せず。GA4側でもbing/google経由の着地は確認できていないため、URL検査でインデックス登録状況を確認する
-  - 2026-10-06: `sleeping-parent-game-streaming-guide`・`karaoke-box-soundproof-performance-guide`は内部リンク0本の孤立状態だった（公開以来、旧W-05（`archive/weekly-task-archive-20261006.md`）の再スキャンで判明）ため、クローラーが辿れずインデックスされなかった可能性がある。6本のリンク追加で解消済み（詳細は`archive/weekly-task-archive-20261006.md`のW-05）。URL検査は再クロール後のW42〜W43で行う。`guitar-apartment-practice-guide`は被リンク1本だったが追加で3本になった
-
 ### W-21 `soundproof-material-spec-chart`の入口化（2026-10-06実施、T-05）
 
 W41でbing経由32セッション（W40は10）・エンゲージメント率88%・滞在約65秒だった記事から次の読み物へ誘導するため、出リンク4本（`bass-trap-installation-guide`・`diy-wall-soundproofing-room-guide`・`soundproof-sheet-heavy-diy-tips`・`bouon-osusume-hikaku`と`soundproof-room-price-market`）と、DIY系2記事からの被リンク2本を追加した。詳細は`archive/task-list-18.md`。
@@ -92,29 +71,13 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 - [ ] W42〜W44のGA4で、この記事のLPセッション数（W41=32）・エンゲージメント率（W41=88%）・滞在時間（W41=約65秒）が維持されるか、`related_click`・内部リンクのクリックイベントが出ているかを確認する。32件が一過性の可能性もあるため、セッションが10前後に戻っても施策の失敗とは判定しない
 - [ ] W42以降のGSC 7日表に`soundproof-material-spec-chart`と追加リンク先（`bass-trap-installation-guide`など）の表示が出るかを見る。リンク先側のセッションが増えていれば導線は機能している
 
-### W-22 サイトデザインのスマホ最適化（2026-10-06実装、T-09。デプロイ日から起算）
-
-スマホの本文幅を245px→317px、PCを558px→678pxに広げ、表を横スクロール化、見出しを文節改行にした。詳細は`archive/task-list-20.md`。デプロイ日はまだ確定していないため、デプロイ後に日付をここへ記入する（デプロイ日: 未記入）。
-
-- [ ] デプロイ後のW42〜W44のGA4で、エンゲージメント率（W41=56.5%）・平均エンゲージメント時間（W41=54.5秒）・読了イベント（`article_read_complete`）の発生件数が改善しているかを見る。デプロイ前後で週をまたぐ場合は、デプロイ日以降のみを比較する
-- [ ] 判定の注意: 他の施策（内部リンク追加、記事のリライト）と同時期の変化なので、デザイン単独の効果とは断定しない。スマホ・PCの端末別（GA4のデバイスカテゴリ）で差が出るかを補助的に見る
-
-### W-23 住宅系4本の公開とindex反映（2026-10-06作成、T-10。公開日は未記入、デプロイ後に記入）
-
-住宅系アフィリエイトの審査用に、`custom-home-soundproof-builder-selection`・`custom-home-soundproof-consultation-prep`・`custom-home-soundproof-room-layout`の3本と、ハブ記事`noise-solutions-relocate-retrofit-custom-home`（2026-10-06作成済み）の4本を公開する。あわせて`housing-builder-soundproof-comparison`を書き直した（周波数別の数値表を公式の表記へ差し替え、タイトルを4社に変更）。詳細は`t10-housing-affiliate/`。公開日: 未記入。
-
-- [ ] 効果測定レポートは2026-10-18に実施する（`schedule-task.md` S-05、`schedule/2026-10-18-housing-articles-report.md`）。W43（10/10〜10/17）のGSC・GA4を使う
-- [ ] デプロイ後、Search Consoleの「URL検査」で4本（ハブ記事を含む）のURLを入力し、インデックス登録をリクエストする（ユーザー対応）。完了日をここへ記入する
-- [ ] 数日〜2週間後に、3本が「インデックスに登録済み」になったかを確認する。登録済みになったら、アフィリエイトの申請に進む（`jyutaku-affilate.md`・`t10-housing-affiliate/02-article-plan.md` §5）
-- [ ] W42以降のGSCで、`housing-builder-soundproof-comparison`の表示回数・順位の変動を見る（書き直し前: 「防音室 ハウスメーカー おすすめ」297表示・平均21.7位・クリック0）。順位が大きく落ちた場合は、タイトル変更の影響を疑う
-- [ ] 住宅系の新規クエリ（注文住宅・家づくり相談・間取りなど）が3本に表示されるかを見る。表示が付かなくても、審査用の材料としての役割は維持する（需要の判断は申請後）
-
 ### W-24 補助金エリア記事の統合先`soundproof-subsidy-check-guide`の表示・順位（2026-10-06実施、旧W-10の後続）
 
-`soundproof-subsidy-tokyo-osaka`を`soundproof-subsidy-check-guide`へ統合し、旧URLを301にした（`public/.htaccess`・`astro.config.mjs`）。統合先には東京・大阪の具体例の表、窓リノベ2026の上限100万円への更新、米国のデータセンター騒音の節を追記した。詳細は`archive/weekly-task-archive-20261006.md`のW-10。デプロイ日: 未記入。
+`soundproof-subsidy-tokyo-osaka`を`soundproof-subsidy-check-guide`へ統合し、旧URLを301にした（`public/.htaccess`・`astro.config.mjs`）。統合先には東京・大阪の具体例の表、窓リノベ2026の上限100万円への更新、米国のデータセンター騒音の節を追記した。詳細は`archive/weekly-task-archive-20261006.md`のW-10。デプロイ日: 2026-10-06。
 
-- [ ] デプロイ後、旧URL`/ja/money/soundproof-subsidy-tokyo-osaka/`が本番で`301`になっていることをcurlで確認する（W-07と同じ手順）
-- [ ] W42（基準値）・W43のGSCページ表で、`soundproof-subsidy-check-guide`の表示・順位を見る（W41は表に出ていない）。「防音工事 補助金」「データセンター 騒音」などの新規クエリの出現も合わせて見る
+- [x] 2026-10-06 デプロイ後、旧URL`/ja/money/soundproof-subsidy-tokyo-osaka/`が本番で`301`→`soundproof-subsidy-check-guide`になることをcurlで確認済み
+- [x] 2026-10-06 統合先のGSC URL検査でインデックス登録をリクエスト済み（ユーザー、T-17。`archive/task-list-21.md`）
+- [ ] W42（基準値）・W43のGSCページ表で、`soundproof-subsidy-check-guide`の表示・順位を見る（W41は表に出ていない。W43の確認は`schedule-task.md` S-07で行う）。「防音工事 補助金」「データセンター 騒音」などの新規クエリの出現も合わせて見る
 - [ ] 判定: メインクエリ（「東京 防音 工事 補助金」）を追わない方針に変えたため、順位改善は判定基準にしない。表示が出始めるか、内部リンクからの回遊（`related_click`）が出るかで見る
 
 ---

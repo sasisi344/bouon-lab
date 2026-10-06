@@ -2,7 +2,7 @@
 
 - 担当: ユーザー（エクスポート・URL検査）+ Claude（解析・レポート）
 - 状態: 未着手
-- 関連: `weekly-task.md` W-23、`task-list.md` T-10、`t10-housing-affiliate/02-article-plan.md`
+- 関連: 旧W-23（`weekly-task.md`から2026-10-06にこのファイルへ移動）、`task-list.md` T-10、`t10-housing-affiliate/02-article-plan.md`
 
 ## 背景
 
@@ -24,15 +24,24 @@
 - **GSC・GA4のW43**（カスタム7日。2026-10-10〜10-17）。ユーザーが`access-data/2026/w43/`に置く。取得期間を`access-data/CLAUDE.md`の作業ログに1行記録する
 - 比較の基準: **W41**（2026-09-26〜10-03、公開前）と**W42**（10-03〜10-10、公開直後。S-01で取り込み済みのはず）。W36・W39・W40は期間が揃わないため比較に使わない
 - URL検査の結果（ユーザーがGSCで確認し、インデックス登録の状態を共有する）
-- 日付は絶対日付で記録する。公開日（デプロイ日）が異なる場合は、`weekly-task.md` W-23の公開日の記入を正とする
+- 日付は絶対日付で記録する。公開日（デプロイ日）が異なる場合は、旧W-23（`weekly-task.md`から2026-10-06にこのファイルへ移動）の公開日の記入を正とする
 
 ## 手順
 
 1. ユーザー: GSC・GA4のW43をカスタム7日でエクスポートし、`access-data/2026/w43/`に置く。6URLの「URL検査」の結果（インデックス登録の状態・最終クロール日）を共有する
 2. Claude: `bouon-weekly-report` skillで6URLの週次推移（W41→W42→W43）を出す
 3. Claude: 下の「測定項目」を表にして、このファイルの「結果」に書く
-4. Claude: 結果を`weekly-task.md` W-23に追記し、索引の状態を更新する
+4. Claude: 結果を「結果」に追記し、索引の状態を更新する
 5. Claude: 判定（下表）に従い、次の行動を`task-list.md`のT-10に反映する。アフィリエイトの申請は**ユーザーが実施**する
+
+## 旧W-23から引き継いだ確認項目
+
+住宅系アフィリエイトの審査用に、`custom-home-soundproof-builder-selection`・`custom-home-soundproof-consultation-prep`・`custom-home-soundproof-room-layout`の3本とハブ記事`noise-solutions-relocate-retrofit-custom-home`の4本を公開し、`housing-builder-soundproof-comparison`を書き直した（周波数別の数値表を公式の表記へ差し替え、タイトルを4社に変更）。詳細は`t10-housing-affiliate/`。
+
+- [ ] ユーザー: デプロイ後、GSCのURL検査で4本（ハブ記事を含む）にインデックス登録をリクエストし、完了日をこの欄へ記入する（T-10と同一作業。二重に行わない）
+- [ ] 数日〜2週間後に、3本が「インデックスに登録済み」になったかを確認する。登録済みになったらアフィリエイトの申請に進む（`jyutaku-affilate.md`・`t10-housing-affiliate/02-article-plan.md` §5）
+- [ ] W42以降のGSCで、`housing-builder-soundproof-comparison`の表示回数・順位の変動を見る（書き直し前: 「防音室 ハウスメーカー おすすめ」297表示・平均21.7位・クリック0）。順位が大きく落ちた場合はタイトル変更の影響を疑う
+- [ ] 住宅系の新規クエリ（注文住宅・家づくり相談・間取りなど）が3本に表示されるかを見る。表示が付かなくても、審査用の材料としての役割は維持する（需要の判断は申請後）
 
 ## 測定項目
 
@@ -64,7 +73,7 @@
 ## 完了条件
 
 - 6URLの表（GSC・GA4）と判定がこのファイルの「結果」に書かれている
-- W-23に結果が追記され、T-10の次の行動（申請に進むか）が決まっている
+- T-10の次の行動（申請に進むか）が決まっている
 
 ## 結果
 

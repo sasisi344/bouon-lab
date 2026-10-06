@@ -12,5 +12,7 @@
 | S-02 | 2026-10-11（期限） | ドメイン更新手続き | ユーザー | 未着手 | `schedule/2026-10-11-domain-renewal.md` | T-08 |
 | S-03 | 2026-10-13前後 | 404レポートの再エクスポート①（件数・チャート最終日の確認） | ユーザー+Claude | 未着手 | `schedule/2026-10-13-404-recheck-1.md` | T-08 |
 | S-06 | 2026-10-17前後 | カニバリクラスタA〜D統合4記事の表示・順位確認（W42基準値→W43比較） | Claude（W43エクスポートはユーザー） | 未着手 | `schedule/2026-10-17-w07-cluster-merge-check.md` | 旧W-07, S-01 |
-| S-05 | 2026-10-18 | 住宅系4記事（T-10）の効果測定レポート（インデックス・表示・読了・内部回遊） | ユーザー+Claude | 未着手 | `schedule/2026-10-18-housing-articles-report.md` | T-10, W-23 |
+| S-07 | 2026-10-17前後 | 統合先2記事（`regional-city-soundproof-rental-guide`・`soundproof-subsidy-check-guide`）のW43効果測定（インデックス・表示・流入、W42基準値→W43比較） | Claude（W43エクスポートはユーザー） | 未着手 | `schedule/2026-10-17-w43-merge-articles-check.md` | 旧W-13, W-24, S-01 |
+| S-05 | 2026-10-18 | 住宅系4記事（T-10）の効果測定レポート（インデックス・表示・読了・内部回遊） | ユーザー+Claude | 未着手 | `schedule/2026-10-18-housing-articles-report.md` | T-10, 旧W-23 |
+| S-08 | 2026-10-24前後 | サイトデザインのスマホ最適化の効果測定（W43・W44のGA4をW41と比較） | Claude（W43・W44エクスポートはユーザー） | 未着手 | `schedule/2026-10-24-w44-mobile-design-check.md` | T-09, T-14, 旧W-22 |
 | S-04 | 2026-10-27前後 | 404レポートの最終確認②（①で判断できなかった場合のみ） | ユーザー+Claude | 未着手（S-03次第） | `schedule/2026-10-27-404-recheck-2.md` | T-08 |
