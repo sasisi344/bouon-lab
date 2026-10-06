@@ -1,0 +1,26 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><link rel="stylesheet" href="memo-common.css"></head><body>
+<!-- 型: checklist（チェックリスト）／fill-in（書き込み式）／lookup（8項目早見）。
+     checklist: .check の li をそのまま使う。
+     fill-in: li の .t 内に <span class="fill"></span>（記入線）と <small>例：…</small> を入れる。
+     lookup: カードに .row（.tag＋.val）を並べる。tagは短い語（位置・窓・換気など）。-->
+<div class="wrap">
+  <span class="kicker">保存版メモ</span>
+  <h1>［テーマ］<br><em>チェックメモ</em></h1>
+  <p class="lead">［使う場面を1行。例：打ち合わせにスクショして持っていく1枚］</p>
+
+  <div class="card">
+    <h2>［見出し］［数］項目</h2>
+    <ul class="check">
+      <li><span class="cb"></span><span class="t">［項目］<small>［補足1行］</small></span></li>
+      <li><span class="cb"></span><span class="t">［項目］<small>［補足1行］</small></span></li>
+      <li><span class="cb"></span><span class="t">［項目］<span class="fill"></span><small>例：［記入例］</small></span></li>
+    </ul>
+  </div>
+
+  <div class="bar">［一番伝えたいことを1行］</div>
+
+  <div class="foot">
+    <div>※［断定を避ける注記を1〜2行］</div>
+    <div class="brand">防音Lab</div>
+  </div>
+</div></body></html>

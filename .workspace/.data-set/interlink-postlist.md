@@ -159,9 +159,9 @@
 | ja | soundproof-rental | `child-rearing-soundproof-pillar` |  | 【子育て×防音リノベ】マンションの騒音トラブルを「構造」から解決する完全ガイド | 子育て, 防音リノベ, 騒音トラブル, マンション, 防振構造 | `/ja/soundproof-rental/child-rearing-soundproof-pillar/` | false |
 | ja | soundproof-rental | `guitar-apartment-practice-guide` |  | ギターは賃貸で弾ける？ヘッドホンアンプでも消えない音への対処法 | ギター, エレキギター, アコースティックギター, 防音賃貸, ヘッドホンアンプ | `/ja/soundproof-rental/guitar-apartment-practice-guide/` | false |
 | ja | soundproof-rental | `home-theater-karaoke-soundproof-design` |  | 自宅映画と自宅カラオケを両立する防音設計ガイド｜遮音と音響の分け方と費用 | ホームシアター, 自宅カラオケ, 防音設計, 遮音, 音響, 防音室 | `/ja/soundproof-rental/home-theater-karaoke-soundproof-design/` | false |
-| ja | soundproof-rental | `housing-builder-soundproof-comparison` |  | 防音室が作れるハウスメーカーおすすめ5社｜遮音性能を周波数別に比較 | ハウスメーカー, 遮音性能, 注文住宅, スペック比較, D値, ROI | `/ja/soundproof-rental/housing-builder-soundproof-comparison/` | false |
+| ja | soundproof-rental | `housing-builder-soundproof-comparison` |  | 防音室が作れるハウスメーカーおすすめ4社｜注文住宅の公式防音仕様を比較 | ハウスメーカー, 注文住宅, 防音室, 家づくり, 遮音性能, スペック比較, D値 | `/ja/soundproof-rental/housing-builder-soundproof-comparison/` | false |
 | ja | soundproof-rental | `instrument-allowed-rental-research-method` |  | 楽器可賃貸の正しい探し方｜通勤1時間以内で相場を見誤らない手順 | 楽器可, 防音賃貸, 物件探し, 通勤時間 | `/ja/soundproof-rental/instrument-allowed-rental-research-method/` | false |
-| ja | soundproof-rental | `music-student-property-search-guide` |  | 音大生向け防音シェアハウス・楽器可賃貸の探し方｜音大キャンパス別の物件選び | 音大生, 防音シェアハウス, 楽器可賃貸, 物件探し, 防音賃貸, 音楽大学 | `/ja/soundproof-rental/music-student-property-search-guide/` | false |
+| ja | soundproof-rental | `music-student-property-search-guide` |  | 音大生の物件探し｜シェアハウスに防音室は置ける？楽器可賃貸・キャンパス別の探し方 | 音大生, 防音シェアハウス, 楽器可賃貸, 物件探し, 防音賃貸, 音楽大学 | `/ja/soundproof-rental/music-student-property-search-guide/` | false |
 | ja | soundproof-rental | `musision-comprehensive-guide` |  | ミュージション（MUSISION）完全攻略ガイド｜家賃相場・評判と防音性能を徹底分析 | ミュージション, 防音賃貸, 24時間演奏, 配信・実況, 評判 | `/ja/soundproof-rental/musision-comprehensive-guide/` | false |
 | ja | soundproof-rental | `noise-canceling-headphones-sleep` |  | 騒音で眠れないあなたへ。「耳栓＋ノイキャン」最強の組み合わせで静寂を手に入れる | ノイズキャンセリング, 耳栓, 睡眠 | `/ja/soundproof-rental/noise-canceling-headphones-sleep/` | false |
 | ja | soundproof-rental | `noise-complaint-landlord-negotiation-guide` |  | 騒音クレームを直接言うのは危険？マンションの騒音トラブルを解決する『3フェーズ式』対策マニュアル | 騒音トラブル, 管理会社, 交渉術, 賃貸マンション, 受忍限度 | `/ja/soundproof-rental/noise-complaint-landlord-negotiation-guide/` | false |
@@ -183,6 +183,9 @@
 | ja | soundproof-room | `bouon-setti-checkpoint` |  | 防音室導入の最終チェックリスト｜後悔しないためのサイズ・重量・搬入のデッドライン | 設置条件, 床荷重, 搬入経路, 管理組合, 失敗しない防音室 | `/ja/soundproof-room/bouon-setti-checkpoint/` | false |
 | ja | soundproof-room | `budget-soundproof-booth-comparison` |  | 格安防音室は夏に地獄化する？だんぼっち・OTODASU排熱リスクと中古購入の注意点 | 防音室, 排熱対策, だんぼっち, OTODASU, 中古防音室 | `/ja/soundproof-room/budget-soundproof-booth-comparison/` | false |
 | ja | soundproof-room | `construction-types-cost-comparison` |  | 防音工事の種類と価格比較｜壁・床・開口部、業者の選び方まで | 防音工事, リフォーム, 価格比較, 防音壁 | `/ja/soundproof-room/construction-types-cost-comparison/` | false |
+| ja | soundproof-room | `custom-home-soundproof-builder-selection` |  | 注文住宅で防音室を作る依頼先｜ハウスメーカー・工務店・設計事務所の選び方と流れ | 注文住宅, 防音室, ハウスメーカー, 工務店, 設計事務所, 家づくり | `/ja/soundproof-room/custom-home-soundproof-builder-selection/` | false |
+| ja | soundproof-room | `custom-home-soundproof-consultation-prep` |  | 注文住宅の家づくり相談で防音の要望を伝える方法｜防音室がなくても整理する5項目 | 注文住宅, 防音室, 家づくり, 相談窓口, 要望整理, 新築 | `/ja/soundproof-room/custom-home-soundproof-consultation-prep/` | false |
+| ja | soundproof-room | `custom-home-soundproof-room-layout` |  | 注文住宅で防音室を作る間取りのポイント｜位置・広さ・窓・換気・搬入経路 | 注文住宅, 間取り, 防音室, 新築, 戸建て, 換気 | `/ja/soundproof-room/custom-home-soundproof-room-layout/` | false |
 | ja | soundproof-room | `daiwa-house-jiyuku-soundproof-review` |  | 大和ハウス「私の自由区」防音室を検討して分かったこと | 注文住宅, 大和ハウス, 防音室, ハウスメーカー | `/ja/soundproof-room/daiwa-house-jiyuku-soundproof-review/` | false |
 | ja | soundproof-room | `hsp-soundproof-curtain-guide` |  | HSP気質の方へ。生活音のストレスを劇的に減らす「防音（遮音）カーテン」の正しい選び方と限界 | 防音カーテン, HSP, 睡眠, 騒音対策, 遮音性能 | `/ja/soundproof-room/hsp-soundproof-curtain-guide/` | false |
 | ja | soundproof-room | `hsp-soundproof-room-guide` |  | HSP・音過敏のための防音室完全ガイド｜D-40以上の遮音性能と設置費用 | HSP, 音過敏, 防音室選び, 感覚過敏, 防音室 | `/ja/soundproof-room/hsp-soundproof-room-guide/` | false |
@@ -190,6 +193,7 @@
 | ja | soundproof-room | `million-yen-soundproof-room-professional` |  | 100万円クラス防音室の到達レベル｜プロ用途で選ぶべき基準と投資対効果 | 防音室, プロ向け, ヤマハ, カワイ, 遮音性能, ROI | `/ja/soundproof-room/million-yen-soundproof-room-professional/` | false |
 | ja | soundproof-room | `night-practice-soundproof-guide` |  | 夜間練習はどこまで許される？深夜でも楽器を弾くための防音室選びと「振動」の罠 | 夜間練習, D値, 振動対策, ヤマハ, カワイ, サイレント楽器 | `/ja/soundproof-room/night-practice-soundproof-guide/` | false |
 | ja | soundproof-room | `nitori-soundproof-acoustic-guide` |  | ニトリ防音は壁に効果ある？反響は減るが音漏れは止まらない実測検証 | ニトリ, 吸音材, 騒音対策, 防音賃貸, 配信部屋 | `/ja/soundproof-room/nitori-soundproof-acoustic-guide/` | false |
+| ja | soundproof-room | `noise-solutions-relocate-retrofit-custom-home` |  | 音の悩みの解決策は3つ｜防音賃貸への引っ越し・後付け・注文住宅の設計段階で伝える道 | 防音, 引っ越し, 後付け, 注文住宅, 建売, 睡眠 | `/ja/soundproof-room/noise-solutions-relocate-retrofit-custom-home/` | false |
 | ja | soundproof-room | `onetouch-soundproof-wall-review` |  | ワンタッチ防音壁は効果ある？評判と自作代用の可否を検証 | ワンタッチ防音壁, 防音パネル, 賃貸DIY, 反響軽減, 口コミ | `/ja/soundproof-room/onetouch-soundproof-wall-review/` | false |
 | ja | soundproof-room | `otodasu-voice-chat-test` |  | OTODASU（オトダス）の実力検証｜深夜2時のボイスチャットは隣室に許されるのか？ | OTODASU, ボイスチャット, 深夜配信, 防音室 | `/ja/soundproof-room/otodasu-voice-chat-test/` | false |
 | ja | soundproof-room | `piano-room-guide` |  | ピアノ防音室ガイド｜アップライト・グランド別の費用とマンション設置の条件 | ピアノ, 防音室, アップライトピアノ, グランドピアノ, マンション, ヤマハ, カワイ | `/ja/soundproof-room/piano-room-guide/` | false |

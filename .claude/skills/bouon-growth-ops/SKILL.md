@@ -15,6 +15,7 @@ description: 高単価記事の収益導線設計（QUEST/PASONA/BEAF選定）�
 
 - 装飾画像より「理解を短縮する図」を優先する
 - 比較は表だけに依存せず、図解（マトリクス/フロー）化を検討する
+- 文量の多い記事では、比較・判断・確認項目を「ポケットに入れておくメモ画像」1枚にまとめる（作り方・デザイン仕様は `bouon-memo-image` skillを参照）
 - 画像生成プロンプトは英語、画像内テキストは必要に応じて日本語を使う（詳細は `bouon-writing` skillの`references/cover-image-fallback.md`）
 - 生成画像は原則 `.png`、`image: ./cover.png` を標準運用とする
 
