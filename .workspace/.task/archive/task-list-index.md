@@ -29,5 +29,6 @@
 | 23 | [task-list-23.md](./task-list-23.md) | 2026-10-07 | T-18 www・http版を`https://bouon-lab.com`へ301統一（`.htaccess`、本番・GSC確認済み） |
 | 24 | [task-list-24.md](./task-list-24.md) | 2026-10-07 | T-01 ランキング崩壊調査のGSC UI確認（手動対策なし・インデックス理由別内訳・サイトマップ202URL） |
 | 25 | [task-list-25.md](./task-list-25.md) | 2026-10-07 | T-13 `soundproof-room-rental-cost`を音レントの最短15ヶ月に整合し、公式サイトの最新情報でrental-leaseと併せて書き直し（通常プラン/MCプラン・充当・損益分岐） |
+| 26 | [task-list-26.md](./task-list-26.md) | 2026-10-08 | T-21 トップの入口カードを6枚に再設計（`hub`パラメータ管理・3本ランダム表示・`bouon-hub-cards` skill）。本番反映はGitHub障害のため未了 |
 
-**次の番号**: `task-list-26`
+**次の番号**: `task-list-27`

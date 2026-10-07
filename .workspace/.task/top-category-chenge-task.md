@@ -1,8 +1,8 @@
 # トップの入口カード（hubClusters）再設計 要件定義
 
 - 作成日: 2026-10-07
-- 状態: 実装済み（2026-10-07、ローカルで`pnpm build`・`astro check`通過）。2026-10-08 に未決定4点を案どおりで確定し、3本のランダム表示を追加（`pnpm build`通過）。未了: ランダム表示のブラウザ確認、スマホ幅390pxの確認、デプロイ後の実施日記録
-- 関連: T-21（`task-list.md`）、S-10（在宅ワーク統合の効果測定）、T-14（スマホ表示の確認）、T-04（direct流入のbot疑い）
+- 状態: 完了（2026-10-08、T-21を`archive/task-list-26.md`へ移動）。実装・未決定4点の確定・3本のランダム表示・ブラウザ/スマホ幅の確認・`pnpm build`通過まで済み。**本番へは未反映**（GitHub障害のため）。デプロイした日を、ここに記録する（実施日: 未記録）
+- 関連: T-21（`archive/task-list-26.md`）、S-10（在宅ワーク統合の効果測定）、T-14（スマホ表示の確認）、T-04（direct流入のbot疑い）
 - 担当: Claude（実装）。選定・文言の判断はユーザー
 
 ## 1. 目的
@@ -204,4 +204,4 @@ hub:
 - `src/pages/[lang]/[category]/[...slug].astro`
 - `src/content.config.ts`
 - `.workspace/scripts/build-interlink-postlist.mjs`（一覧スクリプトの手本）
-- `.workspace/.task/task-list.md`（T-21）
+- `.workspace/.task/archive/task-list-26.md`（T-21の完了記録）
