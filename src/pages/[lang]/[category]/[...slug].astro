@@ -9,7 +9,7 @@ import AffiliateCard from '../../../components/AffiliateCard.astro';
 import CtaBox from '../../../components/CtaBox.astro';
 import AdUnit from '../../../components/AdUnit.astro';
 import AssetValueTable from '../../../components/AssetValueTable.astro';
-import { HUB_CLUSTERS } from '../../../data/hubClusters';
+import { primaryHubCluster } from '../../../data/hubClusters';
 import { resolvePostCover } from '../../../data/categoryDefaultCover';
 import { resolvePostSlugSegment } from '../../../utils/resolvePostSlugSegment';
 
@@ -140,10 +140,7 @@ const pickFallbackPost = (stage: NextStage) => {
   return scored[0]?.candidate;
 };
 
-const hubMatch = HUB_CLUSTERS.find((cluster) => {
-  const haystack = `${post.data.title} ${post.data.description} ${(post.data.tags || []).join(' ')}`.toLowerCase();
-  return cluster.matchKeywords.some((keyword) => haystack.includes(keyword.toLowerCase()));
-});
+const hubMatch = primaryHubCluster(post.data.hub);
 
 const manualSteps = (post.data.nextSteps || []).reduce((acc: Record<string, any>, step) => {
   acc[step.stage] = step;
@@ -198,10 +195,10 @@ const nextSteps: StepLink[] = (['beginner', 'compare', 'action'] as NextStage[])
     };
   }
 
-  const fallbackUrl = hubMatch ? `/${lang}/${hubMatch.categoryHint}/` : `/${lang}/${post.data.category}/`;
+  const fallbackUrl = hubMatch ? hubMatch.href : `/${lang}/${post.data.category}/`;
   return {
     stage,
-    title: hubMatch ? hubMatch.labels[lang === 'ja' ? 'ja' : 'en'].title : stageText[stage][lang === 'ja' ? 'ja' : 'en'],
+    title: hubMatch ? hubMatch.labels.ja.title : stageText[stage][lang === 'ja' ? 'ja' : 'en'],
     url: fallbackUrl,
     reason: lang === 'ja' ? 'ハブ入口へフォールバック' : 'Hub fallback',
   };

@@ -1,0 +1,177 @@
+---
+// Starlight 標準ヘッダーに、サイドバーのないページ（トップ・about・privacy）用のスマホメニューを足す。
+// サイドバーのあるページは Starlight 標準のハンバーガーが同じ位置に出るため、二重にしない。
+import Default from '@astrojs/starlight/components/Header.astro';
+import { topCategoriesForLang, labelForCategory } from '../../data/contentCategories';
+
+const { hasSidebar } = Astro.locals.starlightRoute;
+
+const items = [
+  { href: '/ja/', label: 'トップ' },
+  ...topCategoriesForLang('ja').map((cat) => ({
+    href: `/ja/${cat}/`,
+    label: labelForCategory(cat, 'ja'),
+  })),
+  { href: '/ja/about/', label: 'サイトについて' },
+];
+
+const current = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+---
+
+<Default />
+
+{
+  !hasSidebar && (
+    <bouon-menu class="print:hidden">
+      <button
+        type="button"
+        class="bouon-menu__btn"
+        aria-expanded="false"
+        aria-controls="bouon-menu-panel"
+        aria-label="メニューを開く"
+      >
+        <svg class="bouon-menu__open" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path fill="currentColor" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+        </svg>
+        <svg class="bouon-menu__close" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4 6.4 5z"
+          />
+        </svg>
+      </button>
+      <nav id="bouon-menu-panel" class="bouon-menu__panel" aria-label="カテゴリ" hidden>
+        <ul>
+          {items.map((item) => (
+            <li>
+              <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </bouon-menu>
+  )
+}
+
+<script>
+  class BouonMenu extends HTMLElement {
+    connectedCallback() {
+      const btn = this.querySelector<HTMLButtonElement>('.bouon-menu__btn');
+      const panel = this.querySelector<HTMLElement>('.bouon-menu__panel');
+      if (!btn || !panel) return;
+
+      // header.header の backdrop-filter が position: fixed の基準になりパネルが閉じ込められるため、body 直下へ移す
+      document.body.appendChild(panel);
+
+      const setOpen = (open: boolean) => {
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+        panel.hidden = !open;
+        document.body.toggleAttribute('data-mobile-menu-expanded', open);
+      };
+
+      btn.addEventListener('click', () => setOpen(btn.getAttribute('aria-expanded') !== 'true'));
+      panel.addEventListener('click', (e) => {
+        if ((e.target as HTMLElement).closest('a')) setOpen(false);
+      });
+      document.addEventListener('keyup', (e) => {
+        if (e.key === 'Escape' && !panel.hidden) {
+          setOpen(false);
+          btn.focus();
+        }
+      });
+      // PC幅に広げたときは閉じた状態に戻す
+      window.matchMedia('(min-width: 50rem)').addEventListener('change', (e) => {
+        if (e.matches) setOpen(false);
+      });
+    }
+  }
+  customElements.define('bouon-menu', BouonMenu);
+</script>
+
+<style is:global>
+  /* スマホのみ。サイドバーなしページのヘッダー右端に、Starlight標準ハンバーガーと同じ位置・見た目で出す */
+  @media (max-width: 49.99rem) {
+    :root:not([data-has-sidebar]) header.header {
+      padding-inline-end: calc(var(--sl-nav-gap) + var(--sl-nav-pad-x) + var(--sl-menu-button-size));
+    }
+  }
+
+  @media (min-width: 50rem) {
+    bouon-menu {
+      display: none;
+    }
+  }
+
+  .bouon-menu__btn {
+    position: fixed;
+    top: calc((var(--sl-nav-height) - var(--sl-menu-button-size)) / 2);
+    inset-inline-end: var(--sl-nav-pad-x);
+    z-index: calc(var(--sl-z-index-navbar) + 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 50%;
+    width: var(--sl-menu-button-size);
+    height: var(--sl-menu-button-size);
+    padding: 0.5rem;
+    background-color: var(--sl-color-white);
+    color: var(--sl-color-black);
+    box-shadow: var(--sl-shadow-md);
+    cursor: pointer;
+  }
+
+  .bouon-menu__btn[aria-expanded='true'] {
+    background-color: var(--sl-color-gray-2);
+    box-shadow: none;
+  }
+
+  .bouon-menu__btn[aria-expanded='false'] .bouon-menu__close,
+  .bouon-menu__btn[aria-expanded='true'] .bouon-menu__open {
+    display: none;
+  }
+
+  .bouon-menu__panel {
+    position: fixed;
+    inset-inline: 0;
+    top: var(--sl-nav-height);
+    bottom: 0;
+    z-index: var(--sl-z-index-navbar);
+    overflow-y: auto;
+    padding: 0.5rem var(--sl-nav-pad-x) 2rem;
+    background-color: var(--sl-color-bg-sidebar);
+    border-top: 1px solid var(--sl-color-hairline);
+  }
+
+  .bouon-menu__panel[hidden] {
+    display: none;
+  }
+
+  .bouon-menu__panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bouon-menu__panel li {
+    margin: 0;
+    border-bottom: 1px solid var(--sl-color-hairline);
+  }
+
+  .bouon-menu__panel a {
+    display: block;
+    padding: 1rem 0.25rem;
+    min-height: 3rem;
+    color: var(--sl-color-white);
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  .bouon-menu__panel a[aria-current='page'] {
+    color: var(--sl-color-accent);
+    font-weight: 700;
+  }
+</style>

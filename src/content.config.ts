@@ -1,6 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { z } from 'zod';
 import { glob } from 'astro/loaders';
+import { HUB_CLUSTER_KEYS } from './data/hubClusters';
 
 const baseSchema = ({ image }: any) => z.object({
   title: z.string().max(100),
@@ -44,6 +45,9 @@ const baseSchema = ({ image }: any) => z.object({
 
   // カテゴリ index 記事向けのスターター手動キュレーション
   starterSet: z.array(z.string()).max(3).optional(),
+
+  // トップの入口カード（hubClusters）への所属と表示順。{ クラスターkey: 表示順（1が最上位） }
+  hub: z.partialRecord(z.enum(HUB_CLUSTER_KEYS), z.number().int().min(1).max(9)).optional(),
 });
 
 // 言語ファースト構造: src/content/{lang}/{category}/{subcategory}/{slug}/index.mdx

@@ -15,6 +15,7 @@
 
 - `generate-image.js`
 - `build-interlink-postlist.mjs`
+- `build-hub-list.mjs`（トップの入口カードの所属記事一覧。出力: `.workspace/.data-set/hub-cluster-list.md`）
 - `generate-linkcheck-task.mjs`
 - `generate_post_list.js`
 - `consolidate-tags.js`

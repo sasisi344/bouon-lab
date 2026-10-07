@@ -41,6 +41,8 @@
 | 製品スペック（ヤマハ・カワイ等）・Dr値・測定基準・BtoB材料 | `05_商品/product_specifications.md` | ○ 2026-03-31。価格は再確認 |
 | BtoB建材・メーカー・市場 | `05_商品/analysis-b2b-manufacturer-materials.md`、`05_商品/analysis-global-soundproof-blanket-market-2026.md` | ○ |
 | 権威性UP用の補足データ（個室ブース市場、加湿器、ニトリ等） | `05_商品/research-2026-06-10-supplementary.md` | ◎ 反映先記事つき |
+| `05_商品/research-2026-10-07-private-booth.md` | 個室ブースの防音室との違い、遮音dB公表値の比較（測定条件の注意）、価格・サブスク、消防法（可動式ブース）、需要チャネル（駅・大学・自治体・マンション共用部ほか）、未確認事項 | ◎ |
+| 個室ブース（ワークブース）の遮音性能・価格・消防法・需要チャネル | `05_商品/research-2026-10-07-private-booth.md` | ◎ 2026-10-07。価格・消防庁基準は記事前に再確認。タスクはT-22 |
 | タワーマンションの防音（床スラブ厚、ジム騒音） | `tower-mansion-sound-insulation-memo.md` | ○ |
 | 検索クエリの勝ち筋・改善機会（3月時点） | `06_リサーチ・管理/query-analysis-90days-20260324.md` | ○ 最新の実績は `.workspace/access-data/`（`bouon-weekly-report` skill） |
 | 重要クエリと既存記事の突合（カバー済み／加筆／新規） | `seo-check/gsc-analysis-20260702/query-article-match-20260702.md` | ○ 前期データ基準 |
@@ -61,6 +63,7 @@
 |---|---|---|
 | `interlink-postlist.md` | 掲載記事の一覧（lang/category/slug/title/tags/internal_url/draft）。内部リンクの正本 | ◎ |
 | `interlink-tag-clusters.md` | カテゴリ別・共有タグ別の記事クラスタ（`draft: false` のみ） | ◎ |
+| `hub-cluster-list.md` | トップの入口カード6枚の所属記事（frontmatter `hub` の集計。所属の全記事から3本がアクセスごとにランダムで出る。表示順1〜3はJS無効時の初期表示）。再生成は `node .workspace/scripts/build-hub-list.mjs`（手編集しない） | ◎ 2026-10-07 |
 | `ctr-check-list.md` | CTR改善チェックリスト（W28版、2026-07-08） | ○ |
 | `pagerank-list.md` | 順位改善／深追い不要チェックリスト（W28版、2026-07-08） | ○ |
 | `tower-mansion-sound-insulation-memo.md` | タワマンの防音性能メモ | ○ |

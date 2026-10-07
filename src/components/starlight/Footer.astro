@@ -1,4 +1,5 @@
 ---
+import BackToTop from '../BackToTop.astro';
 // BouonLab カスタムフッター（日本語固定・starlightRoute 非依存）
 const siteTitle = 'BouonLab';
 const prefix = '/ja';
@@ -29,6 +30,8 @@ const year = new Date().getFullYear();
     <p class="bouon-footer__copy">© {year} {siteTitle}</p>
   </div>
 </footer>
+
+<BackToTop />
 
 <style>
   .bouon-footer {

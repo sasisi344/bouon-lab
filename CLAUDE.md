@@ -34,6 +34,7 @@ npx astro check # 型チェック
 | `bouon-research` | 価格・補助金・実在企業名等の事実確認、AI Overview対策、Tier C記事の情報更新時 |
 | `bouon-rewrite-strategy` | 既存記事の改善優先度判定・リライト実行時 |
 | `bouon-internal-link-ops` | 内部リンクの追加・変更、公開前チェック時 |
+| `bouon-hub-cards` | トップの入口カード6枚への掲載（frontmatter `hub`）の追加・変更、伸ばしたい記事のテコ入れ判断時 |
 | `bouon-task-ops` | `.workspace/.task/` の参照・更新・アーカイブ時 |
 | `bouon-dataset-lookup` | 記事作成・リライトで防音スペック・市場データ・調査メモなどの既存ナレッジを探すとき |
 | `bouon-weekly-report` | `.workspace/access-data/` のGSC/GA4の週報集計・前週比較・ページ別推移 |

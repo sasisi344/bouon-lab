@@ -45,35 +45,37 @@ function getUrl(post: any) {
 
 const HUB_POSTS_COUNT = 3;
 
+// 記事の frontmatter `hub`（クラスターkey）が所属＝抽選の母集団。表示順は「JS無効時の初期表示」を決める
+// 来訪者ごとの抽選（HUB_POSTS_COUNT 本）は、下の is:inline スクリプトで行う（静的ビルドのため）
 const hubRoutes = HUB_CLUSTERS.map((cluster) => {
-  const pool = filteredPosts.filter((post) => {
-    const text = `${post.data.title} ${post.data.description} ${(post.data.tags || []).join(' ')}`.toLowerCase();
-    return cluster.matchKeywords.some((keyword) => text.includes(keyword.toLowerCase()));
-  });
+  const members = filteredPosts
+    .filter((post) => post.data.hub?.[cluster.key] !== undefined)
+    .sort(
+      (a, b) =>
+        (a.data.hub![cluster.key] as number) - (b.data.hub![cluster.key] as number) ||
+        b.data.date.valueOf() - a.data.date.valueOf(),
+    );
 
-  const sortedPool = pool.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-  const categoryFallback =
-    lang === 'en' && cluster.categoryHintEn
-      ? cluster.categoryHintEn
-      : cluster.categoryHint;
-  const fallbackPool = filteredPosts
-    .filter((post) => post.data.category === categoryFallback)
-    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
-  const matchedIds = new Set(sortedPool.map((post) => post.id));
-  const mergedPool = [
-    ...sortedPool,
-    ...fallbackPool.filter((post) => !matchedIds.has(post.id)),
-  ];
-  const featuredPosts = mergedPool.slice(0, HUB_POSTS_COUNT);
+  const orders = members.map((post) => post.data.hub![cluster.key] as number);
+  if (members.length < HUB_POSTS_COUNT) {
+    console.warn(`[hub] ${cluster.key}: 所属が${members.length}本（${HUB_POSTS_COUNT}本未満）`);
+  }
+  if (new Set(orders).size !== orders.length) {
+    console.warn(`[hub] ${cluster.key}: 表示順が重複しています`);
+  }
 
   return {
     ...cluster,
-    featuredPosts,
-    count: sortedPool.length || fallbackPool.length,
-    categoryUrl: `/${lang}/${categoryFallback}/`,
+    poolPosts: members,
+    count: filteredPosts.filter((post) => post.data.category === cluster.category).length,
   };
-}).filter((route) => route.featuredPosts.length > 0);
+}).filter((route) => route.poolPosts.length > 0);
+
+for (const post of await getCollection('posts')) {
+  if (post.data.draft === true && post.data.hub) {
+    console.warn(`[hub] draft記事に hub が付いています: ${post.id}`);
+  }
+}
 
 // ヒーロー画像の最適化
 const optimizedHero = await getImage({ src: heroImage, format: 'webp' });
@@ -147,12 +149,12 @@ const directoryCategories = topCategoriesForLang(uiLang);
       <div class="hub-grid">
         {hubRoutes.map((hub) => (
           <article class="hub-card">
-            <div class="hub-label">{hub.labels[lang as 'ja' | 'en'].audience}</div>
-            <h3>{hub.labels[lang as 'ja' | 'en'].title}</h3>
-            <p>{hub.labels[lang as 'ja' | 'en'].pain}</p>
-            <ul class="hub-entries">
-              {hub.featuredPosts.map((post) => (
-                <li>
+            <div class="hub-label">{hub.labels.ja.audience}</div>
+            <h3>{hub.labels.ja.title}</h3>
+            <p>{hub.labels.ja.pain}</p>
+            <ul class="hub-entries" data-hub-visible={HUB_POSTS_COUNT}>
+              {hub.poolPosts.map((post, index) => (
+                <li hidden={index >= HUB_POSTS_COUNT}>
                   <a
                     href={getUrl(post)}
                     data-track-event="hub_click"
@@ -166,19 +168,39 @@ const directoryCategories = topCategoriesForLang(uiLang);
             </ul>
             <div class="hub-footer">
               <a
-                href={hub.categoryUrl}
+                href={hub.href}
                 class="hub-link"
                 data-track-event="hub_click"
                 data-track-source="hub_cta"
-                data-track-label={hub.labels[lang as 'ja' | 'en'].title}
+                data-track-label={hub.labels.ja.title}
               >
-                {hub.labels[lang as 'ja' | 'en'].primaryCta}
+                {hub.labels.ja.primaryCta}
               </a>
-              <span class="hub-count">{lang === 'ja' ? `${hub.count}件` : `${hub.count} posts`}</span>
+              <span class="hub-count">{`${hub.count}件`}</span>
             </div>
           </article>
         ))}
       </div>
+      <script is:inline>
+        // 各カードの所属記事を並べ替え、先頭 data-hub-visible 本だけ表示する（クリックの集中を避ける）
+        // JS無効時は、HTML上の表示順1〜3がそのまま見える
+        (function shuffleHubEntries() {
+          document.querySelectorAll('.hub-entries[data-hub-visible]').forEach(function (list) {
+            var visible = Number(list.getAttribute('data-hub-visible')) || 3;
+            var items = Array.prototype.slice.call(list.children);
+            for (var i = items.length - 1; i > 0; i--) {
+              var j = Math.floor(Math.random() * (i + 1));
+              var tmp = items[i];
+              items[i] = items[j];
+              items[j] = tmp;
+            }
+            items.forEach(function (li, index) {
+              li.hidden = index >= visible;
+              list.appendChild(li);
+            });
+          });
+        })();
+      </script>
     </section>
 
     <AdUnit placement="rectangleList" class="ad-placement--page-top" />

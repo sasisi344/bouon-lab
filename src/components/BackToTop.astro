@@ -1,0 +1,141 @@
+---
+// 右下に固定表示する「上へ戻る」ボタン。
+// - 400px以上スクロールしたときだけ出す
+// - 下へスクロールしている間は隠し、上へ戻す動きをしたときに出す（読む邪魔をしない）
+// - AdSense のアンカー広告（画面下部に固定）が出ている間は、その高さ分だけ上にずらす
+---
+
+<button type="button" class="back-to-top print:hidden" aria-label="ページの先頭へ戻る" tabindex="-1">
+  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+    <path fill="currentColor" d="M12 7.4 5.7 13.7l1.4 1.4L12 10.2l4.9 4.9 1.4-1.4L12 7.4z" />
+  </svg>
+</button>
+
+<script>
+  const SHOW_AFTER = 400; // これ未満のスクロール量では出さない
+  const DIRECTION_THRESHOLD = 8; // 向きの判定に使う最小のスクロール量（微小な揺れを無視）
+  const AD_GAP = 12; // 広告とボタンの間隔(px)
+  // Google が自動広告のアンカーに付ける属性。出現・消去（×で閉じる）で属性が変わる
+  const ANCHOR_SELECTOR = 'ins.adsbygoogle[data-anchor-status], ins.adsbygoogle[data-anchor-shown]';
+
+  const btn = document.querySelector<HTMLButtonElement>('.back-to-top');
+
+  if (btn) {
+    let lastY = window.scrollY;
+    let visible = false;
+    let ticking = false;
+
+    const setVisible = (next: boolean) => {
+      if (next === visible) return;
+      visible = next;
+      btn.classList.toggle('is-visible', next);
+      btn.tabIndex = next ? 0 : -1;
+    };
+
+    const onScroll = () => {
+      ticking = false;
+      const y = window.scrollY;
+      const delta = y - lastY;
+      if (y < SHOW_AFTER) {
+        setVisible(false);
+      } else if (delta <= -DIRECTION_THRESHOLD) {
+        setVisible(true); // 上へスクロール中
+      } else if (delta >= DIRECTION_THRESHOLD) {
+        setVisible(false); // 下へスクロール中
+      }
+      if (Math.abs(delta) >= DIRECTION_THRESHOLD || y < SHOW_AFTER) lastY = y;
+    };
+
+    // 画面下端に固定されているアンカー広告の高さを、ボタンの持ち上げ量にする
+    const updateAdOffset = () => {
+      let offset = 0;
+      document.querySelectorAll<HTMLElement>(ANCHOR_SELECTOR).forEach((el) => {
+        if (el.dataset.anchorStatus === 'dismissed' || el.dataset.anchorShown === 'false') return;
+        const rect = el.getBoundingClientRect();
+        const pinnedToBottom = Math.abs(window.innerHeight - rect.bottom) < 2;
+        if (pinnedToBottom && rect.height > 0) offset = Math.max(offset, rect.height + AD_GAP);
+      });
+      btn.style.setProperty('--back-to-top-ad-offset', `${offset}px`);
+    };
+
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(onScroll);
+        }
+      },
+      { passive: true },
+    );
+    window.addEventListener('resize', updateAdOffset, { passive: true });
+
+    // 広告は読み込み後に差し込まれるため、DOMと属性の変化を見て追従する
+    let adTimer: number | undefined;
+    new MutationObserver(() => {
+      window.clearTimeout(adTimer);
+      adTimer = window.setTimeout(updateAdOffset, 150);
+    }).observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['data-anchor-status', 'data-anchor-shown', 'style'],
+    });
+
+    btn.addEventListener('click', () => {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+
+    updateAdOffset();
+  }
+</script>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: calc(max(1rem, env(safe-area-inset-bottom)) + var(--back-to-top-ad-offset, 0px));
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border: 1px solid var(--sl-color-accent);
+    border-radius: 50%;
+    background-color: var(--sl-color-bg-nav);
+    color: var(--sl-color-accent-high);
+    box-shadow: var(--sl-shadow-md);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0.5rem);
+    transition:
+      opacity 0.2s,
+      transform 0.2s,
+      visibility 0.2s,
+      bottom 0.2s,
+      background-color 0.2s,
+      color 0.2s;
+  }
+
+  .back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .back-to-top:hover,
+  .back-to-top:focus-visible {
+    background-color: var(--sl-color-accent);
+    color: var(--sl-color-black);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top {
+      transition: none;
+    }
+  }
+</style>
