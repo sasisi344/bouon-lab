@@ -171,7 +171,7 @@ export default defineConfig({
     '/ja/column/others/streaming-room-layout-guide/':            '/ja/creator/streaming-room-layout-guide/',
     '/ja/column/others/soundproof-culture-japan-vs-america/':    '/ja/knowledge/soundproof-culture-japan-vs-america/',
     '/ja/column/others/vibration-isolation-technology-trend/':   '/ja/knowledge/vibration-isolation-technology-trend/',
-    '/ja/column/others/web-meeting-voice-soundleak-prevention/': '/ja/business/web-meeting-voice-soundleak-prevention/',
+    '/ja/column/others/web-meeting-voice-soundleak-prevention/': '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
     '/ja/column/others/streamer-tax-strategy/':                  '/ja/money/streamer-tax-strategy/',
     '/ja/use-case/vtuber-family-privacy-rules/':                 '/ja/creator/vtuber-family-privacy-rules/',
 
@@ -223,7 +223,7 @@ export default defineConfig({
     // ── Phase 2 カテゴリ移行リダイレクト（2026-06-01）───────────────────────
     // soundproof-room/diy → diy
     '/ja/soundproof-room/diy/bass-trap-installation-guide/':              '/ja/diy/bass-trap-installation-guide/',
-    '/ja/soundproof-room/diy/bedroom-telework-layout-soundproof/':        '/ja/diy/bedroom-telework-layout-soundproof/',
+    '/ja/soundproof-room/diy/bedroom-telework-layout-soundproof/':        '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
     '/ja/soundproof-room/diy/closet-diy-soundproof-room/':                '/ja/diy/closet-diy-soundproof-room/',
     '/ja/soundproof-room/diy/danbotchi-diy-blueprints/':                  '/ja/diy/danbotchi-diy-blueprints/',
     '/ja/soundproof-room/diy/diy-led-acoustic-panels/':                   '/ja/diy/diy-led-acoustic-panels/',
@@ -271,7 +271,7 @@ export default defineConfig({
     '/ja/soundproof-room/solution/mental-health-benefits-of-silence/':        '/ja/knowledge/mental-health-benefits-of-silence/',
     '/ja/soundproof-room/solution/musician-soundproof-loan-strategy/':        '/ja/money/musician-soundproof-loan-strategy/',
     '/ja/soundproof-room/solution/telework-soundproof-loan-strategy/':        '/ja/money/telework-soundproof-loan-strategy/',
-    '/ja/soundproof-room/solution/workbooth-office-soundproof-trend/':        '/ja/business/workbooth-office-soundproof-trend/',
+    '/ja/soundproof-room/solution/workbooth-office-soundproof-trend/':        '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
     // soundproof-rental/knowledge → creator
     '/ja/soundproof-rental/knowledge/bourentakl-streamer-settingsetubi/': '/ja/creator/bourentakl-streamer-settingsetubi/',
     '/ja/soundproof-rental/knowledge/streamer-rental-selection-guide/':   '/ja/creator/streamer-rental-selection-guide/',
@@ -332,7 +332,7 @@ export default defineConfig({
     '/posts/streaming-room-layout-examples/':   '/ja/creator/streaming-room-layout-guide/',
     '/posts/noise-regulation-update-2025/':     '/ja/knowledge/noise-regulation-update-2025/',
     '/posts/soundproof-culture-japan-vs-america/':'/ja/knowledge/soundproof-culture-japan-vs-america/',
-    '/posts/workbooth-office-soundproof-trend/':'/ja/business/workbooth-office-soundproof-trend/',
+    '/posts/workbooth-office-soundproof-trend/':'/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
     '/posts/hsp-soundproof-room-guide/':        '/ja/soundproof-room/hsp-soundproof-room-guide/',
     '/posts/bourental-syaouseid-choiceindi/':    '/ja/soundproof-rental/bourental-syaouseid-choiceindi/',
     '/posts/vtuber-family-privacy-rules/':       '/ja/creator/vtuber-family-privacy-rules/',
@@ -473,7 +473,7 @@ export default defineConfig({
     '/posts/tokyo-soundproof-rental-summary/':               '/ja/local/tokyo-soundproof-rental-summary/',
     '/posts/vibration-isolation-technology-trend/':          '/ja/knowledge/vibration-isolation-technology-trend/',
     '/posts/vtuber-soundproof-environment-complete-guide/':  '/ja/creator/vtuber-soundproof-environment-complete-guide/',
-    '/posts/web-meeting-voice-soundleak-prevention/':        '/ja/business/web-meeting-voice-soundleak-prevention/',
+    '/posts/web-meeting-voice-soundleak-prevention/':        '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
     '/posts/wooden-apartment-soundproof-guide/':             '/ja/diy/wooden-apartment-soundproof-guide/',
 
     // ── 旧Hugo /posts/ 未登録分・第3弾（2026-07-02 全zenkiページ精査、内容類似の個別マッチング27件）───
@@ -666,7 +666,7 @@ export default defineConfig({
     '/ja/solutions/diy-internal-window-road-noise-reduction/':               '/ja/diy/diy-internal-window-road-noise-reduction/',
     '/ja/solutions/soundproof-room-types/':                                  '/ja/soundproof-room/',
     '/ja/solutions/bouon-rental-yatinsouba/':                                '/ja/soundproof-rental/',
-    '/ja/knowledge/workbooth-office-soundproof-trend/':                      '/ja/business/workbooth-office-soundproof-trend/',
+    '/ja/knowledge/workbooth-office-soundproof-trend/':                      '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
     '/ja/solutions/soundproof-app-review-2026/':                             '/ja/knowledge/soundproof-app-review-2026/',
 
     // ── 統廃合リダイレクト（2026-09-16、アクセスほぼゼロのカニバリ記事を統合）─────
@@ -685,6 +685,10 @@ export default defineConfig({
     '/ja/local/okayama-soundproof-rental-guide/':                           '/ja/local/regional-city-soundproof-rental-guide/',
     '/ja/local/kumamoto-soundproof-rental-guide/':                          '/ja/local/regional-city-soundproof-rental-guide/',
     '/ja/local/niigata-soundproof-rental-guide/':                           '/ja/local/regional-city-soundproof-rental-guide/',
+    // 在宅ワーク・Web会議・寝室仕事の3記事を統合（2026-10-07）
+    '/ja/business/web-meeting-voice-soundleak-prevention/':                     '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
+    '/ja/business/workbooth-office-soundproof-trend/':                          '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
+    '/ja/diy/bedroom-telework-layout-soundproof/':                              '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
   },
   image: {
     domains: ['m.media-amazon.com', 'ir-jp.amazon-adsystem.com'],

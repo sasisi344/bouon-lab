@@ -21,8 +21,6 @@
 | ja | business | `soundproof-industry-news-2026-06` |  | 防音賃貸・防音室ニュースまとめ｜2026年最新の業界動向と新製品情報 | 防音賃貸, 防音室, 市場動向, 業界ニュース, 防音ブース | `/ja/business/soundproof-industry-news-2026-06/` | false |
 | ja | business | `soundproof-market-esg-trend` |  | 防音市場にESGの波｜省エネ構造・循環素材がもたらす新トレンド | ESG, 省エネ, 循環素材, 防音市場, サステナビリティ | `/ja/business/soundproof-market-esg-trend/` | false |
 | ja | business | `soundproof-space-business-guide` |  | 防音スペースのビジネス活用ガイド｜副業シェアから事業化まで3パターン | 防音室, シェアリングエコノミー, 副業, レンタル事業, スモールビジネス | `/ja/business/soundproof-space-business-guide/` | false |
-| ja | business | `web-meeting-voice-soundleak-prevention` |  | Web会議で「声が小さい」と言われたら、マイクを買い換えるな。壁を疑え。 | Web会議, テレワーク, パフォーマンス, プレゼン, 心理的安全性 | `/ja/business/web-meeting-voice-soundleak-prevention/` | false |
-| ja | business | `workbooth-office-soundproof-trend` |  | Web会議の「声漏れ」を劇的に減らす｜パーティションを魔法の壁に変える裏技 | パーティション, Web会議, テレワーク, オフィス設計, プライバシー | `/ja/business/workbooth-office-soundproof-trend/` | false |
 | ja | creator | `asmr-external-noise-elimination` |  | ASMR配信者が外音を消す部屋づくり｜現実的な防音対策まとめ | ASMR, 配信・実況, 外音対策, 遮音, 防音対策 | `/ja/creator/asmr-external-noise-elimination/` | false |
 | ja | creator | `asmr-vtuber-booth-guide` |  | 【2026年最新】ASMR・VTuber専用防音ブースの選び方。失敗しないための「静寂と配信効率」の両立術 | VTuber, ASMR, 防音室, 配信・実況 | `/ja/creator/asmr-vtuber-booth-guide/` | false |
 | ja | creator | `bourentakl-streamer-settingsetubi` |  | VTuber・ゲーム配信者向け防音賃貸の選び方｜回線・電源・防音性能で失敗しない完全ガイド | VTuber, 配信・実況, 防音賃貸, ネット回線, 遮音性能 | `/ja/creator/bourentakl-streamer-settingsetubi/` | false |
@@ -65,7 +63,6 @@
 | ja | creator | `vtuber-soundproof-environment-complete-guide` |  | 配信者の防音室、買うなら今｜D値の選び方と資金計画・節税で損しない判断基準 | VTuber, 配信・実況, 防音室, 資金計画, 確定申告, D値 | `/ja/creator/vtuber-soundproof-environment-complete-guide/` | false |
 | ja | creator | `young-streamer-smartphone-monetization-roadmap` |  | 防音室なしで配信を始める｜スマホ1台から収益化につなげる若年層のロードマップ | 配信・実況, 若年層, 収益化, スマホ配信, 防音室 | `/ja/creator/young-streamer-smartphone-monetization-roadmap/` | false |
 | ja | diy | `bass-trap-installation-guide` |  | ベーストラップ自作・設置ガイド｜低音こもりを解消する配置・測定の全手順 | ベーストラップ, 低音, 音響補正, 吸音材, 防音室 | `/ja/diy/bass-trap-installation-guide/` | false |
-| ja | diy | `bedroom-telework-layout-soundproof` |  | 「寝室でテレワーク」がつらい理由。睡眠と仕事を分ける「部屋の中の部屋」レイアウト | テレワーク, 寝室, レイアウト, 防音室, 睡眠 | `/ja/diy/bedroom-telework-layout-soundproof/` | false |
 | ja | diy | `closet-diy-soundproof-room` |  | 防音室を自作する方法｜クローゼットDIYで3万円から作れる録音ブース | 防音室 自作, クローゼット改造, DIY防音, 宅録, 歌ってみた, ROI | `/ja/diy/closet-diy-soundproof-room/` | false |
 | ja | diy | `danbocchi-floor-protection` |  | 木造アパート2階に「だんぼっち」は危険？点でかかる荷重を分散させるDIY補強術 | 木造アパート, 床荷重, だんぼっち, OTODASU, DIY防音, 床補強 | `/ja/diy/danbocchi-floor-protection/` | false |
 | ja | diy | `danbotchi-diy-blueprints` |  | 【寸法例あり】自作防音ブースの作り方｜ホームセンター資材で市販品の半額以下に | DIY防音, だんぼっち, 防音室, 費用, 設計図 | `/ja/diy/danbotchi-diy-blueprints/` | false |
@@ -165,7 +162,7 @@
 | ja | soundproof-rental | `owner-renovation-musician-24h-practice-strategy` |  | 「24時間演奏可」物件という最強の差別化：プロ奏者・音楽講師を長期入居者に変えるオーナー戦略 | 不動産投資, 防音リノベ, 楽器可物件, 音楽講師, 楽器演奏, 24時間演奏可, 長期入居 | `/ja/soundproof-rental/owner-renovation-musician-24h-practice-strategy/` | false |
 | ja | soundproof-rental | `owner-renovation-shibuya-shinjuku-vtuber-strategy` |  | 渋谷・新宿エリアのマンションオーナー向け「VTuber・配信特化型」防音リノベ戦略 | 不動産投資, 防音リノベ, VTuber, 配信・実況, 渋谷, 新宿, 空室対策 | `/ja/soundproof-rental/owner-renovation-shibuya-shinjuku-vtuber-strategy/` | false |
 | ja | soundproof-rental | `pet-noise-soundproof-measures` |  | ペットの騒音は防音だけでは解決しない｜集合住宅でできる対策とその限界 | ペット, 騒音対策, 騒音トラブル, 集合住宅, マンション | `/ja/soundproof-rental/pet-noise-soundproof-measures/` | false |
-| ja | soundproof-rental | `remote-work-family-harmony-soundproof` |  | 在宅ワークで家族と快適に共存。防音で実現する「境界のある暮らし」 | テレワーク, 家族, 防音室, DIY防音, 住環境 | `/ja/soundproof-rental/remote-work-family-harmony-soundproof/` | false |
+| ja | soundproof-rental | `remote-work-family-harmony-soundproof` |  | 在宅ワークの音の悩みと防音｜家族の声・Web会議の声漏れ・寝室仕事の対策を整理 | テレワーク, 在宅ワーク, Web会議, 家族, 防音室, パーティション, 寝室 | `/ja/soundproof-rental/remote-work-family-harmony-soundproof/` | false |
 | ja | soundproof-rental | `rental-caution-cello` |  | 楽器可物件でもチェロは要注意？防音賃貸の規約と落とし穴 | チェロ, 防音賃貸, 騒音トラブル, 楽器可物件, エンドピン | `/ja/soundproof-rental/rental-caution-cello/` | false |
 | ja | soundproof-rental | `rental-price-index-13cities-soundproof` |  | 防音賃貸の家賃相場はどう決まる？13都市統計の読み方 | 防音賃貸, 家賃相場, 賃貸統計, 相場調査 | `/ja/soundproof-rental/rental-price-index-13cities-soundproof/` | false |
 | ja | soundproof-rental | `rental-proofroom-contractcheck` |  | アビテックス・ナサールの退去時費用は実際いくら？原状回復・撤去・売却の実例相場 | 防音賃貸, 原状回復, 中古売却, アビテックス, ナサール | `/ja/soundproof-rental/rental-proofroom-contractcheck/` | false |
