@@ -149,6 +149,7 @@
 | ja | money | `telework-soundproof-loan-strategy` |  | テレワーク・在宅勤務のための防音室ローン活用｜集中環境と耳の健康への戦略投資 | テレワーク, ローン, 生産性, 節税 | `/ja/money/telework-soundproof-loan-strategy/` | false |
 | ja | money | `used-soundproof-room-buying-guide` |  | 中古防音室の買い方｜相場・見極め方と『総額』で判断する購入ガイド | 中古防音室, 費用, ヤマハ, カワイ, アビテックス, ナサール | `/ja/money/used-soundproof-room-buying-guide/` | false |
 | ja | soundproof-rental | `apartment-weight-limit-500kg` |  | 築20年のマンションに重さ500kgの防音室を置ける？床補強なしで設置するための安全基準と計算術 | 耐荷重, 床荷重計算, マンション, ヤマハ, 防音室導入, 木造戸建て | `/ja/soundproof-rental/apartment-weight-limit-500kg/` | false |
+| ja | soundproof-rental | `bedroom-noise-type-solution-guide` |  | 上の階の足音・隣の話し声で眠れない｜音の種類で変わる寝室の騒音対策の選び方 | 睡眠, 騒音対策, 賃貸, 足音, 生活音, 寝室 | `/ja/soundproof-rental/bedroom-noise-type-solution-guide/` | false |
 | ja | soundproof-rental | `bouon-rental-market-guide` |  | 【2026完全版】防音賃貸・防音マンション完全ガイド｜全国相場・D値・ブランド・選び方を総まとめ | 防音賃貸, 家賃相場, 防音マンション, ミュージション, D値, 楽器可物件 | `/ja/soundproof-rental/bouon-rental-market-guide/` | false |
 | ja | soundproof-rental | `bouonrental-market-research2025` |  | 【2026年最新】防音賃貸の家賃相場とトレンド｜需要30倍の衝撃と狙い目エリア | 防音賃貸, 市場トレンド, 家賃相場, 防音室, 市場分析 | `/ja/soundproof-rental/bouonrental-market-research2025/` | false |
 | ja | soundproof-rental | `bourental-syaouseid-choiceindi` |  | 防音賃貸の「D値」とは？楽器別の推奨レベルと失敗しない物件選びの基準 | D値, 遮音性能, 防音賃貸, 楽器可物件, 物件選び | `/ja/soundproof-rental/bourental-syaouseid-choiceindi/` | false |
