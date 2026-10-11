@@ -1,0 +1,79 @@
+﻿query,Google,Bing,区分(G),区分(B),軸,テーマ,段階(仮),意図(仮),サイトで言及のある記事,備考
+防音室 配信者,○,○,＋,＋,A配信者軸,シード,—,—,,シード語。両ツールで先頭
+防音室 配信者 値段,○,,＋,,A配信者軸,価格,S1,Buy,creator/streamer-soundproof-budget-roadmap; creator/vtuber-soundproof-environment-complete-guide,
+防音室 配信者 おすすめ,○,,＋,,A配信者軸,選び方,S1,Compare,creator/asmr-vtuber-booth-guide,
+防音室 配信者向け,○,,＋,,A配信者軸,表記ゆれ,S1,Buy,,
+ヤマハ 防音室 配信者,○,,＋,,A配信者軸,製品,S1,Compare,creator/streamer-soundproof-rental-share; creator/streamer-soundproof-room-comprehensive-guide,ヤマハ指名＋配信者
+配信者 防音室 大きさ,○,,＋,,A配信者軸,サイズ,S1,Know,business/report-japan-asmr-vtuber-streaming-studio-standard,畳数の見出しがあるのは技術解説(business)側
+配信者用 防音室,○,,＋,,A配信者軸,表記ゆれ,S1,Buy,,
+配信者 防音室 なし,○,,＋,,A配信者軸,防音室なし,S1,Know,creator/young-streamer-smartphone-monetization-roadmap,「防音室を買わずに始める」層
+配信者 防音室 賃貸,○,,＋,,A配信者軸,賃貸・立地,S1,Buy,creator/streamer-rental-selection-guide; creator/bourentakl-streamer-settingsetubi,
+配信者 防音室 レンタル,○,,＋,,A配信者軸,レンタル,S1,Buy,creator/streamer-soundproof-rental-share,
+配信者 防音室 何畳,○,,＋,,A配信者軸,サイズ,S1,Know,business/report-japan-asmr-vtuber-streaming-studio-standard,「1.5畳の法則」はこの記事内
+配信者 防音室 エアコン,○,,＋,,A配信者軸,設備,S1〜S2,Know,creator/bourentakl-streamer-settingsetubi; creator/asmr-vtuber-booth-guide,購入前の確認と導入後の暑さの両方
+配信者 防音室 サイズ,○,,＋α,,A配信者軸,サイズ,S1,Know,business/report-japan-asmr-vtuber-streaming-studio-standard,
+配信者 防音室 マンション,○,,＋α,,A配信者軸,賃貸・立地,S1,Know,creator/soundproof-rental-life-streamer,設置可否・管理規約の疑問
+防音室 配信者用,,○,,＋,A配信者軸,表記ゆれ,S1,Buy,,
+配信者防音室,,○,,＋,A配信者軸,表記ゆれ,S1,Buy,,スペースなし表記
+防音室 wi-fi,,○,,＋,B防音室一般,設備(Wi-Fi・電波),—,Know,soundproof-room/wifi-connection-guide,GSCでも「防音室 wifi」順位12(3か月・表示3)
+防音室 簡易 設置 マンション,,○,,＋,B防音室一般,DIY・リフォーム,—,Do,,
+防音賃貸.com,,○,,＋,B防音室一般,指名(他サイト),—,—,,ポータルの指名検索。自サイトの対象外
+防音室 マンション 賃貸 東京,,○,,＋,B防音室一般,賃貸・立地,—,Buy,local/tokyo-soundproof-rental-summary,
+防音 個室 レンタルスペース 東京,,○,,＋,B防音室一般,レンタル,—,Buy,,時間貸しの個室。サイト内にほぼ記事なし
+防音室配信者,,○,,＋,A配信者軸,表記ゆれ,S1,Buy,,スペースなし表記
+防音、吸音シート,,○,,＋＋,B防音室一般,建材,—,Know,,
+防音室 0.8畳,,○,,＋＋,B防音室一般,サイズ,—,Know,business/report-japan-asmr-vtuber-streaming-studio-standard,個人ブースの規格サイズ。配信側と重なる
+防音室 4.5畳,,○,,＋＋,B防音室一般,サイズ,—,Know,money/soundproof-room-price-market,楽器・ホームシアター側の大きさ
+配信者 防音室,,○,,＋＋,A配信者軸,表記ゆれ,S1,Buy,,語順違い
+防音室配信者用,,○,,＋＋,A配信者軸,表記ゆれ,S1,Buy,,スペースなし表記
+防音室 wi fi,,○,,＋＋,B防音室一般,設備(Wi-Fi・電波),—,Know,soundproof-room/wifi-connection-guide,表記ゆれ
+d-room 防音,,○,,＋＋,B防音室一般,製品・型番,—,Know,,
+防音室 one-z,,○,,＋＋,B防音室一般,製品・型番,—,Know,,サイト内の言及0
+カワイ 防音室 自由設計 値段,,○,,＋＋,B防音室一般,価格,—,Know,soundproof-room/custom-home-soundproof-builder-selection,
+オーディオ ルーム 防音 diy,,○,,＋＋,B防音室一般,DIY・リフォーム,—,Do,,
+マンション 防音室 リフォーム 費用,,○,,＋＋,B防音室一般,DIY・リフォーム,—,Know,,
+防音室付き マンション 東京 購入,,○,,＋＋,B防音室一般,賃貸・立地,—,Buy,,
+マンション 壁 防音 リフォーム,,○,,＋＋,B防音室一般,DIY・リフォーム,—,Do,,
+マンション 天井 防音 diy,,○,,＋＋,B防音室一般,DIY・リフォーム,—,Do,,
+マンション ピアノ 防音室 費用,,○,,＋＋,B防音室一般,DIY・リフォーム,—,Know,money/piano-soundproof-mortgage-tax-guide,楽器側
+防音室 マンション 賃貸 大阪,,○,,＋＋,B防音室一般,賃貸・立地,—,Buy,local/osaka-soundproof-rental-guide,
+防音賃貸 com,,○,,＋＋,B防音室一般,指名(他サイト),—,—,,
+防音室付き 一戸建て 東京 賃貸,,○,,＋＋,B防音室一般,賃貸・立地,—,Buy,,
+防音シート 壁 賃貸 おすすめ,,○,,＋＋,B防音室一般,DIY・リフォーム,—,Compare,,
+防音シート 床 賃貸 おすすめ,,○,,＋＋,B防音室一般,DIY・リフォーム,—,Compare,,
+防音室賃貸マンション東京,,○,,＋＋,B防音室一般,賃貸・立地,—,Buy,local/tokyo-soundproof-rental-summary,スペースなし表記
+防音室付きマンション東京賃貸,,○,,＋＋,B防音室一般,賃貸・立地,—,Buy,local/tokyo-soundproof-rental-summary,スペースなし表記
+防音室付き賃貸マンション東京,,○,,＋＋,B防音室一般,賃貸・立地,—,Buy,local/tokyo-soundproof-rental-summary,スペースなし表記
+中古 一戸建て 地下室 防音室 東京,,○,,＋＋,B防音室一般,賃貸・立地,—,Buy,,
+ヤマハ 防音室 レンタル 料金,,○,,＋＋,B防音室一般,レンタル,—,Know,money/soundproof-room-rental-cost,
+ヤマハ防音室0.5,,○,,＋α,B防音室一般,製品・型番,—,Know,,
+防音室 1.2畳,,○,,＋α,B防音室一般,サイズ,—,Know,,
+防音室 1.5畳,,○,,＋α,B防音室一般,サイズ,—,Know,business/report-japan-asmr-vtuber-streaming-studio-standard,配信ブースの標準的な大きさ
+防音ドアt-2,,○,,＋α,B防音室一般,製品・型番,—,Buy,,
+防音室 1.5,,○,,＋α,B防音室一般,サイズ,—,Know,,
+防音シート 1.8*3.4,,○,,＋α,B防音室一般,建材,—,Buy,,
+東京防音 thi-608,,○,,＋α,B防音室一般,製品・型番,—,Buy,,
+防音室 4 . 5 畳,,○,,＋α,B防音室一般,サイズ,—,Know,,表記ゆれ
+防音シート 1 8 × 5 4,,○,,＋α,B防音室一般,建材,—,Buy,,
+木造2×4造 防音,,○,,＋α,B防音室一般,DIY・リフォーム,—,Know,,
+防音シート 5.1,,○,,＋α,B防音室一般,建材,—,Buy,,
+防音シート 1 . 8 × 3 . 4,,○,,＋α,B防音室一般,建材,—,Buy,,
+防音シート 1.8,,○,,＋α,B防音室一般,建材,—,Buy,,
+防音ドア アドバンス a 防音タイプ,,○,,＋α,B防音室一般,製品・型番,—,Buy,,
+声が大きい人 おすすめ 防音 家,,○,,＋α,B防音室一般,声・歌,—,Compare,,配信者の悩みと重なる可能性
+家で歌う 防音 グッズ おすすめ,,○,,＋α,B防音室一般,声・歌,—,Compare,,歌ってみた側と重なる可能性
+恵庭市 防音工事 防衛省 対象区域,,○,,＋α,C無関係,無関係,—,—,,
+防犯ライト 人感センサー 屋外 音,,○,,＋α,C無関係,無関係,—,—,,
+防音ファストラボ®,,○,,＋α,B防音室一般,指名(他サイト),—,—,,
+ヤマハ 防音室 自由設計 価格,,○,,＋α,B防音室一般,価格,—,Know,,
+ヤマハ 防音室 レンタル 購入,,○,,＋α,B防音室一般,レンタル,—,Compare,money/soundproof-room-rental-cost; money/soundproof-room-rental-lease,
+防音ドア スペシャル s 防音タイプ,,○,,＋α,B防音室一般,製品・型番,—,Buy,,
+防音ハウス bsk-c,,○,,＋α,B防音室一般,製品・型番,—,Buy,,
+dr-40 防音室,,○,,＋α,B防音室一般,製品・型番,—,Know,creator/streamer-soundproof-room-comprehensive-guide,
+d-70 防音,,○,,＋α,B防音室一般,製品・型番,—,Know,,
+one-z 防音室,,○,,＋α,B防音室一般,製品・型番,—,Know,,サイト内の言及0
+防音キャビネット sp-1,,○,,＋α,B防音室一般,製品・型番,—,Buy,,
+rc src どっちがいい 防音,,○,,＋α,B防音室一般,DIY・リフォーム,—,Compare,,
+防音等級 t-1,,○,,＋α,B防音室一般,製品・型番,—,Know,,
+東京防音 ts-90s,,○,,＋α,B防音室一般,製品・型番,—,Buy,,
+東京防音 tw-660,,○,,＋α,B防音室一般,製品・型番,—,Buy,,

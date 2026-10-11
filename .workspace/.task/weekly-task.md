@@ -128,6 +128,37 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 
 ## 週次生データ（新しい順。直近3週分を保持し、古いものは`archive/weekly-task-archive-YYYYMMDD.md`へ移す）
 
+### W42定点観測（GSC・GA4とも2026-10-04〜10-10）
+
+> 詳細・改善タスク案は `w42-weekly-task.md`。GA4の日数はW41=8日間（9/26〜10/3）、W42=7日間のため、増減は目安。
+
+GA4（防音Lab、2026-10-11再取得）:
+
+| 指標 | W41 | W42 | 変化 |
+|---|---|---|---|
+| セッション | 207 | 303 | +46% |
+| アクティブユーザー | 185 | 260 | +41% |
+| エンゲージメント率 | 56.5% | 54.5% | -2.0pt |
+| 平均エンゲージメント時間 | 54.5秒 | 44.6秒 | -18% |
+
+- 増加分は実質の流入増ではない: Bingは横ばい（行合計130→122）。direct 74→159のうち約80行が中国・シンガポール・米国発のbot疑い（エンゲージ率3.8%・滞在1.0秒）。Teams約8→34。AI系14→8。
+- **計測不具合**: 参照元が`hub_entry`・`hub_cta`・`article_footer`のセッションが29行。`Head.astro`がイベントパラメータ名`source`で送っていてGA4の流入元と衝突している疑い（`w42-weekly-task.md`タスクA）
+- `l.threads.com`から初流入2セッション（`mansion-instrument-practice-time-rules`）
+- `soundproof-material-spec-chart`: 35セッション・Bing 29・エンゲージ97%・平均72秒（W-21は維持）
+
+GSC（7日同士、W41と比較可能）:
+
+| 指標 | W41 | W42 | 変化 |
+|---|---|---|---|
+| クリック | 8 | 11 | +38% |
+| 表示回数 | 218 | 265 | +22% |
+| CTR | 3.67% | 4.15% | +0.5pt |
+| 掲載順位（表示加重） | 18.8 | 25.2 | 悪化。`ground-loop-noise-basics`（表示5→44・順位19→68）を除くと16.7で改善 |
+
+- クリックのあったページ: `bass-trap-installation-guide` 5（表示23・9.3位）、`mansion-instrument-practice-time-rules` 1（表示50・7.4位）、`onetouch-soundproof-wall-review` 1、`daiwa-house-jiyuku-soundproof-review` 1、`soundproof-room-moving` 1、`diy-soundproof-ventilation-heat-exhaust` 1、`family-home-soundproof-reno-negotiation` 1
+- `ground-loop-noise-basics`: アース系クエリ約10種が55〜84位で新規出現（クリック0）
+- S-06統合4記事・S-07統合先2記事・S-10統合先は表示0（基準値）
+
 ### W41定点観測（GA4: 2026-09-26〜10-03、GSCは期間不一致のため参考値）
 
 > 注意: W41のGSCは2026-10-04に7日分で再取得済み（下記）。W40以前のGSCは長期累計のため週次比較には使えない。以後はカスタム1週間に固定する（`task-list.md` T-06）。
