@@ -21,6 +21,8 @@
 
 優先度別の一覧は [priority-list.md](./priority-list.md)。各バッチの表にも「優先度」「区分(案)」「統合先(案)」「理由」の列がある。
 
+区分が「統合検討」の14本は、統合先ごとにまとめた [consolidation-candidates.md](./consolidation-candidates.md) にある。
+
 配信者クラスタ（約50本）は統合・排除を決めず、段階別（これから／不満／安定）に再設計する。方針と記事の仮割り当ては [cluster-streamer.md](./cluster-streamer.md)。
 
 **3か月・W42の数字は現行URLのみ**で、旧URL（`/posts/`・`/ja/solutions/`・`/ja/knowledge/`）の実績を含まない。旧URLを含む16か月（GSC 2026-10-11取得）で見直し、優先度を変えた5本は理由欄に【16か月実績で補正】と書いてある（`rental-proofroom-contractcheck`、`bouon-dchiseinou-meyasu`、`million-yen-soundproof-room-professional`、`diy-vocal-soundproof-mask`、`soundproof-culture-japan-vs-america`）。

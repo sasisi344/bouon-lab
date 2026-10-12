@@ -40,6 +40,7 @@
 | ja | creator | `podcast-collab-recording-acoustics` |  | 2人以上のポッドキャスト・対談配信｜マイク構成と音響セッティングの基本 | 配信・実況, ポッドキャスト, マイク設定, 音響セッティング, コラボ配信 | `/ja/creator/podcast-collab-recording-acoustics/` | false |
 | ja | creator | `singer-instrumentalist-stream-soundproof` |  | ピアノ・ギター弾き語り配信の防音設計｜楽器音と声を同時に処理する | 配信・実況, 楽器演奏, 吸音パネル, 防音対策, DIY防音 | `/ja/creator/singer-instrumentalist-stream-soundproof/` | false |
 | ja | creator | `sleeping-parent-game-streaming-guide` |  | 実家暮らしのゲーム実況ガイド｜親を起こさないための防音対策と会話のコツ | 配信・実況, 実家暮らし, 親子関係, 音漏れ対策, 深夜配信 | `/ja/creator/sleeping-parent-game-streaming-guide/` | false |
+| ja | creator | `soundproof-booth-cable-management` |  | 防音室のケーブル配線術｜配信機材が増えても散らからない整理と電源の考え方 | 配信者, 防音室, ケーブル整理, 電源タップ, 配線 | `/ja/creator/soundproof-booth-cable-management/` | false |
 | ja | creator | `soundproof-booth-food-odor-management` |  | 防音ブース内での飲食、実は匂いが一番残る｜配信中の消臭・換気マネジメント | 防音ブース, 消臭対策, 換気, 配信環境, 吸音材メンテナンス | `/ja/creator/soundproof-booth-food-odor-management/` | false |
 | ja | creator | `soundproof-rental-life-streamer` |  | 防音賃貸の住み心地｜ゲーム配信者が語る引っ越して半年のリアルな暮らし | 防音賃貸, 配信・実況 | `/ja/creator/soundproof-rental-life-streamer/` | false |
 | ja | creator | `soundproof-rental-vs-diy-streamer` |  | 防音賃貸 vs 普通の部屋で防音DIY｜配信者が選ぶべきはどちらか | 配信・実況, 防音賃貸, DIY防音, VTuber, 部屋選び | `/ja/creator/soundproof-rental-vs-diy-streamer/` | false |
@@ -133,6 +134,7 @@
 | ja | money | `quiet-space-relocation-decision-guide` |  | 防音賃貸への引っ越し、失敗しない判断基準｜子育て世代の住み替えガイド | 防音賃貸, 引っ越し, 子育て世代, 住み替え, 内見チェック | `/ja/money/quiet-space-relocation-decision-guide/` | false |
 | ja | money | `small-business-soundproof-subsidy-guide` |  | 【個人事業主向け】防音室は贅沢品ではない！「小規模事業者持続化補助金」採択のための申請ノウハウ | 防音 | `/ja/money/small-business-soundproof-subsidy-guide/` | false |
 | ja | money | `soundproof-contractor-selection-guide` |  | 防音リフォーム業者の選び方｜失敗しない相見積もりと契約前チェック | 防音リフォーム, 業者選び, 相見積もり, 子育て世代, 契約チェック | `/ja/money/soundproof-contractor-selection-guide/` | false |
+| ja | money | `soundproof-room-buy-rent-sell-guide` |  | 防音室は買う？借りる？売る？予算・期間で選ぶ入口ガイド｜中古・レンタル・買取 | 防音室, 中古防音室, レンタル, 買取, 費用 | `/ja/money/soundproof-room-buy-rent-sell-guide/` | false |
 | ja | money | `soundproof-room-buyback-guide` |  | 防音室を高く売るには？買取査定のポイントと個人売買の注意点【2026年版】 | 防音室, 買取, 売却, 高く売る, 費用 | `/ja/money/soundproof-room-buyback-guide/` | false |
 | ja | money | `soundproof-room-loan-guide` |  | 防音室ローン・分割払い完全ガイド2026｜月々いくら？審査・無金利・節税を解説 | ローン, 分割払い, 費用, 減価償却, 節税 | `/ja/money/soundproof-room-loan-guide/` | false |
 | ja | money | `soundproof-room-moving` |  | 引越しで防音室を移設する費用は？専門業者の選び方と失敗しない手順 | 防音室, 引越し, 移設, 解体, 専門業者 | `/ja/money/soundproof-room-moving/` | false |
@@ -144,7 +146,7 @@
 | ja | money | `soundproof-window-subsidy-2025-guide` |  | 【2025年最新】防音窓リフォームで使える補助金制度まとめ｜先進的窓リノベ対応 | 補助金, 内窓リフォーム | `/ja/money/soundproof-window-subsidy-2025-guide/` | false |
 | ja | money | `streamer-tax-strategy` |  | 防音室は経費にできる？配信者だけじゃない対象職業と判断基準 | 確定申告, 節税, 減価償却, 個人事業主, 青色申告, 配信・実況 | `/ja/money/streamer-tax-strategy/` | false |
 | ja | money | `telework-soundproof-loan-strategy` |  | テレワーク・在宅勤務のための防音室ローン活用｜集中環境と耳の健康への戦略投資 | テレワーク, ローン, 生産性, 節税 | `/ja/money/telework-soundproof-loan-strategy/` | false |
-| ja | money | `used-soundproof-room-buying-guide` |  | 中古防音室の買い方｜相場・見極め方と『総額』で判断する購入ガイド | 中古防音室, 費用, ヤマハ, カワイ, アビテックス, ナサール | `/ja/money/used-soundproof-room-buying-guide/` | false |
+| ja | money | `used-soundproof-room-buying-guide` |  | 中古防音室は予算10万円で何が買える？セフィーネより『だんぼっち・OTODASU』を探すべき理由 | 中古防音室, 費用, 予算10万円, だんぼっち, OTODASU, ヤマハ | `/ja/money/used-soundproof-room-buying-guide/` | false |
 | ja | soundproof-rental | `apartment-weight-limit-500kg` |  | 築20年のマンションに重さ500kgの防音室を置ける？床補強なしで設置するための安全基準と計算術 | 耐荷重, 床荷重計算, マンション, ヤマハ, 防音室導入, 木造戸建て | `/ja/soundproof-rental/apartment-weight-limit-500kg/` | false |
 | ja | soundproof-rental | `bedroom-noise-type-solution-guide` |  | 上の階の足音・隣の話し声で眠れない｜音の種類で変わる寝室の騒音対策の選び方 | 睡眠, 騒音対策, 賃貸, 足音, 生活音, 寝室 | `/ja/soundproof-rental/bedroom-noise-type-solution-guide/` | false |
 | ja | soundproof-rental | `bouon-rental-market-guide` |  | 【2026完全版】防音賃貸・防音マンション完全ガイド｜全国相場・D値・ブランド・選び方を総まとめ | 防音賃貸, 家賃相場, 防音マンション, ミュージション, D値, 楽器可物件 | `/ja/soundproof-rental/bouon-rental-market-guide/` | false |
@@ -192,7 +194,7 @@
 | ja | soundproof-room | `otodasu-voice-chat-test` |  | OTODASU（オトダス）の実力検証｜深夜2時のボイスチャットは隣室に許されるのか？ | OTODASU, ボイスチャット, 深夜配信, 防音室 | `/ja/soundproof-room/otodasu-voice-chat-test/` | false |
 | ja | soundproof-room | `piano-room-guide` |  | ピアノ防音室ガイド｜アップライト・グランド別の費用とマンション設置の条件 | ピアノ, 防音室, アップライトピアノ, グランドピアノ, マンション, ヤマハ, カワイ | `/ja/soundproof-room/piano-room-guide/` | false |
 | ja | soundproof-room | `proofroom-aircondition-select` |  | 防音室のエアコン選びと静音化の極意｜2026年最新の空調・換気戦略 | 防音室, 空調設備, 換気, スポットクーラー, 騒音対策 | `/ja/soundproof-room/proofroom-aircondition-select/` | false |
-| ja | soundproof-room | `proofroom-humidity-airconditionlist` |  | 防音室の温湿度管理ガイド2026｜暑さ・結露・乾燥を物理的に防ぐ改善術 | 防音室, 温湿度管理, 換気, 楽器メンテナンス, 結露 | `/ja/soundproof-room/proofroom-humidity-airconditionlist/` | false |
+| ja | soundproof-room | `proofroom-humidity-airconditionlist` |  | 防音室の温湿度管理ガイド2026｜暑さ・結露・乾燥を物理的に防ぐ改善術 | 防音室, 温湿度管理, 加湿器, 楽器メンテナンス, 結露 | `/ja/soundproof-room/proofroom-humidity-airconditionlist/` | false |
 | ja | soundproof-room | `proofroom-soudmore-manual` |  | 防音室の音漏れ対策ガイド2026｜原因特定から段階的改善のマニュアル | 防音室, 騒音対策, DIY防音, メンテナンス | `/ja/soundproof-room/proofroom-soudmore-manual/` | false |
 | ja | soundproof-room | `shanon-vs-bouon-window` |  | 賃貸と戸建てで変わる窓の防音対策｜遮音窓・防音窓の違いと費用完全ガイド | 内窓, 防音リノベ, 防音室選び, 賃貸, 戸建て | `/ja/soundproof-room/shanon-vs-bouon-window/` | false |
 | ja | soundproof-room | `shimamura-music-soundproof-room-guide` |  | 島村楽器で防音室を選ぶメリット｜試奏体験と限定コラボモデル「S-OTODASU」 | 島村楽器, 防音室, ショールーム | `/ja/soundproof-room/shimamura-music-soundproof-room-guide/` | false |

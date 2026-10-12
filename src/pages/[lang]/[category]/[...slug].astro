@@ -293,7 +293,7 @@ const components = {
 // JSON-LD・og:image 用データ
 const siteUrl = 'https://bouon-lab.com';
 const canonicalUrl = `${siteUrl}${getUrl(post)}`;
-const optimizedCover = await getImage({ src: resolvePostCover(post), width: 1200, height: 675, format: 'webp' });
+const optimizedCover = await getImage({ src: resolvePostCover(post), width: 1200, height: 675, format: 'jpg' });
 const ogImageUrl = `${siteUrl}${optimizedCover.src}`;
 
 const breadcrumbList = isIndex
