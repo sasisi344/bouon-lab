@@ -31,4 +31,8 @@
 
 ## 結果
 
-（実施後に追記）
+### W42基準値（2026-10-13記録、GSC 7日 10/4〜10/10）
+
+`owner-renovation-roi-simulation-tool`・`soundproof-room-rental-cost`・`rental-unit-soundproof-room`・`soundproof-room-size` の4記事は**すべて表示0**（W41は`owner-renovation-roi-simulation-tool`が表示1だったが、W42は表から消えた）。W43で1本でも表示が出れば継続観察、0のままならW44まで延長。
+
+（W43以降の結果は以下に追記）

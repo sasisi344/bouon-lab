@@ -27,6 +27,8 @@
 | T-24 | 配信者クラスタ | **【次に着手】** 旧URL3本の転送先を、カテゴリ一覧から既存記事へ変更する（電子ドラム・ピアノ関連） | Claude | T-25 |
 | T-25 | コンテンツ | 打鍵・打撃音の入口づくり（キーボード打鍵音・ピアノの鍵盤音・打楽器＋ハブ。配信者を受け皿にしない） | ユーザー+Claude | T-24, T-26 |
 | T-26 | 整理 | 配信者向け記事（再設計待ち18本ほか）の方針を決める | ユーザー | T-25 |
+| T-27 | 整理 | チェロ記事（`rental-caution-cello`）の統合を取り消すか維持するか決め、個別に対応する（301だけ有効でファイルが残置されている状態） | ユーザー | consolidation-candidates §3 |
+| T-28 | コンテンツ | 仙台の防音賃貸記事（`sendai-soundproof-rental-guide`）の未検証の主張を裏取りし、noindexを解除するか決める | Claude+ユーザー | W-31 |
 | T-16 | 事実確認 | 窓リノベ2026の上限100万円に合わせて補助金記事2本の記述を更新する | Claude | W-24 |
 | T-11 | 保留 | 一戸建て騒音源別記事 | - | - |
 
@@ -209,13 +211,42 @@ T-13の調査で、防音室の月額レンタル（音レント）は最短15�
 
 ### T-26 配信者向け記事の方針を決める（2026-10-11 追加）
 
-`re-create/batch-01〜08.md`の「配信者クラスタ再設計待ち」18本と、2026-09以降に公開した`creator/`配下の記事について、入口確定（T-25）を受けて、残す／統合／縮小を決める。
+> 2026-10-13: 配信者クラスタを「疑問の型」で再考した案が `re-create/cluster-streamer.md`（旧版は `cluster-streamer-v1-20261011.md`）。W-28の19本を「11本＋8本」に分ける案、配信系の旧URLの転送先、noindex5本の再評価（クリックの12.5%）を含む。ユーザー判断待ちは同ファイルの§8。**2026-10-13に、統合候補の8本を実行**（§10。`horror-game-scream-soundproof-mic`は統合せず残す）。効果測定は`weekly-task.md` W-32。
 
-- [ ] 方針の読み: 配信者向けの需要は一般のクラスタ（防音室の価格、防音賃貸、DIY防音）が受ける。配信者向け記事は、読者別の変種として残すか、一般の記事に統合する。個別の判断はユーザーが`batch-NN.md`の「方針」欄に書く
+`re-create/remaining.md` §2の配信者クラスタ（19本。2026-10-13にbatch-01〜08から統合）と、2026-09以降に公開した`creator/`配下の記事について、入口確定（T-25）を受けて、残す／統合／縮小を決める。
+
+- [ ] 方針の読み: 配信者向けの需要は一般のクラスタ（防音室の価格、防音賃貸、DIY防音）が受ける。配信者向け記事は、読者別の変種として残すか、一般の記事に統合する。個別の判断はユーザーが`remaining.md`の「方針」欄に書く
 - [ ] 実績があり残す記事（16か月）: `diy/diy-vocal-soundproof-mask`（22クリック）、`creator/one-room-streaming-soundproof`、`creator/vtuber-family-privacy-rules`、`creator/farmland-prefab-streaming-room-legal`、`creator/gaming-floor-impact-noise-fix`、`creator/streaming-pc-fan-noise-mic`
 - [ ] 2026-09以降に公開した記事は、公開から4週間以上たってから判断する
 - [ ] 統合・排除・301は、`bouon-internal-link-ops`で被リンクを確認し、301と`astro.config.mjs`を同時に変更する。`re-create/README.md`のルールに従う
 - 参考: Bingのページ別の表（どの記事に着地したか）は未取得。取得できれば、方針決定の材料になる
+
+**優先方針（2026-10-13、ユーザー判断）**: 再構築は`creator/`を最優先にする。初期に作った記事で、設計と内容が噛み合っていない。**インデックス未登録（クロール済み）のものだけ**を優先して作り直す（登録済みは後回し）。未登録は`.workspace/.data-set/seo-check/index-none/表.csv`（2026-10-13取込）の19本。slugは変えない。統合・排除・301は、上の実データ後の判断のまま実施しない。
+
+- 対象19本（16か月の表示順。GSC `ページ.csv`）: `streaming-pc-fan-noise-mic`（68）、`voice-chat-soundleak-fix`（28）、`soundproof-rental-life-streamer`（13）、`parenting-streamer-soundproof`（12）、`asmr-external-noise-elimination`（10）、`streamer-regional-studio-move`（8）、`asmr-vtuber-booth-guide`（5）、`one-room-streaming-soundproof`（4）、`vtuber-soundproof-environment-complete-guide`（4）、`streamer-soundproof-budget-roadmap`（4）、`soundproof-rental-vs-diy-streamer`（2）、`streamer-soundproof-rental-share`（2）、`game-streamer-sound-types`（2）、`kominka-renovation-streaming-room`（1）、`streamer-rental-preview-checklist`（1）、`utaite-vs-streamer-soundproof`（1）、`streamer-soundproof-timing`（0）、`streaming-mic-noise-room`（0）、`bourentakl-streamer-settingsetubi`（0、18,000字）
+- 見立て（未検証）: 9/5〜9/6に加筆した記事も未登録のまま。長さ・被リンク（2〜5本）では登録済みと差がなく、公開時期（2026年1〜6月）とテーマの広さで分かれている。7月公開の「一つの疑問に答える」型は27本すべて登録済み
+- [ ] 19本を、1本ごとに「どの疑問に答える記事か」を1行で決める（答えが1つに絞れない記事は、疑問を絞って構成を作り直す）。T-25の入口（打鍵音・鍵盤音・打楽器）とぶつかるものは役割分担を決める（`streaming-mic-noise-room`・`game-streamer-sound-types`・`streaming-pc-fan-noise-mic` など）
+- [ ] 最終クロールが9/26より前の記事は、再クロールが済むまで評価できない。再申請は作り直した後に限る（作り直し前は行わない）。進捗と確認は`weekly-task.md` W-28
+
+### T-27 チェロ記事（`rental-caution-cello`）の個別対応（2026-10-13 追加、ユーザー判断で個別対応）
+
+状態: `soundproof-rental/saxophone-apartment-practice-guide` にチェロの節を追加し、301（`public/.htaccess` 516行目・`astro.config.mjs` 695行目）も設定済みだが、**チェロ記事のファイルは残置**。このままデプロイすると、チェロのURLはサックス記事へ301される。詳細と根拠は `re-create/consolidation-candidates.md` §3。
+
+- [ ] ユーザー: 次のどちらかを選び、個別に対応する
+  1. 統合を取り消す（私の推奨）: サックス記事のチェロの節を外し、チェロ分の301を消し、被リンク2記事（`music-student-property-search-guide`・`soundproof-performance-drum`）を元に戻す。チェロ記事は「エンドピン・防振マット・床」の悩みでリライトし、楽器別クラスタの入口にする
+  2. 統合を維持する: チェロ記事のファイルを削除する（被リンクの付け替えと301は設定済み）
+- 根拠: Bingで「チェロ エンドピン 床に振動 減らす」（3.75位・クリック1）、「チェロ エンドピンからの振動 軽減」（3位）、「チェロ 防振マット」（4位・クリック1）、「チェロ 騒音」（4位・クリック1）が出ている（`query-check/analysis_楽器別.md`）
+- 注意: デプロイ前に決める。決めないまま公開すると、チェロの検索流入が止まる
+
+### T-28 仙台の防音賃貸記事の裏取りとnoindexの判断（2026-10-13 追加）
+
+`local/sendai-soundproof-rental-guide`は、2026-07-21にnoindexにした記事。16か月で表示76・クリック10の実績があり、2026-10-13にほかの4本はnoindexを解除したが、**この記事だけは解除していない**。本文に、出典の確認できない主張が多いため。
+
+- 解除しなかった理由（本文の例）: 「仙台市の防音賃貸ストックは約320戸（2025年9月時点、当社調査）」「入居者の約6割が音大生・音楽講師」、業者・ブランド名（「仙台防音ルーム不動産」「ナサールショールーム仙台」「リブラン（ミュージション仙台）D-55仕様の分譲賃貸」）、「2025年春に新築予定（募集予定戸数12戸）」、エリア別の平均家賃
+- [ ] 本文の主張を、一次情報（不動産ポータル、業者の公式サイト、宮城教育大学・東北学院大学の公式サイト）で裏取りする。裏取りできない部分は削除または表現を弱める
+- [ ] 方針の確認: 音大生×地域の記事は `music-student-property-search-guide` に集約し、地域別の個別記事は作らない（2026-10-06決定）。仙台記事を残すか、集約するかをユーザーが決める
+- [ ] 残す場合は、裏取り後に`noindex: true`を外し、`astro.config.mjs`のサイトマップ除外（`sendai-soundproof-rental-guide`）も外す
+- 関連: `weekly-task.md` W-31
 
 ---
 

@@ -40,6 +40,8 @@ const noindex = false; // 個別ページの noindex は frontmatter.head で制
       var attr = el.attributes[i];
       if (attr.name.indexOf('data-track-') === 0 && attr.name !== 'data-track-event') {
         var key = attr.name.slice('data-track-'.length).replace(/-/g, '_');
+        // 'source' はGA4の流入元（セッションの参照元）と衝突して付け替わるため別名で送る
+        if (key === 'source') key = 'link_source';
         params[key] = attr.value;
       }
     }

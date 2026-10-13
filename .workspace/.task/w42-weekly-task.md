@@ -174,9 +174,9 @@
   1. **全面リライト**: 検索需要があり、サイトの軸（防音・遮音）に合う（例: `wooden-apartment-soundproof-guide`、`sleep-quality-soundproof-room`はT-15の睡眠入口記事と連携）
   2. **統合**: 同じテーマの強い記事（流入・クリックがあるもの）へ寄せ、旧URLは301（`public/.htaccess`・`astro.config.mjs`）。クラスタ仮説の例: D値4本→`d-value-vs-rw-value-confusion`（5クリック）、配信者14本→`streamer-soundproof-room-comprehensive-guide`と`streamer-rental-selection-guide`の2〜3本、ニュース系→1本の更新型
   3. **削除**: 需要がなく軸外（例: `future-ssi-silent-speech-interface-revolution`、`biophilic-acoustics`）。旧URLは301または410（過去の統合・410化の手順は`archive/task-list-09.md`、`archive/consolidation-candidates-20260916.md`を参照）
-- **週あたりの目安（案）**: レーン1を週3本、レーン2を週5本の判断。第1バッチは`re-create/batch-01.md`（`lastmod`が2025-10〜2026-04の10本）
+- **週あたりの目安（案）**: レーン1を週3本、レーン2を週5本の判断。第1バッチは`archive/re-create-batch-01-08-20261013/batch-01.md`（`lastmod`が2025-10〜2026-04の10本）
 - 注意: 統合・削除はT-08（旧URL解消）と同じ「Googleのクロール負荷」の観点があるため、**1回の公開でまとめて処理**し、サイトマップと内部リンクの切れを確認する。`bouon-internal-link-ops` skillで被リンクを確認する
-- **要判断（ユーザー）**: `re-create/batch-01.md`の10本の処理方針（リライト／統合／削除）。`re-create/`の「クラスタ仮説」はタイトルだけからの推定で、本文は未確認
+- **要判断（ユーザー）**: `archive/re-create-batch-01-08-20261013/batch-01.md`の10本の処理方針（リライト／統合／削除）。`re-create/`の「クラスタ仮説」はタイトルだけからの推定で、本文は未確認
 
 ## 3. 改善タスク案（W42の観測ベース）
 
@@ -289,14 +289,14 @@
 
 - **T-24** 旧URL3本の転送先を既存記事へ変更（**次に着手**）
 - **T-25** 打鍵・打撃音の入口づくり（キーボード・ピアノ鍵盤・打楽器＋ハブ）
-- **T-26** 配信者向け記事の方針を決める（`re-create/batch-NN.md`の方針欄）
+- **T-26** 配信者向け記事の方針を決める（`re-create/remaining.md`の方針欄）
 
 ### 未反映（次回以降）
 
 | 項目 | 状態 |
 |---|---|
-| §4 既存W-NN・S-NNへの反映案（W42の結果追記） | **未反映**。`weekly-task.md`の個別W-NNに、W42の結果を追記していない |
-| §3 改善タスク案A〜J | **未登録**。A（`Head.astro`の`source`→`link_source`）は承認待ち。B〜Jも未起票 |
+| §4 既存W-NN・S-NNへの反映案（W42の結果追記） | **2026-10-13に反映済み**（`weekly-task.md`の各W-NN、S-06・S-07・S-10の個別ファイルに基準値を記録） |
+| §3 改善タスク案A〜J | **未登録**。A（`Head.astro`の`source`→`link_source`）は2026-10-13に実施済み（ビルド確認済み、デプロイ待ち）。B〜Jは未起票 |
 | 順位8〜20位のレーン1（14本）の改善 | `re-create/`のP1（12本）に反映。個別のリライトは未着手 |
 | `soundproof-room/wifi-connection-guide`（「防音室 wifi」順位12） | 順位8〜20位の改善候補に加えるかが未決（lastmod 2026-09-17で`re-create`の対象外） |
 | Bing Webmaster Toolsのページ別の表 | 未取得（どの記事に着地したかが分からない） |

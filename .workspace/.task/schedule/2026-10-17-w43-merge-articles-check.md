@@ -36,4 +36,8 @@ W41（7日）は両統合先も旧4記事もGSCのページ表に出ていない
 
 ## 結果
 
-（実施後に追記）
+### W42基準値（2026-10-13記録、GSC 7日 10/4〜10/10）
+
+`regional-city-soundproof-rental-guide`・`soundproof-subsidy-check-guide` の2記事は**どちらも表示0**。参考: `small-business-soundproof-subsidy-guide`が表示1・順位1.0で出ている。統合・301は10/6デプロイから4日で、インデックス登録待ち。
+
+（W43以降の結果は以下に追記）

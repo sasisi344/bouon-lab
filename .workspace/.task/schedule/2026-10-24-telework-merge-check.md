@@ -44,4 +44,8 @@ T-21のデプロイ（**2026-10-08**）で、統合先`remote-work-family-harmon
 
 ## 結果
 
-（実施後に追記）
+### W42基準値（2026-10-13記録、GSC 7日 10/4〜10/10）
+
+統合先`remote-work-family-harmony-soundproof`は**表示0**。
+
+（W43以降の結果は以下に追記）
