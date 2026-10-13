@@ -29,6 +29,8 @@
 | W-30 | 短期 | re-createバッチ07・08のリライト7本（10/13）: 退去時費用・ワンタッチ防音壁・データセンター・HSP防音室・HSPセルフチェック・日米管理規約・ペットの騒音 | GSCページ・クエリ、Bing検索ワード | 次回エクスポート〜W45 |
 | W-31 | 短期 | noindex解除4本（加湿器・退去時費用・防音マスク・日米管理規約）と、配信系の旧URL5本の転送先変更（10/13） | GSCページ・クエリ、Bing検索ワード | 次回エクスポート〜W46 |
 | W-32 | 短期 | 配信者クラスタの統合8本（10/13）: 統合先7本の登録・表示と、旧URLの受け皿への転送 | GSCページ・クエリ、GSC URL検査 | 次回エクスポート〜W46 |
+| W-33 | 短期 | 配信者クラスタの統合・第2弾（10/13）: ワンルーム配信・マイクノイズ・防音環境完全ガイドの3本と、吸収した4本の旧URL | GSCページ・クエリ、GSC URL検査 | 次回エクスポート〜W46 |
+| W-34 | 短期 | 配信者クラスタの統合・第3弾（10/13）: 賃貸選び・ASMR・同居人・コラボ・農地と地方・身バレの6本と、吸収した7本の旧URL | GSCページ・クエリ、GSC URL検査 | 次回エクスポート〜W46 |
 | W-15 | 継続 | GA4改善傾向の持続（W41〜） | GA4週次 | 毎週 |
 | W-16 | 継続 | AI系流入の追跡 | GA4参照元 | 毎週 |
 | W-17 | 継続 | Teams経由流入（賃貸市場レポート） | GA4参照元 | 毎週 |
@@ -126,6 +128,9 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
   - **2026-10-13 追記**: 作り直さない保留8本のうち7本（`streamer-soundproof-budget-roadmap`・`streamer-soundproof-timing`・`streamer-soundproof-rental-share`・`soundproof-rental-vs-diy-streamer`・`streamer-rental-preview-checklist`・`kominka-renovation-streaming-room`・`utaite-vs-streamer-soundproof`）は、ユーザー判断で11/16を待たずに統合を実行した（`re-create/cluster-streamer.md` §10）。残る1本の`streamer-regional-studio-move`は、古民家の記事を吸収して書き直した（統合先）。W-28の対象は、作り直す11本と、書き直し済みの`streamer-regional-studio-move`の登録確認になる。統合先の`vtuber-soundproof-environment-complete-guide`は、購入タイミングの節を追加済み（作り直しはこれから）
   - 作り直す11本の順: `one-room-streaming-soundproof`（ハブカード所属・旧URL含め238表示） → `streaming-pc-fan-noise-mic` → `streaming-mic-noise-room`（Bingの反響の束） → `vtuber-soundproof-environment-complete-guide` → `voice-chat-soundleak-fix` → `parenting-streamer-soundproof` → `bourentakl-streamer-settingsetubi`（回線・電源に絞る） → `asmr-external-noise-elimination` → `asmr-vtuber-booth-guide` → `soundproof-rental-life-streamer` → `game-streamer-sound-types`（打鍵音はT-25の枝Aへ。T-25と調整）
   - 1本ごとの「答える疑問」の案は `cluster-streamer.md` §4 の表。作り直す前に、ユーザーが確認する
+  - **2026-10-13 方針縮小（ユーザー承認）**: 「作り直す11本」を1本ずつ作り直す計画は、近い話題を統合して土台9本を作り直す計画に置き換える。グループと進捗は `task-list.md` T-26。統合で吸収されたURLは、本項目の対象から外す
+  - **2026-10-13 実施（グループ1・2・8）**: `voice-chat-soundleak-fix`・`night-streaming-neighbor-tips`（→ `one-room-streaming-soundproof`）、`streaming-mic-noise-room`（→ `streaming-pc-fan-noise-mic`）、`vtuber-soundproof-environment-complete-guide`（→ `streamer-soundproof-room-comprehensive-guide`）を統合して削除。W-28の対象は、残る作り直し対象に、統合後の土台（`one-room-streaming-soundproof`・`streaming-pc-fan-noise-mic`）を加えたものになる。作り直しの代わりに、この統合で本文を書き直した
+  - **2026-10-13 第3弾（全9グループ完了）**: 作り直し対象の残り（`bourentakl-streamer-settingsetubi`・`soundproof-rental-life-streamer`・`asmr-vtuber-booth-guide`・`parenting-streamer-soundproof`・`streamer-regional-studio-move`）のうち、統合で消えた5本は対象から外れた。土台になった記事（`streamer-rental-selection-guide`・`asmr-external-noise-elimination`・`parenting-streamer-soundproof`・`collab-streaming-soundproof-space`・`farmland-prefab-streaming-room-legal`・`female-streamer-privacy-soundproof`）の登録状態は W-34 で確認する。残る個別の作り直し対象は `game-streamer-sound-types`（振り分け記事への役割変更。T-25と調整）のみ
 - 基準値（2026-10-13時点・全19本）: 最終クロール日が9/26以降は2本のみ（`streaming-pc-fan-noise-mic`が10/10、`soundproof-rental-vs-diy-streamer`が9/27。どちらも未登録）、残り17本は9/17以前
 - [ ] 1本ごとに作り直す前に、その記事が答える疑問を1行で決める（`task-list.md` T-26）。T-25の入口（打鍵音など）と範囲が重なる記事は、先に役割分担を決める
 - [ ] 作り直した記事ごとに、実施日・疑問・変えた点を本項目へ1行追記する（`lastmod`を更新、slugは変えない）
@@ -196,7 +201,7 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 - 統合先と、見る語（基準値は統合前。統合先はいずれも統合前の表示を持つ）
   - `/ja/creator/streamer-rental-selection-guide/`（登録済み。16か月で50表示）: 「配信者 賃貸 内見」「配信者向け賃貸」「賃貸 配信 防音 内見」系。旧URL `/posts/bourenatal-naikencheck/`（96表示・1クリック・8.65位）の受け皿
   - `/ja/creator/streamer-soundproof-room-comprehensive-guide/`（登録済み。17表示）: 旧URL `/posts/streamer-lowbudget-simula/`（85表示・3クリック・7.54位）の受け皿。「配信 防音 予算」系
-  - `/ja/creator/vtuber-soundproof-environment-complete-guide/`（未登録。旧URL含め128表示）: 「配信者 防音室 買うタイミング」系。W-28で作り直す
+  - `/ja/creator/vtuber-soundproof-environment-complete-guide/`（未登録。旧URL含め128表示）: 「配信者 防音室 買うタイミング」系。**2026-10-13に `streamer-soundproof-room-comprehensive-guide` へ統合済み（W-33）**。以降は総合ガイドで見る
   - `/ja/money/soundproof-room-rental-cost/`: 「防音室 レンタル」系（時間貸し・シェアスタジオの形態を追記）
   - `/ja/creator/streamer-regional-studio-move/`（未登録）: 「古民家 配信 防音」「地方移住 配信」系
   - `/ja/diy/treadmill-apartment-soundproofing-layering/`: 「ダンス 配信 足音」「フィットネス 配信 階下」系を追加（旧URLの受け皿の16か月は表示97・8.9位）
@@ -212,6 +217,37 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 ---
 
 ## 継続観察（毎週のGA4/GSCで見る。次回データがなくても急がない）
+
+
+### W-33 配信者クラスタの統合・第2弾の効果測定（2026-10-13実施）
+
+`re-create/cluster-streamer.md` §11のグループ1・2・8を実施した（§12）。吸収した4本のうち、`voice-chat-soundleak-fix`・`streaming-mic-noise-room`・`vtuber-soundproof-environment-complete-guide` は「クロール済み - インデックス未登録」、`night-streaming-neighbor-tips` は登録状態が不明。順位を失うリスクは小さい。
+
+- 統合先と、見る語（基準値は統合前）
+  - `/ja/creator/one-room-streaming-soundproof/`（未登録。旧URL含め238表示・4クリック。ハブカード所属）: 「ワンルーム 配信 防音」「配信 声 漏れる」「深夜 配信 近隣」「ボイスチャット 音漏れ」系。旧URL `/posts/gamesteram-proofroom-soudflash/` と `/ja/creator/streamer-discord-noise-cancel-vs-physical/` の受け皿に変わった
+  - `/ja/creator/streaming-pc-fan-noise-mic/`（未登録。68表示）: 「配信 マイク ファン音」に加え、Bingの「反響」の束（マイク 部屋の反響抑えたい ほか）と、旧URL `/ja/use-case/streaming-mic-soundproof-guide/` の受け皿
+  - `/ja/creator/streamer-soundproof-room-comprehensive-guide/`（登録済み。17表示）: 「配信者 防音室 買うタイミング」「配信者 防音室 節税」系。旧URL `/posts/vtuber-soundproof-environment-complete-guide/`（旧URL含め128表示）の受け皿に変わった
+- 変更日: 2026-10-13（デプロイ日は未確定。デプロイ後に追記する）
+- [ ] ユーザー: デプロイ後、GSC URL検査で、未登録の統合先2本（`one-room-streaming-soundproof`・`streaming-pc-fan-noise-mic`）と、登録済みの総合ガイドの再クロールをリクエストし、申請記録（W-25）へ記録する
+- [ ] 毎週のGSCで、上の語の表示・順位と、2本の登録状態（登録済みに移ったか）を確認する
+- [ ] 判定（11/16前後）: 統合した土台が登録され、吸収した語の表示が土台に出たか。出なければ、土台の疑問の絞り方を見直す
+
+
+### W-34 配信者クラスタの統合・第3弾の効果測定（2026-10-13実施）
+
+`re-create/cluster-streamer.md` §11のグループ7・5・3・6・9・4を実施した（§13）。吸収した7本のうち、未登録は `bourentakl-streamer-settingsetubi`・`soundproof-rental-life-streamer`・`asmr-vtuber-booth-guide`・`streamer-regional-studio-move`、`sleeping-parent-game-streaming-guide`・`podcast-collab-recording-acoustics`・`vtuber-family-privacy-rules` は登録状態が不明（未登録の一覧にも10/6の登録済みにも無い）。
+
+- 土台と、見る語（基準値は統合前）
+  - `/ja/creator/streamer-rental-selection-guide/`（登録済み。50表示）: 「配信者 賃貸 回線」「配信 賃貸 電源」「防音賃貸 配信者」系。旧URL `/posts/bourentakl-streamer-settingsetubi/` など（旧URL含め114表示・3クリック）の受け皿に変わった
+  - `/ja/creator/asmr-external-noise-elimination/`（未登録。10表示）: 「ASMR 防音」「ASMR 外音」「ASMR 防音ブース」系。旧URL `/posts/asmr-soundproof-environment-guide/`（121表示・8クリック）と `/posts/asmr-proofroom-guide/`（120表示・8クリック）の転送先候補。受け皿が登録されてから転送先を変える（cluster-streamer §5）
+  - `/ja/creator/parenting-streamer-soundproof/`（未登録。12表示・2クリック）: 「配信 子供 うるさい」「実家 ゲーム実況 親」「ルームシェア 配信」系
+  - `/ja/creator/collab-streaming-soundproof-space/`（状態不明。2表示）: 「コラボ収録 部屋」「ポッドキャスト マイク 2人」系
+  - `/ja/creator/farmland-prefab-streaming-room-legal/`（登録済み。95表示・2クリック・11.2位）: 既存の語（農地 プレハブ 配信）を落とさないこと。追加した古民家・地方移住の語は「古民家 配信 防音」「地方移住 配信」
+  - `/ja/creator/female-streamer-privacy-soundproof/`（登録済み。48表示）: 既存の語に加えて、「親フラ 防止」「VTuber 身バレ 実家」系。旧URL経由155表示・9クリックの受け皿
+- 変更日: 2026-10-13（デプロイ日は未確定。デプロイ後に追記する）
+- [ ] ユーザー: デプロイ後、GSC URL検査で、未登録の土台3本（`asmr-external-noise-elimination`・`parenting-streamer-soundproof`・`collab-streaming-soundproof-space`）と、登録済みの土台3本の再クロールをリクエストし、申請記録（W-25）へ記録する
+- [ ] 登録済みの土台3本（賃貸選び・農地・身バレ）は、統合前の語の順位が落ちていないかを毎週確認する。落ちた場合は、吸収した内容が原因かを疑う
+- [ ] 判定（11/16前後）: 土台が登録されたか、吸収した語の表示が土台に出たか
 
 ### W-15 GA4改善傾向の持続（W41〜）
 

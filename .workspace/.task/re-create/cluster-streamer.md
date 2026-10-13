@@ -220,4 +220,82 @@ W-28の「1本ごとに、答える疑問を1行で決める」の案。作業�
 
 - 廃止した8本のうち、7本は「クロール済み - インデックス未登録」、1本（ダンス）は登録の記録なし。順位を失うリスクはなかった
 - 既存の旧URLの転送4本（`/posts/bourenatal-naikencheck/`・`/posts/streamer-lowbudget-simula/`・`/ja/creator/streamer-soundproof-evolution-story/`・`/ja/column/others/kominka-renovation-streaming-room/`）は、二重の301にならないよう、最終の統合先に付け替えた。前の2本（96表示・85表示）は、登録済みの賃貸選びガイドと総合ガイドに向かう
-- 統合先に残る課題（今回は触っていない）: `streamer-rental-selection-guide`の相場・事例・ブランドの出典、`vtuber-soundproof-environment-complete-guide`の「税金負担を30%程度軽減」「5年後40〜50%で売却」などの出典。W-28の作り直しで確認する
+- 統合先に残る課題: `vtuber-soundproof-environment-complete-guide`の「税金負担を30%程度軽減」「5年後40〜50%で売却」などの出典。W-28の作り直しで確認する
+- 柱2本の出典の修正（2026-10-13、P1の残り。順位・構成は変えていない）:
+  - `streamer-rental-selection-guide`: 都市別の家賃表（出典なし）を、ミュージション1Kの掲載家賃（本サイト調査2026-06-24、26棟）の首都圏クラスタ表に置き換え。LEOPALACE21・ビレッジハウス（「UR賃貸系」は誤り）を外し、ミュージション・ラシクラス・音楽マンションの表に。出典のない3つの「事例」は「想定ケース」の表に。上り速度「5Mbps必須」は、確認できず削除
+  - `streamer-soundproof-room-comprehensive-guide`: 節税の計算ミスを訂正（100−60−6.7は実質約33万円であり、約6.7万円ではない）。少額減価償却資産の特例は、国税庁の案内に合わせて40万円未満（2026-04-01以降の取得）に更新。OTODASUは「Dr-15程度」「約12万円」（島村楽器の販売ページ）に直した。「窓から50〜70%」「苦情リスクゼロ」「物的証拠」などの断定を削除
+  - 確認できなかったもの: YouTube公式のビットレート表（取得結果が検索要約と食い違ったため数値は載せていない）、防音室の耐用年数の区分（税理士確認を促す書き方にした）
+
+## 11. 方針の縮小：「1本ずつ作り直す」から「近い話題を統合して作り直す」へ（2026-10-13、ユーザー承認。実施状況は§12）
+
+ユーザー判断（2026-10-13）: 配信者の記事はもともとの需要が高くない。分散している似た話題を統合して再構築するくらいでよい。§4の「作り直す11本」を1本ずつ作り直す計画は、これで置き換える案。`creator/` は現在36本。
+
+### 統合の案（9グループ、36本 → 26本）
+
+| # | 統合後の疑問 | 土台にする記事 | 吸収して301にする記事 | 土台の根拠 |
+|---|---|---|---|---|
+| 1 | ワンルームで夜に配信する。声はどこまで漏れ、何をすればいいか | one-room-streaming-soundproof | voice-chat-soundleak-fix、night-streaming-neighbor-tips | 旧URL含め238表示。ハブカード所属。他の2本は28表示と0表示で疑問が重なる |
+| 2 | マイクにノイズが入る。PC本体・反響・部屋のどれが原因か | streaming-pc-fan-noise-mic | streaming-mic-noise-room | 68表示（ファン音）。反響はBingの束に答える節にする |
+| 3 | 同居人（親・子ども）を起こさずに配信する | parenting-streamer-soundproof | sleeping-parent-game-streaming-guide | 疑問は「同居人の睡眠・生活を妨げない」で共通 |
+| 4 | 身バレ・親フラを防ぐ | female-streamer-privacy-soundproof | vtuber-family-privacy-rules | 土台は登録済み。後者は旧URL経由155表示なので、現行URLの登録状態を確認してから決める |
+| 5 | ASMR収録の部屋とブース | asmr-external-noise-elimination | asmr-vtuber-booth-guide | 旧URL4本（約360表示・約24クリック）の受け皿を1本にする |
+| 6 | 2人以上で収録・配信する部屋と音 | collab-streaming-soundproof-space | podcast-collab-recording-acoustics | どちらも0〜2表示で、疑問が同じ |
+| 7 | 配信者の賃貸選び（物件・回線・電源・住み心地） | streamer-rental-selection-guide（登録済みの柱） | bourentakl-streamer-settingsetubi、soundproof-rental-life-streamer | 18,000字の回線・電源は節に絞る。住み心地は体験の節に |
+| 8 | 防音室を買う判断（資金・節税・設計） | streamer-soundproof-room-comprehensive-guide（登録済みの柱） | vtuber-soundproof-environment-complete-guide | 「完全ガイド」が2本ある状態をやめる。旧URL含め128表示を引き継ぐ |
+| 9 | 地方・広い物件で配信部屋を作る | farmland-prefab-streaming-room-legal（95表示・登録済み） | streamer-regional-studio-move | 古民家・地方は農地と同じ「広い物件」の疑問 |
+
+### 統合しない記事（判断済み・または登録済みで固有）
+
+gaming-floor-impact-noise-fix、game-streamer-sound-types（振り分け記事に変更）、horror-game-scream-soundproof-mic、streamer-noise-quick-fix、streamer-noise-complaint-response、streamer-pet-noise-balance、family-home-soundproof-reno-negotiation、young-streamer-smartphone-monetization-roadmap、streaming-audio-first-low-budget、singer-instrumentalist-stream-soundproof、streaming-room-layout-guide、ブース運用3本（cramped-booth-gaming-chair-health・soundproof-booth-food-odor-management・soundproof-booth-cable-management）
+
+- ブース運用3本は「防音ブースの困りごと」に統合する案もあるが、登録済みで表示が出ているため、今回は対象外
+- 統合後は、W-28の対象が「11本の作り直し」から「統合後の土台9本の作り直し」になる
+
+### 進め方（承認後）
+
+1. 1グループずつ、土台に吸収する内容を決める（出典のない数値は §10 と同じく落とす）
+2. 旧記事を削除し、`public/.htaccess` と `astro.config.mjs` を同時に301へ。被リンクを付け替え、二重の301が無いことを確認
+3. グループ4・9は、現行URLの登録状態を確認してから実施
+4. 優先順: グループ1 → 2 → 8 → 7 → 5 → 3 → 6 → 9 → 4
+5. 実施後に W-28 を書き換える
+
+### 判断してほしいこと
+
+- 9グループの組み合わせでよいか（特に 7・8 は登録済みの柱に吸収するので、柱が長くなる）
+- 実施は一度にまとめるか、グループ1・2・8から先に進めるか
+
+## 12. 統合・第2弾の実施（グループ1・2・8、2026-10-13）
+
+§11のうち、グループ1・2・8を実施した。旧記事4本を削除し、301に切り替え、被リンクを付け替えた。効果測定は `weekly-task.md` W-33。
+
+| グループ | 土台 | 廃止した記事 | 吸収した内容 | 落とした内容 |
+|---|---|---|---|---|
+| 1 | `one-room-streaming-soundproof`（題を「夜の声漏れと隣人の壁ドンを防ぐ」に拡張） | `voice-chat-soundleak-fix`、`night-streaming-neighbor-tips` | 夜の声量ルール、ジャンル別の声のピーク表、家族への声漏れ（ドア内側の遮音カーテン）、状況別の最初の一手、管理会社への事前申告の例文、簡易ブース・防音賃貸への次の手 | ボイチャの声量「70〜80dB」、環境省の夜間基準の引用（環境基準を近隣苦情の基準として使うのは不正確）、吸音パネルや簡易ブースの価格（出典なし） |
+| 2 | `streaming-pc-fan-noise-mic`（題を「ファン音・反響・外音の切り分けと直し方」に拡張） | `streaming-mic-noise-room` | 原因3種類の切り分け表と見分け方、吸音から始める理由、吸音パネルの配置表、予算別プラン、遮音が必要になる判断基準 | 「厚手10mm以上」の目安、「視聴者から音質が上がったと言われる水準」、内窓の費用「5万円〜」 |
+| 8 | `streamer-soundproof-room-comprehensive-guide`（段階3の節を拡張） | `vtuber-soundproof-environment-complete-guide` | 購入タイミングの3指標と「今じゃない／今が買い時」の表、コラボ収録の広さ、PC本体を室外に置く方法、床の振動対策、売却の考え方（買取ガイドへ） | 「30万円台の中堅モデル」のSNSトレンド、「5年後40〜50%で売却」「税金負担を30%程度軽減」「約2.4年で有利」（いずれも出典なし。総合ガイドの検算済みの計算に置き換え）、配信タイプ別の最大音量dB |
+
+- 転送の付け替え: 旧URLの転送5本（`/ja/soundproof-room/knowledge/vtuber-soundproof-environment-complete-guide/`・`/posts/vtuber-soundproof-environment-complete-guide/`・`/ja/creator/streamer-discord-noise-cancel-vs-physical/`・`/posts/gamesteram-proofroom-soudflash/`・`/ja/use-case/streaming-mic-soundproof-guide/`）と、先の統合の `/ja/creator/streamer-soundproof-timing/` を、最終の統合先に向け直した（二重の301なし）
+- 被リンク: 12記事（creator 9本・knowledge 3本）の旧URLへのリンクを、統合先のURLと題に付け替えた。サイト内の旧URLへのリンクは0（ビルド後の `dist` で確認）
+- その他: `public/llms.txt` から旧ガイドの行を削除、`interlink-postlist.md`・`interlink-tag-clusters.md` を再生成
+- 確認: `pnpm build` 成功。旧4URLはサイトマップに無く、転送先は意図どおり
+- 次: グループ7（賃貸選び）→ 5 → 3 → 6 → 9 → 4（`task-list.md` T-26の表）
+
+## 13. 統合・第3弾の実施（グループ7・5・3・6・9・4、2026-10-13）
+
+§11の残り6グループを実施した（ユーザー承認の「計画どおり」）。旧記事8本を削除し、301に切り替え、被リンクを付け替えた。これで9グループが完了し、`creator/` は36本から26本になった。効果測定は `weekly-task.md` W-34。
+
+| グループ | 土台 | 廃止した記事 | 吸収した内容 | 落とした内容 |
+|---|---|---|---|---|
+| 7 | `streamer-rental-selection-guide`（題に「回線・電源」を追加） | `bourentakl-streamer-settingsetubi`（19,000字）、`soundproof-rental-life-streamer` | 回線の配線方式と共用の確認表、電源の回路容量（1回路1,500W）と口数、UPS、電気代の計算式、近隣の配信者との音の干渉、防音賃貸のデメリットと探し方のコツ | 仮名の体験談の数字（「月収1.5倍」「287件」「待機6,000人」。検証不能）、回線速度の機種別表・事業者の速度、機材別の消費電力表、D値別の遮断量dB、収益化・経費計上の節 |
+| 5 | `asmr-external-noise-elimination`（題を「ASMR収録の部屋づくり｜外音の消し方と防音ブースの選び方」に拡張） | `asmr-vtuber-booth-guide` | ブースのクラス分け（簡易／標準／高遮音）、ブース自身の騒音（換気扇・床・熱と配線）、接続経路のノイズ（インターフェース・XLR・ゲイン）、購入とレンタルの考え方 | 機種別の価格・Dr値（出典なし）、「5dB以下のファン」、レンタル「月額3万円程度」、「登録者が飛躍的に伸びた」 |
+| 3 | `parenting-streamer-soundproof`（題を「同居人がいる家で配信する」に拡張） | `sleeping-parent-game-streaming-guide`（9/18公開） | 寝室との位置関係、壁を叩く体感診断、声量以外の音、家族との話し合い方、時間帯の見直し | 「日本の木造は音が響く」の断定 |
+| 6 | `collab-streaming-soundproof-space`（題を「2人以上の収録・コラボ配信」に拡張） | `podcast-collab-recording-acoustics` | マイクの本数（1本共有／1人1本）、距離と角度、チャンネル管理、マイクブリード、マルチトラック収録 | 防音室サイズ別の価格・内寸（出典なし）、「D-50以上」の断定 |
+| 9 | `farmland-prefab-streaming-room-legal`（題に「古民家・地方移住の選択肢」を追加。農地の語は残した） | `streamer-regional-studio-move`（古民家を吸収済み） | 回線の確認、古民家の落とし穴3つ（隙間・床の耐荷重・換気）、窓の補助金、移住の手順 | 家賃の比較表、5年間の費用シミュレーション（編集上の試算で出典なし） |
+| 4 | `female-streamer-privacy-soundproof`（題を「配信者の身バレ・親フラ対策」に拡張。カバー画像を旧記事から移した） | `vtuber-family-privacy-rules` | 親フラ防止（鍵・目印・家族との取り決め）、ドアの隙間と家具、深夜の小声の機材面の工夫、環境音からの特定 | 「音漏れは3割減る」、「男性の低い声は遠くまで届く」（根拠なし） |
+
+- 転送: 旧URLの転送先（`/posts/bourentakl-streamer-settingsetubi/`・`/posts/vtuber-rental-apartment-guide/`・`/posts/bourental-musicacespt-choice/`・`/ja/solutions/...`・`/ja/soundproof-rental/knowledge/...` など10本以上）を最終の統合先に向け直した。二重の301なし
+- 被リンク: 旧URLへのリンクを統合先に付け替え（`dist` で旧URLへのリンクは0）。`soundproof-rental-cost-performance-guide` の文は、体験談の削除に合わせて「物件選び（回線・電源・内見）」に書き換えた。総合ガイドのASMR節の重複するSmartLinkを1本にした
+- その他: `interlink-postlist.md`・`interlink-tag-clusters.md` を再生成。`pnpm build` 成功。旧URLはサイトマップに無く、転送先は意図どおり
+- グループ9・4の登録状態の確認（2026-10-12のエクスポート）: 土台（農地・女性配信者）は10/6の登録済み。吸収側の `streamer-regional-studio-move` は未登録、`vtuber-family-privacy-rules` は未登録の一覧にも登録済みにも載っていない。順位を失うリスクは小さいと判断した
+- 判断した点: 仮名の体験談（`soundproof-rental-life-streamer`）は、数字が検証できないため、吸収せず削除した
+- 次: デプロイ後の再クロール申請（W-34）。個別に残る作り直しは `game-streamer-sound-types`（振り分け記事への役割変更。T-25と調整）。ブース運用3本（チェア・匂い・配線）は今回対象外のまま

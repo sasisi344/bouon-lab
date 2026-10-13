@@ -228,6 +228,20 @@ T-13の調査で、防音室の月額レンタル（音レント）は最短15�
 - [ ] 19本を、1本ごとに「どの疑問に答える記事か」を1行で決める（答えが1つに絞れない記事は、疑問を絞って構成を作り直す）。T-25の入口（打鍵音・鍵盤音・打楽器）とぶつかるものは役割分担を決める（`streaming-mic-noise-room`・`game-streamer-sound-types`・`streaming-pc-fan-noise-mic` など）
 - [ ] 最終クロールが9/26より前の記事は、再クロールが済むまで評価できない。再申請は作り直した後に限る（作り直し前は行わない）。進捗と確認は`weekly-task.md` W-28
 
+**方針の縮小（2026-10-13、ユーザー承認）**: 配信者の記事はもともとの需要が高くない。1本ずつ作り直さず、似た話題を統合して土台を作り直す。9グループ（`creator/` 36本 → 26本）の案は `re-create/cluster-streamer.md` §11。実施は「グループ1・2・8」から（順: 1 → 2 → 8 → 7 → 5 → 3 → 6 → 9 → 4。4・9は現行URLの登録状態を確認してから）。1グループ実施するごとに、下の表に結果を1行追記する。全9グループを2026-10-13に実施（内容は `re-create/cluster-streamer.md` §12・§13、効果測定は `weekly-task.md` W-33・W-34）。`creator/` は36本 → 26本。
+
+| グループ | 土台 ← 吸収 | 状態 |
+|---|---|---|
+| 1 | one-room-streaming-soundproof ← voice-chat-soundleak-fix、night-streaming-neighbor-tips | 実施済み（2026-10-13） |
+| 2 | streaming-pc-fan-noise-mic ← streaming-mic-noise-room | 実施済み（2026-10-13） |
+| 8 | streamer-soundproof-room-comprehensive-guide ← vtuber-soundproof-environment-complete-guide | 実施済み（2026-10-13） |
+| 7 | streamer-rental-selection-guide ← bourentakl-streamer-settingsetubi、soundproof-rental-life-streamer | 実施済み（2026-10-13） |
+| 5 | asmr-external-noise-elimination ← asmr-vtuber-booth-guide | 実施済み（2026-10-13） |
+| 3 | parenting-streamer-soundproof ← sleeping-parent-game-streaming-guide | 実施済み（2026-10-13） |
+| 6 | collab-streaming-soundproof-space ← podcast-collab-recording-acoustics | 実施済み（2026-10-13） |
+| 9 | farmland-prefab-streaming-room-legal ← streamer-regional-studio-move | 実施済み（2026-10-13。土台は登録済み、吸収側は未登録を確認） |
+| 4 | female-streamer-privacy-soundproof ← vtuber-family-privacy-rules | 実施済み（2026-10-13。土台は登録済み、吸収側は未登録の一覧に無く登録の記録も無いことを確認） |
+
 ### T-27 チェロ記事（`rental-caution-cello`）の個別対応（2026-10-13 追加、ユーザー判断で個別対応）
 
 状態: `soundproof-rental/saxophone-apartment-practice-guide` にチェロの節を追加し、301（`public/.htaccess` 516行目・`astro.config.mjs` 695行目）も設定済みだが、**チェロ記事のファイルは残置**。このままデプロイすると、チェロのURLはサックス記事へ301される。詳細と根拠は `re-create/consolidation-candidates.md` §3。

@@ -86,8 +86,7 @@ English content is not a translation layer. It is published selectively, reframi
 - [補助金の対象エリア調べ方](https://bouon-lab.com/ja/money/soundproof-subsidy-check-guide/): 防音関連補助金の対象エリア確認方法
 
 ### 配信・クリエイター
-- [配信者・VTuber防音環境完全ガイド](https://bouon-lab.com/ja/creator/streamer-soundproof-room-comprehensive-guide/): ワンルームから防音室まで活動規模別の環境構築ガイド
-- [VTuber向け防音室完全ガイド](https://bouon-lab.com/ja/creator/vtuber-soundproof-environment-complete-guide/): 防音室購入の意思決定・資金計画に特化したガイド
+- [配信者・VTuber防音環境完全ガイド](https://bouon-lab.com/ja/creator/streamer-soundproof-room-comprehensive-guide/): ワンルームから防音室まで活動規模別の環境構築ガイド。防音室を買うタイミングと資金計画も解説
 
 ### DIY防音
 - [ベーストラップ設置ガイド](https://bouon-lab.com/ja/diy/bass-trap-installation-guide/): 低音のこもりを解消するベーストラップ設置法
