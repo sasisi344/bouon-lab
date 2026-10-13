@@ -1,7 +1,7 @@
 # 実データ分析：配信者クラスタ（GSC・Bing・サジェスト）
 
 作成: 2026-10-11 / データ置き場: [data/](./data/)
-前回: [analysis_配信-3シード.md](./analysis_配信-3シード.md)（サジェスト）。決定事項は同 §6 と [../re-create/cluster-streamer.md](../re-create/cluster-streamer.md)。
+前回: [analysis_配信-3シード.md](./analysis_配信-3シード.md)（サジェスト）。決定事項は同 §6 と [../archive/re-create-docs-20261013/cluster-streamer.md](../archive/re-create-docs-20261013/cluster-streamer.md)。
 
 ## 1. 取得物と制約
 

@@ -1,7 +1,7 @@
 # 入口設計（確定）：打鍵・打撃音
 
 確定: 2026-10-11（ユーザー判断） / 状態: 設計。実装（記事・301）は未着手。作業は `task-list.md` の T-24〜T-26 に登録済み（§7）
-前提: [cluster-streamer.md](./cluster-streamer.md)、実データは [../query-check/analysis_実データ.md](../query-check/analysis_実データ.md)
+前提: [cluster-streamer.md](../archive/re-create-docs-20261013/cluster-streamer.md)、実データは [../query-check/analysis_実データ.md](../query-check/analysis_実データ.md)
 
 ## 1. 決定
 

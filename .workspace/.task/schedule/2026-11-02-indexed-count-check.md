@@ -51,7 +51,22 @@
 
 | 申請日 | URL（`/ja/…`） | 直した内容（リライト・再構築・内部リンク） | 備考 |
 |---|---|---|---|
-| | | | |
+| 2026-10-13 | money/soundproof-room-buy-rent-sell-guide | 新規（買う・借りる・売るの総合） | index-url.md A |
+| 2026-10-13 | creator/one-room-streaming-soundproof | 統合の土台に再構築（声漏れ・夜間配信・家族） | A |
+| 2026-10-13 | creator/streaming-pc-fan-noise-mic | 統合の土台に再構築（PC・反響・外音） | A |
+| 2026-10-13 | creator/asmr-external-noise-elimination | 統合の土台に再構築（ASMRの外音＋ブース） | A |
+| 2026-10-13 | creator/parenting-streamer-soundproof | 統合の土台に再構築（子ども・親・ルームシェア） | A |
+| 2026-10-13 | creator/collab-streaming-soundproof-space | 統合の土台に再構築（コラボ・ポッドキャスト） | A |
+| 2026-10-13 | creator/singer-instrumentalist-stream-soundproof | 統合の土台（歌い手・宅録） | A |
+| 2026-10-13 | soundproof-rental/rental-proofroom-contractcheck | noindex解除＋リライト | A |
+| 2026-10-13 | diy/diy-vocal-soundproof-mask | noindex解除＋dB値を修正 | A |
+| 2026-10-13 | knowledge/soundproof-culture-japan-vs-america | noindex解除＋リライト | A |
+| 2026-10-13 | soundproof-room/bouon-humidifier-comparison | noindex解除＋汎用の加湿器記事に書き直し | A。**登録できなかった**（GSCが「noindexタグにより除外」と表示。公開URLのライブテストで再確認して再申請する）。再申請日: |
+| 2026-10-13 | diy/treadmill-apartment-soundproofing-layering | 統合先（ダンス配信を吸収）＋リライト | B。未登録だったためリクエスト（前回のクロール2026/07/01） |
+| 2026-10-13 | money/soundproof-room-rental-cost | 統合先（時間貸し・シェアの形態を追記） | B。未登録だったためリクエスト（前回のクロール2026/09/01） |
+| 2026-10-13 | soundproof-room/onetouch-soundproof-wall-review | リライト（333表示・14クリック） | C。割り当て上限のため、ここで中断 |
+| 2026-10-13 | business/datacenter-soundproof-technology-facts | リライト（70表示・10.8位） | C。未登録 |
+| 2026-10-13 | （12本目。URL未確認） | | ユーザー申請。`index-url.md` のAは11本だが、12本申請したとの報告。URLを後で補う |
 
 ## 完了条件
 

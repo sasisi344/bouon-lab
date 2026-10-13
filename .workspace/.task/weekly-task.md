@@ -107,11 +107,11 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 - [ ] W43・W44のGSCで、「防音室 予算 10万円」「中古 防音室」「だんぼっち 中古」「オトダス 中古」などのクエリの表示・順位を見る。総合ページが新規URLとして表示に出始めるか（インデックス登録のずれは1〜2週見込む）
 - [ ] W43・W44のGA4で、総合ページ→中古記事・レンタル記事への回遊（`related_click`・内部リンクのクリック）を見る。総合ページ経由で2ページ目に進むセッションが出ていれば導線は機能している
 - [ ] 判定: 中古記事の順位が27位前後から改善するか、予算10万円系クエリで表示が出るかで見る。クリック数だけでは判断しない（表示数が細い）
-- 保留中の判断: `soundproof-room-buyback-guide`を統合検討から外し、総合ページから送る単独記事として残すか（`re-create/consolidation-candidates.md`）。トップの入口カード（`money-market`）に総合ページを入れるかは、`bouon-hub-cards`の運用方針に沿って後日判断（今回は`hub`未設定）
+- 保留中の判断: `soundproof-room-buyback-guide`を統合検討から外し、総合ページから送る単独記事として残すか（`archive/re-create-docs-20261013/consolidation-candidates.md`）。トップの入口カード（`money-market`）に総合ページを入れるかは、`bouon-hub-cards`の運用方針に沿って後日判断（今回は`hub`未設定）
 
 ### W-27 `proofroom-humidity-airconditionlist`に加湿の要否・温湿度計・結露の時期を加筆（2026-10-13実施）
 
-統合先案だった記事を単独の完成記事として残す判断をし、冬の乾燥が楽器と健康に関わること、防音室内に温湿度計を置くこと、加湿が必要な時期、結露が起きやすい時期（冬と梅雨〜夏）を追記した（slug不変、`lastmod`2026-10-13）。数値は、楽器別の適正湿度の目安と、水蒸気量・露点の計算値のみ。メーカー公式の推奨値は未確認。これにより、`soundproof-room-pollen-protection`の統合は見送り（`re-create/consolidation-candidates.md`）。
+統合先案だった記事を単独の完成記事として残す判断をし、冬の乾燥が楽器と健康に関わること、防音室内に温湿度計を置くこと、加湿が必要な時期、結露が起きやすい時期（冬と梅雨〜夏）を追記した（slug不変、`lastmod`2026-10-13）。数値は、楽器別の適正湿度の目安と、水蒸気量・露点の計算値のみ。メーカー公式の推奨値は未確認。これにより、`soundproof-room-pollen-protection`の統合は見送り（`archive/re-create-docs-20261013/consolidation-candidates.md`）。
 
 - 対象URL: `/ja/soundproof-room/proofroom-humidity-airconditionlist/`
 - 2026-10-13 W42基準値（7日表）: ページ**表示2・順位5.0・クリック0**。加湿・湿度・結露・乾燥を含むクエリはW42のクエリ表（40行）に**1件も出ていない**。冬の需要が立ち上がる前の基準として記録
@@ -124,8 +124,8 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 `index-none/表.csv`（2026-10-13取込、現役記事98本）で、`creator/`の初期記事19本が「クロール済み - インデックス未登録」のまま。ユーザー判断で、再構築は`creator/`の未登録だけを最優先にする（登録済みは後回し）。登録済み79本と比べて、本文の長さ（約3,100字）・被リンク（中央値3本）に差はなく、9/5〜9/6に加筆した記事も未登録のまま。公開時期（1〜6月）とテーマの広さで分かれていた（7月公開の一つの疑問に答える記事は27本すべて登録）。作業の進め方と対象一覧は`task-list.md` T-26。
 
 - 作業順（16か月の表示順）: `streaming-pc-fan-noise-mic`（68）→ `voice-chat-soundleak-fix`（28）→ `soundproof-rental-life-streamer`（13）→ `parenting-streamer-soundproof`（12）→ `asmr-external-noise-elimination`（10）→ 以降は表示8以下の14本
-- **2026-10-13 見直し（ユーザー承認。案は `re-create/cluster-streamer.md` §4）**: 19本を「今すぐ作り直す11本」と「作り直さない8本（11/16の判定まで保留）」に分ける。統合候補の8本（`streamer-soundproof-budget-roadmap`・`streamer-soundproof-timing`・`streamer-soundproof-rental-share`・`soundproof-rental-vs-diy-streamer`・`streamer-rental-preview-checklist`・`kominka-renovation-streaming-room`・`streamer-regional-studio-move`・`utaite-vs-streamer-soundproof`）は、作り直してから統合すると手戻りになるため
-  - **2026-10-13 追記**: 作り直さない保留8本のうち7本（`streamer-soundproof-budget-roadmap`・`streamer-soundproof-timing`・`streamer-soundproof-rental-share`・`soundproof-rental-vs-diy-streamer`・`streamer-rental-preview-checklist`・`kominka-renovation-streaming-room`・`utaite-vs-streamer-soundproof`）は、ユーザー判断で11/16を待たずに統合を実行した（`re-create/cluster-streamer.md` §10）。残る1本の`streamer-regional-studio-move`は、古民家の記事を吸収して書き直した（統合先）。W-28の対象は、作り直す11本と、書き直し済みの`streamer-regional-studio-move`の登録確認になる。統合先の`vtuber-soundproof-environment-complete-guide`は、購入タイミングの節を追加済み（作り直しはこれから）
+- **2026-10-13 見直し（ユーザー承認。案は `archive/re-create-docs-20261013/cluster-streamer.md` §4）**: 19本を「今すぐ作り直す11本」と「作り直さない8本（11/16の判定まで保留）」に分ける。統合候補の8本（`streamer-soundproof-budget-roadmap`・`streamer-soundproof-timing`・`streamer-soundproof-rental-share`・`soundproof-rental-vs-diy-streamer`・`streamer-rental-preview-checklist`・`kominka-renovation-streaming-room`・`streamer-regional-studio-move`・`utaite-vs-streamer-soundproof`）は、作り直してから統合すると手戻りになるため
+  - **2026-10-13 追記**: 作り直さない保留8本のうち7本（`streamer-soundproof-budget-roadmap`・`streamer-soundproof-timing`・`streamer-soundproof-rental-share`・`soundproof-rental-vs-diy-streamer`・`streamer-rental-preview-checklist`・`kominka-renovation-streaming-room`・`utaite-vs-streamer-soundproof`）は、ユーザー判断で11/16を待たずに統合を実行した（`archive/re-create-docs-20261013/cluster-streamer.md` §10）。残る1本の`streamer-regional-studio-move`は、古民家の記事を吸収して書き直した（統合先）。W-28の対象は、作り直す11本と、書き直し済みの`streamer-regional-studio-move`の登録確認になる。統合先の`vtuber-soundproof-environment-complete-guide`は、購入タイミングの節を追加済み（作り直しはこれから）
   - 作り直す11本の順: `one-room-streaming-soundproof`（ハブカード所属・旧URL含め238表示） → `streaming-pc-fan-noise-mic` → `streaming-mic-noise-room`（Bingの反響の束） → `vtuber-soundproof-environment-complete-guide` → `voice-chat-soundleak-fix` → `parenting-streamer-soundproof` → `bourentakl-streamer-settingsetubi`（回線・電源に絞る） → `asmr-external-noise-elimination` → `asmr-vtuber-booth-guide` → `soundproof-rental-life-streamer` → `game-streamer-sound-types`（打鍵音はT-25の枝Aへ。T-25と調整）
   - 1本ごとの「答える疑問」の案は `cluster-streamer.md` §4 の表。作り直す前に、ユーザーが確認する
   - **2026-10-13 方針縮小（ユーザー承認）**: 「作り直す11本」を1本ずつ作り直す計画は、近い話題を統合して土台9本を作り直す計画に置き換える。グループと進捗は `task-list.md` T-26。統合で吸収されたURLは、本項目の対象から外す
@@ -172,7 +172,7 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 
 ### W-31 noindex解除4本と、配信系の旧URL5本の転送先変更の効果測定（2026-10-13実施）
 
-`re-create/cluster-streamer.md` §5・§6の案を、ユーザー承認のうえ実施した（コンテンツのリライトは各バッチの記録を参照）。
+`archive/re-create-docs-20261013/cluster-streamer.md` §5・§6の案を、ユーザー承認のうえ実施した（コンテンツのリライトは各バッチの記録を参照）。
 
 - **noindexを解除した4本**（`noindex: true`を削除し、`astro.config.mjs`のサイトマップ除外からも外した）。16か月の旧URLを含む実績が基準値
   - `/ja/soundproof-room/bouon-humidifier-comparison/`: 旧URL `/posts/soundproof-room-humidifier-guide/`が425表示・53クリック。クエリ「防音室 加湿器」は227表示・23クリック・6.47位。本文を、配信ブース限定から汎用の「防音室の加湿器の選び方」へ書き直した（公式仕様で確認できた機種のみ記載。アフィリエイトカード `humidifier-vaporizer-daikin`は、ダイキン MCK70Yが加湿空気清浄機（最大700mL/h）で防音室向けではないため、記事から外した）
@@ -196,7 +196,7 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 
 ### W-32 配信者クラスタの統合8本の効果測定（2026-10-13実施）
 
-`re-create/cluster-streamer.md` §10 の統合を、ユーザー承認のうえ実施した。廃止した8本は、7本が「クロール済み - インデックス未登録」、1本（ダンス）は登録の記録なし。順位を失うリスクはなかった。
+`archive/re-create-docs-20261013/cluster-streamer.md` §10 の統合を、ユーザー承認のうえ実施した。廃止した8本は、7本が「クロール済み - インデックス未登録」、1本（ダンス）は登録の記録なし。順位を失うリスクはなかった。
 
 - 統合先と、見る語（基準値は統合前。統合先はいずれも統合前の表示を持つ）
   - `/ja/creator/streamer-rental-selection-guide/`（登録済み。16か月で50表示）: 「配信者 賃貸 内見」「配信者向け賃貸」「賃貸 配信 防音 内見」系。旧URL `/posts/bourenatal-naikencheck/`（96表示・1クリック・8.65位）の受け皿
@@ -221,7 +221,7 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 
 ### W-33 配信者クラスタの統合・第2弾の効果測定（2026-10-13実施）
 
-`re-create/cluster-streamer.md` §11のグループ1・2・8を実施した（§12）。吸収した4本のうち、`voice-chat-soundleak-fix`・`streaming-mic-noise-room`・`vtuber-soundproof-environment-complete-guide` は「クロール済み - インデックス未登録」、`night-streaming-neighbor-tips` は登録状態が不明。順位を失うリスクは小さい。
+`archive/re-create-docs-20261013/cluster-streamer.md` §11のグループ1・2・8を実施した（§12）。吸収した4本のうち、`voice-chat-soundleak-fix`・`streaming-mic-noise-room`・`vtuber-soundproof-environment-complete-guide` は「クロール済み - インデックス未登録」、`night-streaming-neighbor-tips` は登録状態が不明。順位を失うリスクは小さい。
 
 - 統合先と、見る語（基準値は統合前）
   - `/ja/creator/one-room-streaming-soundproof/`（未登録。旧URL含め238表示・4クリック。ハブカード所属）: 「ワンルーム 配信 防音」「配信 声 漏れる」「深夜 配信 近隣」「ボイスチャット 音漏れ」系。旧URL `/posts/gamesteram-proofroom-soudflash/` と `/ja/creator/streamer-discord-noise-cancel-vs-physical/` の受け皿に変わった
@@ -235,7 +235,7 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 
 ### W-34 配信者クラスタの統合・第3弾の効果測定（2026-10-13実施）
 
-`re-create/cluster-streamer.md` §11のグループ7・5・3・6・9・4を実施した（§13）。吸収した7本のうち、未登録は `bourentakl-streamer-settingsetubi`・`soundproof-rental-life-streamer`・`asmr-vtuber-booth-guide`・`streamer-regional-studio-move`、`sleeping-parent-game-streaming-guide`・`podcast-collab-recording-acoustics`・`vtuber-family-privacy-rules` は登録状態が不明（未登録の一覧にも10/6の登録済みにも無い）。
+`archive/re-create-docs-20261013/cluster-streamer.md` §11のグループ7・5・3・6・9・4を実施した（§13）。吸収した7本のうち、未登録は `bourentakl-streamer-settingsetubi`・`soundproof-rental-life-streamer`・`asmr-vtuber-booth-guide`・`streamer-regional-studio-move`、`sleeping-parent-game-streaming-guide`・`podcast-collab-recording-acoustics`・`vtuber-family-privacy-rules` は登録状態が不明（未登録の一覧にも10/6の登録済みにも無い）。
 
 - 土台と、見る語（基準値は統合前）
   - `/ja/creator/streamer-rental-selection-guide/`（登録済み。50表示）: 「配信者 賃貸 回線」「配信 賃貸 電源」「防音賃貸 配信者」系。旧URL `/posts/bourentakl-streamer-settingsetubi/` など（旧URL含め114表示・3クリック）の受け皿に変わった
@@ -290,6 +290,7 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 - 判定日: 2026-11-02を中間判定、**11/16前後を最終判定**（レポートの遅れのため）
 - [ ] 毎週のエクスポート時（10/10・10/17・10/24・10/31）に、登録済み件数を1行追記する（数字だけでよい。推移の途中経過を見るため）
   - 2026-10-06エクスポート（10/7確認）: 102（有効89）
+- [ ] 申請するURLの一覧は `index-url.md`（2026-10-13作成、A〜Dの優先順）
 - [ ] 申請した記事のURLと申請日を記録する（`schedule/2026-11-02-indexed-count-check.md`の「申請記録」へ。申請した記事と未申請の記事で、登録率に差が出るかを見るため）
 - [ ] 2026-11-02に判定する（S-09）。判定基準は個別ファイルを参照
 - 注意: リライトは**slugを変えない**ため、URLは変わらず、申請済みの記事は「登録済み」に移れる状態。一方、統合・301で旧URLが外れる分は登録済みの減少として出る可能性があるため、減少した場合は旧URLの扱いかを先に確認する

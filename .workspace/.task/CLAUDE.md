@@ -14,7 +14,7 @@
 - 上記2本とは別に、**日付が決まっているタスク**は `schedule-task.md`（日付順の索引、ID `S-NN`）と `schedule/` 配下の個別ファイルで管理する（§8）
 - `effect-monitoring.md` は2026-10-04に `weekly-task.md` へ統合済みの**移行先ポインタ**。新規追記しない。ファイルは削除しない
 - 派生ファイル（`qfo-recheck-task-*.md`・`consolidation-candidates-*.md`・`honne-tatemae-rewrite-survey.md` 等。後ろ2つは2026-10-06に`archive/`へ移動済み）は参照・調査用。マスターではない。削除前に両マスターからの参照有無を確認する
-- `re-create/` は`lastmod`の古い記事の**再構築キュー**（入口は`re-create/README.md`、残件は`re-create/remaining.md`の1ファイル。完了分の`batch-01〜08.md`は`archive/re-create-batch-01-08-20261013/`）。作業用の派生ファイルでマスターではない（2026-10-11追加）。配信者クラスタの入口設計（`re-create/entrance-design.md`）の作業は`task-list.md`のT-24〜T-26
+- `re-create/` は`lastmod`の古い記事の**再構築キュー**（入口は`re-create/README.md`、作業が残っているものだけを`re-create/remaining.md`の1ファイルに集約し、打鍵・打撃音の入口設計`re-create/entrance-design.md`と合わせて作業ファイルは3つ。完了分の`batch-01〜08.md`は`archive/re-create-batch-01-08-20261013/`、配信者クラスタの設計と実施記録・優先度ビュー・統合案の結末は`archive/re-create-docs-20261013/`）。作業用の派生ファイルでマスターではない（2026-10-11追加）。配信者クラスタの入口設計（`re-create/entrance-design.md`）の作業は`task-list.md`のT-24〜T-26
 - `query-check/` はキーワード（サジェスト・GSC・Bing）の分析結果。派生ファイルでマスターではない。生データ（`query-check/data/`・取得したCSV）は`access-data/`と同じく`.gitignore`の方針でコミットしない（2026-10-11追加）
 - 完了済みは `archive/`（綴りは archive）。索引は `archive/task-list-index.md`
 

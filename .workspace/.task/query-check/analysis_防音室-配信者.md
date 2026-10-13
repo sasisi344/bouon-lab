@@ -3,7 +3,7 @@
 作成: 2026-10-11 / 取得: 2026-10-11（Bing 13:57、Google 13:58）
 元データ: `Bing_防音室 配信者_2026-10-11_13-57-32.csv`（65語）、`Google_防音室 配信者_2026-10-11_13-58-04.csv`（14語）
 分類データ: [classified_防音室-配信者.csv](./classified_防音室-配信者.csv)（重複を除いた78語。軸・テーマ・段階・意図・サイトで言及のある記事を付与）
-位置づけ: [../re-create/cluster-streamer-query-design.md](../re-create/cluster-streamer-query-design.md) §6 手順3（サジェストによる実在確認）の最初の1シード分
+位置づけ: [../archive/re-create-docs-20261013/cluster-streamer-query-design.md](../archive/re-create-docs-20261013/cluster-streamer-query-design.md) §6 手順3（サジェストによる実在確認）の最初の1シード分
 
 ## 1. データの性質
 

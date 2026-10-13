@@ -2,7 +2,7 @@
 
 作成: 2026-10-13 / 状態: 分析と提案（記事の統合・新規作成は未実施）
 生データ: `data/instrument-google-suggest_2026-10-13.csv`（Googleサジェスト748件。コミットしない）
-関連: 配信者クラスタの設計 `../re-create/cluster-streamer-query-design.md`、既存記事の統合候補 `../re-create/consolidation-candidates.md`
+関連: 配信者クラスタの設計 `../archive/re-create-docs-20261013/cluster-streamer-query-design.md`、既存記事の統合候補 `../archive/re-create-docs-20261013/consolidation-candidates.md`
 
 ## 1. 目的と、この分析でわかること・わからないこと
 

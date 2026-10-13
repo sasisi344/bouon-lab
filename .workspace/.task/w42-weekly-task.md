@@ -279,7 +279,7 @@
 
 レーン1・レーン2の記事一覧は、数が多いため`re-create/`フォルダに移した（`lastmod`が古い順に10本ずつ、全73記事・8バッチ）。入口は`re-create/README.md`。本ファイルには一覧を重複して持たない。
 
-優先度（P1〜P4）の案は`re-create/priority-list.md`（2026-10-11）。P3を統合検討、P4を排除検討とした。配信者クラスタは統合せず、段階別（これから／不満／安定）に再設計する方針（`re-create/cluster-streamer.md`、2026-10-11）。
+優先度（P1〜P4）の案は`archive/re-create-docs-20261013/priority-list.md`（2026-10-11）。P3を統合検討、P4を排除検討とした。配信者クラスタは統合せず、段階別（これから／不満／安定）に再設計する方針（`archive/re-create-docs-20261013/cluster-streamer.md`、2026-10-11）。
 
 ## 7. クローズ時点の状態（2026-10-11）
 

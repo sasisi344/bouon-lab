@@ -1,20 +1,18 @@
-# re-create 残件（batch-01〜08の統合版）
+# re-create 残件（作業ファイル）
 
-作成: 2026-10-13 / 元: `lastmod`が2026-08より前の73記事（[README.md](./README.md)）。**完了した48本の行は載せていない**（完了の記録はアーカイブ。§4）
+更新: 2026-10-13 / 対象: `lastmod`が2026-08より前の73記事のうち、**作業が残っているものだけ**。完了分（リライト32・統合21・統合せず残した8）の記録は、すべて `../archive/` に移した（§4）
 
-- 数字: 3か月＝2026-09-26時点の累計（現行URLのみ）、16か月＝旧URL（`/posts/`・`/ja/solutions/`など）を含む（GSC 2026-10-11取得、`/en/`は除く）。**判断は16か月で見る**
-- 「推奨」「優先度」「区分」は、データとタイトル、一部本文を見て付けたClaudeの**案**。確定は各表の「方針(ユーザー記入)」欄で行う（リライト／統合→統合先slug／削除／保留）
-- 統合・排除は、`bouon-internal-link-ops` skillで被リンクを確認し、旧URLを301（`public/.htaccess`・`astro.config.mjs`）にし、旧記事の削除・内部リンク正本の再生成・`pnpm build`までを1回の公開でまとめて処理する
+- 数字: 3か月＝2026-09-26時点の累計（現行URLのみ）、16か月＝旧URLを含む（GSC 2026-10-11取得、`/en/`は除く）。**判断は16か月で見る**
+- 「推奨」は、データと本文を見たClaudeの**案**。確定は §1 表の「方針(ユーザー記入)」欄（リライト／統合→統合先slug／削除／保留）
+- 統合・排除は、`bouon-internal-link-ops` skill で被リンクを確認し、旧URLを301（`public/.htaccess`・`astro.config.mjs`を同時に変更）にし、旧記事の削除・内部リンク正本の再生成・`pnpm build`まで1回の公開でまとめる。処理した行は本ファイルから削除する
 
 ## 全体の状況
 
-| 区分 | 本数 | 内容 |
+| 区分 | 本数 | 場所 |
 |---|---|---|
-| 完了（本ファイルには載せない） | 48 | リライト等32、統合を実行8、統合せず残した8 |
-| §1 判断待ち（配信者以外） | 10 | チェロ1、統合先未定5、排除検討4 |
-| §2 配信者クラスタ | 14 | 再構築の対象・柱・残す記事・別クラスタへ移す案。方針は [cluster-streamer.md](./cluster-streamer.md) |
-| §3 保留 | 1 | 効果測定中（W-21） |
-| 残件の合計 | 25 | |
+| 判断待ち（配信者以外） | 10 | §1 |
+| 配信者クラスタの残作業 | 8項目 | §2（統合は2026-10-13に9グループ完了。`creator/` 36本→26本） |
+| 保留（効果測定中） | 1 | §3 |
 
 ## 1 判断待ち（配信者以外・10本）
 
@@ -39,48 +37,34 @@
 4. 02#15・03#29（ニュース系）: 02#15を排除し、03#29を更新型として残す（推奨）でよいか
 5. 03#21・03#23: 排除か、現状維持か
 
-根拠の詳細は [consolidation-pending-batch01-05.md](./consolidation-pending-batch01-05.md)、統合案の結末は [consolidation-candidates.md](./consolidation-candidates.md)。
+根拠の詳細は [../archive/re-create-docs-20261013/consolidation-pending-batch01-05.md](../archive/re-create-docs-20261013/consolidation-pending-batch01-05.md)。
 
-## 2 配信者クラスタ（14本）
+## 2 配信者クラスタの残作業
 
-方針は [cluster-streamer.md](./cluster-streamer.md)（疑問の型で整理、2026-10-13にユーザー承認）。統合候補は2026-10-13に実行済み。残りの記事の統合・排除・301は、W-28の判定（11/16前後）まで実施しない。下表は `re-create` の対象のうち未完了の配信者系。`creator/` の残りの記事は同ファイルの表を参照。2026-10-13に、統合候補の8本を統合済み（同ファイル§10）。
+統合（9グループ）は完了し、記録は [../archive/re-create-docs-20261013/cluster-streamer.md](../archive/re-create-docs-20261013/cluster-streamer.md) §10〜§13。効果測定は `weekly-task.md` W-28・W-32・W-33・W-34。残るのは次の8項目。
 
-「W-28の扱い」は `weekly-task.md` W-28 の見直し案（作り直す11本）。`-` は W-28 の対象外。統合候補だった8本は、2026-10-13に統合済み。
+| # | 作業 | 担当 | 条件・メモ |
+|---|---|---|---|
+| 1 | `creator/game-streamer-sound-types` を、音の種類を振り分ける記事に役割変更する（打鍵音はT-25の枝Aへ） | Claude+ユーザー | T-25と調整。未登録・2表示 |
+| 2 | 旧URL `/posts/keyboard-sound-streaming-soundproof-guide/`（646表示・16クリック）の転送先を、`/ja/creator/` からT-25の枝Aに変更する | Claude | T-25の新記事の公開と同時。変更は `.htaccess` と `astro.config.mjs` を同時に |
+| 3 | 旧URL `/posts/asmr-soundproof-environment-guide/`（121表示・8クリック）と `/posts/asmr-proofroom-guide/`（120表示・8クリック）、`/ja/use-case/asmr-proofroom-guide/` の転送先を、`/ja/creator/` から `creator/asmr-external-noise-elimination` に変更する | Claude | 土台が登録されてから（W-34）。現在の土台は未登録 |
+| 4 | 旧URL `/posts/rental-game-soundproof-booth-3man/`（70表示・7クリック）と `/ja/use-case/rental-game-soundproof-booth-3man/` の転送先を決める（現在は `/ja/soundproof-rental/`） | Claude+ユーザー | 旧記事の内容を確認する。候補は `creator/collab-streaming-soundproof-space` か `creator/streamer-rental-selection-guide` |
+| 5 | トップのハブカード `sound-leak`（`src/data/hubClusters.ts`）のボタンの先を、`/ja/creator/` のままにするか、音の発生源のハブ記事（T-25のW5）にするかを決める | ユーザー | T-21（入口カード再設計）と一緒に。カード所属は4本（総合ガイド・ワンルーム配信・ギター・在宅）。約束（楽器・在宅）とボタンの先（配信者の記事のみ）が合っていない |
+| 6 | アフィリエイトカード `humidifier-vaporizer-daikin`（`src/data/affiliates.ts`）の商品と説明を見直す | ユーザー | 「ダイキン 気化式加湿器 MCK70Y」は、確認できた範囲で加湿ストリーマ空気清浄機（加湿は最大700mL/h・19畳）。約5m³の防音室には過大。加湿器の記事からは外してある |
+| 7 | 別クラスタへ移すか決める: `diy/diy-refrigeration-noise-reduction`（3表示）、`business/report-japan-asmr-vtuber-streaming-studio-standard`（6表示。事業者向けの技術解説） | ユーザー | 配信者の記事ではなく、DIY／事業者クラスタの変種。今のまま残して害はない |
+| 8 | 統合先の出典確認: 総合ガイドの耐用年数（税理士確認の書き方にしてある）、賃貸選びガイドのミュージション家賃表（本サイト調査2026-06-24、26棟）の更新 | Claude | 急がない。W-28の作り直しの一部 |
 
-| バッチ#番号 | category/slug | タイトル | 疑問の型 | 16か月 表示/クリック | 登録状態 | 優先度 | 推奨 | W-28の扱い | 一言 | 方針(ユーザー記入) |
-|---|---|---|---|---|---|---|---|---|---|---|
-| 01#3 | creator/soundproof-rental-life-streamer | 防音賃貸の住み心地｜ゲーム配信者が語る引っ越して半年のリアルな暮らし | C 選択 | 47 / 0 | 未登録 | P3 | 再構築（W-28） | 作り直す11本 | 13表示＋旧URL34。体験談として、rental-selection-guide の裏付けにする |  |
-| 01#4 | creator/streaming-room-layout-guide | 【配信部屋のレイアウト学】狭くても「映える」部屋は作れる！カメラ画角と防音室 | C 選択 | 54 / 1 | 登録済み | P4 | 残す（入口⑤は作らない） | - | 旧URL含め54表示。レイアウトは①か②の節にする案 |  |
-| 02#17 | creator/game-streamer-sound-types | ゲーム実況者の防音環境｜打鍵音・マウス音・叫び声ごとの対策 | A 症状 | 2 / 0 | 未登録 | P4 | 再構築（役割変更） | 作り直す11本 | 打鍵音はT-25の枝Aへ。本記事は音の種類を振り分ける記事にする |  |
-| 03#28 | creator/streamer-pet-noise-balance | 配信中のペットの鳴き声対策｜防音ケージ＋隙間テープの両立術 | A 症状 | 26 / 0 | 登録済み | P3 | 残す | - | 26表示。ペット騒音の一般記事（pet-noise-soundproof-measures）の変種 |  |
-| 03#30 | creator/streaming-audio-first-low-budget | 配信初心者がカメラより先に直すべき音質｜0円でできる優先順位 | E ジャンル | 31 / 0 | 登録済み | P3 | 残す | - | 31表示・18.3位。初心者が音質から直す優先順位 |  |
-| 04#31 | creator/young-streamer-smartphone-monetization-roadmap | 防音室なしで配信を始める｜スマホ1台から収益化につなげる若年層のロードマップ | B 状況 | 48 / 0 | 登録済み | P3 | 残す | - | 48表示・9.4位。防音室なしで始める層という固有の疑問 |  |
-| 04#32 | diy/diy-refrigeration-noise-reduction | 配信者のための家電・生活音対策｜冷蔵庫と換気扇のノイズを物理的に沈める方法 | A 症状 | 3 / 0 | - | P4 | 別クラスタへ移す案 | - | 3表示。家電の音で配信者に限らない。DIYクラスタの変種 |  |
-| 04#40 | business/report-japan-asmr-vtuber-streaming-studio-standard | 【技術解説】ASMR・VTuberに求められる「配信専用スタジオ」の防音・熱 | E ジャンル | 6 / 0 | - | P3 | 別クラスタへ移す案 | - | 6表示。事業者向けの技術解説で、配信者の記事ではない |  |
-| 05#42 | creator/streamer-soundproof-room-comprehensive-guide | 【2026完全版】配信者・VTuberのための防音環境完全ガイド｜ワンルーム | C 選択 | 17 / 1 | 登録済み | P1 | 柱（強化） | - | 入口①。ハブカード所属。被リンク8。17表示・順位12.8 |  |
-| 05#43 | creator/vtuber-soundproof-environment-complete-guide | 配信者の防音室、買うなら今｜D値の選び方と資金計画・節税で損しない判断基準 | C 選択 | 128 / 1 | 未登録 | P3 | 再構築（W-28） | 作り直す11本 | 旧URL含め128表示。「買う判断の資金計画・節税」に絞り、timing・budgetを吸収する案 |  |
-| 05#49 | creator/bourentakl-streamer-settingsetubi | VTuber・ゲーム配信者向け防音賃貸の選び方｜回線・電源・防音性能で失敗し | C 選択 | 114 / 3 | 未登録 | P3 | 再構築（W-28） | 作り直す11本 | 旧URL含め114表示・3クリック。18,000字は1つの疑問を超える。回線・電源に絞る |  |
-| 06#51 | creator/streamer-noise-complaint-response | 配信中に「苦情が来た」ときの対処フロー｜謝罪・改善・再発防止まで | B 状況 | 22 / 2 | 登録済み | P3 | 残す | - | 22表示・2クリック・25位。旧URL streamer-trouble-rule（241表示・7クリック）の受け皿候補 |  |
-| 06#52 | creator/streamer-rental-selection-guide | 配信者向け賃貸の選び方｜静かに配信できる部屋を探すコツ | C 選択 | 50 / 0 | 登録済み | P1 | 柱（強化） | - | 入口②。Bingで住居が最大のクリック（10）。Google 18位から引き上げ |  |
-| 07#68 | diy/diy-vocal-soundproof-mask | 防音マスク自作は息苦しい？段ボールヘッドボックスの酸欠リスクを検証 | A 症状 | 160 / 22 | - | P2 | 残す（noindex解除済み） | - | 旧URLを含め160表示・22クリック。配信系で最もクリックが出た記事。2026-10-13にnoindexを解除し、出典のないdB値を直した |  |
+- 対象外（残す）: ブース運用3本（チェア・匂い・配線）、台パン・ホラー絶叫・苦情対応・ペット・実家の費用交渉・スマホ配信・音質優先・歌い手・レイアウト（`streaming-room-layout-guide` は入口⑤を作らず、そのまま残す）
+- 別項目で管理: チェロ記事の統合の取り消し／維持＝T-27、仙台の防音賃貸記事の裏取り＝T-28
 
 ## 3 保留（1本）
 
 | バッチ#番号 | category/slug | タイトル | 3か月 表示/クリック/順位 | GA4(3週) | 理由 |
 |---|---|---|---|---|---|
-| 08#72 | knowledge/soundproof-material-spec-chart | 防音材スペック早見表｜面密度・TL値・D値の対応を一覧で比較できる資料 | 72 / 1 / 12.75 | 77 | W-21で効果測定中のため着手しない（README.md の運用ルール） |
+| 08#72 | knowledge/soundproof-material-spec-chart | 防音材スペック早見表｜面密度・TL値・D値の対応を一覧で比較できる資料 | 72 / 1 / 12.75 | 77 | W-21で効果測定中のため着手しない |
 
-## 4 完了の記録
+## 4 完了の記録（アーカイブ）
 
-完了48本の行と、各バッチの作業メモ（記事ごとの変更内容・検証・統合を取り下げた理由）は、次のアーカイブにある。本ファイルでは持たない。
-
-- 場所: `../archive/re-create-batch-01-08-20261013/`（`batch-01.md`〜`batch-08.md`）
-- 統合の結末（実行8・残した8）: [consolidation-candidates.md](./consolidation-candidates.md)
-- 優先度ごとの完了確認: [priority-list.md](./priority-list.md)
-- 効果測定: `weekly-task.md` W-29・W-30・W-31
-
-## 5 更新のルール
-
-- 記事を処理したら、その行を本ファイルから削除し、完了の記録は該当のW-NN（効果測定）と、必要なら [consolidation-candidates.md](./consolidation-candidates.md) に残す
-- 全件が片付いたら、本ファイルと派生ファイルを `../archive/` へ移す
-- 着手しない記事: 効果測定中の記事（`soundproof-material-spec-chart`＝W-21）
+- 各バッチの作業メモ（batch-01〜08。記事ごとの変更内容・検証・統合を取り下げた理由）: `../archive/re-create-batch-01-08-20261013/`
+- 配信者クラスタの設計と実施記録、優先度ビュー、統合案の結末、判断待ち9本の詳細: `../archive/re-create-docs-20261013/`（ファイル一覧は同フォルダの `README.md`）
+- 効果測定: `weekly-task.md` W-29〜W-34
