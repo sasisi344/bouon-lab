@@ -167,7 +167,7 @@
   - [防音賃貸の家賃相場はいくら？コスパ・通勤・実用性で選ぶ完全ガイド【2026】](/ja/soundproof-rental/soundproof-rental-cost-performance-guide/) `防音賃貸, 家賃相場, コスパ, 通勤, ミュージション, 部屋探し`
   - [防音賃貸の家賃相場はどう決まる？13都市統計の読み方](/ja/soundproof-rental/rental-price-index-13cities-soundproof/) `防音賃貸, 家賃相場, 賃貸統計, 相場調査`
 
-### ja / soundproof-room（36件）
+### ja / soundproof-room（37件）
 
   - [【2026最新】防音室おすすめ比較｜失敗しない選び方とROI（投資対効果）を分析](/ja/soundproof-room/bouon-osusume-hikaku/) `防音室, 防音室選び, ヤマハ, カワイ, リセールバリュー, ROI`
   - [【シミュレーション】防音室で音はどこまで消える？用途別の軽減率を徹底検証](/ja/soundproof-room/sound-reduction-simulation/) `遮音性能, シミュレーション, 配信・実況, 楽器演奏`
@@ -195,6 +195,7 @@
   - [島村楽器で防音室を選ぶメリット｜試奏体験と限定コラボモデル「S-OTODASU」](/ja/soundproof-room/shimamura-music-soundproof-room-guide/) `島村楽器, 防音室, ショールーム`
   - [防音工事の種類と価格比較｜壁・床・開口部、業者の選び方まで](/ja/soundproof-room/construction-types-cost-comparison/) `防音工事, リフォーム, 価格比較, 防音壁`
   - [防音室でWi-Fiが繋がらない原因と対策｜穴を開けずにできる方法も紹介](/ja/soundproof-room/wifi-connection-guide/) `Wi-Fi, 有線LAN, 通信環境, 配信`
+  - [防音室でインターホンが聞こえない時の対策｜赤ちゃんや警報に気づく仕組み](/ja/soundproof-room/notice-outside-sounds-in-booth/) `インターホン, 赤ちゃん, 防災, 通知, 子育て`
   - [防音室で眠ると睡眠の質が変わる理由｜超静寂環境がもたらす疲労回復効果](/ja/soundproof-room/sleep-quality-soundproof-room/) `睡眠, 健康, 疲労回復, 防音室, バイオハック`
   - [防音室のエアコン選びと静音化の極意｜2026年最新の空調・換気戦略](/ja/soundproof-room/proofroom-aircondition-select/) `防音室, 空調設備, 換気, スポットクーラー, 騒音対策`
   - [防音室の温湿度管理ガイド2026｜暑さ・結露・乾燥を物理的に防ぐ改善術](/ja/soundproof-room/proofroom-humidity-airconditionlist/) `防音室, 温湿度管理, 加湿器, 楽器メンテナンス, 結露`
@@ -747,6 +748,12 @@
   - [子育て世代のDIY「一人になれる場所」｜1万円台から始める段階的な作り方](/ja/diy/parenting-generation-quiet-corner-diy/) `子育て世代, DIY防音, 一人の時間, 納戸活用, 在宅ワーク`
   - [東京防音レビュー｜ホワイトキューオンとOkudakeは合うか](/ja/knowledge/tokyo-bouon-whitekyuon-okudake-review/) `東京防音, ホワイトキューオン, Okudake, 吸音材, 在宅ワーク`
 
+### ja / 子育て（3件）
+
+  - [【子育て×防音リノベ】マンションの騒音トラブルを「構造」から解決する完全ガイド](/ja/soundproof-rental/child-rearing-soundproof-pillar/) `子育て, 防音リノベ, 騒音トラブル, マンション, 防振構造`
+  - [同居人がいる家で配信する｜子ども・親・ルームシェアの防音と生活音調整](/ja/creator/parenting-streamer-soundproof/) `配信・実況, 子育て, 実家暮らし, ルームシェア, 生活音, 防音対策`
+  - [防音室でインターホンが聞こえない時の対策｜赤ちゃんや警報に気づく仕組み](/ja/soundproof-room/notice-outside-sounds-in-booth/) `インターホン, 赤ちゃん, 防災, 通知, 子育て`
+
 ### ja / 資金計画（3件）
 
   - [実家暮らし配信者の防音リフォーム交渉｜親に費用を出してもらう判断基準](/ja/creator/family-home-soundproof-reno-negotiation/) `実家暮らし, 家族交渉, 防音リフォーム, 資金計画, 配信環境`
@@ -913,11 +920,6 @@
 
   - [注文住宅で防音室を作る間取りのポイント｜位置・広さ・窓・換気・搬入経路](/ja/soundproof-room/custom-home-soundproof-room-layout/) `注文住宅, 間取り, 防音室, 新築, 戸建て, 換気`
   - [賃貸と戸建てで変わる窓の防音対策｜遮音窓・防音窓の違いと費用完全ガイド](/ja/soundproof-room/shanon-vs-bouon-window/) `内窓, 防音リノベ, 防音室選び, 賃貸, 戸建て`
-
-### ja / 子育て（2件）
-
-  - [【子育て×防音リノベ】マンションの騒音トラブルを「構造」から解決する完全ガイド](/ja/soundproof-rental/child-rearing-soundproof-pillar/) `子育て, 防音リノベ, 騒音トラブル, マンション, 防振構造`
-  - [同居人がいる家で配信する｜子ども・親・ルームシェアの防音と生活音調整](/ja/creator/parenting-streamer-soundproof/) `配信・実況, 子育て, 実家暮らし, ルームシェア, 生活音, 防音対策`
 
 ### ja / 市場分析（2件）
 

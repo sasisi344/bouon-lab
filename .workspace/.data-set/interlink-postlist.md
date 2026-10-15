@@ -166,6 +166,7 @@
 | ja | soundproof-room | `night-practice-soundproof-guide` |  | 夜間練習はどこまで許される？深夜でも楽器を弾くための防音室選びと「振動」の罠 | 夜間練習, D値, 振動対策, ヤマハ, カワイ, サイレント楽器 | `/ja/soundproof-room/night-practice-soundproof-guide/` | false |
 | ja | soundproof-room | `nitori-soundproof-acoustic-guide` |  | ニトリ防音は壁に効果ある？反響は減るが音漏れは止まらない実測検証 | ニトリ, 吸音材, 騒音対策, 防音賃貸, 配信部屋 | `/ja/soundproof-room/nitori-soundproof-acoustic-guide/` | false |
 | ja | soundproof-room | `noise-solutions-relocate-retrofit-custom-home` |  | 音の悩みの解決策は3つ｜防音賃貸への引っ越し・後付け・注文住宅の設計段階で伝える道 | 防音, 引っ越し, 後付け, 注文住宅, 建売, 睡眠 | `/ja/soundproof-room/noise-solutions-relocate-retrofit-custom-home/` | false |
+| ja | soundproof-room | `notice-outside-sounds-in-booth` |  | 防音室でインターホンが聞こえない時の対策｜赤ちゃんや警報に気づく仕組み | インターホン, 赤ちゃん, 防災, 通知, 子育て | `/ja/soundproof-room/notice-outside-sounds-in-booth/` | false |
 | ja | soundproof-room | `onetouch-soundproof-wall-review` |  | ワンタッチ防音壁は効果ある？買う前に知りたい限界と評判、賃貸での使い方 | ワンタッチ防音壁, 防音パネル, 賃貸DIY, 反響軽減, 口コミ | `/ja/soundproof-room/onetouch-soundproof-wall-review/` | false |
 | ja | soundproof-room | `otodasu-voice-chat-test` |  | OTODASU（オトダス）の実力検証｜深夜2時のボイスチャットは隣室に許されるのか？ | OTODASU, ボイスチャット, 深夜配信, 防音室 | `/ja/soundproof-room/otodasu-voice-chat-test/` | false |
 | ja | soundproof-room | `piano-room-guide` |  | ピアノ防音室ガイド｜アップライト・グランド別の費用とマンション設置の条件 | ピアノ, 防音室, アップライトピアノ, グランドピアノ, マンション, ヤマハ, カワイ | `/ja/soundproof-room/piano-room-guide/` | false |

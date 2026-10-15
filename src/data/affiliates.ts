@@ -318,6 +318,20 @@ export const affiliates: Record<string, AffiliateItem> = {
     variant: 'standard',
   },
 
+  // 【光で知らせるチャイム】notice-outside-sounds-in-booth 用 (2026-10-15 追加)
+  'wireless-chime-ohm-sound-sensor': {
+    type: 'amazon',
+    slug: 'wireless-chime-ohm-sound-sensor',
+    name: 'オーム電機 monban CUBE II 音センサー送信機＋光フラッシュ電池式受信機 OCH-VOST-FBR25',
+    description: '音を検知して光と音で知らせるワイヤレスチャイム。ヘッドホンや防音室の中でも、受信機の光フラッシュで呼び出しに気づける。',
+    price: '¥3,800前後',
+    image: 'https://m.media-amazon.com/images/I/71BBpcS72+L._AC_SL1500_.jpg',
+    badge: 'LIGHT-ALERT',
+    asin: 'B0GT2SX899',
+    tag: 'sasisi344-22',
+    variant: 'standard',
+  },
+
   // 【隙間テープ】ペット同居配信者向け
   'gap-tape-meicyan': {
     type: 'amazon',
