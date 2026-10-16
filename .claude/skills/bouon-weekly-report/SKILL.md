@@ -1,9 +1,41 @@
 ---
 name: bouon-weekly-report
-description: .workspace/access-data/ のGSC/GA4の週次CSVから、週報の集計・前週比較・特定ページの週次推移を出すときに使う。週報（weekly-task.mdの週次生データ）を作る前、施策の効果をデータで確認するとき、CSVを開かずに数値を知りたいときに必ず使う。比較できる週・できない週の判定ルールを定義する。
+description: .workspace/access-data/ のGSC/GA4の月次CSV（m{MM}）から、月次KPIの集計・前月比較（日平均）・特定ページの月次推移を出すときに使う。/monthly-ppdca の集計、施策の効果をデータで確認するとき、CSVを開かずに数値を知りたいときに必ず使う。過去の週次CSV（w24〜w42）の集計にも使う。
 ---
 
-# BouonLab 週報の集計・比較
+# BouonLab 月次レポート（旧・週報）の集計・比較
+
+## 月次（2026-10-16〜、標準）
+
+取得仕様の正本は `.workspace/access-data/export-spec.md`。月フォルダ `2026/m{MM}/` のCSVを `monthly_report.py` で集計する。
+
+```bash
+M=.claude/skills/bouon-weekly-report/scripts/monthly_report.py
+
+python $M inventory                        # 全月の期間・取得済みファイル（G1〜G3・A1〜A3）
+python $M report m11                       # 前月(m10)と比較。件数は日平均、比率はそのまま
+python $M report m11 --vs m09 --top 15     # 比較相手・表の行数を指定
+python $M trend bass-trap onetouch         # URL一部一致で月次推移（GSC・GA4のgoogle）
+```
+
+出力の中身: KPI表（インデックス登録済みの記事・表示が出た記事・Googleクリック/表示の日平均・10位以内CTR・Google自然検索のセッションとエンゲージメント率・`affiliate_click`・スマホ比率）、順位帯別、カテゴリ別の検索への乗り方、11〜20位のページとクエリ、意図のずれ候補（G2のクエリつき）、新しく表示が出た/消えたページ、LP上位、クリックイベント、デバイス×チャネル。
+
+- 期間は `access-data/gsc-periods.json` の `m{MM}`（`span`: `month`／`30d`、`start`・`end`）を正とする。未登録ならGA4の期間で代用し、警告を出す
+- 米国などからの`(direct)`はボット疑いとして除外して集計する（比率は参考として表示）
+- 欠けているファイルは「未取得」に出る。その部分の表だけ省かれる
+- GA4の探索の列名を変えたら、スクリプトの `A1_COLS`・`A2_COLS`・`A3_COLS` を合わせる
+
+### 解釈の注意（月次）
+
+- **Googleを優先する。** BingはGA4の参照元の構成比で参考に見るだけ
+- 月で日数が違うので、件数の比較は必ず日平均で行う（スクリプトはそうしている）
+- 記事単位のCTRは月でも母数が足りないことが多い。記事は「表示が出たか」「順位帯が上がったか」で見る
+- 公開・リライト直後の月は基準値。効果は施策後に丸1か月を含む月で判定する
+- インデックス登録のレポートは2週間ほど遅れる。`m{MM}/README.md` の最終更新日を添えて書く
+
+## 週次（〜2026-10、過去データ）
+
+以下は週次時代（w24〜w42）のスクリプトと手順。新しいデータには使わない。
 
 `.workspace/access-data/` の週次CSVは形式も期間もバラバラ（7日／3週間／3か月累計、旧形式GA4など）。**CSVを直接読まず、同梱スクリプトで集計し、比較可能な週同士だけ比較する。** フォルダ索引と取り込みルールの正本は `.workspace/access-data/CLAUDE.md`。
 

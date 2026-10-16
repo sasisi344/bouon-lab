@@ -1,8 +1,10 @@
 ---
-description: GSC/GA4の週次アクセスデータを取り込み、ギャップを解析してtask-list.md・weekly-task.mdへタスク化する
+description: （廃止・過去データ用）GSC/GA4の週次データの解析。2026-10-16から月次の /monthly-ppdca を使う
 ---
 
 # /weekly-ppdca — 週次PDCA解析コマンド
+
+> **2026-10-16に廃止。** 新しいデータは月次で取得し `/monthly-ppdca` で解析する（仕様は `.workspace/access-data/export-spec.md`）。このコマンドは過去の週次データ（w24〜w42）を見直すときだけ使う。
 
 **引数**: 対象週番号（例: `/weekly-ppdca W37`）。省略時は今日の日付からISO週番号を算出して対象週とする。「weekly-taskを作成」等の指示でも同じ処理を行う。
 

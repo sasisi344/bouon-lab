@@ -37,7 +37,7 @@ npx astro check # 型チェック
 | `bouon-hub-cards` | トップの入口カード6枚への掲載（frontmatter `hub`）の追加・変更、伸ばしたい記事のテコ入れ判断時 |
 | `bouon-task-ops` | `.workspace/.task/` の参照・更新・アーカイブ時 |
 | `bouon-dataset-lookup` | 記事作成・リライトで防音スペック・市場データ・調査メモなどの既存ナレッジを探すとき |
-| `bouon-weekly-report` | `.workspace/access-data/` のGSC/GA4の週報集計・前週比較・ページ別推移 |
+| `bouon-weekly-report` | `.workspace/access-data/` のGSC/GA4の月次集計・前月比較・ページ別推移（`/monthly-ppdca`。取得仕様は `access-data/export-spec.md`） |
 | `bouon-growth-ops` | 収益導線設計（QUEST/PASONA/BEAF）・ビジュアル設計時 |
 | `bouon-memo-image` | 文量の多い記事に「複数の説明を1枚にまとめた、ポケットに入れておくメモ画像」（比較・判断フロー・チェックリスト）を作るとき |
 | `bouon-threads-ops` | Threads投稿の作成・記録時（週間運用は`.workspace/_sns-post/CLAUDE.md`） |

@@ -74,7 +74,7 @@
 | ja | knowledge | `diy-soundproof-truth` |  | DIY防音の不都合な真実を解説｜科学的根拠に乏しい製品を見抜く思考法 | DIY防音, 遮音材, 吸音材, 物理法則, 防音室 | `/ja/knowledge/diy-soundproof-truth/` | false |
 | ja | knowledge | `dry-floating-floor-natural-frequency` |  | 防振ゴムを入れたのに振動が増えた｜乾式浮き床の固有振動数の考え方 | 浮き床, 固有振動数, 防振設計, 技術解説 | `/ja/knowledge/dry-floating-floor-natural-frequency/` | false |
 | ja | knowledge | `future-ssi-silent-speech-interface-revolution` |  | 2030年の防音Lab：無声音声インターフェース(SSI)が「遮音」の常識を破壊する | 次世代技術, 無声音声, 配信テック, テレワーク | `/ja/knowledge/future-ssi-silent-speech-interface-revolution/` | false |
-| ja | knowledge | `ground-loop-noise-basics` |  | アース線とノイズの関係を基礎から解説｜グランドループの仕組みと対処 | アース, ノイズ対策, グランドループ, ハムノイズ, 接地, 配信・実況 | `/ja/knowledge/ground-loop-noise-basics/` | false |
+| ja | knowledge | `ground-loop-noise-basics` |  | アース線でノイズは減る？つなぐと増える場合とグランドループ対策の順番 | アース, ノイズ対策, グランドループ, ハムノイズ, 接地, 配信・実況 | `/ja/knowledge/ground-loop-noise-basics/` | false |
 | ja | knowledge | `hsp-self-check-sound-sensitivity` |  | 音に敏感な人の特徴とHSPセルフチェックリスト｜聴覚過敏・ミソフォニアとの違いと対処法 | HSP, セルフチェック, 音過敏, 聴覚過敏, 環境調整 | `/ja/knowledge/hsp-self-check-sound-sensitivity/` | false |
 | ja | knowledge | `mansion-instrument-practice-time-rules` |  | マンションで楽器は何時まで？規約例は9〜21時｜条例と受忍限度で判断 | 騒音トラブル, 受忍限度, 管理規約, マナー, 楽器別対策 | `/ja/knowledge/mansion-instrument-practice-time-rules/` | false |
 | ja | knowledge | `mental-health-benefits-of-silence` |  | 静寂の力：なぜ防音室は『最強のメンタルケア』になるのか | メンタルヘルス, 集中力, 心理的安全性, 静寂, 脳科学 | `/ja/knowledge/mental-health-benefits-of-silence/` | false |
