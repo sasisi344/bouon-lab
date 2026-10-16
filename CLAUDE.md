@@ -29,7 +29,7 @@ npx astro check # 型チェック
 | Skill | いつ使うか |
 | --- | --- |
 | `bouon-category` | 記事の配置カテゴリ判定、frontmatterのcategory決定時 |
-| `bouon-writing` | 記事の新規執筆・リライト・frontmatter作成・MDXコンポーネント使用時（必読） |
+| `bouon-writing` | 記事の新規執筆・リライト・frontmatter作成・MDXコンポーネント使用時（必読）。タイトル・descriptionの作成/修正とCTR改善は `references/query-intent-match.md`（クエリ契約） |
 | `bouon-persona-thinking` | 検索意図の裏にある読者心理（本音と建前）を掘り下げるとき |
 | `bouon-research` | 価格・補助金・実在企業名等の事実確認、AI Overview対策、Tier C記事の情報更新時 |
 | `bouon-rewrite-strategy` | 既存記事の改善優先度判定・リライト実行時 |

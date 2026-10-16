@@ -20,7 +20,7 @@
 | ja | business | `soundproof-industry-news-2026-06` |  | 防音賃貸・防音室ニュースまとめ｜2026年最新の業界動向と新製品情報 | 防音賃貸, 防音室, 市場動向, 業界ニュース, 防音ブース | `/ja/business/soundproof-industry-news-2026-06/` | false |
 | ja | business | `soundproof-market-esg-trend` |  | 防音市場にESGの波｜省エネ構造・循環素材がもたらす新トレンド | ESG, 省エネ, 循環素材, 防音市場, サステナビリティ | `/ja/business/soundproof-market-esg-trend/` | false |
 | ja | creator | `asmr-external-noise-elimination` |  | ASMR収録の部屋づくり｜外音の消し方と防音ブースの選び方 | ASMR, VTuber, 配信・実況, 外音対策, 防音室, 防音対策 | `/ja/creator/asmr-external-noise-elimination/` | false |
-| ja | creator | `collab-streaming-soundproof-space` |  | 2人以上の収録・コラボ配信｜必要な広さ・防音とマイクの組み方 | 配信・実況, コラボ配信, ポッドキャスト, 防音室, 広さ, マイク設定, VTuber | `/ja/creator/collab-streaming-soundproof-space/` | false |
+| ja | creator | `collab-streaming-soundproof-space` |  | ポッドキャスト2人収録・コラボ配信の部屋づくり｜防音室・リビング4パターン別 | 配信・実況, コラボ配信, ポッドキャスト, 防音室, 広さ, マイク設定, 吸音パネル | `/ja/creator/collab-streaming-soundproof-space/` | false |
 | ja | creator | `cramped-booth-gaming-chair-health` |  | 省スペース型防音ブースで足がむくむ理由｜狭小ブースに合うチェアの選び方 | 防音ブース, ゲーミングチェア, 健康対策, むくみ対策, 狭小空間 | `/ja/creator/cramped-booth-gaming-chair-health/` | false |
 | ja | creator | `family-home-soundproof-reno-negotiation` |  | 実家暮らし配信者の防音リフォーム交渉｜親に費用を出してもらう判断基準 | 実家暮らし, 家族交渉, 防音リフォーム, 資金計画, 配信環境 | `/ja/creator/family-home-soundproof-reno-negotiation/` | false |
 | ja | creator | `farmland-prefab-streaming-room-legal` |  | 休耕地・畑にプレハブで配信部屋は作れる？農地転用・建築基準法と、古民家・地方移住の選択肢 | 配信・実況, 農地転用, プレハブ, オフグリッド, 土地活用, 地方移住, 古民家 | `/ja/creator/farmland-prefab-streaming-room-legal/` | false |

@@ -1,6 +1,6 @@
 # 週間タスク・効果測定ボード
 
-最終整理: 2026-10-13（W42の結果を各W-NNへ反映。W-26〜W-28を追加。2026-10-04に`effect-monitoring.md`を本ファイルに統合。運用ルールは同階層の`CLAUDE.md`を参照）
+最終整理: 2026-10-16（W-19・W-26〜W-34のデプロイ確認とURL検査の結果を反映。W43データは未取込）／2026-10-13（W42の結果を各W-NNへ反映。W-26〜W-28を追加。2026-10-04に`effect-monitoring.md`を本ファイルに統合。運用ルールは同階層の`CLAUDE.md`を参照）
 
 > 本ファイルは「データが揃うのを待って確認する項目（短期〜長期）」と「週次の生データスナップショット」を一元管理する。今すぐ着手できるタスクは `task-list.md`。
 > 過去の分析記録（W28〜W36のPlan/Do/Check/Act全文）は `archive/weekly-task-archive-20260916.md`。
@@ -98,12 +98,13 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 
 ### W-26 中古・買取クラスタ: 総合ページの新設と中古記事の予算10万円軸リライト（2026-10-13実施）
 
-「防音室 予算10万円」の検索・知恵袋が目につくため、`money/used-soundproof-room-buying-guide`を「予算10万円で、元の製品から中古で探す製品を選ぶ」軸に書き直した（slug不変）。主張は、中古で狙うのは元値10万円前後の組み立て式（だんぼっち・OTODASU）、セフィーネ等100万円クラスは運搬・解体・再組立費で総額が50万円を超えやすく公式レンタル（音レント）が現実的、の2点。あわせてクラスタの入口として`money/soundproof-room-buy-rent-sell-guide`（買う・借りる・売る総合ページ、カバー画像あり）を新設し、中古・買取・レンタル・リースの4記事から戻りリンクを追加した。デプロイ日: 未（デプロイ後に記入）。
+「防音室 予算10万円」の検索・知恵袋が目につくため、`money/used-soundproof-room-buying-guide`を「予算10万円で、元の製品から中古で探す製品を選ぶ」軸に書き直した（slug不変）。主張は、中古で狙うのは元値10万円前後の組み立て式（だんぼっち・OTODASU）、セフィーネ等100万円クラスは運搬・解体・再組立費で総額が50万円を超えやすく公式レンタル（音レント）が現実的、の2点。あわせてクラスタの入口として`money/soundproof-room-buy-rent-sell-guide`（買う・借りる・売る総合ページ、カバー画像あり）を新設し、中古・買取・レンタル・リースの4記事から戻りリンクを追加した。デプロイ日: 2026-10-13（2026-10-16に本番で2本とも200を確認）。
 
 - 対象URL: `/ja/money/used-soundproof-room-buying-guide/`、`/ja/money/soundproof-room-buy-rent-sell-guide/`。戻りリンクを足した`soundproof-room-buyback-guide`・`soundproof-room-rental-lease`・`soundproof-room-rental-cost`も回遊の確認対象
 - 基準値（中古記事、3か月累計・2026-09-26時点。旧URL分は含まない）: 表示59・クリック1・順位27.76、GA4 3週で7セッション、被リンク4。**W42の7日表を基準にしてW43以降と比べる**
   - 2026-10-13 W42基準値（7日表）: `used-soundproof-room-buying-guide`は**表示3・順位30.3・クリック0**。クエリは「防音室 中古」が1表示・61位のみ。総合ページ`soundproof-room-buy-rent-sell-guide`は未デプロイ・未登録のため表示0
-- [ ] ユーザー: デプロイ後、GSC URL検査で2本（総合ページ・中古記事）のインデックス登録をリクエストし、`schedule/2026-11-02-indexed-count-check.md`の「申請記録」へ記録する（W-25）
+- [x] ユーザー: デプロイ後、GSC URL検査で2本（総合ページ・中古記事）のインデックス登録をリクエストし、`schedule/2026-11-02-indexed-count-check.md`の「申請記録」へ記録する（W-25）
+  - 2026-10-16確認（`index-url.md`）: 総合ページは**登録済（10/14）**、中古記事は登録済み（10/6）
 - [ ] W43・W44のGSCで、「防音室 予算 10万円」「中古 防音室」「だんぼっち 中古」「オトダス 中古」などのクエリの表示・順位を見る。総合ページが新規URLとして表示に出始めるか（インデックス登録のずれは1〜2週見込む）
 - [ ] W43・W44のGA4で、総合ページ→中古記事・レンタル記事への回遊（`related_click`・内部リンクのクリック）を見る。総合ページ経由で2ページ目に進むセッションが出ていれば導線は機能している
 - [ ] 判定: 中古記事の順位が27位前後から改善するか、予算10万円系クエリで表示が出るかで見る。クリック数だけでは判断しない（表示数が細い）
@@ -115,7 +116,8 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 
 - 対象URL: `/ja/soundproof-room/proofroom-humidity-airconditionlist/`
 - 2026-10-13 W42基準値（7日表）: ページ**表示2・順位5.0・クリック0**。加湿・湿度・結露・乾燥を含むクエリはW42のクエリ表（40行）に**1件も出ていない**。冬の需要が立ち上がる前の基準として記録
-- [ ] ユーザー: デプロイ後、GSC URL検査でインデックス登録をリクエストし、申請記録（W-25）へ記録する
+- [x] ユーザー: デプロイ後、GSC URL検査でインデックス登録をリクエストし、申請記録（W-25）へ記録する
+  - 2026-10-16確認（`index-url.md`）: リクエスト済・登録待ち（前回クロール8/27）
 - [ ] W42（基準値）・W43・W44のGSCで、「防音室 加湿器」「防音室 湿度」「防音室 結露」「防音室 乾燥」などのクエリの表示・順位を見る。加湿の話は冬に需要が立ち上がるため、11〜12月のデータでも継続して見る（季節要因を考慮し、10月の数値だけで効果を判断しない）
 - [ ] 判定: 新規クエリ（加湿・温湿度計・結露）の出現と、冬の入口で表示が増えるか。順位が動かなくても、表示の新規クエリが出ていれば加筆の方向は合っていると見る
 
@@ -151,7 +153,8 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
   - `/ja/money/soundproof-contractor-selection-guide/`: 表示0。「防音工事 業者の選び方」（GSC 16か月で16表示・30位）
   - `/ja/knowledge/d-value-truth-and-myths/`: 表示0（旧URLは16か月で表示19・6.05位）。「db と d値 の違い」（16か月で表示22・34.6位）、「d値とは」系
   - `/ja/money/soundproof-room-buyback-guide/`: 表示0。「防音室 買取」（16か月で表示14・51.6位）と「防音室 買取 東京／兵庫／九州」系
-- [ ] ユーザー: デプロイ後、GSC URL検査で7本のインデックス登録をリクエストし、申請記録（W-25）へ記録する
+- [x] ユーザー: デプロイ後、GSC URL検査で7本のインデックス登録をリクエストし、申請記録（W-25）へ記録する
+  - 2026-10-16確認（`index-url.md`）: 登録済4本（聴覚過敏・賃貸DIY・防音業者・ランニングマシン）、リクエスト済・登録待ち3本（DIY壁・D値・防音室買取）。旧URL `/posts/treadmill-soundproofing-vibration-control/` は本番で301→`treadmill-apartment-soundproofing-layering`を確認（デプロイ2026-10-13）
 - [ ] W43・W44・W45のGSCで、上記クエリの表示・順位を見る
 - [ ] 判定: 対象クエリの新規出現と順位の改善（目安: 表示が出ること、30位台の記事が20位台に入ること）。動きが無い記事は需要ミスマッチを疑う（`project_indexing_vs_demand_mismatch`の考え方）
 
@@ -166,7 +169,8 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
   - `/ja/knowledge/hsp-self-check-sound-sensitivity/`: 表示0（16か月で27・29.5位）。「音に敏感な人の特徴」系（Bing 3.2位）
   - `/ja/soundproof-rental/pet-noise-soundproof-measures/`: 表示0（16か月で22・12.95位）。「ペット 騒音／鳴き声／足音」系。GSC・Bingとも「ペット」系クエリがほぼ無く、需要が小さい可能性がある
   - `/ja/knowledge/soundproof-culture-japan-vs-america/`・`/ja/soundproof-rental/rental-proofroom-contractcheck/`: 2026-10-13にnoindexを解除（W-31）。旧URLの16か月実績は450表示・3.9位、1,554表示・11.5位
-- [ ] ユーザー: デプロイ後、GSC URL検査で、この項目の対象のうちnoindex解除済みの2本を含む7本のインデックス登録をリクエストし、申請記録（W-25）へ記録する（noindex解除分の手順はW-31）
+- [x] ユーザー: デプロイ後、GSC URL検査で、この項目の対象のうちnoindex解除済みの2本を含む7本のインデックス登録をリクエストし、申請記録（W-25）へ記録する（noindex解除分の手順はW-31）
+  - 2026-10-16確認（`index-url.md`）: 登録済6本（ワンタッチ・データセンター・HSP防音室・HSPセルフチェック・日米管理規約・退去時費用）、リクエスト済・登録待ち1本（ペットの騒音）
 - [ ] W43・W44・W45のGSCで、上記クエリの表示・順位を見る
 - [ ] 判定: 対象クエリの新規出現と順位の改善。動きが無い記事は需要ミスマッチを疑う
 
@@ -186,8 +190,10 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
   - `/posts/gamer-bouon-room-select/`（73表示・3クリック・20.3位）: `/ja/soundproof-room/` → `/ja/creator/streamer-soundproof-room-comprehensive-guide/`
   - `/posts/vtuber-heat-noise-management/`（56表示・6クリック・10.1位）: `/ja/creator/` → `/ja/soundproof-room/proofroom-aircondition-select/`
   - `/posts/voice-only-streaming-optimization/`（54表示・1クリック・13.7位）: `/ja/creator/` → `/ja/creator/streaming-audio-first-low-budget/`
-- 変更日: 2026-10-13（デプロイ日は未確定。デプロイ後に追記する）
+- 変更日: 2026-10-13。**デプロイ日: 2026-10-13**（noindex解除3本が10/13のクロールで登録済みになっているため）
+  - 2026-10-16本番確認（curl）: 4本はrobotsメタなし・サイトマップに掲載、仙台はnoindex維持・サイトマップ除外。旧URL5本はすべて301で上記の転送先へ直行し、転送先は200（二重の301なし）
 - [ ] ユーザー: デプロイ後、サイトマップをGSCで再送信し、noindexを解除した4本と、転送先を変えた3本の受け皿（総合ガイド・苦情対応・音質優先）のインデックス登録をリクエストして、申請記録（W-25）へ記録する
+  - 2026-10-16確認（`index-url.md`）: URL検査は完了。7本とも登録済（加湿器は10/15クロールで登録）。**サイトマップ再送信の実施記録は無い**ため、この行は再送信の確認が取れたら閉じる
 - [ ] W43〜W46のGSCで、次を見る
   - 4本: 掲載（インデックス）の回復、表示・クリック・順位。特に「防音室 加湿器」「防音マスク ゲーム 自作」「退去時 防音室 費用」系
   - 旧URL5本の受け皿: 受け皿URLでの表示・順位。転送先が変わると、旧URLの評価の引き継ぎに数週間かかる
@@ -207,8 +213,9 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
   - `/ja/diy/treadmill-apartment-soundproofing-layering/`: 「ダンス 配信 足音」「フィットネス 配信 階下」系を追加（旧URLの受け皿の16か月は表示97・8.9位）
   - `/ja/creator/singer-instrumentalist-stream-soundproof/`（状態不明）: 「歌ってみた 防音」「宅録 防音」系
 - 同時に直した既存の旧URL転送4本（二重の301を避けた）: `/posts/bourenatal-naikencheck/`・`/posts/streamer-lowbudget-simula/`・`/ja/creator/streamer-soundproof-evolution-story/`・`/ja/column/others/kominka-renovation-streaming-room/`
-- 変更日: 2026-10-13（デプロイ日は未確定。デプロイ後に追記する）
-- [ ] ユーザー: デプロイ後、GSC URL検査で、統合先のうち未登録の記事（`vtuber-soundproof-environment-complete-guide`・`streamer-regional-studio-move`・`singer-instrumentalist-stream-soundproof`）と、登録済みの統合先（賃貸選び・総合ガイド）の再クロールをリクエストし、申請記録（W-25）へ記録する。作り直し前の再申請は行わない（W-28の方針）
+- 変更日: 2026-10-13。**デプロイ日: 2026-10-13**（2026-10-16に本番で吸収元の301と転送先の200を確認）
+- [x] ユーザー: デプロイ後、GSC URL検査で、統合先のうち未登録の記事（`vtuber-soundproof-environment-complete-guide`・`streamer-regional-studio-move`・`singer-instrumentalist-stream-soundproof`）と、登録済みの統合先（賃貸選び・総合ガイド）の再クロールをリクエストし、申請記録（W-25）へ記録する。作り直し前の再申請は行わない（W-28の方針）
+  - 2026-10-16確認（`index-url.md`）: `singer-instrumentalist-stream-soundproof`はリクエスト済（10/16）・登録待ち。`vtuber-soundproof-environment-complete-guide`は総合ガイドへ、`streamer-regional-studio-move`は農地の記事へ301済みのため申請対象外。賃貸選び・総合ガイドは登録済み
 - [ ] W43〜W46のGSCで、上記の統合先の表示・順位と、旧URLの受け皿に表示が戻るかを見る
 - [ ] 判定（11/16前後）: 統合先の表示が統合前（旧URL分を含めた合計）を下回らないか。下回る場合は、吸収した節の見出し・内容を見直す
 - 注意: 統合先に吸収した内容は、出典を確認できた範囲に限っている。統合先に残る課題（賃貸選びガイドの相場・事例・ブランド、VTuber防音室ガイドの税・売却額）の出典確認は、W-28の作り直しで行う
@@ -227,8 +234,9 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
   - `/ja/creator/one-room-streaming-soundproof/`（未登録。旧URL含め238表示・4クリック。ハブカード所属）: 「ワンルーム 配信 防音」「配信 声 漏れる」「深夜 配信 近隣」「ボイスチャット 音漏れ」系。旧URL `/posts/gamesteram-proofroom-soudflash/` と `/ja/creator/streamer-discord-noise-cancel-vs-physical/` の受け皿に変わった
   - `/ja/creator/streaming-pc-fan-noise-mic/`（未登録。68表示）: 「配信 マイク ファン音」に加え、Bingの「反響」の束（マイク 部屋の反響抑えたい ほか）と、旧URL `/ja/use-case/streaming-mic-soundproof-guide/` の受け皿
   - `/ja/creator/streamer-soundproof-room-comprehensive-guide/`（登録済み。17表示）: 「配信者 防音室 買うタイミング」「配信者 防音室 節税」系。旧URL `/posts/vtuber-soundproof-environment-complete-guide/`（旧URL含め128表示）の受け皿に変わった
-- 変更日: 2026-10-13（デプロイ日は未確定。デプロイ後に追記する）
-- [ ] ユーザー: デプロイ後、GSC URL検査で、未登録の統合先2本（`one-room-streaming-soundproof`・`streaming-pc-fan-noise-mic`）と、登録済みの総合ガイドの再クロールをリクエストし、申請記録（W-25）へ記録する
+- 変更日: 2026-10-13。**デプロイ日: 2026-10-13**（2026-10-16に本番で吸収元4本の301を確認）
+- [x] ユーザー: デプロイ後、GSC URL検査で、未登録の統合先2本（`one-room-streaming-soundproof`・`streaming-pc-fan-noise-mic`）と、登録済みの総合ガイドの再クロールをリクエストし、申請記録（W-25）へ記録する
+  - 2026-10-16確認（`index-url.md`）: `streaming-pc-fan-noise-mic`は**登録済（10/14）**（未登録から移った）。`one-room-streaming-soundproof`はリクエスト済（10/16）・登録待ち（前回クロール9/1）。総合ガイドは登録済み
 - [ ] 毎週のGSCで、上の語の表示・順位と、2本の登録状態（登録済みに移ったか）を確認する
 - [ ] 判定（11/16前後）: 統合した土台が登録され、吸収した語の表示が土台に出たか。出なければ、土台の疑問の絞り方を見直す
 
@@ -242,10 +250,12 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
   - `/ja/creator/asmr-external-noise-elimination/`（未登録。10表示）: 「ASMR 防音」「ASMR 外音」「ASMR 防音ブース」系。旧URL `/posts/asmr-soundproof-environment-guide/`（121表示・8クリック）と `/posts/asmr-proofroom-guide/`（120表示・8クリック）の転送先候補。受け皿が登録されてから転送先を変える（cluster-streamer §5）
   - `/ja/creator/parenting-streamer-soundproof/`（未登録。12表示・2クリック）: 「配信 子供 うるさい」「実家 ゲーム実況 親」「ルームシェア 配信」系
   - `/ja/creator/collab-streaming-soundproof-space/`（状態不明。2表示）: 「コラボ収録 部屋」「ポッドキャスト マイク 2人」系
+    - **2026-10-16 4パターン別に全面リライト**（防音室×遠隔／防音室に2人／リビング対策なし／リビング対策あり）。早見表・換気量の試算（2人で約67m³/h）・3:1の法則・残響時間の試算・FAQを追加。slugは不変。旧タイトル「2人以上の収録・コラボ配信｜必要な広さ・防音とマイクの組み方」→ 新タイトル「ポッドキャスト2人収録・コラボ配信の部屋づくり｜防音室・リビング4パターン別」。2〜4週後に「ポッドキャスト 2人」「防音室 ポッドキャスト」「リモート収録」系の表示・CTRを見る
   - `/ja/creator/farmland-prefab-streaming-room-legal/`（登録済み。95表示・2クリック・11.2位）: 既存の語（農地 プレハブ 配信）を落とさないこと。追加した古民家・地方移住の語は「古民家 配信 防音」「地方移住 配信」
   - `/ja/creator/female-streamer-privacy-soundproof/`（登録済み。48表示）: 既存の語に加えて、「親フラ 防止」「VTuber 身バレ 実家」系。旧URL経由155表示・9クリックの受け皿
-- 変更日: 2026-10-13（デプロイ日は未確定。デプロイ後に追記する）
-- [ ] ユーザー: デプロイ後、GSC URL検査で、未登録の土台3本（`asmr-external-noise-elimination`・`parenting-streamer-soundproof`・`collab-streaming-soundproof-space`）と、登録済みの土台3本の再クロールをリクエストし、申請記録（W-25）へ記録する
+- 変更日: 2026-10-13。**デプロイ日: 2026-10-13**（2026-10-16に本番で吸収元の301を確認）。ただし`collab-streaming-soundproof-space`の10/16の全面リライトは**未デプロイ**（本番は旧タイトルのまま、2026-10-16確認）。デプロイ後に再クロールを申請し、デプロイ日をここへ追記する
+- [x] ユーザー: デプロイ後、GSC URL検査で、未登録の土台3本（`asmr-external-noise-elimination`・`parenting-streamer-soundproof`・`collab-streaming-soundproof-space`）と、登録済みの土台3本の再クロールをリクエストし、申請記録（W-25）へ記録する
+  - 2026-10-16確認（`index-url.md`）: `asmr-external-noise-elimination`は**登録済（10/13）**、`collab-streaming-soundproof-space`は登録済、`parenting-streamer-soundproof`はリクエスト済（10/16）・登録待ち。ASMRの受け皿が登録されたので、旧URL2本（`/posts/asmr-soundproof-environment-guide/`・`/posts/asmr-proofroom-guide/`）の転送先変更（cluster-streamer §5）に着手できる状態
 - [ ] 登録済みの土台3本（賃貸選び・農地・身バレ）は、統合前の語の順位が落ちていないかを毎週確認する。落ちた場合は、吸収した内容が原因かを疑う
 - [ ] 判定（11/16前後）: 土台が登録されたか、吸収した語の表示が土台に出たか
 
@@ -274,7 +284,7 @@ W41でbing経由32セッション（W40は10）・エンゲージメント率88%
 
 - [ ] セッション参照元の内訳を継続監視（`chatgpt.com`/`copilot.com`経由の新規流入も追跡。W39時点で計5セッション）
   - 2026-10-04 W41: bing約51%に対し、google系は約6%（GA4で約15行分、GSC 7日クリック8と整合）。**GSCはGoogleだけ**なので、流入の過半を占めるBingの実態はGSCでは見えない
-  - 2026-10-13 W42: Bing 130→122（横ばい）・direct 74→159（うちbot疑い約80行）。Bingは依然として実質の検索流入の中心。参照元が`hub_entry`・`hub_cta`・`article_footer`になったセッションが29行あり、`Head.astro`のイベントパラメータ名`source`が流入元と衝突している疑い。**2026-10-13にパラメータ名を`link_source`へ変更済み（デプロイ待ち。次回GA4で当該行が0になるか確認）**
+  - 2026-10-13 W42: Bing 130→122（横ばい）・direct 74→159（うちbot疑い約80行）。Bingは依然として実質の検索流入の中心。参照元が`hub_entry`・`hub_cta`・`article_footer`になったセッションが29行あり、`Head.astro`のイベントパラメータ名`source`が流入元と衝突している疑い。**2026-10-13にパラメータ名を`link_source`へ変更済み。2026-10-16に本番HTMLで置き換え処理の反映を確認（デプロイ10/13）。W43のGA4で当該行が0になるか確認**
 
 ### W-20 指名検索「防音ラボ」
 

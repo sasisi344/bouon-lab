@@ -14,7 +14,8 @@ description: _draft/ の下書きを 2000〜7000 字の本番記事に仕上げ�
 
 1. `bouon-draft-publish-pipeline` skillのStep 0〜7をこの順で実行する
 2. Step 1のドラフトスキャンは `$ARGUMENTS` が指定されていればそのファイルのみ、省略時は `_draft/` 内の全対象ファイルを処理する
-3. Step 3の本文執筆では、2000〜7000字の範囲で骨格の充実度に応じた自然な分量に仕上げる（`/write-article`のような厳密なボリューム区分・フレームワーク選択は行わない）
+3. Step 2でクエリ契約を確定してから本文に入る（`bouon-writing` skillの`references/query-intent-match.md`）。タイトル・description・導入・H2はクエリ契約に合わせ、Step 4でセルフチェックを通す
+4. Step 3の本文執筆では、2000〜7000字の範囲で骨格の充実度に応じた自然な分量に仕上げる（`/write-article`のような厳密なボリューム区分・フレームワーク選択は行わない）
 
 ## 完了レポート
 

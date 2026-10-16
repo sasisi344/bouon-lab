@@ -12,7 +12,7 @@ description: _draft/ の下書きを本番記事として src/content/ に投稿
 1. `bouon-persona-thinking` skill（本音と建前シンキングルール）
 2. `.agents/persona/01_Consumer-Personas.md`（ターゲットペルソナ）
 3. `.agents/persona/00_Persona-Omega.md`（編集長フィルター）
-4. `bouon-writing` skill（記法・frontmatter・MDXコンポーネントルール）
+4. `bouon-writing` skill（記法・frontmatter・MDXコンポーネントルール）と `references/query-intent-match.md`（クエリ契約・タイトルの型・セルフチェック）
 5. `bouon-category` skill（カテゴリ判定）
 
 ## Step 1. ドラフトスキャン・スキップ規則
@@ -34,11 +34,13 @@ description: _draft/ の下書きを本番記事として src/content/ に投稿
 | **slug** | frontmatterの`slug`。なければファイル名からローマ字変換して生成 |
 | **lang** | frontmatterの`lang`。なければ`ja` |
 | **tags** | frontmatterの`tags`。なければ本文から最大5個抽出 |
+| **クエリ設計・タイトル** | `[!forAI]`・アウトラインの「クエリ設計」や`/draft-plan`で確定したタイトル・H2があれば**そのまま使い、本文に合わせて書き換えない**（変える場合はユーザーに理由を示して確認）。なければ `bouon-writing` skillの`references/query-intent-match.md` Step 0〜1でクエリを導き、タイトルとH2を決めてから本文に入る |
 
 ## Step 3. 本文の完成
 
 `bouon-writing` skillの記法ルール（`<strong>`・リストラベル・内部リンク末尾スラッシュ・H2/H3番号禁止・段落構成）を厳守する。
 
+- 導入はクエリ契約の「欲しい答え」を3文以内で返し、H2はサブクエリに対応させる（`references/query-intent-match.md` Step 4〜5）
 - ドラフトの見出し構成・主張・内部リンク候補をそのまま活かす（`[!forAI]`と矛盾する場合は`[!forAI]`を優先）
 - 「骨子」「メモ」「TODO」セクションを肉付けする
 - 執筆用注記（「執筆時の注意」等）は削除する
@@ -51,8 +53,8 @@ description: _draft/ の下書きを本番記事として src/content/ に投稿
 
 ```yaml
 ---
-title: "主要KWを左側に | 35-42文字"
-description: "SEO用サマリー | 80-120文字"
+title: "メインクエリの語を先頭15字以内に＋疑問/結論の半分＋判断材料 | 28-38文字"
+description: "前半にクエリ語＋結論、後半に記事にあるもの | 80-120文字"
 slug: "unique-slug"
 date: "YYYY-MM-DD"
 lastmod: "YYYY-MM-DD"
@@ -67,6 +69,8 @@ image: ./cover.png
 - `date`はドラフトの`date`を使用、なければ本日の日付。`lastmod`は本日の日付
 - `volume`・`voice`・`subcategory`等の非標準フィールドは含めない
 - `image: ./cover.png`は画像生成後に追加
+- `title`・`description`はクエリ型別の式とKWの配置ルールで作り、`references/query-intent-match.md` Step 6のセルフチェックを全項目通してから保存する
+- 新規記事の`slug`はメインKWを英語にしたものにする（ドラフトにslugがある場合はそれを優先）
 
 ## Step 5. カバー画像の生成
 
@@ -95,6 +99,7 @@ src/content/ja/{category}/{slug}/index.mdx
 ```
 ### 公開済み
 - [{title}] → src/content/ja/{category}/{slug}/index.mdx
+  - メインクエリ: {メインクエリ}（{クエリ型}）
   - カバー画像: 生成済み / 未生成（理由）
 
 ### スキップ

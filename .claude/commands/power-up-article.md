@@ -28,6 +28,7 @@ description: 既存記事(src/content/)に「本音と建前」シンキング�
 2. `.agents/persona/00_Persona-Omega.md` — 執筆後の検閲フィルター
 3. `.agents/persona/01_Consumer-Personas.md` — 対象記事の想定ペルソナ確認
 4. `bouon-rewrite-strategy` skill — 既存slug不変・内部リンク確認先などの既存リライト制約
+5. `bouon-writing` skillの`references/query-intent-match.md` — クエリ契約とセルフチェック
 
 ## Step 1. 対象記事の特定
 
@@ -36,6 +37,8 @@ description: 既存記事(src/content/)に「本音と建前」シンキング�
 ## Step 2. 現状分析
 
 対象記事を読み込み、frontmatter（`title`/`description`/`tags`/`category`）・見出し構成・本文がカバーしている検索意図（建前）の範囲・本音に触れていそうな記述の有無を抽出する。
+
+あわせてクエリ契約を書き、`query-intent-match.md` Step 6のセルフチェックを当てる（実際の流入クエリはユーザーにGSC画面での確認を依頼するか、手元のエクスポートから探す）。不合格の項目があれば、本音の改稿より先にタイトル・description・導入・H2の修正案を出す。
 
 ## Step 3. 本音・建前分析（`bouon-persona-thinking` skillの手順に従う）
 
@@ -58,6 +61,10 @@ Step 2とStep 3を突き合わせ、本音への言及が薄い箇所・解決�
 以下の形式でユーザーに提示し、承認を求める。
 
 ```
+## クエリ契約とセルフチェック
+- メインクエリ / クエリ型 / 欲しい答え
+- 不合格の項目と、タイトル・description・導入・H2の修正案
+
 ## 本音・建前分析結果
 | # | 建前 | 本音 |
 
