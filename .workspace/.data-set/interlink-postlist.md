@@ -112,6 +112,7 @@
 | ja | money | `quiet-space-relocation-decision-guide` |  | 防音賃貸への引っ越し、失敗しない判断基準｜子育て世代の住み替えガイド | 防音賃貸, 引っ越し, 子育て世代, 住み替え, 内見チェック | `/ja/money/quiet-space-relocation-decision-guide/` | false |
 | ja | money | `small-business-soundproof-subsidy-guide` |  | 【個人事業主向け】防音室は贅沢品ではない！「小規模事業者持続化補助金」採択のための申請ノウハウ | 防音 | `/ja/money/small-business-soundproof-subsidy-guide/` | false |
 | ja | money | `soundproof-contractor-selection-guide` |  | 防音リフォーム業者の選び方｜失敗しない相見積もりと契約前チェック | 防音リフォーム, 業者選び, 相見積もり, 子育て世代, 契約チェック | `/ja/money/soundproof-contractor-selection-guide/` | false |
+| ja | money | `soundproof-reform-cost-by-tatami` |  | 防音室リフォームの費用相場｜6畳・8畳・10畳の総額とユニットとの分かれ目 | 防音室, リフォーム, 費用, 防音工事, 価格相場 | `/ja/money/soundproof-reform-cost-by-tatami/` | false |
 | ja | money | `soundproof-room-buy-rent-sell-guide` |  | 防音室は買う？借りる？売る？予算・期間で選ぶ入口ガイド｜中古・レンタル・買取 | 防音室, 中古防音室, レンタル, 買取, 費用 | `/ja/money/soundproof-room-buy-rent-sell-guide/` | false |
 | ja | money | `soundproof-room-buyback-guide` |  | 防音室の買取で損しない方法｜買取できない条件・査定を下げない準備・個人売買の注意点【2026年版】 | 防音室, 買取, 売却, 高く売る, 費用 | `/ja/money/soundproof-room-buyback-guide/` | false |
 | ja | money | `soundproof-room-loan-guide` |  | 防音室ローン・分割払い完全ガイド2026｜月々いくら？審査・無金利・節税を解説 | ローン, 分割払い, 費用, 減価償却, 節税, クラウドファンディング | `/ja/money/soundproof-room-loan-guide/` | false |
@@ -154,6 +155,7 @@
 | ja | soundproof-room | `bouon-osusume-hikaku` |  | 【2026最新】防音室おすすめ比較｜失敗しない選び方とROI（投資対効果）を分析 | 防音室, 防音室選び, ヤマハ, カワイ, リセールバリュー, ROI | `/ja/soundproof-room/bouon-osusume-hikaku/` | false |
 | ja | soundproof-room | `bouon-setti-checkpoint` |  | 防音室導入の最終チェックリスト｜後悔しないためのサイズ・重量・搬入のデッドライン | 設置条件, 床荷重, 搬入経路, 管理組合, 失敗しない防音室 | `/ja/soundproof-room/bouon-setti-checkpoint/` | false |
 | ja | soundproof-room | `budget-soundproof-booth-comparison` |  | 格安防音室は夏に地獄化する？だんぼっち・OTODASU排熱リスクと中古購入の注意点 | 防音室, 排熱対策, だんぼっち, OTODASU, 中古防音室 | `/ja/soundproof-room/budget-soundproof-booth-comparison/` | false |
+| ja | soundproof-room | `compact-booth-under-1-5-tatami` |  | 防音室0.8畳で足りる？0.5〜1.5畳の小型でギター・歌・配信はできるか | 防音室, 小型防音室, 0.8畳, サイズ選び, ヤマハ | `/ja/soundproof-room/compact-booth-under-1-5-tatami/` | false |
 | ja | soundproof-room | `construction-types-cost-comparison` |  | 防音工事の種類と価格比較｜壁・床・開口部、業者の選び方まで | 防音工事, リフォーム, 価格比較, 防音壁 | `/ja/soundproof-room/construction-types-cost-comparison/` | false |
 | ja | soundproof-room | `custom-home-soundproof-builder-selection` |  | 注文住宅で防音室を作る依頼先｜ハウスメーカー・工務店・設計事務所の選び方と流れ | 注文住宅, 防音室, ハウスメーカー, 工務店, 設計事務所, 家づくり | `/ja/soundproof-room/custom-home-soundproof-builder-selection/` | false |
 | ja | soundproof-room | `custom-home-soundproof-consultation-prep` |  | 注文住宅の家づくり相談で防音の要望を伝える方法｜防音室がなくても整理する5項目 | 注文住宅, 防音室, 家づくり, 相談窓口, 要望整理, 新築 | `/ja/soundproof-room/custom-home-soundproof-consultation-prep/` | false |
