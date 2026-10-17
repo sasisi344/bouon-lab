@@ -1,10 +1,10 @@
 # 現在抱えているタスク
 
 作成日：2026-06-10
-最終整理：2026-10-04、T-24〜T-26を2026-10-11に追加（効果測定・次回データ確認待ちのタスクと週次生データは`weekly-task.md`に一元化。運用ルールは同階層の`CLAUDE.md`）
+最終整理：2026-10-17（T-03・T-07・T-15を`archive/task-list-29.md`へ。T-29を追加。効果測定は`schedule-task.md`の月次解析S-NNへ移した。運用ルールは同階層の`CLAUDE.md`）
 
 > **アーカイブ**: 完了タスクは `archive/task-list-index.md` を参照。
-> **効果測定・次回データ確認待ちのタスク・週次の生データ**は `weekly-task.md`（索引W-01〜）を参照。
+> **効果測定・データ待ちの確認項目**は `schedule-task.md`（月初の月次解析 S-11・S-12 ほか）を参照。`weekly-task.md`は2026-10-17に運用を終えた移行先ポインタ。
 > 本ファイルには「今すぐ着手できる」タスクのみを記載する。データが揃うのを待つ必要があるタスクはここに置かない。
 
 ---
@@ -15,41 +15,40 @@
 
 | ID | 区分 | タスク | 担当 | 関連 |
 |---|---|---|---|---|
-| T-03 | 解析精度 | 週次GA4エクスポートの粒度見直し | Claude | W-15 |
-| T-04 | 解析精度 | direct流入のbot疑い確認・除外 | ユーザー+Claude | W-19 |
-| T-07 | コンテンツ | Threads初回投稿〜運用開始 | ユーザー+Claude | W-12, W-20 |
+| T-29 | 解析精度 | **【11/2の月次解析より前に】** GSC・GA4の過去の月次データ（m07〜m09）を30日・月ごとに取得し、m10の比較基準を作る | ユーザー | S-11 |
+| T-04 | 解析精度 | direct流入のbot疑い確認・除外 | ユーザー+Claude | S-11（旧W-19） |
 | T-08 | 運営方針 | ドメイン継続・旧URL解消・既存記事改善 | ユーザー+Claude | - |
 | T-10 | 収益 | 住宅マッチング・注文住宅資料請求のCTA訴求 | ユーザー+Claude | S-05（旧W-23） |
-| T-15 | コンテンツ | 「音の悩みに対する解決記事」（音の種類×生活の場面別。睡眠を最優先） | ユーザー+Claude | T-10 |
 | T-20 | コンテンツ | 「防音スペースのレンタル」統合まとめ記事（用途別に種類を比べ、近くのスペースを探せる） | ユーザー+Claude | T-22（同時進行） |
 | T-22 | コンテンツ | 「個室ブース」記事（防音室より安価で、個室であることを重視する層と導入担当者に届ける。リサーチ済み） | ユーザー+Claude | T-20 |
 | T-23 | 収益 | 10万円台の防音室向けCTAを追加し、記事内容に合うCTAにする（現状は高額のアビテックス・ナサールのみ） | ユーザー+Claude | T-14（派生） |
 | T-24 | 配信者クラスタ | **【次に着手】** 旧URL3本の転送先を、カテゴリ一覧から既存記事へ変更する（電子ドラム・ピアノ関連） | Claude | T-25 |
-| T-25 | コンテンツ | 打鍵・打撃音の入口づくり（キーボード打鍵音・ピアノの鍵盤音・打楽器＋ハブ。配信者を受け皿にしない） | ユーザー+Claude | T-24, T-26 |
-| T-26 | 整理 | 配信者向け記事（再設計待ち18本ほか）の方針を決める | ユーザー | T-25 |
+| T-25 | コンテンツ | 打鍵・打撃音の入口づくり（キーボード打鍵音・ピアノの鍵盤音・打楽器＋ハブ。配信者を受け皿にしない） | ユーザー+Claude | T-24 |
 | T-27 | 整理 | チェロ記事（`rental-caution-cello`）の統合を取り消すか維持するか決め、個別に対応する（301だけ有効でファイルが残置されている状態） | ユーザー | consolidation-candidates §3 |
-| T-28 | コンテンツ | 仙台の防音賃貸記事（`sendai-soundproof-rental-guide`）の未検証の主張を裏取りし、noindexを解除するか決める | Claude+ユーザー | W-31 |
-| T-16 | 事実確認 | 窓リノベ2026の上限100万円に合わせて補助金記事2本の記述を更新する | Claude | W-24 |
+| T-28 | コンテンツ | 仙台の防音賃貸記事（`sendai-soundproof-rental-guide`）の未検証の主張を裏取りし、noindexを解除するか決める | Claude+ユーザー | S-11（旧W-31） |
+| T-16 | 事実確認 | 窓リノベ2026の上限100万円に合わせて補助金記事2本の記述を更新する | Claude | S-11（旧W-24） |
 | T-11 | 保留 | 一戸建て騒音源別記事 | - | - |
 
 ---
 
-## 着手可能：アクセス解析の精度改善（2026-10-04 W41解析で追加、T-03・T-04。T-05は2026-10-06完了）
+## 着手可能：アクセス解析の精度改善（T-04は2026-10-04 W41解析で追加。T-03は2026-10-17完了、T-05は2026-10-06完了。T-29は2026-10-17追加）
 
-- [ ] **T-03** 週次GA4エクスポートの粒度を見直す。現状は「ページタイトル×ランディングページ×参照元」で行が分割され、参照元の件数合計が総セッション数を超える（W41: 総207に対し行合計254）。ランディングページ×参照元のみの表を追加する
-  - 2026-10-05: W40・W41でLP×参照元に再集計して実行可能と確認（タイトル分割は解消）。ただし行合計は依然として総計を超える（W40: 総151/行合計182、W41: 総207/行合計254）ため、参照元は比率で見る運用は継続。エクスポート側の構成変更（ページタイトル列を外す）は未実施
 - [ ] **T-04** direct流入のbot疑いを確認する。W41で`/ja/local`・`/ja/soundproof-room`・`/ja/soundproof-rental`等の一覧ページ宛てdirectが各5件、滞在0.8秒以下・エンゲージメント0。`/ja`宛てdirect 15件も滞在2.6秒・エンゲージメント率20%。GA4で内部トラフィック/bot除外が可能か確認し、可能なら適用する。あわせて、GA4のイベント一覧にある`purchase`の出どころを確認する（サイトのコードからは送っていない。DebugView・リアルタイムで発生ページと流入元を見て、bot・スパムのMeasurement Protocol送信でないか判断する。2026-10-08 T-02対応中に発覚）
+
+### T-29 GSC・GA4の過去の月次データを取得する（2026-10-17 追加、期限: S-11の前の2026-11-01）
+
+月次解析（S-11）でm10を比べる基準がない。週次データ（W41・W42）は期間が違い、月次とは比べられない（`access-data/export-spec.md` §2）。そこで、10月より前の月を暦月ごとに取得しておく。
+
+- [ ] **先に確認（ユーザー）**: GA4の管理 → データの設定 → データ保持の期間。既定の「2か月」なら、探索（A1〜A3）で取れるのは直近2か月だけで、8月以前は取れない可能性がある。「14か月」に変えておく（さかのぼっては戻らないが、これ以上の消失を防げる）。標準レポートは保持期間の影響を受けないので、探索で取れない月は標準レポート（集客 → トラフィック獲得、エンゲージメント → ランディングページ）で代替する
+- [ ] **必須（3か月）**: m07（2026-07-01〜07-31）・m08（08-01〜08-31）・m09（09-01〜09-30）。取得内容はG1（GSC検索パフォーマンス）・A1（GA4 LP）・A3（GA4 デバイス）。A2（イベント）は9/26の計測拡充より前は列がないため、m09のみでよい。G3（インデックス登録）は過去分を取れないので不要
+- [ ] **理想（追加、GSCのみ）**: 2025-10〜2026-06の9か月分のG1。合わせて12か月そろうと、季節要因（冬の加湿・結露、春の引っ越し・防音賃貸）と前年同月比を見られる。GSCは16か月しか残らず古い月から消えるので、取るなら早いほうがよい。G2（ページ×クエリ、Looker Studio）も過去にさかのぼれるので、余力があれば同じ月で取る
+- 置き場所: `access-data/2026/m07/`〜`m09/`（2025年分は`access-data/2025/m10/`〜`m12/`、2026年1〜6月は`access-data/2026/m01/`〜`m06/`）。各フォルダに`templates/monthly-checklist.md`をコピーした`README.md`を置き、期間を`gsc-periods.json`に1行足す
+- 読むときの注意: 9月はGoogleの低迷があった月で、9/5に本音と建前リライト68本、9/25に旧URLの301化・410化をしている。旧URL（`/posts/`ほか）の時期のページ表は、今のURLと対応づけないと比べられない。サイト全体の合計とクエリ表は、そのまま比べてよい
+- 完了条件: m07〜m09の3フォルダがそろい、S-11でm09との比較ができる状態になっている
 
 ---
 
 ## 着手可能：コンテンツ・戦略タスク
-
-### T-07 Threads初回投稿（2026-09-30、SNS運用方針決定・専用ルール制定済み）
-
-SNS運用はThreads（@bouonlab、Instagramと連携済み）で開始することが決定。運用ルールは`bouon-threads-ops` skill（投稿タイプ①小ネタ型／②クエリ疑問オープナー型）に制定済み。作業フォルダは`.workspace/_sns-post/`（週間運用ルールは同フォルダの`CLAUDE.md`）。記事フッター・Aboutページのフォロー導線もThreads前提に更新済み。詳細は`_draft/brand-awareness-roadmap.md`参照。
-
-- [x] ユーザーがThreadsへ投稿し、投稿後は`_sns-post/CLAUDE.md` §6の手順で台帳`archive/topic-index.md`へ記録・`archive/`へ移動する
-- [x] 2本目以降のクエリ疑問オープナー型の候補クエリを選定する（`weekly-task.md`の実データから、架空のクエリは使わない）
 
 ### T-08 運営方針確定：ドメイン継続＋既存記事の改善（2026-10-04 決定）
 
@@ -90,19 +89,6 @@ GA4の直近1週間のアクセスが落ち込み時より回復しているこ�
 
 - [ ] 2記事を公式ページ（`https://window-renovation2026.env.go.jp/`、環境省）に照らして更新する。slugは変えない（`bouon-rewrite-strategy`）。タイトルを変えた場合は、リンク文言を使っている他記事も確認する
 - [ ] 更新したら`lastmod`を更新し、`bouon-research`のTier C基準で事実確認済みとして扱う
-
-### T-15 「音の悩みに対する解決記事」（2026-10-06 追加、T-10のハブ記事作成中に発案）
-
-ユーザーの気づき: 住んでいる家の騒音問題は、**音の種類と、生活のどこで困っているかで解決策が変わる**。睡眠が最も比重が大きいと考えられ、寝室を防音にするか、イヤホン・耳栓で手軽に済ませるかなど、方法が分かれる。住宅系ハブ記事（`noise-solutions-relocate-retrofit-custom-home`、`_draft/`）とは別に作成する。ハブ記事は概要と誘導にとどめ、詳細はこの記事に集約する。
-
-- [x] 企画（2026-10-07）: `/draft-plan`で方向性を確定。**睡眠に絞る**（在宅ワークなど他の場面は別記事・既存記事へ誘導）。音の種類（外の交通音・隣室の声・上階の足音・家族の生活音）×効く対策を軸に、手軽な対処→部分的な対策→管理会社への相談・引っ越しの順で示す
-- [x] 既存記事との重複確認（2026-10-07）: 耳栓・ノイキャン／防音カーテン／防音室での就寝は既存記事に任せて要点とリンクのみ。新規に書いたのは「音の種類の切り分け」と「部分的な対策」（寝る位置・窓と隙間・マスキング・賃貸の注意）。「聞く側」の音を軸にした記事は既存になかった
-- [x] 睡眠の健康上の効果は書かない（2026-10-07 反映済み）。眠れない状態が続く場合は医療機関への相談を促す一文のみ
-- [x] 記事を作成（2026-10-07）: `soundproof-rental/bedroom-noise-type-solution-guide`（約4,900字、カバー画像つき）
-- [x] ハブ記事の「まず、どの音が…決める」節と「道を選ぶ前に…確認する」節から相互リンクを追加（2026-10-07）。記事側からもハブへリンク済み
-- [x] `pnpm build`でビルド確認し、住宅系記事と**まとめてデプロイ**する
-- [x] 公開後、GSCで表示・クリックを確認する（睡眠系・聞く側の検索語は直近1年のクエリにほぼなく、需要の裏付けは弱い）
-- [ ] 後続候補（2026-10-07）: 睡眠以外の場面（在宅ワーク・Web会議）は、新記事を作らず既存の在宅ワーク記事3本を`remote-work-family-harmony-soundproof`へ統合した（2026-10-07、`web-meeting-voice-soundleak-prevention`・`workbooth-office-soundproof-trend`・`bedroom-telework-layout-soundproof`を301。ローン記事は別維持）。効果測定はS-10。マスキング音のサンプルページは未着手（音源の自作かライセンスが必要。外部サンプルへのリンクは公式・公的で確認できたものだけにする）
 
 ### T-20 「防音スペースのレンタル」統合まとめ記事（2026-10-07 追加、T-13の事実確認中に発案）
 
@@ -173,7 +159,7 @@ T-13の調査で、防音室の月額レンタル（音レント）は最短15�
 - [ ] `feedback_ctabox_rule`メモリのルールを更新する（「使える slug は2種類のみ」→ 安価帯の slug を追加。「商品名を記事で紹介した場合のみ配置」は維持するか決める）
 - [ ] 記事にCTAを配置する。**記事内で商品名に言及している箇所にだけ置く**。高額CTAとの併置は、読者の予算帯に合わせて出し分ける（`bouon-growth-ops`の収益導線設計、`bouon-internal-link-ops`で他の誘導と重複しないか確認）
 - [ ] スマホ幅390pxで表示確認（`pnpm preview`、`feedback_mobile_first_design`メモリ）。`data-track-slug`が付くため、GA4の`affiliate_click`（キーイベント登録済み）で新CTAのクリックを後から見られるようにしておく
-- [ ] 効果確認の起票: 配置した日・対象記事・見る指標（`affiliate_click`のslug別クリック）を`weekly-task.md`にW-NNで起票する（キーイベントは登録済みなので、配置後に判定できる）
+- [ ] 効果確認の起票: 配置した日・対象記事・見る指標（`affiliate_click`のslug別クリック）を、次の月次解析のS-NNの個別ファイルに節として足す（キーイベントは登録済みなので、配置後に判定できる）
 - 注意: 記事の主張と合わない商品は載せない。遮音性能・価格は公式の表記どおりに書き、誇張しない。画像生成は指示があるまで行わない
 
 ---
@@ -191,7 +177,7 @@ T-13の調査で、防音室の月額レンタル（音レント）は最短15�
   - `/posts/piano-proofroom-select-guide/`（73表示・24.7位）: `/ja/soundproof-room/` → `/ja/soundproof-room/piano-room-guide/`
   - `/posts/soundproof-performance-piano/`（16表示・8.4位）: `/ja/soundproof-room/` → `/ja/soundproof-room/piano-room-guide/`
 - [ ] `public/.htaccess`と`astro.config.mjs`を同時に変更し、転送の連鎖（二重の301）が無いことを確認する。`pnpm build`、サイトマップ、内部リンクを確認（`bouon-internal-link-ops`）
-- [ ] 公開後、GSCで3本の旧URLと転送先の表示・順位を確認する。効果確認は`weekly-task.md`にW-NNで起票（変更日・対象URL・見る指標）
+- [ ] 公開後、GSCで3本の旧URLと転送先の表示・順位を確認する。効果確認は、次の月次解析のS-NNの個別ファイルに節として足す（変更日・対象URL・見る指標）
 - 残りの旧URL3本（`keyboard-sound-streaming-soundproof-guide`（646表示・16クリック）、`streamer-keyboard-silence`、`electronic-piano-vibration-solution`）は、T-25の新記事の公開と**同時**に転送先を変える
 - 未決: サイト全体で、カテゴリ一覧・トップへ301された旧URL125本（16か月で表示17,456・クリック240。`/en/`の分を含む）の点検は、起票していない（必要ならユーザー判断で追加）
 
@@ -205,42 +191,9 @@ T-13の調査で、防音室の月額レンタル（音レント）は最短15�
 - [ ] 枝C: **打楽器**の再構築。電子ドラム中心。`soundproof-room/soundproof-performance-drum`・`diy/electronic-drum-vibration-fuwafuwa-system`を土台に、キックペダルの振動、パッド・カホン・太鼓の扱いを加える
 - [ ] ハブ記事: 空気伝搬と固体伝搬の共通原理を説明し、枝A〜Cと台パンに送る（枝の公開後）
 - [ ] カテゴリ・slugは`bouon-category`で判定してから決める。執筆は`bouon-writing`（必読）、効果・規格（L値・LL値など）の裏取りは`bouon-research`、内部リンクは`bouon-internal-link-ops`
-- [ ] 各記事の公開日に、効果確認を`weekly-task.md`にW-NNで起票（対象・見る語・公開から4週間後。GSCはカスタム7日）
+- [ ] 各記事の公開日に、効果確認を、公開から4週間以上たった月の月次解析のS-NNの個別ファイルに節として足す（対象・見る語）
 - 見る語の例: キーボード 打鍵音 対策、電子ピアノ 打鍵音 対策、電子ドラム 振動 対策、台パン 対策
 - 注意: 画像生成は指示があるまで行わない
-
-### T-26 配信者向け記事の方針を決める（2026-10-11 追加）
-
-> 2026-10-13: 配信者クラスタを「疑問の型」で再考した案が `archive/re-create-docs-20261013/cluster-streamer.md`（旧版は `cluster-streamer-v1-20261011.md`）。W-28の19本を「11本＋8本」に分ける案、配信系の旧URLの転送先、noindex5本の再評価（クリックの12.5%）を含む。ユーザー判断待ちは同ファイルの§8。**2026-10-13に、統合候補の8本を実行**（§10。`horror-game-scream-soundproof-mic`は統合せず残す）。効果測定は`weekly-task.md` W-32。
-
-`re-create/remaining.md` §2の配信者クラスタ（19本。2026-10-13にbatch-01〜08から統合）と、2026-09以降に公開した`creator/`配下の記事について、入口確定（T-25）を受けて、残す／統合／縮小を決める。
-
-- [ ] 方針の読み: 配信者向けの需要は一般のクラスタ（防音室の価格、防音賃貸、DIY防音）が受ける。配信者向け記事は、読者別の変種として残すか、一般の記事に統合する。個別の判断はユーザーが`remaining.md`の「方針」欄に書く
-- [ ] 実績があり残す記事（16か月）: `diy/diy-vocal-soundproof-mask`（22クリック）、`creator/one-room-streaming-soundproof`、`creator/vtuber-family-privacy-rules`、`creator/farmland-prefab-streaming-room-legal`、`creator/gaming-floor-impact-noise-fix`、`creator/streaming-pc-fan-noise-mic`
-- [ ] 2026-09以降に公開した記事は、公開から4週間以上たってから判断する
-- [ ] 統合・排除・301は、`bouon-internal-link-ops`で被リンクを確認し、301と`astro.config.mjs`を同時に変更する。`re-create/README.md`のルールに従う
-- 参考: Bingのページ別の表（どの記事に着地したか）は未取得。取得できれば、方針決定の材料になる
-
-**優先方針（2026-10-13、ユーザー判断）**: 再構築は`creator/`を最優先にする。初期に作った記事で、設計と内容が噛み合っていない。**インデックス未登録（クロール済み）のものだけ**を優先して作り直す（登録済みは後回し）。未登録は`.workspace/.data-set/seo-check/index-none/表.csv`（2026-10-13取込）の19本。slugは変えない。統合・排除・301は、上の実データ後の判断のまま実施しない。
-
-- 対象19本（16か月の表示順。GSC `ページ.csv`）: `streaming-pc-fan-noise-mic`（68）、`voice-chat-soundleak-fix`（28）、`soundproof-rental-life-streamer`（13）、`parenting-streamer-soundproof`（12）、`asmr-external-noise-elimination`（10）、`streamer-regional-studio-move`（8）、`asmr-vtuber-booth-guide`（5）、`one-room-streaming-soundproof`（4）、`vtuber-soundproof-environment-complete-guide`（4）、`streamer-soundproof-budget-roadmap`（4）、`soundproof-rental-vs-diy-streamer`（2）、`streamer-soundproof-rental-share`（2）、`game-streamer-sound-types`（2）、`kominka-renovation-streaming-room`（1）、`streamer-rental-preview-checklist`（1）、`utaite-vs-streamer-soundproof`（1）、`streamer-soundproof-timing`（0）、`streaming-mic-noise-room`（0）、`bourentakl-streamer-settingsetubi`（0、18,000字）
-- 見立て（未検証）: 9/5〜9/6に加筆した記事も未登録のまま。長さ・被リンク（2〜5本）では登録済みと差がなく、公開時期（2026年1〜6月）とテーマの広さで分かれている。7月公開の「一つの疑問に答える」型は27本すべて登録済み
-- [ ] 19本を、1本ごとに「どの疑問に答える記事か」を1行で決める（答えが1つに絞れない記事は、疑問を絞って構成を作り直す）。T-25の入口（打鍵音・鍵盤音・打楽器）とぶつかるものは役割分担を決める（`streaming-mic-noise-room`・`game-streamer-sound-types`・`streaming-pc-fan-noise-mic` など）
-- [ ] 最終クロールが9/26より前の記事は、再クロールが済むまで評価できない。再申請は作り直した後に限る（作り直し前は行わない）。進捗と確認は`weekly-task.md` W-28
-
-**方針の縮小（2026-10-13、ユーザー承認）**: 配信者の記事はもともとの需要が高くない。1本ずつ作り直さず、似た話題を統合して土台を作り直す。9グループ（`creator/` 36本 → 26本）の案は `archive/re-create-docs-20261013/cluster-streamer.md` §11。実施は「グループ1・2・8」から（順: 1 → 2 → 8 → 7 → 5 → 3 → 6 → 9 → 4。4・9は現行URLの登録状態を確認してから）。1グループ実施するごとに、下の表に結果を1行追記する。全9グループを2026-10-13に実施（内容は `archive/re-create-docs-20261013/cluster-streamer.md` §12・§13、効果測定は `weekly-task.md` W-33・W-34）。`creator/` は36本 → 26本。
-
-| グループ | 土台 ← 吸収 | 状態 |
-|---|---|---|
-| 1 | one-room-streaming-soundproof ← voice-chat-soundleak-fix、night-streaming-neighbor-tips | 実施済み（2026-10-13） |
-| 2 | streaming-pc-fan-noise-mic ← streaming-mic-noise-room | 実施済み（2026-10-13） |
-| 8 | streamer-soundproof-room-comprehensive-guide ← vtuber-soundproof-environment-complete-guide | 実施済み（2026-10-13） |
-| 7 | streamer-rental-selection-guide ← bourentakl-streamer-settingsetubi、soundproof-rental-life-streamer | 実施済み（2026-10-13） |
-| 5 | asmr-external-noise-elimination ← asmr-vtuber-booth-guide | 実施済み（2026-10-13） |
-| 3 | parenting-streamer-soundproof ← sleeping-parent-game-streaming-guide | 実施済み（2026-10-13） |
-| 6 | collab-streaming-soundproof-space ← podcast-collab-recording-acoustics | 実施済み（2026-10-13） |
-| 9 | farmland-prefab-streaming-room-legal ← streamer-regional-studio-move | 実施済み（2026-10-13。土台は登録済み、吸収側は未登録を確認） |
-| 4 | female-streamer-privacy-soundproof ← vtuber-family-privacy-rules | 実施済み（2026-10-13。土台は登録済み、吸収側は未登録の一覧に無く登録の記録も無いことを確認） |
 
 ### T-27 チェロ記事（`rental-caution-cello`）の個別対応（2026-10-13 追加、ユーザー判断で個別対応）
 
@@ -260,7 +213,7 @@ T-13の調査で、防音室の月額レンタル（音レント）は最短15�
 - [ ] 本文の主張を、一次情報（不動産ポータル、業者の公式サイト、宮城教育大学・東北学院大学の公式サイト）で裏取りする。裏取りできない部分は削除または表現を弱める
 - [ ] 方針の確認: 音大生×地域の記事は `music-student-property-search-guide` に集約し、地域別の個別記事は作らない（2026-10-06決定）。仙台記事を残すか、集約するかをユーザーが決める
 - [ ] 残す場合は、裏取り後に`noindex: true`を外し、`astro.config.mjs`のサイトマップ除外（`sendai-soundproof-rental-guide`）も外す
-- 関連: `weekly-task.md` W-31
+- 関連: 旧W-31（`schedule/2026-11-02-m10-monthly-analysis.md`）
 
 ---
 

@@ -41,7 +41,7 @@
   - [配信者向け賃貸の選び方｜静かに配信できる部屋・回線・電源の内見チェックリスト](/ja/creator/streamer-rental-selection-guide/) `配信・実況, 防音賃貸, 騒音対策, ネット回線`
   - [配信初心者がカメラより先に直すべき音質｜0円でできる優先順位](/ja/creator/streaming-audio-first-low-budget/) `配信・実況, 音質改善, マイク, 初心者向け, 予算別対策`
   - [配信中に「苦情が来た」ときの対処フロー｜謝罪・改善・再発防止まで](/ja/creator/streamer-noise-complaint-response/) `配信・実況, 騒音苦情, 近隣トラブル, 賃貸, 対処法`
-  - [配信中のペットの鳴き声対策｜防音ケージ＋隙間テープの両立術](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
+  - [配信中のペットの鳴き声対策｜ケージカバーとペット防音室を配信場所で選ぶ](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
   - [防音ブース内での飲食、実は匂いが一番残る｜配信中の消臭・換気マネジメント](/ja/creator/soundproof-booth-food-odor-management/) `防音ブース, 消臭対策, 換気, 配信環境, 吸音材メンテナンス`
   - [防音室なしで配信を始める｜スマホ1台から収益化につなげる若年層のロードマップ](/ja/creator/young-streamer-smartphone-monetization-roadmap/) `配信・実況, 若年層, 収益化, スマホ配信, 防音室`
   - [防音室のケーブル配線術｜配信機材が増えても散らからない整理と電源の考え方](/ja/creator/soundproof-booth-cable-management/) `配信者, 防音室, ケーブル整理, 電源タップ, 配線`
@@ -329,7 +329,7 @@
   - [配信者向け賃貸の選び方｜静かに配信できる部屋・回線・電源の内見チェックリスト](/ja/creator/streamer-rental-selection-guide/) `配信・実況, 防音賃貸, 騒音対策, ネット回線`
   - [配信初心者がカメラより先に直すべき音質｜0円でできる優先順位](/ja/creator/streaming-audio-first-low-budget/) `配信・実況, 音質改善, マイク, 初心者向け, 予算別対策`
   - [配信中に「苦情が来た」ときの対処フロー｜謝罪・改善・再発防止まで](/ja/creator/streamer-noise-complaint-response/) `配信・実況, 騒音苦情, 近隣トラブル, 賃貸, 対処法`
-  - [配信中のペットの鳴き声対策｜防音ケージ＋隙間テープの両立術](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
+  - [配信中のペットの鳴き声対策｜ケージカバーとペット防音室を配信場所で選ぶ](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
   - [防音室なしで配信を始める｜スマホ1台から収益化につなげる若年層のロードマップ](/ja/creator/young-streamer-smartphone-monetization-roadmap/) `配信・実況, 若年層, 収益化, スマホ配信, 防音室`
   - [防音室は経費にできる？配信者だけじゃない対象職業と判断基準](/ja/money/streamer-tax-strategy/) `確定申告, 節税, 減価償却, 個人事業主, 青色申告, 配信・実況`
 
@@ -391,7 +391,7 @@
   - [上の階の足音・隣の話し声で眠れない｜音の種類で変わる寝室の騒音対策の選び方](/ja/soundproof-rental/bedroom-noise-type-solution-guide/) `睡眠, 騒音対策, 賃貸, 足音, 生活音, 寝室`
   - [配信者のための家電・生活音対策｜冷蔵庫と換気扇のノイズを物理的に沈める方法](/ja/diy/diy-refrigeration-noise-reduction/) `配信・実況, 騒音対策, 冷蔵庫, 換気, 防振, ASMR`
   - [配信者向け賃貸の選び方｜静かに配信できる部屋・回線・電源の内見チェックリスト](/ja/creator/streamer-rental-selection-guide/) `配信・実況, 防音賃貸, 騒音対策, ネット回線`
-  - [配信中のペットの鳴き声対策｜防音ケージ＋隙間テープの両立術](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
+  - [配信中のペットの鳴き声対策｜ケージカバーとペット防音室を配信場所で選ぶ](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
   - [防音室のエアコン選びと静音化の極意｜2026年最新の空調・換気戦略](/ja/soundproof-room/proofroom-aircondition-select/) `防音室, 空調設備, 換気, スポットクーラー, 騒音対策`
   - [防音室の音漏れ対策ガイド2026｜原因特定から段階的改善のマニュアル](/ja/soundproof-room/proofroom-soudmore-manual/) `防音室, 騒音対策, DIY防音, メンテナンス`
 
@@ -613,7 +613,7 @@
   - [ゲーム実況者の防音環境｜打鍵音・マウス音・叫び声ごとの対策](/ja/creator/game-streamer-sound-types/) `配信・実況, ゲーム実況, キーボード騒音, 打鍵音, 防音対策`
   - [ピアノ・ギター弾き語り・歌ってみた配信の防音設計｜楽器音と声を同時に処理する](/ja/creator/singer-instrumentalist-stream-soundproof/) `配信・実況, 楽器演奏, 吸音パネル, 防音対策, DIY防音`
   - [同居人がいる家で配信する｜子ども・親・ルームシェアの防音と生活音調整](/ja/creator/parenting-streamer-soundproof/) `配信・実況, 子育て, 実家暮らし, ルームシェア, 生活音, 防音対策`
-  - [配信中のペットの鳴き声対策｜防音ケージ＋隙間テープの両立術](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
+  - [配信中のペットの鳴き声対策｜ケージカバーとペット防音室を配信場所で選ぶ](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
 
 ### ja / ASMR（4件）
 
@@ -662,7 +662,7 @@
   - [ピアノ・ギター弾き語り・歌ってみた配信の防音設計｜楽器音と声を同時に処理する](/ja/creator/singer-instrumentalist-stream-soundproof/) `配信・実況, 楽器演奏, 吸音パネル, 防音対策, DIY防音`
   - [ポッドキャスト2人収録・コラボ配信の部屋づくり｜防音室・リビング4パターン別](/ja/creator/collab-streaming-soundproof-space/) `配信・実況, コラボ配信, ポッドキャスト, 防音室, 広さ, マイク設定, 吸音パネル`
   - [配信のマイクノイズはPC本体が原因？ファン音・反響・外音の切り分けと直し方](/ja/creator/streaming-pc-fan-noise-mic/) `配信・実況, マイクノイズ, PC静音化, 防振対策, 吸音パネル, 音質改善`
-  - [配信中のペットの鳴き声対策｜防音ケージ＋隙間テープの両立術](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
+  - [配信中のペットの鳴き声対策｜ケージカバーとペット防音室を配信場所で選ぶ](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
 
 ### ja / 子育て世代（4件）
 
@@ -851,7 +851,7 @@
 ### ja / ペット（2件）
 
   - [ペットの騒音は防音だけでは解決しない｜鳴き声・足音の種類別対策と集合住宅での限界](/ja/soundproof-rental/pet-noise-soundproof-measures/) `ペット, 騒音対策, 騒音トラブル, 集合住宅, マンション`
-  - [配信中のペットの鳴き声対策｜防音ケージ＋隙間テープの両立術](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
+  - [配信中のペットの鳴き声対策｜ケージカバーとペット防音室を配信場所で選ぶ](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
 
 ### ja / メンタルヘルス（2件）
 

@@ -35,7 +35,7 @@
 | ja | creator | `soundproof-booth-food-odor-management` |  | 防音ブース内での飲食、実は匂いが一番残る｜配信中の消臭・換気マネジメント | 防音ブース, 消臭対策, 換気, 配信環境, 吸音材メンテナンス | `/ja/creator/soundproof-booth-food-odor-management/` | false |
 | ja | creator | `streamer-noise-complaint-response` |  | 配信中に「苦情が来た」ときの対処フロー｜謝罪・改善・再発防止まで | 配信・実況, 騒音苦情, 近隣トラブル, 賃貸, 対処法 | `/ja/creator/streamer-noise-complaint-response/` | false |
 | ja | creator | `streamer-noise-quick-fix` |  | ゲーム配信者が防音より先にやるべき騒音対策｜マイク音質改善が最優先 | 配信・実況, ゲーム実況, 騒音対策, 賃貸防音, DIY防音, マイク設定 | `/ja/creator/streamer-noise-quick-fix/` | false |
-| ja | creator | `streamer-pet-noise-balance` |  | 配信中のペットの鳴き声対策｜防音ケージ＋隙間テープの両立術 | 配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル | `/ja/creator/streamer-pet-noise-balance/` | false |
+| ja | creator | `streamer-pet-noise-balance` |  | 配信中のペットの鳴き声対策｜ケージカバーとペット防音室を配信場所で選ぶ | 配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル | `/ja/creator/streamer-pet-noise-balance/` | false |
 | ja | creator | `streamer-rental-selection-guide` |  | 配信者向け賃貸の選び方｜静かに配信できる部屋・回線・電源の内見チェックリスト | 配信・実況, 防音賃貸, 騒音対策, ネット回線 | `/ja/creator/streamer-rental-selection-guide/` | false |
 | ja | creator | `streamer-soundproof-room-comprehensive-guide` |  | 【2026完全版】配信者・VTuberのための防音環境完全ガイド｜ワンルームから防音室まで全解説 | 配信・実況, VTuber, ASMR, 防音室, キーボード騒音, 節税, マイク設定 | `/ja/creator/streamer-soundproof-room-comprehensive-guide/` | false |
 | ja | creator | `streaming-audio-first-low-budget` |  | 配信初心者がカメラより先に直すべき音質｜0円でできる優先順位 | 配信・実況, 音質改善, マイク, 初心者向け, 予算別対策 | `/ja/creator/streaming-audio-first-low-budget/` | false |
