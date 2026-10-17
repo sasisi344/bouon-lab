@@ -2,7 +2,8 @@
 
 - 担当: Claude（解析・記録）。ユーザーはW43のGSC/GA4エクスポートのみ
 - 状態: 未着手
-- 関連: 旧W-07（完了・`archive/weekly-task-archive-20261006.md`）、`schedule/2026-10-10-w42-gsc-ga4-import.md`（S-01）
+- 2026-10-17変更: 週次取得の廃止により、S-11（m10の月次解析、2026-11-02〜11-03）の中で実施する。本文の「W43」「W44」「7日」は「m10」に読み替える
+- 関連: 旧W-07（完了・`archive/weekly-task-archive-20261006.md`）、`archive/2026-10-10-w42-gsc-ga4-import.md`（S-01）
 
 ## 背景
 

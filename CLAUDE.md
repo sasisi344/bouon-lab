@@ -50,8 +50,8 @@ npx astro check # 型チェック
 2本柱＋索引運用。まず `.workspace/.task/CLAUDE.md`（索引・読み方・更新ルール）を読む。詳細手順は `bouon-task-ops` skillを参照。
 
 - **`task-list.md`** — 今すぐ着手できるタスクのみ。項目ID `T-NN`（**削除厳禁**）
-- **`weekly-task.md`** — データ待ちの確認項目（期限・短期・継続観察）＋週次の生データ。項目ID `W-NN`（**削除厳禁**）
-- **`effect-monitoring.md`** — 2026-10-04に`weekly-task.md`へ統合済みの移行先ポインタ。新規追記しない（**削除厳禁**）
+- **`schedule-task.md`** — 日付が決まっているタスクと効果測定。効果測定は月初の月次解析のS-NNにまとめる。項目ID `S-NN`（個別ファイルは`schedule/`）
+- **`weekly-task.md`**・**`effect-monitoring.md`** — 運用を終えた移行先ポインタ（2026-10-17に効果測定を`schedule-task.md`へ移行）。新規追記しない（**削除厳禁**）
 - **`archive/`** — 完了済みタスクの保管（索引: `archive/task-list-index.md`）
 
 ブログ横断の中期〜長期タスクはGitHub Projectでも管理: https://github.com/users/sasisi344/projects/1 （詳細は`344ob/07_workspace/.agents/blog-registry.md`）。二重管理はしない。

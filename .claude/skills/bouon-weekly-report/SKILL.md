@@ -53,14 +53,14 @@ python $S report w42 --no-compare          # 単週のみ
 python $S trend bass-trap onetouch         # URL一部一致で週次推移（7日データのみ）
 ```
 
-出力はMarkdown。表はそのまま `weekly-task.md` の「週次生データ」へ貼れる形にしてある。
+出力はMarkdown。表はそのまま `access-data/2026/m{MM}/README.md` へ貼れる形にしてある。
 
 ## 週報作成の流れ
 
 1. `_inbox/` のCSVを `access-data/2026/w{NN}/` に仕分けた後、**`gsc-periods.json` にその週のGSC期間を登録する**（`span`: `7d`／`3w`／`3m`／`compare`、7日なら `start`・`end`）。未登録の5列GSCは7日と仮定され、警告が出る
 2. `python $S inventory` で比較可否を確認する
 3. `python $S report w{NN}` を実行する
-4. 出力のうち、施策に関わるページ・クエリだけ `trend` で過去と並べる（`weekly-task.md` の索引W-NNの対象URLを使う）
+4. 出力のうち、施策に関わるページ・クエリだけ `trend` で過去と並べる（月次解析のS-NN（`schedule-task.md`）に並ぶ施策の対象URLを使う）
 5. 結果を `.task/weekly-task.md` の「週次生データ」先頭に要約して追記し、該当W-NNに結果を書く（手順は `bouon-task-ops` skill、`/weekly-ppdca`）
 6. `access-data/CLAUDE.md` の索引（§3）と作業ログ（§6）を更新する
 

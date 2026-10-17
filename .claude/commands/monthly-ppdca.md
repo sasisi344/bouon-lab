@@ -1,5 +1,5 @@
 ---
-description: GSC/GA4の月次アクセスデータを取り込み、Google優先のKPIで解析してtask-list.md・weekly-task.mdへタスク化する
+description: GSC/GA4の月次アクセスデータを取り込み、Google優先のKPIで解析してtask-list.md・schedule-task.md（月次解析のS-NN）へタスク化する
 ---
 
 # /monthly-ppdca — 月次PDCA解析コマンド
@@ -10,7 +10,7 @@ description: GSC/GA4の月次アクセスデータを取り込み、Google優先
 
 ## Step 0. 事前ロード
 
-`.workspace/.task/CLAUDE.md` と `bouon-task-ops` skillを前提に、`task-list.md`・`weekly-task.md` の**索引表**と `archive/task-list-index.md` を読む（本文は必要なIDだけ）。`access-data/CLAUDE.md` §2・§7 と `export-spec.md` §4（KPI）を読む。
+`.workspace/.task/CLAUDE.md` と `bouon-task-ops` skillを前提に、`task-list.md`・`schedule-task.md` の**索引表**と `archive/task-list-index.md` を読む（本文は必要なIDだけ）。対象月の月次解析のS-NN（`schedule/YYYY-MM-02-m{MM}-monthly-analysis.md`。例: m10はS-11）の個別ファイルを読み、そこに並ぶ効果測定の節を今回の確認対象にする。`access-data/CLAUDE.md` §2・§7 と `export-spec.md` §4（KPI）を読む。
 
 ## Step 1. 取り込み・仕分け
 
@@ -23,7 +23,7 @@ description: GSC/GA4の月次アクセスデータを取り込み、Google優先
 3. `.workspace/access-data/2026/m{MM}/` へ移す。`templates/monthly-checklist.md` を `m{MM}/README.md` にコピーし、期間・取得日・取得チェックを埋める
 4. `gsc-periods.json` に期間を登録する（暦月=`month`、30日=`30d`）。GSCには期間が書かれないので、GA4の先頭コメントの期間と同じか**ユーザーに確認**する
 5. 欠けているファイル、比較モード付き・累計のGSC、列が仕様と違うGA4があれば報告し、再取得を依頼する
-6. 「この月の出来事」（公開・リライト・統合・サイト変更）を、git log と `task-list.md`・`weekly-task.md` の完了日から下書きしてユーザーに確認する
+6. 「この月の出来事」（公開・リライト・統合・サイト変更）を、git log と `task-list.md`・`archive/task-list-index.md`・月次解析のS-NNの実施日から下書きしてユーザーに確認する
 
 ## Step 2. 集計
 
@@ -31,7 +31,7 @@ description: GSC/GA4の月次アクセスデータを取り込み、Google優先
 M=.claude/skills/bouon-weekly-report/scripts/monthly_report.py
 python $M inventory
 python $M report m{MM}                # 前月比（日平均）
-python $M trend {施策対象のslugの一部}  # weekly-task.md のW-NNの対象URL
+python $M trend {施策対象のslugの一部}  # 月次解析のS-NNに並ぶ施策の対象URL
 ```
 
 CSVは直接読まない。スクリプトの警告（未登録・列不足・期間のずれ）は必ず報告に含める。
@@ -51,7 +51,7 @@ CSVは直接読まない。スクリプトの警告（未登録・列不足・�
 
 ## Step 4. 既存タスクとの重複チェック
 
-`bouon-task-ops` skillに従う。同じテーマの未完了W-NN／T-NNがあれば進捗更新として扱い、確認時期が今月に当たるW-NNを判定する。
+`bouon-task-ops` skillに従う。同じテーマの未完了T-NN、月次解析のS-NNの節があれば進捗更新として扱い、今月の月次解析のS-NNに並ぶ節を判定する。
 
 ## Step 5. ドラフト出力（この時点ではファイルに書き込まない）
 
@@ -64,8 +64,8 @@ CSVは直接読まない。スクリプトの警告（未登録・列不足・�
 ### 今すぐ着手できる候補（task-list.md行き）
 - {リライト候補・意図のずれ修正・affiliate導線の改善}
 
-### 翌月のデータ待ちの候補（weekly-task.md行き）
-- [ ] {事象} → {確認する指標・確認月}（既存W-NNへの追記か新規W-NNかを明記）
+### 翌月のデータ待ちの候補（翌月の月次解析のS-NN行き）
+- [ ] {事象} → {確認する指標・判定の月}（今月のS-NNの節の継続か、新しい節かを明記）
 
 ### 陳腐化・archive行き候補
 - {前提が崩れた項目}
@@ -73,8 +73,8 @@ CSVは直接読まない。スクリプトの警告（未登録・列不足・�
 
 ## Step 6. 確定 → ファイルへの反映
 
-1. `weekly-task.md`「週次生データ」の先頭に `m{MM}` のスナップショット（KPI表）を追記する
-2. 該当W-NNに結果を書き、次月に確認する項目は新規W-NNとして起票する（**索引表も同時に更新**）
+1. `m{MM}/README.md` にKPI表のスナップショットを書く（タスクファイルには写さない）
+2. 今月の月次解析のS-NNの各節に「結果」を書き、状態を更新する。続ける項目は翌月の月次解析のS-NN（`schedule/YYYY-MM-02-m{MM}-monthly-analysis.md`）を起票して送る（`schedule-task.md`の**索引表も同時に更新**）
 3. 今すぐ着手できるものは `task-list.md` に新規T-NNで追加する（**索引表も同時に更新**）
 4. `access-data/CLAUDE.md` の§3索引・§6作業ログを更新する
 5. 変更点を要約して報告する

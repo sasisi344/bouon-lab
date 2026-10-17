@@ -2,7 +2,8 @@
 
 - 担当: ユーザー（GSC UIの確認・申請記録）＋Claude（記録・判定）
 - 状態: 未着手
-- 関連: `weekly-task.md` W-25、`ranking-collapse-root-cause-20260702.md`（T-01は2026-10-07に`archive/task-list-24.md`へ）、T-08（既存記事の改善）、`schedule/2026-10-10-w42-gsc-ga4-import.md`（S-01）
+- 2026-10-17変更: 中間判定はS-11（m10の月次解析）と同じ日に行う。11/16前後の最終判定はS-12（m11）へ移した
+- 関連: `weekly-task.md` W-25、`ranking-collapse-root-cause-20260702.md`（T-01は2026-10-07に`archive/task-list-24.md`へ）、T-08（既存記事の改善）、`archive/2026-10-10-w42-gsc-ga4-import.md`（S-01）
 
 ## 背景
 

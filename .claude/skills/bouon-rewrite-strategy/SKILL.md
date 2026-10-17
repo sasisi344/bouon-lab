@@ -29,5 +29,5 @@ description: 既存記事の改善優先度判定・実行フロー・リライ�
 - 内部リンクの追加・差し替えは `.workspace/.data-set/interlink-postlist.md` でリンク先を確認する
 - 記法・frontmatter整合は `bouon-writing` skillを必ず維持する
 - 結論先出し（PREP）で冒頭3秒の理解速度を上げる
-- タイトルを変えたら、変更日と旧タイトルを `weekly-task.md` に記録し、2〜4週後に同じ順位帯のCTRを比べる
+- タイトルを変えたら、変更日と旧タイトルを、次の月次解析のS-NN（`.workspace/.task/schedule-task.md`）の個別ファイルに節として記録し、翌月以降の月次データで同じ順位帯のCTRを比べる
 - 「文字数だけを増やす」加筆は禁止。比較・数値・事例を足す

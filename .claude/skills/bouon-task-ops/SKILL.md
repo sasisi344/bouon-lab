@@ -1,6 +1,6 @@
 ---
 name: bouon-task-ops
-description: .workspace/.task/ 配下（task-list.md・weekly-task.md）の参照・更新・アーカイブが必要なとき、または週次PDCA解析の前後に必ず使う。2本柱の役割分担（T-NN／W-NN索引）とarchive/への完了タスク移動手順を定義する。索引・読み方の正本は.workspace/.task/CLAUDE.md。
+description: .workspace/.task/ 配下（task-list.md・schedule-task.md）の参照・更新・アーカイブが必要なとき、または週次PDCA解析の前後に必ず使う。2本柱の役割分担（T-NN／W-NN索引）とarchive/への完了タスク移動手順を定義する。索引・読み方の正本は.workspace/.task/CLAUDE.md。
 ---
 
 # BouonLab タスク運用
@@ -14,8 +14,8 @@ description: .workspace/.task/ 配下（task-list.md・weekly-task.md）の参�
 | ファイル | 役割 | 項目ID |
 |---|---|---|
 | `task-list.md` | **今すぐ着手できるタスクのみ**。データ待ちのタスクは置かない | `T-NN` |
-| `weekly-task.md` | データ待ちの確認項目（期限・短期・継続観察）＋週次の生データ（直近3週分） | `W-NN` |
-| `effect-monitoring.md` | 2026-10-04に`weekly-task.md`へ統合済みの移行先ポインタ。新規追記しない | - |
+| `schedule-task.md` | 日付が決まっているタスクと効果測定。効果測定は月初の月次解析のS-NN（`schedule/YYYY-MM-02-m{MM}-monthly-analysis.md`）に節としてまとめる | `S-NN` |
+| `weekly-task.md`・`effect-monitoring.md` | 運用を終えた移行先ポインタ（2026-10-17に効果測定を`schedule-task.md`へ移行。旧W-NNの全文は`archive/weekly-task-archive-20261017.md`）。新規追記しない | - |
 
 両ファイルとも冒頭に索引表がある。**先に索引だけ読み、必要なIDの本文だけ読む。** 追加・完了のたびに索引表も同時に更新する。
 
@@ -47,9 +47,9 @@ description: .workspace/.task/ 配下（task-list.md・weekly-task.md）の参�
 
 ## 運用フロー
 
-1. 作業開始前に `task-list.md`（今すぐやること）と `weekly-task.md`（データ待ちの棚卸し）の**索引表**を読む
+1. 作業開始前に `task-list.md`（今すぐやること）と `schedule-task.md`（日付指定・効果測定）の**索引表**を読む
 2. 新規タスク追加時は `archive/` を検索し、過去の完了内容と競合しないか確認する
 3. **`task-list.md` のタスク完了時**: 上記「task-list 完了アーカイブ」手順に従う
-4. **次回GSC/GA4データが揃ったら**: `weekly-task.md` の該当W-NNを確認し、結果を追記。着手可能なフォローアップが生まれたら `task-list.md` へ新規T-NNとして起票する
-5. **`weekly-task.md` の週次更新**: 生データは「週次生データ」節の先頭に追記（直近3週分を超えたら`archive/weekly-task-archive-YYYYMMDD.md`へ）。確認項目は新規W-NNとして索引に登録する
+4. **月次のGSC/GA4データが揃ったら**: その月の月次解析のS-NNの個別ファイルに沿って確認し、各節に結果を書く。続ける項目は翌月のS-NNへ送り、着手可能なフォローアップは `task-list.md` へ新規T-NNとして起票する
+5. **施策を実施したら**: 効果確認の節を、次の月次解析のS-NNの個別ファイルにその場で足す（新しいW-NNは振らない）
 6. 2本柱の役割分担を維持する（同一チェックリストの重複記載を避け、詳細は一方に集約して他方からリンクする）
