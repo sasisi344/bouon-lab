@@ -162,6 +162,7 @@
 | ja | soundproof-room | `custom-home-soundproof-consultation-prep` |  | 注文住宅の家づくり相談で防音の要望を伝える方法｜防音室がなくても整理する5項目 | 注文住宅, 防音室, 家づくり, 相談窓口, 要望整理, 新築 | `/ja/soundproof-room/custom-home-soundproof-consultation-prep/` | false |
 | ja | soundproof-room | `custom-home-soundproof-room-layout` |  | 注文住宅で防音室を作る間取りのポイント｜位置・広さ・窓・換気・搬入経路 | 注文住宅, 間取り, 防音室, 新築, 戸建て, 換気 | `/ja/soundproof-room/custom-home-soundproof-room-layout/` | false |
 | ja | soundproof-room | `daiwa-house-jiyuku-soundproof-review` |  | 大和ハウス「私の自由区」防音室を検討して分かったこと | 注文住宅, 大和ハウス, 防音室, ハウスメーカー | `/ja/soundproof-room/daiwa-house-jiyuku-soundproof-review/` | false |
+| ja | soundproof-room | `home-private-booth-guide` |  | 個室ブースを自宅に置くなら｜価格の目安と防音の限界、暑さ・設置の注意点 | 個室ブース, ワークブース, テレワーク, 在宅ワーク, Web会議, 防音ブース | `/ja/soundproof-room/home-private-booth-guide/` | false |
 | ja | soundproof-room | `hsp-soundproof-curtain-guide` |  | HSP気質の方へ。生活音のストレスを劇的に減らす「防音（遮音）カーテン」の正しい選び方と限界 | 防音カーテン, HSP, 睡眠, 騒音対策, 遮音性能 | `/ja/soundproof-room/hsp-soundproof-curtain-guide/` | false |
 | ja | soundproof-room | `hsp-soundproof-room-guide` |  | HSP・音過敏のための防音室の選び方｜D-40を目安にした遮音性能・換気・素材の確認ポイント | HSP, 音過敏, 防音室選び, 感覚過敏, 防音室 | `/ja/soundproof-room/hsp-soundproof-room-guide/` | false |
 | ja | soundproof-room | `kawai-nasal-soundproof-room-guide` |  | カワイ防音室ナサール（Nasal）完全ガイド｜特徴・価格・ヤマハとの違い | カワイ | `/ja/soundproof-room/kawai-nasal-soundproof-room-guide/` | false |

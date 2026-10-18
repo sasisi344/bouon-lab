@@ -42,4 +42,6 @@
 
 | 32 | [task-list-32.md](./task-list-32.md) | 2026-10-18 | T-20 「防音スペースのレンタル」統合まとめ記事（`soundproof-rental/soundproof-space-rental-guide`）を作成・スマホ確認済み・2026-10-18デプロイ。T-22との相互リンクはT-22に移管 |
 
-**次の番号**: `task-list-33`
+| 33 | [task-list-33.md](./task-list-33.md) | 2026-10-18 | T-22 個室ブースを自宅に置く記事（`soundproof-room/home-private-booth-guide`）を需要確認のうえ作成・デプロイ。GSC登録はユーザー対応で残り |
+
+**次の番号**: `task-list-34`
