@@ -121,8 +121,8 @@
 | ja | money | `soundproof-room-rental-cost` |  | 防音室レンタルの初期費用と月額相場｜2026年最新・購入との損益分岐点 | 防音室, レンタル, 初期費用, 相場 | `/ja/money/soundproof-room-rental-cost/` | false |
 | ja | money | `soundproof-room-rental-lease` |  | 防音室はレンタル・リース可能？個人と法人の「一番賢い借り方」と料金比較 | 防音室, レンタル, リース, 経費 | `/ja/money/soundproof-room-rental-lease/` | false |
 | ja | money | `soundproof-subsidy-check-guide` |  | うちの家は対象？防音工事の補助金エリアの調べ方【空港・基地・道路／東京・大阪の例つき】 | 防音工事, 補助金, 対象エリア, 空港, 自衛隊, 幹線道路, 東京・大阪 | `/ja/money/soundproof-subsidy-check-guide/` | false |
-| ja | money | `soundproof-subsidy-news-2025` |  | 防音室の補助金2026年最新版｜二重窓リノベで最大200万円受給する裏技 | 補助金, 節税 | `/ja/money/soundproof-subsidy-news-2025/` | false |
-| ja | money | `soundproof-window-subsidy-2025-guide` |  | 【2025年最新】防音窓リフォームで使える補助金制度まとめ｜先進的窓リノベ対応 | 補助金, 内窓リフォーム | `/ja/money/soundproof-window-subsidy-2025-guide/` | false |
+| ja | money | `soundproof-subsidy-news-2025` |  | 防音室の補助金2026年最新版｜二重窓リノベで最大100万円を受け取る方法 | 補助金, 節税 | `/ja/money/soundproof-subsidy-news-2025/` | false |
+| ja | money | `soundproof-window-subsidy-2025-guide` |  | 【2026年最新】防音窓リフォームで使える補助金制度まとめ｜先進的窓リノベ2026対応 | 補助金, 内窓リフォーム | `/ja/money/soundproof-window-subsidy-2025-guide/` | false |
 | ja | money | `streamer-tax-strategy` |  | 防音室は経費にできる？配信者だけじゃない対象職業と判断基準 | 確定申告, 節税, 減価償却, 個人事業主, 青色申告, 配信・実況 | `/ja/money/streamer-tax-strategy/` | false |
 | ja | money | `telework-soundproof-loan-strategy` |  | テレワーク・在宅勤務のための防音室ローン活用｜集中環境と耳の健康への戦略投資 | テレワーク, ローン, 生産性, 節税 | `/ja/money/telework-soundproof-loan-strategy/` | false |
 | ja | money | `used-soundproof-room-buying-guide` |  | 中古防音室は予算10万円で何が買える？セフィーネより『だんぼっち・OTODASU』を探すべき理由 | 中古防音室, 費用, 予算10万円, だんぼっち, OTODASU, ヤマハ | `/ja/money/used-soundproof-room-buying-guide/` | false |
@@ -149,6 +149,7 @@
 | ja | soundproof-rental | `report-japan-soundproof-rental-market-needs` |  | 【調査報告】首都圏における高性能防音賃貸市場の定量的分析（2025-2026） | 防音賃貸, 市場調査, ミュージション, リブラン, 部屋探し | `/ja/soundproof-rental/report-japan-soundproof-rental-market-needs/` | false |
 | ja | soundproof-rental | `saxophone-apartment-practice-guide` |  | サックスは賃貸で練習できる？アパートの現実解と防音室選び | サックス, チェロ, 防音賃貸, 管楽器, 楽器可物件, 防音室 | `/ja/soundproof-rental/saxophone-apartment-practice-guide/` | false |
 | ja | soundproof-rental | `soundproof-rental-cost-performance-guide` |  | 防音賃貸の家賃相場はいくら？コスパ・通勤・実用性で選ぶ完全ガイド【2026】 | 防音賃貸, 家賃相場, コスパ, 通勤, ミュージション, 部屋探し | `/ja/soundproof-rental/soundproof-rental-cost-performance-guide/` | false |
+| ja | soundproof-rental | `soundproof-space-rental-guide` |  | 防音スペースのレンタルとは？5種類の料金の目安と用途別の選び方・探し方 | 防音スペース, レンタルスペース, 音楽スタジオ, 個室ブース, 楽器練習, 配信・実況, Web会議 | `/ja/soundproof-rental/soundproof-space-rental-guide/` | false |
 | ja | soundproof-room | `assembly-type-comparison` |  | 組み立て式防音室おすすめ比較｜用途別（楽器・ゲーム・配信）と価格帯 | 組み立て式, 防音ブース, だんぼっち, OTODASU, GAMEBOX, VOICEBOX | `/ja/soundproof-room/assembly-type-comparison/` | false |
 | ja | soundproof-room | `bouon-dchiseinou-meyasu` |  | 遮音性能の基準「D値」とは？楽器・用途別の目安を徹底解説 | 遮音性能, D値, 防音賃貸, 楽器可物件, 物件選び | `/ja/soundproof-room/bouon-dchiseinou-meyasu/` | false |
 | ja | soundproof-room | `bouon-humidifier-comparison` |  | 防音室の加湿器の選び方｜結露・過加湿を防ぐ方式の比較と、静音モデル・置き場所の考え方 | 加湿器, 結露, 防音室, 湿度管理, カビ対策 | `/ja/soundproof-room/bouon-humidifier-comparison/` | false |
