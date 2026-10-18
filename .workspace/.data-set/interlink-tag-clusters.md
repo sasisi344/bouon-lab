@@ -62,7 +62,7 @@
   - [自作防音室の費用内訳｜材料費だけでいくらかかる？](/ja/diy/soundproof-room-diy-cost/) `DIY防音, 費用`
   - [自分の部屋を防音室にしたい？DIYの壁防音と専門工事の現実的な選択肢](/ja/diy/diy-wall-soundproofing-room-guide/) `DIY防音, 壁防音, 防音賃貸, 防音工事`
   - [賃貸の防音対策は壁を傷つけずにできる？原状回復を守る5つの方法【実家・親バレ対策も】](/ja/diy/renter-parent-house-soundproofing/) `防音賃貸, 原状回復, DIY防音, 遮音シート`
-  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振`
+  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界、キックの止め方](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 打楽器, 振動対策, 床衝撃音, 防振`
   - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
   - [内窓の防音効果を実測｜賃貸DIYポリカ窓から本格インプラスまで徹底比較【2025-2026年版】](/ja/diy/diy-internal-window-road-noise-reduction/) `内窓, DIY防音, 実測, 補助金, インプラス`
   - [配信映えする「LED付き自作吸音パネル」の作り方！光と音を同時に操る](/ja/diy/diy-led-acoustic-panels/) `吸音材, LED, 配信・実況, DIY防音, インテリア`
@@ -74,7 +74,7 @@
   - [木造アパート2階に「だんぼっち」は危険？点でかかる荷重を分散させるDIY補強術](/ja/diy/danbocchi-floor-protection/) `木造アパート, 床荷重, だんぼっち, OTODASU, DIY防音, 床補強`
   - [木造アパートの防音は無理？苦情ゼロまで音を減らす3つの現実的対策](/ja/diy/wooden-apartment-soundproof-guide/) `木造アパート, 防音賃貸, 隙間テープ, 生活音, 家具配置`
 
-### ja / knowledge（25件）
+### ja / knowledge（26件）
 
   - [2025-2026年騒音規制アップデート｜隣人の騒音に「法的エビデンス」で勝つための数値基準と対策](/ja/knowledge/noise-regulation-update-2025/) `騒音トラブル, 受忍限度, 法的エビデンス`
   - [2030年の防音Lab：無声音声インターフェース(SSI)が「遮音」の常識を破壊する](/ja/knowledge/future-ssi-silent-speech-interface-revolution/) `次世代技術, 無声音声, 配信テック, テレワーク`
@@ -90,6 +90,7 @@
   - [近隣騒音トラブルが増える季節パターン｜最新統計から読み解く原因と先手対策](/ja/knowledge/neighborhood-noise-seasonal-pattern-statistics/) `騒音トラブル, 季節パターン, 相談件数, 統計`
   - [静寂の力：なぜ防音室は『最強のメンタルケア』になるのか](/ja/knowledge/mental-health-benefits-of-silence/) `メンタルヘルス, 集中力, 心理的安全性, 静寂, 脳科学`
   - [騒音苦情への正しい対応｜解決事例と判例から学ぶ受忍限度の境界線](/ja/knowledge/noise-complaint-legal-precedent-manual/) `騒音トラブル, 受忍限度, 判例, 解決事例`
+  - [叩く音・押す音が下の階に響くのはなぜ？ヘッドホンでも消えない振動の止め方](/ja/knowledge/structure-borne-noise-tapping-striking/) `固体伝搬音, 打鍵音, 防振, 床衝撃音, 楽器, 振動対策`
   - [聴覚過敏・ミソフォニアで家の音がつらい人へ｜遮音・マスキング・住まい選びの環境調整ガイド](/ja/knowledge/sound-sensitivity-misophonia-environment-guide/) `聴覚過敏, ミソフォニア, HSP, 環境調整, 防音カーテン`
   - [低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方](/ja/knowledge/vibration-isolation-technology-trend/) `低周波, 防振, 浮き床, 振動対策, 施工技術, 防振床`
   - [東京防音レビュー｜ホワイトキューオンとOkudakeは合うか](/ja/knowledge/tokyo-bouon-whitekyuon-okudake-review/) `東京防音, ホワイトキューオン, Okudake, 吸音材, 在宅ワーク`
@@ -500,6 +501,26 @@
   - [防音パネルの罠｜DIY失敗例から学ぶ『遮音と吸音』の物理学的黄金比](/ja/diy/diy-soundproof-room-failures-solutions/) `DIY防音, 遮音, 吸音, 遮音性能, 失敗談`
   - [防音室が作れるハウスメーカーおすすめ4社｜注文住宅の公式防音仕様を比較](/ja/soundproof-rental/housing-builder-soundproof-comparison/) `ハウスメーカー, 注文住宅, 防音室, 家づくり, 遮音性能, スペック比較, D値`
 
+### ja / 振動対策（7件）
+
+  - [マンションのランニングマシン防音対策｜階下の振動を減らす「重ね敷き」と置き方](/ja/diy/treadmill-apartment-soundproofing-layering/) `ランニングマシーン, マンション, 振動対策, 苦情回避`
+  - [自宅でドラムを叩いても許されるDr値は？住む環境別に見る防音の必要性](/ja/soundproof-room/soundproof-performance-drum/) `ドラム防音, 振動対策, 個体伝搬音, 防音工事`
+  - [叩く音・押す音が下の階に響くのはなぜ？ヘッドホンでも消えない振動の止め方](/ja/knowledge/structure-borne-noise-tapping-striking/) `固体伝搬音, 打鍵音, 防振, 床衝撃音, 楽器, 振動対策`
+  - [低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方](/ja/knowledge/vibration-isolation-technology-trend/) `低周波, 防振, 浮き床, 振動対策, 施工技術, 防振床`
+  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界、キックの止め方](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 打楽器, 振動対策, 床衝撃音, 防振`
+  - [北米の80%ラグルールが失敗する理由｜日本の積層物理学で振動を止める](/ja/knowledge/why-your-80-percent-rug-rule-fails/) `静床ライト, 振動対策`
+  - [夜間練習はどこまで許される？深夜でも楽器を弾くための防音室選びと「振動」の罠](/ja/soundproof-room/night-practice-soundproof-guide/) `夜間練習, D値, 振動対策, ヤマハ, カワイ, サイレント楽器`
+
+### ja / 防振（7件）
+
+  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
+  - [台パンの衝撃吸収・防振対策｜下の階に響く仕組みと2,000円で防ぐ方法](/ja/creator/gaming-floor-impact-noise-fix/) `台パン, 足音対策, 床衝撃音, 防振, 衝撃吸収`
+  - [叩く音・押す音が下の階に響くのはなぜ？ヘッドホンでも消えない振動の止め方](/ja/knowledge/structure-borne-noise-tapping-striking/) `固体伝搬音, 打鍵音, 防振, 床衝撃音, 楽器, 振動対策`
+  - [低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方](/ja/knowledge/vibration-isolation-technology-trend/) `低周波, 防振, 浮き床, 振動対策, 施工技術, 防振床`
+  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界、キックの止め方](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 打楽器, 振動対策, 床衝撃音, 防振`
+  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
+  - [配信者のための家電・生活音対策｜冷蔵庫と換気扇のノイズを物理的に沈める方法](/ja/diy/diy-refrigeration-noise-reduction/) `配信・実況, 騒音対策, 冷蔵庫, 換気, 防振, ASMR`
+
 ### ja / マンション（6件）
 
   - [【子育て×防音リノベ】マンションの騒音トラブルを「構造」から解決する完全ガイド](/ja/soundproof-rental/child-rearing-soundproof-pillar/) `子育て, 防音リノベ, 騒音トラブル, マンション, 防振構造`
@@ -518,15 +539,6 @@
   - [防音室のエアコン選びと静音化の極意｜2026年最新の空調・換気戦略](/ja/soundproof-room/proofroom-aircondition-select/) `防音室, 空調設備, 換気, スポットクーラー, 騒音対策`
   - [防音室の花粉対策｜換気を止めずに春の「花粉・黄砂」をシャットアウトする方法](/ja/soundproof-room/soundproof-room-pollen-protection/) `花粉対策, 換気, ロスナイ, 春, 空気清浄機, メンテナンス`
 
-### ja / 振動対策（6件）
-
-  - [マンションのランニングマシン防音対策｜階下の振動を減らす「重ね敷き」と置き方](/ja/diy/treadmill-apartment-soundproofing-layering/) `ランニングマシーン, マンション, 振動対策, 苦情回避`
-  - [自宅でドラムを叩いても許されるDr値は？住む環境別に見る防音の必要性](/ja/soundproof-room/soundproof-performance-drum/) `ドラム防音, 振動対策, 個体伝搬音, 防音工事`
-  - [低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方](/ja/knowledge/vibration-isolation-technology-trend/) `低周波, 防振, 浮き床, 振動対策, 施工技術, 防振床`
-  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振`
-  - [北米の80%ラグルールが失敗する理由｜日本の積層物理学で振動を止める](/ja/knowledge/why-your-80-percent-rug-rule-fails/) `静床ライト, 振動対策`
-  - [夜間練習はどこまで許される？深夜でも楽器を弾くための防音室選びと「振動」の罠](/ja/soundproof-room/night-practice-soundproof-guide/) `夜間練習, D値, 振動対策, ヤマハ, カワイ, サイレント楽器`
-
 ### ja / 防音工事（6件）
 
   - [うちの家は対象？防音工事の補助金エリアの調べ方【空港・基地・道路／東京・大阪の例つき】](/ja/money/soundproof-subsidy-check-guide/) `防音工事, 補助金, 対象エリア, 空港, 自衛隊, 幹線道路, 東京・大阪`
@@ -535,15 +547,6 @@
   - [自分の部屋を防音室にしたい？DIYの壁防音と専門工事の現実的な選択肢](/ja/diy/diy-wall-soundproofing-room-guide/) `DIY防音, 壁防音, 防音賃貸, 防音工事`
   - [防音工事の種類と価格比較｜壁・床・開口部、業者の選び方まで](/ja/soundproof-room/construction-types-cost-comparison/) `防音工事, リフォーム, 価格比較, 防音壁`
   - [防音室リフォームの費用相場｜6畳・8畳・10畳の総額とユニットとの分かれ目](/ja/money/soundproof-reform-cost-by-tatami/) `防音室, リフォーム, 費用, 防音工事, 価格相場`
-
-### ja / 防振（6件）
-
-  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
-  - [台パンの衝撃吸収・防振対策｜下の階に響く仕組みと2,000円で防ぐ方法](/ja/creator/gaming-floor-impact-noise-fix/) `台パン, 足音対策, 床衝撃音, 防振, 衝撃吸収`
-  - [低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方](/ja/knowledge/vibration-isolation-technology-trend/) `低周波, 防振, 浮き床, 振動対策, 施工技術, 防振床`
-  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振`
-  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
-  - [配信者のための家電・生活音対策｜冷蔵庫と換気扇のノイズを物理的に沈める方法](/ja/diy/diy-refrigeration-noise-reduction/) `配信・実況, 騒音対策, 冷蔵庫, 換気, 防振, ASMR`
 
 ### ja / OTODASU（5件）
 
@@ -608,6 +611,14 @@
   - [在宅ワークの音の悩みと防音｜家族の声・Web会議の声漏れ・寝室仕事の対策を整理](/ja/soundproof-rental/remote-work-family-harmony-soundproof/) `テレワーク, 在宅ワーク, Web会議, 家族, 防音室, パーティション, 寝室`
   - [子育て世代のDIY「一人になれる場所」｜1万円台から始める段階的な作り方](/ja/diy/parenting-generation-quiet-corner-diy/) `子育て世代, DIY防音, 一人の時間, 納戸活用, 在宅ワーク`
   - [東京防音レビュー｜ホワイトキューオンとOkudakeは合うか](/ja/knowledge/tokyo-bouon-whitekyuon-okudake-review/) `東京防音, ホワイトキューオン, Okudake, 吸音材, 在宅ワーク`
+
+### ja / 床衝撃音（5件）
+
+  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
+  - [台パンの衝撃吸収・防振対策｜下の階に響く仕組みと2,000円で防ぐ方法](/ja/creator/gaming-floor-impact-noise-fix/) `台パン, 足音対策, 床衝撃音, 防振, 衝撃吸収`
+  - [叩く音・押す音が下の階に響くのはなぜ？ヘッドホンでも消えない振動の止め方](/ja/knowledge/structure-borne-noise-tapping-striking/) `固体伝搬音, 打鍵音, 防振, 床衝撃音, 楽器, 振動対策`
+  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界、キックの止め方](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 打楽器, 振動対策, 床衝撃音, 防振`
+  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
 
 ### ja / 睡眠（5件）
 
@@ -721,19 +732,19 @@
   - [騒音クレームを直接言うのは危険？マンションの騒音トラブルを解決する『3フェーズ式』対策マニュアル](/ja/soundproof-rental/noise-complaint-landlord-negotiation-guide/) `騒音トラブル, 管理会社, 交渉術, 賃貸マンション, 受忍限度`
   - [騒音苦情への正しい対応｜解決事例と判例から学ぶ受忍限度の境界線](/ja/knowledge/noise-complaint-legal-precedent-manual/) `騒音トラブル, 受忍限度, 判例, 解決事例`
 
-### ja / 床衝撃音（4件）
-
-  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
-  - [台パンの衝撃吸収・防振対策｜下の階に響く仕組みと2,000円で防ぐ方法](/ja/creator/gaming-floor-impact-noise-fix/) `台パン, 足音対策, 床衝撃音, 防振, 衝撃吸収`
-  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振`
-  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
-
 ### ja / 深夜配信（4件）
 
   - [OTODASU（オトダス）の実力検証｜深夜2時のボイスチャットは隣室に許されるのか？](/ja/soundproof-room/otodasu-voice-chat-test/) `OTODASU, ボイスチャット, 深夜配信, 防音室`
   - [ホラーゲーム実況の絶叫、近所には漏らさずマイクにはしっかり乗せる配置術](/ja/creator/horror-game-scream-soundproof-mic/) `ホラーゲーム実況, 絶叫対策, 指向性マイク, 防音DIY, 深夜配信`
   - [ワンルーム配信の防音ハック｜1万円以下で夜の声漏れと隣人の壁ドンを防ぐ](/ja/creator/one-room-streaming-soundproof/) `一人暮らし, 低予算, 配信・実況, DIY防音, 騒音トラブル, 深夜配信`
   - [防音マスク自作は息苦しい？段ボールヘッドボックスの酸欠リスクを検証](/ja/diy/diy-vocal-soundproof-mask/) `防音マスク, 酸欠対策, DIY防音, 深夜配信, 換気`
+
+### ja / 打鍵音（4件）
+
+  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
+  - [ゲーム実況者の防音環境｜打鍵音・マウス音・叫び声ごとの対策](/ja/creator/game-streamer-sound-types/) `配信・実況, ゲーム実況, キーボード騒音, 打鍵音, 防音対策`
+  - [叩く音・押す音が下の階に響くのはなぜ？ヘッドホンでも消えない振動の止め方](/ja/knowledge/structure-borne-noise-tapping-striking/) `固体伝搬音, 打鍵音, 防振, 床衝撃音, 楽器, 振動対策`
+  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
 
 ### ja / 補助金（4件）
 
@@ -813,12 +824,6 @@
   - [上の階の足音・隣の話し声で眠れない｜音の種類で変わる寝室の騒音対策の選び方](/ja/soundproof-rental/bedroom-noise-type-solution-guide/) `睡眠, 騒音対策, 賃貸, 足音, 生活音, 寝室`
   - [同居人がいる家で配信する｜子ども・親・ルームシェアの防音と生活音調整](/ja/creator/parenting-streamer-soundproof/) `配信・実況, 子育て, 実家暮らし, ルームシェア, 生活音, 防音対策`
   - [木造アパートの防音は無理？苦情ゼロまで音を減らす3つの現実的対策](/ja/diy/wooden-apartment-soundproof-guide/) `木造アパート, 防音賃貸, 隙間テープ, 生活音, 家具配置`
-
-### ja / 打鍵音（3件）
-
-  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
-  - [ゲーム実況者の防音環境｜打鍵音・マウス音・叫び声ごとの対策](/ja/creator/game-streamer-sound-types/) `配信・実況, ゲーム実況, キーボード騒音, 打鍵音, 防音対策`
-  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
 
 ### ja / 中古防音室（3件）
 
@@ -1034,11 +1039,6 @@
 
   - [音に敏感な人の特徴とHSPセルフチェックリスト｜聴覚過敏・ミソフォニアとの違いと対処法](/ja/knowledge/hsp-self-check-sound-sensitivity/) `HSP, セルフチェック, 音過敏, 聴覚過敏, 環境調整`
   - [聴覚過敏・ミソフォニアで家の音がつらい人へ｜遮音・マスキング・住まい選びの環境調整ガイド](/ja/knowledge/sound-sensitivity-misophonia-environment-guide/) `聴覚過敏, ミソフォニア, HSP, 環境調整, 防音カーテン`
-
-### ja / 電子ピアノ（2件）
-
-  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振`
-  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
 
 ### ja / 内窓（2件）
 

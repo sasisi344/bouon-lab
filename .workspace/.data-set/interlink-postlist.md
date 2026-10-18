@@ -53,7 +53,7 @@
 | ja | diy | `diy-soundproofing-tips` |  | DIY防音のコツ｜安価で効果的な遮音・吸音テクニックを音響エンジニアが解剖 | DIY防音, 遮音シート, 吸音材, 防音賃貸, 音響設計 | `/ja/diy/diy-soundproofing-tips/` | false |
 | ja | diy | `diy-vocal-soundproof-mask` |  | 防音マスク自作は息苦しい？段ボールヘッドボックスの酸欠リスクを検証 | 防音マスク, 酸欠対策, DIY防音, 深夜配信, 換気 | `/ja/diy/diy-vocal-soundproof-mask/` | false |
 | ja | diy | `diy-wall-soundproofing-room-guide` |  | 自分の部屋を防音室にしたい？DIYの壁防音と専門工事の現実的な選択肢 | DIY防音, 壁防音, 防音賃貸, 防音工事 | `/ja/diy/diy-wall-soundproofing-room-guide/` | false |
-| ja | diy | `electronic-drum-vibration-fuwafuwa-system` |  | 電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界 | 電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振 | `/ja/diy/electronic-drum-vibration-fuwafuwa-system/` | false |
+| ja | diy | `electronic-drum-vibration-fuwafuwa-system` |  | 電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界、キックの止め方 | 電子ドラム, 打楽器, 振動対策, 床衝撃音, 防振 | `/ja/diy/electronic-drum-vibration-fuwafuwa-system/` | false |
 | ja | diy | `electronic-piano-key-noise-vibration` |  | 電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方 | 電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音 | `/ja/diy/electronic-piano-key-noise-vibration/` | false |
 | ja | diy | `free-cardboard-soundproof-tech` |  | スーパーの無料段ボールは使えるか？厚さ重視で選ぶ「最強の段ボール」と多重貼りテクニック | DIY防音, 防音室, 費用, リサイクル | `/ja/diy/free-cardboard-soundproof-tech/` | false |
 | ja | diy | `futon-cardboard-karaoke-booth` |  | 見た目はヤバいが効果はガチ。布団と段ボールで囲う「ひとり用カラオケボックス」の作り方 | 防音室, 費用, ひとりカラオケ, DIY防音, 歌ってみた | `/ja/diy/futon-cardboard-karaoke-booth/` | false |
@@ -88,6 +88,7 @@
 | ja | knowledge | `soundproof-app-review-2026` |  | 防音性能を測るスマホアプリ比較2026｜無料アプリでどこまで分かる？ | 測定, アプリ, デシベル, D値, 騒音計 | `/ja/knowledge/soundproof-app-review-2026/` | false |
 | ja | knowledge | `soundproof-culture-japan-vs-america` |  | 日本のマンション管理規約とアメリカHOAの騒音ルール比較｜楽器演奏はどちらが厳しい？ | 防音文化, 管理規約, HOA, 楽器演奏, D値 | `/ja/knowledge/soundproof-culture-japan-vs-america/` | false |
 | ja | knowledge | `soundproof-material-spec-chart` |  | 防音材スペック早見表｜面密度・TL値・D値の対応を一覧で比較できる資料 | 防音材, 面密度, 透過損失, D値, 質量則, データ集 | `/ja/knowledge/soundproof-material-spec-chart/` | false |
+| ja | knowledge | `structure-borne-noise-tapping-striking` |  | 叩く音・押す音が下の階に響くのはなぜ？ヘッドホンでも消えない振動の止め方 | 固体伝搬音, 打鍵音, 防振, 床衝撃音, 楽器, 振動対策 | `/ja/knowledge/structure-borne-noise-tapping-striking/` | false |
 | ja | knowledge | `tokyo-bouon-whitekyuon-okudake-review` |  | 東京防音レビュー｜ホワイトキューオンとOkudakeは合うか | 東京防音, ホワイトキューオン, Okudake, 吸音材, 在宅ワーク | `/ja/knowledge/tokyo-bouon-whitekyuon-okudake-review/` | false |
 | ja | knowledge | `vibration-isolation-technology-trend` |  | 低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方 | 低周波, 防振, 浮き床, 振動対策, 施工技術, 防振床 | `/ja/knowledge/vibration-isolation-technology-trend/` | false |
 | ja | knowledge | `vibration-reduction-science` |  | 階下から足音の苦情が来たら？ジョイントマットで防げない理由と正しい対策 | 重量床衝撃音, L等級, 防振構造, 遮音シート | `/ja/knowledge/vibration-reduction-science/` | false |
