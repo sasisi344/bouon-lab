@@ -32,12 +32,16 @@ if (item?.type === 'amazon') {
 // プレミアム・ハイチケット判定
 const isHighTicket = item?.variant === 'high-ticket';
 const isPremium = item?.variant === 'premium';
+// 10万円台の組み立て式（だんぼっち・OTODASU等）
+const isStandard = item?.variant === 'standard';
+const program = (item as any)?.program;
 
 // 画像URLの解決
 let imgSrc: any = (item as any)?.image;
 if (imgSrc && imgSrc.startsWith('images/I/')) {
   imgSrc = `https://m.media-amazon.com/${imgSrc}`;
-} else if (imgSrc) {
+} else if (imgSrc && !imgSrc.startsWith('http')) {
+  // http(s) の画像URLはそのまま利用
   // ローカルアセットの動的インポート
   const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{jpeg,jpg,png,webp}');
   const assetPath = `/src/assets/${imgSrc}`;
@@ -76,6 +80,12 @@ if (imgSrc && imgSrc.startsWith('images/I/')) {
                 <li>ローンシミュレーション対応（低金利ローン案内）</li>
                 <li>全国ショールームでの試弾・体験予約可能</li>
               </>
+            ) : isStandard ? (
+              <>
+                <li>話し声・ボイスチャット・テレワーク会議の音漏れ対策向け</li>
+                <li>組み立て式で、引っ越しのときは分解して運べる</li>
+                <li>楽器演奏や大声は防ぎきれないため、用途を確かめてから選ぶ</li>
+              </>
             ) : (
               <>
                 <li>圧倒的な遮音性能（Dr-35〜40対応）</li>
@@ -100,9 +110,12 @@ if (imgSrc && imgSrc.startsWith('images/I/')) {
             data-track-event="affiliate_click"
             data-track-slug={slug}
             data-track-variant={isHighTicket ? 'high-ticket' : isPremium ? 'premium' : 'standard'}
-            data-track-program={(item as any)?.program || item?.type}
+            data-track-program={program || item?.type}
           >
-            {isHighTicket ? '無料カタログ・内見予約をする →' : '製品スペックと詳細を確認する →'}
+            {isHighTicket ? '無料カタログ・内見予約をする →'
+              : item.type === 'amazon' ? 'Amazonで価格を確認する →'
+              : program === 'rakuten' ? '楽天市場で価格を確認する →'
+              : '製品スペックと詳細を確認する →'}
           </a>
           <p class="cta-note">※外部サイトへ移動します</p>
         </div>
@@ -112,8 +125,10 @@ if (imgSrc && imgSrc.startsWith('images/I/')) {
     <div class="cta-footer">
       <p class="roi-hook">
         {isHighTicket 
-          ? "「家賃＋スタジオ代」のランニングコストを見直しませんか？" 
-          : "一生モノの演奏環境を手に入れる、賢い投資の第一歩。"}
+          ? "「家賃＋スタジオ代」のランニングコストを見直しませんか？"
+          : isStandard
+            ? "楽器の練習が目的なら、ユニット型との違いも比べてから選んでください。"
+            : "一生モノの演奏環境を手に入れる、賢い投資の第一歩。"}
       </p>
     </div>
   </div>
@@ -228,6 +243,7 @@ if (imgSrc && imgSrc.startsWith('images/I/')) {
   .price-label {
     font-size: 0.85rem;
     color: var(--text-dim);
+    white-space: nowrap;
   }
 
   .price-value {

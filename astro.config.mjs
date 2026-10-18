@@ -725,6 +725,6 @@ export default defineConfig({
     '/ja/creator/vtuber-family-privacy-rules/': '/ja/creator/female-streamer-privacy-soundproof/',
   },
   image: {
-    domains: ['m.media-amazon.com', 'ir-jp.amazon-adsystem.com'],
+    domains: ['m.media-amazon.com', 'ir-jp.amazon-adsystem.com', 'shop.r10s.jp'],
   },
 });

@@ -1,7 +1,7 @@
 # 現在抱えているタスク
 
 作成日：2026-06-10
-最終整理：2026-10-18（T-16を`archive/task-list-31.md`へ、T-20を`archive/task-list-32.md`へ、T-22を`archive/task-list-33.md`へ。2026-10-17にT-03・T-07・T-15を`archive/task-list-29.md`へ移し、T-29を追加。効果測定は`schedule-task.md`の月次解析S-NNへ移した。運用ルールは同階層の`CLAUDE.md`）
+最終整理：2026-10-18（T-23を`archive/task-list-34.md`へ。T-16を`archive/task-list-31.md`へ、T-20を`archive/task-list-32.md`へ、T-22を`archive/task-list-33.md`へ。2026-10-17にT-03・T-07・T-15を`archive/task-list-29.md`へ移し、T-29を追加。効果測定は`schedule-task.md`の月次解析S-NNへ移した。運用ルールは同階層の`CLAUDE.md`）
 
 > **アーカイブ**: 完了タスクは `archive/task-list-index.md` を参照。
 > **効果測定・データ待ちの確認項目**は `schedule-task.md`（月初の月次解析 S-11・S-12 ほか）を参照。`weekly-task.md`は2026-10-17に運用を終えた移行先ポインタ。
@@ -19,7 +19,6 @@
 | T-04 | 解析精度 | direct流入のbot疑い確認・除外 | ユーザー+Claude | S-11（旧W-19） |
 | T-08 | 運営方針 | ドメイン継続・旧URL解消・既存記事改善 | ユーザー+Claude | - |
 | T-10 | 収益 | 住宅マッチング・注文住宅資料請求のCTA訴求 | ユーザー+Claude | S-05（旧W-23） |
-| T-23 | 収益 | 10万円台の防音室向けCTAを追加し、記事内容に合うCTAにする（現状は高額のアビテックス・ナサールのみ） | ユーザー+Claude | T-14（派生） |
 | T-24 | 配信者クラスタ | **【次に着手】** 旧URL3本の転送先を、カテゴリ一覧から既存記事へ変更する（電子ドラム・ピアノ関連） | Claude | T-25 |
 | T-25 | コンテンツ | 打鍵・打撃音の入口づくり（キーボード打鍵音・ピアノの鍵盤音・打楽器＋ハブ。配信者を受け皿にしない） | ユーザー+Claude | T-24 |
 | T-27 | 整理 | チェロ記事（`rental-caution-cello`）の統合を取り消すか維持するか決め、個別に対応する（301だけ有効でファイルが残置されている状態） | ユーザー | consolidation-candidates §3 |
@@ -76,23 +75,6 @@ GA4の直近1週間のアクセスが落ち込み時より回復しているこ�
 - [ ] デプロイ後、Search Consoleで4本のURLのindex登録をリクエストし、indexされてからアフィリエイトを申請する（ユーザー対応。確認項目は`schedule/2026-10-18-housing-articles-report.md`（S-05））
 - [ ] 合格後: 案件ごとにCTAを`affiliates.ts`へ個別登録（slugでid設定）し、記事内容とCTAを一致させる。クリック計測は`affiliate_click`（キーイベント登録は2026-10-08に完了、`archive/task-list-28.md`）。読者心理（`bouon-persona-thinking`）と`bouon-growth-ops`の型で設計する。この工程は合格後に新規T-NN／W-NNとして起票する
 - 注意: 「一戸建て騒音源別記事」は実需データ待ちで保留中（下記）。本タスクは住宅購入・新築検討層向けで軸が異なるため、保留分と混ぜずに企画する
-
-### T-23 10万円台の防音室向けCTAの追加（2026-10-08 追加、T-14のスマホ確認中に発見）
-
-ユーザーの気づき: `CtaBox`のCTAは、ヤマハ アビテックス（65万円〜）とカワイ ナサール（80万円〜）の高額防音室しかない。「10万円台の比較的安い防音室おすすめ」を扱う記事では、高額商品のCTAが内容と合わない。**記事の価格帯に合ったCTAを用意し、マッチ度を上げる。**
-
-現状（2026-10-08確認）:
-- `src/data/affiliates.ts`に10万円台前後の防音室は登録済み（`danbocchi-wide` 9.8万円〜、`danbocchi-standard` 7.5万円〜、`otodasu-dx-pro` 14.9万円〜）だが、記事内のCTA（`<CtaBox slug=...>`）として使われているのは実質アビテックス・ナサールのみ
-- 運用ルール（`feedback_ctabox_rule`メモリ）は「使える slug は`yamaha-avitex`と`kawai-nasal`のみ・商品名を記事で紹介した場合だけ置く」。この制限が、安価帯のCTAが出ない原因
-
-- [ ] 対象記事を洗い出す: 10万円台・組み立て式を扱う記事（候補: `soundproof-room/assembly-type-comparison`・`soundproof-room/bouon-osusume-hikaku`、`money/soundproof-room-price-market`、`money/used-soundproof-room-buying-guide`など。現在の`CtaBox`配置は`rg "CtaBox slug="`で確認）。記事が扱う価格帯とCTAの価格帯が食い違っている箇所を一覧にする
-- [ ] CTAにする商品を決める（ユーザー判断）: 登録済みの`danbocchi-wide`・`otodasu-dx-pro`などから選ぶか、新規に追加するか。**リンク先・ASP案件・成果条件は一次情報（公式サイトまたはASP管理画面）で確認する**。価格は「◯年◯月時点」を明記（`bouon-research`）
-- [ ] `affiliates.ts`の登録内容を確認・更新する（価格・画像・`variant`。10万円台は`premium`か`standard`かも判断）。リンク切れ・古い価格がないか確認する
-- [ ] `feedback_ctabox_rule`メモリのルールを更新する（「使える slug は2種類のみ」→ 安価帯の slug を追加。「商品名を記事で紹介した場合のみ配置」は維持するか決める）
-- [ ] 記事にCTAを配置する。**記事内で商品名に言及している箇所にだけ置く**。高額CTAとの併置は、読者の予算帯に合わせて出し分ける（`bouon-growth-ops`の収益導線設計、`bouon-internal-link-ops`で他の誘導と重複しないか確認）
-- [ ] スマホ幅390pxで表示確認（`pnpm preview`、`feedback_mobile_first_design`メモリ）。`data-track-slug`が付くため、GA4の`affiliate_click`（キーイベント登録済み）で新CTAのクリックを後から見られるようにしておく
-- [ ] 効果確認の起票: 配置した日・対象記事・見る指標（`affiliate_click`のslug別クリック）を、次の月次解析のS-NNの個別ファイルに節として足す（キーイベントは登録済みなので、配置後に判定できる）
-- 注意: 記事の主張と合わない商品は載せない。遮音性能・価格は公式の表記どおりに書き、誇張しない。画像生成は指示があるまで行わない
 
 ---
 

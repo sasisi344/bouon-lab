@@ -44,4 +44,6 @@
 
 | 33 | [task-list-33.md](./task-list-33.md) | 2026-10-18 | T-22 個室ブースを自宅に置く記事（`soundproof-room/home-private-booth-guide`）を需要確認のうえ作成・デプロイ。GSC登録はユーザー対応で残り |
 
-**次の番号**: `task-list-34`
+| 34 | [task-list-34.md](./task-list-34.md) | 2026-10-18 | T-23 10万円台の防音室向けCTA（だんぼっち・OTODASU II）を追加し、だんぼっち・OTODASUの価格と性能表記を2026年10月時点に修正 |
+
+**次の番号**: `task-list-35`
