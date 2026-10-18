@@ -46,6 +46,6 @@
 
 | 34 | [task-list-34.md](./task-list-34.md) | 2026-10-18 | T-23 10万円台の防音室向けCTA（だんぼっち・OTODASU II）を追加し、だんぼっち・OTODASUの価格と性能表記を2026年10月時点に修正 |
 
-| 35 | [task-list-35.md](./task-list-35.md) | 2026-10-18 | T-24 電子ドラム・ピアノの旧URL3本の転送先をカテゴリ一覧から既存記事（`electronic-drum-vibration-fuwafuwa-system`・`piano-room-guide`）へ変更。デプロイはユーザー対応で残り |
+| 35 | [task-list-35.md](./task-list-35.md) | 2026-10-18 | T-24 電子ドラム・ピアノの旧URL3本の転送先をカテゴリ一覧から既存記事（`electronic-drum-vibration-fuwafuwa-system`・`piano-room-guide`）へ変更し、2026-10-18にデプロイ・301を確認 |
 
 **次の番号**: `task-list-36`
