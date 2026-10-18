@@ -371,7 +371,7 @@ export default defineConfig({
     '/posts/bouon-kujyou-taisaku/':                     '/ja/soundproof-rental/',
     '/posts/soundproof-room-price-complete-guide-2025/':'/ja/money/soundproof-room-price-market/',
     '/posts/bouoproof-maintnace/':                      '/ja/soundproof-room/',
-    '/posts/piano-proofroom-select-guide/':             '/ja/soundproof-room/',
+    '/posts/piano-proofroom-select-guide/':             '/ja/soundproof-room/piano-room-guide/',
 
     // ── 旧Hugo /en/posts/ → /ja/ へ転送（英語ページ一時停止中） ──────────
     '/en/posts/budget-soundproof-booth-comparison/': '/ja/',
@@ -543,7 +543,7 @@ export default defineConfig({
     '/posts/soundproof-material-selection-purchase-guide/': '/ja/knowledge/',
     '/posts/soundproof-materials-selection-guide/':    '/ja/knowledge/',
     '/posts/soundproof-performance-measurement/':      '/ja/knowledge/',
-    '/posts/soundproof-performance-piano/':            '/ja/soundproof-room/',
+    '/posts/soundproof-performance-piano/':            '/ja/soundproof-room/piano-room-guide/',
     '/posts/soundproof-rental-market-october-2025/':   '/ja/soundproof-rental/',
     '/posts/soundproof-rental-restoration-trouble-management/': '/ja/soundproof-rental/',
     '/posts/soundproof-room-daily-maintenance/':       '/ja/soundproof-room/',
@@ -609,7 +609,7 @@ export default defineConfig({
     '/posts/renter-parent-house-soundproofing/':                             '/ja/diy/renter-parent-house-soundproofing/',
     '/posts/japanese-instrument-soundproof/':                                '/ja/soundproof-room/',
     '/posts/diy-limitation-low-frequency-noise/':                            '/ja/diy/',
-    '/posts/electronic-drum-vibration/':                                     '/ja/knowledge/',
+    '/posts/electronic-drum-vibration/':                                     '/ja/diy/electronic-drum-vibration-fuwafuwa-system/',
     '/posts/electronic-piano-vibration-solution/':                           '/ja/knowledge/',
     '/posts/soundproof-room-price-complete-guide/':                          '/ja/money/',
     '/posts/streamer-keyboard-silence/':                                     '/ja/creator/',

@@ -109,6 +109,17 @@
 - 判定はS-12
 - 結果:
 
+### 電子ドラム・ピアノの旧URL3本の転送先変更（T-24、2026-10-18変更・未デプロイ）
+
+- 変更: カテゴリ一覧から既存記事へ（`public/.htaccess`・`astro.config.mjs`）
+  - `/posts/electronic-drum-vibration/`（16か月で17表示・36.2位）: `/ja/knowledge/` → `/ja/diy/electronic-drum-vibration-fuwafuwa-system/`
+  - `/posts/piano-proofroom-select-guide/`（73表示・24.7位）: `/ja/soundproof-room/` → `/ja/soundproof-room/piano-room-guide/`
+  - `/posts/soundproof-performance-piano/`（16表示・8.4位）: `/ja/soundproof-room/` → `/ja/soundproof-room/piano-room-guide/`
+- デプロイ後: curlで3本の301先を確認し、ここへデプロイ日を書く
+- 見る: 転送先2記事の表示・順位（変更前との比較）。旧URL3本の表示が消えていくか。「電子ドラム 振動」「ピアノ 防音室」系の語が転送先に出るか
+- 判定はS-12（m10は変更から月末まで日が浅いので途中経過）
+- 結果:
+
 ---
 
 ## 継続観察（毎月の解析で見る）

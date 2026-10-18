@@ -1,7 +1,7 @@
 # 現在抱えているタスク
 
 作成日：2026-06-10
-最終整理：2026-10-18（T-23を`archive/task-list-34.md`へ。T-16を`archive/task-list-31.md`へ、T-20を`archive/task-list-32.md`へ、T-22を`archive/task-list-33.md`へ。2026-10-17にT-03・T-07・T-15を`archive/task-list-29.md`へ移し、T-29を追加。効果測定は`schedule-task.md`の月次解析S-NNへ移した。運用ルールは同階層の`CLAUDE.md`）
+最終整理：2026-10-18（T-24を`archive/task-list-35.md`へ。T-23を`archive/task-list-34.md`へ。T-16を`archive/task-list-31.md`へ、T-20を`archive/task-list-32.md`へ、T-22を`archive/task-list-33.md`へ。2026-10-17にT-03・T-07・T-15を`archive/task-list-29.md`へ移し、T-29を追加。効果測定は`schedule-task.md`の月次解析S-NNへ移した。運用ルールは同階層の`CLAUDE.md`）
 
 > **アーカイブ**: 完了タスクは `archive/task-list-index.md` を参照。
 > **効果測定・データ待ちの確認項目**は `schedule-task.md`（月初の月次解析 S-11・S-12 ほか）を参照。`weekly-task.md`は2026-10-17に運用を終えた移行先ポインタ。
@@ -19,8 +19,7 @@
 | T-04 | 解析精度 | direct流入のbot疑い確認・除外 | ユーザー+Claude | S-11（旧W-19） |
 | T-08 | 運営方針 | ドメイン継続・旧URL解消・既存記事改善 | ユーザー+Claude | - |
 | T-10 | 収益 | 住宅マッチング・注文住宅資料請求のCTA訴求 | ユーザー+Claude | S-05（旧W-23） |
-| T-24 | 配信者クラスタ | **【次に着手】** 旧URL3本の転送先を、カテゴリ一覧から既存記事へ変更する（電子ドラム・ピアノ関連） | Claude | T-25 |
-| T-25 | コンテンツ | 打鍵・打撃音の入口づくり（キーボード打鍵音・ピアノの鍵盤音・打楽器＋ハブ。配信者を受け皿にしない） | ユーザー+Claude | T-24 |
+| T-25 | コンテンツ | 打鍵・打撃音の入口づくり（キーボード打鍵音・ピアノの鍵盤音・打楽器＋ハブ。配信者を受け皿にしない） | ユーザー+Claude | - |
 | T-27 | 整理 | チェロ記事（`rental-caution-cello`）の統合を取り消すか維持するか決め、個別に対応する（301だけ有効でファイルが残置されている状態） | ユーザー | consolidation-candidates §3 |
 | T-28 | コンテンツ | 仙台の防音賃貸記事（`sendai-soundproof-rental-guide`）の未検証の主張を裏取りし、noindexを解除するか決める | Claude+ユーザー | S-11（旧W-31） |
 | T-11 | 保留 | 一戸建て騒音源別記事 | - | - |
@@ -56,6 +55,7 @@ GA4の直近1週間のアクセスが落ち込み時より回復しているこ�
   - `/upload/`の410化・デプロイ確認は完了（2026-10-06、詳細は`archive/task-list-17.md`）
   - [ ] 404の再確認は日付指定タスクとして`schedule-task.md`に移した: S-03（2026-10-13前後）、S-04（2026-10-27前後、S-03で判断できない場合のみ）
   - 巻き戻し条件: `/upload/`配下に正規のファイルを置く場合のみ、追加した1行を削除する。それ以外は戻さない（410は恒久削除の明示で、戻すと404に逆戻りするだけ）
+  - [ ] 未決（T-24から移管、2026-10-18）: カテゴリ一覧・トップへ301された旧URL125本（16か月で表示17,456・クリック240。`/en/`の分を含む）を点検し、内容の合う既存記事があれば転送先を変える。起票するかはユーザー判断
 - [ ] 既存記事の改善優先度を`bouon-rewrite-strategy`で再判定する
 
 ### T-10 住宅マッチング・注文住宅資料請求アフィリエイトのCTA訴求（2026-10-04 追加）
@@ -81,19 +81,6 @@ GA4の直近1週間のアクセスが落ち込み時より回復しているこ�
 ## 着手可能：打鍵・打撃音の入口づくり（2026-10-11 追加、配信者クラスタの再設計から）
 
 設計の正本は `re-create/entrance-design.md`、根拠は `query-check/analysis_実データ.md`（作業中の派生ファイル。マスターは本ファイル）。
-
-### T-24 旧URL3本の転送先を既存記事へ変更（2026-10-11 追加。**次に着手するタスク**）
-
-背景: 旧URLのキーボード・ピアノ・電子ドラム関連が、記事ではなくカテゴリ一覧へ301されている（`public/.htaccess`、`astro.config.mjs`）。ユーザー指示（2026-10-11）で、**次のタスクとして登録**。実施前に、変更内容をユーザーに提示して確認する（`.htaccess`と`astro.config.mjs`を同時に変更する）。
-
-- [ ] 次の3本を、既存記事へ転送する（16か月のGSC実績）
-  - `/posts/electronic-drum-vibration/`（17表示・36.2位）: `/ja/knowledge/` → `/ja/diy/electronic-drum-vibration-fuwafuwa-system/`
-  - `/posts/piano-proofroom-select-guide/`（73表示・24.7位）: `/ja/soundproof-room/` → `/ja/soundproof-room/piano-room-guide/`
-  - `/posts/soundproof-performance-piano/`（16表示・8.4位）: `/ja/soundproof-room/` → `/ja/soundproof-room/piano-room-guide/`
-- [ ] `public/.htaccess`と`astro.config.mjs`を同時に変更し、転送の連鎖（二重の301）が無いことを確認する。`pnpm build`、サイトマップ、内部リンクを確認（`bouon-internal-link-ops`）
-- [ ] 公開後、GSCで3本の旧URLと転送先の表示・順位を確認する。効果確認は、次の月次解析のS-NNの個別ファイルに節として足す（変更日・対象URL・見る指標）
-- 残りの旧URL3本（`keyboard-sound-streaming-soundproof-guide`（646表示・16クリック）、`streamer-keyboard-silence`、`electronic-piano-vibration-solution`）は、T-25の新記事の公開と**同時**に転送先を変える
-- 未決: サイト全体で、カテゴリ一覧・トップへ301された旧URL125本（16か月で表示17,456・クリック240。`/en/`の分を含む）の点検は、起票していない（必要ならユーザー判断で追加）
 
 ### T-25 打鍵・打撃音の入口づくり（2026-10-11 追加、ユーザー確定）
 
