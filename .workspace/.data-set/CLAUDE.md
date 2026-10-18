@@ -44,6 +44,7 @@
 | `05_商品/research-2026-10-07-private-booth.md` | 個室ブースの防音室との違い、遮音dB公表値の比較（測定条件の注意）、価格・サブスク、消防法（可動式ブース）、需要チャネル（駅・大学・自治体・マンション共用部ほか）、未確認事項 | ◎ |
 | 個室ブース（ワークブース）の遮音性能・価格・消防法・需要チャネル | `05_商品/research-2026-10-07-private-booth.md` | ◎ 2026-10-07。価格・消防庁基準は記事前に再確認。タスクはT-22 |
 | タワーマンションの防音（床スラブ厚、ジム騒音） | `tower-mansion-sound-insulation-memo.md` | ○ |
+| dBの大きさを身近な空間で例える言い方（Dr値で下がったあとの音、夜間45dBなど） | `db-familiar-sound-scale.md` | ◎ 2026-10-18。記事の例えは必ずこの表に揃える（正本） |
 | 検索クエリの勝ち筋・改善機会（3月時点） | `06_リサーチ・管理/query-analysis-90days-20260324.md` | ○ 最新の実績は `.workspace/access-data/`（`bouon-weekly-report` skill） |
 | 重要クエリと既存記事の突合（カバー済み／加筆／新規） | `seo-check/gsc-analysis-20260702/query-article-match-20260702.md` | ○ 前期データ基準 |
 | ランキング崩壊・旧URL・リダイレクト漏れの調査 | `seo-check/gsc-analysis-20260702/ranking-collapse-root-cause-20260702.md`、`seo-check/gsc-analysis-20260702/redirect-gap-full-audit-20260702.md`、`seo-check/gsc-analysis-20260702/summary.md` | ○ 対応済みの記録。経緯の確認用。`ranking-collapse-root-cause`は2026-10-13に整理済み（結論・現在の指標・未対応のみ。対応済みの節と7月時点の履歴は`.workspace/.task/archive/ranking-collapse-resolved-20261013.md`） |
@@ -67,6 +68,7 @@
 | `ctr-check-list.md` | CTR改善チェックリスト（W28版、2026-07-08） | ○ |
 | `pagerank-list.md` | 順位改善／深追い不要チェックリスト（W28版、2026-07-08） | ○ |
 | `tower-mansion-sound-insulation-memo.md` | タワマンの防音性能メモ | ○ |
+| `db-familiar-sound-scale.md` | dBを身近な空間で例える基準表（環境省「騒音の目安」・日本環境協会）と書き方のルール。記事の例えの正本 | ◎ |
 
 ### `01_防音室/` — 防音室（ユニット・施工）
 
