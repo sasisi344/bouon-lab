@@ -54,10 +54,12 @@
 | ja | diy | `diy-vocal-soundproof-mask` |  | 防音マスク自作は息苦しい？段ボールヘッドボックスの酸欠リスクを検証 | 防音マスク, 酸欠対策, DIY防音, 深夜配信, 換気 | `/ja/diy/diy-vocal-soundproof-mask/` | false |
 | ja | diy | `diy-wall-soundproofing-room-guide` |  | 自分の部屋を防音室にしたい？DIYの壁防音と専門工事の現実的な選択肢 | DIY防音, 壁防音, 防音賃貸, 防音工事 | `/ja/diy/diy-wall-soundproofing-room-guide/` | false |
 | ja | diy | `electronic-drum-vibration-fuwafuwa-system` |  | 電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界 | 電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振 | `/ja/diy/electronic-drum-vibration-fuwafuwa-system/` | false |
+| ja | diy | `electronic-piano-key-noise-vibration` |  | 電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方 | 電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音 | `/ja/diy/electronic-piano-key-noise-vibration/` | false |
 | ja | diy | `free-cardboard-soundproof-tech` |  | スーパーの無料段ボールは使えるか？厚さ重視で選ぶ「最強の段ボール」と多重貼りテクニック | DIY防音, 防音室, 費用, リサイクル | `/ja/diy/free-cardboard-soundproof-tech/` | false |
 | ja | diy | `futon-cardboard-karaoke-booth` |  | 見た目はヤバいが効果はガチ。布団と段ボールで囲う「ひとり用カラオケボックス」の作り方 | 防音室, 費用, ひとりカラオケ, DIY防音, 歌ってみた | `/ja/diy/futon-cardboard-karaoke-booth/` | false |
 | ja | diy | `gamer-acoustic-placement` |  | 吸音材はどこに貼る？モニター裏・スピーカー裏など5つの正解ポイント | 吸音材, ルームアコースティック, 配信・実況, DIY防音 | `/ja/diy/gamer-acoustic-placement/` | false |
 | ja | diy | `karaoke-box-soundproof-performance-guide` |  | カラオケボックス並みの防音は自宅で作れる？性能の目安と住宅構造別対策 | カラオケ, 防音室, 住宅構造, 防音ドア, DIY防音 | `/ja/diy/karaoke-box-soundproof-performance-guide/` | false |
+| ja | diy | `keyboard-typing-noise-vibration` |  | キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化 | キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音 | `/ja/diy/keyboard-typing-noise-vibration/` | false |
 | ja | diy | `outdoor-soundproof-curtain-market-guide` |  | 【市場整理】屋外用防音カーテン｜防音シートの構造と調達・選定の実務ポイント | 屋外用防音カーテン, 防音シート, 建設資材, 調達, 騒音対策, BtoB | `/ja/diy/outdoor-soundproof-curtain-market-guide/` | false |
 | ja | diy | `parenting-generation-quiet-corner-diy` |  | 子育て世代のDIY「一人になれる場所」｜1万円台から始める段階的な作り方 | 子育て世代, DIY防音, 一人の時間, 納戸活用, 在宅ワーク | `/ja/diy/parenting-generation-quiet-corner-diy/` | false |
 | ja | diy | `renter-parent-house-soundproofing` |  | 賃貸の防音対策は壁を傷つけずにできる？原状回復を守る5つの方法【実家・親バレ対策も】 | 防音賃貸, 原状回復, DIY防音, 遮音シート | `/ja/diy/renter-parent-house-soundproofing/` | false |
@@ -156,6 +158,7 @@
 | ja | soundproof-room | `bouon-osusume-hikaku` |  | 【2026最新】防音室おすすめ比較｜失敗しない選び方とROI（投資対効果）を分析 | 防音室, 防音室選び, ヤマハ, カワイ, リセールバリュー, ROI | `/ja/soundproof-room/bouon-osusume-hikaku/` | false |
 | ja | soundproof-room | `bouon-setti-checkpoint` |  | 防音室導入の最終チェックリスト｜後悔しないためのサイズ・重量・搬入のデッドライン | 設置条件, 床荷重, 搬入経路, 管理組合, 失敗しない防音室 | `/ja/soundproof-room/bouon-setti-checkpoint/` | false |
 | ja | soundproof-room | `budget-soundproof-booth-comparison` |  | 格安防音室は夏に地獄化する？だんぼっち・OTODASU排熱リスクと中古購入の注意点 | 防音室, 排熱対策, だんぼっち, OTODASU, 中古防音室 | `/ja/soundproof-room/budget-soundproof-booth-comparison/` | false |
+| ja | soundproof-room | `buy-home-with-soundproof-room` |  | 防音室付きマンションを買うには？分譲・中古の探し方と内見の確認点 | 防音室付き物件, 分譲マンション, 中古マンション, 中古戸建て, 物件探し, 楽器演奏, 住宅購入 | `/ja/soundproof-room/buy-home-with-soundproof-room/` | false |
 | ja | soundproof-room | `compact-booth-under-1-5-tatami` |  | 防音室0.8畳で足りる？0.5〜1.5畳の小型でギター・歌・配信はできるか | 防音室, 小型防音室, 0.8畳, サイズ選び, ヤマハ | `/ja/soundproof-room/compact-booth-under-1-5-tatami/` | false |
 | ja | soundproof-room | `construction-types-cost-comparison` |  | 防音工事の種類と価格比較｜壁・床・開口部、業者の選び方まで | 防音工事, リフォーム, 価格比較, 防音壁 | `/ja/soundproof-room/construction-types-cost-comparison/` | false |
 | ja | soundproof-room | `custom-home-soundproof-builder-selection` |  | 注文住宅で防音室を作る依頼先｜ハウスメーカー・工務店・設計事務所の選び方と流れ | 注文住宅, 防音室, ハウスメーカー, 工務店, 設計事務所, 家づくり | `/ja/soundproof-room/custom-home-soundproof-builder-selection/` | false |

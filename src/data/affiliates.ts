@@ -164,6 +164,19 @@ export const affiliates: Record<string, AffiliateItem> = {
     variant: 'standard',
   },
 
+  'wool-felt-desk-mat': {
+    type: 'amazon',
+    slug: 'wool-felt-desk-mat',
+    name: 'amesoba ウールフェルト デスクマット（4mm厚・裏面コルク）',
+    description: 'ニュージーランド産羊毛のフェルトマット。キーボードの下に敷くと、コトコトという底打ちの響きを和らげる。',
+    price: '¥3,680（30×60cm、2026年10月確認）',
+    image: 'images/I/81MmaCnsvoL._AC_SL1500_.jpg',
+    badge: 'TYPING-MAT',
+    asin: 'B0G26L55XH',
+    tag: 'sasisi344-22',
+    variant: 'standard',
+  },
+
   'yamaha-avitex': {
     type: 'link',
     slug: 'yamaha-avitex',

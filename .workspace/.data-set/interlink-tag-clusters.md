@@ -46,12 +46,13 @@
   - [防音室なしで配信を始める｜スマホ1台から収益化につなげる若年層のロードマップ](/ja/creator/young-streamer-smartphone-monetization-roadmap/) `配信・実況, 若年層, 収益化, スマホ配信, 防音室`
   - [防音室のケーブル配線術｜配信機材が増えても散らからない整理と電源の考え方](/ja/creator/soundproof-booth-cable-management/) `配信者, 防音室, ケーブル整理, 電源タップ, 配線`
 
-### ja / diy（23件）
+### ja / diy（25件）
 
   - [【市場整理】屋外用防音カーテン｜防音シートの構造と調達・選定の実務ポイント](/ja/diy/outdoor-soundproof-curtain-market-guide/) `屋外用防音カーテン, 防音シート, 建設資材, 調達, 騒音対策, BtoB`
   - [【寸法例あり】自作防音ブースの作り方｜ホームセンター資材で市販品の半額以下に](/ja/diy/danbotchi-diy-blueprints/) `DIY防音, だんぼっち, 防音室, 費用, 設計図`
   - [DIY防音のコツ｜安価で効果的な遮音・吸音テクニックを音響エンジニアが解剖](/ja/diy/diy-soundproofing-tips/) `DIY防音, 遮音シート, 吸音材, 防音賃貸, 音響設計`
   - [カラオケボックス並みの防音は自宅で作れる？性能の目安と住宅構造別対策](/ja/diy/karaoke-box-soundproof-performance-guide/) `カラオケ, 防音室, 住宅構造, 防音ドア, DIY防音`
+  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
   - [スーパーの無料段ボールは使えるか？厚さ重視で選ぶ「最強の段ボール」と多重貼りテクニック](/ja/diy/free-cardboard-soundproof-tech/) `DIY防音, 防音室, 費用, リサイクル`
   - [ベーストラップ自作・設置ガイド｜低音こもりを解消する配置・測定の全手順](/ja/diy/bass-trap-installation-guide/) `ベーストラップ, 低音, 音響補正, 吸音材, 防音室`
   - [マンションのランニングマシン防音対策｜階下の振動を減らす「重ね敷き」と置き方](/ja/diy/treadmill-apartment-soundproofing-layering/) `ランニングマシーン, マンション, 振動対策, 苦情回避`
@@ -62,6 +63,7 @@
   - [自分の部屋を防音室にしたい？DIYの壁防音と専門工事の現実的な選択肢](/ja/diy/diy-wall-soundproofing-room-guide/) `DIY防音, 壁防音, 防音賃貸, 防音工事`
   - [賃貸の防音対策は壁を傷つけずにできる？原状回復を守る5つの方法【実家・親バレ対策も】](/ja/diy/renter-parent-house-soundproofing/) `防音賃貸, 原状回復, DIY防音, 遮音シート`
   - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振`
+  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
   - [内窓の防音効果を実測｜賃貸DIYポリカ窓から本格インプラスまで徹底比較【2025-2026年版】](/ja/diy/diy-internal-window-road-noise-reduction/) `内窓, DIY防音, 実測, 補助金, インプラス`
   - [配信映えする「LED付き自作吸音パネル」の作り方！光と音を同時に操る](/ja/diy/diy-led-acoustic-panels/) `吸音材, LED, 配信・実況, DIY防音, インテリア`
   - [配信者のための家電・生活音対策｜冷蔵庫と換気扇のノイズを物理的に沈める方法](/ja/diy/diy-refrigeration-noise-reduction/) `配信・実況, 騒音対策, 冷蔵庫, 換気, 防振, ASMR`
@@ -169,7 +171,7 @@
   - [防音賃貸の家賃相場はいくら？コスパ・通勤・実用性で選ぶ完全ガイド【2026】](/ja/soundproof-rental/soundproof-rental-cost-performance-guide/) `防音賃貸, 家賃相場, コスパ, 通勤, ミュージション, 部屋探し`
   - [防音賃貸の家賃相場はどう決まる？13都市統計の読み方](/ja/soundproof-rental/rental-price-index-13cities-soundproof/) `防音賃貸, 家賃相場, 賃貸統計, 相場調査`
 
-### ja / soundproof-room（39件）
+### ja / soundproof-room（40件）
 
   - [【2026最新】防音室おすすめ比較｜失敗しない選び方とROI（投資対効果）を分析](/ja/soundproof-room/bouon-osusume-hikaku/) `防音室, 防音室選び, ヤマハ, カワイ, リセールバリュー, ROI`
   - [【シミュレーション】防音室で音はどこまで消える？用途別の軽減率を徹底検証](/ja/soundproof-room/sound-reduction-simulation/) `遮音性能, シミュレーション, 配信・実況, 楽器演奏`
@@ -208,6 +210,7 @@
   - [防音室の花粉対策｜換気を止めずに春の「花粉・黄砂」をシャットアウトする方法](/ja/soundproof-room/soundproof-room-pollen-protection/) `花粉対策, 換気, ロスナイ, 春, 空気清浄機, メンテナンス`
   - [防音室の解体・処分完全ガイド｜自分でやるリスクと業者費用の相場](/ja/soundproof-room/soundproof-room-demolition-guide/) `防音室, 解体, 処分, 廃棄, 費用, DIY防音`
   - [防音室導入の最終チェックリスト｜後悔しないためのサイズ・重量・搬入のデッドライン](/ja/soundproof-room/bouon-setti-checkpoint/) `設置条件, 床荷重, 搬入経路, 管理組合, 失敗しない防音室`
+  - [防音室付きマンションを買うには？分譲・中古の探し方と内見の確認点](/ja/soundproof-room/buy-home-with-soundproof-room/) `防音室付き物件, 分譲マンション, 中古マンション, 中古戸建て, 物件探し, 楽器演奏, 住宅購入`
   - [夜間練習はどこまで許される？深夜でも楽器を弾くための防音室選びと「振動」の罠](/ja/soundproof-room/night-practice-soundproof-guide/) `夜間練習, D値, 振動対策, ヤマハ, カワイ, サイレント楽器`
   - [予算別防音室選び方ガイド｜50万円・100万円・200万円で選ぶ方法](/ja/soundproof-room/soundproof-room-budget-selection-guide/) `防音室, 費用, 予算, 50万円, 100万円, 200万円, 防音室選び`
 
@@ -305,6 +308,37 @@
   - [防音賃貸への引っ越し、失敗しない判断基準｜子育て世代の住み替えガイド](/ja/money/quiet-space-relocation-decision-guide/) `防音賃貸, 引っ越し, 子育て世代, 住み替え, 内見チェック`
   - [木造アパートの防音は無理？苦情ゼロまで音を減らす3つの現実的対策](/ja/diy/wooden-apartment-soundproof-guide/) `木造アパート, 防音賃貸, 隙間テープ, 生活音, 家具配置`
 
+### ja / DIY防音（28件）
+
+  - [【寸法例あり】自作防音ブースの作り方｜ホームセンター資材で市販品の半額以下に](/ja/diy/danbotchi-diy-blueprints/) `DIY防音, だんぼっち, 防音室, 費用, 設計図`
+  - [2畳以上の広々防音室ガイド｜グランドピアノ・声楽・プロ仕様の空間作り](/ja/soundproof-room/soundproof-room-large-size/) `防音室, 2畳, 3畳, グランドピアノ, DIY防音, 自宅スタジオ`
+  - [DIY防音のコツ｜安価で効果的な遮音・吸音テクニックを音響エンジニアが解剖](/ja/diy/diy-soundproofing-tips/) `DIY防音, 遮音シート, 吸音材, 防音賃貸, 音響設計`
+  - [DIY防音の不都合な真実を解説｜科学的根拠に乏しい製品を見抜く思考法](/ja/knowledge/diy-soundproof-truth/) `DIY防音, 遮音材, 吸音材, 物理法則, 防音室`
+  - [カラオケボックス並みの防音は自宅で作れる？性能の目安と住宅構造別対策](/ja/diy/karaoke-box-soundproof-performance-guide/) `カラオケ, 防音室, 住宅構造, 防音ドア, DIY防音`
+  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
+  - [ゲーム配信者が防音より先にやるべき騒音対策｜マイク音質改善が最優先](/ja/creator/streamer-noise-quick-fix/) `配信・実況, ゲーム実況, 騒音対策, 賃貸防音, DIY防音, マイク設定`
+  - [スーパーの無料段ボールは使えるか？厚さ重視で選ぶ「最強の段ボール」と多重貼りテクニック](/ja/diy/free-cardboard-soundproof-tech/) `DIY防音, 防音室, 費用, リサイクル`
+  - [ピアノ・ギター弾き語り・歌ってみた配信の防音設計｜楽器音と声を同時に処理する](/ja/creator/singer-instrumentalist-stream-soundproof/) `配信・実況, 楽器演奏, 吸音パネル, 防音対策, DIY防音`
+  - [ワンルーム配信の防音ハック｜1万円以下で夜の声漏れと隣人の壁ドンを防ぐ](/ja/creator/one-room-streaming-soundproof/) `一人暮らし, 低予算, 配信・実況, DIY防音, 騒音トラブル, 深夜配信`
+  - [吸音材か遮音材か迷う人へ｜あなたの環境で“必要なのはどっち？”徹底ガイド](/ja/knowledge/absorption-vs-soundproofing-materials/) `吸音材, 遮音材, 騒音対策, DIY防音, 吸音と遮音の違い`
+  - [吸音材はどこに貼る？モニター裏・スピーカー裏など5つの正解ポイント](/ja/diy/gamer-acoustic-placement/) `吸音材, ルームアコースティック, 配信・実況, DIY防音`
+  - [見た目はヤバいが効果はガチ。布団と段ボールで囲う「ひとり用カラオケボックス」の作り方](/ja/diy/futon-cardboard-karaoke-booth/) `防音室, 費用, ひとりカラオケ, DIY防音, 歌ってみた`
+  - [子育て世代のDIY「一人になれる場所」｜1万円台から始める段階的な作り方](/ja/diy/parenting-generation-quiet-corner-diy/) `子育て世代, DIY防音, 一人の時間, 納戸活用, 在宅ワーク`
+  - [自作防音室の費用内訳｜材料費だけでいくらかかる？](/ja/diy/soundproof-room-diy-cost/) `DIY防音, 費用`
+  - [自宅に防音室がなくても「一人になれる空間」を作る4つの方法｜40〜60代の予算別ガイド](/ja/money/quiet-space-budget-decision-guide/) `防音室, 子育て世代, 趣味の時間, 予算別, DIY防音`
+  - [自分の部屋を防音室にしたい？DIYの壁防音と専門工事の現実的な選択肢](/ja/diy/diy-wall-soundproofing-room-guide/) `DIY防音, 壁防音, 防音賃貸, 防音工事`
+  - [賃貸の防音対策は壁を傷つけずにできる？原状回復を守る5つの方法【実家・親バレ対策も】](/ja/diy/renter-parent-house-soundproofing/) `防音賃貸, 原状回復, DIY防音, 遮音シート`
+  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
+  - [内窓の防音効果を実測｜賃貸DIYポリカ窓から本格インプラスまで徹底比較【2025-2026年版】](/ja/diy/diy-internal-window-road-noise-reduction/) `内窓, DIY防音, 実測, 補助金, インプラス`
+  - [配信映えする「LED付き自作吸音パネル」の作り方！光と音を同時に操る](/ja/diy/diy-led-acoustic-panels/) `吸音材, LED, 配信・実況, DIY防音, インテリア`
+  - [防音パネルの罠｜DIY失敗例から学ぶ『遮音と吸音』の物理学的黄金比](/ja/diy/diy-soundproof-room-failures-solutions/) `DIY防音, 遮音, 吸音, 遮音性能, 失敗談`
+  - [防音マスク自作は息苦しい？段ボールヘッドボックスの酸欠リスクを検証](/ja/diy/diy-vocal-soundproof-mask/) `防音マスク, 酸欠対策, DIY防音, 深夜配信, 換気`
+  - [防音室DIYの落とし穴。「遮音シート」の重さで自作ブースが崩壊しないためのフレーム補強術](/ja/diy/soundproof-sheet-heavy-diy-tips/) `遮音シート, DIY防音, フレーム補強, 失敗しないコツ`
+  - [防音室の音漏れ対策ガイド2026｜原因特定から段階的改善のマニュアル](/ja/soundproof-room/proofroom-soudmore-manual/) `防音室, 騒音対策, DIY防音, メンテナンス`
+  - [防音室の解体・処分完全ガイド｜自分でやるリスクと業者費用の相場](/ja/soundproof-room/soundproof-room-demolition-guide/) `防音室, 解体, 処分, 廃棄, 費用, DIY防音`
+  - [防音室を自作する方法｜クローゼットDIYで3万円から作れる録音ブース](/ja/diy/closet-diy-soundproof-room/) `防音室 自作, クローゼット改造, DIY防音, 宅録, 歌ってみた, ROI`
+  - [木造アパート2階に「だんぼっち」は危険？点でかかる荷重を分散させるDIY補強術](/ja/diy/danbocchi-floor-protection/) `木造アパート, 床荷重, だんぼっち, OTODASU, DIY防音, 床補強`
+
 ### ja / 配信・実況（28件）
 
   - [【2026】日本の防音市場は次にアジアのどこを攻めるべきか｜中国・韓国・ベトナムの最新動向](/ja/business/japan-bouonproof-marketnextasia/) `アジア展開, 防音市場, 国際戦略, 配信・実況, 市場分析`
@@ -335,35 +369,6 @@
   - [防音スペースのレンタルとは？5種類の料金の目安と用途別の選び方・探し方](/ja/soundproof-rental/soundproof-space-rental-guide/) `防音スペース, レンタルスペース, 音楽スタジオ, 個室ブース, 楽器練習, 配信・実況, Web会議`
   - [防音室なしで配信を始める｜スマホ1台から収益化につなげる若年層のロードマップ](/ja/creator/young-streamer-smartphone-monetization-roadmap/) `配信・実況, 若年層, 収益化, スマホ配信, 防音室`
   - [防音室は経費にできる？配信者だけじゃない対象職業と判断基準](/ja/money/streamer-tax-strategy/) `確定申告, 節税, 減価償却, 個人事業主, 青色申告, 配信・実況`
-
-### ja / DIY防音（26件）
-
-  - [【寸法例あり】自作防音ブースの作り方｜ホームセンター資材で市販品の半額以下に](/ja/diy/danbotchi-diy-blueprints/) `DIY防音, だんぼっち, 防音室, 費用, 設計図`
-  - [2畳以上の広々防音室ガイド｜グランドピアノ・声楽・プロ仕様の空間作り](/ja/soundproof-room/soundproof-room-large-size/) `防音室, 2畳, 3畳, グランドピアノ, DIY防音, 自宅スタジオ`
-  - [DIY防音のコツ｜安価で効果的な遮音・吸音テクニックを音響エンジニアが解剖](/ja/diy/diy-soundproofing-tips/) `DIY防音, 遮音シート, 吸音材, 防音賃貸, 音響設計`
-  - [DIY防音の不都合な真実を解説｜科学的根拠に乏しい製品を見抜く思考法](/ja/knowledge/diy-soundproof-truth/) `DIY防音, 遮音材, 吸音材, 物理法則, 防音室`
-  - [カラオケボックス並みの防音は自宅で作れる？性能の目安と住宅構造別対策](/ja/diy/karaoke-box-soundproof-performance-guide/) `カラオケ, 防音室, 住宅構造, 防音ドア, DIY防音`
-  - [ゲーム配信者が防音より先にやるべき騒音対策｜マイク音質改善が最優先](/ja/creator/streamer-noise-quick-fix/) `配信・実況, ゲーム実況, 騒音対策, 賃貸防音, DIY防音, マイク設定`
-  - [スーパーの無料段ボールは使えるか？厚さ重視で選ぶ「最強の段ボール」と多重貼りテクニック](/ja/diy/free-cardboard-soundproof-tech/) `DIY防音, 防音室, 費用, リサイクル`
-  - [ピアノ・ギター弾き語り・歌ってみた配信の防音設計｜楽器音と声を同時に処理する](/ja/creator/singer-instrumentalist-stream-soundproof/) `配信・実況, 楽器演奏, 吸音パネル, 防音対策, DIY防音`
-  - [ワンルーム配信の防音ハック｜1万円以下で夜の声漏れと隣人の壁ドンを防ぐ](/ja/creator/one-room-streaming-soundproof/) `一人暮らし, 低予算, 配信・実況, DIY防音, 騒音トラブル, 深夜配信`
-  - [吸音材か遮音材か迷う人へ｜あなたの環境で“必要なのはどっち？”徹底ガイド](/ja/knowledge/absorption-vs-soundproofing-materials/) `吸音材, 遮音材, 騒音対策, DIY防音, 吸音と遮音の違い`
-  - [吸音材はどこに貼る？モニター裏・スピーカー裏など5つの正解ポイント](/ja/diy/gamer-acoustic-placement/) `吸音材, ルームアコースティック, 配信・実況, DIY防音`
-  - [見た目はヤバいが効果はガチ。布団と段ボールで囲う「ひとり用カラオケボックス」の作り方](/ja/diy/futon-cardboard-karaoke-booth/) `防音室, 費用, ひとりカラオケ, DIY防音, 歌ってみた`
-  - [子育て世代のDIY「一人になれる場所」｜1万円台から始める段階的な作り方](/ja/diy/parenting-generation-quiet-corner-diy/) `子育て世代, DIY防音, 一人の時間, 納戸活用, 在宅ワーク`
-  - [自作防音室の費用内訳｜材料費だけでいくらかかる？](/ja/diy/soundproof-room-diy-cost/) `DIY防音, 費用`
-  - [自宅に防音室がなくても「一人になれる空間」を作る4つの方法｜40〜60代の予算別ガイド](/ja/money/quiet-space-budget-decision-guide/) `防音室, 子育て世代, 趣味の時間, 予算別, DIY防音`
-  - [自分の部屋を防音室にしたい？DIYの壁防音と専門工事の現実的な選択肢](/ja/diy/diy-wall-soundproofing-room-guide/) `DIY防音, 壁防音, 防音賃貸, 防音工事`
-  - [賃貸の防音対策は壁を傷つけずにできる？原状回復を守る5つの方法【実家・親バレ対策も】](/ja/diy/renter-parent-house-soundproofing/) `防音賃貸, 原状回復, DIY防音, 遮音シート`
-  - [内窓の防音効果を実測｜賃貸DIYポリカ窓から本格インプラスまで徹底比較【2025-2026年版】](/ja/diy/diy-internal-window-road-noise-reduction/) `内窓, DIY防音, 実測, 補助金, インプラス`
-  - [配信映えする「LED付き自作吸音パネル」の作り方！光と音を同時に操る](/ja/diy/diy-led-acoustic-panels/) `吸音材, LED, 配信・実況, DIY防音, インテリア`
-  - [防音パネルの罠｜DIY失敗例から学ぶ『遮音と吸音』の物理学的黄金比](/ja/diy/diy-soundproof-room-failures-solutions/) `DIY防音, 遮音, 吸音, 遮音性能, 失敗談`
-  - [防音マスク自作は息苦しい？段ボールヘッドボックスの酸欠リスクを検証](/ja/diy/diy-vocal-soundproof-mask/) `防音マスク, 酸欠対策, DIY防音, 深夜配信, 換気`
-  - [防音室DIYの落とし穴。「遮音シート」の重さで自作ブースが崩壊しないためのフレーム補強術](/ja/diy/soundproof-sheet-heavy-diy-tips/) `遮音シート, DIY防音, フレーム補強, 失敗しないコツ`
-  - [防音室の音漏れ対策ガイド2026｜原因特定から段階的改善のマニュアル](/ja/soundproof-room/proofroom-soudmore-manual/) `防音室, 騒音対策, DIY防音, メンテナンス`
-  - [防音室の解体・処分完全ガイド｜自分でやるリスクと業者費用の相場](/ja/soundproof-room/soundproof-room-demolition-guide/) `防音室, 解体, 処分, 廃棄, 費用, DIY防音`
-  - [防音室を自作する方法｜クローゼットDIYで3万円から作れる録音ブース](/ja/diy/closet-diy-soundproof-room/) `防音室 自作, クローゼット改造, DIY防音, 宅録, 歌ってみた, ROI`
-  - [木造アパート2階に「だんぼっち」は危険？点でかかる荷重を分散させるDIY補強術](/ja/diy/danbocchi-floor-protection/) `木造アパート, 床荷重, だんぼっち, OTODASU, DIY防音, 床補強`
 
 ### ja / 家賃相場（15件）
 
@@ -495,6 +500,15 @@
   - [防音パネルの罠｜DIY失敗例から学ぶ『遮音と吸音』の物理学的黄金比](/ja/diy/diy-soundproof-room-failures-solutions/) `DIY防音, 遮音, 吸音, 遮音性能, 失敗談`
   - [防音室が作れるハウスメーカーおすすめ4社｜注文住宅の公式防音仕様を比較](/ja/soundproof-rental/housing-builder-soundproof-comparison/) `ハウスメーカー, 注文住宅, 防音室, 家づくり, 遮音性能, スペック比較, D値`
 
+### ja / マンション（6件）
+
+  - [【子育て×防音リノベ】マンションの騒音トラブルを「構造」から解決する完全ガイド](/ja/soundproof-rental/child-rearing-soundproof-pillar/) `子育て, 防音リノベ, 騒音トラブル, マンション, 防振構造`
+  - [ピアノ防音室ガイド｜アップライト・グランド別の費用とマンション設置の条件](/ja/soundproof-room/piano-room-guide/) `ピアノ, 防音室, アップライトピアノ, グランドピアノ, マンション, ヤマハ, カワイ`
+  - [ペットの騒音は防音だけでは解決しない｜鳴き声・足音の種類別対策と集合住宅での限界](/ja/soundproof-rental/pet-noise-soundproof-measures/) `ペット, 騒音対策, 騒音トラブル, 集合住宅, マンション`
+  - [マンションのランニングマシン防音対策｜階下の振動を減らす「重ね敷き」と置き方](/ja/diy/treadmill-apartment-soundproofing-layering/) `ランニングマシーン, マンション, 振動対策, 苦情回避`
+  - [築20年のマンションに重さ500kgの防音室を置ける？床補強なしで設置するための安全基準と計算術](/ja/soundproof-rental/apartment-weight-limit-500kg/) `耐荷重, 床荷重計算, マンション, ヤマハ, 防音室導入, 木造戸建て`
+  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
+
 ### ja / 換気（6件）
 
   - [注文住宅で防音室を作る間取りのポイント｜位置・広さ・窓・換気・搬入経路](/ja/soundproof-room/custom-home-soundproof-room-layout/) `注文住宅, 間取り, 防音室, 新築, 戸建て, 換気`
@@ -521,6 +535,15 @@
   - [自分の部屋を防音室にしたい？DIYの壁防音と専門工事の現実的な選択肢](/ja/diy/diy-wall-soundproofing-room-guide/) `DIY防音, 壁防音, 防音賃貸, 防音工事`
   - [防音工事の種類と価格比較｜壁・床・開口部、業者の選び方まで](/ja/soundproof-room/construction-types-cost-comparison/) `防音工事, リフォーム, 価格比較, 防音壁`
   - [防音室リフォームの費用相場｜6畳・8畳・10畳の総額とユニットとの分かれ目](/ja/money/soundproof-reform-cost-by-tatami/) `防音室, リフォーム, 費用, 防音工事, 価格相場`
+
+### ja / 防振（6件）
+
+  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
+  - [台パンの衝撃吸収・防振対策｜下の階に響く仕組みと2,000円で防ぐ方法](/ja/creator/gaming-floor-impact-noise-fix/) `台パン, 足音対策, 床衝撃音, 防振, 衝撃吸収`
+  - [低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方](/ja/knowledge/vibration-isolation-technology-trend/) `低周波, 防振, 浮き床, 振動対策, 施工技術, 防振床`
+  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振`
+  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
+  - [配信者のための家電・生活音対策｜冷蔵庫と換気扇のノイズを物理的に沈める方法](/ja/diy/diy-refrigeration-noise-reduction/) `配信・実況, 騒音対策, 冷蔵庫, 換気, 防振, ASMR`
 
 ### ja / OTODASU（5件）
 
@@ -562,13 +585,13 @@
   - [在宅ワークの音の悩みと防音｜家族の声・Web会議の声漏れ・寝室仕事の対策を整理](/ja/soundproof-rental/remote-work-family-harmony-soundproof/) `テレワーク, 在宅ワーク, Web会議, 家族, 防音室, パーティション, 寝室`
   - [日本の防音市場規模の統計データ｜配信者経済とテレワークが押し上げる需要](/ja/business/japan-soundproof-market-size/) `市場規模, 防音業界, 配信者経済, テレワーク, シェアリングエコノミー, 副業`
 
-### ja / マンション（5件）
+### ja / 楽器演奏（5件）
 
-  - [【子育て×防音リノベ】マンションの騒音トラブルを「構造」から解決する完全ガイド](/ja/soundproof-rental/child-rearing-soundproof-pillar/) `子育て, 防音リノベ, 騒音トラブル, マンション, 防振構造`
-  - [ピアノ防音室ガイド｜アップライト・グランド別の費用とマンション設置の条件](/ja/soundproof-room/piano-room-guide/) `ピアノ, 防音室, アップライトピアノ, グランドピアノ, マンション, ヤマハ, カワイ`
-  - [ペットの騒音は防音だけでは解決しない｜鳴き声・足音の種類別対策と集合住宅での限界](/ja/soundproof-rental/pet-noise-soundproof-measures/) `ペット, 騒音対策, 騒音トラブル, 集合住宅, マンション`
-  - [マンションのランニングマシン防音対策｜階下の振動を減らす「重ね敷き」と置き方](/ja/diy/treadmill-apartment-soundproofing-layering/) `ランニングマシーン, マンション, 振動対策, 苦情回避`
-  - [築20年のマンションに重さ500kgの防音室を置ける？床補強なしで設置するための安全基準と計算術](/ja/soundproof-rental/apartment-weight-limit-500kg/) `耐荷重, 床荷重計算, マンション, ヤマハ, 防音室導入, 木造戸建て`
+  - [「24時間演奏可」物件という最強の差別化：プロ奏者・音楽講師を長期入居者に変えるオーナー戦略](/ja/soundproof-rental/owner-renovation-musician-24h-practice-strategy/) `不動産投資, 防音リノベ, 楽器可物件, 音楽講師, 楽器演奏, 24時間演奏可, 長期入居`
+  - [【シミュレーション】防音室で音はどこまで消える？用途別の軽減率を徹底検証](/ja/soundproof-room/sound-reduction-simulation/) `遮音性能, シミュレーション, 配信・実況, 楽器演奏`
+  - [ピアノ・ギター弾き語り・歌ってみた配信の防音設計｜楽器音と声を同時に処理する](/ja/creator/singer-instrumentalist-stream-soundproof/) `配信・実況, 楽器演奏, 吸音パネル, 防音対策, DIY防音`
+  - [日本のマンション管理規約とアメリカHOAの騒音ルール比較｜楽器演奏はどちらが厳しい？](/ja/knowledge/soundproof-culture-japan-vs-america/) `防音文化, 管理規約, HOA, 楽器演奏, D値`
+  - [防音室付きマンションを買うには？分譲・中古の探し方と内見の確認点](/ja/soundproof-room/buy-home-with-soundproof-room/) `防音室付き物件, 分譲マンション, 中古マンション, 中古戸建て, 物件探し, 楽器演奏, 住宅購入`
 
 ### ja / 楽器可物件（5件）
 
@@ -577,6 +600,14 @@
   - [サックスは賃貸で練習できる？アパートの現実解と防音室選び](/ja/soundproof-rental/saxophone-apartment-practice-guide/) `サックス, チェロ, 防音賃貸, 管楽器, 楽器可物件, 防音室`
   - [楽器可物件でもチェロは要注意？防音賃貸の規約と落とし穴](/ja/soundproof-rental/rental-caution-cello/) `チェロ, 防音賃貸, 騒音トラブル, 楽器可物件, エンドピン`
   - [遮音性能の基準「D値」とは？楽器・用途別の目安を徹底解説](/ja/soundproof-room/bouon-dchiseinou-meyasu/) `遮音性能, D値, 防音賃貸, 楽器可物件, 物件選び`
+
+### ja / 在宅ワーク（5件）
+
+  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
+  - [個室ブースを自宅に置くなら｜価格の目安と防音の限界、暑さ・設置の注意点](/ja/soundproof-room/home-private-booth-guide/) `個室ブース, ワークブース, テレワーク, 在宅ワーク, Web会議, 防音ブース`
+  - [在宅ワークの音の悩みと防音｜家族の声・Web会議の声漏れ・寝室仕事の対策を整理](/ja/soundproof-rental/remote-work-family-harmony-soundproof/) `テレワーク, 在宅ワーク, Web会議, 家族, 防音室, パーティション, 寝室`
+  - [子育て世代のDIY「一人になれる場所」｜1万円台から始める段階的な作り方](/ja/diy/parenting-generation-quiet-corner-diy/) `子育て世代, DIY防音, 一人の時間, 納戸活用, 在宅ワーク`
+  - [東京防音レビュー｜ホワイトキューオンとOkudakeは合うか](/ja/knowledge/tokyo-bouon-whitekyuon-okudake-review/) `東京防音, ホワイトキューオン, Okudake, 吸音材, 在宅ワーク`
 
 ### ja / 睡眠（5件）
 
@@ -655,13 +686,6 @@
   - [ミュージション（MUSISION）完全攻略ガイド｜家賃相場・評判と防音性能を徹底分析](/ja/soundproof-rental/musision-comprehensive-guide/) `ミュージション, 防音賃貸, 24時間演奏, 配信・実況, 評判`
   - [防音賃貸の家賃相場はいくら？コスパ・通勤・実用性で選ぶ完全ガイド【2026】](/ja/soundproof-rental/soundproof-rental-cost-performance-guide/) `防音賃貸, 家賃相場, コスパ, 通勤, ミュージション, 部屋探し`
 
-### ja / 楽器演奏（4件）
-
-  - [「24時間演奏可」物件という最強の差別化：プロ奏者・音楽講師を長期入居者に変えるオーナー戦略](/ja/soundproof-rental/owner-renovation-musician-24h-practice-strategy/) `不動産投資, 防音リノベ, 楽器可物件, 音楽講師, 楽器演奏, 24時間演奏可, 長期入居`
-  - [【シミュレーション】防音室で音はどこまで消える？用途別の軽減率を徹底検証](/ja/soundproof-room/sound-reduction-simulation/) `遮音性能, シミュレーション, 配信・実況, 楽器演奏`
-  - [ピアノ・ギター弾き語り・歌ってみた配信の防音設計｜楽器音と声を同時に処理する](/ja/creator/singer-instrumentalist-stream-soundproof/) `配信・実況, 楽器演奏, 吸音パネル, 防音対策, DIY防音`
-  - [日本のマンション管理規約とアメリカHOAの騒音ルール比較｜楽器演奏はどちらが厳しい？](/ja/knowledge/soundproof-culture-japan-vs-america/) `防音文化, 管理規約, HOA, 楽器演奏, D値`
-
 ### ja / 技術解説（4件）
 
   - [D値とRw値は換算できない｜日本と海外の遮音等級を混同すると失敗する理由](/ja/knowledge/d-value-vs-rw-value-confusion/) `D値, Rw値, 遮音等級, 技術解説, 海外製品`
@@ -675,13 +699,6 @@
   - [ポッドキャスト2人収録・コラボ配信の部屋づくり｜防音室・リビング4パターン別](/ja/creator/collab-streaming-soundproof-space/) `配信・実況, コラボ配信, ポッドキャスト, 防音室, 広さ, マイク設定, 吸音パネル`
   - [配信のマイクノイズはPC本体が原因？ファン音・反響・外音の切り分けと直し方](/ja/creator/streaming-pc-fan-noise-mic/) `配信・実況, マイクノイズ, PC静音化, 防振対策, 吸音パネル, 音質改善`
   - [配信中のペットの鳴き声対策｜ケージカバーとペット防音室を配信場所で選ぶ](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
-
-### ja / 在宅ワーク（4件）
-
-  - [個室ブースを自宅に置くなら｜価格の目安と防音の限界、暑さ・設置の注意点](/ja/soundproof-room/home-private-booth-guide/) `個室ブース, ワークブース, テレワーク, 在宅ワーク, Web会議, 防音ブース`
-  - [在宅ワークの音の悩みと防音｜家族の声・Web会議の声漏れ・寝室仕事の対策を整理](/ja/soundproof-rental/remote-work-family-harmony-soundproof/) `テレワーク, 在宅ワーク, Web会議, 家族, 防音室, パーティション, 寝室`
-  - [子育て世代のDIY「一人になれる場所」｜1万円台から始める段階的な作り方](/ja/diy/parenting-generation-quiet-corner-diy/) `子育て世代, DIY防音, 一人の時間, 納戸活用, 在宅ワーク`
-  - [東京防音レビュー｜ホワイトキューオンとOkudakeは合うか](/ja/knowledge/tokyo-bouon-whitekyuon-okudake-review/) `東京防音, ホワイトキューオン, Okudake, 吸音材, 在宅ワーク`
 
 ### ja / 子育て世代（4件）
 
@@ -704,6 +721,13 @@
   - [騒音クレームを直接言うのは危険？マンションの騒音トラブルを解決する『3フェーズ式』対策マニュアル](/ja/soundproof-rental/noise-complaint-landlord-negotiation-guide/) `騒音トラブル, 管理会社, 交渉術, 賃貸マンション, 受忍限度`
   - [騒音苦情への正しい対応｜解決事例と判例から学ぶ受忍限度の境界線](/ja/knowledge/noise-complaint-legal-precedent-manual/) `騒音トラブル, 受忍限度, 判例, 解決事例`
 
+### ja / 床衝撃音（4件）
+
+  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
+  - [台パンの衝撃吸収・防振対策｜下の階に響く仕組みと2,000円で防ぐ方法](/ja/creator/gaming-floor-impact-noise-fix/) `台パン, 足音対策, 床衝撃音, 防振, 衝撃吸収`
+  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振`
+  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
+
 ### ja / 深夜配信（4件）
 
   - [OTODASU（オトダス）の実力検証｜深夜2時のボイスチャットは隣室に許されるのか？](/ja/soundproof-room/otodasu-voice-chat-test/) `OTODASU, ボイスチャット, 深夜配信, 防音室`
@@ -718,18 +742,17 @@
   - [内窓の防音効果を実測｜賃貸DIYポリカ窓から本格インプラスまで徹底比較【2025-2026年版】](/ja/diy/diy-internal-window-road-noise-reduction/) `内窓, DIY防音, 実測, 補助金, インプラス`
   - [防音室の補助金2026年最新版｜二重窓リノベで最大100万円を受け取る方法](/ja/money/soundproof-subsidy-news-2025/) `補助金, 節税`
 
-### ja / 防振（4件）
-
-  - [台パンの衝撃吸収・防振対策｜下の階に響く仕組みと2,000円で防ぐ方法](/ja/creator/gaming-floor-impact-noise-fix/) `台パン, 足音対策, 床衝撃音, 防振, 衝撃吸収`
-  - [低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方](/ja/knowledge/vibration-isolation-technology-trend/) `低周波, 防振, 浮き床, 振動対策, 施工技術, 防振床`
-  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振`
-  - [配信者のための家電・生活音対策｜冷蔵庫と換気扇のノイズを物理的に沈める方法](/ja/diy/diy-refrigeration-noise-reduction/) `配信・実況, 騒音対策, 冷蔵庫, 換気, 防振, ASMR`
-
 ### ja / Web会議（3件）
 
   - [個室ブースを自宅に置くなら｜価格の目安と防音の限界、暑さ・設置の注意点](/ja/soundproof-room/home-private-booth-guide/) `個室ブース, ワークブース, テレワーク, 在宅ワーク, Web会議, 防音ブース`
   - [在宅ワークの音の悩みと防音｜家族の声・Web会議の声漏れ・寝室仕事の対策を整理](/ja/soundproof-rental/remote-work-family-harmony-soundproof/) `テレワーク, 在宅ワーク, Web会議, 家族, 防音室, パーティション, 寝室`
   - [防音スペースのレンタルとは？5種類の料金の目安と用途別の選び方・探し方](/ja/soundproof-rental/soundproof-space-rental-guide/) `防音スペース, レンタルスペース, 音楽スタジオ, 個室ブース, 楽器練習, 配信・実況, Web会議`
+
+### ja / キーボード騒音（3件）
+
+  - [【2026完全版】配信者・VTuberのための防音環境完全ガイド｜ワンルームから防音室まで全解説](/ja/creator/streamer-soundproof-room-comprehensive-guide/) `配信・実況, VTuber, ASMR, 防音室, キーボード騒音, 節税, マイク設定`
+  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
+  - [ゲーム実況者の防音環境｜打鍵音・マウス音・叫び声ごとの対策](/ja/creator/game-streamer-sound-types/) `配信・実況, ゲーム実況, キーボード騒音, 打鍵音, 防音対策`
 
 ### ja / ハウスメーカー（3件）
 
@@ -791,6 +814,12 @@
   - [同居人がいる家で配信する｜子ども・親・ルームシェアの防音と生活音調整](/ja/creator/parenting-streamer-soundproof/) `配信・実況, 子育て, 実家暮らし, ルームシェア, 生活音, 防音対策`
   - [木造アパートの防音は無理？苦情ゼロまで音を減らす3つの現実的対策](/ja/diy/wooden-apartment-soundproof-guide/) `木造アパート, 防音賃貸, 隙間テープ, 生活音, 家具配置`
 
+### ja / 打鍵音（3件）
+
+  - [キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化](/ja/diy/keyboard-typing-noise-vibration/) `キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音`
+  - [ゲーム実況者の防音環境｜打鍵音・マウス音・叫び声ごとの対策](/ja/creator/game-streamer-sound-types/) `配信・実況, ゲーム実況, キーボード騒音, 打鍵音, 防音対策`
+  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
+
 ### ja / 中古防音室（3件）
 
   - [格安防音室は夏に地獄化する？だんぼっち・OTODASU排熱リスクと中古購入の注意点](/ja/soundproof-room/budget-soundproof-booth-comparison/) `防音室, 排熱対策, だんぼっち, OTODASU, 中古防音室`
@@ -808,6 +837,12 @@
   - [実家暮らし配信者の防音リフォーム交渉｜親に費用を出してもらう判断基準](/ja/creator/family-home-soundproof-reno-negotiation/) `実家暮らし, 家族交渉, 防音リフォーム, 資金計画, 配信環境`
   - [配信者の身バレ・親フラ対策｜声・生活音・環境音から特定されないための防音](/ja/creator/female-streamer-privacy-soundproof/) `女性配信者, VTuber, 防犯対策, プライバシー保護, 親フラ, 実家暮らし, 配信環境`
   - [防音ブース内での飲食、実は匂いが一番残る｜配信中の消臭・換気マネジメント](/ja/creator/soundproof-booth-food-odor-management/) `防音ブース, 消臭対策, 換気, 配信環境, 吸音材メンテナンス`
+
+### ja / 物件探し（3件）
+
+  - [音大生の物件探し｜シェアハウスに防音室は置ける？楽器可賃貸・キャンパス別の探し方](/ja/soundproof-rental/music-student-property-search-guide/) `音大生, 防音シェアハウス, 楽器可賃貸, 物件探し, 防音賃貸, 音楽大学`
+  - [楽器可賃貸の正しい探し方｜通勤1時間以内で相場を見誤らない手順](/ja/soundproof-rental/instrument-allowed-rental-research-method/) `楽器可, 防音賃貸, 物件探し, 通勤時間`
+  - [防音室付きマンションを買うには？分譲・中古の探し方と内見の確認点](/ja/soundproof-room/buy-home-with-soundproof-room/) `防音室付き物件, 分譲マンション, 中古マンション, 中古戸建て, 物件探し, 楽器演奏, 住宅購入`
 
 ### ja / 防音市場（3件）
 
@@ -829,11 +864,6 @@
 
   - [賃貸でアビテックスは置ける？許可が必要な2つの理由と大家交渉の完全ガイド](/ja/soundproof-rental/rental-unit-soundproof-room/) `防音賃貸, 大家交渉, 設置許可, 原状回復, 防音室導入, アビテックス`
   - [賃貸に防音室を置くと退去時いくらかかる？撤去費用・原状回復・売却の考え方（アビテックス・ナサール）](/ja/soundproof-rental/rental-proofroom-contractcheck/) `防音賃貸, 原状回復, 中古売却, アビテックス, ナサール`
-
-### ja / キーボード騒音（2件）
-
-  - [【2026完全版】配信者・VTuberのための防音環境完全ガイド｜ワンルームから防音室まで全解説](/ja/creator/streamer-soundproof-room-comprehensive-guide/) `配信・実況, VTuber, ASMR, 防音室, キーボード騒音, 節税, マイク設定`
-  - [ゲーム実況者の防音環境｜打鍵音・マウス音・叫び声ごとの対策](/ja/creator/game-streamer-sound-types/) `配信・実況, ゲーム実況, キーボード騒音, 打鍵音, 防音対策`
 
 ### ja / グランドピアノ（2件）
 
@@ -990,11 +1020,6 @@
   - [防音室導入の最終チェックリスト｜後悔しないためのサイズ・重量・搬入のデッドライン](/ja/soundproof-room/bouon-setti-checkpoint/) `設置条件, 床荷重, 搬入経路, 管理組合, 失敗しない防音室`
   - [木造アパート2階に「だんぼっち」は危険？点でかかる荷重を分散させるDIY補強術](/ja/diy/danbocchi-floor-protection/) `木造アパート, 床荷重, だんぼっち, OTODASU, DIY防音, 床補強`
 
-### ja / 床衝撃音（2件）
-
-  - [台パンの衝撃吸収・防振対策｜下の階に響く仕組みと2,000円で防ぐ方法](/ja/creator/gaming-floor-impact-noise-fix/) `台パン, 足音対策, 床衝撃音, 防振, 衝撃吸収`
-  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振`
-
 ### ja / 寝室（2件）
 
   - [在宅ワークの音の悩みと防音｜家族の声・Web会議の声漏れ・寝室仕事の対策を整理](/ja/soundproof-rental/remote-work-family-harmony-soundproof/) `テレワーク, 在宅ワーク, Web会議, 家族, 防音室, パーティション, 寝室`
@@ -1009,6 +1034,11 @@
 
   - [音に敏感な人の特徴とHSPセルフチェックリスト｜聴覚過敏・ミソフォニアとの違いと対処法](/ja/knowledge/hsp-self-check-sound-sensitivity/) `HSP, セルフチェック, 音過敏, 聴覚過敏, 環境調整`
   - [聴覚過敏・ミソフォニアで家の音がつらい人へ｜遮音・マスキング・住まい選びの環境調整ガイド](/ja/knowledge/sound-sensitivity-misophonia-environment-guide/) `聴覚過敏, ミソフォニア, HSP, 環境調整, 防音カーテン`
+
+### ja / 電子ピアノ（2件）
+
+  - [電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界](/ja/diy/electronic-drum-vibration-fuwafuwa-system/) `電子ドラム, 電子ピアノ, 振動対策, 床衝撃音, 防振`
+  - [電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方](/ja/diy/electronic-piano-key-noise-vibration/) `電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音`
 
 ### ja / 内窓（2件）
 
@@ -1029,11 +1059,6 @@
 
   - [【調査報告】首都圏における高性能防音賃貸市場の定量的分析（2025-2026）](/ja/soundproof-rental/report-japan-soundproof-rental-market-needs/) `防音賃貸, 市場調査, ミュージション, リブラン, 部屋探し`
   - [防音賃貸の家賃相場はいくら？コスパ・通勤・実用性で選ぶ完全ガイド【2026】](/ja/soundproof-rental/soundproof-rental-cost-performance-guide/) `防音賃貸, 家賃相場, コスパ, 通勤, ミュージション, 部屋探し`
-
-### ja / 物件探し（2件）
-
-  - [音大生の物件探し｜シェアハウスに防音室は置ける？楽器可賃貸・キャンパス別の探し方](/ja/soundproof-rental/music-student-property-search-guide/) `音大生, 防音シェアハウス, 楽器可賃貸, 物件探し, 防音賃貸, 音楽大学`
-  - [楽器可賃貸の正しい探し方｜通勤1時間以内で相場を見誤らない手順](/ja/soundproof-rental/instrument-allowed-rental-research-method/) `楽器可, 防音賃貸, 物件探し, 通勤時間`
 
 ### ja / 防音（2件）
 
