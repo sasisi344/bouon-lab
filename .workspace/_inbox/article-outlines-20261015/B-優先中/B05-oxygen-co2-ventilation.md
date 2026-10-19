@@ -2,6 +2,9 @@
 
 > 優先B／アウトライン段階。元: `article-query-list-20261015.md` §1-1。2026-10-15にクエリ設計を改訂（`query-intent-match.md` Step 0）
 
+> [!forAI]
+> 内容が @B04ear-press に含まれるので統合する。
+
 ## 企画メタ
 
 | 項目 | 内容 |

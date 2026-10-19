@@ -91,7 +91,7 @@
 
 - **301にした旧URL・削除した記事**（`/posts/…`、統合で削除した記事）: 申請しても意味がない。統合先を申請する
 - `local/sendai-soundproof-rental-guide`: noindex維持（T-28）
-- `soundproof-rental/rental-caution-cello` と `soundproof-rental/saxophone-apartment-practice-guide`: チェロ記事の統合を取り消すか決める（T-27）まで保留。いまデプロイすると、チェロのURLはサックス記事に301される
+- `soundproof-rental/rental-caution-cello`: 2026-10-19に統合を取り消してリライト（T-27、`archive/task-list-37.md`）。**デプロイ後に申請する**（10/13〜のデプロイ分ではサックス記事へ301されていた）。サックス記事はチェロの節を外しただけなので申請不要
 - `/ja/creator/game-streamer-sound-types/` ほか、リンクの付け替えだけの記事: 申請不要（クローラーが自然に拾う）
 
 合計 54 本（登録済 34・リクエスト済 20・未登録 0）
