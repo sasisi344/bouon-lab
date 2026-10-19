@@ -24,7 +24,7 @@
 
 ## 残り（ユーザー）
 
-- [ ] デプロイし、`/ja/local/sendai-soundproof-rental-guide/`と旧URL2本が統合先へ301になることを確認する
+- [x] デプロイ（2026-10-19、コミット b40be31）。curlで確認: `/ja/local/sendai-soundproof-rental-guide/`と旧URL2本が統合先へ301、統合先・札幌・地方都市の記事は200で仙台記事へのリンクなし、`llms.txt`・サイトマップにも仙台記事なし、統合先に宮城学院女子大学の行が出ている
 - [ ] GSCで統合先（`music-student-property-search-guide`）のインデックス登録をリクエストする（任意。表の1行の修正のみ）
 
 ## 元のタスク本文
