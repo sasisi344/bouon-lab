@@ -90,8 +90,8 @@
 ## 申請しないもの
 
 - **301にした旧URL・削除した記事**（`/posts/…`、統合で削除した記事）: 申請しても意味がない。統合先を申請する
-- `local/sendai-soundproof-rental-guide`: noindex維持（T-28）
-- `soundproof-rental/rental-caution-cello`: 2026-10-19に統合を取り消してリライト（T-27、`archive/task-list-37.md`）。**デプロイ後に申請する**（10/13〜のデプロイ分ではサックス記事へ301されていた）。サックス記事はチェロの節を外しただけなので申請不要
+- `local/sendai-soundproof-rental-guide`: 2026-10-19に`soundproof-rental/music-student-property-search-guide`へ統合・301（T-28、`archive/task-list-38.md`）。申請しない
+- `soundproof-rental/rental-caution-cello`: 2026-10-19に統合を取り消してリライト（T-27、`archive/task-list-37.md`）。2026-10-19にデプロイ・200を確認済み。**申請する**（10/13〜10/19はサックス記事へ301されていた）。サックス記事はチェロの節を外しただけなので申請不要
 - `/ja/creator/game-streamer-sound-types/` ほか、リンクの付け替えだけの記事: 申請不要（クローラーが自然に拾う）
 
 合計 54 本（登録済 34・リクエスト済 20・未登録 0）

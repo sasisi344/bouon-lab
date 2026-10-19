@@ -77,7 +77,6 @@ English content is not a translation layer. It is published selectively, reframi
 ### 地域ガイド
 - [東京の防音賃貸相場2026](https://bouon-lab.com/ja/local/tokyo-soundproof-rental-summary/): 東京エリアの防音賃貸家賃相場まとめ
 - [大阪の防音賃貸ガイド](https://bouon-lab.com/ja/local/osaka-soundproof-rental-guide/): 大阪エリアの防音賃貸選びガイド
-- [仙台の防音賃貸事情](https://bouon-lab.com/ja/local/sendai-soundproof-rental-guide/): 仙台エリアの防音賃貸市場事情
 
 ### お金・補助金
 - [防音室価格相場2026](https://bouon-lab.com/ja/money/soundproof-room-price-market/): 防音室の価格相場まとめ

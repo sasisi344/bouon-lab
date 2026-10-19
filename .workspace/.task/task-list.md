@@ -1,7 +1,7 @@
 # 現在抱えているタスク
 
 作成日：2026-06-10
-最終整理：2026-10-19（T-27を`archive/task-list-37.md`へ。T-25を`archive/task-list-36.md`へ。2026-10-18にT-24を`archive/task-list-35.md`へ。T-23を`archive/task-list-34.md`へ。T-16を`archive/task-list-31.md`へ、T-20を`archive/task-list-32.md`へ、T-22を`archive/task-list-33.md`へ。2026-10-17にT-03・T-07・T-15を`archive/task-list-29.md`へ移し、T-29を追加。効果測定は`schedule-task.md`の月次解析S-NNへ移した。運用ルールは同階層の`CLAUDE.md`）
+最終整理：2026-10-19（T-28を`archive/task-list-38.md`へ。T-27を`archive/task-list-37.md`へ。T-25を`archive/task-list-36.md`へ。2026-10-18にT-24を`archive/task-list-35.md`へ。T-23を`archive/task-list-34.md`へ。T-16を`archive/task-list-31.md`へ、T-20を`archive/task-list-32.md`へ、T-22を`archive/task-list-33.md`へ。2026-10-17にT-03・T-07・T-15を`archive/task-list-29.md`へ移し、T-29を追加。効果測定は`schedule-task.md`の月次解析S-NNへ移した。運用ルールは同階層の`CLAUDE.md`）
 
 > **アーカイブ**: 完了タスクは `archive/task-list-index.md` を参照。
 > **効果測定・データ待ちの確認項目**は `schedule-task.md`（月初の月次解析 S-11・S-12 ほか）を参照。`weekly-task.md`は2026-10-17に運用を終えた移行先ポインタ。
@@ -19,7 +19,6 @@
 | T-04 | 解析精度 | direct流入のbot疑い確認・除外 | ユーザー+Claude | S-11（旧W-19） |
 | T-08 | 運営方針 | ドメイン継続・旧URL解消・既存記事改善 | ユーザー+Claude | - |
 | T-10 | 収益 | 住宅マッチング・注文住宅資料請求のCTA訴求 | ユーザー+Claude | S-05（旧W-23） |
-| T-28 | コンテンツ | 仙台の防音賃貸記事（`sendai-soundproof-rental-guide`）の未検証の主張を裏取りし、noindexを解除するか決める | Claude+ユーザー | S-11（旧W-31） |
 | T-11 | 保留 | 一戸建て騒音源別記事 | - | - |
 
 ---
@@ -73,22 +72,6 @@ GA4の直近1週間のアクセスが落ち込み時より回復しているこ�
 - [ ] デプロイ後、Search Consoleで4本のURLのindex登録をリクエストし、indexされてからアフィリエイトを申請する（ユーザー対応。確認項目は`schedule/2026-10-18-housing-articles-report.md`（S-05））
 - [ ] 合格後: 案件ごとにCTAを`affiliates.ts`へ個別登録（slugでid設定）し、記事内容とCTAを一致させる。クリック計測は`affiliate_click`（キーイベント登録は2026-10-08に完了、`archive/task-list-28.md`）。読者心理（`bouon-persona-thinking`）と`bouon-growth-ops`の型で設計する。この工程は合格後に新規T-NN／W-NNとして起票する
 - 注意: 「一戸建て騒音源別記事」は実需データ待ちで保留中（下記）。本タスクは住宅購入・新築検討層向けで軸が異なるため、保留分と混ぜずに企画する
-
----
-
-## 着手可能：打鍵・打撃音の入口づくり（2026-10-11 追加、配信者クラスタの再設計から）
-
-設計の正本は `re-create/entrance-design.md`、根拠は `query-check/analysis_実データ.md`（作業中の派生ファイル。マスターは本ファイル）。
-
-### T-28 仙台の防音賃貸記事の裏取りとnoindexの判断（2026-10-13 追加）
-
-`local/sendai-soundproof-rental-guide`は、2026-07-21にnoindexにした記事。16か月で表示76・クリック10の実績があり、2026-10-13にほかの4本はnoindexを解除したが、**この記事だけは解除していない**。本文に、出典の確認できない主張が多いため。
-
-- 解除しなかった理由（本文の例）: 「仙台市の防音賃貸ストックは約320戸（2025年9月時点、当社調査）」「入居者の約6割が音大生・音楽講師」、業者・ブランド名（「仙台防音ルーム不動産」「ナサールショールーム仙台」「リブラン（ミュージション仙台）D-55仕様の分譲賃貸」）、「2025年春に新築予定（募集予定戸数12戸）」、エリア別の平均家賃
-- [ ] 本文の主張を、一次情報（不動産ポータル、業者の公式サイト、宮城教育大学・東北学院大学の公式サイト）で裏取りする。裏取りできない部分は削除または表現を弱める
-- [ ] 方針の確認: 音大生×地域の記事は `music-student-property-search-guide` に集約し、地域別の個別記事は作らない（2026-10-06決定）。仙台記事を残すか、集約するかをユーザーが決める
-- [ ] 残す場合は、裏取り後に`noindex: true`を外し、`astro.config.mjs`のサイトマップ除外（`sendai-soundproof-rental-guide`）も外す
-- 関連: 旧W-31（`schedule/2026-11-02-m10-monthly-analysis.md`）
 
 ---
 

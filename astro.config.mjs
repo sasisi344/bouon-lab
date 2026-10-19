@@ -91,8 +91,6 @@ export default defineConfig({
         if (!page.includes('/ja/') && !page.includes('/en/')) return false;
         // about / privacy はサイトマップから除外（noindex ページ）
         if (/\/(about|privacy)\/$/.test(page)) return false;
-        // noindex中のsendai-soundproof-rental-guideは、サイトマップからも除外（2026-07-21 noindex化）。他のニッチ化リライト記事（diy-vocal-soundproof-mask・soundproof-culture-japan-vs-america・rental-proofroom-contractcheck・bouon-humidifier-comparison）は2026-10-13にnoindexを解除
-        if (/\/(sendai-soundproof-rental-guide)\/$/.test(page)) return false;
         return true;
       },
       serialize(item) {
@@ -148,7 +146,7 @@ export default defineConfig({
     '/ja/soundproof-rental/others/osaka-soundproof-rental-guide/':     '/ja/local/osaka-soundproof-rental-guide/',
     '/ja/soundproof-rental/others/saitama-soundproof-rental-guide/':   '/ja/local/saitama-soundproof-rental-guide/',
     '/ja/soundproof-rental/others/sapporo-soundproof-rental-guide/':   '/ja/local/sapporo-soundproof-rental-guide/',
-    '/ja/soundproof-rental/others/sendai-soundproof-rental-guide/':    '/ja/local/sendai-soundproof-rental-guide/',
+    '/ja/soundproof-rental/others/sendai-soundproof-rental-guide/':    '/ja/soundproof-rental/music-student-property-search-guide/',
     '/ja/soundproof-rental/others/tokyo-soundproof-rental-summary/':   '/ja/local/tokyo-soundproof-rental-summary/',
     // 1-B: soundproof-rental/others → money / soundproof-rental
     '/ja/soundproof-rental/others/owner-renovation-roi-simulation-tool/':               '/ja/money/owner-renovation-roi-simulation-tool/',
@@ -316,7 +314,7 @@ export default defineConfig({
     '/posts/closet-diy-soundproof-room/':       '/ja/diy/closet-diy-soundproof-room/',
     '/posts/diy-vocal-soundproof-mask/':        '/ja/diy/diy-vocal-soundproof-mask/',
     '/posts/bouon-osusume-hikaku/':             '/ja/soundproof-room/bouon-osusume-hikaku/',
-    '/posts/sendai-soundproof-rental-guide/':   '/ja/local/sendai-soundproof-rental-guide/',
+    '/posts/sendai-soundproof-rental-guide/':   '/ja/soundproof-rental/music-student-property-search-guide/',
     '/posts/rental-unit-soundproof-room/':      '/ja/soundproof-rental/rental-unit-soundproof-room/',
     '/posts/musision-soundproof-rental-review/':'/ja/soundproof-rental/musision-comprehensive-guide/',
     '/posts/soundproof-room-rental-cost/':      '/ja/money/soundproof-room-rental-cost/',
@@ -686,6 +684,8 @@ export default defineConfig({
     '/ja/local/okayama-soundproof-rental-guide/':                           '/ja/local/regional-city-soundproof-rental-guide/',
     '/ja/local/kumamoto-soundproof-rental-guide/':                          '/ja/local/regional-city-soundproof-rental-guide/',
     '/ja/local/niigata-soundproof-rental-guide/':                           '/ja/local/regional-city-soundproof-rental-guide/',
+    // 仙台の防音賃貸ガイドを音大生の物件探し記事に統合（2026-10-19、T-28。本文の主張の大半が裏取りできなかったため）
+    '/ja/local/sendai-soundproof-rental-guide/':                            '/ja/soundproof-rental/music-student-property-search-guide/',
     // 在宅ワーク・Web会議・寝室仕事の3記事を統合（2026-10-07）
     '/ja/business/web-meeting-voice-soundleak-prevention/':                     '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
     '/ja/business/workbooth-office-soundproof-trend/':                          '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',

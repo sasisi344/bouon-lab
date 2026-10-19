@@ -105,7 +105,6 @@
 | ja | local | `regional-city-soundproof-rental-guide` |  | 【2026】地方都市の防音賃貸ガイド｜金沢・岡山・熊本（西日本）と新潟（東日本）の選び方 | 防音賃貸, 地方都市, 金沢, 岡山, 熊本, 新潟, 家賃相場 | `/ja/local/regional-city-soundproof-rental-guide/` | false |
 | ja | local | `saitama-soundproof-rental-guide` |  | 防音室 賃貸 埼玉の相場・人気エリア・選び方【2025年最新】 | 防音賃貸, 埼玉, さいたま, 川口, 家賃相場 | `/ja/local/saitama-soundproof-rental-guide/` | false |
 | ja | local | `sapporo-soundproof-rental-guide` |  | 札幌は楽器演奏に最高の環境？「二重窓」標準装備がもたらす防音メリットと物件探しのコツ | 札幌, 防音賃貸, 窓, 防音工事 | `/ja/local/sapporo-soundproof-rental-guide/` | false |
-| ja | local | `sendai-soundproof-rental-guide` |  | 宮城教育大学生向け｜家賃7万円以下で探す仙台の防音賃貸・練習室代替案 | 仙台, 防音賃貸, 音大生, 予算重視, 宮城教育大学 | `/ja/local/sendai-soundproof-rental-guide/` | false |
 | ja | local | `tokyo-soundproof-rental-summary` |  | 東京の防音賃貸相場2026｜エリア別の家賃目安・失敗しない選び方 | 防音賃貸, 東京, 家賃相場, 不動産投資 | `/ja/local/tokyo-soundproof-rental-summary/` | false |
 | ja | money | `bouon-asset-value-analysis` |  | 防音室の資産価値分析｜リセールバリューと不動産投資的視点でのROI | 資産価値, 不動産投資, リセールバリュー, 減価償却, ROI | `/ja/money/bouon-asset-value-analysis/` | false |
 | ja | money | `custom-home-soundproof-price-guide` |  | 防音 注文住宅の坪単価相場｜全国平均・地域差と新築組み込み費用の目安 | 注文住宅, 坪単価, 費用相場, 防音室, 資金計画 | `/ja/money/custom-home-soundproof-price-guide/` | false |
