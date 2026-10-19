@@ -223,20 +223,6 @@ export const affiliates: Record<string, AffiliateItem> = {
   // オーナー・配信者向け：環境整備グッズ (2026-04-04 追加)
   // ================================================
 
-  // 【加湿器】防音室内向け（気化式推奨）
-  'humidifier-vaporizer-daikin': {
-    type: 'amazon',
-    slug: 'humidifier-vaporizer-daikin',
-    name: 'ダイキン 気化式加湿器 MCK70Y',
-    description: '防音室の密閉空間に最適な気化式。結露しにくく、ギターや電子機器を湿度ダメージから保護。静音性も高く収録の邪魔をしない。',
-    price: '¥40,000〜',
-    image: 'https://m.media-amazon.com/images/I/41zyCyWr0aL._AC_SL1000_.jpg',
-    badge: 'ROOM-SAFE',
-    asin: 'B09J4RCV5J', 
-    tag: 'sasisi344-22',
-    variant: 'standard',
-  },
-
   // 【音響パネル】吸音・拡散材（デザイン採用可）
   'acoustic-panel-felmenon': {
     type: 'amazon',

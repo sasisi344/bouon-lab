@@ -136,7 +136,7 @@ export default defineConfig({
     '/ja/soundproof-room/others/soundproof-room-rental-cost/':                     '/ja/money/soundproof-room-rental-cost/',
     // 1-A: soundproof-room/others → knowledge
     '/ja/soundproof-room/others/noise-regulation-update-2025/':       '/ja/knowledge/noise-regulation-update-2025/',
-    '/ja/soundproof-room/others/why-your-80-percent-rug-rule-fails/': '/ja/knowledge/why-your-80-percent-rug-rule-fails/',
+    '/ja/soundproof-room/others/why-your-80-percent-rug-rule-fails/': '/ja/knowledge/vibration-reduction-science/',
     // 1-B: soundproof-rental/others → local
     '/ja/soundproof-rental/others/chiba-soundproof-rental-guide/':     '/ja/local/chiba-soundproof-rental-guide/',
     '/ja/soundproof-rental/others/hiroshima-soundproof-rental-guide/': '/ja/local/hiroshima-soundproof-rental-guide/',
@@ -155,14 +155,14 @@ export default defineConfig({
     '/ja/column/company/bouonrental-areasec-newbusiness/':                      '/ja/soundproof-rental/bouon-rental-market-guide/',
     '/ja/column/company/datacenter-soundproof-technology-facts/':               '/ja/business/datacenter-soundproof-technology-facts/',
     '/ja/column/company/japan-bouonproof-marketnextasia/':                      '/ja/business/japan-bouonproof-marketnextasia/',
-    '/ja/column/company/report-japan-asmr-vtuber-streaming-studio-standard/':   '/ja/business/report-japan-asmr-vtuber-streaming-studio-standard/',
+    '/ja/column/company/report-japan-asmr-vtuber-streaming-studio-standard/':   '/ja/knowledge/report-japan-asmr-vtuber-streaming-studio-standard/',
     '/ja/column/company/soundproof-market-esg-trend/':                          '/ja/business/soundproof-market-esg-trend/',
     '/ja/column/company/soundproof-renovation-cost-outlook-2026/':              '/ja/money/owner-renovation-roi-simulation-tool/',
     // 1-D: column/news → business / knowledge / soundproof-room
     '/ja/column/news/global-soundproof-market-trends/':                    '/ja/business/global-soundproof-market-trends/',
     '/ja/column/news/shared-streaming-studio-growth-pricing-utilization/': '/ja/business/shared-streaming-studio-growth-pricing-utilization/',
     '/ja/column/news/future-ssi-silent-speech-interface-revolution/':      '/ja/knowledge/future-ssi-silent-speech-interface-revolution/',
-    '/ja/column/news/proofroom-maker-2025productcheck/':                   '/ja/knowledge/proofroom-maker-2025productcheck/',
+    '/ja/column/news/proofroom-maker-2025productcheck/':                   '/ja/soundproof-room/bouon-osusume-hikaku/',
     '/ja/column/news/yamaha-tabisuru-bouon-room/':                         '/ja/soundproof-room/yamaha-tabisuru-bouon-room/',
     // 1-E: column/others → creator / knowledge / business / money
     '/ja/column/others/asmr-vtuber-booth-guide/':                '/ja/creator/asmr-external-noise-elimination/',
@@ -259,7 +259,7 @@ export default defineConfig({
     '/ja/soundproof-room/knowledge/diy-wall-soundproofing-room-guide/':    '/ja/diy/diy-wall-soundproofing-room-guide/',
     '/ja/soundproof-room/knowledge/biophilic-acoustics/':                           '/ja/knowledge/biophilic-acoustics/',
     '/ja/soundproof-room/knowledge/d-value-truth-and-myths/':                       '/ja/knowledge/d-value-truth-and-myths/',
-    '/ja/soundproof-room/knowledge/diy-soundproof-truth/':                          '/ja/knowledge/diy-soundproof-truth/',
+    '/ja/soundproof-room/knowledge/diy-soundproof-truth/':                          '/ja/diy/diy-soundproof-room-failures-solutions/',
     '/ja/soundproof-room/knowledge/neighborhood-noise-seasonal-pattern-statistics/': '/ja/knowledge/neighborhood-noise-seasonal-pattern-statistics/',
     '/ja/soundproof-room/knowledge/noise-complaint-legal-precedent-manual/':        '/ja/knowledge/noise-complaint-legal-precedent-manual/',
     // soundproof-room/solution → diy / knowledge / money / business
@@ -335,7 +335,7 @@ export default defineConfig({
     '/posts/hsp-soundproof-room-guide/':        '/ja/soundproof-room/hsp-soundproof-room-guide/',
     '/posts/bourental-syaouseid-choiceindi/':    '/ja/soundproof-room/bouon-dchiseinou-meyasu/',
     '/posts/vtuber-family-privacy-rules/':       '/ja/creator/female-streamer-privacy-soundproof/',
-    '/posts/streaming-asmr-vtuber-soundproof-boom/': '/ja/business/report-japan-asmr-vtuber-streaming-studio-standard/',
+    '/posts/streaming-asmr-vtuber-soundproof-boom/': '/ja/knowledge/report-japan-asmr-vtuber-streaming-studio-standard/',
     '/posts/soundproof-app-review-2026/':        '/ja/knowledge/soundproof-app-review-2026/',
     '/posts/soundproof-wall-construction-guide/': '/ja/soundproof-room/construction-types-cost-comparison/',
     // 記事が存在しない → 最近接カテゴリへ転送
@@ -360,7 +360,7 @@ export default defineConfig({
     '/posts/keyboard-sound-streaming-soundproof-guide/':'/ja/diy/keyboard-typing-noise-vibration/',
     '/posts/streamer-proofroom-choicetech/':            '/ja/creator/streamer-soundproof-room-comprehensive-guide/',
     '/posts/streamer-trouble-rule/':                    '/ja/creator/streamer-noise-complaint-response/',
-    '/posts/rental-game-soundproof-booth-3man/':        '/ja/soundproof-rental/',
+    '/posts/rental-game-soundproof-booth-3man/':        '/ja/diy/closet-diy-soundproof-room/',
     '/posts/cable-noise-ground-loop-prevention/':       '/ja/knowledge/ground-loop-noise-basics/',
     '/posts/gamer-bouon-room-select/':                  '/ja/creator/streamer-soundproof-room-comprehensive-guide/',
     '/posts/gaming-streaming-floor-noise-control/':     '/ja/creator/gaming-floor-impact-noise-fix/',
@@ -402,7 +402,7 @@ export default defineConfig({
     '/ja/solutions/musision-soundproof-rental-review/': '/ja/soundproof-rental/musision-comprehensive-guide/',
     '/ja/solutions/sound-reduction-simulation/': '/ja/soundproof-room/sound-reduction-simulation/',
     '/ja/solutions/soundproof-room-resale-strategy/': '/ja/money/bouon-asset-value-analysis/',
-    '/ja/knowledge/bouontech-trendnews2025/': '/ja/business/soundproof-industry-news-2026-06/',
+    '/ja/knowledge/bouontech-trendnews2025/': '/ja/soundproof-rental/bouon-rental-market-guide/',
     '/en/knowledge/bouontech-trendnews2025/': '/en/japan-noise-and-society/building-code-reform-2025-noise-insulation/',
     '/en/knowledge/soundproof-room-price-market/': '/en/japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/',
     '/en/knowledge/soundproof-subsidy-system-list/': '/en/japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/',
@@ -447,7 +447,7 @@ export default defineConfig({
     '/posts/nagoya-soundproof-rental-guide/':                '/ja/local/nagoya-soundproof-rental-guide/',
     '/posts/neighborhood-noise-seasonal-pattern-statistics/':'/ja/knowledge/neighborhood-noise-seasonal-pattern-statistics/',
     '/posts/noise-canceling-headphones-sleep/':              '/ja/soundproof-rental/noise-canceling-headphones-sleep/',
-    '/posts/proofroom-maker-2025productcheck/':              '/ja/knowledge/proofroom-maker-2025productcheck/',
+    '/posts/proofroom-maker-2025productcheck/':              '/ja/soundproof-room/bouon-osusume-hikaku/',
     '/posts/remote-work-family-harmony-soundproof/':         '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
     '/posts/rental-caution-cello/':                          '/ja/soundproof-rental/rental-caution-cello/',
     '/posts/saitama-soundproof-rental-guide/':               '/ja/local/saitama-soundproof-rental-guide/',
@@ -491,7 +491,7 @@ export default defineConfig({
     '/posts/bourenatal-sinsa-imagipoint/':                    '/ja/soundproof-rental/rental-unit-soundproof-room/',
     '/posts/proof-doorchoice-setting/':                       '/ja/soundproof-room/bouon-setti-checkpoint/',
     '/posts/streaming-noise-appliance-soundproof-guide/':     '/ja/diy/diy-refrigeration-noise-reduction/',
-    '/posts/bouontech-trendnews2025/':                        '/ja/business/soundproof-industry-news-2026-06/',
+    '/posts/bouontech-trendnews2025/':                        '/ja/soundproof-rental/bouon-rental-market-guide/',
     '/posts/streamer-lowbudget-simula/':                      '/ja/creator/streamer-soundproof-room-comprehensive-guide/',
     '/posts/footstep-vibration-soundproof-mat-guide/':        '/ja/diy/danbocchi-floor-protection/',
     '/posts/podcast-casterproof-micsetting/':                 '/ja/creator/collab-streaming-soundproof-space/',
@@ -659,7 +659,7 @@ export default defineConfig({
     '/ja/solutions/soundproof-room-effectiveness/soundproof-room-mechanism': '/ja/knowledge/d-value-truth-and-myths/',
     '/ja/solutions/soundproof-room-rental-cost/':                            '/ja/money/soundproof-room-rental-cost/',
     '/ja/solutions/bouonroom-tettei-kaisetsu/':                              '/ja/soundproof-room/bouon-osusume-hikaku/',
-    '/ja/use-case/rental-game-soundproof-booth-3man/':                       '/ja/soundproof-rental/',
+    '/ja/use-case/rental-game-soundproof-booth-3man/':                       '/ja/diy/closet-diy-soundproof-room/',
     '/ja/solutions/diy-vocal-soundproof-mask/':                              '/ja/diy/diy-vocal-soundproof-mask/',
     '/ja/use-case/streaming-room-layout-examples/':                          '/ja/creator/streaming-room-layout-guide/',
     '/ja/solutions/diy-internal-window-road-noise-reduction/':               '/ja/diy/diy-internal-window-road-noise-reduction/',
@@ -686,6 +686,14 @@ export default defineConfig({
     '/ja/local/niigata-soundproof-rental-guide/':                           '/ja/local/regional-city-soundproof-rental-guide/',
     // 仙台の防音賃貸ガイドを音大生の物件探し記事に統合（2026-10-19、T-28。本文の主張の大半が裏取りできなかったため）
     '/ja/local/sendai-soundproof-rental-guide/':                            '/ja/soundproof-rental/music-student-property-search-guide/',
+    // re-create 判断待ちの統合・排除（2026-10-19。ラグ→床衝撃音、DIYの不都合な真実→DIY失敗例、乾式浮き床→防振の基礎、メーカーニュース→防音室比較、業界ニュース→防音賃貸ガイド）
+    '/ja/knowledge/why-your-80-percent-rug-rule-fails/':                       '/ja/knowledge/vibration-reduction-science/',
+    '/ja/knowledge/diy-soundproof-truth/':                                     '/ja/diy/diy-soundproof-room-failures-solutions/',
+    '/ja/knowledge/dry-floating-floor-natural-frequency/':                     '/ja/knowledge/vibration-isolation-technology-trend/',
+    '/ja/knowledge/proofroom-maker-2025productcheck/':                         '/ja/soundproof-room/bouon-osusume-hikaku/',
+    '/ja/business/soundproof-industry-news-2026-06/':                          '/ja/soundproof-rental/bouon-rental-market-guide/',
+    // 配信スタジオ基準の記事を暗騒音（NC値）の解説に作り直し、business→knowledgeへ移動（2026-10-19、re-create §2 #7）
+    '/ja/business/report-japan-asmr-vtuber-streaming-studio-standard/':  '/ja/knowledge/report-japan-asmr-vtuber-streaming-studio-standard/',
     // 在宅ワーク・Web会議・寝室仕事の3記事を統合（2026-10-07）
     '/ja/business/web-meeting-voice-soundleak-prevention/':                     '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',
     '/ja/business/workbooth-office-soundproof-trend/':                          '/ja/soundproof-rental/remote-work-family-harmony-soundproof/',

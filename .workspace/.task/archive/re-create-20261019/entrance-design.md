@@ -1,7 +1,7 @@
 # 入口設計（確定）：打鍵・打撃音
 
 確定: 2026-10-11（ユーザー判断） / 状態: 全作業完了（W1はT-24＝`archive/task-list-35.md`、W2〜W6はT-25＝`archive/task-list-36.md`で2026-10-19デプロイ、W7はT-26＝`archive/task-list-30.md`）。効果確認はS-12
-前提: [cluster-streamer.md](../archive/re-create-docs-20261013/cluster-streamer.md)、実データは [../query-check/analysis_実データ.md](../query-check/analysis_実データ.md)
+前提: [cluster-streamer.md](../re-create-docs-20261013/cluster-streamer.md)、実データは [../../query-check/analysis_実データ.md](../../query-check/analysis_実データ.md)
 
 ## 1. 決定
 

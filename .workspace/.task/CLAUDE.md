@@ -14,7 +14,7 @@
 - `weekly-task.md` は2026-10-17に運用を終えた**移行先ポインタ**（週次取得の廃止に合わせて効果測定をS-11・S-12へ移した。移行直前の全文は`archive/weekly-task-archive-20261017.md`）。新規追記しない。ファイルは削除しない。旧W-NNのIDは移行先でもそのまま使う
 - `effect-monitoring.md` は2026-10-04に `weekly-task.md` へ統合済みの**移行先ポインタ**（現在の移行先は`schedule-task.md`）。新規追記しない。ファイルは削除しない
 - 派生ファイル（`qfo-recheck-task-*.md`・`consolidation-candidates-*.md`・`honne-tatemae-rewrite-survey.md` 等。後ろ2つは2026-10-06に`archive/`へ移動済み）は参照・調査用。マスターではない。削除前に両マスターからの参照有無を確認する
-- `re-create/` は`lastmod`の古い記事の**再構築キュー**（入口は`re-create/README.md`、作業が残っているものだけを`re-create/remaining.md`の1ファイルに集約し、打鍵・打撃音の入口設計`re-create/entrance-design.md`と合わせて作業ファイルは3つ。完了分の`batch-01〜08.md`は`archive/re-create-batch-01-08-20261013/`、配信者クラスタの設計と実施記録・優先度ビュー・統合案の結末は`archive/re-create-docs-20261013/`）。作業用の派生ファイルでマスターではない（2026-10-11追加）。配信者クラスタの入口設計（`re-create/entrance-design.md`）の作業T-24〜T-26は2026-10-19までに全件完了（`archive/task-list-35.md`・`36.md`・`30.md`）。効果確認は`schedule-task.md`のS-12
+- `re-create/`（`lastmod`の古い記事の**再構築キュー**）は2026-10-19に全件を処理し、フォルダごと`archive/re-create-20261019/`へ移した（残った保留1本と家賃表の更新はS-11のW-21・W-28節へ移動）。以下は当時の構成: 入口は`re-create/README.md`、作業が残っているものだけを`re-create/remaining.md`の1ファイルに集約し、打鍵・打撃音の入口設計`re-create/entrance-design.md`と合わせて作業ファイルは3つ。完了分の`batch-01〜08.md`は`archive/re-create-batch-01-08-20261013/`、配信者クラスタの設計と実施記録・優先度ビュー・統合案の結末は`archive/re-create-docs-20261013/`）。作業用の派生ファイルでマスターではない（2026-10-11追加）。配信者クラスタの入口設計（`re-create/entrance-design.md`）の作業T-24〜T-26は2026-10-19までに全件完了（`archive/task-list-35.md`・`36.md`・`30.md`）。効果確認は`schedule-task.md`のS-12
 - `query-check/` はキーワード（サジェスト・GSC・Bing）の分析結果。派生ファイルでマスターではない。生データ（`query-check/data/`・取得したCSV）は`access-data/`と同じく`.gitignore`の方針でコミットしない（2026-10-11追加）
 - 完了済みは `archive/`（綴りは archive）。索引は `archive/task-list-index.md`
 

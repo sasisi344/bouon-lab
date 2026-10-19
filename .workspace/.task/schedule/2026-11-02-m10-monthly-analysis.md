@@ -54,6 +54,8 @@
 
 - 見る: GA4のLPセッション・エンゲージ率・滞在（W41=32・88%・約65秒、W42=35・97%・72秒）と、A2で`related_click`・内部リンクのクリック
 - 流入の大半はBing。Googleの表示は細い（W42は表示5）。リンク先の`bass-trap-installation-guide`側のセッションが増えていれば導線は機能している
+- 保留の判断（2026-10-19にre-create §3から移動。ユーザー指示「10月末に確認する」）: この日の結果で、リライトするか現状維持かを決める。3か月の基準値は表示72・クリック1・12.75位、GA4（3週）77
+- 保留明けにやること: 本文にある屋外用防音カーテン記事へのリンクのアンカーを、新タイトル「屋外用防音カーテンは家庭でも使える？工事用防音シートの効果と間仕切りへの使い方」に直す（リンク先は有効。2026-10-19のリライトでタイトルが変わった）
 - 結果:
 
 ### W-24 補助金の統合先`soundproof-subsidy-check-guide`
@@ -78,7 +80,8 @@
 ### W-28 `creator/`の未登録記事の作り直し
 
 - 見る（GSC UI「ページのインデックス登録」）: 登録待ちの`one-room-streaming-soundproof`・`parenting-streamer-soundproof`・`singer-instrumentalist-stream-soundproof`が登録済みに移ったか、前回のクロール日
-- 残る個別の作り直しは`game-streamer-sound-types`のみ（T-25と調整）
+- 残る個別の作り直しは`game-streamer-sound-types`のみ（T-25と調整）→ 2026-10-19に完了（下の「配信者クラスタの残作業」節）
+- 残作業（2026-10-19にre-create §2 #8から移動。急がない）: `creator/streamer-rental-selection-guide` のミュージション家賃表（本サイト調査2026-06-24、26棟）を公式サイトで取り直す。耐用年数の記述は確認済みで直す所なし。この日の確認と合わせて着手するかを決め、着手するならT-NNに起票する
 - 判定はS-12: 作り直した記事と未着手の記事で、登録された本数に差が出たか
 - 結果:
 
@@ -104,7 +107,7 @@
 ### W-32・W-33・W-34 配信者クラスタの統合（第1〜3弾）
 
 - 見る: 統合先・土台の表示と順位、吸収した語が土台に出たか。登録済みの土台（賃貸選び・農地・身バレ）は、統合前の語の順位が落ちていないか
-- W-34: ASMRの旧URL3本の転送先を`asmr-external-noise-elimination`へ変えた（2026-10-17、未デプロイ）。デプロイ後にcurlで301先を確認し、ここへデプロイ日を書く。「ASMR 防音」系の表示を見る
+- W-34: ASMRの旧URL3本の転送先を`asmr-external-noise-elimination`へ変えた（2026-10-17）。**本番反映を2026-10-19にcurlで確認**（3本とも1回の301で転送先へ、転送先は200）。「ASMR 防音」系の表示を見る
 - W-34: `collab-streaming-soundproof-space`は10/16の全面リライトが本番に出ている（10/17確認）。ユーザーが再クロールを申請する
 - 判定はS-12
 - 結果:
@@ -118,6 +121,64 @@
 - デプロイ: 2026-10-18。curlで3本とも1回の301で転送先へ行き、転送先2記事は200であることを確認した
 - 見る: 転送先2記事の表示・順位（変更前との比較）。旧URL3本の表示が消えていくか。「電子ドラム 振動」「ピアノ 防音室」系の語が転送先に出るか
 - 判定はS-12（m10は変更から月末まで日が浅いので途中経過）
+- 結果:
+
+### 賃貸ゲーム音の自作ブースの旧URL2本の転送先変更（re-create §2 #4、2026-10-19変更・未デプロイ）
+
+- 変更: `/ja/soundproof-rental/`（カテゴリ一覧）→ `/ja/diy/closet-diy-soundproof-room/`（`public/.htaccess`・`astro.config.mjs`）
+  - `/posts/rental-game-soundproof-booth-3man/`（16か月で70表示・7クリック・16.8位）
+  - `/ja/use-case/rental-game-soundproof-booth-3man/`
+- 理由: 旧記事は「賃貸でゲーム音がうるさい｜3万円以下で作る安い自作防音室」。転送先の「クローゼットDIYで3万円から・賃貸の板囲い方式」と約束が合う
+- デプロイ: （未。デプロイ後にcurlで1回の301で転送先へ行き、転送先が200であることを確認し、ここへ日付を書く）
+- 見る: 転送先の表示・順位。旧URL2本の表示が消えていくか。「自作 防音室 賃貸」「ゲーム 音漏れ」系の語が転送先に出るか
+- 判定はS-12
+- 結果:
+
+### 住宅系の既存3記事の補強とタイトル変更（T-10 R-2〜R-4、2026-10-19変更・未デプロイ）
+
+- 変更（slug不変。詳細は`t10-housing-affiliate/02-article-plan.md` §3）
+  - `/ja/money/custom-home-soundproof-price-guide/`（R-2）: 旧「防音 注文住宅の坪単価相場｜全国平均・地域差と新築組み込み費用の目安」→ 新「防音工事の坪単価相場｜注文住宅で防音室を足す費用と地域差・新築と後付けの差」。防音工事の坪単価を冒頭の答えにし、地域別の建物坪単価を2025年度フラット35利用者調査に差し替え（旧表の「その他地域 約73万円/坪」は公表値から計算した約114万円/坪と大きくずれていた）、ローコスト住宅・新築戸建ての節を追加
+  - `/ja/money/piano-soundproof-mortgage-tax-guide/`（R-3）: 旧「防音室・ピアノ室は住宅ローンに組み込める｜資金計画と固定資産税の注意点」→ 新「ピアノと住宅ローン｜防音室・ピアノ室は組み込める、ピアノ本体は別が基本」。旧descriptionが「ピアノ本体の購入ローンではなく」と検索語の文字どおりの意図を外していたのを直し、対象になる・ならない費用の表、住宅購入の流れの表、教室にする場合（非住宅部分）の節を追加
+  - `/ja/soundproof-room/daiwa-house-jiyuku-soundproof-review/`（R-4）: 旧「大和ハウス「私の自由区」防音室を検討して分かったこと」→ 新「大和ハウスの防音室「私の自由区」とは｜音の自由区との違いと契約前の確認点」。一人称の検討記から、公式発表の整理（3カテゴリー・音の自由区との違い・商談の質問リスト）へ作り直し（`02-article-plan.md` §6-3の決定どおり）。`<RegionBanner />`の抜けも修正
+- 基準値（W40＝過去3か月、Google）
+  - ページ: price-guide 153表示・0クリック・18.2位／mortgage 144表示・1クリック・13.3位／daiwa 77表示・3クリック・45.5位
+  - クエリ: 「防音 坪単価」105表示・19.8位、「防音工事 坪単価」25表示・35.6位（price-guide）／「ピアノ 住宅ローン」121表示・11.3位、「住宅ローン ピアノ」6表示・21.5位（mortgage）／「大和ハウス 防音」25表示・58.9位、「私の自由区」2表示・12.5位（daiwa）
+- 見る: 3ページの表示・順位・CTR。上の語の順位が落ちていないか。「ピアノ 住宅ローン」が10位以内に入りクリックが付くか（10位以内のCTR目標5%）。比較は日平均で行う（期間が違うため）
+- デプロイ: （未。デプロイ日をここへ書く）
+- 判定はS-12（m10は変更から月末まで日が浅いので途中経過）
+- 結果:
+
+### re-create判断待ち9本の処理（re-create §1、2026-10-19変更・未デプロイ）
+
+- 統合・排除して301（`public/.htaccess`・`astro.config.mjs`。旧URLを経由していた古い転送も最終の転送先へ直接向けた）
+  - `/ja/knowledge/why-your-80-percent-rug-rule-fails/` → `/ja/knowledge/vibration-reduction-science/`（「ジョイントマットは意味ない？」のH2を追加）
+  - `/ja/knowledge/diy-soundproof-truth/` → `/ja/diy/diy-soundproof-room-failures-solutions/`（「DIY防音の不都合な真実」のH2と製品の見抜き方を追加）
+  - `/ja/knowledge/dry-floating-floor-natural-frequency/` → `/ja/knowledge/vibration-isolation-technology-trend/`（失敗の原因と、沈み込み量から固有振動数を見積もる表を追加）
+  - `/ja/knowledge/proofroom-maker-2025productcheck/` → `/ja/soundproof-room/bouon-osusume-hikaku/`（排除。出典の確認できない記述が多く、更新余地なし）
+  - `/ja/business/soundproof-industry-news-2026-06/` → `/ja/soundproof-rental/bouon-rental-market-guide/`（排除。ニュースは記事でなくThreadsで扱う方針）
+- リライトとタイトル変更（slug不変）
+  - `/ja/knowledge/biophilic-acoustics/`: 旧「バイオフィリック・アコースティック：苔と緑で「静寂の庭」を壁に作る技法」→ 新「苔の吸音効果はどのくらい？研究データで見る防音との違いと壁への取り入れ方」。2026年の音響管試験（Karklinaほか）の吸音率表を入れ、「吸音ウレタンより高い」「半永久的」など根拠のない記述を削除
+  - `/ja/diy/parenting-generation-quiet-corner-diy/`: 旧「子育て世代のDIY「一人になれる場所」｜1万円台から始める段階的な作り方」→ 新「夜泣きの交代制で眠れない？非番の人が寝る部屋を1万円台から静かにする方法」。夜泣きの交代で非番の人が眠る部屋づくりに軸を変更
+  - `/ja/diy/outdoor-soundproof-curtain-market-guide/`: 旧「【市場整理】屋外用防音カーテン｜防音シートの構造と調達・選定の実務ポイント」→ 新「屋外用防音カーテンは家庭でも使える？工事用防音シートの効果と間仕切りへの使い方」。BtoB向けから一般向けへ（全地連2023の実測、間仕切りDIYの手順）
+  - `/ja/knowledge/future-ssi-silent-speech-interface-revolution/`: 旧「2030年の防音Lab：無声音声インターフェース(SSI)が「遮音」の常識を破壊する」→ 新「無声音声インターフェース（SSI）とは？声を出さずに話す技術の現在地と防音への影響」。2025〜2026年の研究（SilentWear・Revoice・AESSI・総説）で作り直し
+- 基準値（16か月、旧URL含む、GSC 2026-10-11取得）: rug 2表示・0クリック／truth 8・0（3か月20.14位）／dry-floor 28・0（3か月35.75位）／maker 55・0／news 0・0／biophilic 12・0（3か月2.5位、Bingで「苔 吸音 効果」2位）／parenting 7・1／curtain 0・0／SSI 0・0
+- 見る: 統合先3本（vibration-reduction-science・diy-soundproof-room-failures-solutions・vibration-isolation-technology-trend）の表示・順位が落ちていないか。リライト4本で「苔 吸音」「夜泣き 交代」「屋外用防音カーテン」「無声音声インターフェース」系の語に表示が付くか。比較は日平均で行う
+- デプロイ: （未。デプロイ後にcurlで旧URL5本が1回の301で転送先へ行き、転送先が200であることを確認し、ここへ日付を書く）
+- 判定はS-12（m10は変更から月末まで日が浅いので途中経過）
+- 結果:
+
+### 配信者クラスタの残作業（re-create §2 #1・#5・#6・#7、2026-10-19変更・未デプロイ）
+
+- #1 `/ja/creator/game-streamer-sound-types/`: 旧「ゲーム実況者の防音環境｜打鍵音・マウス音・叫び声ごとの対策」→ 新「ゲーム実況の騒音対策｜打鍵音・マウス音・叫び声・台パンを音の種類で振り分ける」。6種類の音（台パン・PCファン音を追加）の早見表と、苦情の方向別の優先表を入れ、各音の詳しい記事（打鍵音・台パン・絶叫・PCファン・ハブ）へ送る振り分け記事に変更。根拠のない「クリック音1/5以下」を削除
+- #5 トップのカード`sound-leak`: ボタンの先は`/ja/creator/`のまま（ユーザー判断）。所属に`game-streamer-sound-types`（5）・`diy/keyboard-typing-noise-vibration`（6）を足して4本→6本
+- #6 `affiliates.ts`の`humidifier-vaporizer-daikin`を削除（記事での使用なし。商品が防音室向けでなかった）
+- #7 別クラスタへ移動し、移動先に合わせて作り直し（ユーザー判断）
+  - `/ja/business/report-japan-asmr-vtuber-streaming-studio-standard/` → `/ja/knowledge/report-japan-asmr-vtuber-streaming-studio-standard/`（slug不変、カテゴリ移動で301。経由していた旧URL2本も直接向けた）。旧「【技術解説】ASMR・VTuberに求められる「配信専用スタジオ」の防音・熱対策基準 (2026)」→ 新「暗騒音の目安はNC値で決める｜ASMR・歌枠・ゲーム実況の録音に必要な静けさ」。サイト内で唯一のNC値の解説として、NC曲線の表・部屋別の推奨値（Engineering ToolBox）・コンテンツ別の目標・測り方に作り直し。出典のない「15分で5℃上昇」「0.8畳から1年以内に買い替え」、価格表、フェーズ別ロードマップ（総合ガイドと重複）は削除
+  - `/ja/diy/diy-refrigeration-noise-reduction/`: 旧「配信者のための家電・生活音対策｜冷蔵庫と換気扇のノイズを物理的に沈める方法」→ 新「冷蔵庫のブーンという振動音の対策｜防振マットの選び方と床に響かせない置き方」。配信者向けから、家電の騒音・防振のクラスタへ（タグを「冷蔵庫・家電騒音・防振・生活音・騒音対策・換気扇」に変更）。マイクの節は残した
+- 基準値（16か月、GSC 2026-10-11）: game-streamer-sound-types 2表示（未登録）／refrigeration 3表示／report-japan-asmr 6表示
+- 見る: 3本の表示が付くか（「冷蔵庫 振動」「暗騒音 目安」「NC値」系）。トップのカード`sound-leak`の`hub_click`（カード単位）
+- デプロイ: （未。デプロイ後に旧URL `/ja/business/report-japan-asmr-vtuber-streaming-studio-standard/` の301をcurlで確認し、日付を書く）
+- 判定はS-12
 - 結果:
 
 ---

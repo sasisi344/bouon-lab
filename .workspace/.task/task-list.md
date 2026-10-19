@@ -65,7 +65,7 @@ GA4の直近1週間のアクセスが落ち込み時より回復しているこ�
 - [ ] 申請前に確認する（A8の提携条件・サイト要件、住まいの窓口の対応エリア、広告表記）。確認事項は`02-article-plan.md` §5
 - [x] 「住宅の防音」の既存記事を棚卸しする（2026-10-06完了。結果は`t10-housing-affiliate/01-existing-article-survey.md`。住宅系5本あるがCTA設置済みはゼロ、案件は`affiliates.ts`に未登録）
 - [x] 不足している記事を洗い出す（2026-10-06。`t10-housing-affiliate/02-article-plan.md`。新規N-1〜N-7、既存補強R-1〜R-4）
-- [ ] 既存記事の補強（R-1〜R-4）。R-1（`housing-builder-soundproof-comparison`）は2026-10-06に書き直し済み（公式表記に差し替え、出典の確認日つき。N-1〜N-3へのリンクは公開後に追加）。残りはR-2〜R-4。事実確認の記録は`t10-housing-affiliate/research-notes.md`
+- [x] 既存記事の補強（R-1〜R-4）。R-1（`housing-builder-soundproof-comparison`）は2026-10-06に書き直し済み。R-2〜R-4は2026-10-19に実施（3本ともタイトル変更。未デプロイ。内容は`t10-housing-affiliate/02-article-plan.md` §3、効果測定はS-11の「住宅系の既存3記事の補強」節）。事実確認の記録は`t10-housing-affiliate/research-notes.md`
 - [x] 新規記事を執筆する（優先1: N-2・N-3・N-1。2026-10-06に`src/content/ja/soundproof-room/`へ3本作成、カバー画像生成済み、`_draft/`は削除済み。広告・CTAなし。R-1の記事から3本へのリンクも追加済み）
 - [x] 方針を「防音室ありき」から「防音がほしい部屋がある、と設計の段階で伝える」へ修正（2026-10-06。N-2・N-3・N-1を修正済み）
 - [x] ハブ記事（`noise-solutions-relocate-retrofit-custom-home`）を本番記事化する（2026-10-06。カバー画像と保存版メモ2枚つき。N-1・N-2・N-3・R-1・Bからハブへのリンクも追加済み）。**4本まとめてデプロイ**する
