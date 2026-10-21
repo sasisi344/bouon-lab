@@ -123,18 +123,18 @@
 - 判定はS-12（m10は変更から月末まで日が浅いので途中経過）
 - 結果:
 
-### 賃貸ゲーム音の自作ブースの旧URL2本の転送先変更（re-create §2 #4、2026-10-19変更・未デプロイ）
+### 賃貸ゲーム音の自作ブースの旧URL2本の転送先変更（re-create §2 #4、2026-10-19変更・同日デプロイ）
 
 - 変更: `/ja/soundproof-rental/`（カテゴリ一覧）→ `/ja/diy/closet-diy-soundproof-room/`（`public/.htaccess`・`astro.config.mjs`）
   - `/posts/rental-game-soundproof-booth-3man/`（16か月で70表示・7クリック・16.8位）
   - `/ja/use-case/rental-game-soundproof-booth-3man/`
 - 理由: 旧記事は「賃貸でゲーム音がうるさい｜3万円以下で作る安い自作防音室」。転送先の「クローゼットDIYで3万円から・賃貸の板囲い方式」と約束が合う
-- デプロイ: （未。デプロイ後にcurlで1回の301で転送先へ行き、転送先が200であることを確認し、ここへ日付を書く）
+- デプロイ: 2026-10-19。curlで旧URL2本（`/posts/`・`/ja/use-case/`）とも1回の301で`/ja/diy/closet-diy-soundproof-room/`へ行き、転送先は200であることを確認した
 - 見る: 転送先の表示・順位。旧URL2本の表示が消えていくか。「自作 防音室 賃貸」「ゲーム 音漏れ」系の語が転送先に出るか
 - 判定はS-12
 - 結果:
 
-### 住宅系の既存3記事の補強とタイトル変更（T-10 R-2〜R-4、2026-10-19変更・未デプロイ）
+### 住宅系の既存3記事の補強とタイトル変更（T-10 R-2〜R-4、2026-10-19変更・同日デプロイ）
 
 - 変更（slug不変。詳細は`t10-housing-affiliate/02-article-plan.md` §3）
   - `/ja/money/custom-home-soundproof-price-guide/`（R-2）: 旧「防音 注文住宅の坪単価相場｜全国平均・地域差と新築組み込み費用の目安」→ 新「防音工事の坪単価相場｜注文住宅で防音室を足す費用と地域差・新築と後付けの差」。防音工事の坪単価を冒頭の答えにし、地域別の建物坪単価を2025年度フラット35利用者調査に差し替え（旧表の「その他地域 約73万円/坪」は公表値から計算した約114万円/坪と大きくずれていた）、ローコスト住宅・新築戸建ての節を追加
@@ -144,11 +144,11 @@
   - ページ: price-guide 153表示・0クリック・18.2位／mortgage 144表示・1クリック・13.3位／daiwa 77表示・3クリック・45.5位
   - クエリ: 「防音 坪単価」105表示・19.8位、「防音工事 坪単価」25表示・35.6位（price-guide）／「ピアノ 住宅ローン」121表示・11.3位、「住宅ローン ピアノ」6表示・21.5位（mortgage）／「大和ハウス 防音」25表示・58.9位、「私の自由区」2表示・12.5位（daiwa）
 - 見る: 3ページの表示・順位・CTR。上の語の順位が落ちていないか。「ピアノ 住宅ローン」が10位以内に入りクリックが付くか（10位以内のCTR目標5%）。比較は日平均で行う（期間が違うため）
-- デプロイ: （未。デプロイ日をここへ書く）
+- デプロイ: 2026-10-19。curlで3ページとも本番で新タイトルが出ることを確認した
 - 判定はS-12（m10は変更から月末まで日が浅いので途中経過）
 - 結果:
 
-### re-create判断待ち9本の処理（re-create §1、2026-10-19変更・未デプロイ）
+### re-create判断待ち9本の処理（re-create §1、2026-10-19変更・同日デプロイ）
 
 - 統合・排除して301（`public/.htaccess`・`astro.config.mjs`。旧URLを経由していた古い転送も最終の転送先へ直接向けた）
   - `/ja/knowledge/why-your-80-percent-rug-rule-fails/` → `/ja/knowledge/vibration-reduction-science/`（「ジョイントマットは意味ない？」のH2を追加）
@@ -163,11 +163,11 @@
   - `/ja/knowledge/future-ssi-silent-speech-interface-revolution/`: 旧「2030年の防音Lab：無声音声インターフェース(SSI)が「遮音」の常識を破壊する」→ 新「無声音声インターフェース（SSI）とは？声を出さずに話す技術の現在地と防音への影響」。2025〜2026年の研究（SilentWear・Revoice・AESSI・総説）で作り直し
 - 基準値（16か月、旧URL含む、GSC 2026-10-11取得）: rug 2表示・0クリック／truth 8・0（3か月20.14位）／dry-floor 28・0（3か月35.75位）／maker 55・0／news 0・0／biophilic 12・0（3か月2.5位、Bingで「苔 吸音 効果」2位）／parenting 7・1／curtain 0・0／SSI 0・0
 - 見る: 統合先3本（vibration-reduction-science・diy-soundproof-room-failures-solutions・vibration-isolation-technology-trend）の表示・順位が落ちていないか。リライト4本で「苔 吸音」「夜泣き 交代」「屋外用防音カーテン」「無声音声インターフェース」系の語に表示が付くか。比較は日平均で行う
-- デプロイ: （未。デプロイ後にcurlで旧URL5本が1回の301で転送先へ行き、転送先が200であることを確認し、ここへ日付を書く）
+- デプロイ: 2026-10-19。curlで旧URL5本と、同じ転送先へ付け替えた古い経路3本（`/ja/soundproof-room/others/`・`/ja/soundproof-room/knowledge/`・`/ja/column/news/`・`/posts/`）がすべて1回の301で転送先へ行き、転送先は200であることを確認した。リライト4本も200
 - 判定はS-12（m10は変更から月末まで日が浅いので途中経過）
 - 結果:
 
-### 配信者クラスタの残作業（re-create §2 #1・#5・#6・#7、2026-10-19変更・未デプロイ）
+### 配信者クラスタの残作業（re-create §2 #1・#5・#6・#7、2026-10-19変更・同日デプロイ）
 
 - #1 `/ja/creator/game-streamer-sound-types/`: 旧「ゲーム実況者の防音環境｜打鍵音・マウス音・叫び声ごとの対策」→ 新「ゲーム実況の騒音対策｜打鍵音・マウス音・叫び声・台パンを音の種類で振り分ける」。6種類の音（台パン・PCファン音を追加）の早見表と、苦情の方向別の優先表を入れ、各音の詳しい記事（打鍵音・台パン・絶叫・PCファン・ハブ）へ送る振り分け記事に変更。根拠のない「クリック音1/5以下」を削除
 - #5 トップのカード`sound-leak`: ボタンの先は`/ja/creator/`のまま（ユーザー判断）。所属に`game-streamer-sound-types`（5）・`diy/keyboard-typing-noise-vibration`（6）を足して4本→6本
@@ -177,7 +177,7 @@
   - `/ja/diy/diy-refrigeration-noise-reduction/`: 旧「配信者のための家電・生活音対策｜冷蔵庫と換気扇のノイズを物理的に沈める方法」→ 新「冷蔵庫のブーンという振動音の対策｜防振マットの選び方と床に響かせない置き方」。配信者向けから、家電の騒音・防振のクラスタへ（タグを「冷蔵庫・家電騒音・防振・生活音・騒音対策・換気扇」に変更）。マイクの節は残した
 - 基準値（16か月、GSC 2026-10-11）: game-streamer-sound-types 2表示（未登録）／refrigeration 3表示／report-japan-asmr 6表示
 - 見る: 3本の表示が付くか（「冷蔵庫 振動」「暗騒音 目安」「NC値」系）。トップのカード`sound-leak`の`hub_click`（カード単位）
-- デプロイ: （未。デプロイ後に旧URL `/ja/business/report-japan-asmr-vtuber-streaming-studio-standard/` の301をcurlで確認し、日付を書く）
+- デプロイ: 2026-10-19。curlで旧URL `/ja/business/report-japan-asmr-vtuber-streaming-studio-standard/` と古い経路2本（`/ja/column/company/`・`/posts/streaming-asmr-vtuber-soundproof-boom/`）が1回の301で`/ja/knowledge/`の新URLへ行き、200で新タイトルが出ることを確認した。振り分け記事・冷蔵庫記事も200
 - 判定はS-12
 - 結果:
 
