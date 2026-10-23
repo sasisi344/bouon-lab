@@ -67,6 +67,7 @@
 | ja | diy | `wooden-apartment-soundproof-guide` |  | 木造アパートの防音は無理？苦情ゼロまで音を減らす3つの現実的対策 | 木造アパート, 防音賃貸, 隙間テープ, 生活音, 家具配置 | `/ja/diy/wooden-apartment-soundproof-guide/` | false |
 | ja | knowledge | `absorption-vs-soundproofing-materials` |  | 吸音材か遮音材か迷う人へ｜あなたの環境で“必要なのはどっち？”徹底ガイド | 吸音材, 遮音材, 騒音対策, DIY防音, 吸音と遮音の違い | `/ja/knowledge/absorption-vs-soundproofing-materials/` | false |
 | ja | knowledge | `biophilic-acoustics` |  | 苔の吸音効果はどのくらい？研究データで見る防音との違いと壁への取り入れ方 | 吸音材, 苔, 吸音パネル, インテリア, メンタルヘルス | `/ja/knowledge/biophilic-acoustics/` | false |
+| ja | knowledge | `building-fire-law-soundproof-room` |  | 防音室は建築基準法・消防法に違反する？居室扱いと無窓居室の確認点 | 防音室, 建築基準法, 消防法, 火災警報器, 賃貸, 固定資産税 | `/ja/knowledge/building-fire-law-soundproof-room/` | false |
 | ja | knowledge | `coincidence-effect-soundproofing` |  | 壁を厚くしたのに声だけ漏れる｜コインシデンス効果と質量則の限界 | コインシデンス効果, 質量則, 遮音理論, 技術解説 | `/ja/knowledge/coincidence-effect-soundproofing/` | false |
 | ja | knowledge | `d-value-truth-and-myths` |  | D値の嘘と本当｜dBとの違いとカタログ値の落とし穴、防音室選びで失敗しない見方 | D値, 遮音等級, 遮音性能, 防音室, 技術解説 | `/ja/knowledge/d-value-truth-and-myths/` | false |
 | ja | knowledge | `d-value-vs-rw-value-confusion` |  | D値とRw値は換算できない｜日本と海外の遮音等級を混同すると失敗する理由 | D値, Rw値, 遮音等級, 技術解説, 海外製品 | `/ja/knowledge/d-value-vs-rw-value-confusion/` | false |
@@ -162,6 +163,8 @@
 | ja | soundproof-room | `custom-home-soundproof-consultation-prep` |  | 注文住宅の家づくり相談で防音の要望を伝える方法｜防音室がなくても整理する5項目 | 注文住宅, 防音室, 家づくり, 相談窓口, 要望整理, 新築 | `/ja/soundproof-room/custom-home-soundproof-consultation-prep/` | false |
 | ja | soundproof-room | `custom-home-soundproof-room-layout` |  | 注文住宅で防音室を作る間取りのポイント｜位置・広さ・窓・換気・搬入経路 | 注文住宅, 間取り, 防音室, 新築, 戸建て, 換気 | `/ja/soundproof-room/custom-home-soundproof-room-layout/` | false |
 | ja | soundproof-room | `daiwa-house-jiyuku-soundproof-review` |  | 大和ハウスの防音室「私の自由区」とは｜音の自由区との違いと契約前の確認点 | 注文住宅, 大和ハウス, 防音室, ハウスメーカー, 家づくり | `/ja/soundproof-room/daiwa-house-jiyuku-soundproof-review/` | false |
+| ja | soundproof-room | `door-window-weak-points` |  | 防音室の窓とドアは音漏れの弱点｜窓なし・二重窓・引き戸の選び方 | 防音室, 防音ドア, 防音窓, 遮音性能, 隙間対策 | `/ja/soundproof-room/door-window-weak-points/` | false |
+| ja | soundproof-room | `ear-pressure-tinnitus-dizziness` |  | 防音室で耳鳴り・耳が詰まる原因｜気圧と静けさの違いと受診の目安 | 防音室, 耳鳴り, 換気, CO2, 閉所, 音過敏 | `/ja/soundproof-room/ear-pressure-tinnitus-dizziness/` | false |
 | ja | soundproof-room | `home-private-booth-guide` |  | 個室ブースを自宅に置くなら｜価格の目安と防音の限界、暑さ・設置の注意点 | 個室ブース, ワークブース, テレワーク, 在宅ワーク, Web会議, 防音ブース | `/ja/soundproof-room/home-private-booth-guide/` | false |
 | ja | soundproof-room | `hsp-soundproof-curtain-guide` |  | HSP気質の方へ。生活音のストレスを劇的に減らす「防音（遮音）カーテン」の正しい選び方と限界 | 防音カーテン, HSP, 睡眠, 騒音対策, 遮音性能 | `/ja/soundproof-room/hsp-soundproof-curtain-guide/` | false |
 | ja | soundproof-room | `hsp-soundproof-room-guide` |  | HSP・音過敏のための防音室の選び方｜D-40を目安にした遮音性能・換気・素材の確認ポイント | HSP, 音過敏, 防音室選び, 感覚過敏, 防音室 | `/ja/soundproof-room/hsp-soundproof-room-guide/` | false |
@@ -173,6 +176,7 @@
 | ja | soundproof-room | `notice-outside-sounds-in-booth` |  | 防音室でインターホンが聞こえない時の対策｜赤ちゃんや警報に気づく仕組み | インターホン, 赤ちゃん, 防災, 通知, 子育て | `/ja/soundproof-room/notice-outside-sounds-in-booth/` | false |
 | ja | soundproof-room | `onetouch-soundproof-wall-review` |  | ワンタッチ防音壁は効果ある？買う前に知りたい限界と評判、賃貸での使い方 | ワンタッチ防音壁, 防音パネル, 賃貸DIY, 反響軽減, 口コミ | `/ja/soundproof-room/onetouch-soundproof-wall-review/` | false |
 | ja | soundproof-room | `otodasu-voice-chat-test` |  | OTODASU（オトダス）の実力検証｜深夜2時のボイスチャットは隣室に許されるのか？ | OTODASU, ボイスチャット, 深夜配信, 防音室 | `/ja/soundproof-room/otodasu-voice-chat-test/` | false |
+| ja | soundproof-room | `outdoor-detached-soundproof-room` |  | 防音室を庭に設置できる？プレハブ・離れの費用と建築確認の注意点 | 防音室, プレハブ, 離れ, 建築確認, 固定資産税, ドラム防音 | `/ja/soundproof-room/outdoor-detached-soundproof-room/` | false |
 | ja | soundproof-room | `piano-room-guide` |  | ピアノ防音室ガイド｜アップライト・グランド別の費用とマンション設置の条件 | ピアノ, 防音室, アップライトピアノ, グランドピアノ, マンション, ヤマハ, カワイ | `/ja/soundproof-room/piano-room-guide/` | false |
 | ja | soundproof-room | `proofroom-aircondition-select` |  | 防音室のエアコン選びと静音化の極意｜2026年最新の空調・換気戦略 | 防音室, 空調設備, 換気, スポットクーラー, 騒音対策 | `/ja/soundproof-room/proofroom-aircondition-select/` | false |
 | ja | soundproof-room | `proofroom-humidity-airconditionlist` |  | 防音室の温湿度管理ガイド2026｜暑さ・結露・乾燥を物理的に防ぐ改善術 | 防音室, 温湿度管理, 加湿器, 楽器メンテナンス, 結露 | `/ja/soundproof-room/proofroom-humidity-airconditionlist/` | false |

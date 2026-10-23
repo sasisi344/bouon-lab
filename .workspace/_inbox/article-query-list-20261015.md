@@ -15,6 +15,7 @@
 
 > [!forAI]
 > 優先度Aの記事作成は完了している:2026-10-19
+> 優先度BのB01〜B04は記事作成済み:B01=2026-10-22、B02〜B04=2026-10-23（`outdoor-detached-soundproof-room`・`building-fire-law-soundproof-room`・`ear-pressure-tinnitus-dizziness`）
 
 ---
 
