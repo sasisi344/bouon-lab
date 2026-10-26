@@ -16,6 +16,7 @@
 > [!forAI]
 > 優先度Aの記事作成は完了している:2026-10-19
 > 優先度BのB01〜B04は記事作成済み:B01=2026-10-22、B02〜B04=2026-10-23（`outdoor-detached-soundproof-room`・`building-fire-law-soundproof-room`・`ear-pressure-tinnitus-dizziness`）
+> 優先度BのB05〜B08は2026-10-27に対応済み:B05は`ear-pressure-tinnitus-dizziness`へ統合（酸欠・CO2計算・換気・睡眠の節を追加）、B06=`home-theater-soundproof-room`、B07=`wind-string-instrument-booth-selection`、B08=`diy-substitute-materials-daiso-plastic-board`
 
 ---
 

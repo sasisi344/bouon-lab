@@ -49,6 +49,7 @@
 | ja | diy | `diy-refrigeration-noise-reduction` |  | 冷蔵庫のブーンという振動音の対策｜防振マットの選び方と床に響かせない置き方 | 冷蔵庫, 家電騒音, 防振, 生活音, 騒音対策, 換気扇 | `/ja/diy/diy-refrigeration-noise-reduction/` | false |
 | ja | diy | `diy-soundproof-room-failures-solutions` |  | 防音パネルの罠｜DIY失敗例から学ぶ『遮音と吸音』の物理学的黄金比 | DIY防音, 遮音, 吸音, 遮音性能, 失敗談 | `/ja/diy/diy-soundproof-room-failures-solutions/` | false |
 | ja | diy | `diy-soundproofing-tips` |  | DIY防音のコツ｜安価で効果的な遮音・吸音テクニックを音響エンジニアが解剖 | DIY防音, 遮音シート, 吸音材, 防音賃貸, 音響設計 | `/ja/diy/diy-soundproofing-tips/` | false |
+| ja | diy | `diy-substitute-materials-daiso-plastic-board` |  | 防音室の自作はプラダンや100均で足りる？素材別に効く・効かないを判定 | DIY防音, 自作防音室, プラダン, 100均, 吸音と遮音, 段ボール | `/ja/diy/diy-substitute-materials-daiso-plastic-board/` | false |
 | ja | diy | `diy-vocal-soundproof-mask` |  | 防音マスク自作は息苦しい？段ボールヘッドボックスの酸欠リスクを検証 | 防音マスク, 酸欠対策, DIY防音, 深夜配信, 換気 | `/ja/diy/diy-vocal-soundproof-mask/` | false |
 | ja | diy | `diy-wall-soundproofing-room-guide` |  | 自分の部屋を防音室にしたい？DIYの壁防音と専門工事の現実的な選択肢 | DIY防音, 壁防音, 防音賃貸, 防音工事 | `/ja/diy/diy-wall-soundproofing-room-guide/` | false |
 | ja | diy | `electronic-drum-vibration-fuwafuwa-system` |  | 電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界、キックの止め方 | 電子ドラム, 打楽器, 振動対策, 床衝撃音, 防振 | `/ja/diy/electronic-drum-vibration-fuwafuwa-system/` | false |
@@ -164,8 +165,9 @@
 | ja | soundproof-room | `custom-home-soundproof-room-layout` |  | 注文住宅で防音室を作る間取りのポイント｜位置・広さ・窓・換気・搬入経路 | 注文住宅, 間取り, 防音室, 新築, 戸建て, 換気 | `/ja/soundproof-room/custom-home-soundproof-room-layout/` | false |
 | ja | soundproof-room | `daiwa-house-jiyuku-soundproof-review` |  | 大和ハウスの防音室「私の自由区」とは｜音の自由区との違いと契約前の確認点 | 注文住宅, 大和ハウス, 防音室, ハウスメーカー, 家づくり | `/ja/soundproof-room/daiwa-house-jiyuku-soundproof-review/` | false |
 | ja | soundproof-room | `door-window-weak-points` |  | 防音室の窓とドアは音漏れの弱点｜窓なし・二重窓・引き戸の選び方 | 防音室, 防音ドア, 防音窓, 遮音性能, 隙間対策 | `/ja/soundproof-room/door-window-weak-points/` | false |
-| ja | soundproof-room | `ear-pressure-tinnitus-dizziness` |  | 防音室で耳鳴り・耳が詰まる原因｜気圧と静けさの違いと受診の目安 | 防音室, 耳鳴り, 換気, CO2, 閉所, 音過敏 | `/ja/soundproof-room/ear-pressure-tinnitus-dizziness/` | false |
+| ja | soundproof-room | `ear-pressure-tinnitus-dizziness` |  | 防音室で耳鳴り・耳が詰まる原因｜気圧と静けさの違いと受診の目安 | 防音室, 耳鳴り, 換気, CO2, 酸欠, 閉所, 音過敏 | `/ja/soundproof-room/ear-pressure-tinnitus-dizziness/` | false |
 | ja | soundproof-room | `home-private-booth-guide` |  | 個室ブースを自宅に置くなら｜価格の目安と防音の限界、暑さ・設置の注意点 | 個室ブース, ワークブース, テレワーク, 在宅ワーク, Web会議, 防音ブース | `/ja/soundproof-room/home-private-booth-guide/` | false |
+| ja | soundproof-room | `home-theater-soundproof-room` |  | 防音室でホームシアターを楽しむには？重低音を夜に鳴らすDr値と費用 | 防音室, ホームシアター, 重低音, 浮き床, 防音工事, 注文住宅, 地下室 | `/ja/soundproof-room/home-theater-soundproof-room/` | false |
 | ja | soundproof-room | `hsp-soundproof-curtain-guide` |  | HSP気質の方へ。生活音のストレスを劇的に減らす「防音（遮音）カーテン」の正しい選び方と限界 | 防音カーテン, HSP, 睡眠, 騒音対策, 遮音性能 | `/ja/soundproof-room/hsp-soundproof-curtain-guide/` | false |
 | ja | soundproof-room | `hsp-soundproof-room-guide` |  | HSP・音過敏のための防音室の選び方｜D-40を目安にした遮音性能・換気・素材の確認ポイント | HSP, 音過敏, 防音室選び, 感覚過敏, 防音室 | `/ja/soundproof-room/hsp-soundproof-room-guide/` | false |
 | ja | soundproof-room | `kawai-nasal-soundproof-room-guide` |  | カワイ防音室ナサール（Nasal）完全ガイド｜特徴・価格・ヤマハとの違い | カワイ | `/ja/soundproof-room/kawai-nasal-soundproof-room-guide/` | false |
@@ -192,4 +194,5 @@
 | ja | soundproof-room | `soundproof-room-pollen-protection` |  | 防音室の花粉対策｜換気を止めずに春の「花粉・黄砂」をシャットアウトする方法 | 花粉対策, 換気, ロスナイ, 春, 空気清浄機, メンテナンス | `/ja/soundproof-room/soundproof-room-pollen-protection/` | false |
 | ja | soundproof-room | `soundproof-room-size` |  | ユニット防音室のサイズと選び方：演奏スタイルに合わせた内寸確認法 | 防音室, サイズ選び, 0.8畳, 1.5畳, ヤマハ, カワイ | `/ja/soundproof-room/soundproof-room-size/` | false |
 | ja | soundproof-room | `wifi-connection-guide` |  | 防音室でWi-Fiが繋がらない原因と対策｜穴を開けずにできる方法も紹介 | Wi-Fi, 有線LAN, 通信環境, 配信 | `/ja/soundproof-room/wifi-connection-guide/` | false |
+| ja | soundproof-room | `wind-string-instrument-booth-selection` |  | 防音室でトランペットは吹ける？管楽器・バイオリンの必要Dr値と広さ | 防音室, トランペット, 管楽器, バイオリン, フルート, 楽器可物件, OTODASU | `/ja/soundproof-room/wind-string-instrument-booth-selection/` | false |
 | ja | soundproof-room | `yamaha-tabisuru-bouon-room` |  | ヤマハ「旅する防音室」とは｜移動体験プログラムの設計思想と活用の視点 | ヤマハ, 防音室体験, 移動展示, 防音室選び | `/ja/soundproof-room/yamaha-tabisuru-bouon-room/` | false |
