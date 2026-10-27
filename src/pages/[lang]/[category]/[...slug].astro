@@ -397,6 +397,29 @@ const pageHead = [
         <Content components={components} relatedPosts={relatedPosts} lang={lang} />
       </div>
 
+      {!isIndex && (
+        <>
+        <div id="article-mid-ad" hidden>
+          <AdUnit placement="rectangleArticleMid" deferPush />
+        </div>
+        <script is:inline>
+          // 記事中広告: 2つ目のH2の直前（H2が1つなら1つ目の直前）へ移してから配信する
+          (function () {
+            var holder = document.getElementById('article-mid-ad');
+            var body = document.querySelector('.prose-body');
+            if (!holder || !body) return;
+            var h2s = body.querySelectorAll(':scope > h2');
+            var target = h2s[1] || h2s[0];
+            if (!target) { holder.remove(); return; }
+            var ad = holder.firstElementChild;
+            target.parentNode.insertBefore(ad, target);
+            holder.remove();
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+          })();
+        </script>
+        </>
+      )}
+
       {isIndex && (
         <section class="category-posts-list not-content">
           <div class="starter-set">

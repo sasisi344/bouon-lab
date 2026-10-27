@@ -8,9 +8,11 @@ import {
 interface Props {
   placement: AdPlacementId;
   class?: string;
+  /** true のときは push しない（呼び出し側で位置を移してから push する） */
+  deferPush?: boolean;
 }
 
-const { placement, class: className } = Astro.props;
+const { placement, class: className, deferPush = false } = Astro.props;
 const config = getPlacement(placement);
 
 if (!config.slot) {
@@ -32,7 +34,9 @@ const insAttrs: Record<string, string> = {
 >
   <div class="ad-placement__label">ADVERTISEMENT</div>
   <ins class="adsbygoogle" style="display:block" {...insAttrs}></ins>
-  <script is:inline>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+  {!deferPush && (
+    <script is:inline>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  )}
 </aside>

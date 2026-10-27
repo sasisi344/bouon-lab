@@ -266,6 +266,10 @@ footer.bouon-footer {
   margin: 0 0 3rem;
 }
 
+.ad-placement--rectangleArticleMid {
+  margin: 2rem 0 2.5rem;
+}
+
 .ad-placement__label {
   font-size: 0.65rem;
   color: var(--sl-color-gray-3);
