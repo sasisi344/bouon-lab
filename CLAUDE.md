@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**BouonLab（防音Lab）** は防音・遮音分野のE-E-A-T権威を目指すAstro 6製ブログ。`https://bouon-lab.com/` で公開。**記事の主軸は常に日本語（`ja`）**。コンテンツ戦略・ライティング方針は `bouon-writing` skillを参照。
+**BouonLab（防音Lab）** は防音・遮音分野のE-E-A-T権威を目指すAstro 6製ブログ。`https://bouon-lab.com/` で公開。**記事の主軸は常に日本語（`ja`）**。語り手は「静かな空間で寝たくて防音を調べてきた一般ユーザーのさしし」（専門家ではない。詳細は `bouon-writing` skill「語り手」）。コンテンツ戦略・ライティング方針は `bouon-writing` skillを参照。
 
 ## Commands
 
@@ -43,7 +43,7 @@ npx astro check # 型チェック
 | `bouon-threads-ops` | Threads投稿の作成・記録時（週間運用は`.workspace/_sns-post/CLAUDE.md`） |
 | `bouon-draft-publish-pipeline` | `/publish-draft`・`/write-article` の実処理（コマンドから自動的に参照される） |
 
-ペルソナ定義（消費者A〜H・サプライヤーS1〜S5・編集長フィルター）は `.agents/persona/` を参照。`bouon-persona-thinking` skillと併用する。
+ペルソナ定義（消費者A〜H・サプライヤーS1〜S5・編集長フィルター）は `.agents/persona/` を参照。ペルソナΩは執筆後の検閲フィルターで、記事の語り手ではない。`bouon-persona-thinking` skillと併用する。
 
 ## タスク管理
 
