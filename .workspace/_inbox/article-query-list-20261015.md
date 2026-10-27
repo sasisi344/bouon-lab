@@ -132,5 +132,5 @@
 ## 4. 次にやること
 
 - GSCエクスポート（カスタム7日）で、上記のA/B候補のクエリを部分一致で引き、表示回数が0のものは「需要ミスマッチ」を疑う（`project_indexing_vs_demand_mismatch`）
-- 採用した候補は `.task/task-list.md` に `T-NN` として登録する（`bouon-task-ops` skill）
-- 本メモの対応が済んだら、元CSVは `.task/query-check/data/` へ移動する
+- 採用した候補は `.task-management/task.md` に `T-NN` として登録する（`bouon-task-ops` skill）
+- 本メモの対応が済んだら、元CSVは `projects/query-check/data/` へ移動する

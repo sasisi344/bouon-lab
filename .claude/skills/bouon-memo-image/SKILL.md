@@ -51,7 +51,7 @@ description: 記事内に「複数の説明を1枚の画像にまとめた、ポ
 ## 作り方（手順）
 
 1. **本文から要点を抜く**: 記事の表・箇条書きから、確認済みの事実だけを選ぶ。型を決める（上の表）
-2. **テンプレートをコピー**: `templates/{compare,flow,checklist}.html`と`memo-common.css`を、作業フォルダ（例: `.workspace/.task/{案件}/images-src/`）にコピーする。HTMLの`［　］`を実際の文言に置き換える
+2. **テンプレートをコピー**: `templates/{compare,flow,checklist}.html`と`memo-common.css`を、作業フォルダ（例: `.workspace/projects/{案件}/images-src/`）にコピーする。HTMLの`［　］`を実際の文言に置き換える
 3. **描画する**（高さは自動）:
    ```bash
    node .claude/skills/bouon-memo-image/scripts/render-memo.mjs <入力.html> src/content/ja/{category}/{slug}/memo-{名前}.png
@@ -86,7 +86,7 @@ description: 記事内に「複数の説明を1枚の画像にまとめた、ポ
 
 ## 既存の例（T-10 住宅系の記事）
 
-HTMLソースと再生成手順は`.workspace/.task/t10-housing-affiliate/images-src/`にある。
+HTMLソースと再生成手順は`.workspace/projects/t10-housing-affiliate/images-src/`にある。
 
 | 型 | ファイル | 記事 |
 |---|---|---|

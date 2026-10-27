@@ -47,7 +47,7 @@ description: 記事公開前後の内部リンク品質チェック、interlink-
 1. 下書き完成後に「公開前チェックリスト」を実施する
 2. CMS反映前にハブ導線と `Next Step` のリンク先を手動クリック確認する
 3. 公開後24時間以内にGA4で `hub_click` / `next_step_click` / `related_click` の発火を確認する
-4. 週次で `.workspace/.task/internal-link-weekly-log.md` を更新する
+4. 効果確認が必要な変更は、`.task-management/task.md` に効果測定の行（データ待ち）として足す（週次ログは2026-10-16に月次取得へ移行して廃止）
 
 ## 週次ログ記録テンプレート
 

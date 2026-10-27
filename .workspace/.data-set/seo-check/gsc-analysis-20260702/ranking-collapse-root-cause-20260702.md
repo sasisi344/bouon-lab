@@ -9,7 +9,7 @@ status: "技術要因は2026-09-25〜10-06に対応完了（詳細はarchive）�
 
 # ランキング崩壊の根本原因調査レポート（2026-07-02、2026-10-13更新）
 
-> **更新の位置づけ**: 7月時点の「技術的には修正済み」は、その後の調査で未完了だったと判明した。**「現在の状況」節が現在の正**。対応済みの節と2026-07-02時点の調査内容（履歴）は、2026-10-13に`.workspace/.task/archive/ranking-collapse-resolved-20261013.md`へ移した。本ファイルには結論・現在の指標・未対応だけを残す。
+> **更新の位置づけ**: 7月時点の「技術的には修正済み」は、その後の調査で未完了だったと判明した。**「現在の状況」節が現在の正**。対応済みの節と2026-07-02時点の調査内容（履歴）は、2026-10-13に`.workspace/archive/legacy/ranking-collapse-resolved-20261013.md`へ移した。本ファイルには結論・現在の指標・未対応だけを残す。
 
 ## 現在の状況（2026-10-13更新）
 
@@ -22,7 +22,7 @@ status: "技術要因は2026-09-25〜10-06に対応完了（詳細はarchive）�
 
 ### 要因ごとの状態（要約）
 
-技術要因はすべて対応済み。内訳（`site`ドメイン誤記・旧Hugo `/posts/`の転送漏れ138件・meta refresh止まり480件の本物の301化・旧URL群の410化・`/upload/`・`/en/`）と本番での再確認表は [`archive/ranking-collapse-resolved-20261013.md`](../../../.task/archive/ranking-collapse-resolved-20261013.md) に移した。
+技術要因はすべて対応済み。内訳（`site`ドメイン誤記・旧Hugo `/posts/`の転送漏れ138件・meta refresh止まり480件の本物の301化・旧URL群の410化・`/upload/`・`/en/`）と本番での再確認表は [`.workspace/archive/legacy/ranking-collapse-resolved-20261013.md`](../../../archive/legacy/ranking-collapse-resolved-20261013.md) に移した。
 
 | 要因 | 状態（2026-10-13） |
 |---|---|
@@ -72,18 +72,18 @@ GSCページ表の日平均（W41は7日・9/26〜10/3）。
 | # | 項目 | 担当 | 状態 |
 |---|---|---|---|
 | 1 | 旧URL `/ja/knowledge/absorption-vs-insulation/` が404のまま。`absorption-vs-soundproofing-materials` へ301を追加する | Claude | **2026-10-13に`public/.htaccess`と`astro.config.mjs`へ追加済み。デプロイ後に本番で301を確認する** |
-| 2 | 404レポートの反映確認（`task-list.md` T-08、`schedule-task.md` S-03） | ユーザー+Claude | 2026-10-12のエクスポート1,000件を突合: **1,000件すべて`.htaccess`でカバー済み（410が900・301が100）**。ただし前回クロール日が9/25以降のURLは7件のみで、Googleの再クロールはまだ進んでいない。件数・チャート最終日の確認は次回エクスポートで判断（S-03、不足なら S-04） |
+| 2 | 404レポートの反映確認（`.task-management/task.md` T-08、`.task-management/task.md` S-03） | ユーザー+Claude | 2026-10-12のエクスポート1,000件を突合: **1,000件すべて`.htaccess`でカバー済み（410が900・301が100）**。ただし前回クロール日が9/25以降のURLは7件のみで、Googleの再クロールはまだ進んでいない。件数・チャート最終日の確認は次回エクスポートで判断（S-03、不足なら S-04） |
 | 3 | 既存の主要記事のURL検査（「Googleが選択した正規URL」がユーザー指定と一致するか） | ユーザー | 未確認（新規3記事のみ確認済み） |
 | 4 | クロール済み・未登録の記事92件の入れ替わり確認（10/10以降のインデックスレポート更新後） | ユーザー+Claude | 再クロール待ち。72件は7月以前に1回クロールされたきり |
 | 5 | `local`カテゴリ13本がすべて未登録（登録0・未登録9・一覧外4）。記事の評価か内部リンクかを切り分ける | Claude | 未着手（4の入れ替わりを見てから判断） |
 | 6 | 9月公開の新規記事3本の登録状況（2026-10-06時点は未登録・クロール履歴なし） | ユーザー | 内部リンクの孤立は解消済み（被リンク: `guitar-apartment-practice-guide`3本・`sleeping-parent-game-streaming-guide`2本・`karaoke-box-soundproof-performance-guide`2本、2026-10-13確認）。GSCでURL検査・登録リクエストの状況を確認する |
 | 7 | 「ペルソナ分散が低迷の原因」という仮説のデータ検証 | Claude | 未実施。必要ならカテゴリ別の表示回数・記事数の推移で検証する |
 
-判断の分岐（2026-10-07時点の結論）: 手動対策なし → 技術要因は解消済みのため、**Googleの再クロール・再評価を待つ段階**。効果は`weekly-task.md`のW42以降の7日表で見る。「クロール済み - インデックス未登録」が大半 → 内容の独自性・評価の問題（記事側の改善）。「検出 - インデックス未登録」が大半 → クロール予算の問題。
+判断の分岐（2026-10-07時点の結論）: 手動対策なし → 技術要因は解消済みのため、**Googleの再クロール・再評価を待つ段階**。効果は`.workspace/archive/legacy/weekly-task-archive-20261017.md`のW42以降の7日表で見る。「クロール済み - インデックス未登録」が大半 → 内容の独自性・評価の問題（記事側の改善）。「検出 - インデックス未登録」が大半 → クロール予算の問題。
 
 ### 関連ファイル（2026-10-06追加）
 
-- `archive/weekly-task-archive-20261006.md`（W-01・W-03・W-14の結果）
+- `.workspace/archive/legacy/weekly-task-archive-20261006.md`（W-01・W-03・W-14の結果）
 - メモリ: [[project_meta_refresh_redirect_finding]]・[[project_september_continuation_decision]]・[[project_persona_fragmentation_diagnosis]]
 - `.workspace/access-data/CLAUDE.md`（GSC・GA4の週次比較ルール）
-- `archive/ranking-collapse-resolved-20261013.md`（対応済みの節と、2026-07-02時点の履歴を移動）
+- `.workspace/archive/legacy/ranking-collapse-resolved-20261013.md`（対応済みの節と、2026-07-02時点の履歴を移動）

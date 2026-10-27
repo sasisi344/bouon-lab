@@ -35,7 +35,7 @@ npx astro check # 型チェック
 | `bouon-rewrite-strategy` | 既存記事の改善優先度判定・リライト実行時 |
 | `bouon-internal-link-ops` | 内部リンクの追加・変更、公開前チェック時 |
 | `bouon-hub-cards` | トップの入口カード6枚への掲載（frontmatter `hub`）の追加・変更、伸ばしたい記事のテコ入れ判断時 |
-| `bouon-task-ops` | `.workspace/.task/` の参照・更新・アーカイブ時 |
+| `bouon-task-ops` | `/monthly-ppdca` の結果を `.task-management/` に反映するとき（運用ルール本体は `.task-management/CLAUDE.md`） |
 | `bouon-dataset-lookup` | 記事作成・リライトで防音スペック・市場データ・調査メモなどの既存ナレッジを探すとき |
 | `bouon-weekly-report` | `.workspace/access-data/` のGSC/GA4の月次集計・前月比較・ページ別推移（`/monthly-ppdca`。取得仕様は `access-data/export-spec.md`） |
 | `bouon-growth-ops` | 収益導線設計（QUEST/PASONA/BEAF）・ビジュアル設計時 |
@@ -45,16 +45,16 @@ npx astro check # 型チェック
 
 ペルソナ定義（消費者A〜H・サプライヤーS1〜S5・編集長フィルター）は `.agents/persona/` を参照。`bouon-persona-thinking` skillと併用する。
 
-## タスク管理（`.workspace/.task/`）
+## タスク管理
 
-2本柱＋索引運用。まず `.workspace/.task/CLAUDE.md`（索引・読み方・更新ルール）を読む。詳細手順は `bouon-task-ops` skillを参照。
+タスクは `.task-management/` にある（344dev の hq からの統合司令の窓口）。タスクを読む・書く前に、必ず `.task-management/CLAUDE.md` を読む。
 
-- **`task-list.md`** — 今すぐ着手できるタスクのみ。項目ID `T-NN`（**削除厳禁**）
-- **`schedule-task.md`** — 日付が決まっているタスクと効果測定。効果測定は月初の月次解析のS-NNにまとめる。項目ID `S-NN`（個別ファイルは`schedule/`）
-- **`weekly-task.md`**・**`effect-monitoring.md`** — 運用を終えた移行先ポインタ（2026-10-17に効果測定を`schedule-task.md`へ移行）。新規追記しない（**削除厳禁**）
-- **`archive/`** — 完了済みタスクの保管（索引: `archive/task-list-index.md`）
-
-ブログ横断の中期〜長期タスクはGitHub Projectでも管理: https://github.com/users/sasisi344/projects/1 （詳細は`344ob/07_workspace/.agents/blog-registry.md`）。二重管理はしない。
+- 正本: `.task-management/task.md`（索引だけ読み、必要な ID の本文だけ開く）
+- 問題点・気づき・hq からの修正依頼: `.task-management/inbox.md`（作業の開始時に未処置を処理する）
+- 実行記録: `.task-management/records/index.md`（起票前・解析前に Grep する）
+- 計画書・調査・データは `.workspace/` に置き、タスクからリンクする
+- 月次解析（効果測定）の進め方と旧ID（S-NN・W-NN）の対応は `.task-management/CLAUDE.md` の「サイト固有」節
+- サイトをまたぐタスクは344dev の `hq/backlog.md`（GitHub Project は2026-10-27に廃止）
 
 ## コンテンツ作業フロー
 

@@ -1,6 +1,6 @@
 # 補足リサーチ（2026-06-10）— creator新規記事「第2弾」優先度A 2本用
 
-`.workspace/.task/streamer-post.md` 第2弾の優先度A
+`.workspace/archive/legacy/streamer-post.md` 第2弾の優先度A
 - `streaming-pc-fan-noise-mic`（PC本体ノイズ対策）
 - `streamer-pet-noise-balance`（ペット同居配信者の防音）
 

@@ -30,13 +30,11 @@ pnpm-debug.log*
 .workspace/access-data/
 
 # workspace: keyword/suggest raw exports (keep locally, do not commit; analysis files are committed)
-.workspace/.task/query-check/data/
-.workspace/.task/query-check/*_2026-*.csv
+.workspace/projects/query-check/data/
+.workspace/projects/query-check/*_2026-*.csv
 
 # workspace: archived datasets, tasks, scratch analysis
 .workspace/.data-set/.archieve/
-.workspace/.task/archieve/
-.workspace/.task/query-analyize/analysis_raw.txt
 
 # workspace: legacy one-off migration scripts (removed from repo)
 .workspace/scripts/legacy-root-scripts/

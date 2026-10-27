@@ -1,6 +1,6 @@
 /**
  * `src/content` を `build-interlink-postlist.mjs` と同じ手順で走査し、
- * `.workspace/.task/linkcheck.md` をカテゴリ別に生成する（表の `|` 破損に依存しない）。
+ * `.workspace/projects/linkcheck/linkcheck.md` をカテゴリ別に生成する（表の `|` 破損に依存しない）。
  * 実行: node .workspace/scripts/generate-linkcheck-task.mjs
  */
 import fs from "fs";
@@ -153,7 +153,7 @@ function main() {
   }
 
   const now = new Date().toISOString().slice(0, 10);
-  const out = path.join(projectRoot, ".workspace/.task/linkcheck.md");
+  const out = path.join(projectRoot, ".workspace/projects/linkcheck/linkcheck.md");
 
   let md = `# 誤リンク修正タスク（内部リンク）
 
@@ -162,7 +162,7 @@ function main() {
 
 ## メタ情報
 
-- **一覧ソース**: [\`interlink-postlist.md\`](../.data-set/interlink-postlist.md)（本タスクは同データを **ファイル走査で再現**）
+- **一覧ソース**: [\`interlink-postlist.md\`](../../.data-set/interlink-postlist.md)（本タスクは同データを **ファイル走査で再現**）
 - **記事一覧の再生成**: \`node .workspace/scripts/build-interlink-postlist.mjs\`
 - **本タスク表の再生成**: \`node .workspace/scripts/generate-linkcheck-task.mjs\`
 - **内部リンク形式**: \`/{lang}/{category}/{subcategory}/{slug}/\`（末尾スラッシュ必須）

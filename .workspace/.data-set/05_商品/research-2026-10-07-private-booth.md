@@ -1,8 +1,8 @@
 # 個室ブース（ワークブース・テレワークブース）調査
 
 - 作成日: 2026-10-07
-- 目的: 「個室ブース」記事の素案（`.workspace/.task/task-list.md` T-22）のための事前リサーチ。防音室との違い、遮音性能の実態、価格、消防法、需要チャネルを整理する
-- 反映先記事（slug）: 未定（候補は `.task/task-list.md` T-22 を参照）。既存の関連記事は `business/privacy-pod-market-growth`（市場成長）、`soundproof-room/budget-soundproof-booth-comparison`（家庭用の格安防音室）
+- 目的: 「個室ブース」記事の素案（`.task-management/task.md` T-22）のための事前リサーチ。防音室との違い、遮音性能の実態、価格、消防法、需要チャネルを整理する
+- 反映先記事（slug）: 未定（候補は 旧 T-22。`.task-management/records/index.md` を参照）。既存の関連記事は `business/privacy-pod-market-growth`（市場成長）、`soundproof-room/budget-soundproof-booth-comparison`（家庭用の格安防音室）
 - 鮮度: ◎（2026-10-07調査）。ただし価格・サービス料金・消防庁基準は記事に書く前に公式で再確認する（`bouon-research`）
 - 一次情報（メーカー公式・消防庁・自治体）と二次情報（比較メディア）を分けて記録した。**二次情報の数値は参考値**
 

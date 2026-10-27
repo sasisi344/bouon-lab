@@ -1,55 +1,35 @@
 ---
 name: bouon-task-ops
-description: .workspace/.task/ 配下（task-list.md・schedule-task.md）の参照・更新・アーカイブが必要なとき、または週次PDCA解析の前後に必ず使う。2本柱の役割分担（T-NN／W-NN索引）とarchive/への完了タスク移動手順を定義する。索引・読み方の正本は.workspace/.task/CLAUDE.md。
+description: /monthly-ppdca（月次解析）の結果を .task-management/ の task.md・records/ に反映するとき、月次解析の手順ファイル（.workspace/projects/monthly-analysis/）に効果測定の節を足すときに使う。タスク運用のルール本体は .task-management/CLAUDE.md（全サイト共通）で、本skillは防音Lab固有の月次解析との連携だけを定義する。
 ---
 
-# BouonLab タスク運用
+# BouonLab 月次解析とタスクの連携
 
-`.workspace/.task/` は防音Labの作業タスクを格納するフォルダ。作業の起点は常にここを確認する。
+**運用ルールの正本は `.task-management/CLAUDE.md`**（共通部分は344devのhqが配布。防音Lab固有の部分は末尾の「サイト固有」節）。本skillは、月次解析（`/monthly-ppdca`）とタスクのつなぎ方だけを書く。2026-10-27に `.workspace/.task/` から移行した。
 
-## マスターファイル（2本柱＋索引、削除厳禁）
+## 置き場
 
-**索引・読み方・振り分け・更新タイミングの正本は `.workspace/.task/CLAUDE.md`。** 本skillは手順の補足。
+| もの | 置き場 |
+|---|---|
+| 月次解析の行・効果測定の行 | `.task-management/task.md`（状態 `データ待ち`、予定日は翌月2日。個別の効果測定は「MM/DD（T-NN内）」） |
+| 月次解析の手順・確認項目 | `.workspace/projects/monthly-analysis/YYYY-MM-02-m{MM}-monthly-analysis.md` |
+| 個別の効果測定の手順（長いもの） | `.workspace/projects/monthly-analysis/YYYY-MM-DD-<slug>.md` |
+| 観測した数値 | `.workspace/access-data/2026/m{MM}/README.md`（タスクには写さない） |
+| 判定済みの効果測定 | `.task-management/records/` ＋ `records/index.md` に1行 |
 
-| ファイル | 役割 | 項目ID |
-|---|---|---|
-| `task-list.md` | **今すぐ着手できるタスクのみ**。データ待ちのタスクは置かない | `T-NN` |
-| `schedule-task.md` | 日付が決まっているタスクと効果測定。効果測定は月初の月次解析のS-NN（`schedule/YYYY-MM-02-m{MM}-monthly-analysis.md`）に節としてまとめる | `S-NN` |
-| `weekly-task.md`・`effect-monitoring.md` | 運用を終えた移行先ポインタ（2026-10-17に効果測定を`schedule-task.md`へ移行。旧W-NNの全文は`archive/weekly-task-archive-20261017.md`）。新規追記しない | - |
+## 施策を実施したとき
 
-両ファイルとも冒頭に索引表がある。**先に索引だけ読み、必要なIDの本文だけ読む。** 追加・完了のたびに索引表も同時に更新する。
+1. 次の月次解析の手順ファイルに節を足す（`### 対象（実施日）`。実施日・対象URLまたはクエリ・基準値・見る指標・判定基準）
+2. 手順が長い・単独で判定したいものは `task.md` にデータ待ちの行を足し、本文から手順ファイルの節にリンクする。短いものは手順ファイルの節だけでよい（「m{MM}の月次解析」の行がまとめて拾う）
+3. 月の後半に入ってからの施策は、その月は途中経過、判定は翌月
 
-**3ファイルとも、ファイル自体の削除は厳禁。** 中身の更新と、完了済み項目の削除（アーカイブへの移動）は可。
+## 月次解析の日（`/monthly-ppdca`）
 
-## archive/ フォルダ
+1. 手順ファイルの各節に「結果」を書く
+2. 判定まで済んだ節・行は `records/` に1ファイル＋`records/index.md` に1行（種別 `効果測定`）。`task.md` の行を消す
+3. 続ける節は翌月の手順ファイルへ送り、`task.md` に翌月の「m{MM}の月次解析」の行を起票する
+4. 着手できる施策は `task.md` に着手可で起票する。起票前に `records/index.md` をテーマ・slugで Grep する
 
-- パス: `.workspace/.task/archive/`（**archieve ではなく archive**、綴りに注意）
-- 完了済みタスク・完了済みセクション・用途終了した派生タスクファイルを格納する
-- 新規タスクを追加する前に `archive/` を確認し、同一・類似タスクとの重複や競合がないか差分チェックする
-- アーカイブ済み内容の再着手が必要な場合は、理由を明記したうえで該当マスターファイルに戻す
+## 旧IDの読み替え
 
-### task-list 完了アーカイブ（`task-list-NN.md`）
-
-`task-list.md` から完了タスクを削除するときは、必ず以下の手順で `archive/` に残す。`task-list.md` 内に「完了タスク」セクションを新規追記しない。
-
-1. `archive/task-list-index.md` を開き、次の番号（`task-list-01` から連番）を確認する
-2. `archive/task-list-NN.md` を新規作成する（NN は2桁ゼロ埋め）
-3. `archive/task-list-index.md` に1行追記し、「次の番号」を更新する
-4. `task-list.md` から該当ブロックを削除する
-
-1回のアーカイブ操作 = 1ファイル。複数セクションを同時に片付ける場合は1ファイルにまとめてよい。書き方のテンプレートは `references/task-archive-procedure.md` を参照。
-
-## 補助ファイル
-
-- 個別タスクの詳細は派生ファイル（`qfo-recheck-task-*.md` 等）に分離してよい
-- 派生ファイルは完了後 `archive/` へ移動する（安易な削除は避ける）
-- `creator-topic-clusters.md` 等の参照・調査用ファイルはマスターではないが、削除前に `task-list.md` からの参照有無を確認する
-
-## 運用フロー
-
-1. 作業開始前に `task-list.md`（今すぐやること）と `schedule-task.md`（日付指定・効果測定）の**索引表**を読む
-2. 新規タスク追加時は `archive/` を検索し、過去の完了内容と競合しないか確認する
-3. **`task-list.md` のタスク完了時**: 上記「task-list 完了アーカイブ」手順に従う
-4. **月次のGSC/GA4データが揃ったら**: その月の月次解析のS-NNの個別ファイルに沿って確認し、各節に結果を書く。続ける項目は翌月のS-NNへ送り、着手可能なフォローアップは `task-list.md` へ新規T-NNとして起票する
-5. **施策を実施したら**: 効果確認の節を、次の月次解析のS-NNの個別ファイルにその場で足す（新しいW-NNは振らない）
-6. 2本柱の役割分担を維持する（同一チェックリストの重複記載を避け、詳細は一方に集約して他方からリンクする）
+手順ファイルの本文は旧ID（S-NN・W-NN）のまま残っている。対応表は `.task-management/CLAUDE.md` のサイト固有節。新しい効果測定に S-NN・W-NN は振らない。

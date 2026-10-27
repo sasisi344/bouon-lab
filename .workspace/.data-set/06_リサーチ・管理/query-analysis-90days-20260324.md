@@ -29,5 +29,5 @@ BouonLabの過去90日間のSearch Consoleデータを解析し、現在の「�
 5. **ブランド・レビュー**: 日本の防音マンションブランドの英語ガイド。
 
 ---
-_Reference: .workspace/.task/query-analyize/seo-report-20260324.md_
+_Reference: 旧タスクフォルダの query-analyize/seo-report-20260324.md（現存しない）_
 _Created: 2026-03-24_

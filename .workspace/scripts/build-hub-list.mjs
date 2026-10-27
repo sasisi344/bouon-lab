@@ -74,7 +74,7 @@ let out = `# hub-cluster-list（トップの入口カードの所属記事）
 
 - **再生成**: \`node .workspace/scripts/build-hub-list.mjs\`
 - **クラスター定義**: \`src/data/hubClusters.ts\`
-- **要件**: \`.workspace/.task/top-category-chenge-task.md\`
+- **要件**: \`.workspace/projects/hub-cards/requirements.md\`
 
 `;
 

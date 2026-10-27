@@ -77,4 +77,4 @@
 - `Dr-value`, `STC-Rating`, `Rw`, `Soundproofing (防音)`, `Isolation (遮音)`, `Absorption (吸音)`, `RT60`, `Basetrap`, `Rent Premium`, `Supply Gap`
 
 ---
-*Generated based on: .workspace/.task/prompts/ (No1-No4 reports)*
+*Generated based on: 旧タスクフォルダの prompts/（現存しない） (No1-No4 reports)*

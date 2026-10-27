@@ -1,0 +1,59 @@
+# task-list アーカイブ索引
+
+`task-list.md` から削除した完了タスクの通し番号管理。（2026-10-27に凍結。各行は `.task-management/records/index.md` に変換済み）
+
+| # | ファイル | 完了日 | 概要 |
+|---|----------|--------|------|
+| 01 | [task-list-01.md](./task-list-01.md) | 2026-07-08 | カテゴリ偏り是正（creator/knowledge/local/ペルソナH） |
+| 02 | [task-list-02.md](./task-list-02.md) | 2026-07-05 | creator新規6記事・W27/W28分析・6記事ニッチ化リライト |
+| 03 | [task-list-03.md](./task-list-03.md) | 2026-07-05 | ランキング崩壊調査・リダイレクト138件・GSCクエリ対応 |
+| 04 | [task-list-04.md](./task-list-04.md) | 2026-06-24 | 2026-06棚卸し（EEAT・リンク・週次タスク） |
+| 05 | [task-list-05.md](./task-list-05.md) | 2026-07-10 | QFO再調査の実装（A-1〜A-8・B群・カバー画像） |
+| 06 | [task-list-06.md](./task-list-06.md) | 2026-07-08 | ニッチ化/creator6記事のW27/W28ベースライン試行 |
+| 07 | [task-list-07.md](./task-list-07.md) | 2026-07-10 | トピッククラスタ表の最新化・D値ハブ化ほかカニバリ改善3件 |
+| 08 | [task-list-08.md](./task-list-08.md) | 2026-09-06 | 本音と建前Tier1〜4・構造強化Tier A〜D・見出しバグ横断チェック・AffiliateCard整備 |
+| 09 | [task-list-09.md](./task-list-09.md) | 2026-09-16 | カニバリクラスタA〜D（計7記事）をアクセスほぼゼロにより削除・301リダイレクト統合 |
+| 10 | [task-list-10.md](./task-list-10.md) | 2026-09-16 | `cable-noise-ground-loop-prevention`と`ground-loop-noise-basics`のカニバリ統合（前者削除・301リダイレクト） |
+| 11 | [task-list-11.md](./task-list-11.md) | 2026-09-16 | ギター新規記事`guitar-apartment-practice-guide`を作成・公開 |
+| 12 | [task-list-12.md](./task-list-12.md) | 2026-09-19 | デザイン改善8項目対応＋CTAリンク修正・CtaBoxレイアウト修正・アフィリエイト画像差し替え |
+| 13 | [task-list-13.md](./task-list-13.md) | 2026-09-19 | 新規記事2件公開（ゲーム実況記事・カラオケボックス記事） |
+| 14 | [task-list-14.md](./task-list-14.md) | 2026-09-21 | 荷重分散リライト・窓防音記事の統合（新規記事アイデア4件のうち残り2件完了） |
+| 15 | [task-list-15.md](./task-list-15.md) | 2026-09-30 | Tier C記事16本の事実確認・更新要否判断（補助金記事1件修正、2件を一次情報で検証） |
+| 16 | [task-list-16.md](./task-list-16.md) | 2026-10-05 | GSC週次エクスポートを「カスタム1週間」運用に固定（T-06） |
+| 17 | [task-list-17.md](./task-list-17.md) | 2026-10-06 | T-07・T-08のチェック済みサブタスク整理、派生ファイル2本（統合候補・本音と建前調査）をarchiveへ移動 |
+| 18 | [task-list-18.md](./task-list-18.md) | 2026-10-06 | T-05 `soundproof-material-spec-chart`の入口化（出リンク4本・被リンク2本を追加） |
+| 19 | [task-list-19.md](./task-list-19.md) | 2026-10-06 | T-12 音レントの契約条件を公式PDFで再確認し、レンタル料記事・音大生ハブの記載を修正 |
+| 20 | [task-list-20.md](./task-list-20.md) | 2026-10-06 | T-09 サイトデザインの見やすさ改善（スマホ最適化：本文幅・表の横スクロール・見出し折返し） |
+| 21 | [task-list-21.md](./task-list-21.md) | 2026-10-06 | T-17 統合先2記事（地方4都市の統合記事・補助金エリア統合先）のGSC URL検査・インデックス登録リクエスト |
+| 22 | [task-list-22.md](./task-list-22.md) | 2026-10-07 | T-19 サイトマップに記事の`lastmod`を追加（記事193本、本番確認済み） |
+| 23 | [task-list-23.md](./task-list-23.md) | 2026-10-07 | T-18 www・http版を`https://bouon-lab.com`へ301統一（`.htaccess`、本番・GSC確認済み） |
+| 24 | [task-list-24.md](./task-list-24.md) | 2026-10-07 | T-01 ランキング崩壊調査のGSC UI確認（手動対策なし・インデックス理由別内訳・サイトマップ202URL） |
+| 25 | [task-list-25.md](./task-list-25.md) | 2026-10-07 | T-13 `soundproof-room-rental-cost`を音レントの最短15ヶ月に整合し、公式サイトの最新情報でrental-leaseと併せて書き直し（通常プラン/MCプラン・充当・損益分岐） |
+| 26 | [task-list-26.md](./task-list-26.md) | 2026-10-08 | T-21 トップの入口カードを6枚に再設計（`hub`パラメータ管理・3本ランダム表示・`bouon-hub-cards` skill）。本番反映は2026-10-08 |
+| 27 | [task-list-27.md](./task-list-27.md) | 2026-10-08 | T-14 スマホ表示の残り確認（一覧ページ・CtaBox・AffiliateCard・ArchiveCarousel・検索・次に読む／関連記事） |
+
+| 28 | [task-list-28.md](./task-list-28.md) | 2026-10-08 | T-02 GA4キーイベント登録（`affiliate_click`。リアルタイムで検出確認のうえ登録完了） |
+
+| 29 | [task-list-29.md](./task-list-29.md) | 2026-10-17 | T-03（月次の取得仕様で解消）・T-07 Threads初回投稿・T-15 睡眠の音の悩み記事を完了。weekly-task.mdの効果測定をschedule-task（S-11・S-12）へ移行 |
+
+| 30 | [task-list-30.md](./task-list-30.md) | 2026-10-17 | T-26 配信者向け記事の方針（9グループ統合で36本→26本）と`creator/`の2026年10月時点の事実確認（建築確認・農地法罰則・簡易ブース価格・ペット記事の再構成） |
+
+| 31 | [task-list-31.md](./task-list-31.md) | 2026-10-18 | T-16 窓リノベ2026（上限100万円・交付申請は12/31まで）に合わせて補助金記事2本を更新（子育てエコホーム→みらいエコ住宅2026、古いフローチャート画像を外した） |
+
+| 32 | [task-list-32.md](./task-list-32.md) | 2026-10-18 | T-20 「防音スペースのレンタル」統合まとめ記事（`soundproof-rental/soundproof-space-rental-guide`）を作成・スマホ確認済み・2026-10-18デプロイ。T-22との相互リンクはT-22に移管 |
+
+| 33 | [task-list-33.md](./task-list-33.md) | 2026-10-18 | T-22 個室ブースを自宅に置く記事（`soundproof-room/home-private-booth-guide`）を需要確認のうえ作成・デプロイ。GSC登録はユーザー対応で残り |
+
+| 34 | [task-list-34.md](./task-list-34.md) | 2026-10-18 | T-23 10万円台の防音室向けCTA（だんぼっち・OTODASU II）を追加し、だんぼっち・OTODASUの価格と性能表記を2026年10月時点に修正 |
+
+| 35 | [task-list-35.md](./task-list-35.md) | 2026-10-18 | T-24 電子ドラム・ピアノの旧URL3本の転送先をカテゴリ一覧から既存記事（`electronic-drum-vibration-fuwafuwa-system`・`piano-room-guide`）へ変更し、2026-10-18にデプロイ・301を確認 |
+
+| 36 | [task-list-36.md](./task-list-36.md) | 2026-10-19 | T-25 打鍵・打撃音の入口づくり。キーボード・電子ピアノの記事を新規作成、電子ドラムの記事を全面リライト、ハブ記事（叩く音・押す音が下の階に響くのはなぜ？）を新規作成し、2026-10-19にデプロイ・301を確認 |
+
+| 37 | [task-list-37.md](./task-list-37.md) | 2026-10-19 | T-27 チェロ記事の統合を取り消し（301・サックス記事の節・被リンク2本を戻す）、エンドピン・防振マット・床の悩みでリライトし、2026-10-19にデプロイ・301を確認。GSC登録はユーザー対応で残り |
+
+| 38 | [task-list-38.md](./task-list-38.md) | 2026-10-19 | T-28 仙台の防音賃貸記事を裏取り（大学の所在地・ミュージション仙台・業者名・統計がいずれも誤りか出典なし）し、音大生の物件探し記事へ統合・301し、2026-10-19にデプロイ・301を確認 |
+
+| 39 | [task-list-39.md](./task-list-39.md) | 2026-10-27 | T-29 GSC・GA4の過去の月次データ（m07〜m09）を取得し、m10の比較基準を作成（m07はGA4欠損、m08のGA4は8/17〜、G1はページ・クエリのみ） |
+
+**次の番号**: `task-list-40`

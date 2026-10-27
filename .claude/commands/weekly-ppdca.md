@@ -6,13 +6,13 @@ description: （廃止・過去データ用）GSC/GA4の週次データの解析
 
 > **2026-10-16に廃止。** 新しいデータは月次で取得し `/monthly-ppdca` で解析する（仕様は `.workspace/access-data/export-spec.md`）。このコマンドは過去の週次データ（w24〜w42）を見直すときだけ使う。
 
-**引数**: 対象週番号（例: `/weekly-ppdca W37`）。省略時は今日の日付からISO週番号を算出して対象週とする。「weekly-taskを作成」等の指示でも同じ処理を行う。
+**引数**: 対象週番号（例: `/weekly-ppdca W37`）。省略時は今日の日付からISO週番号を算出して対象週とする。
 
 **前提（Design B: データ取得は手動、仕分け・解析・タスク化を自動化）**: GA4/GSCからのCSVエクスポート自体はこのコマンドの範囲外（ユーザーがブラウザから手動でダウンロードする）。将来API化する場合も、このコマンドの入力契約（Step 2のフォルダ構成）は変えずにStep 1だけ自動取得スクリプトに差し替えられる設計にする。
 
 ## Step 0. 事前ロード（毎回必ず実行）
 
-`.workspace/.task/CLAUDE.md` と `bouon-task-ops` skillの2本柱体制（`task-list.md`=T-NN／`weekly-task.md`=W-NN）を前提に、両ファイルの**索引表**、直近数週分の生データ、`archive/task-list-index.md`を読み込む（全文は必要なIDだけ読む）。
+`.task-management/CLAUDE.md` を前提に、`.task-management/task.md` の**索引表**と `.task-management/records/index.md` を読む。過去の週次の生データ・旧W-NNは `.workspace/archive/legacy/weekly-task-archive-20261017.md` を必要な週だけ Grep する（凍結ファイルなので書き込まない）。
 
 ## Step 1. 取り込み・仕分け（`.workspace/access-data/_inbox/`）
 
@@ -39,10 +39,10 @@ description: （廃止・過去データ用）GSC/GA4の週次データの解析
 - **意図のずれ**: 10位以内でCTR 3%未満のページ、表示が多いのにタイトル・H2に語がないクエリを拾い、リライトタスクにする。判定と対応は `bouon-writing` skillの`references/query-intent-match.md` Step 7（CTRは10位以内のページで測る）
 - **GA4**（データがある場合）: LP別エンゲージメント率・直帰率の異常値、参照元/メディアの偏り
 
-## Step 4. 既存タスクとの重複チェック（`bouon-task-ops` skill準拠）
+## Step 4. 既存タスクとの重複チェック
 
-1. `task-list.md`・`weekly-task.md`の索引で同一テーマの未完了項目（T-NN／W-NN）があれば「進捗更新」として扱う（重複セクションを増やさない）
-2. 過去の分析ファイルや`archive/task-list-NN.md`で同じ論点が完了・却下済みか確認する
+1. `task.md` の索引で同一テーマの未完了T-NNがあれば「進捗更新」として扱う（重複を増やさない）
+2. `records/index.md` をテーマ・slugで Grep し、同じ論点が完了・見送り済みか確認する
 3. 期限付きチェック項目が今回のデータ範囲に該当するか確認し、完了/継続を判定する
 
 ## Step 5. ドラフト出力（この時点ではファイルに書き込まない）
@@ -53,13 +53,13 @@ description: （廃止・過去データ用）GSC/GA4の週次データの解析
 ### Check（前週からの変化）
 {サイト全体の表・ページ/クエリのハイライト}
 
-### 今すぐ着手できる候補（task-list.md行き）
+### 今すぐ着手できる候補（task.md に着手可で起票）
 - {該当すれば}
 
-### 次回データ待ちの候補（weekly-task.md行き）
-- [ ] {事象} → {確認すべき次回データ・確認時期}（既存W-NNへの追記か新規W-NNかを明記）
+### 次回データ待ちの候補（月次解析の手順ファイル＋task.md のデータ待ちの行）
+- [ ] {事象} → {確認する指標・判定の月}
 
-### 陳腐化・archive行き候補
+### 陳腐化・見送り候補（records/ 行き）
 - {前提が崩れた項目があれば}
 ```
 
@@ -67,8 +67,7 @@ description: （廃止・過去データ用）GSC/GA4の週次データの解析
 
 ## Step 6. 確定 → ファイルへの反映
 
-1. `weekly-task.md`「週次生データ」: 対象週のスナップショットを先頭に追記する（直近3週分を超えたものは`archive/weekly-task-archive-YYYYMMDD.md`へ移す）
-2. `weekly-task.md`: 該当W-NNへ結果を追記し、次回データで確認する項目は新規W-NNとして起票する（重複がないか確認し、**索引表も同時に更新**する）
-3. `task-list.md`: 今すぐ着手できるタスクを新規T-NNとして追加する場合のみ追記する（**索引表も同時に更新**し、関連列にW-NNを書く）
-4. 分析が長くなる場合は`weekly-PPDCA-task-{NN}.md`として作成し、完了後は`bouon-task-ops` skillの手順で`archive/`へ移動する
-5. `pnpm build`等のコード変更は伴わないため実行不要。ファイル更新後は変更点を要約して報告する
+1. 過去週を見直した結論は `.workspace/access-data/CLAUDE.md` §6 の作業ログに1行書く（旧 `weekly-task.md` は凍結済みなので追記しない）
+2. 今すぐ着手できるものは `.task-management/task.md` に新規T-NN（着手可）で追加する（索引と本文を同じ編集で。新規IDは `task.md` と `records/index.md` を合わせた最大値+1）
+3. データ待ちの項目は、次の月次解析の手順ファイル（`.workspace/projects/monthly-analysis/`）に節を足し、`task.md` にデータ待ちの行を足す
+4. `pnpm build`等のコード変更は伴わないため実行不要。ファイル更新後は変更点を要約して報告する

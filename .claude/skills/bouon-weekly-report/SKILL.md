@@ -60,8 +60,8 @@ python $S trend bass-trap onetouch         # URL一部一致で週次推移（7�
 1. `_inbox/` のCSVを `access-data/2026/w{NN}/` に仕分けた後、**`gsc-periods.json` にその週のGSC期間を登録する**（`span`: `7d`／`3w`／`3m`／`compare`、7日なら `start`・`end`）。未登録の5列GSCは7日と仮定され、警告が出る
 2. `python $S inventory` で比較可否を確認する
 3. `python $S report w{NN}` を実行する
-4. 出力のうち、施策に関わるページ・クエリだけ `trend` で過去と並べる（月次解析のS-NN（`schedule-task.md`）に並ぶ施策の対象URLを使う）
-5. 結果を `.task/weekly-task.md` の「週次生データ」先頭に要約して追記し、該当W-NNに結果を書く（手順は `bouon-task-ops` skill、`/weekly-ppdca`）
+4. 出力のうち、施策に関わるページ・クエリだけ `trend` で過去と並べる（`.task-management/task.md` のデータ待ちの行に並ぶ施策の対象URLを使う）
+5. 結果を `access-data/2026/m{MM}/README.md` に要約して書き、判定した効果測定は `.task-management/task.md` の該当行を `records/` へ移す（手順は `.task-management/CLAUDE.md` §6、`/monthly-ppdca`）。過去の週次（w{NN}）を集計したときは、結論を `access-data/CLAUDE.md` §6 に1行残す
 6. `access-data/CLAUDE.md` の索引（§3）と作業ログ（§6）を更新する
 
 ## 比較ルール（スクリプトが自動判定）
