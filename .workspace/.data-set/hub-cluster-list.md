@@ -21,7 +21,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | ○ | soundproof-rental | `bouon-rental-market-guide` | 【2026完全版】防音賃貸・防音マンション完全ガイド｜全国相場・D値・ブランド・選び方を総まとめ | false |
 | 2 | ○ | soundproof-rental | `report-japan-soundproof-rental-market-needs` | 【調査報告】首都圏における高性能防音賃貸市場の定量的分析（2025-2026） | false |
-| 3 | ○ | local | `osaka-soundproof-rental-guide` | 【2026最新】大阪の防音賃貸ガイド｜ペット可・駅近・格安エリアまで徹底網羅 | false |
+| 3 | ○ | local | `osaka-soundproof-rental-guide` | 【2026最新】大阪の防音賃貸ガイド｜ペット可・駅近・格安エリアの相場と選び方 | false |
 | 4 | - | local | `regional-city-soundproof-rental-guide` | 【2026】地方都市の防音賃貸ガイド｜金沢・岡山・熊本（西日本）と新潟（東日本）の選び方 | false |
 
 ## sound-leak（6本）
@@ -39,7 +39,7 @@
 
 | 表示順 | 初期表示 | category | slug | title | draft |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | ○ | diy | `diy-internal-window-road-noise-reduction` | 内窓の防音効果を実測｜賃貸DIYポリカ窓から本格インプラスまで徹底比較【2025-2026年版】 | false |
+| 1 | ○ | diy | `diy-internal-window-road-noise-reduction` | 内窓の防音効果を実測｜賃貸DIYポリカ窓から本格インプラスまで比較【2025-2026年版】 | false |
 | 2 | ○ | diy | `bass-trap-installation-guide` | ベーストラップ自作・設置ガイド｜低音こもりを解消する配置・測定の全手順 | false |
 | 3 | ○ | diy | `soundproof-room-diy-cost` | 自作防音室の費用内訳｜材料費だけでいくらかかる？ | false |
 | 4 | - | diy | `renter-parent-house-soundproofing` | 賃貸の防音対策は壁を傷つけずにできる？原状回復を守る5つの方法【実家・親バレ対策も】 | false |
@@ -50,7 +50,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | ○ | knowledge | `soundproof-material-spec-chart` | 防音材スペック早見表｜面密度・TL値・D値の対応を一覧で比較できる資料 | false |
 | 2 | ○ | knowledge | `ground-loop-noise-basics` | アース線でノイズは減る？つなぐと増える場合とグランドループ対策の順番 | false |
-| 3 | ○ | soundproof-room | `bouon-dchiseinou-meyasu` | 遮音性能の基準「D値」とは？楽器・用途別の目安を徹底解説 | false |
+| 3 | ○ | soundproof-room | `bouon-dchiseinou-meyasu` | 遮音性能の基準「D値」とは？楽器・用途別の目安 | false |
 | 4 | - | soundproof-rental | `bedroom-noise-type-solution-guide` | 上の階の足音・隣の話し声で眠れない｜音の種類で変わる寝室の騒音対策の選び方 | false |
 | 5 | - | knowledge | `d-value-vs-rw-value-confusion` | D値とRw値は換算できない｜日本と海外の遮音等級を混同すると失敗する理由 | false |
 

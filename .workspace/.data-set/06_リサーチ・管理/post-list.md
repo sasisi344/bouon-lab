@@ -54,7 +54,7 @@
 | Testing Cheap Gap Tapes for Soundproofing | Can $5 Seals Really Block Noise? | `100yen-gap-tape-soundproof-verification` | 2026-03-12T19:20:00+09:00 |
 | Heavy Footsteps at Night? Why White Noise Machines Outperform Earplugs for Sleep | `footstep-noise-white-noise-machine-solution` | 2026-03-12T19:10:00+09:00 |
 | Block Road Noise with DIY Internal Windows | Removable Soundproofing for Renters | `diy-internal-window-road-noise-reduction` | 2026-03-12T19:00:00+09:00 |
-| 内窓の防音効果を実測｜賃貸DIYポリカ窓から本格インプラスまで徹底比較【2025-2026年版】 | `diy-internal-window-road-noise-reduction` | 2026-03-12T19:00:00+09:00 |
+| 内窓の防音効果を実測｜賃貸DIYポリカ窓から本格インプラスまで比較【2025-2026年版】 | `diy-internal-window-road-noise-reduction` | 2026-03-12T19:00:00+09:00 |
 | 賃貸の防音室、大家さんに言うべき？「家具」か「リフォーム」かの境界線とトラブル回避術 | `rental-tell-landlord-furniture-vs-renovation` | 2026-03-12T12:00:00+09:00 |
 | 木造アパート2階に防音室は置ける？床の『耐荷重』不安を解消する大家へのプレゼン案 | `wood-apartment-presentation-plan` | 2026-03-12T11:00:00+09:00 |
 | Soundproof Layouts for Bedrooms and Home Offices | `bedroom-telework-layout-soundproof` | 2026-03-12T11:00:00+09:00 |
@@ -202,7 +202,7 @@
 | The Cruel Truth of Budget Soundproof Booths (2025): Danbocchi, OTODASU, DIY... The Realistic Solu... | `budget-soundproof-booth-comparison` | 2026-01-06T02:50:00+09:00 |
 | 【2025年版】格安防音室の残酷な真実。だんぼっち・OTODASU・自作…20万円以下で買える現実解 | `budget-soundproof-booth-comparison` | 2026-01-06T02:50:00+09:00 |
 | 'Can''t Sleep due to Noise? Get Silence with the Ultimate \"Earplugs + NC\" Combo' | `noise-canceling-headphones-sleep` | 2026-01-06T02:50:00+09:00 |
-| 騒音で眠れないあなたへ。「耳栓＋ノイキャン」最強の組み合わせで静寂を手に入れる | `noise-canceling-headphones-sleep` | 2026-01-06T02:50:00+09:00 |
+| 騒音で眠れないあなたへ。「耳栓＋ノイキャン」の組み合わせで静けさを手に入れる | `noise-canceling-headphones-sleep` | 2026-01-06T02:50:00+09:00 |
 | Saxophone Practice in Apartments: e-Sax, Booths, or Yamaha? 3 Realistic Solutions for Noise | `saxophone-practice-apartment` | 2026-01-06T02:50:00+09:00 |
 | サックスの防音対策｜アパートで練習するための3つの現実的な選択肢【2026年版】 | `saxophone-practice-apartment` | 2026-01-06T02:50:00+09:00 |
 | Mechanism and Structure of Soundproof Rooms | The Balance Between Sound Absorption and Insulation | `soundproof-room-mechanism` | 2026-01-05T00:00:00+09:00 |

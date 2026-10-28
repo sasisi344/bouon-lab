@@ -7,3 +7,4 @@
 | ID | 日付 | 書いた人 | 内容（1〜2行） | 処置 |
 |---|---|---|---|---|
 | I-01 | 10/27 | Claude | `.workspace/projects/monthly-analysis/` の手順ファイル本文は旧ID（S-NN・W-NN）のまま。T-31（m10）の作業時に、旧S-NN→T-NNの対応（`CLAUDE.md` サイト固有節）で読み替える。見出しの書き換えはしない | 見送り: 旧IDで経緯をたどれるよう残す |
+| I-02 | 10/28 | Claude | `diy/diy-internal-window-road-noise-reduction` は title・本文で「実測」とうたうが、筆者が測った記録がない可能性。出典の数値なら「公表値・目安」に直す（タイトルのクエリ契約も見る） | → T-43（フェーズ3以降の通読で扱う） |
