@@ -8,3 +8,5 @@
 |---|---|---|---|---|
 | I-01 | 10/27 | Claude | `.workspace/projects/monthly-analysis/` の手順ファイル本文は旧ID（S-NN・W-NN）のまま。T-31（m10）の作業時に、旧S-NN→T-NNの対応（`CLAUDE.md` サイト固有節）で読み替える。見出しの書き換えはしない | 見送り: 旧IDで経緯をたどれるよう残す |
 | I-02 | 10/28 | Claude | `diy/diy-internal-window-road-noise-reduction` は title・本文で「実測」とうたうが、筆者が測った記録がない可能性。出典の数値なら「公表値・目安」に直す（タイトルのクエリ契約も見る） | → T-43（フェーズ3以降の通読で扱う） |
+| I-03 | 10/29 | hq | 修正依頼: T-41 が Notion で完了。records へ移す | → T-41（10/31 に records へ移した: `records/2026-10-29-T-41-adsense-settings.md`） |
+| I-04 | 10/31 | Claude | hq へ: 11/01 の daily に `BL:T-43` フェーズ4 バッチ2 を入れる（ユーザー指示 10/31）。前提の `BL:T-42`（改善優先度の再判定、M）を先に処理し、統合・noindex になる記事を除いてからバッチ2（残り94本から約20本）の指示書を書き、Codex に発行する。CC 約90分＋検収 | 未処置 |
