@@ -70,7 +70,7 @@
 | バッチ | 対象 | 本数 | 指示書 | 状態 |
 |---|---|---:|---|---|
 | 1 | m09 表示5以上のうち、creator・local・business を除いたもの。需要がある記事なので、T-42 で統合・noindex になる見込みが低い | 21 | `.workspace/codex/orders/2026-10-31-T-43-b1.md`（差し戻し `-r1`） | 完了 2026-10-31（CC 検収済み。効果測定は T-45） |
-| 2 | 残りの knowledge・diy・soundproof-room・soundproof-rental・money（再計測で91本）から、T-42 で表示0（未登録）・21位以下で表示多を除き、3か月の表示が多い順 | 20 | `.workspace/codex/orders/2026-11-01-T-43-b2.md` | 発行 2026-11-01 |
+| 2 | 残りの knowledge・diy・soundproof-room・soundproof-rental・money（再計測で91本）から、T-42 で表示0（未登録）・21位以下で表示多を除き、3か月の表示が多い順 | 20 | `.workspace/codex/orders/2026-11-01-T-43-b2.md` | 発行 2026-11-01（task-mvx4z8y3-kkj5te） |
 | 3〜 | 同じ母集団の残り（表示あり47本＋登録済みの5本） | 52 | バッチ2の検収の後に書く | 待ち |
 | 保留 | 同じ母集団のうちインデックス未登録の19本 | 19 | — | T-47 待ち |
 | 保留 | creator（20本）: 配信者クラスタの統合判定（11/16 以降）と creator 未登録記事の再構築を先にする | 20 | — | 判定待ち |
