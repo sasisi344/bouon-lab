@@ -5,7 +5,7 @@ description: /monthly-ppdca（月次解析）の結果を .task-management/ の 
 
 # BouonLab 月次解析とタスクの連携
 
-**運用ルールの正本は `.task-management/CLAUDE.md`**（共通部分は344devのhqが配布。防音Lab固有の部分は末尾の「サイト固有」節）。本skillは、月次解析（`/monthly-ppdca`）とタスクのつなぎ方だけを書く。2026-10-27に `.workspace/.task/` から移行した。
+**運用ルールの正本は `.task-management/CLAUDE.md`**（共通部分は344blogのhqが配布。防音Lab固有の部分は末尾の「サイト固有」節）。本skillは、月次解析（`/monthly-ppdca`）とタスクのつなぎ方だけを書く。2026-10-27に `.workspace/.task/` から移行した。
 
 ## 置き場
 

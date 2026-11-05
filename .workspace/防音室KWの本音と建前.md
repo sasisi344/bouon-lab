@@ -40,7 +40,7 @@ tags:
 
 この本音と建前の分析フレームワークを、防音Lab（`/bouon-lab` コマンド）が参照するシンキングルール・ライティングルールとして切り出した。KWごとの本音・建前の洗い出し手順、記事構成（導入→中盤→後半）への落とし込み方、再利用可能なプロンプト例を記録済み。
 
-- 作成先（344devリポジトリ、vault外）: `C:/Users/sasis/344dev/bouon-lab/.agents/bouon-writer.md`
+- 作成先（344blogリポジトリ、vault外）: `C:/Users/sasis/344blog/bouon-lab/.agents/bouon-writer.md`
 - `/bouon-lab` コマンドの実行ルールに元々参照先として指定されていたが未作成だったため、今回新規作成
 - 既存の `.agents/persona/00_Persona-Omega.md`（執筆後の検閲フィルター）とセット運用する構成にした
 

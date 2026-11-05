@@ -1,0 +1,408 @@
+<!DOCTYPE html><html lang="ja" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-4osdczsy"> <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方 | 防音Lab</title><link rel="canonical" href="https://bouon-lab.com/ja/knowledge/vibration-isolation-technology-trend/"/><link rel="sitemap" href="/sitemap-index.xml"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"防音Lab","url":"https://bouon-lab.com","logo":"https://bouon-lab.com/favicon.svg"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"防音Lab","url":"https://bouon-lab.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"HOME","item":"https://bouon-lab.com/ja/"},{"@type":"ListItem","position":2,"name":"KNOWLEDGE","item":"https://bouon-lab.com/ja/knowledge/"},{"@type":"ListItem","position":3,"name":"低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方","item":"https://bouon-lab.com/ja/knowledge/vibration-isolation-technology-trend/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方","description":"防振床・浮き床とは何か、低周波振動はどう対策するのか。質量・ばね・固有振動数の考え方から、防振ゴム・制振マット・浮き床・BOX in BOX構法の違い、施工精度が性能を左右する理由までを整理しました。","image":"https://bouon-lab.com/_astro/cover.mnWIQvQY_126CsY.jpg","datePublished":"2025-11-09T06:50:00.000Z","dateModified":"2026-10-19T00:00:00.000Z","inLanguage":"ja","author":{"@type":"Organization","name":"防音Lab","url":"https://bouon-lab.com"},"publisher":{"@type":"Organization","name":"防音Lab","logo":{"@type":"ImageObject","url":"https://bouon-lab.com/favicon.svg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://bouon-lab.com/ja/knowledge/vibration-isolation-technology-trend/"}}</script><link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v6.1.5"/><meta name="generator" content="Starlight v0.39.2"/><meta property="og:title" content="低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方"/><meta property="og:type" content="article"/><meta property="og:url" content="https://bouon-lab.com/ja/knowledge/vibration-isolation-technology-trend/"/><meta property="og:locale" content="ja"/><meta property="og:description" content="防振床・浮き床とは何か、低周波振動はどう対策するのか。質量・ばね・固有振動数の考え方から、防振ゴム・制振マット・浮き床・BOX in BOX構法の違い、施工精度が性能を左右する理由までを整理しました。"/><meta property="og:site_name" content="防音Lab"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="防振床・浮き床とは何か、低周波振動はどう対策するのか。質量・ばね・固有振動数の考え方から、防振ゴム・制振マット・浮き床・BOX in BOX構法の違い、施工精度が性能を左右する理由までを整理しました。"/><meta property="og:image" content="https://bouon-lab.com/_astro/cover.mnWIQvQY_126CsY.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="675"/><meta name="twitter:image" content="https://bouon-lab.com/_astro/cover.mnWIQvQY_126CsY.jpg"/>  <!-- Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWEHZPS976"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  (function () {
+    // URLパス /{lang}/{category}/{slug}/ からカテゴリを推定し、
+    // 以後このページで送信される全イベントの既定パラメータとして付与する
+    // （subcategoryは廃止済みだが、3階層以上のURLがあれば予備的に拾う）
+    var parts = window.location.pathname.split('/').filter(Boolean);
+    var contentCategory = parts[1] || '(none)';
+    var contentSubcategory = parts.length > 3 ? (parts[2] || '(none)') : '(none)';
+
+    gtag('config', 'G-RWEHZPS976', {
+      content_category: contentCategory,
+      content_subcategory: contentSubcategory,
+    });
+  })();
+
+  // 既存コンポーネント（次のステップ・関連記事・ハブ導線・検索結果等）に
+  // 埋め込み済みの data-track-* 属性を拾って GA4 イベントとして送信する委譲リスナー
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-track-event]');
+    if (!el || typeof gtag !== 'function') return;
+
+    var eventName = el.getAttribute('data-track-event');
+    var params = {};
+    for (var i = 0; i < el.attributes.length; i++) {
+      var attr = el.attributes[i];
+      if (attr.name.indexOf('data-track-') === 0 && attr.name !== 'data-track-event') {
+        var key = attr.name.slice('data-track-'.length).replace(/-/g, '_');
+        // 'source' はGA4の流入元（セッションの参照元）と衝突して付け替わるため別名で送る
+        if (key === 'source') key = 'link_source';
+        params[key] = attr.value;
+      }
+    }
+    gtag('event', eventName, params);
+  });
+</script> <!-- Google AdSense（自動広告: 管理画面でアンカー広告を ON にするとスマホ下部に表示） --> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9798094072282530" crossorigin="anonymous"></script><script>
+  // data-theme を常に 'dark' に固定し、localStorage への書き込みも上書き
+  document.documentElement.setAttribute('data-theme', 'dark');
+  try { localStorage.setItem('starlight-theme', 'dark'); } catch (_) {}
+</script><link rel="stylesheet" href="/_astro/print.DNXP8c50.css" media="print"><link rel="stylesheet" href="/_astro/middleware.hmnjdlnf.css">
+<link rel="stylesheet" href="/_astro/_..S7kQsX9i.css"><script type="module" src="/_astro/page.BIhdncjw.js"></script></head> <body class="astro-4osdczsy"> <a href="#_top" class="astro-7ntujqzl">コンテンツにスキップ</a> <div class="page sl-flex astro-3zu6pbob"> <header class="header astro-3zu6pbob"><div class="header astro-kkvs6sem"> <div class="title-wrapper sl-flex astro-kkvs6sem"> <a href="/" class="site-title sl-flex astro-pahhoee7">  <span class="astro-pahhoee7" translate="no"> 防音Lab </span> </a> </div> <div class="sl-flex print:hidden astro-kkvs6sem"> <site-search class="astro-kkvs6sem astro-oiy4f4eo" data-translations="{&#34;placeholder&#34;:&#34;検索&#34;}"> <button data-open-modal disabled aria-label="検索" aria-keyshortcuts="Control+K" class="astro-oiy4f4eo"> <svg aria-hidden="true" class="astro-oiy4f4eo astro-nbcaksap" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg> <span class="sl-hidden md:sl-block astro-oiy4f4eo" aria-hidden="true">検索</span> <kbd class="sl-hidden md:sl-flex astro-oiy4f4eo" style="display: none;"> <kbd class="astro-oiy4f4eo">Ctrl</kbd><kbd class="astro-oiy4f4eo">K</kbd> </kbd> </button> <dialog style="padding:0" aria-label="検索" class="astro-oiy4f4eo"> <div class="dialog-frame sl-flex astro-oiy4f4eo">  <button data-close-modal class="sl-flex md:sl-hidden astro-oiy4f4eo"> キャンセル </button> <div class="search-container astro-oiy4f4eo"> <div id="starlight__search" class="astro-oiy4f4eo"></div> </div> </div> </dialog> </site-search>  <script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script> <script type="module" src="/_astro/Search.astro_astro_type_script_index_0_lang.Rw77DzG6.js"></script>  </div> <div class="sl-hidden md:sl-flex print:hidden right-group astro-kkvs6sem"> <div class="sl-flex social-icons astro-kkvs6sem">  </div>  <script type="module">class s extends HTMLElement{constructor(){super();const e=this.querySelector("select");e&&(e.addEventListener("change",t=>{t.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=t.currentTarget.value)}),window.addEventListener("pageshow",t=>{if(!t.persisted)return;const n=e.querySelector("option[selected]")?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}}customElements.define("starlight-lang-select",s);</script> </div> </div>  <script type="module">class d extends HTMLElement{connectedCallback(){const t=this.querySelector(".bouon-menu__btn"),n=this.querySelector(".bouon-menu__panel");if(!t||!n)return;document.body.appendChild(n);const a=e=>{t.setAttribute("aria-expanded",String(e)),t.setAttribute("aria-label",e?"メニューを閉じる":"メニューを開く"),n.hidden=!e,document.body.toggleAttribute("data-mobile-menu-expanded",e)};t.addEventListener("click",()=>a(t.getAttribute("aria-expanded")!=="true")),n.addEventListener("click",e=>{e.target.closest("a")&&a(!1)}),document.addEventListener("keyup",e=>{e.key==="Escape"&&!n.hidden&&(a(!1),t.focus())}),window.matchMedia("(min-width: 50rem)").addEventListener("change",e=>{e.matches&&a(!1)})}}customElements.define("bouon-menu",d);</script></header> <nav class="sidebar print:hidden astro-3zu6pbob" aria-label="メイン"> <starlight-menu-button class="print:hidden astro-tosa4tag"> <button aria-expanded="false" aria-label="メニュー" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-tosa4tag"> <svg aria-hidden="true" class="open-menu astro-tosa4tag astro-nbcaksap" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg> <svg aria-hidden="true" class="close-menu astro-tosa4tag astro-nbcaksap" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg> </button> </starlight-menu-button> <script type="module">class s extends HTMLElement{constructor(){super(),this.btn=this.querySelector("button"),this.btn.addEventListener("click",()=>this.toggleExpanded());const t=this.closest("nav");t&&t.addEventListener("keyup",e=>this.closeOnEscape(e))}setExpanded(t){this.setAttribute("aria-expanded",String(t)),document.body.toggleAttribute("data-mobile-menu-expanded",t)}toggleExpanded(){this.setExpanded(this.getAttribute("aria-expanded")!=="true")}closeOnEscape(t){t.code==="Escape"&&(this.setExpanded(!1),this.btn.focus())}}customElements.define("starlight-menu-button",s);</script>  <div id="starlight__sidebar" class="sidebar-pane astro-3zu6pbob"> <div class="sidebar-content sl-flex astro-3zu6pbob"> <sl-sidebar-state-persist data-hash="1oztnvk" class="astro-pnit6lma"> <script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script>  <ul class="top-level astro-upajbtog"> <li class="astro-upajbtog"> <a href="/ja/soundproof-room/" class="large astro-upajbtog"> <span class="astro-upajbtog">防音室</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/soundproof-rental/" class="large astro-upajbtog"> <span class="astro-upajbtog">防音賃貸</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/diy/" class="large astro-upajbtog"> <span class="astro-upajbtog">DIY防音</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/money/" class="large astro-upajbtog"> <span class="astro-upajbtog">お金・補助金</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/creator/" class="large astro-upajbtog"> <span class="astro-upajbtog">配信・クリエイター</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/knowledge/" class="large astro-upajbtog"> <span class="astro-upajbtog">基礎知識</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/local/" class="large astro-upajbtog"> <span class="astro-upajbtog">地域ガイド</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/business/" class="large astro-upajbtog"> <span class="astro-upajbtog">企業・法人向け</span>  </a> </li> </ul>  <script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script> </sl-sidebar-state-persist> <div class="md:sl-hidden"> <div class="mobile-preferences sl-flex astro-2xptkgtn"> <div class="social-icons astro-2xptkgtn">  </div>   </div> </div> </div> </div> </nav> <div class="main-frame astro-3zu6pbob">  <script type="module">const a=document.getElementById("starlight__sidebar"),n=a?.querySelector("sl-sidebar-state-persist"),o="sl-sidebar-state",i=()=>{let t=[];const e=n?.dataset.hash||"";try{const s=sessionStorage.getItem(o),r=JSON.parse(s||"{}");Array.isArray(r.open)&&r.hash===e&&(t=r.open)}catch{}return{hash:e,open:t,scroll:a?.scrollTop||0}},c=t=>{try{sessionStorage.setItem(o,JSON.stringify(t))}catch{}},d=()=>c(i()),l=(t,e)=>{const s=i();s.open[e]=t,c(s)};n?.addEventListener("click",t=>{if(!(t.target instanceof Element))return;const e=t.target.closest("summary")?.closest("details");if(!e)return;const s=e.querySelector("sl-sidebar-restore"),r=parseInt(s?.dataset.index||"");isNaN(r)||l(!e.open,r)});addEventListener("visibilitychange",()=>{document.visibilityState==="hidden"&&d()});addEventListener("pageHide",d);</script> <div class="lg:sl-flex astro-vtwpat2q"> <aside class="right-sidebar-container print:hidden astro-vtwpat2q"> <div class="right-sidebar astro-vtwpat2q"> <div class="lg:sl-hidden astro-hkmnt2ym"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-yfkom6rh"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-yfkom6rh"><details id="starlight__mobile-toc" class="astro-yfkom6rh"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-yfkom6rh"><span class="toggle sl-flex astro-yfkom6rh">目次<svg aria-hidden="true" class="caret astro-yfkom6rh astro-nbcaksap" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current astro-yfkom6rh"></span></summary><div class="dropdown astro-yfkom6rh"><ul class="isMobile astro-2qyzi2f4" style="--depth: 0;"> <li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#_top" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">概要</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#低周波振動が与える居住環境への影響" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">低周波・振動が与える居住環境への影響</span> </a> <ul class="isMobile astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#生活騒音交通振動重低音の課題" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">生活騒音・交通振動・重低音の課題</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#聞こえない音が引き起こすストレス" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">「聞こえない音」が引き起こすストレス</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#防振と遮音の違いの理解" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">防振と遮音の違いの理解</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#防振の基本原理質量ばね固有振動数" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">防振の基本原理：質量・ばね・固有振動数</span> </a> <ul class="isMobile astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#防振ゴムを入れたのに振動が増えた原因" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">防振ゴムを入れたのに振動が増えた原因</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#ばね防振材の選び方沈み込み量で固有振動数の目安をつかむ" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">ばね（防振材）の選び方｜沈み込み量で固有振動数の目安をつかむ</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#防振材の種類と特性" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">防振材の種類と特性</span> </a> <ul class="isMobile astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#天然ゴム系防振ブロック標準的な工法" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">天然ゴム系防振ブロック（標準的な工法）</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#ナノ材料メタマテリアルの研究動向" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">ナノ材料・メタマテリアルの研究動向</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#リサイクル素材を活用した防振材" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">リサイクル素材を活用した防振材</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#工法ごとの防振性能の目安" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">工法ごとの防振性能の目安</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#box-in-box構法とは" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">「BOX in BOX」構法とは</span> </a> <ul class="isMobile astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#フローティングスラブ工法" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">フローティングスラブ工法</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#施工精度が防振性能を左右する" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">施工精度が防振性能を左右する</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#今後の動向と確認のポイント" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">今後の動向と確認のポイント</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#よくある質問" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">よくある質問</span> </a> <ul class="isMobile astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#防振床浮き床とは何ですか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">防振床（浮き床）とは何ですか？</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#低周波振動は遮音や吸音で防げますか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">低周波振動は、遮音や吸音で防げますか？</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#防振ゴムを入れたのに振動が増えることはありますか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">防振ゴムを入れたのに、振動が増えることはありますか？</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#工場や設備の微振動にも使えますか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">工場や設備の微振動にも使えますか？</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#まとめ低周波振動対策は遮音吸音だけでは完結しない" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">まとめ：低周波・振動対策は「遮音＋吸音」だけでは完結しない</span> </a>  </li> </ul></div></details></nav></mobile-starlight-toc><script type="module" src="/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.hwBsy0Mo.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-hkmnt2ym"><div class="sl-container astro-hkmnt2ym"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">目次</h2><ul class="astro-2qyzi2f4" style="--depth: 0;"> <li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#_top" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">概要</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#低周波振動が与える居住環境への影響" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">低周波・振動が与える居住環境への影響</span> </a> <ul class="astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#生活騒音交通振動重低音の課題" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">生活騒音・交通振動・重低音の課題</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#聞こえない音が引き起こすストレス" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">「聞こえない音」が引き起こすストレス</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#防振と遮音の違いの理解" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">防振と遮音の違いの理解</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#防振の基本原理質量ばね固有振動数" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">防振の基本原理：質量・ばね・固有振動数</span> </a> <ul class="astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#防振ゴムを入れたのに振動が増えた原因" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">防振ゴムを入れたのに振動が増えた原因</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#ばね防振材の選び方沈み込み量で固有振動数の目安をつかむ" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">ばね（防振材）の選び方｜沈み込み量で固有振動数の目安をつかむ</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#防振材の種類と特性" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">防振材の種類と特性</span> </a> <ul class="astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#天然ゴム系防振ブロック標準的な工法" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">天然ゴム系防振ブロック（標準的な工法）</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#ナノ材料メタマテリアルの研究動向" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">ナノ材料・メタマテリアルの研究動向</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#リサイクル素材を活用した防振材" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">リサイクル素材を活用した防振材</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#工法ごとの防振性能の目安" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">工法ごとの防振性能の目安</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#box-in-box構法とは" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">「BOX in BOX」構法とは</span> </a> <ul class="astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#フローティングスラブ工法" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">フローティングスラブ工法</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#施工精度が防振性能を左右する" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">施工精度が防振性能を左右する</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#今後の動向と確認のポイント" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">今後の動向と確認のポイント</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#よくある質問" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">よくある質問</span> </a> <ul class="astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#防振床浮き床とは何ですか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">防振床（浮き床）とは何ですか？</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#低周波振動は遮音や吸音で防げますか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">低周波振動は、遮音や吸音で防げますか？</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#防振ゴムを入れたのに振動が増えることはありますか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">防振ゴムを入れたのに、振動が増えることはありますか？</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#工場や設備の微振動にも使えますか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">工場や設備の微振動にも使えますか？</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#まとめ低周波振動対策は遮音吸音だけでは完結しない" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">まとめ：低周波・振動対策は「遮音＋吸音」だけでは完結しない</span> </a>  </li> </ul></nav></starlight-toc><script type="module" src="/_astro/TableOfContents.astro_astro_type_script_index_0_lang.FuRcXuRY.js"></script></div></div> </div> </aside> <div class="main-pane astro-vtwpat2q">  <main data-pagefind-body class="astro-4osdczsy" lang="ja" dir="ltr">    <div class="content-panel astro-srciszos"> <div class="sl-container astro-srciszos">  </div> </div> <div class="content-panel astro-srciszos"> <div class="sl-container astro-srciszos"> <div class="sl-markdown-content">  <div class="article-wrapper astro-jzyjacs4"> <!-- 知的なパンくずリスト --> <nav class="breadcrumb astro-jzyjacs4"> <a href="/ja/" class="astro-jzyjacs4">HOME</a> <span class="sep astro-jzyjacs4">/</span>  <a href="/ja/knowledge/" class="astro-jzyjacs4">KNOWLEDGE</a> <span class="sep astro-jzyjacs4">/</span> <span class="current astro-jzyjacs4">RESEARCH</span>  </nav> <article class="article-content astro-jzyjacs4"> <header class="article-header not-content astro-jzyjacs4"> <div class="meta-top astro-jzyjacs4"> <span class="date astro-jzyjacs4">2025/11/9</span> <span class="lang-tag astro-jzyjacs4">JA</span> </div> <h1 id="_top" class="astro-jzyjacs4">低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方</h1> <p class="description astro-jzyjacs4">防振床・浮き床とは何か、低周波振動はどう対策するのか。質量・ばね・固有振動数の考え方から、防振ゴム・制振マット・浮き床・BOX in BOX構法の違い、施工精度が性能を左右する理由までを整理しました。</p> <div class="featured-image-container astro-jzyjacs4"> <img src="/_astro/cover.mnWIQvQY_Z11Vihq.webp" alt="低周波・振動対策の基礎｜防振床・浮き床構造の仕組みと選び方" loading="lazy" decoding="async" width="1200" height="675" class="featured-image astro-jzyjacs4"> </div> </header> <div class="prose-body astro-jzyjacs4"> <p>「聞こえない音」がストレスとなる時代です。交通の低周波音、空調の振動、重低音による床振動——こうした「感じる騒音」への対策が、防音・快適環境設計の新しいフロンティアになっています。</p>
+<p>従来の「遮音＋吸音」中心の防音設計だけでは対応しきれない低周波・振動に対し、<strong>防振床・浮き床構造</strong>という考え方が重要になります。</p>
+<p>先に要点です。</p>
+<ul>
+<li><strong>防振床・浮き床とは</strong> : 床を、防振材（ばね）の上に載せて、建物の躯体から切り離す構造</li>
+<li><strong>低周波振動の対策</strong> : 遮音や吸音ではなく、振動源から躯体への伝わり方を断つ（防振）</li>
+<li><strong>注意点</strong> : 防振材は選び方を間違えると、かえって振動を増やすことがある</li>
+</ul>
+<p>本記事では、防振の基本原理、防振材の種類と特性、BOX in BOX構法、そして施工精度が性能を左右する理由を解説します。</p>
+<h2 id="低周波振動が与える居住環境への影響">低周波・振動が与える居住環境への影響</h2>
+<h3 id="生活騒音交通振動重低音の課題">生活騒音・交通振動・重低音の課題</h3>
+<p>低周波音（おおむね100Hz以下の低い音）は、<strong>聞こえにくくても、振動や圧迫感として感じられる</strong>ことがあります。</p>
+<ul>
+<li><strong>交通振動：</strong>新幹線、高速道路沿いの住宅では常時の低周波が伝播。</li>
+<li><strong>施設機械音：</strong>駅、ビル内のポンプ、エレベーターの低周波。</li>
+<li><strong>スピーカー音：</strong>映画館、ライブ会場、ナイトクラブ周辺の重低音は、距離がある住宅にも到達。</li>
+<li><strong>生活音：</strong>洗濯機、掃除機、特に低回転のモーター音。</li>
+</ul>
+<h3 id="聞こえない音が引き起こすストレス">「聞こえない音」が引き起こすストレス</h3>
+<p>低周波音や振動に対して、頭痛、耳鳴り、睡眠への影響、圧迫感などを訴える人がいます。</p>
+<p>ただし、感じ方には大きな個人差があり、原因の特定にも専門的な測定が必要です。</p>
+<p>自治体や環境省の資料（低周波音問題対応の手引書など）でも、苦情対応では測定にもとづく切り分けが前提とされています。</p>
+<p>気になる場合は、自己判断で材料を貼る前に、管理会社・自治体の相談窓口や専門業者に相談してください。</p>
+<h3 id="防振と遮音の違いの理解">防振と遮音の違いの理解</h3>
+<p>多くの人が混同していますが、防音対策には大きく分けて2つの原理があります。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>対策</th><th>メカニズム</th><th>得意な音</th><th>課題</th></tr></thead><tbody><tr><td><strong>遮音（音を反射）</strong></td><td>密度の高い材料で空気中の音波を反射</td><td>中〜高音の空気音</td><td>低音ほど質量が必要で、薄い材料では通りやすい</td></tr><tr><td><strong>防振（振動を絶縁）</strong></td><td>振動源と躯体の間にばねを入れて、振動の伝わりを減らす</td><td>床・壁を伝わる固体伝搬音、低周波の振動</td><td>選定を誤ると共振で逆に増える</td></tr><tr><td><strong>吸音（音を減衰）</strong></td><td>多孔質材で室内の音エネルギーを消散</td><td>室内の反響</td><td>壁の向こうへの音漏れには効かない</td></tr></tbody></table>
+<p><strong>結論</strong>：低周波・固体伝搬音の対策には、遮音・吸音に加えて、<strong>防振（振動源から切り離す）</strong>が必須です。</p>
+<h2 id="防振の基本原理質量ばね固有振動数">防振の基本原理：質量・ばね・固有振動数</h2>
+<p>防振は、「質量（重さ）」「ばね（防振材）」「ダンパー（減衰）」の組み合わせで考えます。</p>
+<p>床や機械を防振材の上に載せると、「質量とばね」の系ができ、その系には<strong>固有振動数</strong>（揺れやすい周波数）が生まれます。</p>
+<p>大事なのは、次の関係です。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th style="text-align:left">振動源の周波数と固有振動数の関係</th><th style="text-align:left">結果</th></tr></thead><tbody><tr><td style="text-align:left">振動源の周波数が、固有振動数の約1.4倍（√2倍）より高い</td><td style="text-align:left">防振の効果が出る（振動が減る）</td></tr><tr><td style="text-align:left">振動源の周波数が、固有振動数に近い</td><td style="text-align:left"><strong>共振</strong>して、振動が増える</td></tr><tr><td style="text-align:left">振動源の周波数が、固有振動数より低い</td><td style="text-align:left">ほとんど効果がない</td></tr></tbody></table>
+<p>防振の効果は、<strong>固有振動数をできるだけ低くする</strong>ほど、低い周波数まで得られます。</p>
+<p>柔らかいばねほど固有振動数は低くなりますが、柔らかすぎると床がたわんで不安定になります。</p>
+<p>「防振ゴムを入れたのに振動が増えた」という失敗の多くは、この関係を無視した選定が原因です。</p>
+<h3 id="防振ゴムを入れたのに振動が増えた原因">防振ゴムを入れたのに振動が増えた原因</h3>
+<p>乾式浮き床（防振ゴムの上に床パネルを載せる工法）で起きやすい失敗は、次の3つです。</p>
+<ul>
+<li><strong>ゴムの硬さが床の重さに合っていない</strong> : 載る重さに対して硬すぎると、固有振動数が上がり、歩行や楽器の低音と重なって共振する</li>
+<li><strong>床パネルが軽すぎる</strong> : 質量が小さいと固有振動数が上がり、ゆっくりした足音の振動と共振しやすくなる</li>
+<li><strong>荷重が偏っている</strong> : ピアノの脚の下など、一部だけ重さが集中すると、その場所だけ固有振動数が変わって局所的に響く</li>
+</ul>
+<h3 id="ばね防振材の選び方沈み込み量で固有振動数の目安をつかむ">ばね（防振材）の選び方｜沈み込み量で固有振動数の目安をつかむ</h3>
+<p>固有振動数は、防振材が重さでどれだけ沈むか（静的たわみ）からおおよそ見当がつきます。</p>
+<p>線形のばねなら、<strong>固有振動数（Hz）≒ 15.8 ÷ √沈み込み量（mm）</strong>が目安です。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th style="text-align:left">載せたときの沈み込み</th><th style="text-align:left">固有振動数の目安</th><th style="text-align:left">防振が効き始める周波数（×√2）</th></tr></thead><tbody><tr><td style="text-align:left">1mm</td><td style="text-align:left">約16Hz</td><td style="text-align:left">約22Hz〜</td></tr><tr><td style="text-align:left">4mm</td><td style="text-align:left">約8Hz</td><td style="text-align:left">約11Hz〜</td></tr><tr><td style="text-align:left">10mm</td><td style="text-align:left">約5Hz</td><td style="text-align:left">約7Hz〜</td></tr></tbody></table>
+<p>ゴムは動いているときのほうが硬くなるため、実際の固有振動数はこの目安より高めに出ます。</p>
+<p>選定では、次の3点を守ります。</p>
+<ul>
+<li><strong>載る総重量を先に出す</strong> : 床パネル・仕上げ材・楽器・人を含めた重さを、防振材の数で割って1個あたりの荷重を出す</li>
+<li><strong>メーカーの適正荷重の範囲に入れる</strong> : 荷重が少なすぎても多すぎても、カタログどおりの性能は出ない</li>
+<li><strong>止めたい音の周波数を決める</strong> : ピアノや歩行音か、ドラムのキックのような低い音かで、狙う固有振動数が変わる</li>
+</ul>
+<p>工事を頼む場合は、防振材の仕様書（ばね定数・許容荷重）と、同じ用途（ピアノ・ドラムなど）の施工実績を業者に確認してください。</p>
+<h2 id="防振材の種類と特性">防振材の種類と特性</h2>
+<h3 id="天然ゴム系防振ブロック標準的な工法">天然ゴム系防振ブロック（標準的な工法）</h3>
+<ul>
+<li><strong>構成：</strong>天然ゴムまたは合成ゴムを鋼板でサンドイッチした構造。</li>
+<li><strong>特性：</strong>耐久性が高く、業務用空調機器・発電機などの重量機械の防振で長年使われてきた実績がある工法。</li>
+<li><strong>限界：</strong>大型機械の振動対策には適するが、住宅の床用途にはオーバースペックになりやすく、コスト・厚みの面で割高になる場合がある。</li>
+</ul>
+<h3 id="ナノ材料メタマテリアルの研究動向">ナノ材料・メタマテリアルの研究動向</h3>
+<p>近年、ナノ粒子を分散させた複合材や、特定の周波数帯の振動を抑え込む「メタマテリアル」と呼ばれる人工構造の研究が進められています。これらは<strong>特定の低周波帯に絞って性能を最適化できる可能性がある</strong>技術として注目されていますが、住宅・防音室向けの製品として広く市場に出回っている段階ではなく、研究機関・メーカーによる実用化に向けた開発段階にあるものが中心です。導入を検討する際は、製品のカタログ値だけでなく、第三者機関による測定データの有無を確認することをおすすめします。</p>
+<h3 id="リサイクル素材を活用した防振材">リサイクル素材を活用した防振材</h3>
+<p>環境配慮の観点から、廃タイヤ由来のゴムチップを再利用した防振材や、ポリ乳酸（PLA）などのバイオプラスチックを使った防振材も登場しています。新品のゴムやウレタンを使う製品と比べてコストやCO2排出量を抑えられる可能性がある一方、性能や耐久性が用途に見合うかどうかは製品ごとの試験データで確認する必要があります。</p>
+<h3 id="工法ごとの防振性能の目安">工法ごとの防振性能の目安</h3>
+<p>防振工法は、対策のレベルに応じて段階的に選ぶのが一般的です。一般的に紹介される目安として、次のような傾向があります。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>対策方法</th><th>想定される効果のイメージ</th><th>施工コストの傾向</th></tr></thead><tbody><tr><td>通常床のみ（対策なし）</td><td>低周波の低減効果はほぼ期待できない</td><td>—</td></tr><tr><td>吸音材の追加</td><td>中〜高周波の反響低減には効果があるが、低周波の遮断効果は限定的</td><td>比較的低コスト</td></tr><tr><td>制振マットの敷設</td><td>床に伝わる固体伝搬音をある程度低減</td><td>中程度</td></tr><tr><td>浮き床構造</td><td>構造体から床を切り離すことで、低周波・固体伝搬音を大きく低減</td><td>高コスト・大掛かりな工事が必要</td></tr></tbody></table>
+<p>具体的な低減量（dB）は、建物の構造（木造・鉄骨・RC）や施工精度によって大きく変動するため、本記事では一律の数値は示しません。導入時は、施工業者に建物構造に応じた測定・シミュレーションを依頼することをおすすめします。床衝撃音の等級（L等級）の考え方については<a href="/ja/knowledge/vibration-reduction-science/">なぜジョイントマットでは防げないのか？「重量床衝撃音」を遮蔽するプロの防音構造の正体</a>で解説しています。</p>
+<h2 id="box-in-box構法とは">「BOX in BOX」構法とは</h2>
+<p><strong>BOX in BOX構法</strong>とは、防音室全体を浮き床の上に設置し、外側の建物の構体（壁・床・天井）から完全に切り離す方式です。隙間なく囲うことで、空気伝搬音だけでなく固体伝搬音（振動）も遮断できるため、ドラムやベースアンプなど低周波を多く含む音源を扱う本格的な防音室で採用される構法です。</p>
+<strong>主なデメリット</strong>
+<ul>
+<li><strong>施工が複雑：</strong>配管・配線を、構体から切り離した内側のボックスまで貫通させる必要があり、設計・施工の手間が増える</li>
+<li><strong>スペース効率：</strong>浮き床・浮き壁の分だけ室内の有効スペースが狭くなる</li>
+<li><strong>コスト：</strong>通常の防音工事に比べて、構造・施工の両面でコストが上がりやすい</li>
+</ul>
+<p>これらのデメリットがあるため、BOX in BOX構法は「どうしても低周波を遮断したい」という明確な目的がある場合に検討する選択肢と位置づけるのが現実的です。</p>
+<h3 id="フローティングスラブ工法">フローティングスラブ工法</h3>
+<ul>
+<li><strong>特徴：</strong>薄い鋼板またはコンクリート床板を防振材の上に浮かせる構造。</li>
+<li><strong>利点：</strong>BOX in BOXに比べて軽量で、施工の自由度が高い。</li>
+</ul>
+<h2 id="施工精度が防振性能を左右する">施工精度が防振性能を左右する</h2>
+<p>防振効果は<strong>施工精度に大きく依存</strong>します。どれだけ高性能な防振材を使っても、施工に隙間やズレがあれば性能を発揮できません。</p>
+<ul>
+<li><strong>隙間管理：</strong>防振材と床・壁の間に隙間があると、その部分から振動・音が漏れる「サウンドブリッジ」が発生し、性能が大きく低下する</li>
+<li><strong>接合部の処理：</strong>配管・配線の貫通部の密閉が不十分だと、その部分が弱点になる</li>
+<li><strong>水平・垂直精度：</strong>浮き床の水平が大きくズレると、特定の周波数で共振（ビビリ音）が発生しやすくなる</li>
+</ul>
+<strong>基本的な対策</strong>
+<ul>
+<li>防振材の継ぎ目・貫通部はウレタンフォームやシーリング材で隙間なく充填する</li>
+<li>施工後、可能であれば音響測定（簡易でも実測）を行い、設計通りの性能が出ているか確認する</li>
+</ul>
+<h2 id="今後の動向と確認のポイント">今後の動向と確認のポイント</h2>
+<p>低周波・振動対策の分野は、新素材や新工法の研究開発が継続的に進められている領域です。一方で、本記事執筆時点（2026年）では、ナノ素材やメタマテリアルを使った防振材が住宅向けに広く普及しているとは言えず、<strong>「最新技術」を謳う製品を検討する際は、第三者機関による測定データや導入実績の有無を必ず確認する</strong>ことをおすすめします。</p>
+<p>防振性能に関するJIS規格（日本産業規格）も継続的に見直しが行われています。導入を検討する際は、施工業者やメーカーに最新の規格・測定方法を確認するとよいでしょう。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="防振床浮き床とは何ですか">防振床（浮き床）とは何ですか？</h3>
+<p>床を防振材の上に載せ、建物の躯体から切り離した構造です。</p>
+<p>床を伝わる振動や固体伝搬音を減らすために使われます。</p>
+<h3 id="低周波振動は遮音や吸音で防げますか">低周波振動は、遮音や吸音で防げますか？</h3>
+<p>十分には防げません。</p>
+<p>低い音や振動は、薄い遮音材や吸音材を通り抜けやすいためです。振動源から躯体への伝わりを断つ、防振が必要になります。</p>
+<h3 id="防振ゴムを入れたのに振動が増えることはありますか">防振ゴムを入れたのに、振動が増えることはありますか？</h3>
+<p>あります。</p>
+<p>防振材と載せる重さで決まる固有振動数が、振動源の周波数に近いと、共振して振動が増えます。選定の前に、固有振動数を確認してください。</p>
+<h3 id="工場や設備の微振動にも使えますか">工場や設備の微振動にも使えますか？</h3>
+<p>原理は同じですが、精密機器や設備では、許容される振動の大きさや周波数が異なります。</p>
+<p>専門業者に、測定と設計を依頼してください。</p>
+<h2 id="まとめ低周波振動対策は遮音吸音だけでは完結しない">まとめ：低周波・振動対策は「遮音＋吸音」だけでは完結しない</h2>
+<ul>
+<li><strong>低周波・振動対策には防振が必須：</strong>遮音（音を反射）・吸音（音を減衰）だけでは、固体伝搬音や低周波の伝播を防ぎきれない</li>
+<li><strong>BOX in BOXは効果が高い分、コスト・スペースの負担も大きい</strong> : 目的に応じて、フローティングスラブなどより手軽な工法も選択肢になる</li>
+<li><strong>性能は施工精度次第：</strong>隙間・貫通部の処理が、防振材そのものの性能と同じくらい重要</li>
+<li><strong>「最新素材」は実績データの確認が前提：</strong>カタログ値だけでなく、第三者測定や導入実績を確認する</li>
+</ul>
+<p>低周波・振動対策は、単なる「快適性の向上」ではなく、近隣トラブルの予防や住環境の質に直結するテーマです。気になる音が「空気伝搬音」なのか「固体伝搬音（振動）」なのかを切り分けることが、対策の第一歩になります。吸音材と遮音材の違いについては<a href="/ja/knowledge/absorption-vs-soundproofing-materials/">吸音材か遮音材か迷う人へ｜あなたの環境で“必要なのはどっち？”徹底ガイド</a>も参考にしてください。</p> </div>  <div id="article-mid-ad" hidden class="astro-jzyjacs4"> <aside class="ad-placement ad-placement--rectangleArticleMid astro-jzyjacs4" aria-label="Advertisement" data-ad-placement="rectangleArticleMid"> <div class="ad-placement__label">ADVERTISEMENT</div> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9798094072282530" data-ad-slot="5976402243" data-ad-format="auto" data-full-width-responsive="true"></ins>  </aside> </div> <script>
+          // 記事中広告: 2つ目のH2の直前（H2が1つなら1つ目の直前）へ移してから配信する
+          (function () {
+            var holder = document.getElementById('article-mid-ad');
+            var body = document.querySelector('.prose-body');
+            if (!holder || !body) return;
+            var h2s = body.querySelectorAll(':scope > h2');
+            var target = h2s[1] || h2s[0];
+            if (!target) { holder.remove(); return; }
+            var ad = holder.firstElementChild;
+            target.parentNode.insertBefore(ad, target);
+            holder.remove();
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+          })();
+        </script>   <script>
+        function initLoadMore() {
+          const btn = document.getElementById('load-more-btn');
+          const grid = document.getElementById('posts-grid');
+          if (!btn || !grid) return;
+
+          let currentVisible = 6;
+          const increment = 6;
+          const allCards = grid.querySelectorAll('.post-card');
+          const total = allCards.length;
+          const countDisplay = document.getElementById('current-count');
+
+          btn.addEventListener('click', () => {
+            const nextCount = currentVisible + increment;
+            
+            allCards.forEach((card, index) => {
+              if (index < nextCount) {
+                card.style.display = 'flex';
+                // フェードイン効果
+                card.style.animation = 'fadeIn 0.5s ease forwards';
+              }
+            });
+
+            currentVisible = nextCount;
+            if (countDisplay) countDisplay.textContent = Math.min(currentVisible, total);
+
+            if (currentVisible >= total) {
+              btn.style.display = 'none';
+            }
+          });
+        }
+
+        // 初期化
+        initLoadMore();
+        // View Transitions対応
+        document.addEventListener('astro:after-swap', initLoadMore);
+      </script> <footer class="article-footer not-content astro-jzyjacs4"> <aside class="ad-placement ad-placement--rectangleArticleEnd astro-jzyjacs4" aria-label="Advertisement" data-ad-placement="rectangleArticleEnd"> <div class="ad-placement__label">ADVERTISEMENT</div> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9798094072282530" data-ad-slot="3778705007" data-ad-format="auto" data-full-width-responsive="true"></ins> <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script> </aside> <div class="tag-label astro-jzyjacs4">KEYWORDS</div> <div class="tag-cloud astro-jzyjacs4"> <span class="tag-item astro-jzyjacs4">#低周波</span><span class="tag-item astro-jzyjacs4">#防振</span><span class="tag-item astro-jzyjacs4">#浮き床</span><span class="tag-item astro-jzyjacs4">#振動対策</span><span class="tag-item astro-jzyjacs4">#施工技術</span><span class="tag-item astro-jzyjacs4">#防振床</span> </div> <section class="next-step-section astro-jzyjacs4"> <div class="section-divider astro-jzyjacs4"> <span class="divider-text astro-jzyjacs4">次に読む（Next Step）</span> </div> <div class="next-step-grid astro-jzyjacs4"> <a href="/ja/knowledge/structure-borne-noise-tapping-striking/" class="next-step-card astro-jzyjacs4" data-track-event="next_step_click" data-track-source="next_step_beginner" data-track-label="叩く音・押す音が下の階に響くのはなぜ？ヘッドホンでも消えない振動の止め方"> <div class="stage astro-jzyjacs4">基礎を理解する</div> <h3 class="astro-jzyjacs4">叩く音・押す音が下の階に響くのはなぜ？ヘッドホンでも消えない振動の止め方</h3> <p class="astro-jzyjacs4">同タグ優先</p> </a><a href="/ja/diy/electronic-drum-vibration-fuwafuwa-system/" class="next-step-card astro-jzyjacs4" data-track-event="next_step_click" data-track-source="next_step_compare" data-track-label="電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界、キックの止め方"> <div class="stage astro-jzyjacs4">選択肢を比較する</div> <h3 class="astro-jzyjacs4">電子ドラムの振動対策｜ふにゃふにゃシステムの効果と限界、キックの止め方</h3> <p class="astro-jzyjacs4">同カテゴリ優先</p> </a><a href="/ja/soundproof-room/home-theater-soundproof-room/" class="next-step-card astro-jzyjacs4" data-track-event="next_step_click" data-track-source="next_step_action" data-track-label="防音室でホームシアターを楽しむには？重低音を夜に鳴らすDr値と費用"> <div class="stage astro-jzyjacs4">導入を進める</div> <h3 class="astro-jzyjacs4">防音室でホームシアターを楽しむには？重低音を夜に鳴らすDr値と費用</h3> <p class="astro-jzyjacs4">導入記事を優先</p> </a> </div> </section> <section class="related-articles-section astro-jzyjacs4"> <div class="section-divider astro-jzyjacs4"> <span class="divider-text astro-jzyjacs4">こちらの研究成果もおすすめ</span> </div> <div class="archive-carousel not-content astro-r7uaphbg" data-carousel><div class="carousel-viewport astro-r7uaphbg" data-viewport><div class="carousel-track astro-r7uaphbg"><article class="carousel-card astro-r7uaphbg"><a href="/ja/diy/diy-refrigeration-noise-reduction/" class="card-link-overlay astro-r7uaphbg" aria-label="冷蔵庫のブーンという振動音の対策｜防振マットの選び方と床に響かせない置き方" data-track-event="related_click" data-track-source="related_section" data-track-label="冷蔵庫のブーンという振動音の対策｜防振マットの選び方と床に響かせない置き方"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.BkadSWq-_Z2kveiH.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2025/11/11</span><span class="relation-label tag astro-r7uaphbg">同タグ 1</span></div><h4 class="card-title astro-r7uaphbg">冷蔵庫のブーンという振動音の対策｜防振マットの選び方と床に響かせない置き方</h4><p class="card-excerpt astro-r7uaphbg">冷蔵庫のブーンという振動音は、水平の狂い、壁や周りの物との接触、床への振動の伝わりが主な原因です。調...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/diy/treadmill-apartment-soundproofing-layering/" class="card-link-overlay astro-r7uaphbg" aria-label="マンションのランニングマシン防音対策｜階下の振動を減らす「重ね敷き」と置き方" data-track-event="related_click" data-track-source="related_section" data-track-label="マンションのランニングマシン防音対策｜階下の振動を減らす「重ね敷き」と置き方"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.DoRHWSAK_Z4rsbX.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2025/12/14</span><span class="relation-label tag astro-r7uaphbg">同タグ 1</span></div><h4 class="card-title astro-r7uaphbg">マンションのランニングマシン防音対策｜階下の振動を減らす「重ね敷き」と置き方</h4><p class="card-excerpt astro-r7uaphbg">マンションでランニングマシン（ランニングマシーン）を使うと階下に響くのはなぜか。原因は音ではなく床を...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/soundproof-room/soundproof-performance-drum/" class="card-link-overlay astro-r7uaphbg" aria-label="自宅でドラムを叩いても許されるDr値は？住む環境別に見る防音の必要性" data-track-event="related_click" data-track-source="related_section" data-track-label="自宅でドラムを叩いても許されるDr値は？住む環境別に見る防音の必要性"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.BnAPZ2Sv_1QlY38.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/1/5</span><span class="relation-label tag astro-r7uaphbg">同タグ 1</span></div><h4 class="card-title astro-r7uaphbg">自宅でドラムを叩いても許されるDr値は？住む環境別に見る防音の必要性</h4><p class="card-excerpt astro-r7uaphbg">一戸建てか集合住宅かで、ドラム防音に必要なDr値はまったく変わります。あなたの住環境がどのタイプかを...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/soundproof-room/night-practice-soundproof-guide/" class="card-link-overlay astro-r7uaphbg" aria-label="夜間練習はどこまで許される？深夜でも楽器を弾くための防音室選びと「振動」の罠" data-track-event="related_click" data-track-source="related_section" data-track-label="夜間練習はどこまで許される？深夜でも楽器を弾くための防音室選びと「振動」の罠"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.DtcIDCRz_ZBRA1I.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/2/2</span><span class="relation-label tag astro-r7uaphbg">同タグ 1</span></div><h4 class="card-title astro-r7uaphbg">夜間練習はどこまで許される？深夜でも楽器を弾くための防音室選びと「振動」の罠</h4><p class="card-excerpt astro-r7uaphbg">仕事終わりの22時以降に練習したいあなたへ。近隣トラブルを確実に避けるための防音性能（Dr-40）の...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/creator/gaming-floor-impact-noise-fix/" class="card-link-overlay astro-r7uaphbg" aria-label="台パンの衝撃吸収・防振対策｜下の階に響く仕組みと2,000円で防ぐ方法" data-track-event="related_click" data-track-source="related_section" data-track-label="台パンの衝撃吸収・防振対策｜下の階に響く仕組みと2,000円で防ぐ方法"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.B9_j0yh3_Z1QRrmn.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/6/24</span><span class="relation-label tag astro-r7uaphbg">同タグ 1</span></div><h4 class="card-title astro-r7uaphbg">台パンの衝撃吸収・防振対策｜下の階に響く仕組みと2,000円で防ぐ方法</h4><p class="card-excerpt astro-r7uaphbg">台パンや足音の振動を防振パッドで衝撃吸収し、下の階への響きを抑える方法を解説します。振動が床を伝わる...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/diy/electronic-piano-key-noise-vibration/" class="card-link-overlay astro-r7uaphbg" aria-label="電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方" data-track-event="related_click" data-track-source="related_section" data-track-label="電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.BuqskpTN_Z75GMq.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/10/18</span><span class="relation-label tag astro-r7uaphbg">同タグ 1</span></div><h4 class="card-title astro-r7uaphbg">電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方</h4><p class="card-excerpt astro-r7uaphbg">電子ピアノの打鍵音対策は、ヘッドホンでは消えない「コトコト」という振動を、脚とペダルから床へ伝えない...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/diy/keyboard-typing-noise-vibration/" class="card-link-overlay astro-r7uaphbg" aria-label="キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化" data-track-event="related_click" data-track-source="related_section" data-track-label="キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.D0UskMHA_Z1gJznL.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/10/18</span><span class="relation-label tag astro-r7uaphbg">同タグ 1</span></div><h4 class="card-title astro-r7uaphbg">キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化</h4><p class="card-excerpt astro-r7uaphbg">キーボードの打鍵音対策は、耳に届く音より先に、机から床へ伝わる振動を止めるのが近道です。打ち方・Oリ...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/knowledge/neighborhood-noise-seasonal-pattern-statistics/" class="card-link-overlay astro-r7uaphbg" aria-label="近隣騒音トラブルが増える季節パターン｜最新統計から読み解く原因と先手対策" data-track-event="related_click" data-track-source="related_section" data-track-label="近隣騒音トラブルが増える季節パターン｜最新統計から読み解く原因と先手対策"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.D6GPpMw2_2uSVgQ.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2025/11/13</span><span class="relation-label category astro-r7uaphbg">同カテゴリ</span></div><h4 class="card-title astro-r7uaphbg">近隣騒音トラブルが増える季節パターン｜最新統計から読み解く原因と先手対策</h4><p class="card-excerpt astro-r7uaphbg">近隣騒音の相談件数には明確な季節パターンがあります。引っ越し期・夏・冬それぞれの原因と、管理会社・賃...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/knowledge/absorption-vs-soundproofing-materials/" class="card-link-overlay astro-r7uaphbg" aria-label="吸音材か遮音材か迷う人へ｜あなたの環境で“必要なのはどっち？”徹底ガイド" data-track-event="related_click" data-track-source="related_section" data-track-label="吸音材か遮音材か迷う人へ｜あなたの環境で“必要なのはどっち？”徹底ガイド"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.XkEgyEOU_ZdUHE1.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2025/10/31</span><span class="relation-label category astro-r7uaphbg">同カテゴリ</span></div><h4 class="card-title astro-r7uaphbg">吸音材か遮音材か迷う人へ｜あなたの環境で“必要なのはどっち？”徹底ガイド</h4><p class="card-excerpt astro-r7uaphbg">吸音材と遮音材はどちらがいいのか。結論は「悩みが音漏れなら遮音、響きやこもりなら吸音」です。違いを表...</p></div></article></div></div><div class="carousel-nav astro-r7uaphbg"><button class="nav-btn prev astro-r7uaphbg" data-prev aria-label="Previous"><svg viewBox="0 0 24 24" width="24" height="24" class="astro-r7uaphbg"><path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" class="astro-r7uaphbg"></path></svg></button><button class="nav-btn next astro-r7uaphbg" data-next aria-label="Next"><svg viewBox="0 0 24 24" width="24" height="24" class="astro-r7uaphbg"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="astro-r7uaphbg"></path></svg></button></div></div><script type="module">function s(){document.querySelectorAll("[data-carousel]").forEach(t=>{const e=t.querySelector("[data-viewport]"),r=t.querySelector("[data-next]"),o=t.querySelector("[data-prev]");if(!e||!r||!o)return;const c=()=>{const n=e.querySelector(".carousel-card");return n?n.offsetWidth+16:280};r.addEventListener("click",()=>{e.scrollBy({left:c(),behavior:"smooth"})}),o.addEventListener("click",()=>{e.scrollBy({left:-c(),behavior:"smooth"})})})}s();document.addEventListener("astro:after-swap",s);</script> </section> <section class="author-byline astro-jzyjacs4"> <svg class="byline-icon astro-jzyjacs4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"> <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5" class="astro-jzyjacs4"></circle> <path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="astro-jzyjacs4"></path> </svg> <p class="byline-text astro-jzyjacs4"> この記事は <a href="/ja/about/" data-track-event="author_byline_click" data-track-source="article_footer" data-track-label="about" class="astro-jzyjacs4">防音Lab</a> が運営しています。 </p> <a href="https://www.threads.com/@bouonlab" target="_blank" rel="noopener noreferrer" class="byline-x-link astro-jzyjacs4" data-track-event="author_byline_click" data-track-source="article_footer" data-track-label="threads_follow"> <span class="threads-badge astro-jzyjacs4" aria-hidden="true">@</span>
+Threads @bouonlab
+</a> </section> </footer> <script>
+          function initReadingProgressTracking() {
+            if (window.__readingTrackingCleanup) {
+              window.__readingTrackingCleanup();
+            }
+
+            const article = document.querySelector('.prose-body');
+            if (!article) return;
+
+            const milestones = [50, 75, 90];
+            const reached = new Set();
+            let completed = false;
+
+            function checkScroll() {
+              const rect = article.getBoundingClientRect();
+              const total = rect.height;
+              if (total <= 0) return;
+
+              const scrolledPast = Math.min(Math.max(window.innerHeight - rect.top, 0), total);
+              const percent = Math.round((scrolledPast / total) * 100);
+
+              milestones.forEach((m) => {
+                if (percent >= m && !reached.has(m) && typeof gtag === 'function') {
+                  reached.add(m);
+                  gtag('event', 'scroll_milestone', { percent_scrolled: m });
+                }
+              });
+
+              if (percent >= 95 && !completed) {
+                completed = true;
+                if (typeof gtag === 'function') {
+                  gtag('event', 'article_read_complete', {});
+                }
+              }
+            }
+
+            window.addEventListener('scroll', checkScroll, { passive: true });
+            window.__readingTrackingCleanup = function () {
+              window.removeEventListener('scroll', checkScroll);
+            };
+            checkScroll();
+          }
+
+          initReadingProgressTracking();
+          document.addEventListener('astro:after-swap', initReadingProgressTracking);
+        </script> </article> </div>  </div> <footer class="bouon-footer astro-o5o7wsh2"> <div class="bouon-footer__inner astro-o5o7wsh2"> <div class="bouon-footer__brand astro-o5o7wsh2"> <a href="/ja/" class="bouon-footer__title astro-o5o7wsh2">BouonLab</a> <p class="bouon-footer__tagline astro-o5o7wsh2">住まい・予算・用途に合わせた防音の解決策をまとめたガイド</p> </div> <nav class="bouon-footer__nav astro-o5o7wsh2" aria-label="運営情報"> <a href="/ja/about/" class="astro-o5o7wsh2">サイトについて</a> <span class="bouon-footer__sep astro-o5o7wsh2" aria-hidden="true">·</span> <a href="/ja/privacy/" class="astro-o5o7wsh2">プライバシーポリシー・免責</a> </nav> <p class="bouon-footer__copy astro-o5o7wsh2">© 2026 BouonLab</p> </div> </footer> <button type="button" class="back-to-top print:hidden astro-wlspcwf4" aria-label="ページの先頭へ戻る" tabindex="-1"> <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" class="astro-wlspcwf4"> <path fill="currentColor" d="M12 7.4 5.7 13.7l1.4 1.4L12 10.2l4.9 4.9 1.4-1.4L12 7.4z" class="astro-wlspcwf4"></path> </svg> </button> <script type="module">const u="ins.adsbygoogle[data-anchor-status], ins.adsbygoogle[data-anchor-shown]",o=document.querySelector(".back-to-top");if(o){let r=window.scrollY,c=!1,s=!1;const a=t=>{t!==c&&(c=t,o.classList.toggle("is-visible",t),o.tabIndex=t?0:-1)},l=()=>{s=!1;const t=window.scrollY,e=t-r;t<400?a(!1):e<=-8?a(!0):e>=8&&a(!1),(Math.abs(e)>=8||t<400)&&(r=t)},i=()=>{let t=0;document.querySelectorAll(u).forEach(e=>{if(e.dataset.anchorStatus==="dismissed"||e.dataset.anchorShown==="false")return;const n=e.getBoundingClientRect();Math.abs(window.innerHeight-n.bottom)<2&&n.height>0&&(t=Math.max(t,n.height+12))}),o.style.setProperty("--back-to-top-ad-offset",`${t}px`)};window.addEventListener("scroll",()=>{s||(s=!0,requestAnimationFrame(l))},{passive:!0}),window.addEventListener("resize",i,{passive:!0});let d;new MutationObserver(()=>{window.clearTimeout(d),d=window.setTimeout(i,150)}).observe(document.documentElement,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["data-anchor-status","data-anchor-shown","style"]}),o.addEventListener("click",()=>{const t=window.matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:t?"auto":"smooth"})}),i()}</script> </div> </div>  </main> </div> </div> </div> </div> </body></html>

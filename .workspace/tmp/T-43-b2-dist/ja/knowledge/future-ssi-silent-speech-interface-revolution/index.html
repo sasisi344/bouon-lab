@@ -1,0 +1,371 @@
+<!DOCTYPE html><html lang="ja" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-4osdczsy"> <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>無声音声インターフェース（SSI）とは？声を出さずに話す技術の現在地と防音への影響 | 防音Lab</title><link rel="canonical" href="https://bouon-lab.com/ja/knowledge/future-ssi-silent-speech-interface-revolution/"/><link rel="sitemap" href="/sitemap-index.xml"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"防音Lab","url":"https://bouon-lab.com","logo":"https://bouon-lab.com/favicon.svg"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"防音Lab","url":"https://bouon-lab.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"HOME","item":"https://bouon-lab.com/ja/"},{"@type":"ListItem","position":2,"name":"KNOWLEDGE","item":"https://bouon-lab.com/ja/knowledge/"},{"@type":"ListItem","position":3,"name":"無声音声インターフェース（SSI）とは？声を出さずに話す技術の現在地と防音への影響","item":"https://bouon-lab.com/ja/knowledge/future-ssi-silent-speech-interface-revolution/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"無声音声インターフェース（SSI）とは？声を出さずに話す技術の現在地と防音への影響","description":"無声音声インターフェース（SSI）は、声を出さずに口や喉の筋肉の信号から言葉を読み取る技術です。2026年の研究では限られた文なら認識率90%台に届く一方、誰でも自由に話せる製品はまだありません。主な研究の数値、実用化の壁、防音室が不要になるかを用途別に整理します。","image":"https://bouon-lab.com/_astro/cover.CaRDQ0gZ_15Ma8u.jpg","datePublished":"2026-04-04T00:00:00.000Z","dateModified":"2026-10-19T00:00:00.000Z","inLanguage":"ja","author":{"@type":"Organization","name":"防音Lab","url":"https://bouon-lab.com"},"publisher":{"@type":"Organization","name":"防音Lab","logo":{"@type":"ImageObject","url":"https://bouon-lab.com/favicon.svg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://bouon-lab.com/ja/knowledge/future-ssi-silent-speech-interface-revolution/"}}</script><link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v6.1.5"/><meta name="generator" content="Starlight v0.39.2"/><meta property="og:title" content="無声音声インターフェース（SSI）とは？声を出さずに話す技術の現在地と防音への影響"/><meta property="og:type" content="article"/><meta property="og:url" content="https://bouon-lab.com/ja/knowledge/future-ssi-silent-speech-interface-revolution/"/><meta property="og:locale" content="ja"/><meta property="og:description" content="無声音声インターフェース（SSI）は、声を出さずに口や喉の筋肉の信号から言葉を読み取る技術です。2026年の研究では限られた文なら認識率90%台に届く一方、誰でも自由に話せる製品はまだありません。主な研究の数値、実用化の壁、防音室が不要になるかを用途別に整理します。"/><meta property="og:site_name" content="防音Lab"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="無声音声インターフェース（SSI）は、声を出さずに口や喉の筋肉の信号から言葉を読み取る技術です。2026年の研究では限られた文なら認識率90%台に届く一方、誰でも自由に話せる製品はまだありません。主な研究の数値、実用化の壁、防音室が不要になるかを用途別に整理します。"/><meta property="og:image" content="https://bouon-lab.com/_astro/cover.CaRDQ0gZ_15Ma8u.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="675"/><meta name="twitter:image" content="https://bouon-lab.com/_astro/cover.CaRDQ0gZ_15Ma8u.jpg"/>  <!-- Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWEHZPS976"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  (function () {
+    // URLパス /{lang}/{category}/{slug}/ からカテゴリを推定し、
+    // 以後このページで送信される全イベントの既定パラメータとして付与する
+    // （subcategoryは廃止済みだが、3階層以上のURLがあれば予備的に拾う）
+    var parts = window.location.pathname.split('/').filter(Boolean);
+    var contentCategory = parts[1] || '(none)';
+    var contentSubcategory = parts.length > 3 ? (parts[2] || '(none)') : '(none)';
+
+    gtag('config', 'G-RWEHZPS976', {
+      content_category: contentCategory,
+      content_subcategory: contentSubcategory,
+    });
+  })();
+
+  // 既存コンポーネント（次のステップ・関連記事・ハブ導線・検索結果等）に
+  // 埋め込み済みの data-track-* 属性を拾って GA4 イベントとして送信する委譲リスナー
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-track-event]');
+    if (!el || typeof gtag !== 'function') return;
+
+    var eventName = el.getAttribute('data-track-event');
+    var params = {};
+    for (var i = 0; i < el.attributes.length; i++) {
+      var attr = el.attributes[i];
+      if (attr.name.indexOf('data-track-') === 0 && attr.name !== 'data-track-event') {
+        var key = attr.name.slice('data-track-'.length).replace(/-/g, '_');
+        // 'source' はGA4の流入元（セッションの参照元）と衝突して付け替わるため別名で送る
+        if (key === 'source') key = 'link_source';
+        params[key] = attr.value;
+      }
+    }
+    gtag('event', eventName, params);
+  });
+</script> <!-- Google AdSense（自動広告: 管理画面でアンカー広告を ON にするとスマホ下部に表示） --> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9798094072282530" crossorigin="anonymous"></script><script>
+  // data-theme を常に 'dark' に固定し、localStorage への書き込みも上書き
+  document.documentElement.setAttribute('data-theme', 'dark');
+  try { localStorage.setItem('starlight-theme', 'dark'); } catch (_) {}
+</script><link rel="stylesheet" href="/_astro/print.DNXP8c50.css" media="print"><link rel="stylesheet" href="/_astro/middleware.hmnjdlnf.css">
+<link rel="stylesheet" href="/_astro/_..S7kQsX9i.css"><script type="module" src="/_astro/page.BIhdncjw.js"></script></head> <body class="astro-4osdczsy"> <a href="#_top" class="astro-7ntujqzl">コンテンツにスキップ</a> <div class="page sl-flex astro-3zu6pbob"> <header class="header astro-3zu6pbob"><div class="header astro-kkvs6sem"> <div class="title-wrapper sl-flex astro-kkvs6sem"> <a href="/" class="site-title sl-flex astro-pahhoee7">  <span class="astro-pahhoee7" translate="no"> 防音Lab </span> </a> </div> <div class="sl-flex print:hidden astro-kkvs6sem"> <site-search class="astro-kkvs6sem astro-oiy4f4eo" data-translations="{&#34;placeholder&#34;:&#34;検索&#34;}"> <button data-open-modal disabled aria-label="検索" aria-keyshortcuts="Control+K" class="astro-oiy4f4eo"> <svg aria-hidden="true" class="astro-oiy4f4eo astro-nbcaksap" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg> <span class="sl-hidden md:sl-block astro-oiy4f4eo" aria-hidden="true">検索</span> <kbd class="sl-hidden md:sl-flex astro-oiy4f4eo" style="display: none;"> <kbd class="astro-oiy4f4eo">Ctrl</kbd><kbd class="astro-oiy4f4eo">K</kbd> </kbd> </button> <dialog style="padding:0" aria-label="検索" class="astro-oiy4f4eo"> <div class="dialog-frame sl-flex astro-oiy4f4eo">  <button data-close-modal class="sl-flex md:sl-hidden astro-oiy4f4eo"> キャンセル </button> <div class="search-container astro-oiy4f4eo"> <div id="starlight__search" class="astro-oiy4f4eo"></div> </div> </div> </dialog> </site-search>  <script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script> <script type="module" src="/_astro/Search.astro_astro_type_script_index_0_lang.Rw77DzG6.js"></script>  </div> <div class="sl-hidden md:sl-flex print:hidden right-group astro-kkvs6sem"> <div class="sl-flex social-icons astro-kkvs6sem">  </div>  <script type="module">class s extends HTMLElement{constructor(){super();const e=this.querySelector("select");e&&(e.addEventListener("change",t=>{t.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=t.currentTarget.value)}),window.addEventListener("pageshow",t=>{if(!t.persisted)return;const n=e.querySelector("option[selected]")?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}}customElements.define("starlight-lang-select",s);</script> </div> </div>  <script type="module">class d extends HTMLElement{connectedCallback(){const t=this.querySelector(".bouon-menu__btn"),n=this.querySelector(".bouon-menu__panel");if(!t||!n)return;document.body.appendChild(n);const a=e=>{t.setAttribute("aria-expanded",String(e)),t.setAttribute("aria-label",e?"メニューを閉じる":"メニューを開く"),n.hidden=!e,document.body.toggleAttribute("data-mobile-menu-expanded",e)};t.addEventListener("click",()=>a(t.getAttribute("aria-expanded")!=="true")),n.addEventListener("click",e=>{e.target.closest("a")&&a(!1)}),document.addEventListener("keyup",e=>{e.key==="Escape"&&!n.hidden&&(a(!1),t.focus())}),window.matchMedia("(min-width: 50rem)").addEventListener("change",e=>{e.matches&&a(!1)})}}customElements.define("bouon-menu",d);</script></header> <nav class="sidebar print:hidden astro-3zu6pbob" aria-label="メイン"> <starlight-menu-button class="print:hidden astro-tosa4tag"> <button aria-expanded="false" aria-label="メニュー" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-tosa4tag"> <svg aria-hidden="true" class="open-menu astro-tosa4tag astro-nbcaksap" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg> <svg aria-hidden="true" class="close-menu astro-tosa4tag astro-nbcaksap" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg> </button> </starlight-menu-button> <script type="module">class s extends HTMLElement{constructor(){super(),this.btn=this.querySelector("button"),this.btn.addEventListener("click",()=>this.toggleExpanded());const t=this.closest("nav");t&&t.addEventListener("keyup",e=>this.closeOnEscape(e))}setExpanded(t){this.setAttribute("aria-expanded",String(t)),document.body.toggleAttribute("data-mobile-menu-expanded",t)}toggleExpanded(){this.setExpanded(this.getAttribute("aria-expanded")!=="true")}closeOnEscape(t){t.code==="Escape"&&(this.setExpanded(!1),this.btn.focus())}}customElements.define("starlight-menu-button",s);</script>  <div id="starlight__sidebar" class="sidebar-pane astro-3zu6pbob"> <div class="sidebar-content sl-flex astro-3zu6pbob"> <sl-sidebar-state-persist data-hash="1oztnvk" class="astro-pnit6lma"> <script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script>  <ul class="top-level astro-upajbtog"> <li class="astro-upajbtog"> <a href="/ja/soundproof-room/" class="large astro-upajbtog"> <span class="astro-upajbtog">防音室</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/soundproof-rental/" class="large astro-upajbtog"> <span class="astro-upajbtog">防音賃貸</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/diy/" class="large astro-upajbtog"> <span class="astro-upajbtog">DIY防音</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/money/" class="large astro-upajbtog"> <span class="astro-upajbtog">お金・補助金</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/creator/" class="large astro-upajbtog"> <span class="astro-upajbtog">配信・クリエイター</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/knowledge/" class="large astro-upajbtog"> <span class="astro-upajbtog">基礎知識</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/local/" class="large astro-upajbtog"> <span class="astro-upajbtog">地域ガイド</span>  </a> </li><li class="astro-upajbtog"> <a href="/ja/business/" class="large astro-upajbtog"> <span class="astro-upajbtog">企業・法人向け</span>  </a> </li> </ul>  <script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script> </sl-sidebar-state-persist> <div class="md:sl-hidden"> <div class="mobile-preferences sl-flex astro-2xptkgtn"> <div class="social-icons astro-2xptkgtn">  </div>   </div> </div> </div> </div> </nav> <div class="main-frame astro-3zu6pbob">  <script type="module">const a=document.getElementById("starlight__sidebar"),n=a?.querySelector("sl-sidebar-state-persist"),o="sl-sidebar-state",i=()=>{let t=[];const e=n?.dataset.hash||"";try{const s=sessionStorage.getItem(o),r=JSON.parse(s||"{}");Array.isArray(r.open)&&r.hash===e&&(t=r.open)}catch{}return{hash:e,open:t,scroll:a?.scrollTop||0}},c=t=>{try{sessionStorage.setItem(o,JSON.stringify(t))}catch{}},d=()=>c(i()),l=(t,e)=>{const s=i();s.open[e]=t,c(s)};n?.addEventListener("click",t=>{if(!(t.target instanceof Element))return;const e=t.target.closest("summary")?.closest("details");if(!e)return;const s=e.querySelector("sl-sidebar-restore"),r=parseInt(s?.dataset.index||"");isNaN(r)||l(!e.open,r)});addEventListener("visibilitychange",()=>{document.visibilityState==="hidden"&&d()});addEventListener("pageHide",d);</script> <div class="lg:sl-flex astro-vtwpat2q"> <aside class="right-sidebar-container print:hidden astro-vtwpat2q"> <div class="right-sidebar astro-vtwpat2q"> <div class="lg:sl-hidden astro-hkmnt2ym"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-yfkom6rh"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-yfkom6rh"><details id="starlight__mobile-toc" class="astro-yfkom6rh"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-yfkom6rh"><span class="toggle sl-flex astro-yfkom6rh">目次<svg aria-hidden="true" class="caret astro-yfkom6rh astro-nbcaksap" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current astro-yfkom6rh"></span></summary><div class="dropdown astro-yfkom6rh"><ul class="isMobile astro-2qyzi2f4" style="--depth: 0;"> <li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#_top" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">概要</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#無声音声インターフェースssiとは" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">無声音声インターフェース（SSI）とは</span> </a> <ul class="isMobile astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#何を読み取るのか4つの読み取り方" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">何を読み取るのか｜4つの読み取り方</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#2026年時点の研究の到達点" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">2026年時点の研究の到達点</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#実用化の壁なぜまだ誰でも使えないのか" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">実用化の壁｜なぜまだ誰でも使えないのか</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#防音への影響防音室はいらなくなるのか" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">防音への影響｜防音室はいらなくなるのか</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#ssiが届く前に今できる声の対策" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">SSIが届く前に、今できる声の対策</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#よくある質問" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">よくある質問</span> </a> <ul class="isMobile astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#無声音声インターフェースはいつ買えますか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">無声音声インターフェースは、いつ買えますか？</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#ssiは頭の中の考えを読み取るのですか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">SSIは頭の中の考えを読み取るのですか？</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#ssiが普及するなら防音室の購入は待ったほうがいいですか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">SSIが普及するなら、防音室の購入は待ったほうがいいですか？</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#まとめssiは声の音源を減らす技術" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">まとめ｜SSIは「声の音源」を減らす技術</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#参考文献" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">参考文献</span> </a>  </li> </ul></div></details></nav></mobile-starlight-toc><script type="module" src="/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.hwBsy0Mo.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-hkmnt2ym"><div class="sl-container astro-hkmnt2ym"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">目次</h2><ul class="astro-2qyzi2f4" style="--depth: 0;"> <li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#_top" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">概要</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#無声音声インターフェースssiとは" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">無声音声インターフェース（SSI）とは</span> </a> <ul class="astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#何を読み取るのか4つの読み取り方" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">何を読み取るのか｜4つの読み取り方</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#2026年時点の研究の到達点" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">2026年時点の研究の到達点</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#実用化の壁なぜまだ誰でも使えないのか" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">実用化の壁｜なぜまだ誰でも使えないのか</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#防音への影響防音室はいらなくなるのか" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">防音への影響｜防音室はいらなくなるのか</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#ssiが届く前に今できる声の対策" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">SSIが届く前に、今できる声の対策</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#よくある質問" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">よくある質問</span> </a> <ul class="astro-2qyzi2f4" style="--depth: 1;"> <li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#無声音声インターフェースはいつ買えますか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">無声音声インターフェースは、いつ買えますか？</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#ssiは頭の中の考えを読み取るのですか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">SSIは頭の中の考えを読み取るのですか？</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 1;"> <a href="#ssiが普及するなら防音室の購入は待ったほうがいいですか" class="astro-2qyzi2f4" style="--depth: 1;"> <span class="astro-2qyzi2f4" style="--depth: 1;">SSIが普及するなら、防音室の購入は待ったほうがいいですか？</span> </a>  </li> </ul> </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#まとめssiは声の音源を減らす技術" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">まとめ｜SSIは「声の音源」を減らす技術</span> </a>  </li><li class="astro-2qyzi2f4" style="--depth: 0;"> <a href="#参考文献" class="astro-2qyzi2f4" style="--depth: 0;"> <span class="astro-2qyzi2f4" style="--depth: 0;">参考文献</span> </a>  </li> </ul></nav></starlight-toc><script type="module" src="/_astro/TableOfContents.astro_astro_type_script_index_0_lang.FuRcXuRY.js"></script></div></div> </div> </aside> <div class="main-pane astro-vtwpat2q">  <main data-pagefind-body class="astro-4osdczsy" lang="ja" dir="ltr">    <div class="content-panel astro-srciszos"> <div class="sl-container astro-srciszos">  </div> </div> <div class="content-panel astro-srciszos"> <div class="sl-container astro-srciszos"> <div class="sl-markdown-content">  <div class="article-wrapper astro-jzyjacs4"> <!-- 知的なパンくずリスト --> <nav class="breadcrumb astro-jzyjacs4"> <a href="/ja/" class="astro-jzyjacs4">HOME</a> <span class="sep astro-jzyjacs4">/</span>  <a href="/ja/knowledge/" class="astro-jzyjacs4">KNOWLEDGE</a> <span class="sep astro-jzyjacs4">/</span> <span class="current astro-jzyjacs4">RESEARCH</span>  </nav> <article class="article-content astro-jzyjacs4"> <header class="article-header not-content astro-jzyjacs4"> <div class="meta-top astro-jzyjacs4"> <span class="date astro-jzyjacs4">2026/4/4</span> <span class="lang-tag astro-jzyjacs4">JA</span> </div> <h1 id="_top" class="astro-jzyjacs4">無声音声インターフェース（SSI）とは？声を出さずに話す技術の現在地と防音への影響</h1> <p class="description astro-jzyjacs4">無声音声インターフェース（SSI）は、声を出さずに口や喉の筋肉の信号から言葉を読み取る技術です。2026年の研究では限られた文なら認識率90%台に届く一方、誰でも自由に話せる製品はまだありません。主な研究の数値、実用化の壁、防音室が不要になるかを用途別に整理します。</p> <div class="featured-image-container astro-jzyjacs4"> <img src="/_astro/cover.CaRDQ0gZ_Z1ViVC0.webp" alt="無声音声インターフェース（SSI）とは？声を出さずに話す技術の現在地と防音への影響" loading="lazy" decoding="async" width="1200" height="675" class="featured-image astro-jzyjacs4"> </div> </header> <div class="prose-body astro-jzyjacs4"> 
+<p>無声音声インターフェース（Silent Speech Interface：SSI）は、<strong>声を出さずに、口や喉の筋肉の信号や動きから言葉を読み取る技術</strong>です。</p>
+<p>2026年の研究では、決まった短い文なら認識率90%台に届く例が出ていますが、自由な会話を誰でも使える製品はまだ発売されていません。</p>
+<p>防音の面では、防音室を置き換えるより先に、音声入力やWeb会議など「声を出す用途」の一部を静かにする技術として見るのが現実的です。</p>
+<p>この記事では、SSIの仕組み、2026年時点の研究の数値、実用化の壁、防音への影響を順に整理します。</p>
+<h2 id="無声音声インターフェースssiとは">無声音声インターフェース（SSI）とは</h2>
+<p>人が話そうとするとき、脳からの指令で、喉・あご・舌・唇の筋肉が動きます。</p>
+<p>SSIは、この「話そうとした動き」をセンサーで読み取り、AIで言葉やテキストに戻す技術です。</p>
+<p>声帯を震わせなくても、言葉にしようとする筋肉の動きは起きているため、音を出さずに入力できます。</p>
+<h3 id="何を読み取るのか4つの読み取り方">何を読み取るのか｜4つの読み取り方</h3>
+<p>2026年3月に公開されたSSIの総説（Xuほか）は、読み取る場所を4つに分けています。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th style="text-align:left">読み取る場所</th><th style="text-align:left">主な方法</th><th style="text-align:left">装着の形の例</th></tr></thead><tbody><tr><td style="text-align:left">脳の活動</td><td style="text-align:left">脳波など</td><td style="text-align:left">頭に付ける電極</td></tr><tr><td style="text-align:left">筋肉の電気信号</td><td style="text-align:left">筋電（EMG）</td><td style="text-align:left">首・あご・耳の周りに貼るセンサー</td></tr><tr><td style="text-align:left">舌や唇の動き</td><td style="text-align:left">超音波、磁気センサー、カメラ</td><td style="text-align:left">あごの下の超音波、口元を写すカメラ</td></tr><tr><td style="text-align:left">外から当てて測る</td><td style="text-align:left">音波や電波を当てて、反射の変化を見る</td><td style="text-align:left">イヤホン型、メガネ型</td></tr></tbody></table>
+<p>いま実用に近いのは、皮膚の上から筋肉の信号を読む<strong>筋電（EMG）型</strong>です。</p>
+<p>体に穴を開けず、首やあごに貼るだけで測れるためです。</p>
+<h2 id="2026年時点の研究の到達点">2026年時点の研究の到達点</h2>
+<p>SSIの主な研究と製品の発表を、数値つきで並べます。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th style="text-align:left">発表</th><th style="text-align:left">読み取り方</th><th style="text-align:left">対象の言葉</th><th style="text-align:left">結果</th></tr></thead><tbody><tr><td style="text-align:left">AlterEgo（MIT Media Lab、2018年）</td><td style="text-align:left">首・あごの筋電</td><td style="text-align:left">数字など限られた語彙</td><td style="text-align:left">認識率 約92%</td></tr><tr><td style="text-align:left">AlterEgo社の発表（2025年9月）</td><td style="text-align:left">顔と喉の筋肉の信号</td><td style="text-align:left">非公表</td><td style="text-align:left">応答は骨伝導で本人だけに返す。発売時期・価格は未公表</td></tr><tr><td style="text-align:left">SilentWear（2026年3月）</td><td style="text-align:left">首に巻く布製の筋電センサー（14チャンネル）</td><td style="text-align:left">8つの操作コマンド</td><td style="text-align:left">声を出さない場合 77.5%、付け直した後は59.3%</td></tr><tr><td style="text-align:left">Revoice（ケンブリッジ大学ほか、2026年）</td><td style="text-align:left">首に巻くチョーカー型で、喉の振動と脈を読む</td><td style="text-align:left">脳卒中後の発話障害のある患者5人</td><td style="text-align:left">単語の誤り率 4.2%</td></tr><tr><td style="text-align:left">AESSI（2026年9月）</td><td style="text-align:left">耳の周りの電極</td><td style="text-align:left">中国語の日常文25文</td><td style="text-align:left">当日の調整なしで92.24%、21日以上あとのオンライン試験で98.0%</td></tr></tbody></table>
+<p>出典は記事末の参考文献にまとめています。</p>
+<p>表から読み取れることは、次の3つです。</p>
+<ul>
+<li><strong>決まった言葉なら精度は高い</strong> : 数字・コマンド・決まった文の中から当てる形なら、90%台が出ている</li>
+<li><strong>自由な会話はまだ遠い</strong> : 好きな言葉を何でも話せる形での、日常利用の実績はまだない</li>
+<li><strong>医療から先に進んでいる</strong> : 発話障害のある人の会話を助ける用途で、具体的な成果が出始めている</li>
+</ul>
+<p>SilentWearは、全体の消費電力が20.5mWで、27時間以上動き続けられると報告しています。</p>
+<p>1日身に着けたまま使える電池の持ちには、すでに届きつつあります。</p>
+<h2 id="実用化の壁なぜまだ誰でも使えないのか">実用化の壁｜なぜまだ誰でも使えないのか</h2>
+<p>SSIが日常の道具になるまでには、まだ壁があります。</p>
+<ul>
+<li><strong>人によって信号が違う</strong> : 筋肉の付き方や話し方が人ごとに違い、本人のデータで調整しないと精度が出にくい。2026年の総説は、これを最大の課題に挙げている</li>
+<li><strong>付け直すと精度が落ちる</strong> : SilentWearでは、センサーを付け直した後に無声の認識率が77.5%から59.3%に下がった</li>
+<li><strong>話せる言葉が限られる</strong> : 多くの研究は、決まったコマンドや文の中から当てる形で評価している</li>
+<li><strong>心の中の言葉を扱う不安</strong> : AlterEgo社は脳のデータは読まないと説明しているが、総説は「考えていること」の保護を倫理上の課題に挙げている</li>
+</ul>
+<p>AESSIのように、当日の調整なしで高い精度を出した研究も出てきています。</p>
+<p>調整の手間をなくす研究が進めば、製品化は一気に近づきます。</p>
+<h2 id="防音への影響防音室はいらなくなるのか">防音への影響｜防音室はいらなくなるのか</h2>
+<p>SSIが減らせるのは、<strong>人の声</strong>という音源だけです。</p>
+<p>防音が扱う音のうち、どれが置き換わり、どれが残るかを用途別に見ます。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th style="text-align:left">用途</th><th style="text-align:left">SSIで置き換えられる可能性</th><th style="text-align:left">防音が残る理由</th></tr></thead><tbody><tr><td style="text-align:left">深夜の音声入力・AIへの指示</td><td style="text-align:left"><strong>高い</strong></td><td style="text-align:left">短い指示はSSIが得意な形に近い</td></tr><tr><td style="text-align:left">Web会議・通話</td><td style="text-align:left">中くらい</td><td style="text-align:left">相手に届くのは合成された声になる。自然さと遅れが課題</td></tr><tr><td style="text-align:left">ゲーム実況・配信の声</td><td style="text-align:left">低い</td><td style="text-align:left">叫び声や笑い声の生々しさが、配信の価値そのもの</td></tr><tr><td style="text-align:left">歌・楽器の練習</td><td style="text-align:left">ほぼない</td><td style="text-align:left">音そのものを出すことが目的</td></tr><tr><td style="text-align:left">足音・生活音</td><td style="text-align:left">ない</td><td style="text-align:left">声ではないため、防振や遮音が必要</td></tr></tbody></table>
+<p>ふつうの会話の声は約60dBで、ささやき声でも約30dBあります。</p>
+<p>SSIはこの音源をほぼゼロにできる可能性がありますが、楽器や足音のように声以外の音には何の効果もありません。</p>
+<p>防音は「出た音を通さない」技術で、SSIは「音を出さずに伝える」技術です。</p>
+<p>2つは競合するというより、<strong>声の音源をSSIで減らし、残った音を防音で閉じ込める</strong>という組み合わせで使われていくと考えられます。</p>
+<p>配信者が防音室を選ぶときの考え方は、<a href="/ja/creator/streamer-soundproof-room-comprehensive-guide/">配信者・VTuberのための防音環境完全ガイド｜ワンルームから防音室まで全解説</a>で整理しています。</p>
+<h2 id="ssiが届く前に今できる声の対策">SSIが届く前に、今できる声の対策</h2>
+<p>SSIの製品が手に入るまでは、声の音源を小さくし、漏れる音を減らす方法を組み合わせます。</p>
+<ul>
+<li><strong>マイクを口に近づける</strong> : ヘッドセットや口元のマイクにすると、小さな声でも拾えるため、声量を下げられる</li>
+<li><strong>AIのノイズ除去を使う</strong> : NVIDIA Broadcastなどのノイズ除去で、周りの音を相手に届けない</li>
+<li><strong>声が漏れる経路をふさぐ</strong> : ドアの隙間や窓から声は漏れやすい。隙間対策が一番安く効く</li>
+</ul>
+<p>家族がいる家でWeb会議の声を漏らさない工夫は、<a href="/ja/soundproof-rental/remote-work-family-harmony-soundproof/">在宅ワークの音の悩みと防音｜家族の声・Web会議の声漏れ・寝室仕事の対策を整理</a>にまとめています。</p>
+<p>叫び声や楽器のように、声量そのものを下げられない場合は、防音室で閉じ込めるのが確実です。</p>
+<p>防音室の性能と価格は、<a href="/ja/soundproof-room/bouon-osusume-hikaku/">防音室おすすめ比較｜失敗しない選び方とROI（投資対効果）を分析</a>で比べています。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="無声音声インターフェースはいつ買えますか">無声音声インターフェースは、いつ買えますか？</h3>
+<p>2026年10月時点で、一般向けに発売された製品は確認できません。</p>
+<p>AlterEgo社は2025年9月にデバイスを発表しましたが、発売時期と価格は公表していません。</p>
+<h3 id="ssiは頭の中の考えを読み取るのですか">SSIは頭の中の考えを読み取るのですか？</h3>
+<p>いま実用に近いSSIの多くは、脳ではなく、話そうとしたときの筋肉の信号を読んでいます。</p>
+<p>AlterEgo社も、脳のデータには触れないと説明しています。</p>
+<h3 id="ssiが普及するなら防音室の購入は待ったほうがいいですか">SSIが普及するなら、防音室の購入は待ったほうがいいですか？</h3>
+<p>楽器・歌・配信の叫び声・足音が悩みなら、待つ理由はありません。</p>
+<p>SSIが減らせるのは話し声だけで、それも決まった言葉の入力から先に実用化が進むと考えられます。</p>
+<h2 id="まとめssiは声の音源を減らす技術">まとめ｜SSIは「声の音源」を減らす技術</h2>
+<ul>
+<li><strong>無声音声インターフェース（SSI）</strong> : 声を出さずに、筋肉の信号や口の動きから言葉を読み取る技術</li>
+<li><strong>2026年の到達点</strong> : 決まった言葉なら認識率90%台。自由な会話の製品はまだない</li>
+<li><strong>実用化の壁</strong> : 人ごとの調整、付け直しでの精度低下、話せる言葉の少なさ</li>
+<li><strong>防音への影響</strong> : 音声入力やWeb会議の一部は静かにできるが、楽器・歌・足音には効かない</li>
+</ul>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Kapur, A., Kapur, S., Maes, P. “AlterEgo: A Personalized Wearable Silent Speech Interface.” Proceedings of IUI 2018.</li>
+<li>Xu, K., et al. “Silent Speech Interfaces in the Era of Large Language Models: A Comprehensive Taxonomy and Systematic Review.” arXiv:2603.11877, 2026.</li>
+<li>Spacone, G., et al. “SilentWear: an Ultra-Low Power Wearable System for EMG-based Silent Speech Recognition.” arXiv:2603.02847, 2026.</li>
+<li>Tang, C., Gao, S., Li, C., et al. “Wearable intelligent throat enables natural speech in stroke patients with dysarthria.” Nature Communications, 2026.</li>
+<li>Xu, X., et al. “AESSI: An Around-Ear Silent Speech Interface for Cross-Day Online Reuse without Test-Day Calibration.” arXiv:2609.21436, 2026.</li>
+<li>Axios “AlterEgo startup lets you query AI, command computers with ‘silent speech’” 2025年9月8日</li>
+</ul> </div>  <div id="article-mid-ad" hidden class="astro-jzyjacs4"> <aside class="ad-placement ad-placement--rectangleArticleMid astro-jzyjacs4" aria-label="Advertisement" data-ad-placement="rectangleArticleMid"> <div class="ad-placement__label">ADVERTISEMENT</div> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9798094072282530" data-ad-slot="5976402243" data-ad-format="auto" data-full-width-responsive="true"></ins>  </aside> </div> <script>
+          // 記事中広告: 2つ目のH2の直前（H2が1つなら1つ目の直前）へ移してから配信する
+          (function () {
+            var holder = document.getElementById('article-mid-ad');
+            var body = document.querySelector('.prose-body');
+            if (!holder || !body) return;
+            var h2s = body.querySelectorAll(':scope > h2');
+            var target = h2s[1] || h2s[0];
+            if (!target) { holder.remove(); return; }
+            var ad = holder.firstElementChild;
+            target.parentNode.insertBefore(ad, target);
+            holder.remove();
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+          })();
+        </script>   <script>
+        function initLoadMore() {
+          const btn = document.getElementById('load-more-btn');
+          const grid = document.getElementById('posts-grid');
+          if (!btn || !grid) return;
+
+          let currentVisible = 6;
+          const increment = 6;
+          const allCards = grid.querySelectorAll('.post-card');
+          const total = allCards.length;
+          const countDisplay = document.getElementById('current-count');
+
+          btn.addEventListener('click', () => {
+            const nextCount = currentVisible + increment;
+            
+            allCards.forEach((card, index) => {
+              if (index < nextCount) {
+                card.style.display = 'flex';
+                // フェードイン効果
+                card.style.animation = 'fadeIn 0.5s ease forwards';
+              }
+            });
+
+            currentVisible = nextCount;
+            if (countDisplay) countDisplay.textContent = Math.min(currentVisible, total);
+
+            if (currentVisible >= total) {
+              btn.style.display = 'none';
+            }
+          });
+        }
+
+        // 初期化
+        initLoadMore();
+        // View Transitions対応
+        document.addEventListener('astro:after-swap', initLoadMore);
+      </script> <footer class="article-footer not-content astro-jzyjacs4"> <aside class="ad-placement ad-placement--rectangleArticleEnd astro-jzyjacs4" aria-label="Advertisement" data-ad-placement="rectangleArticleEnd"> <div class="ad-placement__label">ADVERTISEMENT</div> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9798094072282530" data-ad-slot="3778705007" data-ad-format="auto" data-full-width-responsive="true"></ins> <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script> </aside> <div class="tag-label astro-jzyjacs4">KEYWORDS</div> <div class="tag-cloud astro-jzyjacs4"> <span class="tag-item astro-jzyjacs4">#次世代技術</span><span class="tag-item astro-jzyjacs4">#無声音声</span><span class="tag-item astro-jzyjacs4">#サイレントスピーチ</span><span class="tag-item astro-jzyjacs4">#配信テック</span><span class="tag-item astro-jzyjacs4">#テレワーク</span> </div> <section class="next-step-section astro-jzyjacs4"> <div class="section-divider astro-jzyjacs4"> <span class="divider-text astro-jzyjacs4">次に読む（Next Step）</span> </div> <div class="next-step-grid astro-jzyjacs4"> <a href="/ja/soundproof-room/home-private-booth-guide/" class="next-step-card astro-jzyjacs4" data-track-event="next_step_click" data-track-source="next_step_beginner" data-track-label="個室ブースを自宅に置くなら｜価格の目安と防音の限界、暑さ・設置の注意点"> <div class="stage astro-jzyjacs4">基礎を理解する</div> <h3 class="astro-jzyjacs4">個室ブースを自宅に置くなら｜価格の目安と防音の限界、暑さ・設置の注意点</h3> <p class="astro-jzyjacs4">同タグ優先</p> </a><a href="/ja/business/japan-soundproof-market-size/" class="next-step-card astro-jzyjacs4" data-track-event="next_step_click" data-track-source="next_step_compare" data-track-label="日本の防音市場規模の統計データ｜配信者経済とテレワークが押し上げる需要"> <div class="stage astro-jzyjacs4">選択肢を比較する</div> <h3 class="astro-jzyjacs4">日本の防音市場規模の統計データ｜配信者経済とテレワークが押し上げる需要</h3> <p class="astro-jzyjacs4">同カテゴリ優先</p> </a><a href="/ja/soundproof-rental/remote-work-family-harmony-soundproof/" class="next-step-card astro-jzyjacs4" data-track-event="next_step_click" data-track-source="next_step_action" data-track-label="在宅ワークの音の悩みと防音｜家族の声・Web会議の声漏れ・寝室仕事の対策を整理"> <div class="stage astro-jzyjacs4">導入を進める</div> <h3 class="astro-jzyjacs4">在宅ワークの音の悩みと防音｜家族の声・Web会議の声漏れ・寝室仕事の対策を整理</h3> <p class="astro-jzyjacs4">導入記事を優先</p> </a> </div> </section> <section class="related-articles-section astro-jzyjacs4"> <div class="section-divider astro-jzyjacs4"> <span class="divider-text astro-jzyjacs4">こちらの研究成果もおすすめ</span> </div> <div class="archive-carousel not-content astro-r7uaphbg" data-carousel><div class="carousel-viewport astro-r7uaphbg" data-viewport><div class="carousel-track astro-r7uaphbg"><article class="carousel-card astro-r7uaphbg"><a href="/ja/money/telework-soundproof-loan-strategy/" class="card-link-overlay astro-r7uaphbg" aria-label="テレワーク・在宅勤務のための防音室ローン活用｜集中環境と耳の健康への戦略投資" data-track-event="related_click" data-track-source="related_section" data-track-label="テレワーク・在宅勤務のための防音室ローン活用｜集中環境と耳の健康への戦略投資"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.XMSsp_pM_Z2bi8Tu.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/3/31</span><span class="relation-label tag astro-r7uaphbg">同タグ 1</span></div><h4 class="card-title astro-r7uaphbg">テレワーク・在宅勤務のための防音室ローン活用｜集中環境と耳の健康への戦略投資</h4><p class="card-excerpt astro-r7uaphbg">「自宅なのに集中できない」という42%の悩みを解決。ノイズキャンセリングの限界と耳の健康リスク（中耳...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/knowledge/vibration-reduction-science/" class="card-link-overlay astro-r7uaphbg" aria-label="階下から足音の苦情が来たら？ジョイントマットで防げない理由と正しい対策" data-track-event="related_click" data-track-source="related_section" data-track-label="階下から足音の苦情が来たら？ジョイントマットで防げない理由と正しい対策"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.DQkSwJ79_2uBpHE.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/3/31</span><span class="relation-label category astro-r7uaphbg">同カテゴリ</span></div><h4 class="card-title astro-r7uaphbg">階下から足音の苦情が来たら？ジョイントマットで防げない理由と正しい対策</h4><p class="card-excerpt astro-r7uaphbg">「厚手のマットを敷いても階下から苦情が来る」という悩みの原因は、音の物理特性の違いにあります。苦情を...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/knowledge/noise-regulation-update-2025/" class="card-link-overlay astro-r7uaphbg" aria-label="2025-2026年騒音規制アップデート｜隣人の騒音に「法的エビデンス」で勝つための数値基準と対策" data-track-event="related_click" data-track-source="related_section" data-track-label="2025-2026年騒音規制アップデート｜隣人の騒音に「法的エビデンス」で勝つための数値基準と対策"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.BPgVuHX1_Z1aoI0l.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/3/31</span><span class="relation-label category astro-r7uaphbg">同カテゴリ</span></div><h4 class="card-title astro-r7uaphbg">2025-2026年騒音規制アップデート｜隣人の騒音に「法的エビデンス」で勝つための数値基準と対策</h4><p class="card-excerpt astro-r7uaphbg">生活騒音トラブルで押さえておきたい受忍限度の考え方と、環境省の騒音環境基準（デシベル数値）を解説。ス...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/knowledge/mental-health-benefits-of-silence/" class="card-link-overlay astro-r7uaphbg" aria-label="静寂の力：なぜ防音室はメンタルケアに役立つのか" data-track-event="related_click" data-track-source="related_section" data-track-label="静寂の力：なぜ防音室はメンタルケアに役立つのか"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.CQGVCFox_62Tw2.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/3/24</span><span class="relation-label category astro-r7uaphbg">同カテゴリ</span></div><h4 class="card-title astro-r7uaphbg">静寂の力：なぜ防音室はメンタルケアに役立つのか</h4><p class="card-excerpt astro-r7uaphbg">現代人が抱えるストレスの多くは、無意識に脳が処理している「騒音」に起因します。防音室がもたらす心理的...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/knowledge/noise-complaint-legal-precedent-manual/" class="card-link-overlay astro-r7uaphbg" aria-label="騒音苦情への正しい対応｜解決事例と判例から学ぶ受忍限度の境界線" data-track-event="related_click" data-track-source="related_section" data-track-label="騒音苦情への正しい対応｜解決事例と判例から学ぶ受忍限度の境界線"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.DQXz5STo_W0w7X.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/3/12</span><span class="relation-label category astro-r7uaphbg">同カテゴリ</span></div><h4 class="card-title astro-r7uaphbg">騒音苦情への正しい対応｜解決事例と判例から学ぶ受忍限度の境界線</h4><p class="card-excerpt astro-r7uaphbg">「隣人からうるさいと言われたらどうすればいい？」という不安に、法的根拠と実例で回答。騒音トラブルの鍵...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/knowledge/biophilic-acoustics/" class="card-link-overlay astro-r7uaphbg" aria-label="苔の吸音効果はどのくらい？研究データで見る防音との違いと壁への取り入れ方" data-track-event="related_click" data-track-source="related_section" data-track-label="苔の吸音効果はどのくらい？研究データで見る防音との違いと壁への取り入れ方"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.COp4fzVD_22up7d.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/3/11</span><span class="relation-label category astro-r7uaphbg">同カテゴリ</span></div><h4 class="card-title astro-r7uaphbg">苔の吸音効果はどのくらい？研究データで見る防音との違いと壁への取り入れ方</h4><p class="card-excerpt astro-r7uaphbg">苔の吸音効果は、厚い種類で1kHzの吸音率0.62ほど（2026年の音響管試験）。響きは減らせますが...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/knowledge/d-value-truth-and-myths/" class="card-link-overlay astro-r7uaphbg" aria-label="D値の嘘と本当｜dBとの違いとカタログ値の落とし穴、防音室選びで失敗しない見方" data-track-event="related_click" data-track-source="related_section" data-track-label="D値の嘘と本当｜dBとの違いとカタログ値の落とし穴、防音室選びで失敗しない見方"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.EmqwJNt__ZjQuWR.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/1/31</span><span class="relation-label category astro-r7uaphbg">同カテゴリ</span></div><h4 class="card-title astro-r7uaphbg">D値の嘘と本当｜dBとの違いとカタログ値の落とし穴、防音室選びで失敗しない見方</h4><p class="card-excerpt astro-r7uaphbg">D値（Dr値）とdB（デシベル）は何が違うのか。D-50とD-60の体感差、カタログ値と実際の設置環...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/knowledge/soundproof-material-spec-chart/" class="card-link-overlay astro-r7uaphbg" aria-label="防音材スペック早見表｜面密度・TL値・D値の対応を一覧で比較できる資料" data-track-event="related_click" data-track-source="related_section" data-track-label="防音材スペック早見表｜面密度・TL値・D値の対応を一覧で比較できる資料"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.B6VK7x_7_Z293eOs.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/6/10</span><span class="relation-label category astro-r7uaphbg">同カテゴリ</span></div><h4 class="card-title astro-r7uaphbg">防音材スペック早見表｜面密度・TL値・D値の対応を一覧で比較できる資料</h4><p class="card-excerpt astro-r7uaphbg">石膏ボード・遮音シート・グラスウールなど主要防音材の面密度と透過損失（TL値）を周波数帯別に一覧化。...</p></div></article><article class="carousel-card astro-r7uaphbg"><a href="/ja/knowledge/soundproof-app-review-2026/" class="card-link-overlay astro-r7uaphbg" aria-label="防音性能を測るスマホアプリ比較2026｜無料アプリでどこまで分かる？" data-track-event="related_click" data-track-source="related_section" data-track-label="防音性能を測るスマホアプリ比較2026｜無料アプリでどこまで分かる？"></a><div class="card-image astro-r7uaphbg"><img src="/_astro/cover.DgWWLW1d_Z1H2WKl.webp" alt loading="lazy" decoding="async" width="400" height="225" class="astro-r7uaphbg"></div><div class="card-body astro-r7uaphbg"><div class="card-meta astro-r7uaphbg"><span class="date astro-r7uaphbg">2026/6/24</span><span class="relation-label category astro-r7uaphbg">同カテゴリ</span></div><h4 class="card-title astro-r7uaphbg">防音性能を測るスマホアプリ比較2026｜無料アプリでどこまで分かる？</h4><p class="card-excerpt astro-r7uaphbg">騒音計アプリの誤差はどのくらいか。iPhone・Androidの無料アプリで防音の効果をどこまで測れ...</p></div></article></div></div><div class="carousel-nav astro-r7uaphbg"><button class="nav-btn prev astro-r7uaphbg" data-prev aria-label="Previous"><svg viewBox="0 0 24 24" width="24" height="24" class="astro-r7uaphbg"><path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" class="astro-r7uaphbg"></path></svg></button><button class="nav-btn next astro-r7uaphbg" data-next aria-label="Next"><svg viewBox="0 0 24 24" width="24" height="24" class="astro-r7uaphbg"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="astro-r7uaphbg"></path></svg></button></div></div><script type="module">function s(){document.querySelectorAll("[data-carousel]").forEach(t=>{const e=t.querySelector("[data-viewport]"),r=t.querySelector("[data-next]"),o=t.querySelector("[data-prev]");if(!e||!r||!o)return;const c=()=>{const n=e.querySelector(".carousel-card");return n?n.offsetWidth+16:280};r.addEventListener("click",()=>{e.scrollBy({left:c(),behavior:"smooth"})}),o.addEventListener("click",()=>{e.scrollBy({left:-c(),behavior:"smooth"})})})}s();document.addEventListener("astro:after-swap",s);</script> </section> <section class="author-byline astro-jzyjacs4"> <svg class="byline-icon astro-jzyjacs4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"> <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5" class="astro-jzyjacs4"></circle> <path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="astro-jzyjacs4"></path> </svg> <p class="byline-text astro-jzyjacs4"> この記事は <a href="/ja/about/" data-track-event="author_byline_click" data-track-source="article_footer" data-track-label="about" class="astro-jzyjacs4">防音Lab</a> が運営しています。 </p> <a href="https://www.threads.com/@bouonlab" target="_blank" rel="noopener noreferrer" class="byline-x-link astro-jzyjacs4" data-track-event="author_byline_click" data-track-source="article_footer" data-track-label="threads_follow"> <span class="threads-badge astro-jzyjacs4" aria-hidden="true">@</span>
+Threads @bouonlab
+</a> </section> </footer> <script>
+          function initReadingProgressTracking() {
+            if (window.__readingTrackingCleanup) {
+              window.__readingTrackingCleanup();
+            }
+
+            const article = document.querySelector('.prose-body');
+            if (!article) return;
+
+            const milestones = [50, 75, 90];
+            const reached = new Set();
+            let completed = false;
+
+            function checkScroll() {
+              const rect = article.getBoundingClientRect();
+              const total = rect.height;
+              if (total <= 0) return;
+
+              const scrolledPast = Math.min(Math.max(window.innerHeight - rect.top, 0), total);
+              const percent = Math.round((scrolledPast / total) * 100);
+
+              milestones.forEach((m) => {
+                if (percent >= m && !reached.has(m) && typeof gtag === 'function') {
+                  reached.add(m);
+                  gtag('event', 'scroll_milestone', { percent_scrolled: m });
+                }
+              });
+
+              if (percent >= 95 && !completed) {
+                completed = true;
+                if (typeof gtag === 'function') {
+                  gtag('event', 'article_read_complete', {});
+                }
+              }
+            }
+
+            window.addEventListener('scroll', checkScroll, { passive: true });
+            window.__readingTrackingCleanup = function () {
+              window.removeEventListener('scroll', checkScroll);
+            };
+            checkScroll();
+          }
+
+          initReadingProgressTracking();
+          document.addEventListener('astro:after-swap', initReadingProgressTracking);
+        </script> </article> </div>  </div> <footer class="bouon-footer astro-o5o7wsh2"> <div class="bouon-footer__inner astro-o5o7wsh2"> <div class="bouon-footer__brand astro-o5o7wsh2"> <a href="/ja/" class="bouon-footer__title astro-o5o7wsh2">BouonLab</a> <p class="bouon-footer__tagline astro-o5o7wsh2">住まい・予算・用途に合わせた防音の解決策をまとめたガイド</p> </div> <nav class="bouon-footer__nav astro-o5o7wsh2" aria-label="運営情報"> <a href="/ja/about/" class="astro-o5o7wsh2">サイトについて</a> <span class="bouon-footer__sep astro-o5o7wsh2" aria-hidden="true">·</span> <a href="/ja/privacy/" class="astro-o5o7wsh2">プライバシーポリシー・免責</a> </nav> <p class="bouon-footer__copy astro-o5o7wsh2">© 2026 BouonLab</p> </div> </footer> <button type="button" class="back-to-top print:hidden astro-wlspcwf4" aria-label="ページの先頭へ戻る" tabindex="-1"> <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" class="astro-wlspcwf4"> <path fill="currentColor" d="M12 7.4 5.7 13.7l1.4 1.4L12 10.2l4.9 4.9 1.4-1.4L12 7.4z" class="astro-wlspcwf4"></path> </svg> </button> <script type="module">const u="ins.adsbygoogle[data-anchor-status], ins.adsbygoogle[data-anchor-shown]",o=document.querySelector(".back-to-top");if(o){let r=window.scrollY,c=!1,s=!1;const a=t=>{t!==c&&(c=t,o.classList.toggle("is-visible",t),o.tabIndex=t?0:-1)},l=()=>{s=!1;const t=window.scrollY,e=t-r;t<400?a(!1):e<=-8?a(!0):e>=8&&a(!1),(Math.abs(e)>=8||t<400)&&(r=t)},i=()=>{let t=0;document.querySelectorAll(u).forEach(e=>{if(e.dataset.anchorStatus==="dismissed"||e.dataset.anchorShown==="false")return;const n=e.getBoundingClientRect();Math.abs(window.innerHeight-n.bottom)<2&&n.height>0&&(t=Math.max(t,n.height+12))}),o.style.setProperty("--back-to-top-ad-offset",`${t}px`)};window.addEventListener("scroll",()=>{s||(s=!0,requestAnimationFrame(l))},{passive:!0}),window.addEventListener("resize",i,{passive:!0});let d;new MutationObserver(()=>{window.clearTimeout(d),d=window.setTimeout(i,150)}).observe(document.documentElement,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["data-anchor-status","data-anchor-shown","style"]}),o.addEventListener("click",()=>{const t=window.matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:t?"auto":"smooth"})}),i()}</script> </div> </div>  </main> </div> </div> </div> </div> </body></html>
