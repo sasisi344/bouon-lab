@@ -47,14 +47,14 @@ npx astro check # 型チェック
 
 ## タスク管理
 
-タスクは `.task-management/` にある（344dev の hq からの統合司令の窓口）。タスクを読む・書く前に、必ず `.task-management/CLAUDE.md` を読む。
+タスクは `.task-management/` にある（344blog の hq からの統合司令の窓口）。タスクを読む・書く前に、必ず `.task-management/CLAUDE.md` を読む。
 
 - 正本: `.task-management/task.md`（索引だけ読み、必要な ID の本文だけ開く）
 - 問題点・気づき・hq からの修正依頼: `.task-management/inbox.md`（作業の開始時に未処置を処理する）
 - 実行記録: `.task-management/records/index.md`（起票前・解析前に Grep する）
 - 計画書・調査・データは `.workspace/` に置き、タスクからリンクする
 - 月次解析（効果測定）の進め方と旧ID（S-NN・W-NN）の対応は `.task-management/CLAUDE.md` の「サイト固有」節
-- サイトをまたぐタスクは344dev の `hq/backlog.md`（GitHub Project は2026-10-27に廃止）
+- サイトをまたぐタスクは344blog の `hq/backlog.md`（GitHub Project は2026-10-27に廃止）
 
 ## コンテンツ作業フロー
 
@@ -75,6 +75,6 @@ npx astro check # 型チェック
 
 - `src/data/contentCategories.ts` — トップカテゴリ一覧とナビ・一覧用ラベル
 - `src/data/affiliates.ts` — アフィリエイトリンクデータ
-- `.workspace/strategies/` — コンテンツ計画・リライトスケジュール
+- `.workspace/projects/` — コンテンツ計画・リライト計画（`persona-rewrite/`・`rewrite-priority/`・`gsc-weak-query/` など）
 - `.workspace/.data-set/CLAUDE.md` — ナレッジ置き場の索引・鮮度ラベル・「記事作成時にどこから取るか」の早見表（内部リンク正本 `interlink-postlist.md` を含む。検索は`bouon-dataset-lookup` skill）
 - `.workspace/access-data/CLAUDE.md` — GSC/GA4エクスポートのフォルダ索引・取り込みルール・解析の作業ログ（CSVを開く前に読む）
