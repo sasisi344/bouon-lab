@@ -87,6 +87,30 @@
 | 46 | https://bouon-lab.com/ja/money/soundproof-room-rental-lease/ | 登録済 | 9 / 0 | 戻りリンクを追記 | 2026/10/15 |
 | 52 | https://bouon-lab.com/ja/soundproof-room/proofroom-soudmore-manual/ | 登録済 | 9 / 0 | 更新 | 2026/09/26 |
 
+## T-54・T-58 の申請（2026-11 開始）
+
+上の集計（54本）とは別枠。
+
+| URL | 区分 | 状態 | 申請日 |
+|---|---|---|---|
+| https://bouon-lab.com/ja/knowledge/noise-regulation-update-2025/ | T-54 | リクエスト済 | 2026/11/07 |
+| https://bouon-lab.com/ja/soundproof-room/proofroom-aircondition-select/ | T-54 | リクエスト済 | 2026/11/07 |
+| https://bouon-lab.com/ja/local/chiba-soundproof-rental-guide/ | T-54 | リクエスト済 | 2026/11/07 |
+| https://bouon-lab.com/ja/diy/diy-soundproof-room-failures-solutions/ | T-54 | リクエスト済 | 2026/11/07 |
+| https://bouon-lab.com/ja/diy/outdoor-soundproof-curtain-market-guide/ | T-54 | リクエスト済 | 2026/11/07 |
+| https://bouon-lab.com/ja/knowledge/future-ssi-silent-speech-interface-revolution/ | T-54 | リクエスト済 | 2026/11/07 |
+| https://bouon-lab.com/ja/soundproof-room/soundproof-performance-drum/ | T-54 | リクエスト済 | 2026/11/07 |
+| https://bouon-lab.com/ja/local/fukuoka-soundproof-rental-guide/ | T-54 | リクエスト済 | 2026/11/07 |
+| https://bouon-lab.com/ja/local/nagoya-soundproof-rental-guide/ | T-54 | 未申請 | — |
+| https://bouon-lab.com/ja/local/hamamatsu-soundproof-rental-guide/ | T-54 | 未申請 | — |
+| https://bouon-lab.com/ja/soundproof-rental/soundproof-rental-cost-performance-guide/ | T-54 | 未申請 | — |
+| https://bouon-lab.com/ja/soundproof-room/assembly-type-comparison/ | T-54 | 未申請 | — |
+| https://bouon-lab.com/ja/soundproof-room/bouon-osusume-hikaku/ | T-58 | 未申請（11/07 に push） | — |
+| https://bouon-lab.com/ja/soundproof-room/kawai-nasal-soundproof-room-guide/ | T-58 | 未申請（11/07 に push） | — |
+| https://bouon-lab.com/ja/soundproof-room/shimamura-music-soundproof-room-guide/ | T-58 | 未申請（11/07 に push） | — |
+| https://bouon-lab.com/ja/money/streamer-tax-strategy/ | T-58 | 未申請（11/07 に push） | — |
+| https://bouon-lab.com/ja/soundproof-room/budget-soundproof-booth-comparison/ | T-58 | 未申請（11/07 に push） | — |
+
 ## 申請しないもの
 
 - **301にした旧URL・削除した記事**（`/posts/…`、統合で削除した記事）: 申請しても意味がない。統合先を申請する

@@ -39,6 +39,18 @@
 - **流入上位6本の収益導線（T-30、2026-10-31、T-46）**: 対象は `knowledge/soundproof-material-spec-chart`・`money/soundproof-room-price-market`・`soundproof-room/bouon-dchiseinou-meyasu`・`creator/streamer-soundproof-room-comprehensive-guide`・`soundproof-rental/report-japan-soundproof-rental-market-needs`・`soundproof-rental/bouon-rental-market-guide`。各記事に商品名を出す段落と CtaBox（スペック早見表だけ AffiliateCard）を足しただけで、本文の情報・見出しは変えていない。基準値は m10 の6本の日本からのセッションと `affiliate_click`（記事別。`hq/tools/analytics-fetch/` の `fetch.mjs ga4 --event affiliate_click --dims pagePath` で取れる）。見る: 6本の `affiliate_click` の件数とクリック率（クリック÷セッション）、どの CtaBox が押されたか、6本のセッションと平均エンゲージメント時間が落ちていないか。判定: `affiliate_click` が6本合計で1件以上出れば導線は機能していると見て、同じ型を流入の次の層へ広げる。0件なら置く位置（記事の後半すぎないか）と商品の価格帯を見直す。`soundproof-room-price-market` は同じ日に T-45（語り手リライト）も入っているので、セッション・順位の変化はどちらの影響か分けられない点に注意
 - **継続観察**（W-15〜W-20）: S-11と同じ項目を見る
 
+## T-58 のタイトル変更（2026-11-06。デプロイ日で測り直す）
+
+同じ順位帯のCTRを、変更前後の月次で比べる。
+
+| 記事 | 旧タイトル | 新タイトル |
+|---|---|---|
+| bouon-osusume-hikaku | 【2026最新】防音室おすすめ比較｜失敗しない選び方とROI（投資対効果）を分析 | 防音室おすすめ比較｜配信・楽器と予算で選ぶメーカー・製品の目安 |
+| kawai-nasal-soundproof-room-guide | カワイ防音室ナサール（Nasal）完全ガイド｜特徴・価格・ヤマハとの違い | カワイ防音室ナサールの価格と選び方｜構造・Dr値・ヤマハとの比較 |
+| shimamura-music-soundproof-room-guide | 島村楽器で防音室を選ぶメリット｜試奏体験と限定コラボモデル「S-OTODASU」 | 島村楽器の防音室はどこで試せる？展示店舗・試奏とS-OTODASU |
+| streamer-tax-strategy | 防音室は経費にできる？配信者だけじゃない対象職業と判断基準 | 防音室は経費にできる？減価償却・耐用年数と配信者の家事按分 |
+| budget-soundproof-booth-comparison | 格安防音室は夏に地獄化する？だんぼっち・OTODASU排熱リスクと中古購入の注意点 | 防音室の格安モデルは夏に暑い？だんぼっち・OTODASUの排熱と中古の注意点 |
+
 ## 結果
 
 （実施後に追記）

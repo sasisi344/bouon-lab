@@ -6,6 +6,8 @@
 
 | ID | 完了日 | 種別 | テーマ（タグ） | 対象（URL・クエリ） | 結果（1行） | 参照できるデータ | ファイル |
 |---|---|---|---|---|---|---|---|
+| T-58 | 2026-11-06 | 施策 | 未登録, 作り直し, タイトル変更, 内部リンク | bouon-osusume-hikaku, kawai-nasal-soundproof-room-guide, shimamura-music-soundproof-room-guide, streamer-tax-strategy, budget-soundproof-booth-comparison | 4本を作り直し、1本の title を変更。検収は公開可。効果は T-59 で見る | .workspace/admin-review/2026-11-06-T-58.md | [2026-11-06-T-58-rebuild-unindexed.md](2026-11-06-T-58-rebuild-unindexed.md) |
+| T-47 | 2026-11-06 | 調査 | インデックス, 統合判定, noindex, 作り直し | 未登録34本 | 34本の扱いを決定（待つ16・作り直し4・noindex 4・統合10）。T-54〜T-59 を起票 | .workspace/projects/rewrite-priority/2026-11-06-t47-unindexed-decisions.md | [2026-11-06-T-47-unindexed-decisions.md](2026-11-06-T-47-unindexed-decisions.md) |
 | T-42 | 2026-11-01 | 調査 | リライト優先度, インデックス, CTR, 統合判定 | 公開中の186本 | 186本を skill の基準で分類。上位はほぼ10月の施策で測定中のため重ねず、表示0の40本を URL 検査して未登録34本を T-47 に起票。T-43 バッチ2の20本を選定 | .workspace/projects/rewrite-priority/ | [2026-11-01-T-42-rewrite-priority.md](2026-11-01-T-42-rewrite-priority.md) |
 | T-30 | 2026-10-31 | 施策 | AdSense, アフィリエイト, CtaBox, 収益導線 | 流入上位6本・記事中の広告枠 | 収益ゼロは故障でなく量と置き場所の問題と診断。記事中の広告枠を追加し、流入上位6本に商品の節と CtaBox 8個・AffiliateCard 2個を追加（Codex 実行・CC 検収）。効果測定は T-46 | .workspace/codex/reports/2026-10-31-T-30.md | [2026-10-31-T-30-revenue-path.md](2026-10-31-T-30-revenue-path.md) |
 | T-41 | 2026-10-29 | 施策 | AdSense, 自動広告, 管理画面 | AdSense 管理画面 | 自動広告を全画面＋アンカーのみにし、サイトの状態・ポリシーを確認（ユーザー、Notion で完了）。2点の結果の詳細は未記録 | — | [2026-10-29-T-41-adsense-settings.md](2026-10-29-T-41-adsense-settings.md) |

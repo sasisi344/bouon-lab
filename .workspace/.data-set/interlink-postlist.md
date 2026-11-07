@@ -48,7 +48,7 @@
 | ja | diy | `diy-led-acoustic-panels` |  | 配信映えする「LED付き自作吸音パネル」の作り方！光と音を同時に操る | 吸音材, LED, 配信・実況, DIY防音, インテリア | `/ja/diy/diy-led-acoustic-panels/` | false |
 | ja | diy | `diy-refrigeration-noise-reduction` |  | 冷蔵庫のブーンという振動音の対策｜防振マットの選び方と床に響かせない置き方 | 冷蔵庫, 家電騒音, 防振, 生活音, 騒音対策, 換気扇 | `/ja/diy/diy-refrigeration-noise-reduction/` | false |
 | ja | diy | `diy-soundproof-room-failures-solutions` |  | 防音パネルの罠｜DIY失敗例から学ぶ『遮音と吸音』の物理学的黄金比 | DIY防音, 遮音, 吸音, 遮音性能, 失敗談 | `/ja/diy/diy-soundproof-room-failures-solutions/` | false |
-| ja | diy | `diy-soundproofing-tips` |  | DIY防音のコツ｜安価で効果的な遮音・吸音テクニックを音響エンジニアが解剖 | DIY防音, 遮音シート, 吸音材, 防音賃貸, 音響設計 | `/ja/diy/diy-soundproofing-tips/` | false |
+| ja | diy | `diy-soundproofing-tips` |  | DIY防音のコツ｜安価で効果的な遮音・吸音テクニックを仕組みから整理 | DIY防音, 遮音シート, 吸音材, 防音賃貸, 音響設計 | `/ja/diy/diy-soundproofing-tips/` | false |
 | ja | diy | `diy-substitute-materials-daiso-plastic-board` |  | 防音室の自作はプラダンや100均で足りる？素材別に効く・効かないを判定 | DIY防音, 自作防音室, プラダン, 100均, 吸音と遮音, 段ボール | `/ja/diy/diy-substitute-materials-daiso-plastic-board/` | false |
 | ja | diy | `diy-vocal-soundproof-mask` |  | 防音マスク自作は息苦しい？段ボールヘッドボックスの酸欠リスクを検証 | 防音マスク, 酸欠対策, DIY防音, 深夜配信, 換気 | `/ja/diy/diy-vocal-soundproof-mask/` | false |
 | ja | diy | `diy-wall-soundproofing-room-guide` |  | 自分の部屋を防音室にしたい？DIYの壁防音と専門工事の現実的な選択肢 | DIY防音, 壁防音, 防音賃貸, 防音工事 | `/ja/diy/diy-wall-soundproofing-room-guide/` | false |
@@ -122,7 +122,7 @@
 | ja | money | `soundproof-subsidy-check-guide` |  | うちの家は対象？防音工事の補助金エリアの調べ方【空港・基地・道路／東京・大阪の例つき】 | 防音工事, 補助金, 対象エリア, 空港, 自衛隊, 幹線道路, 東京・大阪 | `/ja/money/soundproof-subsidy-check-guide/` | false |
 | ja | money | `soundproof-subsidy-news-2025` |  | 防音室の補助金2026年最新版｜二重窓リノベで最大100万円を受け取る方法 | 補助金, 節税 | `/ja/money/soundproof-subsidy-news-2025/` | false |
 | ja | money | `soundproof-window-subsidy-2025-guide` |  | 【2026年最新】防音窓リフォームで使える補助金制度まとめ｜先進的窓リノベ2026対応 | 補助金, 内窓リフォーム | `/ja/money/soundproof-window-subsidy-2025-guide/` | false |
-| ja | money | `streamer-tax-strategy` |  | 防音室は経費にできる？配信者だけじゃない対象職業と判断基準 | 確定申告, 節税, 減価償却, 個人事業主, 青色申告, 配信・実況 | `/ja/money/streamer-tax-strategy/` | false |
+| ja | money | `streamer-tax-strategy` |  | 防音室は経費にできる？減価償却・耐用年数と配信者の家事按分 | 確定申告, 節税, 減価償却, 個人事業主, 青色申告, 配信・実況 | `/ja/money/streamer-tax-strategy/` | false |
 | ja | money | `telework-soundproof-loan-strategy` |  | テレワーク・在宅勤務のための防音室ローン活用｜集中環境と耳の健康への戦略投資 | テレワーク, ローン, 生産性, 節税 | `/ja/money/telework-soundproof-loan-strategy/` | false |
 | ja | money | `used-soundproof-room-buying-guide` |  | 中古防音室は予算10万円で何が買える？セフィーネより『だんぼっち・OTODASU』を探すべき理由 | 中古防音室, 費用, 予算10万円, だんぼっち, OTODASU, ヤマハ | `/ja/money/used-soundproof-room-buying-guide/` | false |
 | ja | soundproof-rental | `apartment-weight-limit-500kg` |  | 築20年のマンションに重さ500kgの防音室を置ける？床補強なしで設置するための安全基準と計算術 | 耐荷重, 床荷重計算, マンション, ヤマハ, 防音室導入, 木造戸建て | `/ja/soundproof-rental/apartment-weight-limit-500kg/` | false |
@@ -154,9 +154,9 @@
 | ja | soundproof-room | `assembly-type-comparison` |  | 組み立て式防音室おすすめ比較｜用途別（楽器・ゲーム・配信）と価格帯 | 組み立て式, 防音ブース, だんぼっち, OTODASU, GAMEBOX, VOICEBOX | `/ja/soundproof-room/assembly-type-comparison/` | false |
 | ja | soundproof-room | `bouon-dchiseinou-meyasu` |  | 遮音性能の基準「D値」とは？楽器・用途別の目安 | 遮音性能, D値, 防音賃貸, 楽器可物件, 物件選び | `/ja/soundproof-room/bouon-dchiseinou-meyasu/` | false |
 | ja | soundproof-room | `bouon-humidifier-comparison` |  | 防音室の加湿器の選び方｜結露・過加湿を防ぐ方式の比較と、静音モデル・置き場所の考え方 | 加湿器, 結露, 防音室, 湿度管理, カビ対策 | `/ja/soundproof-room/bouon-humidifier-comparison/` | false |
-| ja | soundproof-room | `bouon-osusume-hikaku` |  | 【2026最新】防音室おすすめ比較｜失敗しない選び方とROI（投資対効果）を分析 | 防音室, 防音室選び, ヤマハ, カワイ, リセールバリュー, ROI | `/ja/soundproof-room/bouon-osusume-hikaku/` | false |
+| ja | soundproof-room | `bouon-osusume-hikaku` |  | 防音室おすすめ比較｜配信・楽器と予算で選ぶメーカー・製品の目安 | 防音室, 防音室選び, ヤマハ, カワイ, 費用, 配信・実況 | `/ja/soundproof-room/bouon-osusume-hikaku/` | false |
 | ja | soundproof-room | `bouon-setti-checkpoint` |  | 防音室導入の最終チェックリスト｜後悔しないためのサイズ・重量・搬入のデッドライン | 設置条件, 床荷重, 搬入経路, 管理組合, 失敗しない防音室 | `/ja/soundproof-room/bouon-setti-checkpoint/` | false |
-| ja | soundproof-room | `budget-soundproof-booth-comparison` |  | 格安防音室は夏に地獄化する？だんぼっち・OTODASU排熱リスクと中古購入の注意点 | 防音室, 排熱対策, だんぼっち, OTODASU, 中古防音室 | `/ja/soundproof-room/budget-soundproof-booth-comparison/` | false |
+| ja | soundproof-room | `budget-soundproof-booth-comparison` |  | 防音室の格安モデルは夏に暑い？だんぼっち・OTODASUの排熱と中古の注意点 | 防音室, 排熱対策, だんぼっち, OTODASU, 中古防音室 | `/ja/soundproof-room/budget-soundproof-booth-comparison/` | false |
 | ja | soundproof-room | `buy-home-with-soundproof-room` |  | 防音室付きマンションを買うには？分譲・中古の探し方と内見の確認点 | 防音室付き物件, 分譲マンション, 中古マンション, 中古戸建て, 物件探し, 楽器演奏, 住宅購入 | `/ja/soundproof-room/buy-home-with-soundproof-room/` | false |
 | ja | soundproof-room | `compact-booth-under-1-5-tatami` |  | 防音室0.8畳で足りる？0.5〜1.5畳の小型でギター・歌・配信はできるか | 防音室, 小型防音室, 0.8畳, サイズ選び, ヤマハ | `/ja/soundproof-room/compact-booth-under-1-5-tatami/` | false |
 | ja | soundproof-room | `construction-types-cost-comparison` |  | 防音工事の種類と価格比較｜壁・床・開口部、業者の選び方まで | 防音工事, リフォーム, 価格比較, 防音壁 | `/ja/soundproof-room/construction-types-cost-comparison/` | false |
@@ -170,7 +170,7 @@
 | ja | soundproof-room | `home-theater-soundproof-room` |  | 防音室でホームシアターを楽しむには？重低音を夜に鳴らすDr値と費用 | 防音室, ホームシアター, 重低音, 浮き床, 防音工事, 注文住宅, 地下室 | `/ja/soundproof-room/home-theater-soundproof-room/` | false |
 | ja | soundproof-room | `hsp-soundproof-curtain-guide` |  | HSP気質の方へ。生活音のストレスを劇的に減らす「防音（遮音）カーテン」の正しい選び方と限界 | 防音カーテン, HSP, 睡眠, 騒音対策, 遮音性能 | `/ja/soundproof-room/hsp-soundproof-curtain-guide/` | false |
 | ja | soundproof-room | `hsp-soundproof-room-guide` |  | HSP・音過敏のための防音室の選び方｜D-40を目安にした遮音性能・換気・素材の確認ポイント | HSP, 音過敏, 防音室選び, 感覚過敏, 防音室 | `/ja/soundproof-room/hsp-soundproof-room-guide/` | false |
-| ja | soundproof-room | `kawai-nasal-soundproof-room-guide` |  | カワイ防音室ナサール（Nasal）完全ガイド｜特徴・価格・ヤマハとの違い | カワイ | `/ja/soundproof-room/kawai-nasal-soundproof-room-guide/` | false |
+| ja | soundproof-room | `kawai-nasal-soundproof-room-guide` |  | カワイ防音室ナサールの価格と選び方｜構造・Dr値・ヤマハとの比較 | カワイ | `/ja/soundproof-room/kawai-nasal-soundproof-room-guide/` | false |
 | ja | soundproof-room | `million-yen-soundproof-room-professional` |  | 100万円クラス防音室の到達レベル｜プロ用途で選ぶべき基準と投資対効果 | 防音室, プロ向け, ヤマハ, カワイ, 遮音性能, ROI | `/ja/soundproof-room/million-yen-soundproof-room-professional/` | false |
 | ja | soundproof-room | `night-practice-soundproof-guide` |  | 夜間練習はどこまで許される？深夜でも楽器を弾くための防音室選びと「振動」の罠 | 夜間練習, D値, 振動対策, ヤマハ, カワイ, サイレント楽器 | `/ja/soundproof-room/night-practice-soundproof-guide/` | false |
 | ja | soundproof-room | `nitori-soundproof-acoustic-guide` |  | ニトリ防音は壁に効果ある？反響は減るが音漏れは止まらない実測検証 | ニトリ, 吸音材, 騒音対策, 防音賃貸, 配信部屋 | `/ja/soundproof-room/nitori-soundproof-acoustic-guide/` | false |
@@ -184,7 +184,7 @@
 | ja | soundproof-room | `proofroom-humidity-airconditionlist` |  | 防音室の温湿度管理ガイド2026｜暑さ・結露・乾燥を物理的に防ぐ改善術 | 防音室, 温湿度管理, 加湿器, 楽器メンテナンス, 結露 | `/ja/soundproof-room/proofroom-humidity-airconditionlist/` | false |
 | ja | soundproof-room | `proofroom-soudmore-manual` |  | 防音室の音漏れ対策ガイド2026｜原因特定から段階的改善のマニュアル | 防音室, 騒音対策, DIY防音, メンテナンス | `/ja/soundproof-room/proofroom-soudmore-manual/` | false |
 | ja | soundproof-room | `shanon-vs-bouon-window` |  | 賃貸と戸建てで変わる窓の防音対策｜遮音窓・防音窓の違いと費用完全ガイド | 内窓, 防音リノベ, 防音室選び, 賃貸, 戸建て | `/ja/soundproof-room/shanon-vs-bouon-window/` | false |
-| ja | soundproof-room | `shimamura-music-soundproof-room-guide` |  | 島村楽器で防音室を選ぶメリット｜試奏体験と限定コラボモデル「S-OTODASU」 | 島村楽器, 防音室, ショールーム | `/ja/soundproof-room/shimamura-music-soundproof-room-guide/` | false |
+| ja | soundproof-room | `shimamura-music-soundproof-room-guide` |  | 島村楽器の防音室はどこで試せる？展示店舗・試奏とS-OTODASU | 島村楽器, 防音室, ショールーム | `/ja/soundproof-room/shimamura-music-soundproof-room-guide/` | false |
 | ja | soundproof-room | `sleep-quality-soundproof-room` |  | 防音室で眠ると睡眠の質が変わる理由｜超静寂環境がもたらす疲労回復効果 | 睡眠, 健康, 疲労回復, 防音室, バイオハック | `/ja/soundproof-room/sleep-quality-soundproof-room/` | false |
 | ja | soundproof-room | `sound-reduction-simulation` |  | 【シミュレーション】防音室で音はどこまで消える？用途別の軽減率を徹底検証 | 遮音性能, シミュレーション, 配信・実況, 楽器演奏 | `/ja/soundproof-room/sound-reduction-simulation/` | false |
 | ja | soundproof-room | `soundproof-performance-drum` |  | 自宅でドラムを叩いても許されるDr値は？住む環境別に見る防音の必要性 | ドラム防音, 振動対策, 個体伝搬音, 防音工事 | `/ja/soundproof-room/soundproof-performance-drum/` | false |
