@@ -6,6 +6,8 @@
 
 | ID | 完了日 | 種別 | テーマ（タグ） | 対象（URL・クエリ） | 結果（1行） | 参照できるデータ | ファイル |
 |---|---|---|---|---|---|---|---|
+| T-50 | 2026-11-08 | 施策 | クエリ契約, タイトル変更, 冒頭の型, CTR | mansion-instrument-practice-time-rules, onetouch-soundproof-wall-review, wifi-connection-guide, bass-trap-installation-guide, diy-vocal-soundproof-mask, musision-comprehensive-guide | 6本のタイトル・導入・H2 を新ルールで作り直し、検収は公開可。効果は T-53 で見る | .workspace/admin-review/2026-11-08-T-50.md | [2026-11-08-T-50-type-a-rewrite.md](2026-11-08-T-50-type-a-rewrite.md) |
+| T-49 | 2026-11-08 | 施策 | テキストルール, クエリ契約, 冒頭の型, 文体 | bouon-writing skill・query-intent-match・bouon-persona-thinking・AGENTS.md | 検索語を置く場所・冒頭の型・言い換え語・届かない語・さししの言葉を追加。見本は T-50 の mansion で確認 | .workspace/admin-review/2026-11-08-T-50.md | [2026-11-08-T-49-text-rules.md](2026-11-08-T-49-text-rules.md) |
 | T-58 | 2026-11-06 | 施策 | 未登録, 作り直し, タイトル変更, 内部リンク | bouon-osusume-hikaku, kawai-nasal-soundproof-room-guide, shimamura-music-soundproof-room-guide, streamer-tax-strategy, budget-soundproof-booth-comparison | 4本を作り直し、1本の title を変更。検収は公開可。効果は T-59 で見る | .workspace/admin-review/2026-11-06-T-58.md | [2026-11-06-T-58-rebuild-unindexed.md](2026-11-06-T-58-rebuild-unindexed.md) |
 | T-47 | 2026-11-06 | 調査 | インデックス, 統合判定, noindex, 作り直し | 未登録34本 | 34本の扱いを決定（待つ16・作り直し4・noindex 4・統合10）。T-54〜T-59 を起票 | .workspace/projects/rewrite-priority/2026-11-06-t47-unindexed-decisions.md | [2026-11-06-T-47-unindexed-decisions.md](2026-11-06-T-47-unindexed-decisions.md) |
 | T-42 | 2026-11-01 | 調査 | リライト優先度, インデックス, CTR, 統合判定 | 公開中の186本 | 186本を skill の基準で分類。上位はほぼ10月の施策で測定中のため重ねず、表示0の40本を URL 検査して未登録34本を T-47 に起票。T-43 バッチ2の20本を選定 | .workspace/projects/rewrite-priority/ | [2026-11-01-T-42-rewrite-priority.md](2026-11-01-T-42-rewrite-priority.md) |

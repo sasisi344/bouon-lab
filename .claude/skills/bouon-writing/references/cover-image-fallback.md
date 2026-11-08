@@ -38,4 +38,4 @@ node .workspace/scripts/generate-image.js --list-presets
 - 例: `"Soundproof booth setup in a modern home studio, acoustic panels on walls, soft warm lighting, no people, professional photography style"`
 - API Key: `GEMINI_API_KEY` を `.workspace/scripts/.env` に設定
 - スクリプトが失敗した場合（APIキーなし等）: `image` をfrontmatterから除外するか残したまま、ユーザーに通知して続行する
-- 画像生成は明示的な指示があるときのみ実行する（無条件に自動生成しない）
+- 記事に画像生成プロンプトを書いた段階で生成してよい（2026-11-06 ユーザー決定。全サイト共通）

@@ -17,7 +17,8 @@
 
 | 作業 | 読むもの |
 |---|---|
-| 文体・語り手・筆者の経緯（正本） | `.claude/skills/bouon-writing/SKILL.md` |
+| 文体・語り手・筆者の経緯（正本） | `.claude/skills/bouon-writing/SKILL.md`（「検索語を置く場所」「冒頭の型」「さししの言葉」は 2026-11-08 改定） |
+| タイトル・description・導入・H2 | `.claude/skills/bouon-writing/references/query-intent-match.md` |
 | 新規記事（下書きから清書） | `.claude/skills/bouon-draft-publish-pipeline/SKILL.md`、`CLAUDE.md`「コンテンツ作業フロー」 |
 | リライト | `.claude/skills/bouon-rewrite-strategy/SKILL.md` |
 | データの参照 | `.claude/skills/bouon-dataset-lookup/SKILL.md` |
@@ -25,9 +26,9 @@
 | 図解・メモ画像 | `.claude/skills/bouon-memo-image/SKILL.md` |
 
 - 語り手は「調べて共有する人」。専門資格・施工経験は書かない（ない）
-- 確認: `pnpm build`
+- 確認: このサイトは Codex のサンドボックスではビルドできない（Astro 6 が `Cannot read directory "../..": Access is denied` で止まる。2026-11-07 確認）。ビルドは CC が検収で行うので、Codex は実行せず、報告書に「ビルド未実行」と書く
 
 ## 画像
 
 - 画像のトーンとキャラクター性の正本: `.workspace/codex/image-style.md`（このサイト専用。ほかのサイトの型を使わない）
-- 記事の作成・リライトでは画像を生成しない。説明画像の位置に画像マーカーを置き、サムネイル案は報告書の「画像計画」に書く。生成はサムネイルの段階で、指示書に許可があるときだけまとめて行う（`C:\Users\sasis\344blog\hq\org\README.md` §4）
+- 記事に画像生成プロンプトを書いた段階で、画像を生成して埋め込んでよい（2026-11-06 ユーザー決定）。手段は Codex でも API でもよい。指示書の「画像」欄が `生成しない` のときだけ、画像マーカーを置き、サムネイル案を報告書の「画像計画」に書く
