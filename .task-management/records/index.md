@@ -6,6 +6,7 @@
 
 | ID | 完了日 | 種別 | テーマ（タグ） | 対象（URL・クエリ） | 結果（1行） | 参照できるデータ | ファイル |
 |---|---|---|---|---|---|---|---|
+| T-54 | 2026-11-08 | 施策 | インデックス, URL検査, 申請 | 未登録の「待つ」12本・T-58 の5本 | 17本を GSC の URL 検査で申請（11/07 に8本、11/08 に9本）。登録の判定は T-59 | .workspace/projects/indexing/index-url.md | [2026-11-08-T-54-index-requests.md](2026-11-08-T-54-index-requests.md) |
 | T-50 | 2026-11-08 | 施策 | クエリ契約, タイトル変更, 冒頭の型, CTR | mansion-instrument-practice-time-rules, onetouch-soundproof-wall-review, wifi-connection-guide, bass-trap-installation-guide, diy-vocal-soundproof-mask, musision-comprehensive-guide | 6本のタイトル・導入・H2 を新ルールで作り直し、検収は公開可。効果は T-53 で見る | .workspace/admin-review/2026-11-08-T-50.md | [2026-11-08-T-50-type-a-rewrite.md](2026-11-08-T-50-type-a-rewrite.md) |
 | T-49 | 2026-11-08 | 施策 | テキストルール, クエリ契約, 冒頭の型, 文体 | bouon-writing skill・query-intent-match・bouon-persona-thinking・AGENTS.md | 検索語を置く場所・冒頭の型・言い換え語・届かない語・さししの言葉を追加。見本は T-50 の mansion で確認 | .workspace/admin-review/2026-11-08-T-50.md | [2026-11-08-T-49-text-rules.md](2026-11-08-T-49-text-rules.md) |
 | T-58 | 2026-11-06 | 施策 | 未登録, 作り直し, タイトル変更, 内部リンク | bouon-osusume-hikaku, kawai-nasal-soundproof-room-guide, shimamura-music-soundproof-room-guide, streamer-tax-strategy, budget-soundproof-booth-comparison | 4本を作り直し、1本の title を変更。検収は公開可。効果は T-59 で見る | .workspace/admin-review/2026-11-06-T-58.md | [2026-11-06-T-58-rebuild-unindexed.md](2026-11-06-T-58-rebuild-unindexed.md) |

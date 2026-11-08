@@ -101,15 +101,15 @@
 | https://bouon-lab.com/ja/knowledge/future-ssi-silent-speech-interface-revolution/ | T-54 | リクエスト済 | 2026/11/07 |
 | https://bouon-lab.com/ja/soundproof-room/soundproof-performance-drum/ | T-54 | リクエスト済 | 2026/11/07 |
 | https://bouon-lab.com/ja/local/fukuoka-soundproof-rental-guide/ | T-54 | リクエスト済 | 2026/11/07 |
-| https://bouon-lab.com/ja/local/nagoya-soundproof-rental-guide/ | T-54 | 未申請 | — |
-| https://bouon-lab.com/ja/local/hamamatsu-soundproof-rental-guide/ | T-54 | 未申請 | — |
-| https://bouon-lab.com/ja/soundproof-rental/soundproof-rental-cost-performance-guide/ | T-54 | 未申請 | — |
-| https://bouon-lab.com/ja/soundproof-room/assembly-type-comparison/ | T-54 | 未申請 | — |
-| https://bouon-lab.com/ja/soundproof-room/bouon-osusume-hikaku/ | T-58 | 未申請（11/07 に push） | — |
-| https://bouon-lab.com/ja/soundproof-room/kawai-nasal-soundproof-room-guide/ | T-58 | 未申請（11/07 に push） | — |
-| https://bouon-lab.com/ja/soundproof-room/shimamura-music-soundproof-room-guide/ | T-58 | 未申請（11/07 に push） | — |
-| https://bouon-lab.com/ja/money/streamer-tax-strategy/ | T-58 | 未申請（11/07 に push） | — |
-| https://bouon-lab.com/ja/soundproof-room/budget-soundproof-booth-comparison/ | T-58 | 未申請（11/07 に push） | — |
+| https://bouon-lab.com/ja/local/nagoya-soundproof-rental-guide/ | T-54 | リクエスト済 | 2026/11/08 |
+| https://bouon-lab.com/ja/local/hamamatsu-soundproof-rental-guide/ | T-54 | リクエスト済 | 2026/11/08 |
+| https://bouon-lab.com/ja/soundproof-rental/soundproof-rental-cost-performance-guide/ | T-54 | リクエスト済 | 2026/11/08 |
+| https://bouon-lab.com/ja/soundproof-room/assembly-type-comparison/ | T-54 | リクエスト済 | 2026/11/08 |
+| https://bouon-lab.com/ja/soundproof-room/bouon-osusume-hikaku/ | T-58 | リクエスト済（11/07 に push） | 2026/11/08 |
+| https://bouon-lab.com/ja/soundproof-room/kawai-nasal-soundproof-room-guide/ | T-58 | リクエスト済（11/07 に push） | 2026/11/08 |
+| https://bouon-lab.com/ja/soundproof-room/shimamura-music-soundproof-room-guide/ | T-58 | リクエスト済（11/07 に push） | 2026/11/08 |
+| https://bouon-lab.com/ja/money/streamer-tax-strategy/ | T-58 | リクエスト済（11/07 に push） | 2026/11/08 |
+| https://bouon-lab.com/ja/soundproof-room/budget-soundproof-booth-comparison/ | T-58 | リクエスト済（11/07 に push） | 2026/11/08 |
 
 ## 申請しないもの
 
