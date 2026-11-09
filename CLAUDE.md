@@ -76,5 +76,6 @@ npx astro check # 型チェック
 - `src/data/contentCategories.ts` — トップカテゴリ一覧とナビ・一覧用ラベル
 - `src/data/affiliates.ts` — アフィリエイトリンクデータ
 - `.workspace/projects/` — コンテンツ計画・リライト計画（`persona-rewrite/`・`rewrite-priority/`・`gsc-weak-query/` など）
+- `.workspace/projects/daily-post-2026-11/README.md` — サジェストKW（ラッコ・Bing）から記事を作るときのルール。既存記事との重複判定（リライト優先）、新規記事の要素、数字・図解・読者の体験の書き方。サジェスト起点の新規・リライトの起票と指示書作成の前に読む
 - `.workspace/.data-set/CLAUDE.md` — ナレッジ置き場の索引・鮮度ラベル・「記事作成時にどこから取るか」の早見表（内部リンク正本 `interlink-postlist.md` を含む。検索は`bouon-dataset-lookup` skill）
 - `.workspace/access-data/CLAUDE.md` — GSC/GA4エクスポートのフォルダ索引・取り込みルール・解析の作業ログ（CSVを開く前に読む）

@@ -53,6 +53,17 @@ if (!userPrompt || !outputPath) {
     process.exit(1);
 }
 
+// === プリセットと記事側プロンプトの確認（トーンはプリセットで固定） ===
+if (presetKey && presets?.presets?.[presetKey]?.disabled) {
+    console.error(`Error: プリセット "${presetKey}" は使えません。${presets.presets[presetKey].disabled}`);
+    process.exit(1);
+}
+const toneWords = [/#[0-9a-f]{6}\b/i, /\bbackground\b/i, /\bpalette\b/i, /\blabels?\b/i, /\btext\b/i, /\bjapanese\b/i, /aspect ratio/i, /\bstyle\b/i];
+const hitTone = toneWords.filter(re => re.test(userPrompt)).map(re => re.source);
+if (hitTone.length) {
+    console.warn(`⚠️ 記事側のプロンプトに色・画風・文字・比率の指定があります（${hitTone.join(', ')}）。トーンは prompts/bouon-presets.json で固定しているので、プロンプトは「何が写っているか」だけにしてください。`);
+}
+
 // === プロンプト組み立て ===
 function buildPrompt() {
     const parts = [];

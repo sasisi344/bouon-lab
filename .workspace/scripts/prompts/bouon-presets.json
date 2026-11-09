@@ -1,28 +1,28 @@
 {
-  "_description": "BouonLab 画像生成用プロンプトプリセット。generate-image.js が自動的にこのファイルを読み込み、systemContext をプロンプトの先頭に付与します。",
+  "_description": "BouonLab 画像生成のトーン固定ファイル（2026-11-09 改定）。generate-image.js が systemContext と preset の suffix を自動で付ける。記事側のプロンプトには『何が写っているか（主題・場面・小道具・構図）』だけを書き、色・画風・文字・人物の指定は書かない。トーンの正本はこのファイル、運用ルールの正本は .workspace/codex/image-style.md。",
 
-  "systemContext": "You are creating images for 'BouonLab', a Japanese blog about soundproofing knowledge, soundproof rooms, acoustic treatment, and quiet living. The visual identity is: Modern, Calm, Professional — evoking mental peace in a soundproof space. Use clean lines, muted tones with occasional warm accents, and imagery associated with music rooms, quiet studios, acoustic panels, and instruments. Never include any English text unless explicitly requested. If text is included, it MUST be in Japanese and limited to 8 characters maximum. Do NOT generate any watermarks, logos, or signatures.",
+  "systemContext": "You are creating images for 'BouonLab', a Japanese blog where an ordinary person who researched soundproofing to sleep in a quiet room shares what they found. Character of the images: a calm, organized note handed over by someone who researched carefully — never alarming, never exaggerated, never a construction-site or expert-craftsman look. Visual identity: modern, calm, quiet; Japanese homes, apartments, music rooms, quiet studios, acoustic panels, instruments. Palette: dark warm background close to #17120e with deep brown surfaces close to #241c15, soft warm lighting, and subtle gold accents close to #d4af37; low saturation; no neon. Composition: one clear subject, uncluttered, realistic proportions. Strict rules: absolutely no text, letters, numbers, labels, signs, captions or UI of any language; no human faces (hands or a figure seen from behind are allowed only if the prompt asks); no brand logos or recognizable products; no watermarks or signatures; no fear-inducing or dramatic noise imagery.",
 
   "presets": {
     "cover": {
       "label": "記事カバー画像（6:4）",
-      "suffix": "Aspect ratio: 6:4 (landscape, center-focused composition). Style: editorial blog cover. The image should be visually striking and modern, suitable as a hero image for a Japanese soundproofing knowledge article. No text unless explicitly specified."
+      "suffix": "Aspect ratio: 6:4 (landscape, center-focused composition). Style: editorial blog cover photograph or refined 3D render. The subject must be the specific thing the article is about, recognizable at thumbnail size. No text of any kind."
     },
     "content": {
-      "label": "記事内画像（16:9）",
-      "suffix": "Aspect ratio: 16:9 (wide landscape). Style: informative content illustration. The image should complement article text, with a clean and professional look. Background should evoke a music room, quiet studio, or acoustic environment."
+      "label": "記事内の場面・実物の絵（16:9）。文字なし",
+      "suffix": "Aspect ratio: 16:9 (wide landscape). Style: realistic explanatory illustration of a real situation or physical object, so a reader can picture it in their own home. Show placement, scale and material clearly. No text, numbers, arrows with labels, or diagrams with captions."
     },
     "portrait": {
       "label": "縦長画像（4:6）",
-      "suffix": "Aspect ratio: 4:6 (portrait). Style: vertical editorial image. Suitable for sidebar or mobile-first display. Clean composition with a single focal point."
-    },
-    "infographic": {
-      "label": "インフォグラフィック素材",
-      "suffix": "Style: clean infographic element or diagram component. Use soft fonts, minimal color palette, and clear visual hierarchy. Suitable for embedding in a Japanese blog article about soundproofing technology."
+      "suffix": "Aspect ratio: 4:6 (portrait). Style: vertical editorial image for mobile display. Single focal point. No text of any kind."
     },
     "sns": {
       "label": "SNS投稿用（1:1）",
-      "suffix": "Aspect ratio: 1:1 (square). Style: social media post image for Instagram. Eye-catching, modern, and scroll-stopping. Should communicate the topic at a glance."
+      "suffix": "Aspect ratio: 1:1 (square). Style: social media image that communicates the topic at a glance while keeping the calm tone. No text of any kind."
+    },
+    "infographic": {
+      "label": "（廃止）インフォグラフィック",
+      "disabled": "文字・数値の入る図はAIで生成しない。SVG → PNG（.workspace/codex/image-style.md §5-2）か bouon-memo-image で作る"
     }
   }
 }

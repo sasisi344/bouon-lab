@@ -3,6 +3,8 @@
 > `generate-image.js --preset cover` に渡すユーザープロンプトの組み立て方。
 > systemContext（BouonLabのトーン）と cover preset（6:4 editorial）は自動付与されるため、
 > ユーザープロンプトは**主題・場面・小道具**の指定のみに絞る。
+> トーン（色・画風・文字なし・顔なし）は `bouon-presets.json` で固定（2026-11-09 改定）。色や文字の指定を書くとスクリプトが警告する。
+> 主題はメインKWの実物にする（記事と関係の薄い絵はページの主題をぼかす。`.workspace/codex/image-style.md` §4-2）。
 
 ---
 
@@ -41,7 +43,7 @@
 | `diy` | DIY acoustic treatment workspace, hands-on |
 | `money` | financial planning desk with documents |
 | `creator` | streaming studio setup, VTuber room |
-| `knowledge` | acoustic science diagram, educational illustration |
+| `knowledge` | quiet room where the phenomenon happens, close-up of the materials involved（図・グラフにしない。文字が出るため） |
 | `local` | [都市名] residential neighborhood Japan |
 | `business` | professional office or corporate setting |
 
@@ -61,16 +63,16 @@
 | 配信・実況 / VTuber | streaming microphone, RGB lighting |
 | ASMR | sensitive microphone, whisper setup |
 | DIY / 自作 | construction materials, tools |
-| ローン / 費用 | financial documents, cost chart |
+| ローン / 費用 | calculator and blank documents on a desk（数字の入る表やグラフは描かせない） |
 | 補助金 | official documents, subsidy stamps |
-| 不動産投資 | property blueprints, investment chart |
+| 不動産投資 | building model and blank blueprints |
 | データセンター | server racks, cooling units |
 | HSP / 感覚過敏 | soft warm lighting, calm interior |
 | 換気 / エアコン | ventilation duct, HVAC unit |
 | 温湿度 | humidity gauge, climate monitor |
 | ESG | eco-friendly materials, green building |
-| 睡眠 | person sleeping peacefully |
-| 騒音統計 | data chart, noise complaint graph |
+| 睡眠 | quiet bedroom at night, bed against the shared wall（顔は出さない） |
+| 騒音統計 | apartment building at dusk, quiet residential street（グラフは文字が出るので使わない） |
 
 ---
 

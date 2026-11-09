@@ -24,6 +24,7 @@
 | データの参照 | `.claude/skills/bouon-dataset-lookup/SKILL.md` |
 | 内部リンク | `.claude/skills/bouon-internal-link-ops/SKILL.md` |
 | 図解・メモ画像 | `.claude/skills/bouon-memo-image/SKILL.md` |
+| サジェストKW起点の記事（指示書に `daily-post` とあるとき） | `.workspace/projects/daily-post-2026-11/README.md`（§4 新規記事の要素、§4-4 数字・図解・読者の体験、§5 リライト、§6 公開前チェック）。重複判定・台帳・アウトラインと体験チェッカー（§3-6・§8）は CC の仕事なので、指示書の判定と「材料」にある反映済みアウトラインに従う。体験チェックの答えにない筆者の体験は書かない |
 
 - 語り手は「調べて共有する人」。専門資格・施工経験は書かない（ない）
 - 確認: このサイトは Codex のサンドボックスではビルドできない（Astro 6 が `Cannot read directory "../..": Access is denied` で止まる。2026-11-07 確認）。ビルドは CC が検収で行うので、Codex は実行せず、報告書に「ビルド未実行」と書く
