@@ -26,8 +26,8 @@ pnpm-debug.log*
 # local agent / IDE settings
 .claude/settings.local.json
 
-# workspace: GSC/GA4 exports (keep locally, do not commit)
-.workspace/access-data/
+# workspace: GSC/GA4 data (.workspace/access-data/) is committed since 2026-11-09,
+# same as the other sites, so that cloud sessions can read the API data (hq:H-33).
 
 # workspace: keyword/suggest raw exports (keep locally, do not commit; analysis files are committed)
 .workspace/projects/query-check/data/
