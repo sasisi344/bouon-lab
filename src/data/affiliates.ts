@@ -35,7 +35,7 @@ export type AffiliateItem =
       image?: string;
       badge?: string;
       asin: string;
-      tag: string; // Amazon Associates タグID (例: bouonlab-22)
+      tag: string; // Amazon Associates タグID (例: 344bouon-lab-22)
       variant?: 'standard' | 'premium' | 'high-ticket';
     }
   | {
@@ -66,7 +66,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: '/affiliates/danbocchi-grande.jpg',
     badge: 'POPULAR',
     asin: 'B0XXXXXXXXX', // ← 実際のASINに変更
-    tag: 'bouonlab-22',  // ← Amazon タグIDに変更
+    tag: '344bouon-lab-22',  // ← Amazon タグIDに変更
     variant: 'standard',
   },
   */
@@ -80,7 +80,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'images/I/71sO5h+SbHL._AC_SL1440_.jpg',
     badge: 'WIDE-MODEL',
     asin: 'B0CYCH38BZ',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -93,7 +93,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'images/I/61RIsp3UyDL._AC_SL1500_.jpg',
     badge: 'FOR-REMOTE',
     asin: 'B09127YTHQ',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -106,7 +106,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'images/I/71Oo5d7ZzyL._AC_SL1500_.jpg',
     badge: 'ISO-BOOTH',
     asin: 'B0DSW4WY71',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -119,7 +119,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'images/I/311SKeCJAvL.jpg',
     badge: 'PRO-SPEC',
     asin: 'B0F3NVRDFH',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -147,7 +147,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'images/I/517ZrzwPZIL._AC_SL1080_.jpg',
     badge: 'STANDARD',
     asin: 'B0CYCDKBY4',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -160,7 +160,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'images/I/61sal5skbzL._AC_SL1150_.jpg',
     badge: 'REC-MUST-ITEM',
     asin: 'B0B3T6LJGM',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -173,7 +173,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'images/I/81MmaCnsvoL._AC_SL1500_.jpg',
     badge: 'TYPING-MAT',
     asin: 'B0G26L55XH',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -233,7 +233,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'https://m.media-amazon.com/images/I/21pqXxzXZ-L._AC_.jpg',
     badge: 'DESIGN-OK',
     asin: 'B07XG5CX8X', 
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -247,7 +247,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'https://m.media-amazon.com/images/I/71yC1SRHohL._SL1500_.jpg',
     badge: 'OWNER-TOOL',
     asin: 'B0D59P6Q9Q', 
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -261,7 +261,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'https://m.media-amazon.com/images/I/7138ct+UUbL._AC_SL1500_.jpg',
     badge: 'NOISE-FREE',
     asin: 'B07D738MM2', 
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -275,7 +275,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'https://m.media-amazon.com/images/I/51481RxNHJL._SL1000_.jpg',
     badge: 'HEAVY-DUTY',
     asin: 'B00B58K61Y',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -291,7 +291,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     description: 'PCケース脚に挟み、ファン振動による共振音（ビビリ音）を抑制。天然ゴム比で約10倍の制振性。',
     price: '¥1,000〜2,000（4個入）',
     asin: 'B000FHIPD2',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -303,7 +303,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     description: 'HDD・SSD・ファン部に貼付し駆動音の共振を軽減。',
     price: '¥1,000〜（複数枚入）',
     asin: 'B009JYMVJ6',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -316,7 +316,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     price: '¥2,899〜',
     image: 'https://m.media-amazon.com/images/I/61FFaUHyI2L._AC_SL1024_.jpg',
     asin: 'B0GSFNPN9T',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
   // 【ペット防音室】リビングで収録・配信する人向け
@@ -328,7 +328,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     price: '¥106,370〜',
     image: 'https://m.media-amazon.com/images/I/61qVNoSg-6L._AC_SL1178_.jpg',
     asin: 'B0FVSXNFPS',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'premium',
   },
   // 【防音ケージカバー】ペット同居配信者向け
@@ -340,7 +340,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     price: '¥209,638〜',
     image: 'https://m.media-amazon.com/images/I/71NEMZ245pL._AC_SL1370_.jpg',
     asin: 'B0756RD44W',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -366,7 +366,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     image: 'https://m.media-amazon.com/images/I/71BBpcS72+L._AC_SL1500_.jpg',
     badge: 'LIGHT-ALERT',
     asin: 'B0GT2SX899',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 
@@ -379,7 +379,7 @@ export const affiliates: Record<string, AffiliateItem> = {
     price: '¥500〜1,500',
     image: 'https://m.media-amazon.com/images/I/51Js0Q2M4+L._AC_SL1500_.jpg',
     asin: 'B096M2T5Z4',
-    tag: 'sasisi344-22',
+    tag: '344bouon-lab-22',
     variant: 'standard',
   },
 };
