@@ -65,7 +65,6 @@ if (typeof imgSrc === 'string') {
 
 {item ? (
   isHtmlType ? (
-    <!-- HTMLタグ型: バリューコマース等のバナーをそのまま描画 -->
     <div class={`affiliate-wrap html-type ${variantClass}`}>
       {item.description && <p class="html-label">{item.name}</p>}
       <div
@@ -79,7 +78,6 @@ if (typeof imgSrc === 'string') {
       <p class="disclosure">※広告・PR</p>
     </div>
   ) : (
-    <!-- リンク型 / Amazon型: カードUI -->
     <div class={`affiliate-card ${variantClass} ${variant}`}>
       <div class="badge-row">
         {(item as any).badge && <span class="badge">{(item as any).badge}</span>}
@@ -139,7 +137,6 @@ if (typeof imgSrc === 'string') {
     </div>
   )
 ) : (
-  <!-- slug が見つからない場合は開発用警告のみ表示 -->
   <div class="affiliate-missing">⚠️ AffiliateCard: slug="{slug}" not found</div>
 )}
 
