@@ -1,0 +1,44 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><link rel="stylesheet" href="../memo-common.css"></head><body>
+<div class="wrap">
+  <span class="kicker">図解</span>
+  <h1>石膏ボード1枚の壁に足すと<br><em>何dB</em>上がる？</h1>
+  <p class="lead">質量則 20×log10(m2÷m1) での試算。基準は石膏ボード12.5mm 1枚（8.5kg/m²）。</p>
+  <div class="fig">
+    <svg viewBox="0 0 968 560" xmlns="http://www.w3.org/2000/svg">
+      <!-- 目盛り 0〜8dB：x=40〜920、1dB=110px -->
+      <g stroke="#4a3b2a" stroke-width="2">
+        <line x1="40" y1="20" x2="40" y2="480"/>
+        <line x1="260" y1="20" x2="260" y2="480" stroke-dasharray="6 8"/>
+        <line x1="480" y1="20" x2="480" y2="480" stroke-dasharray="6 8"/>
+        <line x1="700" y1="20" x2="700" y2="480" stroke-dasharray="6 8"/>
+        <line x1="920" y1="20" x2="920" y2="480" stroke-dasharray="6 8"/>
+      </g>
+      <text x="40" y="520" text-anchor="middle" class="s">0</text>
+      <text x="260" y="520" text-anchor="middle" class="s">2dB</text>
+      <text x="480" y="520" text-anchor="middle" class="s">4dB</text>
+      <text x="700" y="520" text-anchor="middle" class="s">6dB</text>
+      <text x="920" y="520" text-anchor="middle" class="s">8dB</text>
+      <!-- 棒 -->
+      <text x="50" y="50" class="m">＋遮音シート CZ-12（1.2mm）</text>
+      <rect x="40" y="62" width="209" height="44" rx="8" fill="#d4af37"/>
+      <text x="262" y="96" class="m b g">約+1.9dB</text>
+
+      <text x="50" y="160" class="m">＋遮音シート K-PROX（1.6mm）</text>
+      <rect x="40" y="172" width="352" height="44" rx="8" fill="#d4af37"/>
+      <text x="405" y="206" class="m b g">約+3.2dB</text>
+
+      <text x="50" y="270" class="m">石膏ボードをもう1枚</text>
+      <rect x="40" y="282" width="660" height="44" rx="8" fill="#8fc9a0"/>
+      <text x="713" y="316" class="m b o">約+6.0dB</text>
+
+      <text x="50" y="380" class="m">石膏ボード2枚＋CZ-12</text>
+      <rect x="40" y="392" width="770" height="44" rx="8" fill="#8fc9a0"/>
+      <text x="822" y="426" class="m b o">約+7.0dB</text>
+    </svg>
+  </div>
+  <div class="bar">1.2mmのシートを貼るだけなら、改善は約1.9dB。</div>
+  <div class="foot">
+    <div>※理論上の目安。すき間・壁の構造・音の高さで変わります。<br>出典は本文参照。</div>
+    <div class="brand">防音Lab</div>
+  </div>
+</div></body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><link rel="stylesheet" href="../memo-common.css"></head><body>
+<div class="wrap">
+  <span class="kicker">図解</span>
+  <h1>軽い音は床の表面、<br><em>重い音は床全体</em>が揺れて伝わる</h1>
+  <p class="lead">床材で変わるのは主に軽い音（LL）。<br>重い音（LH）は、コンクリートの厚さで大きく決まります。</p>
+  <div class="fig">
+    <svg viewBox="0 0 968 660" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="ag" markerUnits="userSpaceOnUse" markerWidth="26" markerHeight="26" refX="22" refY="13" orient="auto"><path d="M0,0 L26,13 L0,26 z" fill="#d4af37"/></marker>
+        <marker id="aw" markerUnits="userSpaceOnUse" markerWidth="26" markerHeight="26" refX="22" refY="13" orient="auto"><path d="M0,0 L26,13 L0,26 z" fill="#e6a56a"/></marker>
+      </defs>
+      <text x="40" y="40" class="m b">上の階</text>
+      <!-- 軽い音 -->
+      <text x="60" y="95" class="m g b">軽い音（LL）</text>
+      <text x="60" y="130" class="s">食器やスプーンを落とす</text>
+      <line x1="180" y1="146" x2="180" y2="200" stroke="#d4af37" stroke-width="5" marker-end="url(#ag)"/>
+      <!-- 重い音 -->
+      <text x="560" y="95" class="m w b">重い音（LH）</text>
+      <text x="560" y="130" class="s">子どもが走る・かかとで歩く</text>
+      <line x1="640" y1="146" x2="640" y2="200" stroke="#e6a56a" stroke-width="7" marker-end="url(#aw)"/>
+      <!-- 層 -->
+      <rect x="40" y="206" width="888" height="34" fill="#b98a4e"/>
+      <rect x="40" y="240" width="888" height="26" fill="#6b5640"/>
+      <rect x="40" y="266" width="888" height="150" fill="#8a8274"/>
+      <rect x="40" y="490" width="888" height="16" fill="#b9ab8f"/>
+      <text x="920" y="232" text-anchor="end" class="s" style="fill:#17120e">フローリング</text>
+      <text x="920" y="262" text-anchor="end" style="fill:#f4ecdc;font-size:22px">緩衝材</text>
+      <text x="920" y="404" text-anchor="end" class="m b" style="fill:#17120e">コンクリートスラブ</text>
+      <path d="M440,340 q50,-34 100,0 q50,34 100,0 q50,-34 100,0" stroke="#e6a56a" stroke-width="5" fill="none"/>
+      <path d="M150,224 q15,-10 30,0 q15,10 30,0" stroke="#17120e" stroke-width="4" fill="none"/>
+      <!-- 下へ伝わる -->
+      <line x1="180" y1="424" x2="180" y2="560" stroke="#d4af37" stroke-width="5" stroke-dasharray="12 8" marker-end="url(#ag)"/>
+      <g stroke="#e6a56a" stroke-width="5" stroke-dasharray="12 8" marker-end="url(#aw)">
+        <line x1="490" y1="424" x2="490" y2="560"/><line x1="640" y1="424" x2="640" y2="560"/><line x1="790" y1="424" x2="790" y2="560"/>
+      </g>
+      <text x="335" y="540" text-anchor="middle" class="s">下の階の天井</text>
+      <text x="60" y="610" class="s g">床の表面の衝撃で伝わる</text>
+      <text x="640" y="610" text-anchor="middle" class="s w">スラブ全体が揺れて伝わる</text>
+      <text x="40" y="652" class="m b">下の階</text>
+    </svg>
+  </div>
+  <div class="foot">
+    <div>※模式図。層の厚さは実際の比率ではありません。出典は本文参照。</div>
+    <div class="brand">防音Lab</div>
+  </div>
+</div></body></html>

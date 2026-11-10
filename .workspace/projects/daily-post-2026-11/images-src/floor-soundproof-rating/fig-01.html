@@ -1,0 +1,36 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><link rel="stylesheet" href="../memo-common.css"></head><body>
+<div class="wrap">
+  <span class="kicker">図解</span>
+  <h1>床のL値の物差しと<br><em>建築学会の等級</em></h1>
+  <p class="lead">左ほど静か。同じL-45でも、軽い音では1級、重い音では特級。</p>
+  <div class="fig">
+    <svg viewBox="0 0 968 560" xmlns="http://www.w3.org/2000/svg">
+      <defs><marker id="ad" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#c9bda6"/></marker></defs>
+      <!-- 軸 L-40(x=140)〜L-60(x=860)、5刻み=180px -->
+      <text x="140" y="40" text-anchor="middle" class="s o">静か</text>
+      <text x="860" y="40" text-anchor="middle" class="s w">響く</text>
+      <line x1="100" y1="70" x2="910" y2="70" stroke="#c9bda6" stroke-width="4" marker-end="url(#ad)"/>
+      <g class="m b" text-anchor="middle">
+        <text x="140" y="112">L-40</text><text x="320" y="112">L-45</text><text x="500" y="112">L-50</text><text x="680" y="112">L-55</text><text x="860" y="112">L-60</text>
+      </g>
+      <g stroke="#4a3b2a" stroke-width="2" stroke-dasharray="6 8">
+        <line x1="140" y1="130" x2="140" y2="470"/><line x1="320" y1="130" x2="320" y2="470"/><line x1="500" y1="130" x2="500" y2="470"/><line x1="680" y1="130" x2="680" y2="470"/><line x1="860" y1="130" x2="860" y2="470"/>
+      </g>
+      <!-- 軽い音 LL -->
+      <text x="20" y="200" class="m b g">軽い音（LL）</text>
+      <line x1="140" y1="250" x2="860" y2="250" stroke="#d4af37" stroke-width="3"/>
+      <g fill="#d4af37"><circle cx="140" cy="250" r="18"/><circle cx="320" cy="250" r="18"/><circle cx="680" cy="250" r="18"/><circle cx="860" cy="250" r="18"/></g>
+      <g class="m" text-anchor="middle"><text x="140" y="306">特級</text><text x="320" y="306">1級</text><text x="680" y="306">2級</text><text x="860" y="306">3級</text></g>
+      <!-- 重い音 LH -->
+      <text x="20" y="370" class="m b w">重い音（LH）</text>
+      <line x1="320" y1="420" x2="860" y2="420" stroke="#e6a56a" stroke-width="3"/>
+      <g fill="#e6a56a"><circle cx="320" cy="420" r="18"/><circle cx="500" cy="420" r="18"/><circle cx="680" cy="420" r="18"/><circle cx="860" cy="420" r="18"/></g>
+      <g class="m" text-anchor="middle"><text x="320" y="476">特級</text><text x="500" y="476">1級</text><text x="680" y="476">2級</text><text x="860" y="476">3級</text></g>
+      <text x="484" y="535" text-anchor="middle" class="s">集合住宅の居室の隣戸間界床（日本建築学会の適用等級）</text>
+    </svg>
+  </div>
+  <div class="foot">
+    <div>※木造・軽量鉄骨造の集合住宅では、重い音の3級にL-65も適用。<br>判決の測定値（dB(A)）は別の物差し。出典は本文参照。</div>
+    <div class="brand">防音Lab</div>
+  </div>
+</div></body></html>

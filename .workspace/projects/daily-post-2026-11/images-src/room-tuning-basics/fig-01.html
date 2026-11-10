@@ -1,0 +1,48 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><link rel="stylesheet" href="../memo-common.css"></head><body>
+<div class="wrap">
+  <span class="kicker">図解</span>
+  <h1>6畳を上から見た<br><em>反射点と低音の溜まり場</em></h1>
+  <p class="lead">約3.6m×2.7m、スピーカーは前の壁から0.5m・横の壁から0.7mの例。</p>
+  <div class="fig">
+    <svg viewBox="0 0 968 900" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="ag" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#d4af37"/></marker>
+        <marker id="aw" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e6a56a"/></marker>
+      </defs>
+      <!-- 部屋 1m=200px：幅2.7m=540、奥行3.6m=720 -->
+      <rect x="140" y="80" width="540" height="720" fill="none" stroke="#c9bda6" stroke-width="6"/>
+      <text x="410" y="62" text-anchor="middle" class="m b">前の壁</text>
+      <!-- 隅 -->
+      <g fill="#e6a56a" opacity=".55"><circle cx="140" cy="80" r="46"/><circle cx="680" cy="80" r="46"/><circle cx="140" cy="800" r="46"/><circle cx="680" cy="800" r="46"/></g>
+      <text x="410" y="850" text-anchor="middle" class="s w">●の4隅＝低音が溜まる隅</text>
+      <!-- スピーカー -->
+      <rect x="255" y="160" width="50" height="50" rx="6" fill="#d4af37"/>
+      <rect x="515" y="160" width="50" height="50" rx="6" fill="#d4af37"/>
+      <text x="280" y="146" text-anchor="middle" class="s">スピーカー（左）</text>
+      <text x="540" y="146" text-anchor="middle" class="s">スピーカー（右）</text>
+      <!-- 聴く位置 -->
+      <circle cx="410" cy="520" r="28" fill="#8fc9a0"/>
+      <text x="410" y="584" text-anchor="middle" class="m o b">聴く位置</text>
+      <text x="410" y="616" text-anchor="middle" class="s">前の壁から2.2m・中央</text>
+      <!-- 一次反射：左 (140,296) 右 (680,296) -->
+      <polyline points="280,185 140,296 410,520" fill="none" stroke="#d4af37" stroke-width="4" stroke-dasharray="10 7"/>
+      <polyline points="540,185 680,296 410,520" fill="none" stroke="#d4af37" stroke-width="4" stroke-dasharray="10 7"/>
+      <rect x="128" y="266" width="24" height="60" fill="#d4af37"/>
+      <rect x="668" y="266" width="24" height="60" fill="#d4af37"/>
+      <text x="410" y="340" text-anchor="middle" class="s g">左右の一次反射面</text>
+      <text x="410" y="370" text-anchor="middle" class="s g">前の壁から約1.1m</text>
+      <text x="410" y="690" text-anchor="middle" class="s">天井の反射点は、スピーカーと</text><text x="410" y="722" text-anchor="middle" class="s">聴く位置の真ん中の真上</text>
+      <!-- 寸法と定在波 -->
+      <line x1="760" y1="86" x2="760" y2="794" stroke="#e6a56a" stroke-width="4" marker-start="url(#aw)" marker-end="url(#aw)"/>
+      <text x="785" y="420" class="m w b">長辺3.6m</text>
+      <text x="785" y="456" class="m w">約47Hz</text>
+      <line x1="146" y1="20" x2="674" y2="20" stroke="#e6a56a" stroke-width="4" marker-start="url(#aw)" marker-end="url(#aw)"/>
+      <text x="785" y="30" class="m w b">短辺2.7m</text>
+      <text x="785" y="66" class="m w">約63Hz</text>
+    </svg>
+  </div>
+  <div class="foot">
+    <div>※定在波は 340÷（2×壁の間隔）で計算した目安。<br>数値と出典は本文参照。</div>
+    <div class="brand">防音Lab</div>
+  </div>
+</div></body></html>
