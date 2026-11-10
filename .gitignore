@@ -41,3 +41,6 @@ pnpm-debug.log*
 
 # legacy agent definitions (personas live in .agents/persona/)
 .archive/
+
+# 作業用の一時フォルダ（ビルド成果物などを含む）
+.workspace/tmp/
