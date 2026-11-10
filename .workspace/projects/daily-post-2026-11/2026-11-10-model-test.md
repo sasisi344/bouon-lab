@@ -21,6 +21,20 @@
 
 重複の確認でリライト判定になった候補は外し、予備から補う。
 
+### 確定した5本（2026-11-10、段階A〜C済み。段階Cは API の GSC page×query m08〜m10）
+
+| # | メインKW | slug（仮カテゴリ） | 判定表# | アウトライン |
+|---|---|---|---|---|
+| 1 | 遮音シート 効果 | `diy/sound-insulation-sheet-effect` | 7 | `_draft/sound-insulation-sheet-effect-outline.md` |
+| 2 | ルームチューニング | `diy/room-tuning-basics` | 9 | `_draft/room-tuning-basics-outline.md` |
+| 3 | 床 防音 等級 | `knowledge/floor-soundproof-rating` | 5 | `_draft/floor-soundproof-rating-outline.md` |
+| 4 | 防音カーテン 効果（予備から） | `diy/soundproof-curtain-effect` | 7 | `_draft/soundproof-curtain-effect-outline.md` |
+| 5 | 騒音 苦情 手紙 例文（追加） | `soundproof-rental/noise-complaint-letter-template` | 9 | `_draft/noise-complaint-letter-template-outline.md` |
+
+- 外した2本: 「吸音材 防音材 違い」は `absorption-vs-soundproofing-materials` が同じ答え（判定表#3、リライト）。「騒音 苦情 どこに言えばいい」は `noise-complaint-landlord-negotiation-guide` の H2 が窓口を答えている（判定表#3、リライト）。どちらも台帳に記録し、起票は別に行う
+- 予備が1本しかなかったため、「騒音 苦情」シードのグループ2（手紙 例文。既存記事に H2 なし）を5本目にした
+- 台帳: `triage/` の6ファイル
+
 ## 手順
 
 1. **Claude**: 5本の台帳（`triage/`）を書き、重複を段階A〜Cで確認する
