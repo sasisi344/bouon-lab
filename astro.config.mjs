@@ -8,6 +8,8 @@ import { join } from 'node:path';
 
 // サイトマップのlastmod用: 記事ごとのfrontmatter `lastmod`（なければ`date`）を /ja/{category}/{slug}/ をキーに集める。
 // 記事以外のページ（トップ・一覧）は更新日が確定しないため、lastmodを付けない。
+// frontmatter `noindex: true` の記事はサイトマップから外す（ページ側は [...slug].astro が noindex,follow を出す）
+const noindexPaths = new Set();
 function collectArticleLastmods() {
   const map = new Map();
   const root = 'src/content/ja';
@@ -19,9 +21,10 @@ function collectArticleLastmods() {
       const file = join(root, category.name, post.name, 'index.mdx');
       if (!post.isDirectory() || !existsSync(file)) continue;
       const fm = readFileSync(file, 'utf-8').split('---')[1] ?? '';
+      const slug = fm.match(/^slug:\s*["']?([^"'\s]+)/m)?.[1] ?? post.name;
+      if (/^noindex:\s*true\b/m.test(fm)) noindexPaths.add(`/ja/${category.name}/${slug}/`);
       const lastmod = pick(fm, 'lastmod') ?? pick(fm, 'date');
       if (!lastmod) continue;
-      const slug = fm.match(/^slug:\s*["']?([^"'\s]+)/m)?.[1] ?? post.name;
       map.set(`/ja/${category.name}/${slug}/`, lastmod);
     }
   }
@@ -91,6 +94,7 @@ export default defineConfig({
         if (!page.includes('/ja/') && !page.includes('/en/')) return false;
         // about / privacy はサイトマップから除外（noindex ページ）
         if (/\/(about|privacy)\/$/.test(page)) return false;
+        if (noindexPaths.has(new URL(page).pathname)) return false;
         return true;
       },
       serialize(item) {
