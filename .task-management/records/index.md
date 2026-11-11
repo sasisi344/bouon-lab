@@ -6,6 +6,7 @@
 
 | ID | 完了日 | 種別 | テーマ（タグ） | 対象（URL・クエリ） | 結果（1行） | 参照できるデータ | ファイル |
 |---|---|---|---|---|---|---|---|
+| T-55 | 2026-11-11 | 施策 | インデックス, noindex, サイトマップ | global-soundproof-market-trends, soundproof-market-esg-trend, child-rearing-soundproof-pillar | 11/11 に見直し、3本を noindex にした。サイトマップから外す処理も追加し、本番で確認済み。季節統計は T-63 のリライトへ。判定は T-59 | .workspace/projects/rewrite-priority/2026-11-06-t47-unindexed-decisions.md | [2026-11-11-T-55-noindex-unindexed.md](2026-11-11-T-55-noindex-unindexed.md) |
 | T-60 | 2026-11-10 | 施策 | 新規記事, サジェストKW, モデル選定, 図解 | sound-insulation-sheet-effect, room-tuning-basics, floor-soundproof-rating, soundproof-curtain-effect, noise-complaint-letter-template | Sonnet 5.5 で5本を作成し、検収・画像・ユーザー判定まで5本とも十分。CC 側の既定を Sonnet 5.5 で確定、Codex gpt-5.5 medium は未検証（I-16）。未デプロイ（I-17） | .workspace/projects/daily-post-2026-11/2026-11-10-model-test.md | [2026-11-10-T-60-model-test.md](2026-11-10-T-60-model-test.md) |
 | T-54 | 2026-11-08 | 施策 | インデックス, URL検査, 申請 | 未登録の「待つ」12本・T-58 の5本 | 17本を GSC の URL 検査で申請（11/07 に8本、11/08 に9本）。登録の判定は T-59 | .workspace/projects/indexing/index-url.md | [2026-11-08-T-54-index-requests.md](2026-11-08-T-54-index-requests.md) |
 | T-50 | 2026-11-08 | 施策 | クエリ契約, タイトル変更, 冒頭の型, CTR | mansion-instrument-practice-time-rules, onetouch-soundproof-wall-review, wifi-connection-guide, bass-trap-installation-guide, diy-vocal-soundproof-mask, musision-comprehensive-guide | 6本のタイトル・導入・H2 を新ルールで作り直し、検収は公開可。効果は T-53 で見る | .workspace/admin-review/2026-11-08-T-50.md | [2026-11-08-T-50-type-a-rewrite.md](2026-11-08-T-50-type-a-rewrite.md) |
