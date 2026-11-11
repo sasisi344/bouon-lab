@@ -22,4 +22,8 @@
 | I-13 | 11/08 | Claude | `bouon-rental-market-guide` の title「【2026完全版】〜完全ガイド｜〜を総まとめ」が新ルール（さししの言葉・「完全ガイド」禁止）に合わない。同じ記事や `rental-unit-soundproof-room`・解体・窓の記事へのリンク文言にも「完全ガイド」が残る（バッチ2の記事だけで9か所）。T-48 か T-43 バッチ3以降で直す | → T-43（バッチ3の指示書に入れる） |
 | I-15 | 11/10 | Claude | T-60 の重複確認で外した2本はリライト判定: 「吸音材 防音材 違い」→ `knowledge/absorption-vs-soundproofing-materials`、「騒音 苦情 どこに言えばいい」→ `soundproof-rental/noise-complaint-landlord-negotiation-guide`（台帳 `daily-post-2026-11/triage/`）。起票するか T-43 のバッチに入れるか | 未処置 |
 | I-16 | 11/10 | Claude | T-60 は作り手を Sonnet 5.5 に変えたため、Codex gpt-5.5 medium の完成稿の力は未検証（README §3-7）。次のサジェストKW起点の新規記事で Codex に書かせ、同じ評価表で比べる | 未処置 |
+| I-18 | 11/11 | Claude | `src/data/affiliates.ts` の `acoustic-panel-felmenon`（60×60cm・¥6,000〜）が、同じ ASIN B07XG5CX8X の Amazon の現行品（80×60cm 防音フェルトボード・6,451円・釘施工のみ・評価1件）と食い違う。使っている記事を含めて見直す（T-62 #1 の検収で発見） | 未処置 |
+| I-19 | 11/11 | Claude | `soundproof-rental/noise-complaint-landlord-negotiation-guide` の受忍限度の表（55dB・65dB 超を線とする書き方）が、T-62 #3 で読んだ判決・公調委の決定（音の大きさだけで決まらない、時間区分の等価騒音レベルと屋内指針で判断）と合わない。I-15 のリライトで直す | 未処置 |
+| I-20 | 11/11 | Claude | `diy/soundproof-curtain-effect` は「カーテン単体の dB の公開資料は見つからなかった」と書くが、ピアリビングが残響室で自社品を測った記事（2025年2月、規格名なし）がある。T-62 #5 はこれを使った。効果記事に一言足すか判断を | 未処置 |
+| I-21 | 11/11 | Claude | site-admin の admin-lint が、図解マーカー（MDX コメント）内の `alt:` 行を段落90字超の WARN に数える（T-62 で8件すべて誤検知）。hq へ: `{/* IMAGE: ... */}` の中を除外する | 未処置 |
 | I-17 | 11/10 | Claude | T-60 の新規5本（sound-insulation-sheet-effect・room-tuning-basics・floor-soundproof-rating・soundproof-curtain-effect・noise-complaint-letter-template）は 11/10 にコミット済み・未デプロイ（デプロイはユーザー）。デプロイしたら URL 検査の申請と効果測定の行（データ待ち）を足す | 未処置 |
