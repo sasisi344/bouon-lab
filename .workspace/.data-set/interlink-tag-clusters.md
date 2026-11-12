@@ -31,7 +31,6 @@
   - [ワンルーム配信の防音ハック｜1万円以下で夜の声漏れと隣人の壁ドンを防ぐ](/ja/creator/one-room-streaming-soundproof/) `一人暮らし, 低予算, 配信・実況, DIY防音, 騒音トラブル, 深夜配信`
   - [休耕地・畑にプレハブで配信部屋は作れる？農地転用・建築基準法と、古民家・地方移住の選択肢](/ja/creator/farmland-prefab-streaming-room-legal/) `配信・実況, 農地転用, プレハブ, オフグリッド, 土地活用, 地方移住, 古民家`
   - [実家暮らし配信者の防音リフォーム交渉｜親に費用を出してもらう判断基準](/ja/creator/family-home-soundproof-reno-negotiation/) `実家暮らし, 家族交渉, 防音リフォーム, 資金計画, 配信環境`
-  - [省スペース型防音ブースで足がむくむ理由｜狭小ブースに合うチェアの選び方](/ja/creator/cramped-booth-gaming-chair-health/) `防音ブース, ゲーミングチェア, 健康対策, むくみ対策, 狭小空間`
   - [台パンの衝撃吸収・防振対策｜下の階に響く仕組みと2,000円で防ぐ方法](/ja/creator/gaming-floor-impact-noise-fix/) `台パン, 足音対策, 床衝撃音, 防振, 衝撃吸収`
   - [同居人がいる家で配信する｜子ども・親・ルームシェアの防音と生活音調整](/ja/creator/parenting-streamer-soundproof/) `配信・実況, 子育て, 実家暮らし, ルームシェア, 生活音, 防音対策`
   - [配信のマイクノイズはPC本体が原因？ファン音・反響・外音の切り分けと直し方](/ja/creator/streaming-pc-fan-noise-mic/) `配信・実況, マイクノイズ, PC静音化, 防振対策, 吸音パネル, 音質改善`
@@ -40,9 +39,10 @@
   - [配信初心者がカメラより先に直すべき音質｜0円でできる優先順位](/ja/creator/streaming-audio-first-low-budget/) `配信・実況, 音質改善, マイク, 初心者向け, 予算別対策`
   - [配信中に「苦情が来た」ときの対処フロー｜謝罪・改善・再発防止まで](/ja/creator/streamer-noise-complaint-response/) `配信・実況, 騒音苦情, 近隣トラブル, 賃貸, 対処法`
   - [配信中のペットの鳴き声対策｜ケージカバーとペット防音室を配信場所で選ぶ](/ja/creator/streamer-pet-noise-balance/) `配信・実況, ペット, 防音対策, 騒音対策, 吸音パネル`
-  - [防音ブース内での飲食、実は匂いが一番残る｜配信中の消臭・換気マネジメント](/ja/creator/soundproof-booth-food-odor-management/) `防音ブース, 消臭対策, 換気, 配信環境, 吸音材メンテナンス`
+  - [防音ブースの椅子はどう選ぶ？内寸・足元・出入りで確かめる基準](/ja/creator/cramped-booth-gaming-chair-health/) `防音ブース, 椅子, ゲーミングチェア, 配信環境, 狭小空間`
   - [防音室なしで配信を始める｜スマホ1台から収益化につなげる若年層のロードマップ](/ja/creator/young-streamer-smartphone-monetization-roadmap/) `配信・実況, 若年層, 収益化, スマホ配信, 防音室`
   - [防音室のケーブル配線術｜配信機材が増えても散らからない整理と電源の考え方](/ja/creator/soundproof-booth-cable-management/) `配信者, 防音室, ケーブル整理, 電源タップ, 配線`
+  - [防音室の匂いを残さない使い方｜換気・飲食・内装の手入れ手順](/ja/creator/soundproof-booth-food-odor-management/) `防音ブース, 消臭対策, 換気, 配信環境, 吸音材メンテナンス`
 
 ### ja / diy（33件）
 
@@ -621,11 +621,11 @@
 ### ja / 換気（6件）
 
   - [注文住宅で防音室を作る間取りのポイント｜位置・広さ・窓・換気・搬入経路](/ja/soundproof-room/custom-home-soundproof-room-layout/) `注文住宅, 間取り, 防音室, 新築, 戸建て, 換気`
-  - [防音ブース内での飲食、実は匂いが一番残る｜配信中の消臭・換気マネジメント](/ja/creator/soundproof-booth-food-odor-management/) `防音ブース, 消臭対策, 換気, 配信環境, 吸音材メンテナンス`
   - [防音マスク自作で声は抑えられる？作り方と密閉を避ける判断](/ja/diy/diy-vocal-soundproof-mask/) `防音マスク, 酸欠対策, DIY防音, 深夜配信, 換気`
   - [防音室で耳鳴り・耳が詰まる原因｜気圧と静けさの違いと受診の目安](/ja/soundproof-room/ear-pressure-tinnitus-dizziness/) `防音室, 耳鳴り, 換気, CO2, 酸欠, 閉所, 音過敏`
   - [防音室のエアコン選びと静音化の極意｜2026年最新の空調・換気戦略](/ja/soundproof-room/proofroom-aircondition-select/) `防音室, 空調設備, 換気, スポットクーラー, 騒音対策`
   - [防音室の花粉対策｜換気を止めずに春の「花粉・黄砂」をシャットアウトする方法](/ja/soundproof-room/soundproof-room-pollen-protection/) `花粉対策, 換気, ロスナイ, 春, 空気清浄機, メンテナンス`
+  - [防音室の匂いを残さない使い方｜換気・飲食・内装の手入れ手順](/ja/creator/soundproof-booth-food-odor-management/) `防音ブース, 消臭対策, 換気, 配信環境, 吸音材メンテナンス`
 
 ### ja / 遮音シート（6件）
 
@@ -819,6 +819,13 @@
   - [防音カーテンのおすすめは？「最強」を選ぶ基準と、試験値のある商品の比較](/ja/diy/soundproof-curtain-recommend/) `防音カーテン, 遮音性能, 騒音対策, DIY防音, 内窓`
   - [防音カーテンの効果はどのくらい？効く音・効かない音と買う前の確かめ方](/ja/diy/soundproof-curtain-effect/) `防音カーテン, 隙間対策, 遮音性能, 騒音対策, DIY防音, 内窓`
 
+### ja / 配信環境（4件）
+
+  - [実家暮らし配信者の防音リフォーム交渉｜親に費用を出してもらう判断基準](/ja/creator/family-home-soundproof-reno-negotiation/) `実家暮らし, 家族交渉, 防音リフォーム, 資金計画, 配信環境`
+  - [配信者の身バレ・親フラ対策｜声・生活音・環境音から特定されないための防音](/ja/creator/female-streamer-privacy-soundproof/) `女性配信者, VTuber, 防犯対策, プライバシー保護, 親フラ, 実家暮らし, 配信環境`
+  - [防音ブースの椅子はどう選ぶ？内寸・足元・出入りで確かめる基準](/ja/creator/cramped-booth-gaming-chair-health/) `防音ブース, 椅子, ゲーミングチェア, 配信環境, 狭小空間`
+  - [防音室の匂いを残さない使い方｜換気・飲食・内装の手入れ手順](/ja/creator/soundproof-booth-food-odor-management/) `防音ブース, 消臭対策, 換気, 配信環境, 吸音材メンテナンス`
+
 ### ja / 物件探し（4件）
 
   - [音大生の物件探し｜シェアハウスに防音室は置ける？楽器可賃貸・キャンパス別の探し方](/ja/soundproof-rental/music-student-property-search-guide/) `音大生, 防音シェアハウス, 楽器可賃貸, 物件探し, 防音賃貸, 音楽大学`
@@ -843,9 +850,9 @@
 ### ja / 防音ブース（4件）
 
   - [個室ブースを自宅に置くなら｜価格の目安と防音の限界、暑さ・設置の注意点](/ja/soundproof-room/home-private-booth-guide/) `個室ブース, ワークブース, テレワーク, 在宅ワーク, Web会議, 防音ブース`
-  - [省スペース型防音ブースで足がむくむ理由｜狭小ブースに合うチェアの選び方](/ja/creator/cramped-booth-gaming-chair-health/) `防音ブース, ゲーミングチェア, 健康対策, むくみ対策, 狭小空間`
   - [組み立て式防音室おすすめ比較｜用途別（楽器・ゲーム・配信）と価格帯](/ja/soundproof-room/assembly-type-comparison/) `組み立て式, 防音ブース, だんぼっち, OTODASU, GAMEBOX, VOICEBOX`
-  - [防音ブース内での飲食、実は匂いが一番残る｜配信中の消臭・換気マネジメント](/ja/creator/soundproof-booth-food-odor-management/) `防音ブース, 消臭対策, 換気, 配信環境, 吸音材メンテナンス`
+  - [防音ブースの椅子はどう選ぶ？内寸・足元・出入りで確かめる基準](/ja/creator/cramped-booth-gaming-chair-health/) `防音ブース, 椅子, ゲーミングチェア, 配信環境, 狭小空間`
+  - [防音室の匂いを残さない使い方｜換気・飲食・内装の手入れ手順](/ja/creator/soundproof-booth-food-odor-management/) `防音ブース, 消臭対策, 換気, 配信環境, 吸音材メンテナンス`
 
 ### ja / ASMR（3件）
 
@@ -990,12 +997,6 @@
   - [騒音で引っ越し費用は請求できる？認められる条件と、記録の残し方](/ja/soundproof-rental/noise-moving-cost-claim/) `騒音トラブル, 受忍限度, 判例, 管理会社, 賃貸マンション, 引っ越し`
   - [騒音の苦情はどこに言えばいい？管理会社・市役所・警察の使い分け](/ja/soundproof-rental/noise-complaint-landlord-negotiation-guide/) `騒音トラブル, 管理会社, 交渉術, 賃貸マンション, 受忍限度`
   - [騒音苦情の手紙の例文｜角を立てない5つの文例と出す前の確認](/ja/soundproof-rental/noise-complaint-letter-template/) `騒音トラブル, 騒音苦情, 管理会社, 賃貸マンション, ペット, 受忍限度`
-
-### ja / 配信環境（3件）
-
-  - [実家暮らし配信者の防音リフォーム交渉｜親に費用を出してもらう判断基準](/ja/creator/family-home-soundproof-reno-negotiation/) `実家暮らし, 家族交渉, 防音リフォーム, 資金計画, 配信環境`
-  - [配信者の身バレ・親フラ対策｜声・生活音・環境音から特定されないための防音](/ja/creator/female-streamer-privacy-soundproof/) `女性配信者, VTuber, 防犯対策, プライバシー保護, 親フラ, 実家暮らし, 配信環境`
-  - [防音ブース内での飲食、実は匂いが一番残る｜配信中の消臭・換気マネジメント](/ja/creator/soundproof-booth-food-odor-management/) `防音ブース, 消臭対策, 換気, 配信環境, 吸音材メンテナンス`
 
 ### ja / 防音市場（3件）
 

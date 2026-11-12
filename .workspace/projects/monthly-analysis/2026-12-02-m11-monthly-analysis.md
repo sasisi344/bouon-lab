@@ -75,6 +75,13 @@ mansion は一般的な終了時刻の目安を消した（裏取りできない
 
 vocal-mask は装着型の密閉マスクの作り方を外し、開放型シールドの作り方にした（安全の根拠がないため）。「作り方」の語で CTR が落ちていないかも見る。
 
+## T-60・T-62・T-64 の基準値（2026-11-12。T-67）
+
+- **T-60 新規5本（11/10 作成、11/12 までにデプロイ）**: `diy/sound-insulation-sheet-effect`・`diy/room-tuning-basics`・`knowledge/floor-soundproof-rating`・`diy/soundproof-curtain-effect`・`soundproof-rental/noise-complaint-letter-template`。基準値なし。見る: 登録の有無、各台帳（`.workspace/projects/daily-post-2026-11/triage/`）のメインKWの表示・順位
+- **T-62 新規5本（11/11 デプロイ、11/12 修正）**: `diy/sound-absorbing-material-recommend`（吸音材 おすすめ）・`diy/sound-insulation-sheet-wall-install`（遮音シート 壁 貼り方）・`soundproof-rental/noise-moving-cost-claim`（騒音 引っ越し費用 請求）・`diy/floor-soundproof-underlay`（床 防音 下地）・`diy/soundproof-curtain-recommend`（防音カーテン おすすめ）。基準値なし。見る: 同上
+- **T-64 リライト2本（11/12 デプロイ、タイトル変更）**: `knowledge/absorption-vs-soundproofing-materials`（吸音材 防音材 違い。変更前は「騒音対策 科学的な遮音・吸音の使い分け」で41位のみ）、`soundproof-rental/noise-complaint-landlord-negotiation-guide`（騒音 苦情 どこに言えばいい）。基準値は m10 の2本の表示・CTR・順位（日平均）。旧タイトルは `.workspace/codex/reports/2026-11-12-T-64.md`
+- 判定: 新規は m11 では途中経過。登録後に表示が0なら需要ミスマッチを疑う（`project_indexing_vs_demand_mismatch`）。T-64 はメインKWで表示が出て、全体の表示が m10 を下回っていなければ継続。下回ればタイトルの語順を見直す
+
 ## 結果
 
 （実施後に追記）
