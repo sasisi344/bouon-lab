@@ -135,7 +135,7 @@
 | ja | money | `used-soundproof-room-buying-guide` |  | 中古防音室は予算10万円で何が買える？セフィーネより『だんぼっち・OTODASU』を探すべき理由 | 中古防音室, 費用, 予算10万円, だんぼっち, OTODASU, ヤマハ | `/ja/money/used-soundproof-room-buying-guide/` | false |
 | ja | soundproof-rental | `apartment-weight-limit-500kg` |  | 築20年のマンションに重さ500kgの防音室を置ける？床補強なしで設置するための安全基準と計算術 | 耐荷重, 床荷重計算, マンション, ヤマハ, 防音室導入, 木造戸建て | `/ja/soundproof-rental/apartment-weight-limit-500kg/` | false |
 | ja | soundproof-rental | `bedroom-noise-type-solution-guide` |  | 上の階の足音・隣の話し声で眠れない｜音の種類で変わる寝室の騒音対策の選び方 | 睡眠, 騒音対策, 賃貸, 足音, 生活音, 寝室 | `/ja/soundproof-rental/bedroom-noise-type-solution-guide/` | false |
-| ja | soundproof-rental | `bouon-rental-market-guide` |  | 【2026完全版】防音賃貸・防音マンション完全ガイド｜全国相場・D値・ブランド・選び方を総まとめ | 防音賃貸, 家賃相場, 防音マンション, ミュージション, D値, 楽器可物件 | `/ja/soundproof-rental/bouon-rental-market-guide/` | false |
+| ja | soundproof-rental | `bouon-rental-market-guide` |  | 防音賃貸の選び方｜全国の家賃相場とD値・ブランド比較 | 防音賃貸, 家賃相場, 防音マンション, ミュージション, D値, 楽器可物件 | `/ja/soundproof-rental/bouon-rental-market-guide/` | false |
 | ja | soundproof-rental | `bouonrental-market-research2025` |  | 【2026年最新】防音賃貸の家賃相場とトレンド｜需要30倍の衝撃と狙い目エリア | 防音賃貸, 市場トレンド, 家賃相場, 防音室, 市場分析 | `/ja/soundproof-rental/bouonrental-market-research2025/` | false |
 | ja | soundproof-rental | `child-rearing-soundproof-pillar` |  | 【子育て×防音リノベ】マンションの騒音トラブルを「構造」から解決する完全ガイド | 子育て, 防音リノベ, 騒音トラブル, マンション, 防振構造 | `/ja/soundproof-rental/child-rearing-soundproof-pillar/` | false |
 | ja | soundproof-rental | `guitar-apartment-practice-guide` |  | ギターは賃貸で弾ける？ヘッドホンアンプでも消えない音への対処法 | ギター, エレキギター, アコースティックギター, 防音賃貸, ヘッドホンアンプ | `/ja/soundproof-rental/guitar-apartment-practice-guide/` | false |
@@ -199,7 +199,7 @@
 | ja | soundproof-room | `sound-reduction-simulation` |  | 【シミュレーション】防音室で音はどこまで消える？用途別の軽減率を徹底検証 | 遮音性能, シミュレーション, 配信・実況, 楽器演奏 | `/ja/soundproof-room/sound-reduction-simulation/` | false |
 | ja | soundproof-room | `soundproof-performance-drum` |  | 自宅でドラムを叩いても許されるDr値は？住む環境別に見る防音の必要性 | ドラム防音, 振動対策, 個体伝搬音, 防音工事 | `/ja/soundproof-room/soundproof-performance-drum/` | false |
 | ja | soundproof-room | `soundproof-room-budget-selection-guide` |  | 予算別防音室選び方ガイド｜50万円・100万円・200万円で選ぶ方法 | 防音室, 費用, 予算, 50万円, 100万円, 200万円, 防音室選び | `/ja/soundproof-room/soundproof-room-budget-selection-guide/` | false |
-| ja | soundproof-room | `soundproof-room-demolition-guide` |  | 防音室の解体・処分完全ガイド｜自分でやるリスクと業者費用の相場 | 防音室, 解体, 処分, 廃棄, 費用, DIY防音 | `/ja/soundproof-room/soundproof-room-demolition-guide/` | false |
+| ja | soundproof-room | `soundproof-room-demolition-guide` |  | 防音室の解体・処分費用はいくら？DIYのリスクと買取との比較 | 防音室, 解体, 処分, 廃棄, 費用, DIY防音 | `/ja/soundproof-room/soundproof-room-demolition-guide/` | false |
 | ja | soundproof-room | `soundproof-room-large-size` |  | 2畳以上の広々防音室ガイド｜グランドピアノ・声楽・プロ仕様の空間作り | 防音室, 2畳, 3畳, グランドピアノ, DIY防音, 自宅スタジオ | `/ja/soundproof-room/soundproof-room-large-size/` | false |
 | ja | soundproof-room | `soundproof-room-pollen-protection` |  | 防音室の花粉対策｜換気を止めずに春の「花粉・黄砂」をシャットアウトする方法 | 花粉対策, 換気, ロスナイ, 春, 空気清浄機, メンテナンス | `/ja/soundproof-room/soundproof-room-pollen-protection/` | false |
 | ja | soundproof-room | `soundproof-room-size` |  | ユニット防音室のサイズと選び方：演奏スタイルに合わせた内寸確認法 | 防音室, サイズ選び, 0.8畳, 1.5畳, ヤマハ, カワイ | `/ja/soundproof-room/soundproof-room-size/` | false |
