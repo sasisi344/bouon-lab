@@ -382,6 +382,16 @@ export const affiliates: Record<string, AffiliateItem> = {
     tag: '344bouon-lab-22',
     variant: 'standard',
   },
+  // 【睡眠用耳栓】筆者が使っている（T-65 earplugs-for-sleep）
+  'earplugs-djcong-quietfit': {
+    type: 'amazon',
+    slug: 'earplugs-djcong-quietfit',
+    name: 'DJcong QuietFit 睡眠用耳栓',
+    description: '筆者が寝るときに使っている睡眠用の耳栓。横向きで寝転んでも邪魔になりにくいタイプ。',
+    asin: 'B0F1FYBV2G',
+    tag: '344bouon-lab-22',
+    variant: 'standard',
+  },
 };
 
 /**

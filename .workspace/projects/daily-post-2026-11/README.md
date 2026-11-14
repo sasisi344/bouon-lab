@@ -131,12 +131,12 @@ iconv -f UTF-16 -t UTF-8 "<file>.csv" | tr -d '"\r'
 
 | 作り手 | 既定のモデル | 呼び方 |
 |---|---|---|
-| Codex（標準） | gpt-5.5・推論 medium | `node $CODEX task --write --model gpt-5.5 --effort medium --cwd C:/Users/sasis/344blog/bouon-lab --prompt-file .workspace/codex/orders/<指示書>.md`（`$CODEX` の場所は `hq/org/README.md` §3） |
+| Codex（標準） | 既定モデル（2026-11-14 時点 gpt-6.1-sol）・推論 medium | `node $CODEX task --write --effort medium --cwd C:/Users/sasis/344blog/bouon-lab --prompt-file .workspace/codex/orders/<指示書>.md`（`$CODEX` の場所は `hq/org/README.md` §3） |
 | Claude Code | Sonnet 5.5（`claude-sonnet-5-5`） | サブエージェントで書く場合は model に `sonnet` を指定する |
 
 - 使ったモデルと推論の強さを、台帳の「状態」欄と Codex の報告書に書く（モデルごとの仕上がりを比べるため）
 - Sonnet 5.5 は T-60（2026-11-10）で5本とも公開できる仕上がりだったため、Claude Code 側の既定として確定した（[結果](2026-11-10-model-test.md#結論2026-11-10ユーザー判定のあと)）。窓口・制度・機関の名称は検収で一次情報と照らす
-- gpt-5.5 medium は T-60 で作り手を Sonnet 5.5 に変えたため未検証。別の回に確かめ、結果によってこの既定を見直す
+- gpt-5.5 は ChatGPT アカウントの Codex では使えない（2026-11-14 エラー）。`--model` を付けず `~/.codex/config.toml` の既定（gpt-6.1-sol）で書く。T-65（2026-11-14）で4本とも合格・文字数も上限内だった（ユーザー承認 2026-11-14）
 - 指示書には文字数の上限、dB の体感を独自に書かないこと、日本語の一次資料を優先することを書く（T-60 で5本に共通した傾向）
 
 ---
