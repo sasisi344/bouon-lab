@@ -93,7 +93,7 @@ vocal-mask は装着型の密閉マスクの作り方を外し、開放型シー
 - **T-64 リライト2本（11/12 デプロイ、タイトル変更）**: `knowledge/absorption-vs-soundproofing-materials`（吸音材 防音材 違い。変更前は「騒音対策 科学的な遮音・吸音の使い分け」で41位のみ）、`soundproof-rental/noise-complaint-landlord-negotiation-guide`（騒音 苦情 どこに言えばいい）。基準値は m10 の2本の表示・CTR・順位（日平均）。旧タイトルは `.workspace/codex/reports/2026-11-12-T-64.md`
 - 判定: 新規は m11 では途中経過。登録後に表示が0なら需要ミスマッチを疑う（`project_indexing_vs_demand_mismatch`）。T-64 はメインKWで表示が出て、全体の表示が m10 を下回っていなければ継続。下回ればタイトルの語順を見直す
 
-## T-65・T-69・T-56 の基準値（2026-11-14 作成、同日デプロイ予定）
+## T-65・T-69・T-56 の基準値（2026-11-14 作成・デプロイ、同日 URL 検査で申請）
 
 - **T-65 新規4本**: `diy/door-soundproof`（ドア 防音）・`soundproof-rental/earplugs-for-sleep`（耳栓 睡眠）・`soundproof-rental/upstairs-footsteps-noise`（上の階 足音）・`knowledge/outdoor-ac-unit-noise`（室外機 騒音）。m11 は途中経過、登録と表示の有無を見る
 - **T-69 タイトル変更4本**（m08〜m10 の流入はほぼ0。基準値は m10 の表示・順位）

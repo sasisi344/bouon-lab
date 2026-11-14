@@ -119,3 +119,13 @@
 - `/ja/creator/game-streamer-sound-types/` ほか、リンクの付け替えだけの記事: 申請不要（クローラーが自然に拾う）
 
 合計 54 本（登録済 34・リクエスト済 20・未登録 0）
+
+## 2026-11-14 の申請（T-65・T-69・T-56、ユーザーが URL 検査で申請）
+
+| 区分 | URL |
+|---|---|
+| 新規（T-65） | /ja/diy/door-soundproof/、/ja/soundproof-rental/earplugs-for-sleep/、/ja/soundproof-rental/upstairs-footsteps-noise/、/ja/knowledge/outdoor-ac-unit-noise/ |
+| リライト（T-69） | /ja/diy/diy-internal-window-road-noise-reduction/、/ja/knowledge/soundproof-app-review-2026/、/ja/knowledge/sound-sensitivity-misophonia-environment-guide/、/ja/soundproof-rental/bedroom-noise-type-solution-guide/ |
+| 統合先（T-56） | /ja/money/soundproof-subsidy-news-2025/、/ja/soundproof-rental/apartment-weight-limit-500kg/ |
+
+- 登録の確認は T-59（m11、12/02）
