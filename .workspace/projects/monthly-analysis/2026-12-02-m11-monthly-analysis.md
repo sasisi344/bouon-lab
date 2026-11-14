@@ -93,6 +93,21 @@ vocal-mask は装着型の密閉マスクの作り方を外し、開放型シー
 - **T-64 リライト2本（11/12 デプロイ、タイトル変更）**: `knowledge/absorption-vs-soundproofing-materials`（吸音材 防音材 違い。変更前は「騒音対策 科学的な遮音・吸音の使い分け」で41位のみ）、`soundproof-rental/noise-complaint-landlord-negotiation-guide`（騒音 苦情 どこに言えばいい）。基準値は m10 の2本の表示・CTR・順位（日平均）。旧タイトルは `.workspace/codex/reports/2026-11-12-T-64.md`
 - 判定: 新規は m11 では途中経過。登録後に表示が0なら需要ミスマッチを疑う（`project_indexing_vs_demand_mismatch`）。T-64 はメインKWで表示が出て、全体の表示が m10 を下回っていなければ継続。下回ればタイトルの語順を見直す
 
+## T-65・T-69・T-56 の基準値（2026-11-14 作成、同日デプロイ予定）
+
+- **T-65 新規4本**: `diy/door-soundproof`（ドア 防音）・`soundproof-rental/earplugs-for-sleep`（耳栓 睡眠）・`soundproof-rental/upstairs-footsteps-noise`（上の階 足音）・`knowledge/outdoor-ac-unit-noise`（室外機 騒音）。m11 は途中経過、登録と表示の有無を見る
+- **T-69 タイトル変更4本**（m08〜m10 の流入はほぼ0。基準値は m10 の表示・順位）
+
+| 記事 | 旧タイトル | 新タイトル | m10（表示・クリック・平均順位） |
+|---|---|---|---|
+| `diy/diy-internal-window-road-noise-reduction` | 内窓の防音効果を実測｜賃貸DIYポリカ窓から本格インプラスまで比較【2025-2026年版】 | 窓の防音DIYは内窓と隙間から｜ポリカ内窓・隙間テープ・換気口の対策と効果 | 表示なし |
+| `knowledge/soundproof-app-review-2026` | 防音性能を測るスマホアプリ比較2026｜無料アプリでどこまで分かる？ | 騒音計アプリはどこまで正確？無料のiPhone・Androidアプリで防音の効果を測る方法 | 10・0・8.8位 |
+| `knowledge/sound-sensitivity-misophonia-environment-guide` | （変更なし。H2「聴覚過敏の子供のイヤーマフ」を追加） | — | 13・0・28.5位 |
+| `soundproof-rental/bedroom-noise-type-solution-guide` | 上の階の足音・隣の話し声で眠れない｜音の種類で変わる寝室の騒音対策の選び方 | 寝室の騒音で眠れない｜足音・話し声・外の音、音の種類で変わる対策の選び方 | 1・0・74位 |
+
+- **T-56 統合3本（301）**: `noise-canceling-headphones-sleep`→`earplugs-for-sleep`、`soundproof-window-subsidy-2025-guide`→`soundproof-subsidy-news-2025`、`danbocchi-floor-protection`→`apartment-weight-limit-500kg`（統合先のタイトルを「マンションに防音室を置ける？床の耐荷重の確かめ方と、500kg級・だんぼっちの荷重分散」に変更。旧「築20年のマンションに重さ500kgの防音室を置ける？床補強なしで設置するための安全基準と計算術」）。見る: 統合先の表示が統合元の分を足して減っていないか、旧URLが索引から外れたか（T-59）
+- 判定: タイトル変更はメインKWで表示が出るか。m11 は途中経過、最終は m12
+
 ## 結果
 
 （実施後に追記）
