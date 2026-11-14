@@ -68,7 +68,7 @@ CTA のある4本（T-47 が先に見るとした記事）の結論は、`bouon-
 | 記事 | 状態・最終クロール | クロール後の追加 | 字数 | 被リンク | CTA | 16か月 クリック/表示 | Bing クリック/表示 | 実施 | 理由 |
 |---|---|---:|---:|---:|---:|---:|---:|---|---|
 | `money/soundproof-window-subsidy-2025-guide` | クロール 09/25 | +39 | 3,761 | 3 | 0 | 0/11 | 0/3 | T-56 → `money/soundproof-subsidy-news-2025` | 同じ先進的窓リノベ2026の話で、登録済みの記事がある。交付申請が12/31までなので先に行う |
-| `soundproof-rental/noise-canceling-headphones-sleep` | クロール 06/01 | +20 | 2,814 | 4 | 0 | 1/41 | 0/0 | T-56 → `soundproof-rental/bedroom-noise-type-solution-guide` | 6/1 の後の更新は小さい。寝室の騒音対策の1節に収まる。16か月 41表示・1クリックは統合先へ渡す |
+| `soundproof-rental/noise-canceling-headphones-sleep` | クロール 06/01 | +20 | 2,814 | 4 | 0 | 1/41 | 0/0 | T-56 → ~~`soundproof-rental/bedroom-noise-type-solution-guide`~~ T-65 の耳栓の新規記事（2026-11-14 変更） | 6/1 の後の更新は小さい。寝室の騒音対策の1節に収まる。16か月 41表示・1クリックは統合先へ渡す |
 | `diy/danbocchi-floor-protection` | クロール 09/01 | +17 | 2,690 | 2 | 1 | 0/0 | 0/1 | T-56 → `soundproof-rental/apartment-weight-limit-500kg` | 9/1 に読まれて未登録、16か月0。床の荷重の話は登録済みの記事に節として足せる |
 | `diy/danbotchi-diy-blueprints` | クロール 08/28 | +33 | 1,500 | 3 | 1 | 0/3 | 0/0 | T-57 → `diy/closet-diy-soundproof-room` | 1,500字と最も薄い。自作ブースの寸法例は統合先の節になる。統合先は T-43 バッチ2の検収後 |
 | `soundproof-room/hsp-soundproof-curtain-guide` | クロール 07/01 | +19 | 2,359 | 9 | 0 | 0/0 | 0/0 | T-57 → `soundproof-room/hsp-soundproof-room-guide` | 16か月0。読者が同じなので「防音室の前にカーテン」の節にする。統合先は T-43 バッチ2の検収後 |
