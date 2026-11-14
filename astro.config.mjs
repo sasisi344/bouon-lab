@@ -738,6 +738,8 @@ export default defineConfig({
     '/ja/soundproof-rental/noise-canceling-headphones-sleep/': '/ja/soundproof-rental/earplugs-for-sleep/',
     '/ja/money/soundproof-window-subsidy-2025-guide/': '/ja/money/soundproof-subsidy-news-2025/',
     '/ja/diy/danbocchi-floor-protection/': '/ja/soundproof-rental/apartment-weight-limit-500kg/',
+    // T-66 horror-game の統合（2026-11-14）
+    '/ja/creator/horror-game-scream-soundproof-mic/': '/ja/creator/game-streamer-sound-types/',
   },
   image: {
     domains: ['m.media-amazon.com', 'ir-jp.amazon-adsystem.com', 'shop.r10s.jp'],

@@ -554,6 +554,8 @@ RewriteRule ^ja/creator/vtuber-family-privacy-rules/$ /ja/creator/female-streame
 RewriteRule ^ja/soundproof-rental/noise-canceling-headphones-sleep/$ /ja/soundproof-rental/earplugs-for-sleep/ [R=301,L]
 RewriteRule ^ja/money/soundproof-window-subsidy-2025-guide/$ /ja/money/soundproof-subsidy-news-2025/ [R=301,L]
 RewriteRule ^ja/diy/danbocchi-floor-protection/$ /ja/soundproof-rental/apartment-weight-limit-500kg/ [R=301,L]
+# T-66 horror-game の統合（2026-11-14）
+RewriteRule ^ja/creator/horror-game-scream-soundproof-mic/$ /ja/creator/game-streamer-sound-types/ [R=301,L]
 
 # ── 上記の個別マッピングでカバーされない旧Hugo /posts/ 配下は恒久削除として410を返す（2026-09-25）───
 RewriteRule ^posts/ - [G,L]
