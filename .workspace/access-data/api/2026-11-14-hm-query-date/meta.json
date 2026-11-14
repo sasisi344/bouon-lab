@@ -1,0 +1,15 @@
+{
+  "fetchedAt": "2026-11-14T04:51:07.241Z",
+  "site": "BL",
+  "command": "gsc",
+  "args": {
+    "site": "BL",
+    "start": "2026-09-01",
+    "end": "2026-11-11",
+    "dims": "query,date",
+    "query": "ハウスメーカー",
+    "slug": "hm-query-date"
+  },
+  "start": "2026-09-01",
+  "end": "2026-11-11"
+}

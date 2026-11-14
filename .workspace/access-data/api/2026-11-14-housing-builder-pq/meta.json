@@ -1,0 +1,15 @@
+{
+  "fetchedAt": "2026-11-14T04:50:59.423Z",
+  "site": "BL",
+  "command": "gsc",
+  "args": {
+    "site": "BL",
+    "start": "2026-07-01",
+    "end": "2026-10-31",
+    "dims": "page,query",
+    "page": "housing-builder",
+    "slug": "housing-builder-pq"
+  },
+  "start": "2026-07-01",
+  "end": "2026-10-31"
+}

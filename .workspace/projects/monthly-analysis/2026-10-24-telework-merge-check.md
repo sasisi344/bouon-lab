@@ -1,7 +1,7 @@
 # S-10 在宅ワーク3記事の統合先の効果測定（W42基準値→W44比較、2026-10-24前後）
 
 - 担当: Claude（解析・記録）。ユーザーはW43・W44のGSC/GA4エクスポートのみ（S-01・S-08と同じエクスポートを使う）
-- 状態: 未着手
+- 状態: 完了（2026-11-14、m10 の API 月次で判定）
 - 2026-10-17変更: 週次取得の廃止により、S-11（m10の月次解析、2026-11-02〜11-03）の中で実施する。本文の「W43」「W44」「7日」は「m10」に読み替える
 - 関連: T-15（後続候補）、`.workspace/archive/legacy/2026-10-10-w42-gsc-ga4-import.md`（S-01）、`.workspace/projects/monthly-analysis/2026-10-17-w43-merge-articles-check.md`（S-07）
 
@@ -49,4 +49,9 @@ T-21のデプロイ（**2026-10-08**）で、統合先`remote-work-family-harmon
 
 統合先`remote-work-family-harmony-soundproof`は**表示0**。
 
-（W43以降の結果は以下に追記）
+### m10 の結果と判定（2026-11-14、API 月次）
+
+- 統合先 `remote-work-family-harmony-soundproof`: 10月は GSC のページ表に出ない（表示0）。11/1〜11/11 に表示1・10位で初めて出た。GA4 の入口は10月1セッション（読了1）。トップのカード経由の流入は `hub_click` のラベル別を取っていないので分けていない
+- 旧 `workbooth-office-soundproof-trend` は9月17表示（大半は `site:` 検索）→10月は表示なし
+- 判定: **需要が細い。追加施策なし**（手順 3 の2行目）。11月に表示が出たので登録はされている。「テレワーク 家族 うるさい」などの語は出ていない
+- 別維持の `telework-soundproof-loan-strategy` は T-57（統合の後続7本）で扱う

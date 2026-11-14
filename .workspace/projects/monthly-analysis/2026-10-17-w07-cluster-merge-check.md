@@ -1,7 +1,7 @@
 # S-06 カニバリクラスタA〜D統合4記事の表示・順位確認（2026-10-17前後）
 
 - 担当: Claude（解析・記録）。ユーザーはW43のGSC/GA4エクスポートのみ
-- 状態: 未着手
+- 状態: 完了（2026-11-14、m10 の API 月次で判定）
 - 2026-10-17変更: 週次取得の廃止により、S-11（m10の月次解析、2026-11-02〜11-03）の中で実施する。本文の「W43」「W44」「7日」は「m10」に読み替える
 - 関連: 旧W-07（完了・`.workspace/archive/legacy/weekly-task-archive-20261006.md`）、`.workspace/archive/legacy/2026-10-10-w42-gsc-ga4-import.md`（S-01）
 
@@ -36,4 +36,16 @@
 
 `owner-renovation-roi-simulation-tool`・`soundproof-room-rental-cost`・`rental-unit-soundproof-room`・`soundproof-room-size` の4記事は**すべて表示0**（W41は`owner-renovation-roi-simulation-tool`が表示1だったが、W42は表から消えた）。W43で1本でも表示が出れば継続観察、0のままならW44まで延長。
 
-（W43以降の結果は以下に追記）
+### m10 の結果と判定（2026-11-14、API 月次 `access-data/api/monthly/2026/m{09,10}/gsc-page.csv`）
+
+| 記事 | 9月（表示・順位） | 10月（表示・クリック・順位） | 10月の GA4（入口、bot 除く） |
+|---|---|---|---|
+| `owner-renovation-roi-simulation-tool` | 1・9位 | 表示なし | 1 |
+| `soundproof-room-rental-cost` | 4・18位 | 1・0・7位 | 2 |
+| `rental-unit-soundproof-room` | 表示なし | 2・1・7位 | 7（読了3） |
+| `soundproof-room-size` | 15・12.1位（大半は `site:` 検索） | 1・0・23位 | 5 |
+
+- 判定: **統合の効果は小さく、需要が細い。追加施策なし（継続観察もしない）**。4本とも表示は0〜2件で、W42 の0からは出たが増えたとは言えない
+- `soundproof-room-size` の「表示があるのにクリック0」は、9月の表示が `site:` 検索だったので CTR の課題ではなかった。タイトル調整の起票はしない
+- `soundproof-room-rental-cost` の「S-06 の判定まで拡充しない」（m10 手順 W-06 の注意）は解除してよい
+- `rental-unit-soundproof-room` の title の「完全ガイド」は inbox I-25（バッチ4）で作り直す

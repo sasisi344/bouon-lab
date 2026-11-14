@@ -1,7 +1,7 @@
 # S-07 統合先2記事の効果測定（W43のGSC・GA4、2026-10-17前後）
 
 - 担当: Claude（解析・記録）。ユーザーはW43のGSC/GA4エクスポートのみ（S-06と同じエクスポートを使う）
-- 状態: 未着手
+- 状態: 完了（2026-11-14、m10 の API 月次で判定）
 - 2026-10-17変更: 週次取得の廃止により、S-11（m10の月次解析、2026-11-02〜11-03）の中で実施する。本文の「W43」「W44」「7日」は「m10」に読み替える
 - 関連: 旧W-13・T-17（完了・`.workspace/archive/legacy/weekly-task-archive-20261006.md`、`.workspace/archive/legacy/task-list-21.md`）、W-24、`.workspace/archive/legacy/2026-10-10-w42-gsc-ga4-import.md`（S-01）、`.workspace/projects/monthly-analysis/2026-10-17-w07-cluster-merge-check.md`（S-06）
 
@@ -41,4 +41,14 @@ W41（7日）は両統合先も旧4記事もGSCのページ表に出ていない
 
 `regional-city-soundproof-rental-guide`・`soundproof-subsidy-check-guide` の2記事は**どちらも表示0**。参考: `small-business-soundproof-subsidy-guide`が表示1・順位1.0で出ている。統合・301は10/6デプロイから4日で、インデックス登録待ち。
 
-（W43以降の結果は以下に追記）
+### m10 の結果と判定（2026-11-14、API 月次）
+
+| URL | 10月（表示・クリック・順位） | 11/1〜11/11 | 10月の GA4（入口） |
+|---|---|---|---|
+| `regional-city-soundproof-rental-guide` | 2・0・9位 | 1・21位 | 0（読了1） |
+| `soundproof-subsidy-check-guide` | 8・0・5.8位（半分は `site:` 検索） | 4・7位 | 2 |
+| 旧 local 4本（金沢・岡山・熊本・新潟） | 9月 13〜24表示 → 10月 0〜2表示 | — | — |
+
+- 判定: **インデックスされ表示は出たが、ほぼ0。統合先に単独の需要がないので追加施策なし**（手順 3 の2行目）。表示が出ているので登録はされている
+- 「防音工事 補助金」「データセンター 騒音」「金沢/岡山 防音賃貸」などの狙った語は出ていない。旧4本の表示は10月にほぼ消えた（301 が効いている）
+- `regional-city-soundproof-rental-guide` は都市別記事に戻さない（昇格基準の週10表示・20位以内に遠い）。手順 4 の家賃を加えた式の件数は、ユーザーの測定がないので未記入のまま

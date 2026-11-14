@@ -39,6 +39,17 @@
 - **流入上位6本の収益導線（T-30、2026-10-31、T-46）**: 対象は `knowledge/soundproof-material-spec-chart`・`money/soundproof-room-price-market`・`soundproof-room/bouon-dchiseinou-meyasu`・`creator/streamer-soundproof-room-comprehensive-guide`・`soundproof-rental/report-japan-soundproof-rental-market-needs`・`soundproof-rental/bouon-rental-market-guide`。各記事に商品名を出す段落と CtaBox（スペック早見表だけ AffiliateCard）を足しただけで、本文の情報・見出しは変えていない。基準値は m10 の6本の日本からのセッションと `affiliate_click`（記事別。`hq/tools/analytics-fetch/` の `fetch.mjs ga4 --event affiliate_click --dims pagePath` で取れる）。見る: 6本の `affiliate_click` の件数とクリック率（クリック÷セッション）、どの CtaBox が押されたか、6本のセッションと平均エンゲージメント時間が落ちていないか。判定: `affiliate_click` が6本合計で1件以上出れば導線は機能していると見て、同じ型を流入の次の層へ広げる。0件なら置く位置（記事の後半すぎないか）と商品の価格帯を見直す。`soundproof-room-price-market` は同じ日に T-45（語り手リライト）も入っているので、セッション・順位の変化はどちらの影響か分けられない点に注意
 - **継続観察**（W-15〜W-20）: S-11と同じ項目を見る
 
+## m10 から送った項目（2026-11-14、T-31 を閉じるときに移した）
+
+変更の内容・見る語は m10 の手順ファイル（`2026-11-02-m10-monthly-analysis.md`）の同じ見出しの節にある。m10 の値は途中経過（変更から2週間弱）。
+
+- **電子ドラム・ピアノの旧URL3本の転送先変更（T-24、10/18）**: m10 は `electronic-drum-vibration-fuwafuwa-system` 表示8・19位、`piano-room-guide` 表示7・**77.6位**（9月 32表示・46.9位から下がった）。判定: 転送先2本の表示・順位が9月の水準に戻ったか。`piano-room-guide` が70位台のままなら、旧URLの語（「ピアノ 防音室」系）と記事の約束がずれていないかを見直す
+- **賃貸ゲーム音の自作ブースの旧URL2本の転送先変更（10/19）**: m10 は `closet-diy-soundproof-room` 表示13・19.8位（9月 3表示）。判定: 「自作 防音室 賃貸」「ゲーム 音漏れ」系の語が出たか
+- **住宅系の既存3記事の補強とタイトル変更（T-10 R-2〜R-4、10/19）**: m10 は price-guide 表示2・9位、mortgage 表示15・13.5位、daiwa 表示65・49.2位・2クリック。判定は m10 の節のとおり（「ピアノ 住宅ローン」が10位以内に入りクリックが付くか、上の語の順位が落ちていないか）
+- **re-create 判断待ち9本の処理（10/19）**: m10 で表示が出たのは `biophilic-acoustics`（2表示・2.5位）だけ。判定: 統合先3本の表示が落ちていないか、リライト4本に狙いの語の表示が付いたか
+- **配信者クラスタの残作業（10/19）**: m10 は3本とも表示ほぼなし。判定: 「冷蔵庫 振動」「暗騒音 目安」「NC値」系の表示、トップのカード `sound-leak` の `hub_click`
+- **継続観察 W-20 指名「防音ラボ」**: m10 は表示19・5.7位・クリック0（9月 2クリック）
+
 ## T-58 のタイトル変更（2026-11-06作成、2026-11-07デプロイ、2026-11-08 URL検査で申請）
 
 同じ順位帯のCTRを、変更前後の月次で比べる。

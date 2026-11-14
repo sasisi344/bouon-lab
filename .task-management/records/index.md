@@ -6,6 +6,7 @@
 
 | ID | 完了日 | 種別 | テーマ（タグ） | 対象（URL・クエリ） | 結果（1行） | 参照できるデータ | ファイル |
 |---|---|---|---|---|---|---|---|
+| T-31・T-33〜T-36・T-38 | 2026-11-14 | 効果測定 | 月次解析, m10, 統合, 住宅系, スマホ最適化, API | サイト全体・住宅系6URL・カニバリ統合4記事・統合先2記事・在宅ワーク統合先 | 10月はGA4 +49%・GSCクリック2.4倍。統合3件は需要が細く追加施策なし、スマホは時間が改善、住宅系は3本登録済みでハウスメーカー比較が食い合いの疑い（I-27） | .workspace/access-data/api/monthly/2026/m10/ | [2026-11-14-T-31-m10-monthly.md](2026-11-14-T-31-m10-monthly.md) |
 | T-64 | 2026-11-12 | 施策 | リライト, クエリ契約, 受忍限度 | knowledge/absorption-vs-soundproofing-materials, soundproof-rental/noise-complaint-landlord-negotiation-guide | Codex がクエリ契約で2本を作り直し、受忍限度の表の誤りを直した。検収・図解2枚・デプロイ。効果測定は T-67 | .workspace/admin-review/2026-11-12-T-64.md | [2026-11-12-T-64-suggest-rewrite2.md](2026-11-12-T-64-suggest-rewrite2.md) |
 | T-62 | 2026-11-12 | 施策 | 新規記事, サジェストKW, 図解 | diy/sound-absorbing-material-recommend ほか4本 | 新規5本を画像入りで公開、検収の残り2点と I-20 を Codex で直し、ユーザー確認済み。効果測定は T-67 | .workspace/admin-review/2026-11-11-T-62.md | [2026-11-12-T-62-suggest-batch2.md](2026-11-12-T-62-suggest-batch2.md) |
 | T-61 | 2026-11-12 | 施策 | ファクトチェック, 出典, 健康 | nitori・closet・mental-health・diy-soundproofing-tips・ear-pressure の5本 | 出典不明の主張を一次情報と計算で裏取りし、削除・出典つき・目安に直した（修正は Codex）。デプロイ済み | .workspace/admin-review/2026-11-12-T-61-a.md | [2026-11-12-T-61-unsourced-claims.md](2026-11-12-T-61-unsourced-claims.md) |
