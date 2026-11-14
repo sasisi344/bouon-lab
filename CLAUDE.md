@@ -35,7 +35,6 @@ npx astro check # 型チェック
 | `bouon-rewrite-strategy` | 既存記事の改善優先度判定・リライト実行時 |
 | `bouon-internal-link-ops` | 内部リンクの追加・変更、公開前チェック時 |
 | `bouon-hub-cards` | トップの入口カード6枚への掲載（frontmatter `hub`）の追加・変更、伸ばしたい記事のテコ入れ判断時 |
-| `bouon-task-ops` | `/monthly-ppdca` の結果を `.task-management/` に反映するとき（運用ルール本体は `.task-management/CLAUDE.md`） |
 | `bouon-dataset-lookup` | 記事作成・リライトで防音スペック・市場データ・調査メモなどの既存ナレッジを探すとき |
 | `bouon-weekly-report` | `.workspace/access-data/` のGSC/GA4の月次集計・前月比較・ページ別推移（`/monthly-ppdca`。取得仕様は `access-data/export-spec.md`） |
 | `bouon-growth-ops` | 収益導線設計（QUEST/PASONA/BEAF）・ビジュアル設計時 |
@@ -53,6 +52,8 @@ npx astro check # 型チェック
 - 問題点・気づき・hq からの修正依頼: `.task-management/inbox.md`（作業の開始時に未処置を処理する）
 - 実行記録: `.task-management/records/index.md`（起票前・解析前に Grep する）
 - 計画書・調査・データは `.workspace/` に置き、タスクからリンクする
+- 記事ネタ・アウトラインの優先リストは `.workspace/projects/article-ideas/README.md`（タスクにする前の候補。着手するものだけ task.md に起票）
+- `.task-management/` 以外にタスクの置き場を作らない（hq と共有するのはここだけ。旧 `.workspace/.task/` と `bouon-task-ops` skill は 2026-11-14 に統合して削除）
 - 月次解析（効果測定）の進め方と旧ID（S-NN・W-NN）の対応は `.task-management/CLAUDE.md` の「サイト固有」節
 - サイトをまたぐタスクは344blog の `hq/backlog.md`（GitHub Project は2026-10-27に廃止）
 

@@ -103,7 +103,10 @@
 
 #### 素材置き場との書き分け
 
-- `inbox.md` = 問題点・気づき・修正依頼。`.workspace/_inbox/` = 記事ネタ・アウトライン・KWのCSV（分岐ルールは `.workspace/_inbox/CLAUDE.md`）。`_draft/` = 清書前の下書き
+- `inbox.md` = 問題点・気づき・修正依頼（タスクの手前）
+- `.workspace/_inbox/` = 届いたファイルの一時置き場。**振り分けたら空にする**（分岐ルールは `.workspace/_inbox/CLAUDE.md`）
+- `.workspace/projects/article-ideas/README.md` = 記事ネタ・アウトラインの優先リスト（タスクにする前の候補）。着手するものだけ `task.md` に起票する
+- `_draft/` = 清書前の下書き
 - KW分析の結果は `.workspace/projects/query-check/`（生データ `data/` はコミットしない）
 
 #### 月次解析（効果測定）の方式
@@ -113,6 +116,19 @@
 - 手順・確認項目は `.workspace/projects/monthly-analysis/YYYY-MM-02-m{MM}-monthly-analysis.md`。施策を実施したら、この手順ファイルに節を足し、`task.md` にもデータ待ちの行を足す（同じ内容は書かず、行からは手順ファイルにリンク）
 - 解析は `/monthly-ppdca`（集計は `bouon-weekly-report` skill）。観測数値は `access-data/2026/m{MM}/README.md` に書き、タスクには写さない
 - 月の後半に入ってからの施策は、その月のデータでは途中経過として扱い、判定は翌月の解析で行う
+
+#### 月次解析とタスクの連携（旧 `bouon-task-ops` skill、2026-11-14 に統合）
+
+| もの | 置き場 |
+|---|---|
+| 月次解析の行・効果測定の行 | `task.md`（状態 `データ待ち`、予定日は翌月2日。個別の効果測定は「MM/DD（T-NN内）」） |
+| 月次解析の手順・確認項目 | `.workspace/projects/monthly-analysis/YYYY-MM-02-m{MM}-monthly-analysis.md` |
+| 個別の効果測定の手順（長いもの） | `.workspace/projects/monthly-analysis/YYYY-MM-DD-<slug>.md` |
+| 観測した数値 | `.workspace/access-data/2026/m{MM}/README.md`（タスクには写さない） |
+| 判定済みの効果測定 | `records/` ＋ `records/index.md` に1行（種別 `効果測定`） |
+
+- 施策を実施したら: 次の月次解析の手順ファイルに節を足す（`### 対象（実施日）`。実施日・対象URLまたはクエリ・基準値・見る指標・判定基準）。手順が長い・単独で判定したいものだけ `task.md` にデータ待ちの行を足し、本文から節にリンクする
+- 月次解析の日（`/monthly-ppdca`）: ①手順ファイルの各節に「結果」を書く ②判定済みの節・行は `records/` へ移し `task.md` から消す ③続く節は翌月の手順ファイルへ送り、翌月の「m{MM}の月次解析」の行を起票する ④着手できる施策は `着手可` で起票する（起票前に `records/index.md` を Grep） ⑤`article-ideas/README.md` の優先2・3の需要を見直す
 
 #### やりたいこと→読むもの
 
@@ -125,7 +141,7 @@
 
 #### 旧ファイル・旧IDの対応（2026-10-27移行）
 
-- 旧 `.workspace/.task/` の対応表は `.workspace/.task/README.md`（2026-11-27以降に削除）。旧運用ルールは `.workspace/archive/legacy/task-rules-20261027.md`
+- 旧 `.workspace/.task/` の対応表は `.workspace/archive/legacy/task-folder-map-20261027.md`（フォルダは 2026-11-14 に削除）。旧運用ルールは `.workspace/archive/legacy/task-rules-20261027.md`
 - 旧 S-NN → 新 T-NN: S-11→T-31、S-03→T-32、S-05→T-33、S-06→T-34、S-07→T-35、S-08→T-36、S-09→T-37、S-10→T-38、S-12→T-39、S-04→T-40。S-01・S-02 は `records/index.md`
 - 旧 W-NN（効果測定の旧ID）は、手順ファイルの節見出し（`### W-NN`）にそのまま残っている。新しい効果測定には W-NN を振らない
 - 旧 archive の連番 `task-list-NN.md`（01〜39）は `records/index.md` の行に変換済み（本体は `.workspace/archive/legacy/`）

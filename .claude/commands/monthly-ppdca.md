@@ -10,7 +10,7 @@ description: GSC/GA4の月次アクセスデータを取り込み、Google優先
 
 ## Step 0. 事前ロード
 
-`.task-management/CLAUDE.md`（サイト固有節を含む）と `bouon-task-ops` skillを前提に、`.task-management/inbox.md` の未処置、`.task-management/task.md` の**索引表**、`.task-management/records/index.md` を読む（本文は必要なIDだけ）。`task.md` の「m{MM}の月次解析」の行（例: m10はT-31）と、予定日が「（T-NN内）」の行が今回の確認対象。手順ファイル `.workspace/projects/monthly-analysis/YYYY-MM-02-m{MM}-monthly-analysis.md` に並ぶ効果測定の節を読む。`access-data/CLAUDE.md` §2・§7 と `export-spec.md` §4（KPI）を読む。
+`.task-management/CLAUDE.md`（サイト固有節の「月次解析とタスクの連携」を含む）を前提に、`.task-management/inbox.md` の未処置、`.task-management/task.md` の**索引表**、`.task-management/records/index.md` を読む（本文は必要なIDだけ）。`task.md` の「m{MM}の月次解析」の行（例: m10はT-31）と、予定日が「（T-NN内）」の行が今回の確認対象。手順ファイル `.workspace/projects/monthly-analysis/YYYY-MM-02-m{MM}-monthly-analysis.md` に並ぶ効果測定の節を読む。`access-data/CLAUDE.md` §2・§7 と `export-spec.md` §4（KPI）を読む。
 
 ## Step 1. 取り込み・仕分け
 
