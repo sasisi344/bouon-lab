@@ -23,8 +23,10 @@ const insAttrs: Record<string, string> = {
   'data-ad-client': ADSENSE_CLIENT,
   'data-ad-slot': config.slot,
   'data-ad-format': config.format,
-  'data-full-width-responsive': 'true',
 };
+if (config.fullWidthResponsive) {
+  insAttrs['data-full-width-responsive'] = 'true';
+}
 ---
 
 <aside

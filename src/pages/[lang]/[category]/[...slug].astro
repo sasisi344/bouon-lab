@@ -401,20 +401,41 @@ const pageHead = [
         <>
         <div id="article-mid-ad" hidden>
           <AdUnit placement="rectangleArticleMid" deferPush />
+          <AdUnit placement="rectangleArticleMid2" deferPush />
+          <AdUnit placement="rectangleArticleMid3" deferPush />
         </div>
         <script is:inline>
-          // 記事中広告: 2つ目のH2の直前（H2が1つなら1つ目の直前）へ移してから配信する
+          // 記事中広告: 2つ目・5つ目・8つ目のH2の直前へ移してから配信する（H2が1つなら1つ目の直前に1枠だけ）。
+          // アフィリエイト枠（CtaBox・AffiliateCard）のすぐ後のH2は避け、次のH2へずらす
           (function () {
             var holder = document.getElementById('article-mid-ad');
             var body = document.querySelector('.prose-body');
             if (!holder || !body) return;
-            var h2s = body.querySelectorAll(':scope > h2');
-            var target = h2s[1] || h2s[0];
-            if (!target) { holder.remove(); return; }
-            var ad = holder.firstElementChild;
-            target.parentNode.insertBefore(ad, target);
+            var h2s = Array.prototype.slice.call(body.querySelectorAll(':scope > h2'));
+            var ads = Array.prototype.slice.call(holder.children);
+            var nearAffiliate = function (h2) {
+              var prev = h2.previousElementSibling;
+              for (var i = 0; i < 2 && prev; i++, prev = prev.previousElementSibling) {
+                if (prev.matches('.cta-box-container, .affiliate-wrap') ||
+                    prev.querySelector('.cta-box-container, .affiliate-wrap')) return true;
+              }
+              return false;
+            };
+            var wanted = h2s.length > 1 ? [1, 4, 7] : [0];
+            var used = -3;
+            var pushed = 0;
+            wanted.forEach(function (idx, n) {
+              var i = Math.max(idx, used + 3);
+              while (i < h2s.length && nearAffiliate(h2s[i])) i++;
+              if (i >= h2s.length || !ads[n]) return;
+              h2s[i].parentNode.insertBefore(ads[n], h2s[i]);
+              used = i;
+              pushed++;
+            });
             holder.remove();
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
+            for (var p = 0; p < pushed; p++) {
+              (window.adsbygoogle = window.adsbygoogle || []).push({});
+            }
           })();
         </script>
         </>
@@ -570,6 +591,8 @@ const pageHead = [
                 />
               </section>
             )}
+
+            <AdUnit placement="multiplexArticleEnd" />
 
             <section class="author-byline">
               <svg class="byline-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
