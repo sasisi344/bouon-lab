@@ -1,0 +1,80 @@
+{
+  "fetchedAt": "2026-11-24T15:33:32.218Z",
+  "site": "BL",
+  "commit": "37447df",
+  "start": "2026-08-24",
+  "end": "2026-11-21",
+  "pos": [
+    4,
+    15
+  ],
+  "minImpr": 30,
+  "freeze": 28,
+  "extra": "",
+  "articles": 193,
+  "targets": 4,
+  "held": 4,
+  "mentions": 0,
+  "orphans": 4,
+  "brokenCards": [],
+  "hashRowsDropped": 17,
+  "queryVisibleClickShare": 0.338,
+  "unmatchedPages": [
+    [
+      "https://bouon-lab.com/ja/soundproof-room/",
+      110
+    ],
+    [
+      "https://bouon-lab.com/ja/",
+      96
+    ],
+    [
+      "https://bouon-lab.com/ja/business/",
+      95
+    ],
+    [
+      "https://bouon-lab.com/ja/local/",
+      61
+    ],
+    [
+      "https://bouon-lab.com/ja/soundproof-rental/",
+      55
+    ],
+    [
+      "https://bouon-lab.com/ja/knowledge/",
+      40
+    ],
+    [
+      "https://bouon-lab.com/ja/creator/",
+      34
+    ],
+    [
+      "https://bouon-lab.com/ja/money/",
+      27
+    ],
+    [
+      "https://bouon-lab.com/ja/diy/",
+      26
+    ],
+    [
+      "https://bouon-lab.com/en/japan-quiet-spaces/how-japanese-streamers-soundproof/",
+      15
+    ],
+    [
+      "https://bouon-lab.com/en/japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/",
+      8
+    ],
+    [
+      "https://bouon-lab.com/en/japan-noise-and-society/building-code-reform-2025-noise-insulation/",
+      5
+    ],
+    [
+      "https://bouon-lab.com/en/japan-noise-and-society/why-noise-complaints-in-japan/",
+      3
+    ],
+    [
+      "https://bouon-lab.com/en/knowledge/soundproof-room-price-market/",
+      2
+    ]
+  ]
+}
