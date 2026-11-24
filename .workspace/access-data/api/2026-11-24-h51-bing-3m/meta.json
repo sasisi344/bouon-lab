@@ -1,0 +1,14 @@
+{
+  "fetchedAt": "2026-11-24T08:04:05.278Z",
+  "site": "BL",
+  "command": "bing",
+  "args": {
+    "site": "BL",
+    "start": "2026-08-22",
+    "end": "2026-11-23",
+    "slug": "h51-bing-3m"
+  },
+  "bing": "https://bouon-lab.com/",
+  "start": "2026-08-22",
+  "end": "2026-11-23"
+}
