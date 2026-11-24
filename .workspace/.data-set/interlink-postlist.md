@@ -55,7 +55,6 @@
 | ja | diy | `electronic-piano-key-noise-vibration` |  | 電子ピアノの打鍵音対策｜ヘッドホンでも下の階に響く振動とペダル音の止め方 | 電子ピアノ, 打鍵音, 防振, 床衝撃音, マンション, DIY防音 | `/ja/diy/electronic-piano-key-noise-vibration/` | false |
 | ja | diy | `floor-soundproof-underlay` |  | 床の防音下地は何を敷く？フロアタイル下に効く素材と重ね方 | 床衝撃音, DIY防音, 防音賃貸, 遮音等級, 原状回復, 足音対策 | `/ja/diy/floor-soundproof-underlay/` | false |
 | ja | diy | `free-cardboard-soundproof-tech` |  | スーパーの無料段ボールは使えるか？厚さ重視で選ぶ「防音向きの段ボール」と多重貼りテクニック | DIY防音, 防音室, 費用, リサイクル | `/ja/diy/free-cardboard-soundproof-tech/` | false |
-| ja | diy | `futon-cardboard-karaoke-booth` |  | 見た目はヤバいが効果はガチ。布団と段ボールで囲う「ひとり用カラオケボックス」の作り方 | 防音室, 費用, ひとりカラオケ, DIY防音, 歌ってみた | `/ja/diy/futon-cardboard-karaoke-booth/` | false |
 | ja | diy | `gamer-acoustic-placement` |  | 吸音材はどこに貼る？モニター裏・スピーカー裏など5つの正解ポイント | 吸音材, ルームアコースティック, 配信・実況, DIY防音 | `/ja/diy/gamer-acoustic-placement/` | false |
 | ja | diy | `karaoke-box-soundproof-performance-guide` |  | カラオケボックス並みの防音は自宅で作れる？性能の目安と住宅構造別対策 | カラオケ, 防音室, 住宅構造, 防音ドア, DIY防音 | `/ja/diy/karaoke-box-soundproof-performance-guide/` | false |
 | ja | diy | `keyboard-typing-noise-vibration` |  | キーボードの打鍵音対策｜下の階に響く振動を止める順番と静音化 | キーボード騒音, 打鍵音, 防振, 床衝撃音, 在宅ワーク, DIY防音 | `/ja/diy/keyboard-typing-noise-vibration/` | false |
@@ -111,13 +110,11 @@
 | ja | local | `saitama-soundproof-rental-guide` |  | 防音室 賃貸 埼玉の相場・人気エリア・選び方【2025年最新】 | 防音賃貸, 埼玉, さいたま, 川口, 家賃相場 | `/ja/local/saitama-soundproof-rental-guide/` | false |
 | ja | local | `sapporo-soundproof-rental-guide` |  | 札幌は楽器演奏に最高の環境？「二重窓」標準装備がもたらす防音メリットと物件探しのコツ | 札幌, 防音賃貸, 窓, 防音工事 | `/ja/local/sapporo-soundproof-rental-guide/` | false |
 | ja | local | `tokyo-soundproof-rental-summary` |  | 東京の防音賃貸相場2026｜エリア別の家賃目安・失敗しない選び方 | 防音賃貸, 東京, 家賃相場, 不動産投資 | `/ja/local/tokyo-soundproof-rental-summary/` | false |
-| ja | money | `bouon-asset-value-analysis` |  | 防音室の資産価値分析｜リセールバリューと不動産投資的視点でのROI | 資産価値, 不動産投資, リセールバリュー, 減価償却, ROI | `/ja/money/bouon-asset-value-analysis/` | false |
 | ja | money | `custom-home-soundproof-price-guide` |  | 防音工事の坪単価相場｜注文住宅で防音室を足す費用と地域差・新築と後付けの差 | 注文住宅, 坪単価, 防音工事, 費用相場, 防音室, 資金計画, 新築 | `/ja/money/custom-home-soundproof-price-guide/` | false |
 | ja | money | `owner-renovation-roi-simulation-tool` |  | 【A4一枚】防音リノベ ROI収益シミュレーション \| オーナー向け5年回収モデル完全解説 | ROI, 防音リノベ, 不動産投資, 賃料プレミアム | `/ja/money/owner-renovation-roi-simulation-tool/` | false |
 | ja | money | `piano-soundproof-mortgage-tax-guide` |  | ピアノと住宅ローン｜防音室・ピアノ室は組み込める、ピアノ本体は別が基本 | 住宅ローン, ピアノ室, 注文住宅, 資金計画, 固定資産税, 家づくり | `/ja/money/piano-soundproof-mortgage-tax-guide/` | false |
 | ja | money | `quiet-space-budget-decision-guide` |  | 自宅に防音室がなくても「一人になれる空間」を作る4つの方法｜40〜60代の予算別ガイド | 防音室, 子育て世代, 趣味の時間, 予算別, DIY防音 | `/ja/money/quiet-space-budget-decision-guide/` | false |
 | ja | money | `quiet-space-relocation-decision-guide` |  | 防音賃貸への引っ越し、失敗しない判断基準｜子育て世代の住み替えガイド | 防音賃貸, 引っ越し, 子育て世代, 住み替え, 内見チェック | `/ja/money/quiet-space-relocation-decision-guide/` | false |
-| ja | money | `small-business-soundproof-subsidy-guide` |  | 【個人事業主向け】防音室は贅沢品ではない！「小規模事業者持続化補助金」採択のための申請ノウハウ | 防音 | `/ja/money/small-business-soundproof-subsidy-guide/` | false |
 | ja | money | `soundproof-contractor-selection-guide` |  | 防音リフォーム業者の選び方｜失敗しない相見積もりと契約前チェック | 防音リフォーム, 業者選び, 相見積もり, 子育て世代, 契約チェック | `/ja/money/soundproof-contractor-selection-guide/` | false |
 | ja | money | `soundproof-reform-cost-by-tatami` |  | 防音室リフォームの費用相場｜6畳・8畳・10畳の総額とユニットとの分かれ目 | 防音室, リフォーム, 費用, 防音工事, 価格相場 | `/ja/money/soundproof-reform-cost-by-tatami/` | false |
 | ja | money | `soundproof-room-buy-rent-sell-guide` |  | 防音室は買う？借りる？売る？予算・期間で選ぶ入口ガイド｜中古・レンタル・買取 | 防音室, 中古防音室, レンタル, 買取, 費用 | `/ja/money/soundproof-room-buy-rent-sell-guide/` | false |
