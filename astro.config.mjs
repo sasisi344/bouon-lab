@@ -133,7 +133,7 @@ export default defineConfig({
     '/ja/soundproof-room/others/soundproof-room-size/':                '/ja/soundproof-room/soundproof-room-size/',
     // 1-A: soundproof-room/others → money
     '/ja/soundproof-room/others/rental-vs-purchase-soundproof-room/':              '/ja/money/soundproof-room-rental-cost/',
-    '/ja/soundproof-room/others/report-japan-soundproof-unit-resale-value-simulation/': '/ja/money/bouon-asset-value-analysis/',
+    '/ja/soundproof-room/others/report-japan-soundproof-unit-resale-value-simulation/': '/ja/money/soundproof-room-buyback-guide/',
     '/ja/soundproof-room/others/soundproof-room-buyback-guide/':                   '/ja/money/soundproof-room-buyback-guide/',
     '/ja/soundproof-room/others/soundproof-room-loan-guide/':                      '/ja/money/soundproof-room-loan-guide/',
     '/ja/soundproof-room/others/soundproof-room-price-market/':                    '/ja/money/soundproof-room-price-market/',
@@ -234,7 +234,7 @@ export default defineConfig({
     '/ja/soundproof-room/diy/diy-soundproof-room-failures-solutions/':    '/ja/diy/diy-soundproof-room-failures-solutions/',
     '/ja/soundproof-room/diy/diy-soundproofing-tips/':                    '/ja/diy/diy-soundproofing-tips/',
     '/ja/soundproof-room/diy/free-cardboard-soundproof-tech/':            '/ja/diy/free-cardboard-soundproof-tech/',
-    '/ja/soundproof-room/diy/futon-cardboard-karaoke-booth/':             '/ja/diy/futon-cardboard-karaoke-booth/',
+    '/ja/soundproof-room/diy/futon-cardboard-karaoke-booth/':             '/ja/diy/diy-substitute-materials-daiso-plastic-board/',
     '/ja/soundproof-room/diy/gamer-acoustic-placement/':                  '/ja/diy/gamer-acoustic-placement/',
     '/ja/soundproof-room/diy/outdoor-soundproof-curtain-market-guide/':   '/ja/diy/outdoor-soundproof-curtain-market-guide/',
     '/ja/soundproof-room/diy/soundproof-room-diy-cost/':                  '/ja/diy/soundproof-room-diy-cost/',
@@ -248,8 +248,8 @@ export default defineConfig({
     '/ja/soundproof-rental/diy/wooden-apartment-soundproof-guide/': '/ja/diy/wooden-apartment-soundproof-guide/',
     '/ja/soundproof-rental/diy/one-room-streaming-soundproof/':     '/ja/creator/one-room-streaming-soundproof/',
     // soundproof-room/knowledge → money
-    '/ja/soundproof-room/knowledge/bouon-asset-value-analysis/':           '/ja/money/bouon-asset-value-analysis/',
-    '/ja/soundproof-room/knowledge/small-business-soundproof-subsidy-guide/': '/ja/money/small-business-soundproof-subsidy-guide/',
+    '/ja/soundproof-room/knowledge/bouon-asset-value-analysis/':           '/ja/money/soundproof-room-buyback-guide/',
+    '/ja/soundproof-room/knowledge/small-business-soundproof-subsidy-guide/': '/ja/money/soundproof-subsidy-news-2025/',
     '/ja/soundproof-room/knowledge/soundproof-room-moving/':               '/ja/money/soundproof-room-moving/',
     '/ja/soundproof-room/knowledge/soundproof-room-rental-lease/':         '/ja/money/soundproof-room-rental-lease/',
     '/ja/soundproof-room/knowledge/soundproof-subsidy-check-guide/':       '/ja/money/soundproof-subsidy-check-guide/',
@@ -306,7 +306,7 @@ export default defineConfig({
     // 内窓DIY記事へ内容統合（賃貸原状回復・断熱の観点を移植） → diy-internal-window-road-noise-reduction（2026-09-06）
     '/ja/diy/soundproof-window-merit-demerit/': '/ja/diy/diy-internal-window-road-noise-reduction/',
     // 資産価値分析記事へ統合（スタジオ代比較シミュレーションを移植） → bouon-asset-value-analysis（2026-09-06）
-    '/ja/money/report-japan-soundproof-unit-resale-value-simulation/': '/ja/money/bouon-asset-value-analysis/',
+    '/ja/money/report-japan-soundproof-unit-resale-value-simulation/': '/ja/money/soundproof-room-buyback-guide/',
     // 吸音パネル記事へ統合（素材種類・厚み別周波数表を移植） → gamer-acoustic-placement（2026-09-06）
     '/ja/creator/streaming-room-reverb-absorption/': '/ja/diy/gamer-acoustic-placement/',
 
@@ -405,7 +405,7 @@ export default defineConfig({
     '/ja/solutions/bass-trap-installation-guide/': '/ja/diy/bass-trap-installation-guide/',
     '/ja/solutions/musision-soundproof-rental-review/': '/ja/soundproof-rental/musision-comprehensive-guide/',
     '/ja/solutions/sound-reduction-simulation/': '/ja/soundproof-room/sound-reduction-simulation/',
-    '/ja/solutions/soundproof-room-resale-strategy/': '/ja/money/bouon-asset-value-analysis/',
+    '/ja/solutions/soundproof-room-resale-strategy/': '/ja/money/soundproof-room-buyback-guide/',
     '/ja/knowledge/bouontech-trendnews2025/': '/ja/soundproof-rental/bouon-rental-market-guide/',
     '/en/knowledge/bouontech-trendnews2025/': '/en/japan-noise-and-society/building-code-reform-2025-noise-insulation/',
     '/en/knowledge/soundproof-room-price-market/': '/en/japan-quiet-spaces/cost-to-soundproof-a-room-in-japan/',
@@ -634,7 +634,7 @@ export default defineConfig({
     '/ja/use-case/vocal-recording-booth-guide/':                             '/ja/creator/',
     '/ja/use-case/gamer-acoustic-placement/':                                '/ja/diy/gamer-acoustic-placement/',
     '/ja/solutions/diy-soundproofing-tips/':                                 '/ja/diy/diy-soundproofing-tips/',
-    '/ja/solutions/soundproof-room-resale-value-comparison/':                '/ja/money/bouon-asset-value-analysis/',
+    '/ja/solutions/soundproof-room-resale-value-comparison/':                '/ja/money/soundproof-room-buyback-guide/',
     '/ja/solutions/diy-soundproof-ventilation-heat-exhaust/':                '/ja/soundproof-room/proofroom-aircondition-select/',
     '/ja/company/':                                                          '/ja/business/',
     '/ja/solutions/bourental-syaouseid-choiceindi/':                         '/ja/soundproof-room/bouon-dchiseinou-meyasu/',
@@ -740,6 +740,10 @@ export default defineConfig({
     '/ja/diy/danbocchi-floor-protection/': '/ja/soundproof-rental/apartment-weight-limit-500kg/',
     // T-66 horror-game の統合（2026-11-14）
     '/ja/creator/horror-game-scream-soundproof-mic/': '/ja/creator/game-streamer-sound-types/',
+    // T-78 出典がない・危険な記事の統合（2026-11-24）
+    '/ja/money/bouon-asset-value-analysis/': '/ja/money/soundproof-room-buyback-guide/',
+    '/ja/money/small-business-soundproof-subsidy-guide/': '/ja/money/soundproof-subsidy-news-2025/',
+    '/ja/diy/futon-cardboard-karaoke-booth/': '/ja/diy/diy-substitute-materials-daiso-plastic-board/',
   },
   image: {
     domains: ['m.media-amazon.com', 'ir-jp.amazon-adsystem.com', 'shop.r10s.jp'],
