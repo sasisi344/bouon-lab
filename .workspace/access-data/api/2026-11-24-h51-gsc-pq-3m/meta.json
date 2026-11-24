@@ -1,0 +1,14 @@
+{
+  "fetchedAt": "2026-11-24T08:04:00.527Z",
+  "site": "BL",
+  "command": "gsc",
+  "args": {
+    "site": "BL",
+    "start": "2026-08-22",
+    "end": "2026-11-21",
+    "dims": "page,query",
+    "slug": "h51-gsc-pq-3m"
+  },
+  "start": "2026-08-22",
+  "end": "2026-11-21"
+}
