@@ -1,3 +1,5 @@
+> 2026-11-25 archive: A → `diy/three-tatami-booth-100k`、B → `creator/soundproof-booth-cable-management`、C → `creator/aircon-noise-mic`（A・C は T-79）。残りなし。
+
 # 追加記事メモ（2026-10-10）
 
 残り2本（B は公開済み: creator/soundproof-booth-cable-management）とも `/draft-plan` でブレスト → `/publish-draft` で個別記事化する前提。
