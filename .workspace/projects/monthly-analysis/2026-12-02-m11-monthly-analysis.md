@@ -36,7 +36,7 @@
 - **チェロ記事の統合取り消しとリライト（T-27、2026-10-19）**: 対象は`/ja/soundproof-rental/rental-caution-cello/`（slug不変で全面リライト）。10/13〜デプロイまでの間はサックス記事へ301されていたため、m10のこのページの数値は基準にならない。基準値は統合前の実績（3か月で表示9・順位8.78、16か月で表示19・クリック4。Bingで「チェロ エンドピン 床に振動 減らす」3.75位など）。見る: デプロイ後のインデックス登録の有無、「チェロ エンドピン 振動」「チェロ エンドピン 床に振動 減らす」「チェロ 防振マット」「チェロ 騒音」「チェロ マンション 防音」「エンドピンストッパー」の表示・順位（Google・Bingとも）、サックス記事の「サックス アパート」系の表示が節の削除で落ちていないか。判定: 登録後にエンドピン・防振マット系の語で表示が出ていれば、楽器別クラスタ（`query-check/analysis_楽器別.md` §6）の入口として継続し、ピアノの防音マット記事（P1）へ同じ型を広げる。表示が0なら、タイトルの語順（「チェロ 防振マット」を先頭にするか）を見直す
 - **語り手リライト21本（T-43フェーズ3、2026-10-28、T-44）**: 対象は`persona-rewrite/plan.md`付録の上から20本と見本1本の計21本（`knowledge/ground-loop-noise-basics`・`soundproof-rental/music-student-property-search-guide`・`soundproof-room/onetouch-soundproof-wall-review`・`diy/bass-trap-installation-guide`・`soundproof-room/wifi-connection-guide`・`knowledge/mansion-instrument-practice-time-rules`・`creator/gaming-floor-impact-noise-fix`・`soundproof-room/daiwa-house-jiyuku-soundproof-review`・`business/japan-soundproof-market-size`・`knowledge/coincidence-effect-soundproofing`・`money/soundproof-room-moving`・`money/soundproof-contractor-selection-guide`・`soundproof-room/construction-types-cost-comparison`・`money/used-soundproof-room-buying-guide`・`soundproof-room/piano-room-guide`・`knowledge/soundproof-app-review-2026`・`knowledge/soundproof-material-spec-chart`・`money/piano-soundproof-mortgage-tax-guide`・`knowledge/d-value-vs-rw-value-confusion`・`creator/family-home-soundproof-reno-negotiation`・`creator/streamer-pet-noise-balance`。`ground-loop-noise-basics`は見本として先行）。変更は各記事に2〜3文（調べた動機・「私なら〜。〜からです」・断定のやわらげ）を足しただけで、タイトル・数値・構成は変えていない。基準値はm10の21本の表示・CTR・平均順位（日平均）。見る: 21本合計とページ別の表示・CTR・順位、GA4の平均エンゲージメント時間。判定: 21本合計の表示と順位がm10と同程度なら、フェーズ4（残り154本）を同じ型で進める。順位が2位以上落ちた記事は、足した文が導入の結論を遠ざけていないかを確認する
 - **語り手リライト バッチ1の21本（T-43フェーズ4、2026-10-31、T-45）**: 対象は `persona-rewrite/plan.md`「フェーズ4のバッチ」のバッチ1（一覧は `.workspace/codex/orders/2026-10-31-T-43-b1.md` の対象表）。Codex が実行し CC が検収（報告書 `.workspace/codex/reports/2026-10-31-T-43-b1.md`）。変更は各記事に3〜4文（調べて引っかかった疑問・根拠の出どころ・「私なら〜。〜からです」）を足し、専門家口調の断定をやわらげただけで、タイトル・数値・構成は変えていない。10/31 の変更なので、m11 が変更後の初めての丸1か月。基準値は m10 の21本の表示・CTR・平均順位（日平均）。見る: 21本合計とページ別の表示・CTR・順位、GA4 の平均エンゲージメント時間。判定: T-44 と同じ（21本合計の表示と順位が m10 と同程度ならバッチ2以降も同じ型で進める。順位が2位以上落ちた記事は、足した文が導入の結論を遠ざけていないかを確認する）。1週間の API 比較（11/10、継続）は `access-data/api/2026-11-10-persona-b1/README.md`。`sound-reduction-simulation` は H2「結論」直後の足した1文を、順位が戻らなければ結論の後ろへ動かす
-- **流入上位6本の収益導線（T-30、2026-10-31、T-46）**: 対象は `knowledge/soundproof-material-spec-chart`・`money/soundproof-room-price-market`・`soundproof-room/bouon-dchiseinou-meyasu`・`creator/streamer-soundproof-room-comprehensive-guide`・`soundproof-rental/report-japan-soundproof-rental-market-needs`・`soundproof-rental/bouon-rental-market-guide`。各記事に商品名を出す段落と CtaBox（スペック早見表だけ AffiliateCard）を足しただけで、本文の情報・見出しは変えていない。基準値は m10 の6本の日本からのセッションと `affiliate_click`（記事別。`hq/tools/analytics-fetch/` の `fetch.mjs ga4 --event affiliate_click --dims pagePath` で取れる）。見る: 6本の `affiliate_click` の件数とクリック率（クリック÷セッション）、どの CtaBox が押されたか、6本のセッションと平均エンゲージメント時間が落ちていないか。判定: `affiliate_click` が6本合計で1件以上出れば導線は機能していると見て、同じ型を流入の次の層へ広げる。0件なら置く位置（記事の後半すぎないか）と商品の価格帯を見直す。`soundproof-room-price-market` は同じ日に T-45（語り手リライト）も入っているので、セッション・順位の変化はどちらの影響か分けられない点に注意
+- **流入上位6本の収益導線（T-30、2026-10-31、T-46）**: 対象は `knowledge/soundproof-material-spec-chart`・`money/soundproof-room-price-market`・`soundproof-room/bouon-dchiseinou-meyasu`・`creator/streamer-soundproof-room-comprehensive-guide`・`soundproof-rental/report-japan-soundproof-rental-market-needs`・`soundproof-rental/bouon-rental-market-guide`。各記事に商品名を出す段落と CtaBox（スペック早見表だけ AffiliateCard）を足しただけで、本文の情報・見出しは変えていない。基準値は m10 の6本の日本からのセッションと `affiliate_click`（記事別。`hq/.workspace/seo/tools/analytics-fetch/` の `fetch.mjs ga4 --event affiliate_click --dims pagePath` で取れる）。見る: 6本の `affiliate_click` の件数とクリック率（クリック÷セッション）、どの CtaBox が押されたか、6本のセッションと平均エンゲージメント時間が落ちていないか。判定: `affiliate_click` が6本合計で1件以上出れば導線は機能していると見て、同じ型を流入の次の層へ広げる。0件なら置く位置（記事の後半すぎないか）と商品の価格帯を見直す。`soundproof-room-price-market` は同じ日に T-45（語り手リライト）も入っているので、セッション・順位の変化はどちらの影響か分けられない点に注意
 - **継続観察**（W-15〜W-20）: S-11と同じ項目を見る
 
 ## m10 から送った項目（2026-11-14、T-31 を閉じるときに移した）
@@ -124,6 +124,21 @@ vocal-mask は装着型の密閉マスクの作り方を外し、開放型シー
 
 - 対象と基準値（GSC 2026-08-22〜11-21 の表示・クリック・平均順位。`access-data/api/2026-11-24-h51-gsc-page-3m/`）: `building-fire-law-soundproof-room` 47・0・10.7位／`soundproof-rental-brand-comparison` 20・1・9.7位／`buy-home-with-soundproof-room` 24・1・29.6位／`wind-string-instrument-booth-selection` 3・0・6.7位
 - 見る指標: 日平均の表示・順位、登録。判定基準: 表示が増え、順位が落ちていなければ継続。m11 は途中経過、判定は m12。`brand-comparison`・`buy-home`・`wind-string` は 11/26 公開予定の数字の修正（I-30・H-55）とも重なるので、リンクだけの効果とは言い切らない
+
+## 優先Aのアウトライン7本（2026-10-15〜10-19 公開。2026-11-26 追加）
+
+- 実施日: A01 `soundproof-room/notice-outside-sounds-in-booth` 10/15、A02 `money/soundproof-reform-cost-by-tatami` 10/16、A03 `soundproof-room/compact-booth-under-1-5-tatami` 10/17、A04 `soundproof-room/buy-home-with-soundproof-room` 10/18、A05 `local/tokyo-soundproof-rental-summary`（「沿線で探す」H2 の加筆）・A06 `soundproof-rental/single-living-soundproof-rental-guide`・A07 `soundproof-rental/soundproof-rental-brand-comparison` 10/19（日付はコミット日）
+- 基準値: GSC 10/15〜11/23 の表・クエリ・登録は `access-data/api/2026-11-26-outline-a/README.md`（期間が違うので日平均で比べる。m11 の期間と重なるので、前後比較の「前」としては使わない）
+- 見る指標: 日平均の表示・クリック・順位、出たクエリ（メインKW: 防音室 インターホン／防音室 リフォーム 費用／防音室 0.8畳／防音室付きマンション／中央線 防音賃貸／防音賃貸 一人暮らし／防音賃貸 おすすめ）、登録と前回クロール日、Bing、`affiliate_click`
+- 確認項目と判定基準:
+  - [ ] 前回クロールが 10/17〜10/21 のままの5本（A01・A02・A03・A06・A07）が、リライト後（11/07〜11/14）に再クロールされたか。されていなければ順位の良し悪しは判定せず m12 へ送る
+  - [ ] A01・A03: 再クロール後もメインKWの表示が0なら需要ミスマッチと見て、`article-ideas/` のサジェストだけを根拠にした新規をやめる判断の材料にする（統合・削除は m12 以降）
+  - [ ] A02: 「防音工事 費用」を取っている `custom-home-soundproof-price-guide` との役割分け。A02 の順位が50位より下のままなら、内部リンクと見出しの分担を見直す
+  - [ ] A04: 「中古マンション 防音室」系が20位以内に入ったか（11/25 の T-77 と重なる）
+  - [ ] A05: 登録は T-91。沿線・駅名の表示が出なければ独立記事にしない
+  - [ ] A06: クエリが見えたか。匿名のままなら保留
+  - [ ] A07: 「ラシクラス うるさい・評判」の表示・順位。加筆は T-92（加筆の効果は m12）
+- 注意: A03 は T-80、A04・A07 は T-77（T-85）、I-30・H-55 の修正と重なる。件数が少ないので CTR・順位の小さな差では判定しない
 
 ## 結果
 

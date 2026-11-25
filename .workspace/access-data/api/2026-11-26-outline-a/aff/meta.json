@@ -1,0 +1,15 @@
+{
+  "fetchedAt": "2026-11-25T17:58:56.810Z",
+  "site": "BL",
+  "command": "ga4",
+  "args": {
+    "site": "BL",
+    "event": "affiliate_click",
+    "dims": "pagePath",
+    "start": "2026-10-15",
+    "end": "2026-11-25",
+    "slug": "outline-a-aff"
+  },
+  "start": "2026-10-15",
+  "end": "2026-11-25"
+}

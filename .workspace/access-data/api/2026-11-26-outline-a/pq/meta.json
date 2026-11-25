@@ -1,0 +1,14 @@
+{
+  "fetchedAt": "2026-11-25T17:58:49.607Z",
+  "site": "BL",
+  "command": "gsc",
+  "args": {
+    "site": "BL",
+    "start": "2026-10-15",
+    "end": "2026-11-23",
+    "dims": "page,query",
+    "slug": "outline-a-pq"
+  },
+  "start": "2026-10-15",
+  "end": "2026-11-23"
+}

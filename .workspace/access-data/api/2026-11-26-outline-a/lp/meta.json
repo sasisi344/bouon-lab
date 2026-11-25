@@ -1,0 +1,15 @@
+{
+  "fetchedAt": "2026-11-25T17:58:55.105Z",
+  "site": "BL",
+  "command": "ga4",
+  "args": {
+    "site": "BL",
+    "start": "2026-10-15",
+    "end": "2026-11-25",
+    "dims": "landingPage,sessionDefaultChannelGroup,country",
+    "metrics": "sessions,engagedSessions,userEngagementDuration",
+    "slug": "outline-a-lp"
+  },
+  "start": "2026-10-15",
+  "end": "2026-11-25"
+}

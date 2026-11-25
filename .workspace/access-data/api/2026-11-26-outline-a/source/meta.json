@@ -1,0 +1,15 @@
+{
+  "fetchedAt": "2026-11-25T17:59:40.399Z",
+  "site": "BL",
+  "command": "ga4",
+  "args": {
+    "site": "BL",
+    "dims": "landingPage,sessionSource,country",
+    "metrics": "sessions,engagedSessions,userEngagementDuration",
+    "start": "2026-10-15",
+    "end": "2026-11-25",
+    "slug": "outline-a-source"
+  },
+  "start": "2026-10-15",
+  "end": "2026-11-25"
+}
