@@ -138,3 +138,18 @@
 | 新規（T-79） | /ja/creator/aircon-noise-mic/ | 同上 → リクエスト済 |
 | 新規（T-82） | /ja/knowledge/quiet-hotel-room/ | 同上 → リクエスト済 |
 | リライト（T-80） | /ja/soundproof-room/otodasu-voice-chat-test/ | クロール済み - インデックス未登録（前回クロール 2026-09-26）→ リクエスト済 |
+
+## 2026-11-25 の確認と申請（T-60・T-62・T-64・T-10、ユーザーが URL 検査）
+
+| 区分 | URL | 結果 |
+|---|---|---|
+| 新規（T-60） | /ja/diy/sound-insulation-sheet-effect/ | リクエスト済 |
+| 新規（T-60） | /ja/diy/soundproof-curtain-effect/ | 登録済 |
+| 新規（T-60） | /ja/soundproof-rental/noise-complaint-letter-template/ | 登録済 |
+| 新規（T-62） | /ja/soundproof-rental/noise-moving-cost-claim/ | 登録済 |
+| リライト（T-64） | /ja/knowledge/absorption-vs-soundproofing-materials/ | リクエスト済 |
+| リライト（T-64） | /ja/soundproof-rental/noise-complaint-landlord-negotiation-guide/ | リクエスト済 |
+| ハブ（T-10） | /ja/soundproof-room/noise-solutions-relocate-retrofit-custom-home/ | 登録済（前回クロール 2026-10-14） |
+
+- URL 検査をしていない6本（T-60 の `room-tuning-basics`・`floor-soundproof-rating`、T-62 の `sound-absorbing-material-recommend`・`sound-insulation-sheet-wall-install`・`floor-soundproof-underlay`・`soundproof-curtain-recommend`）は、11/01〜11/22 に GSC の表示があるので登録済みと見た
+- 登録済み149件（基準102件）、404 721件（基準2,526件）。どちらも 2026-11-25 にユーザーが確認（records T-37・T-32）

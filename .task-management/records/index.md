@@ -6,6 +6,8 @@
 
 | ID | 完了日 | 種別 | テーマ（タグ） | 対象（URL・クエリ） | 結果（1行） | 参照できるデータ | ファイル |
 |---|---|---|---|---|---|---|---|
+| T-32・T-40 | 2026-11-25 | 効果測定 | 404, 旧URL, 301, 410 | GSC の404レポート | 2,526件→721件。施策が効いている、追加作業なし。T-40 は見送り | .workspace/projects/monthly-analysis/2026-10-13-404-recheck-1.md | 2026-11-25-T-32-404-recheck.md |
+| T-37 | 2026-11-25 | 効果測定 | インデックス, 登録数 | GSC の登録済みページ数 | 102件→149件。中間は増加、最終判定は T-39 | .workspace/projects/monthly-analysis/2026-11-02-indexed-count-check.md | 2026-11-25-T-37-indexed-count.md |
 | T-77 | 2026-11-25 | 施策 | 内部リンク, 被リンク0 | building-fire-law-soundproof-room, soundproof-rental-brand-comparison, buy-home-with-soundproof-room, wind-string-instrument-booth-selection | 記事11本から11リンクを足し、被リンク0本→2〜3本。効果測定は T-85 | .workspace/admin-review/2026-11-25-T-77-internal-links.md | 2026-11-25-T-77-internal-links.md |
 | T-82 | 2026-11-25 | 施策 | 新規記事, 睡眠, ホテル, 図解 | knowledge/quiet-hotel-room | 口コミ集計を泊まる人の問いに使った新規1本を公開。効果測定は T-84 | .workspace/admin-review/2026-11-25-T-80-82.md | 2026-11-25-T-82-quiet-hotel-room.md |
 | T-81 | 2026-11-25 | 施策 | 部分リライト, 防音賃貸, 意識調査, 家電量販店 | musision-comprehensive-guide, custom-home-soundproof-price-guide, tokyo-soundproof-rental-summary, music-student-property-search-guide, streamer-rental-selection-guide, kawai-nasal-soundproof-room-guide, home-private-booth-guide | 下書き6本の材料を既存7本に追記。家電量販店の新規は見送り。効果測定は T-84 | .workspace/admin-review/2026-11-25-T-80-82.md | 2026-11-25-T-81-existing-updates.md |
