@@ -120,6 +120,11 @@ vocal-mask は装着型の密閉マスクの作り方を外し、開放型シー
 - T-82 新規 `knowledge/quiet-hotel-room`: 基準値なし
 - m11 は登録の有無だけ見る。判定は m12 以降。デプロイ 2026-11-25。効果測定は T-84
 
+## T-77 本文の被リンク（2026-11-25 公開。T-85）
+
+- 対象と基準値（GSC 2026-08-22〜11-21 の表示・クリック・平均順位。`access-data/api/2026-11-24-h51-gsc-page-3m/`）: `building-fire-law-soundproof-room` 47・0・10.7位／`soundproof-rental-brand-comparison` 20・1・9.7位／`buy-home-with-soundproof-room` 24・1・29.6位／`wind-string-instrument-booth-selection` 3・0・6.7位
+- 見る指標: 日平均の表示・順位、登録。判定基準: 表示が増え、順位が落ちていなければ継続。m11 は途中経過、判定は m12。`brand-comparison`・`buy-home`・`wind-string` は 11/26 公開予定の数字の修正（I-30・H-55）とも重なるので、リンクだけの効果とは言い切らない
+
 ## 結果
 
 （実施後に追記）

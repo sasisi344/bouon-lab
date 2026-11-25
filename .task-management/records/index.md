@@ -6,6 +6,7 @@
 
 | ID | 完了日 | 種別 | テーマ（タグ） | 対象（URL・クエリ） | 結果（1行） | 参照できるデータ | ファイル |
 |---|---|---|---|---|---|---|---|
+| T-77 | 2026-11-25 | 施策 | 内部リンク, 被リンク0 | building-fire-law-soundproof-room, soundproof-rental-brand-comparison, buy-home-with-soundproof-room, wind-string-instrument-booth-selection | 記事11本から11リンクを足し、被リンク0本→2〜3本。効果測定は T-85 | .workspace/admin-review/2026-11-25-T-77-internal-links.md | 2026-11-25-T-77-internal-links.md |
 | T-82 | 2026-11-25 | 施策 | 新規記事, 睡眠, ホテル, 図解 | knowledge/quiet-hotel-room | 口コミ集計を泊まる人の問いに使った新規1本を公開。効果測定は T-84 | .workspace/admin-review/2026-11-25-T-80-82.md | 2026-11-25-T-82-quiet-hotel-room.md |
 | T-81 | 2026-11-25 | 施策 | 部分リライト, 防音賃貸, 意識調査, 家電量販店 | musision-comprehensive-guide, custom-home-soundproof-price-guide, tokyo-soundproof-rental-summary, music-student-property-search-guide, streamer-rental-selection-guide, kawai-nasal-soundproof-room-guide, home-private-booth-guide | 下書き6本の材料を既存7本に追記。家電量販店の新規は見送り。効果測定は T-84 | .workspace/admin-review/2026-11-25-T-80-82.md | 2026-11-25-T-81-existing-updates.md |
 | T-80 | 2026-11-25 | 施策 | リライト, タイトル変更, OTODASU | otodasu-voice-chat-test, compact-booth-under-1-5-tatami, assembly-type-comparison, budget-soundproof-booth-comparison | 出典のない dB を消し、公式値で II と DX110 を比べる記事に作り直し。効果測定は T-84 | .workspace/admin-review/2026-11-25-T-80-82.md | 2026-11-25-T-80-otodasu-rewrite.md |
