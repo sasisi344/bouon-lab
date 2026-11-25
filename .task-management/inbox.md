@@ -17,3 +17,4 @@
 | I-37 | 11/25 | hq | 修正依頼: `soundproof-rental-brand-comparison:58・233` の「空き待ちの登録が前提」と `musision-comprehensive-guide:148`「すべての申込みに空き待ちが必要というわけではありません」が違う。brand 側の書き方を直す案 | 未処置 |
 | I-38 | 11/25 | hq | 修正依頼: ①`rental-unit-soundproof-room:21`「私は不動産コンサルタントとして」が筆者設定（専門資格・施工経験なし）と合わない。I-31（感知器）と一緒に ②`db-reduction-familiar-sound-scale:16・26`「D-40で20dB軽減」と :63「40dB前後の軽減」が同じ記事の中で違う | 未処置 |
 | I-43 | 11/25 | Claude | `diy/soundproof-room-diy-cost` の材料費（1.5畳・約18万円）は単価に出典がなく、T-79 の3畳の試算（カインズの表示価格）と1枚あたりの値段が合わない（例: 石膏ボード30〜40枚で約4万円）。単価を調べ直し、同じ前提の表にそろえる案 | 未処置 |
+| I-46 | 11/25 | Claude | `.workspace/_inbox/2026-11-25-gsc-register-urls.md` を残している。ユーザーが GSC で登録を確認・申請し、結果を書いたら、`projects/indexing/index-url.md` と T-67・T-10・T-32・T-37 に写してファイルを消す | 未処置（ユーザーの作業待ち、12/01 まで） |
