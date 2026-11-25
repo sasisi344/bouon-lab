@@ -129,3 +129,12 @@
 | 統合先（T-56） | /ja/money/soundproof-subsidy-news-2025/、/ja/soundproof-rental/apartment-weight-limit-500kg/ |
 
 - 登録の確認は T-59（m11、12/02）
+
+## 2026-11-25 の申請（T-79・T-82、Claude がブラウザの URL 検査で申請）
+
+| 区分 | URL | 申請前の状態 |
+|---|---|---|
+| 新規（T-79） | /ja/diy/three-tatami-booth-100k/ | URL が Google に認識されていません → リクエスト済 |
+| 新規（T-79） | /ja/creator/aircon-noise-mic/ | 同上 → リクエスト済 |
+| 新規（T-82） | /ja/knowledge/quiet-hotel-room/ | 同上 → リクエスト済 |
+| リライト（T-80） | /ja/soundproof-room/otodasu-voice-chat-test/ | クロール済み - インデックス未登録（前回クロール 2026-09-26）。未申請（inbox I-41） |
