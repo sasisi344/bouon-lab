@@ -108,6 +108,18 @@ vocal-mask は装着型の密閉マスクの作り方を外し、開放型シー
 - **T-56 統合3本（301）**: `noise-canceling-headphones-sleep`→`earplugs-for-sleep`、`soundproof-window-subsidy-2025-guide`→`soundproof-subsidy-news-2025`、`danbocchi-floor-protection`→`apartment-weight-limit-500kg`（統合先のタイトルを「マンションに防音室を置ける？床の耐荷重の確かめ方と、500kg級・だんぼっちの荷重分散」に変更。旧「築20年のマンションに重さ500kgの防音室を置ける？床補強なしで設置するための安全基準と計算術」）。見る: 統合先の表示が統合元の分を足して減っていないか、旧URLが索引から外れたか（T-59）
 - 判定: タイトル変更はメインKWで表示が出るか。m11 は途中経過、最終は m12
 
+## T-79 新規2本（2026-11-25 公開）
+
+- `diy/three-tatami-booth-100k`（防音室 自作 3畳 10万円）・`creator/aircon-noise-mic`（エアコン 音 マイク）。基準値なし。デプロイ 2026-11-25
+- m11 は登録の有無だけ見る。判定は m12 以降（登録後に表示が0なら需要ミスマッチを疑う）
+
+## T-80〜T-82（2026-11-25 公開）
+
+- T-80 `otodasu-voice-chat-test`（title 変更）: 3か月の表示3。見る語「otodasu 賃貸 許可」（1年分 13表示・12.15位）「otodasu だんぼっち 比較」（2表示・21.5位）
+- T-81 部分更新: `musision-comprehensive-guide`（3か月の表示69）・`custom-home-soundproof-price-guide`（73）・`streamer-rental-selection-guide`（13）ほか4本
+- T-82 新規 `knowledge/quiet-hotel-room`: 基準値なし
+- m11 は登録の有無だけ見る。判定は m12 以降。デプロイ 2026-11-25。効果測定は T-84
+
 ## 結果
 
 （実施後に追記）

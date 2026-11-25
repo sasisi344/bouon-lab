@@ -17,6 +17,7 @@
 | ja | business | `privacy-pod-market-growth` |  | プライバシーポッド市場が伸びる背景 \| 企業・公共設置の実態と課題 | プライバシーポッド, ワーキングスペース, フリーアドレス, 防音室, オフィス設計 | `/ja/business/privacy-pod-market-growth/` | false |
 | ja | business | `shared-streaming-studio-growth-pricing-utilization` |  | シェア型配信スタジオが急成長｜利用料金の相場と稼働率の最新データ | 配信・実況, 利用料金, 稼働率 | `/ja/business/shared-streaming-studio-growth-pricing-utilization/` | false |
 | ja | business | `soundproof-market-esg-trend` |  | 防音市場にESGの波｜省エネ構造・循環素材がもたらす新トレンド | ESG, 省エネ, 循環素材, 防音市場, サステナビリティ | `/ja/business/soundproof-market-esg-trend/` | false |
+| ja | creator | `aircon-noise-mic` |  | エアコンの音がマイクに入るときの対策｜録音・ASMR・配信で変わる消し方 | マイクノイズ, 配信・実況, ASMR, ノイズ対策, 録音環境, 空調設備 | `/ja/creator/aircon-noise-mic/` | false |
 | ja | creator | `asmr-external-noise-elimination` |  | ASMR収録の部屋づくり｜外音の消し方と防音ブースの選び方 | ASMR, VTuber, 配信・実況, 外音対策, 防音室, 防音対策 | `/ja/creator/asmr-external-noise-elimination/` | false |
 | ja | creator | `collab-streaming-soundproof-space` |  | ポッドキャスト2人収録・コラボ配信の部屋づくり｜防音室・リビング4パターン別 | 配信・実況, コラボ配信, ポッドキャスト, 防音室, 広さ, マイク設定, 吸音パネル | `/ja/creator/collab-streaming-soundproof-space/` | false |
 | ja | creator | `cramped-booth-gaming-chair-health` |  | 防音ブースの椅子はどう選ぶ？内寸・足元・出入りで確かめる基準 | 防音ブース, 椅子, ゲーミングチェア, 配信環境, 狭小空間 | `/ja/creator/cramped-booth-gaming-chair-health/` | false |
@@ -69,6 +70,7 @@
 | ja | diy | `soundproof-curtain-recommend` |  | 防音カーテンのおすすめは？「最強」を選ぶ基準と、試験値のある商品の比較 | 防音カーテン, 遮音性能, 騒音対策, DIY防音, 内窓 | `/ja/diy/soundproof-curtain-recommend/` | false |
 | ja | diy | `soundproof-room-diy-cost` |  | 自作防音室の費用内訳｜材料費だけでいくらかかる？ | DIY防音, 費用 | `/ja/diy/soundproof-room-diy-cost/` | false |
 | ja | diy | `soundproof-sheet-heavy-diy-tips` |  | 防音室DIYの落とし穴。「遮音シート」の重さで自作ブースが崩壊しないためのフレーム補強術 | 遮音シート, DIY防音, フレーム補強, 失敗しないコツ | `/ja/diy/soundproof-sheet-heavy-diy-tips/` | false |
+| ja | diy | `three-tatami-booth-100k` |  | 3畳の防音室を10万円で自作できる？材料費の試算と、できること・できないこと | 防音室 自作, DIY防音, 費用, 遮音シート, 質量則, 吸音材 | `/ja/diy/three-tatami-booth-100k/` | false |
 | ja | diy | `treadmill-apartment-soundproofing-layering` |  | マンションのランニングマシン防音対策｜階下の振動を減らす「重ね敷き」と置き方 | ランニングマシーン, マンション, 振動対策, 苦情回避 | `/ja/diy/treadmill-apartment-soundproofing-layering/` | false |
 | ja | diy | `wooden-apartment-soundproof-guide` |  | 木造アパートの防音は無理？苦情ゼロまで音を減らす3つの現実的対策 | 木造アパート, 防音賃貸, 隙間テープ, 生活音, 家具配置 | `/ja/diy/wooden-apartment-soundproof-guide/` | false |
 | ja | knowledge | `absorption-vs-soundproofing-materials` |  | 吸音材と防音材の違いは？音漏れ・響きで選ぶ材料と施工の順番 | 吸音材, 遮音材, 騒音対策, DIY防音, 吸音と遮音の違い | `/ja/knowledge/absorption-vs-soundproofing-materials/` | false |
@@ -88,6 +90,7 @@
 | ja | knowledge | `noise-complaint-legal-precedent-manual` |  | 騒音苦情への正しい対応｜解決事例と判例から学ぶ受忍限度の境界線 | 騒音トラブル, 受忍限度, 判例, 解決事例 | `/ja/knowledge/noise-complaint-legal-precedent-manual/` | false |
 | ja | knowledge | `noise-regulation-update-2025` |  | 2025-2026年騒音規制アップデート｜隣人の騒音に「法的エビデンス」で勝つための数値基準と対策 | 騒音トラブル, 受忍限度, 法的エビデンス | `/ja/knowledge/noise-regulation-update-2025/` | false |
 | ja | knowledge | `outdoor-ac-unit-noise` |  | 室外機の騒音対策｜自分の室外機・隣の室外機がうるさいときにできること | 騒音対策, 家電騒音, 防振, 騒音トラブル, 生活音 | `/ja/knowledge/outdoor-ac-unit-noise/` | false |
+| ja | knowledge | `quiet-hotel-room` |  | ホテルで静かな部屋を選ぶ方法｜隣室・廊下・外の音は年代と立地で変わる | 睡眠, 騒音対策, 耳栓 | `/ja/knowledge/quiet-hotel-room/` | false |
 | ja | knowledge | `report-japan-asmr-vtuber-streaming-studio-standard` |  | 暗騒音の目安はNC値で決める｜ASMR・歌枠・ゲーム実況の録音に必要な静けさ | 暗騒音, NC値, 録音環境, ASMR, 防音室, 騒音レベル | `/ja/knowledge/report-japan-asmr-vtuber-streaming-studio-standard/` | false |
 | ja | knowledge | `sound-sensitivity-misophonia-environment-guide` |  | 聴覚過敏・ミソフォニアで家の音がつらい人へ｜遮音・マスキング・住まい選びの環境調整ガイド | 聴覚過敏, ミソフォニア, HSP, 環境調整, 防音カーテン | `/ja/knowledge/sound-sensitivity-misophonia-environment-guide/` | false |
 | ja | knowledge | `soundproof-app-review-2026` |  | 騒音計アプリはどこまで正確？無料のiPhone・Androidアプリで防音の効果を測る方法 | 測定, アプリ, デシベル, D値, 騒音計 | `/ja/knowledge/soundproof-app-review-2026/` | false |
@@ -184,7 +187,7 @@
 | ja | soundproof-room | `noise-solutions-relocate-retrofit-custom-home` |  | 音の悩みの解決策は3つ｜防音賃貸への引っ越し・後付け・注文住宅の設計段階で伝える道 | 防音, 引っ越し, 後付け, 注文住宅, 建売, 睡眠 | `/ja/soundproof-room/noise-solutions-relocate-retrofit-custom-home/` | false |
 | ja | soundproof-room | `notice-outside-sounds-in-booth` |  | 防音室でインターホンが聞こえない時の対策｜赤ちゃんや警報に気づく仕組み | インターホン, 赤ちゃん, 防災, 通知, 子育て | `/ja/soundproof-room/notice-outside-sounds-in-booth/` | false |
 | ja | soundproof-room | `onetouch-soundproof-wall-review` |  | ワンタッチ防音壁の評判は？口コミと自分の部屋で効く条件 | ワンタッチ防音壁, 防音パネル, 賃貸DIY, 反響軽減, 口コミ | `/ja/soundproof-room/onetouch-soundproof-wall-review/` | false |
-| ja | soundproof-room | `otodasu-voice-chat-test` |  | OTODASU（オトダス）の実力検証｜深夜2時のボイスチャットは隣室に許されるのか？ | OTODASU, ボイスチャット, 深夜配信, 防音室 | `/ja/soundproof-room/otodasu-voice-chat-test/` | false |
+| ja | soundproof-room | `otodasu-voice-chat-test` |  | OTODASU IIとDX110の違いは？1畳の広さ・防音性能・価格と選び方 | OTODASU, ボイスチャット, 深夜配信, 防音室 | `/ja/soundproof-room/otodasu-voice-chat-test/` | false |
 | ja | soundproof-room | `outdoor-detached-soundproof-room` |  | 防音室を庭に設置できる？プレハブ・離れの費用と建築確認の注意点 | 防音室, プレハブ, 離れ, 建築確認, 固定資産税, ドラム防音 | `/ja/soundproof-room/outdoor-detached-soundproof-room/` | false |
 | ja | soundproof-room | `piano-room-guide` |  | ピアノ防音室ガイド｜アップライト・グランド別の費用とマンション設置の条件 | ピアノ, 防音室, アップライトピアノ, グランドピアノ, マンション, ヤマハ, カワイ | `/ja/soundproof-room/piano-room-guide/` | false |
 | ja | soundproof-room | `proofroom-aircondition-select` |  | 防音室のエアコン選びと静音化の極意｜2026年最新の空調・換気戦略 | 防音室, 空調設備, 換気, スポットクーラー, 騒音対策 | `/ja/soundproof-room/proofroom-aircondition-select/` | false |
