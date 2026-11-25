@@ -23,6 +23,6 @@
 | I-36 | 11/25 | hq | 修正依頼: `buy-home-with-soundproof-room:233` の注文住宅の坪単価「約70万〜120万円」が `custom-home-soundproof-price-guide`「約50万〜155万円」と違う。`noise-solutions`・`piano-soundproof-mortgage-tax-guide` から送っている先なので先に直す | 未処置 |
 | I-37 | 11/25 | hq | 修正依頼: `soundproof-rental-brand-comparison:58・233` の「空き待ちの登録が前提」と `musision-comprehensive-guide:148`「すべての申込みに空き待ちが必要というわけではありません」が違う。brand 側の書き方を直す案 | 未処置 |
 | I-38 | 11/25 | hq | 修正依頼: ①`rental-unit-soundproof-room:21`「私は不動産コンサルタントとして」が筆者設定（専門資格・施工経験なし）と合わない。I-31（感知器）と一緒に ②`db-reduction-familiar-sound-scale:16・26`「D-40で20dB軽減」と :63「40dB前後の軽減」が同じ記事の中で違う | 未処置 |
-| I-39 | 11/25 | Claude | `diy/soundproof-room-diy-cost` の材料費（1.5畳・約18万円）は単価に出典がなく、T-79 の3畳の試算（カインズの表示価格）と1枚あたりの値段が合わない（例: 石膏ボード30〜40枚で約4万円）。単価を調べ直し、同じ前提の表にそろえる案 | 未処置 |
-| I-40 | 11/25 | Claude | `affiliates.ts` の `reflection-filter`（「宅録のクオリティを劇的に改善」・`REC-MUST-ITEM`）と `acoustic-panel-felmenon`（「反響音を大幅にカット」）の文言が、数値と出典で比べる方針と合わない。カード文の見直し（T-79 の書き手の提案） | 未処置 |
-| I-41 | 11/25 | Claude | GSC の URL 登録: 新規3本（`diy/three-tatami-booth-100k`・`creator/aircon-noise-mic`・`knowledge/quiet-hotel-room`）は 11/25 に申請済み。残りは全面リライトの https://bouon-lab.com/ja/soundproof-room/otodasu-voice-chat-test/ （「クロール済み - インデックス未登録」、前回クロール 09/26）。「追加した記事」に含めるか未確認なので申請していない | 未処置（ユーザーの返事待ち） |
+| I-43 | 11/25 | Claude | `diy/soundproof-room-diy-cost` の材料費（1.5畳・約18万円）は単価に出典がなく、T-79 の3畳の試算（カインズの表示価格）と1枚あたりの値段が合わない（例: 石膏ボード30〜40枚で約4万円）。単価を調べ直し、同じ前提の表にそろえる案 | 未処置 |
+| I-44 | 11/25 | Claude | `affiliates.ts` の `reflection-filter`（「宅録のクオリティを劇的に改善」・`REC-MUST-ITEM`）と `acoustic-panel-felmenon`（「反響音を大幅にカット」）の文言が、数値と出典で比べる方針と合わない。カード文の見直し（T-79 の書き手の提案） | 未処置 |
+| I-45 | 11/25 | Claude | GSC の URL 登録: 新規3本（`diy/three-tatami-booth-100k`・`creator/aircon-noise-mic`・`knowledge/quiet-hotel-room`）は 11/25 に申請済み。残りは全面リライトの https://bouon-lab.com/ja/soundproof-room/otodasu-voice-chat-test/ （「クロール済み - インデックス未登録」、前回クロール 09/26）。「追加した記事」に含めるか未確認なので申請していない | 未処置（ユーザーの返事待ち） |

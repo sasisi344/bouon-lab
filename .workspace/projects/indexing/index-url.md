@@ -137,4 +137,4 @@
 | 新規（T-79） | /ja/diy/three-tatami-booth-100k/ | URL が Google に認識されていません → リクエスト済 |
 | 新規（T-79） | /ja/creator/aircon-noise-mic/ | 同上 → リクエスト済 |
 | 新規（T-82） | /ja/knowledge/quiet-hotel-room/ | 同上 → リクエスト済 |
-| リライト（T-80） | /ja/soundproof-room/otodasu-voice-chat-test/ | クロール済み - インデックス未登録（前回クロール 2026-09-26）。未申請（inbox I-41） |
+| リライト（T-80） | /ja/soundproof-room/otodasu-voice-chat-test/ | クロール済み - インデックス未登録（前回クロール 2026-09-26）。未申請（inbox I-45） |
