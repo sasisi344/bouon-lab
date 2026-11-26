@@ -140,6 +140,15 @@ vocal-mask は装着型の密閉マスクの作り方を外し、開放型シー
   - [ ] A07: 「ラシクラス うるさい・評判」の表示・順位。加筆は T-92（加筆の効果は m12）
 - 注意: A03 は T-80、A04・A07 は T-77（T-85）、I-30・H-55 の修正と重なる。件数が少ないので CTR・順位の小さな差では判定しない
 
+## T-93 新規3本と加筆2本（2026-11-26 公開。T-94）
+
+- 実施日: 2026-11-26（records T-93）
+- 新規（基準値なし）: B11 `soundproof-room/maker-comparison-daiken-panasonic-others`（防音室 メーカー 比較）、B15 `soundproof-rental/detached-maisonette-family-soundproof-rental`（防音賃貸 メゾネット・戸建て）、B16 `soundproof-rental/structure-rc-src-wood-soundproof-rental`（鉄筋コンクリート 防音賃貸・構造）
+- 加筆: B09 → `soundproof-rental/apartment-weight-limit-500kg`（見る語: 防音室 床 抜ける／タワマン 防音室）、B12〜B14 → `soundproof-rental/instrument-allowed-rental-research-method`（見る語: ドラム 賃貸／グランドピアノ 賃貸／24時間 楽器可）。基準値は m10（`access-data/api/2026-11-02-m10p-gsc-page/`）の2本の表示・順位を日平均で使う
+- 見る指標: 新規は登録の有無とメインKWの表示。加筆は日平均の表示・順位と、上の語の表示が出たか
+- 判定基準: m11 は公開から1週間なので途中経過だけ。m12 で、新規3本はメインKWの表示が0なら需要ミスマッチを疑い、加筆2本は表示が増えて順位が落ちていなければ継続
+- 注意: B11 は T-87（ハウスメーカー比較と依頼先選びの食い合い）と同じ「防音室 メーカー」の語に掛かる。`housing-builder-soundproof-comparison` の順位が落ちていないかも見る
+
 ## 結果
 
 （実施後に追記）
