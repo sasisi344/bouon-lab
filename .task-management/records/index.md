@@ -7,6 +7,7 @@
 | ID | 完了日 | 種別 | テーマ（タグ） | 対象（URL・クエリ） | 結果（1行） | 参照できるデータ | ファイル |
 |---|---|---|---|---|---|---|---|
 | T-32・T-40 | 2026-11-25 | 効果測定 | 404, 旧URL, 301, 410 | GSC の404レポート | 2,526件→721件。施策が効いている、追加作業なし。T-40 は見送り | .workspace/projects/monthly-analysis/2026-10-13-404-recheck-1.md | 2026-11-25-T-32-404-recheck.md |
+| T-70 | 2026-11-26 | 施策 | 数値の修正, 出典, 石膏ボード, 楽器別の遮音, 防音室の価格, 感知器 | soundproof-material-spec-chart ほか記事29本 | hq が直した T-70・I-30・H-55（I-29・I-31・I-35〜I-40）を merge 8d08210 で公開。効果測定は T-95、残りは T-96・T-97 | .workspace/admin-review/2026-11-25-I-30-numbers.md | 2026-11-26-T-70-i30-h55-numbers.md |
 | T-93 | 2026-11-26 | 施策 | 新規記事, 加筆, 防音室メーカー, 防音賃貸, 構造, メゾネット, 楽器可賃貸, 床荷重 | maker-comparison-daiken-panasonic-others, detached-maisonette-family-soundproof-rental, structure-rc-src-wood-soundproof-rental, apartment-weight-limit-500kg, instrument-allowed-rental-research-method | アウトライン B09〜B16 を Codex が執筆。新規3本を公開、4本を既存2本へ加筆、B10 は保留。効果測定は T-94 | .workspace/admin-review/2026-11-26-T-93.md | 2026-11-26-T-93-outline-b-drafts.md |
 | T-37 | 2026-11-25 | 効果測定 | インデックス, 登録数 | GSC の登録済みページ数 | 102件→149件。中間は増加、最終判定は T-39 | .workspace/projects/monthly-analysis/2026-11-02-indexed-count-check.md | 2026-11-25-T-37-indexed-count.md |
 | T-77 | 2026-11-25 | 施策 | 内部リンク, 被リンク0 | building-fire-law-soundproof-room, soundproof-rental-brand-comparison, buy-home-with-soundproof-room, wind-string-instrument-booth-selection | 記事11本から11リンクを足し、被リンク0本→2〜3本。効果測定は T-85 | .workspace/admin-review/2026-11-25-T-77-internal-links.md | 2026-11-25-T-77-internal-links.md |
