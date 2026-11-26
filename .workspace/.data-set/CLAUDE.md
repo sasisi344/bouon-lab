@@ -46,6 +46,7 @@
 | タワーマンションの防音（床スラブ厚、ジム騒音） | `tower-mansion-sound-insulation-memo.md` | ○ |
 | 筆者（さしし）の体験・書き方の好み（記事の「筆者の体験」に使えるもの） | `author-experience.md` | ◎ 2026-11-14。体験チェックの回答から移した。ここにない体験は創作せず、アウトラインで質問する |
 | dBの大きさを身近な空間で例える言い方（Dr値で下がったあとの音、夜間45dBなど） | `db-familiar-sound-scale.md` | ◎ 2026-10-18。記事の例えは必ずこの表に揃える（正本） |
+| 楽器別の防音室（ユニット）のDr値・広さ・簡易ブースの可否 | `instrument-unit-guideline.md` | ◎ 2026-11-25。記事の楽器別の目安は必ずこの表に揃える（正本） |
 | 検索クエリの勝ち筋・改善機会（3月時点） | `06_リサーチ・管理/query-analysis-90days-20260324.md` | ○ 最新の実績は `.workspace/access-data/`（`bouon-weekly-report` skill） |
 | 重要クエリと既存記事の突合（カバー済み／加筆／新規） | `seo-check/gsc-analysis-20260702/query-article-match-20260702.md` | ○ 前期データ基準 |
 | ランキング崩壊・旧URL・リダイレクト漏れの調査 | `seo-check/gsc-analysis-20260702/ranking-collapse-root-cause-20260702.md`、`seo-check/gsc-analysis-20260702/redirect-gap-full-audit-20260702.md`、`seo-check/gsc-analysis-20260702/summary.md` | ○ 対応済みの記録。経緯の確認用。`ranking-collapse-root-cause`は2026-10-13に整理済み（結論・現在の指標・未対応のみ。対応済みの節と7月時点の履歴は`.workspace/archive/legacy/ranking-collapse-resolved-20261013.md`） |
@@ -71,6 +72,7 @@
 | `tower-mansion-sound-insulation-memo.md` | タワマンの防音性能メモ | ○ |
 | `author-experience.md` | 筆者の体験（記事で使ってよいもの）と、体験チェックで分かった書き方の好み。新しい回答は記事の公開時に追記 | ◎ |
 | `db-familiar-sound-scale.md` | dBを身近な空間で例える基準表（環境省「騒音の目安」・日本環境協会）と書き方のルール。記事の例えの正本 | ◎ |
+| `instrument-unit-guideline.md` | 楽器別の防音室（ユニット）の目安の正本。物件のD値との違い、出典 | ◎ |
 
 ### `01_防音室/` — 防音室（ユニット・施工）
 
