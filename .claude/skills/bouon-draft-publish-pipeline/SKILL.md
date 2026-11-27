@@ -74,6 +74,10 @@ image: ./cover.png
 
 ## Step 5. カバー画像の生成
 
+**カバーは Codex に任せる**（2026-11-27 ユーザー決定。Codex の組み込み画像生成 `image_gen` が基本。手順は `.workspace/codex/image-style.md` §5 と `C:\Users\sasis\344blog\hq\.workspace\task\org\codex-imagegen.md`）。このパイプラインでは、カバーのプロンプト案を完了レポートに書き、画像だけの指示書で Codex に渡す。
+
+Codex のリソースがない（使用量の上限・起動できない・組み込みの生成が使えない）ときだけ、次の API スクリプトで作る。
+
 ```bash
 node .workspace/scripts/generate-image.js --preset cover "英語プロンプト（記事テーマに合わせて生成）" "src/content/ja/{category}/{slug}/cover.png"
 ```
