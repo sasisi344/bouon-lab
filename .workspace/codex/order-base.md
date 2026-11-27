@@ -22,8 +22,8 @@
 
 | 種別 | 足して読むもの |
 |---|---|
-| 新規記事（完成稿） | `.claude/skills/bouon-writing/references/query-intent-match.md`（Step 1〜6）、`.workspace/projects/daily-post-2026-11/README.md` §4（とくに §4-2・§4-4）と §6、`.workspace/.data-set/db-familiar-sound-scale.md`、`.workspace/.data-set/interlink-postlist.md`、`.workspace/codex/image-style.md` §5-2、指示書が指す担当のアウトライン（「体験チェックの反映」節と回答まで全部） |
-| リライト（内容を直す） | `.claude/skills/bouon-rewrite-strategy/SKILL.md`、`query-intent-match.md`（Step 1〜6）、`.workspace/projects/daily-post-2026-11/README.md` §5・§6、`.workspace/.data-set/db-familiar-sound-scale.md`、`.workspace/.data-set/interlink-postlist.md` |
+| 新規記事（完成稿） | `.claude/skills/bouon-writing/references/query-intent-match.md`（Step 1〜6）、`.workspace/projects/daily-post-2026-11/README.md` §4（とくに §4-2・§4-4）と §6、`.workspace/.data-set/knowledge/data/db-familiar-sound-scale.md`、`.workspace/.data-set/interlink-postlist.md`、`.workspace/codex/image-style.md` §5-2、指示書が指す担当のアウトライン（「体験チェックの反映」節と回答まで全部） |
+| リライト（内容を直す） | `.claude/skills/bouon-rewrite-strategy/SKILL.md`、`query-intent-match.md`（Step 1〜6）、`.workspace/projects/daily-post-2026-11/README.md` §5・§6、`.workspace/.data-set/knowledge/data/db-familiar-sound-scale.md`、`.workspace/.data-set/interlink-postlist.md` |
 | リライト（語り手の置き換え） | `.workspace/projects/persona-rewrite/plan.md` §4「B4 の書き方」「見本で決まったこと」、指示書が指す見本の記事 |
 | タイトル・description の作り直し | `query-intent-match.md`（Step 1〜6） |
 | 内部リンクの文言 | `.claude/skills/bouon-internal-link-ops/SKILL.md`、`.workspace/.data-set/interlink-postlist.md` |
@@ -36,7 +36,7 @@
 - 1段落1文が基本。90字を超えたら分ける。足す文は1文60字以内を目安にする。3項目以上は表か箇条書き
 - メインKW は title・description・導入の最初の2文・最初の H2 に入れる。サブKW は対応する H2 か FAQ に入れる
 - 数字は「値・単位・条件・出典」の4点セット。計算は式を本文に書き、検算する
-- dB の体感を独自に書かない。`db-familiar-sound-scale.md` にある言い方だけを使う
+- dB の体感を独自に書かない。`knowledge/data/db-familiar-sound-scale.md` にある言い方だけを使う
 - 内部リンクは `[文言](/ja/{category}/{slug}/)`（末尾スラッシュ）。文言にリンク先のメインKWを入れる。リンク先は `interlink-postlist.md` か `src/content/ja/` で実在を確かめる
 - 「本記事では」「徹底解説」「圧倒的」「最強」「完全ガイド」「完全版」を、地の文・タイトル・リンク文言の売り文句に使わない
 - スペースの有無だけが違う語（「ベーストラップ／ベース トラップ」）は同じ語として扱う

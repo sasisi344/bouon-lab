@@ -1,4 +1,9 @@
 ---
+id: bl-data-analysis-global-soundproof-blanket-market-2026
+category: data
+aliases: []
+status: legacy
+moved: 2026-11-27
 title: "グローバル防音毛布市場における主要企業の競争戦略分析：2026年実績と2032年シェア予測｜QYResearch"
 source: "https://note.com/qy_research/n/n0fd87b5dbd60"
 author:

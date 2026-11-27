@@ -26,28 +26,28 @@
 |---|---|---|
 | 内部リンクの存在確認・記事一覧（slug/title/category/tags） | `interlink-postlist.md` | ◎ 正本。再生成は `node .workspace/scripts/build-interlink-postlist.mjs`。ルールは `bouon-internal-link-ops` skill |
 | 内部リンク候補（同じカテゴリ・共有タグの記事） | `interlink-tag-clusters.md` | ◎ 175KBと大きい。全文を読まず、`find` でタグ名・カテゴリ名を検索する |
-| 防音室を探す人の本音・意思決定の阻害要因 | `01_防音室/防音室：ユーザー潜在ニーズ・意思決定阻害要因のDeep Research.md` | ○ |
-| ホームシアター・カラオケの防音設計（Dr値、残響、浮き床、換気、費用） | `01_防音室/analysis-hometheater-karaoke-design.md` | ○ 節ごとにA〜Fの記号つき |
-| 防音賃貸の本音・契約までの不安 | `02_防音賃貸/防音賃貸：ユーザー潜在ニーズ・意思決定阻害要因のDeep Research.md` | ○ |
-| 防音賃貸の都市別市場（東京・大阪・名古屋・福岡・仙台） | `02_防音賃貸/analysis-rental-market-2026.md` | ○ 2026年4月版 |
-| 防音賃貸の家賃相場・都心と郊外の差・防音プレミアム | `02_防音賃貸/research-rent-price-urban-suburban-gap-2026-06.md` | ◎ 2026-06-24。記事構成用のコスパ判断フレームつき |
-| 賃貸アフィリエイトの導線設計 | `02_防音賃貸/strategy-affiliate-rental.md` | ○ 実際のリンクは `src/data/affiliates.ts` |
-| 配信者・VTuberの課題、ステップアップ | `03_ユーザー/analysis-streamer-solutions-expert.md`、`03_ユーザー/analysis-streamer-needs-infrastructure.md` | ○ |
-| 配信機材（PCファン騒音、ペット同居配信） | `05_商品/research-2026-06-10-streamer-equipment.md` | ◎ 記事slug別のメモ |
-| 楽器別の防音要件（ピアノ・ドラム・弦・管、ヤマハ/カワイ） | `03_ユーザー/analysis-brand-instrument-selection.md` | ○ 短い要約。詳細は §5 の旧データ |
-| DIYと音響物理（質量則、よくある誤解） | `03_ユーザー/analysis-physics-diy-acoustics.md` | ○ 短い要約。詳細は §5 の旧データ |
-| 無声音声インターフェース（SSI） | `03_ユーザー/silent-speech-interface-research.md` | ○ ニッチ |
-| 防音室の資産価値・ROI・ローン・税 | `04_オーナー/analysis-asset-investment-strategy.md` | ○ |
-| 製品スペック（ヤマハ・カワイ等）・Dr値・測定基準・BtoB材料 | `05_商品/product_specifications.md` | ○ 2026-03-31。価格は再確認 |
-| BtoB建材・メーカー・市場 | `05_商品/analysis-b2b-manufacturer-materials.md`、`05_商品/analysis-global-soundproof-blanket-market-2026.md` | ○ |
-| 権威性UP用の補足データ（個室ブース市場、加湿器、ニトリ等） | `05_商品/research-2026-06-10-supplementary.md` | ◎ 反映先記事つき |
-| `05_商品/research-2026-10-07-private-booth.md` | 個室ブースの防音室との違い、遮音dB公表値の比較（測定条件の注意）、価格・サブスク、消防法（可動式ブース）、需要チャネル（駅・大学・自治体・マンション共用部ほか）、未確認事項 | ◎ |
-| 個室ブース（ワークブース）の遮音性能・価格・消防法・需要チャネル | `05_商品/research-2026-10-07-private-booth.md` | ◎ 2026-10-07。価格・消防庁基準は記事前に再確認。タスクはT-22 |
-| タワーマンションの防音（床スラブ厚、ジム騒音） | `tower-mansion-sound-insulation-memo.md` | ○ |
+| 防音室を探す人の本音・意思決定の阻害要因 | `knowledge/serp/soundproof-room-user-needs.md` | ○ |
+| ホームシアター・カラオケの防音設計（Dr値、残響、浮き床、換気、費用） | `knowledge/methods/analysis-hometheater-karaoke-design.md` | ○ 節ごとにA〜Fの記号つき |
+| 防音賃貸の本音・契約までの不安 | `knowledge/serp/soundproof-rental-user-needs.md` | ○ |
+| 防音賃貸の都市別市場（東京・大阪・名古屋・福岡・仙台） | `knowledge/data/analysis-rental-market-2026.md` | ○ 2026年4月版 |
+| 防音賃貸の家賃相場・都心と郊外の差・防音プレミアム | `knowledge/data/research-rent-price-urban-suburban-gap-2026-06.md` | ◎ 2026-06-24。記事構成用のコスパ判断フレームつき |
+| 賃貸アフィリエイトの導線設計 | `06_リサーチ・管理/strategy-affiliate-rental.md` | ○ 実際のリンクは `src/data/affiliates.ts` |
+| 配信者・VTuberの課題、ステップアップ | `knowledge/methods/analysis-streamer-solutions-expert.md`、`knowledge/methods/analysis-streamer-needs-infrastructure.md` | ○ |
+| 配信機材（PCファン騒音、ペット同居配信） | `knowledge/products/research-2026-06-10-streamer-equipment.md` | ◎ 記事slug別のメモ |
+| 楽器別の防音要件（ピアノ・ドラム・弦・管、ヤマハ/カワイ） | `knowledge/products/analysis-brand-instrument-selection.md` | ○ 短い要約。詳細は §5 の旧データ |
+| DIYと音響物理（質量則、よくある誤解） | `knowledge/methods/analysis-physics-diy-acoustics.md` | ○ 短い要約。詳細は §5 の旧データ |
+| 無声音声インターフェース（SSI） | `knowledge/methods/silent-speech-interface-research.md` | ○ ニッチ |
+| 防音室の資産価値・ROI・ローン・税 | `knowledge/data/analysis-asset-investment-strategy.md` | ○ |
+| 製品スペック（ヤマハ・カワイ等）・Dr値・測定基準・BtoB材料 | `knowledge/products/product_specifications.md` | ○ 2026-03-31。価格は再確認 |
+| BtoB建材・メーカー・市場 | `knowledge/products/analysis-b2b-manufacturer-materials.md`、`knowledge/data/analysis-global-soundproof-blanket-market-2026.md` | ○ |
+| 権威性UP用の補足データ（個室ブース市場、加湿器、ニトリ等） | `knowledge/data/research-2026-06-10-supplementary.md` | ◎ 反映先記事つき |
+| `knowledge/products/research-2026-10-07-private-booth.md` | 個室ブースの防音室との違い、遮音dB公表値の比較（測定条件の注意）、価格・サブスク、消防法（可動式ブース）、需要チャネル（駅・大学・自治体・マンション共用部ほか）、未確認事項 | ◎ |
+| 個室ブース（ワークブース）の遮音性能・価格・消防法・需要チャネル | `knowledge/products/research-2026-10-07-private-booth.md` | ◎ 2026-10-07。価格・消防庁基準は記事前に再確認。タスクはT-22 |
+| タワーマンションの防音（床スラブ厚、ジム騒音） | `knowledge/data/tower-mansion-sound-insulation-memo.md` | ○ |
 | 筆者（さしし）の体験・書き方の好み（記事の「筆者の体験」に使えるもの） | `author-experience.md` | ◎ 2026-11-14。体験チェックの回答から移した。ここにない体験は創作せず、アウトラインで質問する |
-| dBの大きさを身近な空間で例える言い方（Dr値で下がったあとの音、夜間45dBなど） | `db-familiar-sound-scale.md` | ◎ 2026-10-18。記事の例えは必ずこの表に揃える（正本） |
-| 楽器別の防音室（ユニット）のDr値・広さ・簡易ブースの可否 | `instrument-unit-guideline.md` | ◎ 2026-11-25。記事の楽器別の目安は必ずこの表に揃える（正本） |
-| 検索クエリの勝ち筋・改善機会（3月時点） | `06_リサーチ・管理/query-analysis-90days-20260324.md` | ○ 最新の実績は `.workspace/access-data/`（`bouon-weekly-report` skill） |
+| dBの大きさを身近な空間で例える言い方（Dr値で下がったあとの音、夜間45dBなど） | `knowledge/data/db-familiar-sound-scale.md` | ◎ 2026-10-18。記事の例えは必ずこの表に揃える（正本） |
+| 楽器別の防音室（ユニット）のDr値・広さ・簡易ブースの可否 | `knowledge/data/instrument-unit-guideline.md` | ◎ 2026-11-25。記事の楽器別の目安は必ずこの表に揃える（正本） |
+| 検索クエリの勝ち筋・改善機会（3月時点） | `knowledge/serp/query-analysis-90days-20260324.md` | ○ 最新の実績は `.workspace/access-data/`（`bouon-weekly-report` skill） |
 | 重要クエリと既存記事の突合（カバー済み／加筆／新規） | `seo-check/gsc-analysis-20260702/query-article-match-20260702.md` | ○ 前期データ基準 |
 | ランキング崩壊・旧URL・リダイレクト漏れの調査 | `seo-check/gsc-analysis-20260702/ranking-collapse-root-cause-20260702.md`、`seo-check/gsc-analysis-20260702/redirect-gap-full-audit-20260702.md`、`seo-check/gsc-analysis-20260702/summary.md` | ○ 対応済みの記録。経緯の確認用。`ranking-collapse-root-cause`は2026-10-13に整理済み（結論・現在の指標・未対応のみ。対応済みの節と7月時点の履歴は`.workspace/archive/legacy/ranking-collapse-resolved-20261013.md`） |
 | 404一覧（2026-09 監査） | `seo-check/gsc-404-audit-20260905/` | ○ CSVは `head` で見る |
@@ -69,59 +69,19 @@
 | `hub-cluster-list.md` | トップの入口カード6枚の所属記事（frontmatter `hub` の集計。所属の全記事から3本がアクセスごとにランダムで出る。表示順1〜3はJS無効時の初期表示）。再生成は `node .workspace/scripts/build-hub-list.mjs`（手編集しない） | ◎ 2026-10-07 |
 | `ctr-check-list.md` | CTR改善チェックリスト（W28版、2026-07-08） | ○ |
 | `pagerank-list.md` | 順位改善／深追い不要チェックリスト（W28版、2026-07-08） | ○ |
-| `tower-mansion-sound-insulation-memo.md` | タワマンの防音性能メモ | ○ |
+| `knowledge/data/tower-mansion-sound-insulation-memo.md` | タワマンの防音性能メモ | ○ |
 | `author-experience.md` | 筆者の体験（記事で使ってよいもの）と、体験チェックで分かった書き方の好み。新しい回答は記事の公開時に追記 | ◎ |
-| `db-familiar-sound-scale.md` | dBを身近な空間で例える基準表（環境省「騒音の目安」・日本環境協会）と書き方のルール。記事の例えの正本 | ◎ |
-| `instrument-unit-guideline.md` | 楽器別の防音室（ユニット）の目安の正本。物件のD値との違い、出典 | ◎ |
 
-### `01_防音室/` — 防音室（ユニット・施工）
+### `knowledge/` — 調べた事実（2026-11-27 に 01〜05 と直下の調べものを移した）
 
-| ファイル | 内容 | 鮮度 |
-|---|---|---|
-| `01_防音室/防音室：ユーザー潜在ニーズ・意思決定阻害要因のDeep Research.md` | 「防音室」検索者の深層心理と阻害要因 | ○ |
-| `01_防音室/analysis-hometheater-karaoke-design.md` | ホームシアター×カラオケ両立設計の技術データ（残響・Dr値・費用・換気・施工事例） | ○ |
-
-### `02_防音賃貸/` — 防音賃貸
-
-| ファイル | 内容 | 鮮度 |
-|---|---|---|
-| `02_防音賃貸/防音賃貸：ユーザー潜在ニーズ・意思決定阻害要因のDeep Research.md` | 「防音賃貸」検索者の深層心理 | ○ |
-| `02_防音賃貸/analysis-rental-market-2026.md` | 主要5都市の市場比較・優先攻略順・アフィリエイト施策（2026年4月版） | ○ |
-| `02_防音賃貸/research-rent-price-urban-suburban-gap-2026-06.md` | 家賃相場の都心/郊外ギャップ、MUSISION全棟サンプル、プレミアム率、コスパ判断フレーム | ◎ |
-| `02_防音賃貸/strategy-affiliate-rental.md` | 賃貸アフィリエイトのCV設計（短い） | ○ |
-
-### `03_ユーザー/` — 読者・用途別
-
-| ファイル | 内容 | 鮮度 |
-|---|---|---|
-| `03_ユーザー/analysis-brand-instrument-selection.md` | 楽器別・ブランド選定基準（要約） | ○ |
-| `03_ユーザー/analysis-physics-diy-acoustics.md` | DIY防音の物理と科学的誤認（要約） | ○ |
-| `03_ユーザー/analysis-streamer-needs-infrastructure.md` | 配信者の熱・PCノイズ・通信インフラ要件（要約） | ○ |
-| `03_ユーザー/analysis-streamer-solutions-expert.md` | 配信者の4大課題、フェーズ別ステップアップ、主要ソリューション比較 | ○ |
-| `03_ユーザー/silent-speech-interface-research.md` | 無声音声インターフェースの要約 | ○ |
-
-### `04_オーナー/` — 資産・投資
-
-| ファイル | 内容 | 鮮度 |
-|---|---|---|
-| `04_オーナー/analysis-asset-investment-strategy.md` | 市場価値・再販、融資・税、ROI（スタジオ賃貸 vs 戸建て+防音室） | ○ |
-
-### `05_商品/` — 製品・市場・補足リサーチ
-
-| ファイル | 内容 | 鮮度 |
-|---|---|---|
-| `05_商品/product_specifications.md` | 防音性能の理解、製品、材料、楽器別要件、内部仕様、騒音測定・法基準、BtoB材料 | ○ |
-| `05_商品/analysis-b2b-manufacturer-materials.md` | BtoB防音材・規格（JIS/ASTM/REACH/RoHS）・質量則 | ○ |
-| `05_商品/analysis-global-soundproof-blanket-market-2026.md` | グローバル防音毛布市場（QYResearch）。市場規模・競合・需要ドライバー | ○ |
-| `05_商品/research-2026-06-10-streamer-equipment.md` | creator記事用の補足（PCファン騒音、ペット同居配信） | ◎ |
-| `05_商品/research-2026-06-10-supplementary.md` | 権威性UP用の補足（個室ブース市場、SSI、加湿器、ニトリ吸音） | ◎ |
+カテゴリ（places・rules・products・methods・data・serp）ごとのファイル一覧・状態・確認日は `knowledge/index.md`、書き方と使い方は `knowledge/CLAUDE.md`。記事の数字の正本 `knowledge/data/db-familiar-sound-scale.md`・`knowledge/data/instrument-unit-guideline.md` もここにある。
 
 ### `06_リサーチ・管理/` — 検索分析・旧リスト
 
 | ファイル | 内容 | 鮮度 |
 |---|---|---|
-| `06_リサーチ・管理/query-analysis-90days-20260324.md` | 過去90日（2025/12〜2026/3）のクエリ分析と次の施策 | ○ |
-| `06_リサーチ・管理/search-console-20260315.csv` | 上記の生データ | ✕ |
+| `knowledge/serp/query-analysis-90days-20260324.md` | 過去90日（2025/12〜2026/3）のクエリ分析と次の施策 | ○ |
+| `knowledge/serp/search-console-20260315.csv` | 上記の生データ | ✕ |
 | `06_リサーチ・管理/INDEX.md` | 旧インデックス（本ファイルへ統合済み。ポインタのみ） | ✕ |
 | `06_リサーチ・管理/analysis-global-research-multilingual-seo.md` | 多言語SEOのグローバル調査 | ✕ `/en/` 廃止済み |
 | `06_リサーチ・管理/strategy-cross-lingual.md` | JA/EN二言語戦略 | ✕ `/en/` 廃止済み |
@@ -144,34 +104,7 @@
 
 ## 5. `.archieve/`（旧データ、△、`.gitignore` 対象）
 
-2025年10月〜2026年3月の旧データセット。構成の参考や着想には使えるが、**事実は再確認が前提**。
-
-| ファイル | 内容 |
-|---|---|
-| `【00_INDEX】データセットインデックス.md` | 旧インデックス（v2025.12） |
-| `【06_MASTER】統合ナレッジベース.md` | 旧・統合ナレッジ（ユーザー心理、企業体系、市場特性、統計） |
-| `【01_カテゴリ別DS】防音室.md`、`【02_カテゴリ別DS】防音賃貸.md`、`【03_カテゴリ別DS】配信・クリエイター向け.md`、`【04_カテゴリ別DS】オフィス・法人向け.md`、`【05_カテゴリ別DS】市場・ニュース.md` | カテゴリ別の旧データセット |
-| `【07_MARKET】市場データベース.md` | 地域別市場、価格構造・相場、入居者ニーズ、投資分析 |
-| `【08_SPEC】技術製品データベース.md` | 技術・製品仕様、価格・性能比較、用語集 |
-| `【09_KEYWORD】SEOマーケティングデータ.md` | キーワード、競合、価格帯別・メーカー別比較 |
-| `【10_GUIDE】導入活用ガイド.md`、`【13_MAINTENANCE】防音室運用・維持管理ガイド.md` | 導入・運用・維持管理（英語の短いガイド） |
-| `【11_COMPANY】国内防音ソリューション企業DB.md`、`【まとめ】国内防音ソリューション企業体系化マップ.md` | 国内企業DB（62KB）と業界マップ |
-| `【12_VOICE】防音ユーザー体験談・PX.md` | ワンタッチ防音壁を中心としたユーザーの声と期待値 |
-| `【補助金・税制】防音室_v2025.01.md`、`financial_support.md` | 補助金・税制（2025年版） |
-| `【DB】防音グッズ：設備データベース.md`、`【DB】防音窓・リフォームデータベース.md` | 防音グッズ・窓・リフォームのDB |
-| `【03_楽器別】防音スペックシート.md`、`ヤマハ防音室.md`、`OTODASU.md` | 楽器別スペック、ヤマハ防音室、OTODASU |
-| `楽器演奏用防音室における*.md` | クラシック/打楽器向けの大型研究報告書 |
-| `防音ユニットの資産価値再定義*.md`、`防音室導入の投資価値分析*.md` | 資産価値・投資の大型レポート |
-| `防音賃貸市場における高単価成約*.md`、`2025-2026年*.md` | 賃貸の収益化戦略・主要都市の定量分析 |
-| `DIY防音室・壁防音における*.md` | DIY・音響物理と誤認の分析 |
-| `VTuber・ストリーマーにおける*.md`、`ssi-research.md` | 配信者の課題分析、SSIの大型調査 |
-| `【MAP】トピック・リンク・CTA統合マッピング.md` | 旧・トピック/CTAマップ（現在は `src/data/affiliates.ts` と `bouon-growth-ops` が正） |
-| `【DS】防音Labの記事ライティングプロンプト考.md`、`【DS】防音室Labカテゴリ構成.md`、`防音Lab記事再現プロンプト.md` | 旧ライティング指針（現在は `bouon-writing` skill が正） |
-| `日英双方向コンテンツ戦略とノウハウ.md` | 日英戦略（`/en/` 廃止済みのため参考外） |
-| `d-dr-value-simulator-requirements.md`、`d-dr-value-simulator-todo.md` | D値診断ツールの要件・TODO |
-| `アフィリエイトリンク.md`、`user_guides.md`、`YouTubeの防音室紹介.md` | 旧リンク集、ユーザーガイド、YouTube防音室レビュー |
-| `target-query/*.md` | 競合上位記事の分析7本（補助金2025、内窓の効果、自作費用、暑さ対策、大阪相場ほか） |
-| `.SCaccessdata/` | 2026-02-17のSearch Consoleエクスポート |
+2025年10月〜2026年3月の旧データ。ファイルの一覧は `archieve-list.md`。構成の参考や着想には使えるが、**事実は再確認が前提**。
 
 ## 6. 検索・目次（`bouon-dataset-lookup` skill）
 
@@ -180,7 +113,7 @@
 ```bash
 S=.claude/skills/bouon-dataset-lookup/scripts/dataset_tool.py
 python $S find 補助金 窓 --archive     # AND検索。ファイル別に該当行と直近の見出しを表示（--any でOR）
-python $S outline 02_防音賃貸/research-rent-price-urban-suburban-gap-2026-06.md   # 節と行番号
+python $S outline knowledge/data/research-rent-price-urban-suburban-gap-2026-06.md   # 節と行番号
 python $S index                        # 全ファイルの一覧（--archive で旧データも）
 python $S check                        # 本ファイルの索引と実ファイルのずれを検出
 ```
@@ -191,7 +124,7 @@ python $S check                        # 本ファイルの索引と実ファイ
 ## 7. 追加・更新のルール
 
 - **ファイル名**: 調査は `research-YYYY-MM-DD-{テーマ}.md`、分析は `analysis-{テーマ}.md`。冒頭に作成日・目的・反映先記事（slug）を書く
-- **置き場所**: 読者・用途別の調査は `03_ユーザー/`、製品・市場・補足リサーチは `05_商品/`、賃貸は `02_防音賃貸/`、防音室は `01_防音室/`、資産・投資は `04_オーナー/`、検索データの分析は `seo-check/`。新しい大分類が必要なときはユーザーに確認する
+- **置き場所**: 調べた事実（製品・市場・読者・費用・原理）は `knowledge/<カテゴリ>/` に置き、書き方は `knowledge/CLAUDE.md` に従う。検索データの分析は `seo-check/`、運営のリストは直下か `06_リサーチ・管理/`。新しい大分類が必要なときはユーザーに確認する
 - **追加したら**: §3（早見表に該当するとき）と §4 の表に追記し、`python $S check` で「索引にないファイル」「実在しないファイル名」が0であることを確認する
 - **古くなったら**: 鮮度ラベルを下げ、読まない理由を1行書く。ファイルの削除・移動は、`.workspace/scripts/` や他ファイルからの参照を確認してから行う
 - **自動生成**: `interlink-postlist.md`・`interlink-tag-clusters.md` は記事の追加・変更後に再生成する（手編集しない）

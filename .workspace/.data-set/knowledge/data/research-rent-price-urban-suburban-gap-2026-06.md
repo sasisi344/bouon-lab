@@ -1,3 +1,12 @@
+---
+id: bl-data-research-rent-price-urban-suburban-gap-2026-06
+title: "防音賃貸 家賃相場リサーチ｜都心 vs 郊外ギャップ検証（2026-06-24）"
+category: data
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # 防音賃貸 家賃相場リサーチ｜都心 vs 郊外ギャップ検証（2026-06-24）
 
 **Keywords**: 防音賃貸, 家賃相場, コスパ, 都心, 郊外, ミュージション, 防音プレミアム

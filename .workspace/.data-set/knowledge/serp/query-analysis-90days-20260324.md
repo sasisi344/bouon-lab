@@ -1,3 +1,12 @@
+---
+id: bl-serp-query-analysis-90days-20260324
+title: "90-Day Query Analysis Report (2025/12/22 - 2026/03/21)"
+category: serp
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # 90-Day Query Analysis Report (2025/12/22 - 2026/03/21)
 
 ## 1. 分析の背景

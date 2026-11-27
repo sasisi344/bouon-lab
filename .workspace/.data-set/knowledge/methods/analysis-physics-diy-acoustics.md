@@ -1,3 +1,12 @@
+---
+id: bl-methods-analysis-physics-diy-acoustics
+title: "Research Analysis: Physics of DIY Soundproofing & Scientific Misconceptions"
+category: methods
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # Research Analysis: Physics of DIY Soundproofing & Scientific Misconceptions
 **Keywords**: Mass Law, Soundproofing, DIY, Acoustic Engineering, Misinterpretation, Density, Resonance
 **Context**: Technical Pillar content (Deepest Layer). Scientific proof for "Why DIY walls often fail".

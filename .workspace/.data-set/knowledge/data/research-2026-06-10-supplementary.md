@@ -1,3 +1,12 @@
+---
+id: bl-data-research-2026-06-10-supplementary
+title: "補足リサーチ（2026-06-10）— 権威性UP対象記事用データ収集"
+category: data
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # 補足リサーチ（2026-06-10）— 権威性UP対象記事用データ収集
 
 `.task-management/task.md` ①権威性UPのうち、既存データセットでカバーできなかった項目をWeb検索で補完。
@@ -68,7 +77,7 @@
 - ニトリの遮音カーテンは生地裏に**樹脂コーティング**を施し、質量・密度を上げて音を反射する「壁」として機能する仕組み
 - 防音カーテン全般で**騒音を約20〜50%軽減**という目安（一般的な比較サイトの評価）
 - 吸音パネルは複数枚設置することで体感効果が出るとのユーザー評価あり
-- 既存の `05_商品/product_specifications.md`（NRC・周波数帯別吸音特性）と組み合わせ、「ニトリ製品はどの周波数帯・どの程度の軽減率が現実的か」を物理的根拠（質量則・NRC）で裏付ける構成にする
+- 既存の `knowledge/products/product_specifications.md`（NRC・周波数帯別吸音特性）と組み合わせ、「ニトリ製品はどの周波数帯・どの程度の軽減率が現実的か」を物理的根拠（質量則・NRC）で裏付ける構成にする
 
 **出典**:
 - [ニトリの遮音カーテンを徹底レビュー｜元ラッパ吹きの防音研究所（実測ブログ）](https://minnnanorappa.com/nitori-soundproof-curtains-effectiveness/)
@@ -83,4 +92,4 @@
 | `business/privacy-pod-market-growth` | 本ファイル §1 | 市場規模・成長率の出典付きデータ追加 |
 | `knowledge/future-ssi-silent-speech-interface-revolution` | 本ファイル §2 | AlterEgo実例で誇大予測を是正、研究フェーズを正確に記述 |
 | `soundproof-room/bouon-humidifier-comparison` | 本ファイル §3 | ダイニチ/シャープの型番・運転音dBを追記 |
-| `soundproof-room/nitori-soundproof-acoustic-guide` | 本ファイル §4 + `05_商品/product_specifications.md` | 実測ブログ・NRC理論で効果を定量化 |
+| `soundproof-room/nitori-soundproof-acoustic-guide` | 本ファイル §4 + `knowledge/products/product_specifications.md` | 実測ブログ・NRC理論で効果を定量化 |

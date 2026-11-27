@@ -60,7 +60,7 @@
 
 ## 事実確認・検算
 
-- `02_防音賃貸/research-rent-price-urban-suburban-gap-2026-06.md` §4（防音プレミアム率）を起点。最新で再確認
+- `knowledge/data/research-rent-price-urban-suburban-gap-2026-06.md` §4（防音プレミアム率）を起点。最新で再確認
 - プレミアム率の計算は検算し、算出条件を併記
 
 ## 着手前チェック

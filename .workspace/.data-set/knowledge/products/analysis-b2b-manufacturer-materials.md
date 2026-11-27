@@ -1,3 +1,12 @@
+---
+id: bl-products-analysis-b2b-manufacturer-materials
+title: "Research Analysis: B2B Soundproofing Materials & Global Manufacturers"
+category: products
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # Research Analysis: B2B Soundproofing Materials & Global Manufacturers
 **Keywords**: B2B, Industrial, Construction, JIS, ASTM, REACH, RoHS, Sustainable, Mass Law
 **Context**: Technical base for industrial and professional soundproofing solutions.

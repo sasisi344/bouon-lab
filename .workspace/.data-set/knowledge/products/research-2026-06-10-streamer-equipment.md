@@ -1,10 +1,19 @@
+---
+id: bl-products-research-2026-06-10-streamer-equipment
+title: "補足リサーチ（2026-06-10）— creator新規記事「第2弾」優先度A 2本用"
+category: products
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # 補足リサーチ（2026-06-10）— creator新規記事「第2弾」優先度A 2本用
 
 `.workspace/archive/legacy/streamer-post.md` 第2弾の優先度A
 - `streaming-pc-fan-noise-mic`（PC本体ノイズ対策）
 - `streamer-pet-noise-balance`（ペット同居配信者の防音）
 
-の執筆前に必要な機材データ・製品候補をWeb検索で収集。`05_商品/product_specifications.md`は防音室・楽器中心で
+の執筆前に必要な機材データ・製品候補をWeb検索で収集。`knowledge/products/product_specifications.md`は防音室・楽器中心で
 PC機材・ペット用品のデータを持たないため、本ファイルで補完する。
 
 ---

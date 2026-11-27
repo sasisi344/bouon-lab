@@ -6,7 +6,7 @@
 使い方:
   python dataset_tool.py find 補助金 窓 --archive      # キーワード検索（AND）。ファイル別に件数と該当行、直近の見出しを表示
   python dataset_tool.py find 質量則 DIY --any          # いずれか1語を含むファイル
-  python dataset_tool.py outline 02_防音賃貸/research-rent-price-urban-suburban-gap-2026-06.md
+  python dataset_tool.py outline knowledge/data/research-rent-price-urban-suburban-gap-2026-06.md
   python dataset_tool.py index [--archive]              # 全ファイルの一覧（パス・サイズ・更新日・H1）
   python dataset_tool.py check                          # CLAUDE.mdの索引と実ファイルのずれを検出
 
@@ -166,6 +166,15 @@ def indexed_set():
         sys.exit("CLAUDE.md が空、または存在しません")
     text = INDEX_FILE.read_text(encoding="utf-8")
     tokens = set(re.findall(r"`([^`\n]+)`", text))
+    # 2026-11-27〜: .archieve の一覧と knowledge の索引（パスは knowledge/ から）も索引として読む
+    arch = DATA / "archieve-list.md"
+    if arch.exists():
+        tokens |= set(re.findall(r"`([^`\n]+)`", arch.read_text(encoding="utf-8")))
+    kidx = DATA / "knowledge" / "index.md"
+    if kidx.exists():
+        for t in re.findall(r"`([^`\n]+)`", kidx.read_text(encoding="utf-8")):
+            tokens.add(t if t.startswith("knowledge/") or "/" not in t else "knowledge/" + t)
+    tokens |= {"knowledge/index.md", "knowledge/CLAUDE.md", "archieve-list.md"}
     return tokens
 
 

@@ -1,3 +1,12 @@
+---
+id: bl-products-analysis-brand-instrument-selection
+title: "Research Analysis: Brand & Instrument Selection Criteria"
+category: products
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # Research Analysis: Brand & Instrument Selection Criteria
 **Keywords**: Piano, Drum, Violin, Brass, Yamaha, Kawai, Dr-Rating, Acoustic Treatment
 **Context**: Product comparison and brand authority data.

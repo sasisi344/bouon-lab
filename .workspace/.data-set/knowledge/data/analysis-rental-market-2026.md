@@ -1,3 +1,12 @@
+---
+id: bl-data-analysis-rental-market-2026
+title: "防音賃貸市場 分析データ（2026年4月版）"
+category: data
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # 防音賃貸市場 分析データ（2026年4月版）
 
 **Keywords**: 防音賃貸, 楽器可, 防音室, 東京, 大阪, 福岡, 市場分析, アフィリエイト

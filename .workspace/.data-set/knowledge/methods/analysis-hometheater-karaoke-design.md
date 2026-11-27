@@ -1,3 +1,12 @@
+---
+id: bl-methods-analysis-hometheater-karaoke-design
+title: "ホームシアター×カラオケ 両立防音設計 統合データ"
+category: methods
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # ホームシアター×カラオケ 両立防音設計 統合データ
 
 **Keywords**: ホームシアター, カラオケ, 防音室, 両立設計, Dr値, 残響時間, 浮き床

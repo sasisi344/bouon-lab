@@ -1,3 +1,12 @@
+---
+id: bl-products-product_specifications
+title: "Technical Specifications for Soundproofing Products"
+category: products
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # Technical Specifications for Soundproofing Products
 
 This document provides a detailed database of technical specifications for various soundproofing products, from complete room units to individual components. It is designed to be a permanent reference for content creation.

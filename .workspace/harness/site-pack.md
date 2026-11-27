@@ -56,7 +56,7 @@
 - 読者の声・悩みとして書かれた文を、事実の主張に書き換えない
 - 公的な資料（ガイドラインなど）は書いてあるとおりに書く。言い換えて意味を広げない
 - 計算・比較の数字は、記事の中で必ず検算する（T-79 で「5dB」→「約10dB」の誤り）
-- dB を身近な音で例えるときは `.workspace/.data-set/db-familiar-sound-scale.md` の言い方だけ
+- dB を身近な音で例えるときは `.workspace/.data-set/knowledge/data/db-familiar-sound-scale.md` の言い方だけ
 - 税務・法務・医療に関わる内容は「専門家に確認を」の免責を入れる
 - 同じ記事へのリンクを1記事で繰り返さない。H3 の文言と本文の中身を合わせる
 - 商品のバッジ・売り文句が、記事の立場（安さを推さない、など）と食い違うカードを置かない
@@ -86,7 +86,7 @@
 | 収益の導線（CTA・カード） | `.claude/skills/bouon-growth-ops/SKILL.md` |
 | 書いた後の検閲 | `.agents/persona/00_Persona-Omega.md` の4フィルター |
 | 指示書で書く回 | 指示書 → `.workspace/codex/order-base.md`（§5 は検収で繰り返し直した点） |
-| 事実を探す | `.workspace/.data-set/knowledge/index.md`（未作成のあいだは `.workspace/.data-set/CLAUDE.md` と `bouon-dataset-lookup` スキル） |
+| 事実を探す・残す | `.workspace/.data-set/knowledge/index.md` と `knowledge/CLAUDE.md`（状態が「事実の表」の行だけ根拠にできる）。見つからないときは `bouon-dataset-lookup` スキル |
 | 事実を調べる（調べる係だけ） | `.claude/skills/bouon-research/SKILL.md` |
 | 画像 | `.workspace/codex/image-style.md` |
 

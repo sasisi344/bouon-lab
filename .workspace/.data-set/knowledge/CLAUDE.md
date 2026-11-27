@@ -1,0 +1,72 @@
+# knowledge/ — 調べた事実の置き場（防音Lab）
+
+2026-11-27 作成（ユーザー決定）。記事のために調べたことは、ここにカテゴリ分けして残し、記事の frontmatter `research:` から指す。**同じ事実をウェブで調べるのは1回だけにする**ため。設計の正本は `344blog/hq/.workspace/herness-project.md` §7（このリポジトリの外。ここだけで作業できるように要点を写してある）。事実の確かめ方（一次情報の選び方）は `.claude/skills/bouon-research/SKILL.md`。
+
+## 1. 探す（調べる前に必ず）
+
+1. `index.md` を開き、カテゴリの表で題と別名を見る
+2. 見つからなければ `rg -n "<語>" .workspace/.data-set/knowledge`、または `python .claude/skills/bouon-dataset-lookup/scripts/dataset_tool.py find <語>`（大きいファイルは `outline` で節だけ読む）
+3. 使えるかは `状態` で決める
+
+| 状態 | 記事の根拠にしてよいか |
+|---|---|
+| 事実の表 | 期限内の行はそのまま使う（ウェブで調べ直さない）。期限切れの行だけ調べ直す |
+| 旧メモ（出典URLあり・表なし） | 手がかり。使う事実は、出典を開いて確かめ、§3 の表に移してから使う |
+| 旧メモ（出典なし） | 手がかりだけ。価格・D値・dB・制度・企業名・統計は一次情報で確かめ、表に移してから使う |
+
+例外: `data/db-familiar-sound-scale.md`（dB の例え）と `data/instrument-unit-guideline.md`（楽器別の目安）は、記事の言い方・数字の**正本**。記事はこの2つに合わせる（変えるときは先にこの表を直す）。
+
+## 2. カテゴリ
+
+| フォルダ | 中身 | 期限の目安 |
+|---|---|---|
+| `places/` | 業者・ショールーム・物件・自治体の窓口 | 料金・営業は90日 |
+| `rules/` | 補助金・税制・建築の基準・消防法・ガイドライン | 年度末か公式の改定まで |
+| `products/` | 防音室・ブース・建材・グッズの仕様と価格 | 仕様1年、価格90日 |
+| `methods/` | 遮音・吸音の原理、DIY の物理、用途別の設計 | 期限なし（出典の更新を見る） |
+| `data/` | 市場・家賃相場・調査の数字、記事で使う数字の正本 | 出典の次の版まで |
+| `serp/` | 検索意図・読者の本音・クエリ分析・サジェスト（事実ではない） | 90日 |
+| `notes/` | Obsidian から写したノート（手がかり。根拠にしない） | — |
+
+## 3. 1トピック1ファイルの形
+
+```markdown
+---
+id: bl-products-otodasu-2         # bl-<カテゴリ>-<slug>。記事の research: から指す名前
+title: OTODASU II
+category: products
+aliases: [オトダス, OTODASU2]
+updated: 2026-11-27               # 最後に事実を確かめた日
+---
+
+## 事実
+
+| ID | 主張 | 値 | 出典 URL | 確認日 | 期限 |
+|---|---|---|---|---|---|
+| F01 | 1畳タイプの価格（税込） | … | https://… | 2026-11-27 | 2027-02-25 |
+
+## メモ（事実ではないこと: 経緯、出典どうしの食い違い、取れなかったこと）
+```
+
+- 1つの事実は1行。出典 URL と確認日のない行は書かない（取れなかったものはメモに「未確認」）
+- メーカーの公表値は「公表値」と書き、測定条件があれば値の列に書く
+- 旧メモ（`status: legacy`）の事実を確かめたら、同じファイルに `## 事実` の表を足し、`status: legacy` の行を消して `updated:` を書く。旧メモの本文は消さずに残してよい
+- ファイル名は今の名前（`research-YYYY-MM-DD-…`・`analysis-…`）のままでよい。新しいトピックは `<テーマ>.md`
+
+## 4. 記事から指す
+
+```yaml
+research:
+  - bl-products-otodasu-2           # トピックごと
+  - bl-data-db-familiar-sound-scale#F03
+```
+
+- アウトラインの「事実の材料」に ID を書き、書く係がそのまま記事の frontmatter に写す。公開のあとも消さない
+- ここにない事実を記事に書かない（書く係）。照合する係は、`research:` の行と本文の数値を突き合わせ、「一致」の行は調べ直さない
+
+## 5. 誰が書くか・index の更新
+
+- 書くのは調べる係（`hb-research`）と CC。書く係・校正係・Codex は書かない（足りない事実は報告書に書く）
+- ファイルを足したら、ローカルでは `node C:/Users/sasis/344blog/.claude/skills/knowledge/scripts/build-index.mjs --site bouon-lab` で `index.md` を作り直す（id のない .md には id を足す）。remote では `index.md` の該当カテゴリに1行足す
+- そのあと `python .claude/skills/bouon-dataset-lookup/scripts/dataset_tool.py check` でずれが0かを確かめる
+- 内部リンクの一覧・CTR のチェックリスト・筆者の体験（`author-experience.md`）・SEO の監査はここに入れない（`.workspace/.data-set/` の直下・`seo-check/`・`06_リサーチ・管理/`）

@@ -1,3 +1,12 @@
+---
+id: bl-data-tower-mansion-sound-insulation-memo
+title: "タワーマンションの防音性能：知見メモ"
+category: data
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # タワーマンションの防音性能：知見メモ
 
 タワーマンションにおける防音性能と生活音、設備仕様に関するDeep Researchメモ。

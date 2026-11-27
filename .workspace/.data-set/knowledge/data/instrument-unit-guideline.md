@@ -1,3 +1,12 @@
+---
+id: bl-data-instrument-unit-guideline
+title: "楽器別の防音室（ユニット）の目安 — 記事で使う数字の正本"
+category: data
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # 楽器別の防音室（ユニット）の目安 — 記事で使う数字の正本
 
 作成: 2026-11-25（hq、inbox I-30・I-35）／目的: 楽器ごとの Dr 値・広さ・簡易ブースの可否が記事でばらばらだったのを1つにする。反映先: `wind-string-instrument-booth-selection` ほか（指示書 `.workspace/codex/orders/2026-11-25-I-30.md`）

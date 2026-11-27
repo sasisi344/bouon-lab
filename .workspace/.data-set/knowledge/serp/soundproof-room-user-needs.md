@@ -1,3 +1,12 @@
+---
+id: bl-serp-soundproof-room-user-needs
+title: "防音室：ユーザー潜在ニーズ・意思決定阻害要因のDeep Research"
+category: serp
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # 防音室：ユーザー潜在ニーズ・意思決定阻害要因のDeep Research
 
 本レポートは、SEOコンサルタントおよびUXリサーチャーの視点から、メインキーワード「防音室」を検索するユーザーの深層心理と、購入・導入を阻害している要因を分析したものです。

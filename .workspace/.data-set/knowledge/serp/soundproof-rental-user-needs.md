@@ -1,3 +1,12 @@
+---
+id: bl-serp-soundproof-rental-user-needs
+title: "防音賃貸：ユーザー潜在ニーズ・意思決定阻害要因のDeep Research"
+category: serp
+aliases: []
+status: legacy
+moved: 2026-11-27
+---
+
 # 防音賃貸：ユーザー潜在ニーズ・意思決定阻害要因のDeep Research
 
 本レポートは、不動産マーケティングと音響工学の知見を統合し、メインキーワード「防音賃貸」を検索するユーザーの深層心理と、契約に至るための「信頼の構築」を分析したものです。

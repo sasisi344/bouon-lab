@@ -9,6 +9,8 @@ description: 記事の執筆・リライト・企画で、防音スペック・�
 
 ## 探し方（記事作成時）
 
+**2026-11-27〜: 調べた事実は `.workspace/.data-set/knowledge/` にある**（旧 `01_防音室`〜`05_商品` と直下の調べもの）。まず `knowledge/index.md` で題と状態を見る。書き方・根拠にできる状態の見分け・記事の frontmatter `research:` は `knowledge/CLAUDE.md`。下の手順はそこで見つからないときと、運営のリスト・旧データを探すとき。
+
 1. **早見表を引く**: `.workspace/.data-set/CLAUDE.md` §3「記事作成時の取得先 早見表」で、テーマに合うファイルがあるか確認する。鮮度ラベル（◎○△✕）も見る
 2. **見つからなければ検索する**:
 
@@ -23,7 +25,7 @@ description: 記事の執筆・リライト・企画で、防音スペック・�
 3. **節だけ読む**:
 
    ```bash
-   python $S outline 02_防音賃貸/research-rent-price-urban-suburban-gap-2026-06.md
+   python $S outline knowledge/data/research-rent-price-urban-suburban-gap-2026-06.md
    ```
 
    出力の `L{開始}-{終了}` を使い、Read の `offset`=開始-1、`limit`=行数 で必要な節だけ読む
