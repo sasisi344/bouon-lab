@@ -1,0 +1,32 @@
+:root{--bg:#17120e;--card:#241c15;--card2:#2e241b;--line:#4a3b2a;--gold:#d4af37;--gold-soft:#e8d070;--text:#f4ecdc;--dim:#c9bda6;--ok:#8fc9a0;--warn:#e6a56a}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;background:var(--bg);color:var(--text);font-family:"BIZ UDPGothic","Noto Sans JP","Yu Gothic","Meiryo",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{padding:56px 56px 40px}
+.kicker{display:inline-block;font-size:26px;letter-spacing:.08em;color:var(--bg);background:var(--gold);padding:6px 18px;border-radius:999px;font-weight:700}
+h1{font-size:54px;line-height:1.3;margin:22px 0 10px;font-weight:700}
+h1 em{font-style:normal;color:var(--gold-soft)}
+.lead{font-size:28px;color:var(--dim);line-height:1.5;margin-bottom:34px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:26px;padding:30px 34px;margin-bottom:26px}
+.card h2{font-size:38px;line-height:1.3;margin-bottom:18px;display:flex;align-items:center;gap:16px}
+.num{flex:none;width:62px;height:62px;border-radius:50%;background:var(--gold);color:var(--bg);font-size:34px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.row{display:flex;gap:16px;margin-top:12px;font-size:29px;line-height:1.5}
+.tag{flex:none;width:130px;font-size:24px;font-weight:700;color:var(--bg);background:var(--gold-soft);border-radius:10px;padding:4px 0;text-align:center;height:42px;line-height:34px}
+.tag.warn{background:var(--warn)}
+.tag.ok{background:var(--ok)}
+.val{flex:1}
+.note{font-size:24px;color:var(--dim);line-height:1.5;margin-top:6px}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;margin-top:14px;border-top:2px solid var(--line);padding-top:20px;font-size:23px;color:var(--dim);line-height:1.5}
+.brand{font-size:28px;color:var(--gold-soft);font-weight:700;white-space:nowrap}
+
+/* ---- チェックリスト・書き込み式メモ用 ---- */
+.tag.wide{width:230px}
+.check{list-style:none}
+.check li{display:flex;gap:18px;font-size:29px;line-height:1.5;padding:16px 0;border-top:2px dashed var(--line)}
+.check li:first-child{border-top:none;padding-top:4px}
+.cb{flex:none;width:36px;height:36px;border:3px solid var(--gold);border-radius:9px;margin-top:5px}
+.check .t{flex:1}
+.check .t small{display:block;font-size:24px;color:var(--dim);margin-top:4px}
+.fill{display:block;border-bottom:3px solid var(--gold-soft);height:44px;margin-top:6px}
+.fill-inline{display:inline-block;width:150px;border-bottom:3px solid var(--gold-soft);vertical-align:bottom;height:1.1em}
+.warn-text{display:block;font-size:25px;color:var(--warn);margin-top:4px}
+.bar{background:var(--gold);color:var(--bg);border-radius:22px;padding:22px 30px;font-size:29px;line-height:1.55;font-weight:700;margin-top:6px}

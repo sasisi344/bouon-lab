@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="memo-common.css">
+  <style>
+    h1 { margin-bottom:24px; }
+    .display-list { display:grid; grid-template-columns: 5fr 4fr; gap:18px; }
+    .display { background:var(--card2); border-radius:14px; padding:18px 20px; }
+    .display dt { color:var(--dim); font-size:25px; }
+    .display dd { font-size:31px; font-weight:700; margin-top:5px; white-space:nowrap; }
+    .check li { font-size:32px; }
+    .foot { justify-content:flex-end; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <span class="kicker">保存版メモ</span>
+    <h1><em>静床ライト</em></h1>
+    <section class="card">
+      <h2>販売ページの表示</h2>
+      <dl class="display-list">
+        <div class="display">
+          <dt>ピアリビング</dt>
+          <dd>LL-40（スラブ厚150mm）</dd>
+        </div>
+        <div class="display">
+          <dt>宮地楽器</dt>
+          <dd>⊿LL-4</dd>
+        </div>
+      </dl>
+    </section>
+    <section class="card">
+      <h2>試験成績書</h2>
+      <ul class="check">
+        <li><span class="cb"></span><span class="t">試験所</span></li>
+        <li><span class="cb"></span><span class="t">スラブ厚</span></li>
+        <li><span class="cb"></span><span class="t">日付</span></li>
+      </ul>
+    </section>
+    <footer class="foot"><div class="brand">防音Lab</div></footer>
+  </main>
+</body>
+</html>
