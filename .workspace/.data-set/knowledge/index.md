@@ -7,8 +7,9 @@
 | カテゴリ | ファイル数 | 事実の表があるもの |
 |---|---:|---:|
 | data | 8 | 0 |
-| methods | 5 | 0 |
-| products | 5 | 0 |
+| methods | 6 | 1 |
+| products | 6 | 1 |
+| rules | 1 | 1 |
 | serp | 12 | 0 |
 
 期限切れの事実: 0件
@@ -34,6 +35,7 @@
 | bl-methods-analysis-physics-diy-acoustics | `methods/analysis-physics-diy-acoustics.md` | Research Analysis: Physics of DIY Soundproofing & Scientific Misconceptions |  | 旧メモ（出典なし） | 未確認 |
 | bl-methods-analysis-streamer-needs-infrastructure | `methods/analysis-streamer-needs-infrastructure.md` | Research Analysis: Streamer Needs & Strategic Infrastructure 2026 |  | 旧メモ（出典なし） | 未確認 |
 | bl-methods-analysis-streamer-solutions-expert | `methods/analysis-streamer-solutions-expert.md` | Research Analysis: Streamer & VTuber Soundproofing Solutions |  | 旧メモ（出典なし） | 未確認 |
+| bl-methods-floor-impact-sound-rating | `methods/floor-impact-sound-rating.md` | 床材・マットの床衝撃音低減性能（ΔLL・ΔLH 等級）と軽い音・重い音 | ΔLL, ΔL等級, 軽量床衝撃音, 重量床衝撃音, 床材の遮音表示 | 事実の表（9行） | 2026-11-27 |
 | bl-methods-silent-speech-interface-research | `methods/silent-speech-interface-research.md` | Research Analysis: Silent Speech Interface (SSI) & Next-Gen Streaming |  | 旧メモ（出典なし） | 未確認 |
 
 ## products
@@ -42,9 +44,16 @@
 |---|---|---|---|---|---|
 | bl-products-analysis-b2b-manufacturer-materials | `products/analysis-b2b-manufacturer-materials.md` | Research Analysis: B2B Soundproofing Materials & Global Manufacturers |  | 旧メモ（出典なし） | 未確認 |
 | bl-products-analysis-brand-instrument-selection | `products/analysis-brand-instrument-selection.md` | Research Analysis: Brand & Instrument Selection Criteria |  | 旧メモ（出典なし） | 未確認 |
+| bl-products-floor-soundproof-mat | `products/floor-soundproof-mat.md` | 床の防音マット（置き敷きのタイルカーペット・ラグ）の仕様と価格 | 静床ライト, 静床プレミア, MUTE 防音専科, 防音タイルカーペット, 床 防音マット | 事実の表（16行） | 2026-11-27 |
 | bl-products-product_specifications | `products/product_specifications.md` | Technical Specifications for Soundproofing Products |  | 旧メモ（出典なし） | 未確認 |
 | bl-products-research-2026-06-10-streamer-equipment | `products/research-2026-06-10-streamer-equipment.md` | 補足リサーチ（2026-06-10）— creator新規記事「第2弾」優先度A 2本用 |  | 旧メモ（出典なし） | 未確認 |
 | bl-products-research-2026-10-07-private-booth | `products/research-2026-10-07-private-booth.md` | 個室ブース（ワークブース・テレワークブース）調査 |  | 旧メモ（出典URLあり・表なし） | 未確認 |
+
+## rules
+
+| ID | ファイル | 題 | 別名 | 状態 | 確認日 |
+|---|---|---|---|---|---|
+| bl-rules-rental-restoration-floor | `rules/rental-restoration-floor.md` | 賃貸の原状回復と、床に敷く物（家具・カーペット）の扱い | 原状回復, 原状回復ガイドライン, 賃貸 床 敷物 | 事実の表（3行） | 2026-11-27 |
 
 ## serp
 

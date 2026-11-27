@@ -138,6 +138,18 @@ export const affiliates: Record<string, AffiliateItem> = {
     variant: 'standard',
   },
 
+  // 楽天アフィリエイトのリンク先は楽天市場の「静床ライト」検索結果（販売店により価格・表示が違うので価格は載せない）。仕様は knowledge/products/floor-soundproof-mat.md（2026-11-27 確認）
+  'floor-mat-shizuyuka-light': {
+    type: 'link',
+    slug: 'floor-mat-shizuyuka-light',
+    name: '日東紡マテリアル 静床ライト 防音マット（50×50cm）',
+    description: '置くだけで敷く防音タイルカーペット。全厚9.5mm・1枚約1.5kg（販売店の掲載）。スリッパや物を落とす軽い音向けで、子どもが跳ぶような重い音を止める商品ではない。遮音の表示は販売店により書き方が違うので、試験の条件も確かめる。',
+    badge: 'FLOOR-MAT',
+    program: 'rakuten',
+    url: 'https://hb.afl.rakuten.co.jp/hgc/13442b05.9ded7357.13442b06.51e2c1ab/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%E9%9D%99%E5%BA%8A%E3%83%A9%E3%82%A4%E3%83%88%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9',
+    variant: 'standard',
+  },
+
   'danbocchi-standard': {
     type: 'amazon',
     slug: 'danbocchi-standard',
