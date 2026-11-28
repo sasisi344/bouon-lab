@@ -38,6 +38,7 @@ F01〜F22・F24〜F27・F39 は、CC が 2026-11-28 にブラウザで公式ペ�
 | F22 | 高壁 3.0畳 Dr-35／Dr-40（AMDB30C／AMDC30C） | 1,815,000円／2,288,000円（公式のラインナップ表で確認済み） | https://jp.yamaha.com/musical-instruments/soundproofing/explore/ready-made-rooms/cefine-ns/index.html | 2026-11-28 | 2027-02-26 |
 | F23 | 同じ表の価格を、販売店（島村楽器）の掲載が標準壁18型番・高壁（1.2〜3.0畳）とも同額で載せている（0.8畳は標準壁のみ） | 全行一致（公式の表とも一致。F39 の高壁 2.5〜4.3畳を含む） | https://www.shimamura.co.jp/update/?p=35612 | 2026-11-28 | 2027-02-26 |
 | F39 | 高壁 2.5畳・3.5畳・3.7畳・4.3畳 Dr-35／Dr-40（AMDB25C／AMDC25C、AMDB35C／AMDC35C、AMDB37C／AMDC37C、AMDB43C／AMDC43C） | 1,683,000／2,222,000円、2,090,000／2,618,000円、2,222,000／2,684,000円、2,409,000／2,959,000円（公式のラインナップ表で確認済み）。品番末尾の H と C は天井高のタイプ（0.8畳は1種類のみ） | https://jp.yamaha.com/musical-instruments/soundproofing/explore/ready-made-rooms/cefine-ns/index.html | 2026-11-28 | 2027-02-26 |
+| F40 | 比較用: カワイ ナサール ライトタイプ 1.5畳 Dr-35 標準高さ（LHSX13-18）の本体標準価格（税込） | 847,000円（Hi高さは1,045,000円）。同じページで 0.8畳 Dr-35（LHSX09-13）671,000円 | https://www.kawai-os.co.jp/product/unit01/ | 2026-11-28 | 2027-02-26 |
 
 ### 価格の改定
 
