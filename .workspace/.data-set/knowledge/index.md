@@ -9,6 +9,7 @@
 | data | 8 | 0 |
 | methods | 6 | 1 |
 | products | 8 | 3 |
+| reviews | 4 | 4 |
 | rules | 1 | 1 |
 | serp | 12 | 0 |
 
@@ -45,11 +46,20 @@
 | bl-products-analysis-b2b-manufacturer-materials | `products/analysis-b2b-manufacturer-materials.md` | Research Analysis: B2B Soundproofing Materials & Global Manufacturers |  | 旧メモ（出典なし） | 未確認 |
 | bl-products-analysis-brand-instrument-selection | `products/analysis-brand-instrument-selection.md` | Research Analysis: Brand & Instrument Selection Criteria |  | 旧メモ（出典なし） | 未確認 |
 | bl-products-floor-soundproof-mat | `products/floor-soundproof-mat.md` | 床の防音マット（置き敷きのタイルカーペット・ラグ）の仕様と価格 | 静床ライト, 静床プレミア, MUTE 防音専科, 防音タイルカーペット, 床 防音マット | 事実の表（16行） | 2026-11-27 |
-| bl-products-yamaha-avitecs-cefine-ns-price | `products/yamaha-avitecs-cefine-ns-price.md` | ヤマハ防音室アビテックス セフィーネNSの価格（新品・カスタムベース・組立費・中古・レンタル） | セフィーネNS, アビテックス, AVITECS, ヤマハ 防音室 価格, ヤマハ防音室 値段, 音レント | 事実の表（38行） | 2026-11-28 |
+| bl-products-yamaha-avitecs-cefine-ns-price | `products/yamaha-avitecs-cefine-ns-price.md` | ヤマハ防音室アビテックス セフィーネNSの価格（新品・カスタムベース・組立費・中古・レンタル） | セフィーネNS, アビテックス, AVITECS, ヤマハ 防音室 価格, ヤマハ防音室 値段, 音レント | 事実の表（39行） | 2026-11-28 |
 | bl-products-product_specifications | `products/product_specifications.md` | Technical Specifications for Soundproofing Products |  | 旧メモ（出典なし） | 未確認 |
-| bl-products-sound-insulation-sheet | `products/sound-insulation-sheet.md` | 遮音シート（大建工業・ゼオン化成サンダムほか）の仕様と価格 | 遮音シート, 大建 遮音シート, ダイケン 遮音シート, 455H, 940SS, 940B, 940N, サンダム, CZ-12, K-PROX, 軟質遮音シート, 防音シート | 事実の表（18行） | 2026-11-28 |
+| bl-products-sound-insulation-sheet | `products/sound-insulation-sheet.md` | 遮音シート（大建工業・ゼオン化成サンダムほか）の仕様と価格 | 遮音シート, 大建 遮音シート, ダイケン 遮音シート, 455H, 940SS, 940B, 940N, サンダム, CZ-12, K-PROX, 軟質遮音シート, 防音シート | 事実の表（23行） | 2026-11-28 |
 | bl-products-research-2026-06-10-streamer-equipment | `products/research-2026-06-10-streamer-equipment.md` | 補足リサーチ（2026-06-10）— creator新規記事「第2弾」優先度A 2本用 |  | 旧メモ（出典なし） | 未確認 |
 | bl-products-research-2026-10-07-private-booth | `products/research-2026-10-07-private-booth.md` | 個室ブース（ワークブース・テレワークブース）調査 |  | 旧メモ（出典URLあり・表なし） | 未確認 |
+
+## reviews
+
+| ID | ファイル | 題 | 別名 | 状態 | 確認日 |
+|---|---|---|---|---|---|
+| bl-reviews-daiken-940ss | `reviews/daiken-940ss.md` | 大建工業 遮音シート940SS（GB03053・厚さ1.2mm）の口コミ | 940SS, 940SSE, GB03053, GB03053E, ダイケン遮音シート, 大建 遮音シート 940 | 事実の表（20行） | 2026-11-28 |
+| bl-reviews-sheet-daiken-455h | `reviews/sheet-daiken-455h.md` | 大建工業 遮音シート455H（GB0307・厚さ2.8mm）の口コミ | 455H, GB0307, ダイケン遮音シート455H, 大建 遮音シート 455H | 事実の表（21行） | 2026-11-28 |
+| bl-reviews-sheet-sandam-cz-12 | `reviews/sheet-sandam-cz-12.md` | サンダム CZ-12（ゼオン化成・厚さ1.2mm 軟質遮音シート）の口コミ | CZ-12, CZ12, サンダム遮音シート, サンダムCZ-12, ゼオン化成 遮音シート | 事実の表（20行） | 2026-11-28 |
+| bl-reviews-yamaha-avitex | `reviews/yamaha-avitex.md` | ヤマハ アビテックス セフィーネNSの口コミ・使った人の声 | アビテックス, セフィーネNS, AVITECS, ヤマハ防音室 口コミ, ヤマハ防音室 評判 | 事実の表（30行） | 2026-11-28 |
 
 ## rules
 
