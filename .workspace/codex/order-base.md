@@ -22,7 +22,7 @@
 
 | 種別 | 足して読むもの |
 |---|---|
-| 新規記事（完成稿） | `.claude/skills/bouon-writing/references/query-intent-match.md`（Step 1〜6）、`.workspace/projects/daily-post-2026-11/README.md` §4（とくに §4-2・§4-4）と §6、`.workspace/.data-set/knowledge/data/db-familiar-sound-scale.md`、`.workspace/.data-set/interlink-postlist.md`、`.workspace/codex/image-style.md` §5-2、指示書が指す担当のアウトライン（「体験チェックの反映」節と回答まで全部） |
+| 新規記事（完成稿） | `.claude/skills/bouon-writing/references/query-intent-match.md`（Step 1〜6）、`.workspace/projects/daily-post-2026-11/README.md` §4（とくに §4-2・§4-4）と §6、`.workspace/.data-set/knowledge/data/db-familiar-sound-scale.md`、`.workspace/.data-set/interlink-postlist.md`、`.workspace/codex/image-style.md` §5-2、指示書が指す担当のアウトライン（全部。口コミの節があればそれも） |
 | リライト（内容を直す） | `.claude/skills/bouon-rewrite-strategy/SKILL.md`、`query-intent-match.md`（Step 1〜6）、`.workspace/projects/daily-post-2026-11/README.md` §5・§6、`.workspace/.data-set/knowledge/data/db-familiar-sound-scale.md`、`.workspace/.data-set/interlink-postlist.md` |
 | リライト（語り手の置き換え） | `.workspace/projects/persona-rewrite/plan.md` §4「B4 の書き方」「見本で決まったこと」、指示書が指す見本の記事 |
 | タイトル・description の作り直し | `query-intent-match.md`（Step 1〜6） |
@@ -84,7 +84,7 @@ CC が検収のたびに足す。書く前に全部読み、同じ指摘を出�
 | 種別 | 見る点 |
 |---|---|
 | 全種別 | 体験の創作がないか（「実際に」「使ってみ」「見学」「内見」「問い合わせ」「施工」を検索する）／材料にない数値・制度・企業名が入っていないか／改行コード（`git diff --shortstat` と `--ignore-cr-at-eol` の一致）／指示書にない title・description・カテゴリの変更がないか |
-| 新規記事 | 事実の材料の表と本文の値が一致しているか／数字の4点セット、ぼかし語の残り、dB の体感の独自表現／文字数の上限／図解マーカーがそのまま描けるか（文言と数値が本文と一致）／読者の体験の型（README §4-4 ④）が2つ以上あるか／アウトラインの「体験チェックの反映」がすべて本文に入っているか |
+| 新規記事 | 事実の材料の表と本文の値が一致しているか／数字の4点セット、ぼかし語の残り、dB の体感の独自表現／文字数の上限／図解マーカーがそのまま描けるか（文言と数値が本文と一致）／読者の体験の型（README §4-4 ④）が2つ以上あるか／商品を紹介する記事は、口コミの良い点と悪い点が両方、出どころと確認日つきで入っているか（README §8） |
 | リライト（語り手） | 「私」の数（2〜4）と、動機・根拠・判断の文の位置と書き分け／「私なら」の判断が記事の結論・比較表と食い違っていないか／情報が減っていないか |
 | タイトルの作り直し | 新しい title の先頭が検索語か、導入が答えているか（タイトルを変えた記事は、CC が旧タイトルを含む内部リンクの文言を直し、`interlink-postlist.md` を作り直す） |
 | 内部リンクの文言 | 文言が前後の文とつながっているか、URL が変わっていないか |
