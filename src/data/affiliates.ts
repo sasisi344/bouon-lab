@@ -123,6 +123,40 @@ export const affiliates: Record<string, AffiliateItem> = {
     variant: 'standard',
   },
 
+  // 物販は Amazon だけ（2026-11-28 ユーザー決定。楽天のカードは廃止）。ASIN はユーザーが SiteStripe で取得（inbox I-51〜I-53）
+  'floor-mat-shizuyuka-light': {
+    type: 'amazon',
+    slug: 'floor-mat-shizuyuka-light',
+    name: '日東紡マテリアル 静床ライト 防音マット（50×50cm）',
+    description: '置くだけで敷く防音タイルカーペット。全厚9.5mm。スリッパや物を落とす軽い音向けで、子どもが跳ぶような重い音を止める商品ではない。遮音の表示は販売店により書き方が違うので、試験の条件も確かめる。',
+    badge: 'FLOOR-MAT',
+    asin: 'B0B3V6M861',
+    tag: '344bouon-lab-22',
+    variant: 'standard',
+  },
+
+  'sheet-sandam-cz-12': {
+    type: 'amazon',
+    slug: 'sheet-sandam-cz-12',
+    name: 'ゼオン化成 サンダム CZ-12 遮音シート',
+    description: '厚さ1.2mm・面密度2.1kg/m²の壁用遮音シート。長さは巻ごとに選べる（Amazonの掲載）。石膏ボード1枚の壁に貼るだけの改善は、質量則の試算で約2dB。単体で静かになる商品ではなく、すき間をふさぐ・ほかの材料と重ねる前提で選ぶ。',
+    badge: 'WALL-SHEET',
+    asin: 'B08DTCXV1P',
+    tag: '344bouon-lab-22',
+    variant: 'standard',
+  },
+
+  'daiken-940ss': {
+    type: 'amazon',
+    slug: 'daiken-940ss',
+    name: '大建工業 遮音シート 940SSE（GB03053E・940mm×10m巻）',
+    description: '厚さ1.2mm・面密度2.0kg/m²・1巻19kgの壁・天井の下地用遮音シート（メーカーの公表値）。940SSEは東日本用で、西日本用の940SSと同じ仕様。石膏ボード1枚の壁に貼るだけの改善は、質量則の試算で約2dB。大建は床の衝撃音には効果がないとしている。',
+    badge: 'WALL-SHEET',
+    asin: 'B06XC19T7F',
+    tag: '344bouon-lab-22',
+    variant: 'standard',
+  },
+
   'danbocchi-standard': {
     type: 'amazon',
     slug: 'danbocchi-standard',

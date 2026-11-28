@@ -127,7 +127,7 @@ dBの大きさを「図書館くらい」などと身近な空間で例えると
 
 **`<CtaBox>` の使用ルール（当面）**:
 - `slug` は必須。省略すると記事内にエラーが表示される
-- 使用できる slug は、高額帯の `yamaha-avitex`（アビテックス）・`kawai-nasal`（ナサール）と、10万円台の `danbocchi-standard`・`danbocchi-wide`（だんぼっち、Amazon）。楽天のカードは 2026-11-28 に廃止（物販は Amazon のリンクだけ。ユーザー決定）
+- 使用できる slug は、高額帯の `yamaha-avitex`（アビテックス）・`kawai-nasal`（ナサール）と、10万円台の `danbocchi-standard`・`danbocchi-wide`（だんぼっち、Amazon）。楽天のカードは 2026-11-28 に廃止（物販は Amazon のリンクだけ。ユーザー決定）。OTODASU（島村楽器専売の LIGHT を含む）は商品リンクを作らず、個別に紹介している `otodasu-voice-chat-test` と公式サイトへ案内する
 - 記事本文でその商品名に言及している場合のみ配置する。記事が扱う価格帯に合わせ、10万円台の記事・節に高額帯のCTAを置かない
 
 ## frontmatter運用

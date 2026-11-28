@@ -9,7 +9,7 @@
 | data | 8 | 0 |
 | methods | 6 | 1 |
 | products | 8 | 3 |
-| reviews | 4 | 0 |
+| reviews | 5 | 0 |
 | rules | 1 | 1 |
 | serp | 12 | 0 |
 
@@ -57,6 +57,7 @@
 | ID | ファイル | 題 | 別名 | 状態 | 確認日 |
 |---|---|---|---|---|---|
 | bl-reviews-daiken-940ss | `reviews/daiken-940ss.md` | 大建工業 遮音シート940SS（GB03053・厚さ1.2mm）の口コミ | 940SS, 940SSE, GB03053, GB03053E, ダイケン遮音シート, 大建 遮音シート 940 | 旧メモ（出典URLあり・表なし） | 2026-11-28 |
+| bl-reviews-floor-mat-shizuyuka-light | `reviews/floor-mat-shizuyuka-light.md` | 日東紡マテリアル 静床ライト（防音タイルカーペット）の口コミ | 静床ライト, 静床, 日東紡 防音マット, ピアリビング 静床ライト | 旧メモ（出典URLあり・表なし） | 2026-11-28 |
 | bl-reviews-sheet-daiken-455h | `reviews/sheet-daiken-455h.md` | 大建工業 遮音シート455H（GB0307・厚さ2.8mm）の口コミ | 455H, GB0307, ダイケン遮音シート455H, 大建 遮音シート 455H | 旧メモ（出典URLあり・表なし） | 2026-11-28 |
 | bl-reviews-sheet-sandam-cz-12 | `reviews/sheet-sandam-cz-12.md` | サンダム CZ-12（ゼオン化成・厚さ1.2mm 軟質遮音シート）の口コミ | CZ-12, CZ12, サンダム遮音シート, サンダムCZ-12, ゼオン化成 遮音シート | 旧メモ（出典URLあり・表なし） | 2026-11-28 |
 | bl-reviews-yamaha-avitex | `reviews/yamaha-avitex.md` | ヤマハ アビテックス セフィーネNSの口コミ・使った人の声 | アビテックス, セフィーネNS, AVITECS, ヤマハ防音室 口コミ, ヤマハ防音室 評判 | 旧メモ（出典URLあり・表なし） | 2026-11-28 |
