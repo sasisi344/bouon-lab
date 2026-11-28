@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="ja" class="chart" viewBox="0 0 1080 1248" role="img" aria-label="遮音シートの口コミ">
+  <style>
+    .chart { display:block; width:1080px; background:#17120e; font-family:"BIZ UDPGothic","Noto Sans JP","Yu Gothic","Meiryo",sans-serif; }
+    .chart text { fill:#f4ecdc; font-size:29px; }
+    .chart .title { fill:#e8d070; font-size:54px; font-weight:700; }
+    .chart .heading { font-size:33px; font-weight:700; }
+    .chart .note { fill:#c9bda6; font-size:24px; }
+    .chart .brand { fill:#e8d070; font-size:28px; font-weight:700; }
+    .track { fill:#4a3b2a; }
+    .gold { fill:#d4af37; }
+    .green { fill:#8fc9a0; }
+    .amber { fill:#e6a56a; }
+    .panel { fill:#241c15; stroke:#4a3b2a; stroke-width:2; }
+    .rule { stroke:#4a3b2a; stroke-width:2; }
+  </style>
+    <text x="56" y="103" class="title">遮音シートの口コミ</text>
+    <text x="56" y="151" class="heading">話題ごとの割合</text>
+    <rect x="56" y="186" width="968" height="211" rx="26" class="panel"/>
+    <text x="83" y="236" class="heading">重い</text>
+    <text x="83" y="284" >CZ-12</text>
+    <rect x="245" y="264" width="580" height="20" rx="6" class="track"/>
+    <rect x="245" y="264" width="220.5" height="20" rx="6" class="gold"/>
+    <text x="994" y="284" text-anchor="end">約65／171</text>
+    <text x="83" y="327" >940SS</text>
+    <rect x="245" y="307" width="580" height="20" rx="6" class="track"/>
+    <rect x="245" y="307" width="251.3" height="20" rx="6" class="green"/>
+    <text x="994" y="327" text-anchor="end">約26／60</text>
+    <text x="83" y="370" >455H</text>
+    <rect x="245" y="350" width="580" height="20" rx="6" class="track"/>
+    <rect x="245" y="350" width="152.1" height="20" rx="6" class="amber"/>
+    <text x="994" y="370" text-anchor="end">約16／61</text>
+    <rect x="56" y="421" width="968" height="211" rx="26" class="panel"/>
+    <text x="83" y="471" class="heading">単体では弱い・気休め</text>
+    <text x="83" y="519" >CZ-12</text>
+    <rect x="245" y="499" width="580" height="20" rx="6" class="track"/>
+    <rect x="245" y="499" width="44.1" height="20" rx="6" class="gold"/>
+    <text x="994" y="519" text-anchor="end">約13／171</text>
+    <text x="83" y="562" >940SS</text>
+    <rect x="245" y="542" width="580" height="20" rx="6" class="track"/>
+    <rect x="245" y="542" width="116" height="20" rx="6" class="green"/>
+    <text x="994" y="562" text-anchor="end">約12／60</text>
+    <text x="83" y="605" >455H</text>
+    <rect x="245" y="585" width="580" height="20" rx="6" class="track"/>
+    <rect x="245" y="585" width="66.6" height="20" rx="6" class="amber"/>
+    <text x="994" y="605" text-anchor="end">約7／61</text>
+    <rect x="56" y="656" width="968" height="211" rx="26" class="panel"/>
+    <text x="83" y="706" class="heading">臭いが気になる</text>
+    <text x="83" y="754" >CZ-12</text>
+    <rect x="245" y="734" width="580" height="20" rx="6" class="track"/>
+    <rect x="245" y="734" width="47.5" height="20" rx="6" class="gold"/>
+    <text x="994" y="754" text-anchor="end">約14／171</text>
+    <text x="83" y="797" >940SS</text>
+    <rect x="245" y="777" width="580" height="20" rx="6" class="track"/>
+    <rect x="245" y="777" width="9.7" height="20" rx="6" class="green"/>
+    <text x="994" y="797" text-anchor="end">1／60</text>
+    <text x="83" y="840" >455H</text>
+    <rect x="245" y="820" width="580" height="20" rx="6" class="track"/>
+    <rect x="245" y="820" width="104.6" height="20" rx="6" class="amber"/>
+    <text x="994" y="840" text-anchor="end">約11／61</text>
+    <rect x="56" y="891" width="968" height="211" rx="26" class="panel"/>
+    <text x="83" y="941" class="heading">切りやすい</text>
+    <text x="83" y="989" >CZ-12</text>
+    <rect x="245" y="969" width="580" height="20" rx="6" class="track"/>
+    <rect x="245" y="969" width="179.8" height="20" rx="6" class="gold"/>
+    <text x="994" y="989" text-anchor="end">約53／171</text>
+    <text x="83" y="1032" >940SS</text>
+    <rect x="245" y="1012" width="580" height="20" rx="6" class="track"/>
+    <rect x="245" y="1012" width="116" height="20" rx="6" class="green"/>
+    <text x="994" y="1032" text-anchor="end">約12／60</text>
+    <text x="83" y="1075" >455H</text>
+    <rect x="245" y="1055" width="580" height="20" rx="6" class="track"/>
+    <rect x="245" y="1055" width="95.1" height="20" rx="6" class="amber"/>
+    <text x="994" y="1075" text-anchor="end">約10／61</text>
+    <path d="M56 1130H1024" class="rule"/>
+    <text x="56" y="1182" class="note">購入者の個人の感想・開いた件数のうち</text>
+    <text x="1024" y="1182" class="brand" text-anchor="end">防音Lab</text>
+</svg>

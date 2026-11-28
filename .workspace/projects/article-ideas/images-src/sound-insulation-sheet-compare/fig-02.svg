@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="ja" class="chart" viewBox="0 0 1080 694" role="img" aria-label="遮音シートの改善量（dB）">
+  <style>
+    .chart { display:block; width:1080px; background:#17120e; font-family:"BIZ UDPGothic","Noto Sans JP","Yu Gothic","Meiryo",sans-serif; }
+    .chart text { fill:#f4ecdc; font-size:29px; }
+    .chart .title { fill:#e8d070; font-size:54px; font-weight:700; }
+    .chart .heading { font-size:33px; font-weight:700; }
+    .chart .note { fill:#c9bda6; font-size:24px; }
+    .chart .brand { fill:#e8d070; font-size:28px; font-weight:700; }
+    .track { fill:#4a3b2a; }
+    .gold { fill:#d4af37; }
+    .green { fill:#8fc9a0; }
+    .amber { fill:#e6a56a; }
+    .panel { fill:#241c15; stroke:#4a3b2a; stroke-width:2; }
+    .rule { stroke:#4a3b2a; stroke-width:2; }
+  </style>
+    <text x="56" y="103" class="title">改善量（dB）</text>
+    <text x="56" y="150" class="heading">質量則の試算</text>
+    <rect x="56" y="184" width="968" height="385" rx="26" class="panel"/>
+    <text x="83" y="244" >サンダム CZ-12</text>
+    <rect x="384" y="222" width="450" height="26" rx="6" class="track"/>
+    <rect x="384" y="222" width="213.8" height="26" rx="6" class="gold"/>
+    <text x="994" y="244" text-anchor="end">約+1.9dB</text>
+    <text x="83" y="317" >大建 940SS</text>
+    <rect x="384" y="295" width="450" height="26" rx="6" class="track"/>
+    <rect x="384" y="295" width="202.5" height="26" rx="6" class="gold"/>
+    <text x="994" y="317" text-anchor="end">約+1.8dB</text>
+    <text x="83" y="390" >大建 940N</text>
+    <rect x="384" y="368" width="450" height="26" rx="6" class="track"/>
+    <rect x="384" y="368" width="315" height="26" rx="6" class="gold"/>
+    <text x="994" y="390" text-anchor="end">約+2.8dB</text>
+    <text x="83" y="463" >サンダム K-PROX</text>
+    <rect x="384" y="441" width="450" height="26" rx="6" class="track"/>
+    <rect x="384" y="441" width="360" height="26" rx="6" class="gold"/>
+    <text x="994" y="463" text-anchor="end">約+3.2dB</text>
+    <text x="83" y="536" >大建 455H</text>
+    <rect x="384" y="514" width="450" height="26" rx="6" class="track"/>
+    <rect x="384" y="514" width="393.8" height="26" rx="6" class="gold"/>
+    <text x="994" y="536" text-anchor="end">約+3.5dB</text>
+    <path d="M56 601H1024" class="rule"/>
+    <text x="56" y="645" class="note">石膏ボード1枚の壁・8.64m²</text>
+    <text x="1024" y="645" class="brand" text-anchor="end">防音Lab</text>
+</svg>
