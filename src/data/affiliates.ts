@@ -21,7 +21,7 @@ export type AffiliateItem =
       price?: string;
       image?: string;
       badge?: string;
-      program: 'moshimo' | 'valuecommerce' | 'rakuten' | 'direct';
+      program: 'moshimo' | 'valuecommerce' | 'direct';
       url: string;
       pixelTag?: string; // 計測用imgタグ（HTML文字列）
       variant?: 'standard' | 'premium' | 'high-ticket';
@@ -120,33 +120,6 @@ export const affiliates: Record<string, AffiliateItem> = {
     badge: 'PRO-SPEC',
     asin: 'B0F3NVRDFH',
     tag: '344bouon-lab-22',
-    variant: 'standard',
-  },
-
-  // 【組み立て式防音室】10万円台の安価帯CTA用 (2026-10-18 追加、T-23)
-  // 楽天アフィリエイトのリンク先は楽天市場の「OTODASU2」検索結果。価格は島村楽器の楽天店（S-OTODASU II LIGHT）
-  'otodasu-2-light': {
-    type: 'link',
-    slug: 'otodasu-2-light',
-    name: 'S-OTODASUⅡ LIGHT 奥行拡大モデル 11x12D',
-    description: '島村楽器専売の、工具不要で組み立てる簡易防音室。500Hzで20dB以上の削減（販売元の計測）。話し声・テレワーク・ボイスチャット向け。近くの島村楽器の店舗に展示があれば、買う前に中を見られる（展示の有無は店舗に確認）。配送は関東・関西・中部・北陸のみで、注文後のキャンセル不可。価格は楽天市場の島村楽器で送料込み（2026年10月時点）。',
-    price: '¥150,400',
-    image: 'https://shop.r10s.jp/shimamuragakki/cabinet/mt01207/mt0120739.jpg',
-    badge: 'BUDGET-BOOTH',
-    program: 'rakuten',
-    url: 'https://hb.afl.rakuten.co.jp/hgc/13442b05.9ded7357.13442b06.51e2c1ab/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FOTODASU2%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9',
-    variant: 'standard',
-  },
-
-  // 楽天アフィリエイトのリンク先は楽天市場の「静床ライト」検索結果（販売店により価格・表示が違うので価格は載せない）。仕様は knowledge/products/floor-soundproof-mat.md（2026-11-27 確認）
-  'floor-mat-shizuyuka-light': {
-    type: 'link',
-    slug: 'floor-mat-shizuyuka-light',
-    name: '日東紡マテリアル 静床ライト 防音マット（50×50cm）',
-    description: '置くだけで敷く防音タイルカーペット。全厚9.5mm・1枚約1.5kg（販売店の掲載）。スリッパや物を落とす軽い音向けで、子どもが跳ぶような重い音を止める商品ではない。遮音の表示は販売店により書き方が違うので、試験の条件も確かめる。',
-    badge: 'FLOOR-MAT',
-    program: 'rakuten',
-    url: 'https://hb.afl.rakuten.co.jp/hgc/13442b05.9ded7357.13442b06.51e2c1ab/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%E9%9D%99%E5%BA%8A%E3%83%A9%E3%82%A4%E3%83%88%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9',
     variant: 'standard',
   },
 

@@ -746,6 +746,6 @@ export default defineConfig({
     '/ja/diy/futon-cardboard-karaoke-booth/': '/ja/diy/diy-substitute-materials-daiso-plastic-board/',
   },
   image: {
-    domains: ['m.media-amazon.com', 'ir-jp.amazon-adsystem.com', 'shop.r10s.jp'],
+    domains: ['m.media-amazon.com', 'ir-jp.amazon-adsystem.com'],
   },
 });

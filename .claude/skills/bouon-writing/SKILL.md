@@ -127,7 +127,7 @@ dBの大きさを「図書館くらい」などと身近な空間で例えると
 
 **`<CtaBox>` の使用ルール（当面）**:
 - `slug` は必須。省略すると記事内にエラーが表示される
-- 使用できる slug は、高額帯の `yamaha-avitex`（アビテックス）・`kawai-nasal`（ナサール）と、10万円台の `danbocchi-standard`・`danbocchi-wide`（だんぼっち、Amazon）・`otodasu-2-light`（OTODASU II、楽天市場・島村楽器専売）
+- 使用できる slug は、高額帯の `yamaha-avitex`（アビテックス）・`kawai-nasal`（ナサール）と、10万円台の `danbocchi-standard`・`danbocchi-wide`（だんぼっち、Amazon）。楽天のカードは 2026-11-28 に廃止（物販は Amazon のリンクだけ。ユーザー決定）
 - 記事本文でその商品名に言及している場合のみ配置する。記事が扱う価格帯に合わせ、10万円台の記事・節に高額帯のCTAを置かない
 
 ## frontmatter運用
@@ -141,7 +141,7 @@ dBの大きさを「図書館くらい」などと身近な空間で例えると
 - 新規カバー画像は必ず `.png`（`cover.png`）、frontmatterはクォートなし相対パス: `image: ./cover.png`
 - `image` 行を書くときは、そのパスに実ファイルがあることを確認する（存在しないパスはビルド失敗の原因になる）
 - frontmatter記述前にディレクトリのファイル名を必ずGlobで確認する
-- 外部ドメイン許可済み: `m.media-amazon.com`, `ir-jp.amazon-adsystem.com`, `shop.r10s.jp`（楽天市場の商品画像）
+- 外部ドメイン許可済み: `m.media-amazon.com`, `ir-jp.amazon-adsystem.com`
 - カバー画像を省略した場合のフォールバック挙動・画像生成スクリプトの使い方は `references/cover-image-fallback.md` を参照
 
 ## 広告が入る位置（書き手が知っておくこと）
