@@ -59,7 +59,7 @@ updated: 2026-11-28
 
 | 記事 slug | 使った行 | 日付 |
 |---|---|---|
-| sound-insulation-sheet-compare | R01〜R03・R10〜R15・R30〜R36（案。確定は CC） | アウトライン |
+| sound-insulation-sheet-compare | R01〜R03・R10・R11・R14・R30〜R34 | 2026-11-28 |
 
 ## メモ（開けなかったページ・食い違い）
 
