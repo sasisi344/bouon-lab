@@ -54,7 +54,8 @@
 | CTR改善・順位改善の対象ページ（W28版） | `ctr-check-list.md`、`pagerank-list.md` | ○ 2026-07-08。現在の対象は週報（`bouon-weekly-report`）で再判定する |
 | 補助金・助成金・税制 | `.archieve` の `【補助金・税制】防音室_v2025.01.md`、`financial_support.md`、`【DB】防音窓・リフォームデータベース.md` | △ **必ず一次情報で再確認**（制度は毎年変わる）。`bouon-research` skill |
 | 国内の防音業者・メーカー | `.archieve` の `【11_COMPANY】国内防音ソリューション企業DB.md`、`【まとめ】国内防音ソリューション企業体系化マップ.md` | △ 実在・現状をWebSearchで確認してから記載 |
-| ユーザーの口コミ・体験談 | `.archieve` の `【12_VOICE】防音ユーザー体験談・PX.md`、`YouTubeの防音室紹介.md` | △ 傾向把握のみ。個別の主張は引用元を確認 |
+| 商品の口コミ（記事で採用したもの・良い点と悪い点） | `knowledge/reviews/<カード slug>.md` | ◎ 2026-11-28〜。商品の記事はまずここを引く（`knowledge/CLAUDE.md` §3-2） |
+| ユーザーの口コミ・体験談（旧） | `.archieve` の `【12_VOICE】防音ユーザー体験談・PX.md`、`YouTubeの防音室紹介.md` | △ 傾向把握のみ。個別の主張は引用元を確認 |
 | 防音室の価格帯・メーカー別価格 | `.archieve` の `【07_MARKET】市場データベース.md`、`【09_KEYWORD】SEOマーケティングデータ.md` | △ 価格は最新を確認 |
 | 競合上位記事の分析（補助金・内窓・自作費用・暑さ対策など7クエリ） | `.archieve/target-query/` | △ 2026-03-16時点 |
 
